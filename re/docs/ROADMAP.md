@@ -27,8 +27,8 @@ early as possible, deferring deep engine RE until it's actually needed.
       verified by Unicorn emulation → `re/docs/04-WIRE-FORMAT-LOGIN.md`.
 - [ ] Extract the remaining login serializers (SessionTracking, ProxyLoadLoginPage,
       AccountInformationBase) the same way.
-- [ ] Recover endpoint URLs/verbs from the `Argo`/curl request builders + the
-      controller dispatch near `EnvironmentManager.ServerInfo`.
+- [x] Endpoint/routing model recovered: RPC-over-HTTP-POST-JSON via `Argo`
+      (vtable dispatch, not REST) + boot/connection sequence -> `06-ENDPOINTS.md`.
 - [ ] Continue per-controller in `re/docs/04+` as each is reversed.
 
 ## Phase 3 — Minimal community server
