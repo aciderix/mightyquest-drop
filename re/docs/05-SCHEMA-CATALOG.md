@@ -50,18 +50,25 @@ call that follows it. The writer primitives were named by decompiling them once:
 | `0x009aa*` (other) | `number` | scalar primitive band, exact width unresolved |
 | outside the primitive band | `object` | per-contract nested object/array writer |
 
+Both the **serialize** (writer) and **deserialize** (reader) methods are walked,
+so request and response contracts are typed. Reader primitives were named the
+same way (e.g. `0x009a8c90` = bool — emits `Expected [true] or [false]`;
+`0x009a9170` = duration — parses a `D` suffix and ×86400).
+
 Output: `re/catalog/network/schemas_typed.json` / `.txt` —
-**1,269 contracts, 5,126 typed fields** (int 2204, object 1016, string 743,
-bool 660, float 237, number 204, datetime 62). Validated on `LoginResult`,
-`CastleInfo`.
+**1,325 contracts, 5,461 typed fields** (int 2244, object 1038, string 752,
+bool 659, number 447, float 242, datetime 60, duration 19). Validated on
+`LoginResult`, `GameServerConnectionConfig`, `CastleInfo`.
 
 ### Request vs response (protocol direction)
-The 1,269 typed contracts are exactly those with a **serialize** method — i.e.
-the ones the **client emits** (requests / client→server). Contracts that appear
-only in `schemas.json` (names) but not in `schemas_typed.json` are
-**deserialize-only**: the client only reads them, so they are **server→client
-responses/config** (e.g. `GameServerConnectionConfig`). This split tells a
-server implementer which side produces each message.
+Each contract carries a `direction`, from which method(s) exist:
+- **`request`** (479) — has a serialize method only → client→server.
+- **`response`** (56) — deserialize only → server→client (e.g.
+  `GameServerConnectionConfig`).
+- **`both`** (790) — round-trips in both directions.
+
+`schemas.json` (names only) still has the widest coverage (2,051); the typed
+catalog covers the subset whose serialize/deserialize shape was recognised.
 
 ## Caveats / next refinements
 - Read-only (response) contracts are typed only by name so far; a symmetric pass

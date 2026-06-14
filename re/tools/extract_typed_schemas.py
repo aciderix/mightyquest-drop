@@ -28,6 +28,24 @@ except ImportError:
 EXE = "MightyQuest_unpacked_fixed (1).exe"
 OUTDIR = "re/catalog/network"
 WRITE_KEY = 0x009ab550
+UNKNOWN_FIELD = 0x009a9ce0       # called by every deserialize method (its marker)
+
+# reader primitive VA -> type (named by decompilation, see 05-SCHEMA-CATALOG.md)
+READERS = {
+    0x009a8d30: "int",
+    0x009a9450: "string",
+    0x009a8c90: "bool",
+    0x009a9170: "duration",
+}
+READER_LO, READER_HI = 0x009a8000, 0x009aa000
+
+
+def read_type_of(va):
+    if va in READERS:
+        return READERS[va]
+    if READER_LO <= va < READER_HI:
+        return "number"
+    return "object"
 
 # writer primitive VA -> field type. Identified by decompiling each primitive
 # (see 05-SCHEMA-CATALOG.md): bool writes "false", datetime uses an ISO-8601
@@ -149,6 +167,37 @@ def main():
                         if s: last_ident = s
         return pairs if is_serialize else None
 
+    def walk_deserialize(maddr):
+        """return ordered [(key, type)] for a deserialize method (marked by a
+        call to UNKNOWN_FIELD). Each key is paired with the next reader call."""
+        o = off(maddr)
+        if o is None: return None
+        code = data[o:o + fsz(maddr)]
+        last_ident = None
+        pairs = []
+        is_deser = False
+        for insn in md.disasm(code, maddr):
+            if insn.mnemonic == "call":
+                ops = insn.operands
+                if ops and ops[0].type == X86_OP_IMM:
+                    tgt = ops[0].imm
+                    if tgt == UNKNOWN_FIELD:
+                        is_deser = True; last_ident = None; continue
+                    if last_ident is not None and tgt != maddr:
+                        pairs.append((last_ident, read_type_of(tgt)))
+                        last_ident = None
+                else:
+                    last_ident = None
+            else:
+                for op in insn.operands:
+                    if op.type == X86_OP_IMM and rlo <= op.imm < rhi:
+                        s = ident_at(op.imm)
+                        if s: last_ident = s
+                    elif op.type == X86_OP_MEM and op.mem.disp and rlo <= op.mem.disp < rhi:
+                        s = ident_at(op.mem.disp)
+                        if s: last_ident = s
+        return pairs if is_deser else None
+
     # collect serializer stubs (addr, contract)
     stubs = []
     with open("re/catalog/pe/function_classification.csv", newline="") as f:
@@ -157,44 +206,57 @@ def main():
                 stubs.append((int(r["address"], 16), r["source"][:-len("Serializer.cpp")]))
 
     writer_freq = Counter()
-    typed = {}
+    ser, deser = {}, {}        # contract -> [(key, type)]
     for addr, contract in stubs:
         vt = vtable_of(addr)
         if vt is None: continue
         for slot in range(1, 8):
             m = u32(vt + slot * 4)
             if m is None or not (tlo <= m < thi): continue
-            pairs = walk_serialize(m)
-            if pairs:
-                fields = []
-                for k, w in pairs:
-                    if k == contract: continue
-                    writer_freq[w] += 1
-                    fields.append([k, type_of(w)])
-                if fields:
-                    typed[contract] = fields
-                break
+            sp = walk_serialize(m)
+            if sp:
+                fields = [[k, type_of(w)] for k, w in sp if k != contract]
+                for _, w in sp: writer_freq[w] += 1
+                if fields: ser[contract] = fields
+                continue
+            dp = walk_deserialize(m)
+            if dp:
+                fields = [[k, t] for k, t in dp if k != contract]
+                if fields: deser.setdefault(contract, fields)
 
     if args.discover:
         print("Top writer primitives (addr: count) — name these in WRITERS:")
         for w, c in writer_freq.most_common(25):
-            named = WRITERS.get(w, "?")
-            print(f"  0x{w:08x}  {c:6d}  {named}")
+            print(f"  0x{w:08x}  {c:6d}  {WRITERS.get(w, '?')}")
         return
+
+    # merge: prefer serialize fields (richer types: datetime/float); attach a
+    # protocol direction so a server author knows who emits each message.
+    contracts = set(ser) | set(deser)
+    merged = {}
+    for c in contracts:
+        if c in ser and c in deser:
+            direction, fields = "both", ser[c]
+        elif c in ser:
+            direction, fields = "request", ser[c]
+        else:
+            direction, fields = "response", deser[c]
+        merged[c] = {"direction": direction, "fields": fields}
 
     os.makedirs(OUTDIR, exist_ok=True)
     with open(os.path.join(OUTDIR, "schemas_typed.json"), "w") as f:
-        json.dump(typed, f, indent=1, sort_keys=True)
+        json.dump(merged, f, indent=1, sort_keys=True)
     with open(os.path.join(OUTDIR, "schemas_typed.txt"), "w") as f:
-        for c in sorted(typed):
-            inner = ", ".join(f"{k}: {t}" for k, t in typed[c])
-            f.write(f"{c} {{ {inner} }}\n")
-    from collections import Counter as _C
-    tc = _C(t for fs in typed.values() for _, t in fs)
-    total = sum(len(fs) for fs in typed.values())
-    print(f"[+] {len(typed)} contracts, {total} fields")
-    for t, n in tc.most_common():
-        print(f"      {t:10} {n}")
+        for c in sorted(merged):
+            inner = ", ".join(f"{k}: {t}" for k, t in merged[c]["fields"])
+            f.write(f"[{merged[c]['direction']:8}] {c} {{ {inner} }}\n")
+
+    dirc = Counter(v["direction"] for v in merged.values())
+    tc = Counter(t for v in merged.values() for _, t in v["fields"])
+    total = sum(len(v["fields"]) for v in merged.values())
+    print(f"[+] {len(merged)} contracts, {total} typed fields")
+    print("    direction:", dict(dirc))
+    print("    types:", dict(tc.most_common()))
     print(f"[+] -> {OUTDIR}/schemas_typed.json, schemas_typed.txt")
 
 
