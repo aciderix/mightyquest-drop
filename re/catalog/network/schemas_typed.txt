@@ -1,0 +1,1269 @@
+AbilityFamily { Id: int, Name: object, Ui: object }
+AbilityLevelAutoAim { GameEntityTypePriorities: object, ParamsList: object }
+AbilityLevelAutoAimParam { AutoAimType: int, EffectRadius: float, MaxDistance: float, TargetType: int }
+AbilityLevelInfo { AbilitySpecContainerId: int, Level: int }
+AbilityLevelUiSpec { DescriptionFormulas: object, ManaBuilder: int, OasisDescription: int, OasisManaBuilderDescription: int }
+AbilityLevelUpgradeRequirement { HeroMinimumLevel: int, RequiredAbilities: object }
+AbstractFriendNewsData { FriendAccountId: int, FriendAvatarId: int, FriendDisplayName: string, FriendSpecialPacks: number }
+AbstractShortcutCode { CanStillBeTriggeredWithShiftPressedA: bool, IgnoredModifiers: int, IsGrabbable: bool, RequiredModifiers: int }
+AcceleratorFactorInfo { AcceleratorFactor: float }
+AccountAttackRegion { AttackRegionId: int, Status: int }
+AccountBuyBack { BuyBackItems: object }
+AccountBuyBackSlot { CreationDate: datetime, Id: string, ItemType: int, Price: object }
+AccountExportMetadata { ArchiveName: string, Description: string, NumberOfAccountsByLevel: int, SpecificAccountDisplayNames: object, SpecificAccountIds: number, TotalNumberOfAccounts: int }
+AccountForValidation { AccountId: int, Heroes: object, Inbox: object, Inventory: object, Wallet: object }
+AccountForgedItem { ExpirableId: string, ForgeMode: int, Item: object, ItemLevelAverage: int }
+AccountHeroStats { TimePlayed: int, TotalCastlesLooted: int, TotalCreaturesKilled: int }
+AccountInformation { ClientSettings: object, CommunityEventTimeShift: int, CompletedAchievements: number, CountryCode: string, DefendLog: object, Expirables: object, Guild: object, GuildInvitations: object, IsCastleAttackable: bool, LastViewedFreeTrialInfoDate: datetime, News: object, ShopSkuModifiers: object, TargetedAttackAvailableCount: int }
+AccountInformationBase { AccountId: int, ActiveConsumables: object, AvatarId: int, BuildInfo: object, BuyBack: object, CastleRenovationLevel: int, CompletedAssignments: number, DisplayName: string, DisplayNameValidationDate: datetime, Friends: object, FriendshipInvitations: object, GamerScore: int, Heroes: object, HeroFreeTrialInfoPeriod: object, Inbox: object, Inventory: object, LastViewedDates: object, LeagueId: int, Objectives: object, Privileges: int, ProfanityFiltering: bool, RecommendedFriends: object, SelectedHeroId: int, SpecialPacks: number, Stats: object, SubLeagueId: int, TrophyScore: int, UnlockedAvatars: number, UnlockedEmotes: number, UnlockedSpells: object, Wallet: object }
+AccountInventory { CastleRenovationItems: object, ForgedItem: object, HeroItems: object, InventoryTabCount: int, PendingSharedItems: object }
+AccountInventorySlot { Item: object, SlotIndex: int, StackCount: int }
+AccountLite { AccountId: int, ActivationStatus: int, DisplayName: string, Email: string, Password: string, Privileges: number }
+AccountNameCreatedEventArgs { ErrorMessage: string, IsSuccess: bool }
+AccountObjective { HasViewed: bool, LastStatusDate: datetime, ObjectiveId: int, ProgressionCount: int, Status: int }
+AccountObjectivesModel { CompletedObjectives: object, UnlockedObjectives: object }
+AccountPremiumCash { AccountId: int, PremiumCash: int }
+AccountPublicProfile { AccountStats: object, AccountSummary: object, Achievements: object, CastleLevel: int, CastleStats: object, GamerScore: int, Heroes: object, HeroLevel: int, IsCastleAttackable: bool, IsShielded: bool, LeagueId: int, SelectedHeroId: int, TrophyScore: int }
+AccountQuickStats { Privileges: int, TrophyScore: int, Wallet: object }
+AccountResetInformation { DisplayName: string, Email: string, Id: int, ProfileId: string }
+AccountSettings { MessagingSettings: object }
+AccountStats { AttackTotalIGCWon: int, CastlesDefeated: object, ChallengeCreated: int, ChallengeParticipated: int, ChallengeWon: int, CurrencyAccumulation: object, DefeatCastleStrike: int, DefeatFriendsCastleStrike: int, KilledCreatures: object, TotalCastlesLooted: int, TotalCreaturesKilled: int, TotalItemsLooted: int, TotalPotionsConsumed: int }
+AccountSummary { AvatarId: int, CastleLevel: int, CountryCode: string, DisplayName: string, GuildHeader: object, Id: int, IsArchived: bool, IsCastleAttackable: bool, LeagueId: int, OasisNameId: int, SpecialPacks: number, SubLeagueId: int, TrophyScore: int }
+AccountSummaryForFriendModel { AvatarUrl: string, Friend: object, IsCastleAttackable: bool }
+AccountSummaryForSearchModel { AccountSummaryForSearch: object, AvatarUrl: string }
+AccountSummaryForTools { CastleLevel: int, CastleThemeId: int, CountryCode: string, DisplayName: string, Email: string, Id: int, IsCastleAttackable: bool, LastShownWelcomePageDate: datetime, LeagueId: int, PlatformId: string, Privileges: int, ProfanityFiltering: bool, ProfileId: string, SelectedHeroId: int, SpecialPacks: number, SubLeagueId: int, TargetedAttackAvailableCount: int, TrophyScore: int }
+AccountUiCacheViewModel { AccountId: int, AvatarUrl: string, CurrentHeroId: int, DisplayName: string, SpecialPackModel: object }
+Achievement { DebugName: string, Description: string, DescriptionId: int, Icon: string, Id: int, Points: int, SteamId: string, SteamStatId: string, Title: string, TitleId: int }
+AchievementCompletedModel { Achievement: object }
+AchievementCompletedNotification { AchievementId: int, GamerScoreToAdd: int, HasUiNotification: bool, Index: int, NotificationType: int }
+AchievementContainer { Achievements: object, CompletedCount: int, TotalCount: int }
+AchievementProgression { Achievement: object, CompletionDate: datetime, CompletionDateFriendly: string, CompletionPercentage: int }
+ActionButtonModel { NavigationUrl: string, OasisId: int }
+ActivateConsumableCommand { ConsumableTemplateId: int, CurrentStackCount: int, ForceActivation: bool, InventorySlotIndex: int }
+ActivateConsumableOnItemCommand { HeroItemSlot: int, InventorySlotIndex: int }
+ActiveConsumable { ConsumableType: int, ExpirableId: string, InitialDuration: int, TemplateId: int }
+ActiveConsumableModel { ConsumableType: int, DisplayRemainingTime: bool, IconUrl: string, InitialDuration: int, RemainingTime: int, TemplateId: int }
+ActivityBucket { AttackableCastleStatus: int, BucketId: int, MinSize: int, UserActivity: int }
+AddCastleCreatureCommand { AggroPropagationOffsetX: float, AggroPropagationOffsetZ: float, TotemCastleBuildableId: int }
+AddCastleInventoryItemCommand { ConsumedHeroInventory: object, SkuCode: string }
+AddCastleTrapCommand { BeatIndex: int, PowerSupplyCastleBuildableId: int }
+AddCastleTriggerCommand { SizeX: number, SizeY: number }
+AdminBuildingUpgrade { BuildingId: int, FinalRank: int, SpecContainerId: int, StartRank: int }
+AdminCastleStats { AttackCount: int, SuccessfulAttackCount: int, WinRatio: float }
+AlertedCountChangedEventArgs { CurrentAlertedCount: int, PreviousAlertedCount: int }
+AllLifeShieldsUpdatedEventArgs { HasLastLifeShieldDurationAlmostEnded: bool, LifeShieldUpdates: object }
+AlternateLocaleFont { Locales: object, SynergyFontTexture: string }
+AntiCheatAttackInfo { AttackId: string, AttackInfo: object }
+AntiCheatEndAttackParams { AttackId: string, DeterminismBreak: bool, Duration: int, EndAttackParams: object }
+ArchetypeStatModel { CompareValue: float, FormatValueAsPercentage: bool, FormatValuePrecision: int, MaxValue: float, Name: string, ShowAsSlider: bool, ShowTextValue: bool, Value: float }
+ArchitectOfficeBuildingInfoDataModel { CurrentMaxRooms: int, MaxMaxRooms: int }
+ArchitectOfficeBuildingUpgradePopupDataModel { NewMaxRooms: int }
+ArmorArchetype { Damage: float, Health: float, Resistance: float, Id: int, Name: object, Probability: float }
+AssignmentCompletedNotification { AssignmentId: int }
+AssignmentGroup { Id: int, Name: string }
+AttackImpactSoundInfos { HeroImpactSound: object, OtherImpactSound: object }
+AttackImpactSoundLevelsProfile { LevelsMaxDamageRatios: number }
+AttackImpactSoundSettings { AttackImpactSoundLevelsPerArmorType: number, AttackImpactSoundLevelsProfiles: object, AttackImpactSoundsById: object, CriticalHitImpactSound: object, ReflectedDamageImpactSound: object }
+AttackInfo { AdjustedHeroLevel: int, AttackerActiveConsumables: object, AttackerDisplayName: string, AttackId: string, AttackRandomSeed: int, AttackType: int, AttackUserSettings: object, Castle: object, CastleHeartRank: int, CastleType: int, CastleValidationDuration: float, CreatureLoot: object, DecorationLoot: object, DefenderActiveConsumables: object, DefenderSpecialPacks: number, FirstResurrectionCost: int, FreeInventorySlotsCount: int, Hero: object, InventoryConsumablesInfo: object, IsResurrectionAllowed: bool, IsRevenge: bool, IsShielded: bool, IsTargetedAttack: bool, IsTutorial: bool, Level: int, LoseTrophyCooldownTimer: datetime, StealableMines: object, TargetedAttackAvailableCount: int, TrapLoot: object, TreasureRoomGoldRatio: float, TreasureRoomHeroItem: object, TreasureRoomLifeForceRatio: float, TreasureRoomReward: object, TreasureRoomStealableIGC: object, TreasureRoomStealableLifeForce: object, TrophyScoreDefender: int, TrophyScoreGain: int, TrophyScoreLost: int, TrophyScoreLostWithoutCooldown: int, TrophyScoreRestartAttackGain: int, TrophyScoreRestartAttackLost: int, TrophyScoreRestartLostWithoutCooldown: int, UbisoftCompetitionBestTime: int, UbisoftCompetitionId: int, UnlockedEmotes: number, UnlockedSpells: object, VictoryConditionRewardRatios: number }
+AttackInfoModel { AttackerSpecialPackModel: object, AttackInfo: object, DefenderSpecialPackModel: object, IsTestAttack: bool }
+AttackLoadedEventArgs { HudHeroInfoModel: object }
+AttackRegion { AttackRegionId: int, BossCastleId: int, BossName: int, DebugName: string, HasMLPrediction: bool, IsCompetitionRegion: bool, IsFriendRegion: bool, LevelMax: int, LevelMin: int, Name: int, OverPosX: int, OverPosY: int, ShowUbisoftCastle: bool, ShowUserCastle: bool, ShowValidableCastle: bool }
+AttackRegionCompletedNotification { CompletedAttackRegionId: int, UnlockedAttackRegionId: int }
+AttackRegionModel { AttackRegionId: int, BossCastleId: int, BossName: string, CanAfford: bool, IsCompetitionRegion: bool, IsFriendRegion: bool, LevelMax: int, LevelMin: int, OverPosX: int, OverPosY: int, RegionName: string, ShowMoreCastleSkus: object, Status: int }
+AttackRegionUnlockedObjectiveRequirement { AttackRegionId: int }
+AttackRegionsChangedEventArgs { UpdatedAttackRegions: object }
+AttackRegionsViewModel { AttackRegions: object }
+AttackReplay { AccountID: int, AttackHistoryIndex: int }
+AttackReportPanelNavigationModel { RewardModel: object }
+AttackReportPredefinedComment { CommentTextOasisIDs: number, LayerName: string, ShortDescriptionOasisID: int }
+AttackSelectionByLevelResult { Castles: object, Level: int }
+AttackSelectionCastlePanelNavigationModel { AttackRegionModel: object, CastleInfoSummary: object, CastleObjectiveStatusModel: object, PanelName: int, SpecialPackModel: object }
+AttackSelectionCastleRefreshedEventArgs { CastleInfo: object, DefenderSpecialPackModel: object }
+AttackSelectionPlayerMiniCastlePanelNavigationModel { AreRequiredMaterialsInHeroInventory: bool, IsOpalPanel: bool, PanelName: int }
+AttackSelectionResult { BossCastle: object, CastlesByLevel: object }
+AttackSelectionResultModel { AttackRegion: object, Result: object, SpecialPackModels: object }
+AttackSpeed { Id: int, Name: object, SpeedFrom: float, SpeedTo: float }
+AttackStartCountdownPanelNavigationModel { CountdownStep: int }
+AttackUserSettings { MinHeroItemQualityToPickUp: int, UseCameraDamping: bool }
+AttackerAvatarUpdatedNotification { AttackerAccountId: int, AttackerAvatarId: int }
+AudioInfoTracking { HasAudioDeviceAvailable: bool }
+Avatar { AnimationName: string, DebugName: string, IconUrl: string, Id: int, IsPrivate: bool, LayerName: string }
+AvatarEditPanelPanelNavigationModel { AvatarCategory: int, IsOpalPanel: bool, PanelName: int }
+AvatarRewardItem { AvatarId: int }
+AvatarUnlockedNotification { AvatarId: int, Index: int, NotificationType: int }
+AvatarUpdatedEventArgs { AvatarCategory: int, AvatarId: int, IconUrl: string }
+AvatarUpdatedNotification { AvatarId: int, Index: int, NotificationType: int }
+AvatarsModel { Avatars: object, CurrentAvatar: object }
+BakedDamageInfo { CriticalHitChance: float, CriticalHitDamageMultiplier: float, SourceEntityId: number, SourceLevel: number }
+BakedSpellInfo { Alliance: int, SourceLevel: number }
+BaseTextualFeedback { DebugMsg: string, OasisId: int }
+BattleLogEntry { AttackDurationInMilliseconds: int, AttackerAccountSummary: object, AttackerTrophyScoreVariation: int, AttackId: string, AttackStartDateTime: datetime, AttackType: int, CastleLevel: int, CastleRating: int, CompletionType: int, DefenderAccountSummary: object, DefenderTrophyScoreVariation: int, HasReplay: bool, HeroLevel: int, HeroSpecContainerId: int, IsCastleAttackable: bool, IsRevengeAttack: bool, IsShielded: bool, IsTargetedAttack: bool, Message: object, PillagedMines: object, PotionUsed: int, ResurrectionCount: int, RevengeStatus: int, StolenIGC: object, StolenLifeForce: object, VictoryConditionLevel: int, VictoryConditionRewardRatios: number, VictoryConditionType: int }
+BattleLogEntryAddedNotification { Entry: object, LastValidEntryDate: datetime }
+BattleLogEntryDeletedNotification { LastValidEntry: string }
+BattleLogEntryModel { AttackDurationInMilliseconds: int, AttackId: string, AttackStartDateTime: datetime, AttackType: int, CastleLevel: int, CastleRating: int, CompletionType: int, HeroLevel: int, HeroSpecContainerId: int, HomeAccountSummary: object, HomeTrophyScoreVariation: int, IsHomeAttack: bool, IsReplayEnabled: bool, IsShielded: bool, Message: string, PotionUsedCount: int, ResurrectionCount: int, RevengeStatus: int, StolenIGC: object, StolenLifeForce: object, VictoryConditionLevel: int, VisitorAccountSummary: object }
+BattleLogEntryUpdatedNotification { AttackId: string, RevengeStatus: int }
+BattleLogNewItemCountChangedEventArgs { NewDefendLogEntry: int }
+BattleLogPanelNavigationModel { FriendsOnly: bool, ReplayAttackId: string, Tab: int }
+BehaviorCategory { Id: int, Name: object, Ui: object }
+BoostCastleInventoryItemCommand { ConsumedHeroInventory: object, ExpirableId: string, Id: int, ItemType: int, SkuCode: string }
+BoostConsumableTemplate { BuffSpecContainerId: int, Duration: int }
+BoostIconPanelNavigationModel { IsOpalPanel: bool, IsTotem: bool, PanelName: int }
+BoostInfoModel { ActiveBoostDurationLeft: int, ActiveBoostTotalDuration: int, BoostDescription: string, BoostDuration: int, BoostId: int, BoostLayerName: string, BoostName: string, CanAffordCurrency: bool, CanAffordMaterials: bool, Cost: object, CraftingMaterials: object, CurrentBoostedCreatureCount: int, IsBoostable: bool, IsBoostPending: bool, IsTotem: bool, MaxBoostedCreatureCount: int, SubjectName: string }
+BootConfig { AdditionalLaunchCommandLine: int, AttackSource: int, CastleLoadConfig: object, CompressedGPSettings: bool, DistributionServiceUrl: string, EnvironmentName: string, GameLanguage: string, GameStateModifier: int, GameStateType: int, GameWebsiteUrl: string, PlayerLoadConfig: object, ReplayModeConfig: object, ServerLatency: int, ServerLatencyRandomized: bool, UILatency: int, UseGamePatching: bool, WorldName: string }
+BossKilledFriendNewsData { AttackRegionId: int, BossLevel: int, BossName: string }
+BoundingRect { MaxX: float, MaxY: float, MinX: float, MinY: float }
+Branch { GamePublicationLabelMajorSuffix: int, GamePublicationLabelPrefix: string, Label: string, Name: string }
+BuffAddedEventArgs { BuffModel: object }
+BuffExpiredEventArgs { SpecContainerId: int }
+BuffInfoPanelNavigationModel { HeroBuffs: object, HeroBuffTooltips: object, TargetBuffs: object, TargetBuffTooltips: object }
+BuffModel { IconUrl: string, IsDebuff: bool, IsRatioFixed: bool, LayerName: string, MinimumStackCountToDisplay: number, RemainingTimeRatio: float, SpecContainerId: int, StackCount: number, TileAnimationType: int, Tooltip: object }
+BuffStopTriggers { OnBuffedEntityAllLifeShieldsRemoved: bool, OnBuffedEntityDied: bool, OnBuffedEntityLifeFilled: bool, OnBuffedEntityManaDepleted: bool, OnBuffedEntityStunned: bool }
+BuffTooltipModel { Duration: int, RemainingTime: int, ShouldDisplayTimeInformation: bool, Type: int }
+BuildBasicTextInfoPanelNavigationModel { LocalizedMessage: string }
+BuildBuildingPanelNavigationModel { PanelName: int }
+BuildCommand { IsCastlePublishable: bool }
+BuildCraftingMaterialMinePanelNavigationModel { CraftingMaterialMineInformationModel: object, PanelName: int }
+BuildCreaturePanelNavigationModel { PanelName: int }
+BuildDecorationPanelNavigationModel { PanelName: int }
+BuildEntitiesAchievement { EntityType: int, Count: int }
+BuildEntityEventArgs { ContextualActionDatas: object, GameEntityId: int, IsNewEntity: bool, SpecContainerId: int, SpecContainerType: int }
+BuildEntityStampStatusEventArgs { BuildEntityStampStatusFlag: int }
+BuildEntityTooltipModel { GameEntityId: int, ItemTypeOasisId: int, Level: int, Name: string, TooltipDisplayDelay: float }
+BuildHarvestingPanelNavigationModel { PanelName: int }
+BuildHistory { BuildDateTime: datetime, Duration: number, Id: object }
+BuildHistoryId { AccountId: int, Index: int }
+BuildInfo { ArchitectOfficeRank: int, BuildingNextIndex: int, CastleHeartRank: int, CastleStats: object, CastleType: int, CreatureArchetypes: object, CreatureNextIndex: int, DecorationNextIndex: int, Draft: object, HeroCorpses: object, InventoryDecorations: object, InventoryDefenseIngredientBoosts: object, InventoryRooms: object, InventoryThemes: number, IsDraftPublished: bool, IsRollbackAvailable: bool, Level: int, MineStatuses: object, OwnerSpecialPacks: number, RoomNextIndex: int, ShieldEndExpirableId: string, TimerDuration: float, TrapArchetypes: object, TrapNextIndex: int, TriggerNextIndex: int, WorkersAvailable: int, WorkersCabinRank: int }
+BuildInfoUpdatedNotification { BuildInfo: object }
+BuildInteractionState { Enable: bool, GameEntityTypeMask: int }
+BuildNotificationEventArgs { Count: int }
+BuildShortcutKeyModel { ShortcutKey: string, SlotIndex: int }
+BuildToolModeChangedEventArgs { BuildToolbarModel: object }
+BuildToolModeInspectUpdatedEventArgs { IsActive: bool }
+BuildToolbarModel { BuildToolMode: int, PickedUpEntityId: int }
+BuildTotemPanelNavigationModel { PanelName: int }
+BuildTrapPanelNavigationModel { PanelName: int }
+BuildUIFeedbackInfos { AggroZoneCreatureFloatingText: object, AggroZonePowerSupplyFloatingText: object, AggroZoneTrapFloatingText: object, CreatureToTotemFloatingText: object, TotemFloatingText: object }
+BuildViewModel { Level: int, Properties: object, ShieldRemainingTime: int }
+BuilderLevelProgression { Level: int, RandomHeroCorpseCurrencyDrops: object, RandomHeroCorpseExtraDrops: object }
+BuildingExpirable { BuildingId: int, ExpirableType: int, SpecContainerId: int }
+BuildingFinishNowModel { BuildingName: string, BuildingRank: int }
+BuildingInfoDataModel { Boost: int, BoostText: string, BuildingName: string, BuildingType: int, CurrentBuildingRank: int, Description: string, IconUrl: string, MaxBuildingRank: int }
+BuildingInfoModel { BuildingInfoDataModel: object }
+BuildingInfoPanelNavigationModel { BuildingId: int }
+BuildingInstanceRequirement { BuildingRequirementRank: int, BuildingRequirementSpecContainerId: int }
+BuildingItemUpgradePanelNavigationModel { CurrencyAmount: object, InFreeTrial: bool, ItemType: int, Level: int, SkuCode: string, SpecContainerId: int }
+BuildingNavBarLinkModel { BuildingType: int, IconUrl: string, IsOwned: bool, TooltipText: string }
+BuildingNavBarLinkSettings { BuildingType: int, IconUrl: string, IsDefendLink: bool, TooltipOasisId: int }
+BuildingNavBarModel { AttackLinks: object, DefendLinks: object }
+BuildingNavBarPanelNavigationModel { BuildingType: int }
+BuildingPopupInfoViewModel { BuildingId: int, BuildingName: string, BuildingRank: int, ForceLockFunctionButton: bool, ForceLockUpgradeButton: bool, FunctionIconUrl: string, FunctionName: string, FunctionUrl: string, IsActive: bool, IsAffordable: bool, IsBuildingRequirementMet: bool, IsDestroyed: bool, IsHeroLevelRequirementMet: int, IsUpgrading: bool, MaxRankReached: bool, Position: object, ShieldRemainingTime: int, SpecialMessage: string, UpgradeAcceleratorCost: object, UpgradeDuration: int, UpgradeProgressionPercentage: int, UpgradeRemainingTime: int, UpgradeRequirementBuildingName: string, UpgradeRequirementBuildingRank: int, WalletSummaryModel: object }
+BuildingPopupNavigationModel { BuildingId: int }
+BuildingPopupPositionModel { Zoom: int }
+BuildingPopupPositionRefreshedArgs { BuildingPopupPositionModel: object }
+BuildingRankCondition { Count: int, Rank: int, SpecContainerId: int }
+BuildingTooltipModel { CreationDuration: int, ExistingInstances: int, MaxBuildingRank: int, MaxInstances: int, Rank: int, Type: int }
+BuildingUpgradeCompletedEventArgs { BuildingUpgradeInfosModel: object }
+BuildingUpgradeCompletedNotification { BuildingId: int, NewRank: int }
+BuildingUpgradeConfirmationPopupPanelNavigationModel { BuildingId: int }
+BuildingUpgradeInfosModel { BuildingId: int, BuildingType: int, BuildingUpgradeCost: int, BuildingUpgradeDuration: int, BuildingUpgradeProgressionPercentage: int, BuildingUpgradeRank: int, BuildingUpgradeRemainingTime: int, BuilingSpecContainerId: int }
+BuildingUpgradeInfosRefreshedEventArgs { BuildingUpgradeInfosModel: object }
+BuildingUpgradeModel { BuildingPopupPositionModel: object, BuildingUpgradeInfosModel: object }
+BuildingUpgradePanelNavigationModel { BuildingId: int, BuildingRequirementLock: object, BuildingType: int, Description: string, Duration: int, HeroRequirementLock: object, IsActive: bool, IsOpalPanel: bool, LayerName: string, MaxRank: int, OptionalUpgradeText: string, PanelName: int, Rank: int, Title: string, UnlockableItemsList: object, UpgradeSkus: object, UpgradeStats: object }
+BuildingUpgradePopupDataModel { BuildingInfoModel: object, BuildingRequirementName: string, BuildingRequirementRank: int, CanAfford: bool, HeroLevelRequirement: int, IsActive: bool, IsBuildingRequirementMet: bool, IsHeroLevelRequirementMet: int, NextBuildingRank: int, ShopSkus: object, UnlockedItems: object, UpgradeDurationInSeconds: int }
+BuildingUpgradePopupModel { BuildingUpgradePopupDataModel: object }
+BuildingUpgradeStartedEventArgs { BuildingPopupPositionModel: object, BuildingUpgradeInfosModel: object }
+BuildingUpgradeStartedNotification { BuildingId: int, ExpirableId: string }
+BuildingUpgradeTimerPositionRefreshedEventArgs { BuildingUpgradeModels: object }
+BuildingUpgradeViewModel { BuildingUpgradeModels: object }
+BuyBackAddedNotification { AccountBuyBackSlot: object }
+BuyBackCommand { BuyBackId: string, SlotIndexes: object }
+BuyBackExpirable { ExpirableType: int }
+BuyBackUpdatedNotification { AccountBuyBackSlot: object }
+BuyCommand { ClientCraftingMaterials: object, ClientPrice: object, ConsumedHeroInventory: object, DiscountApplied: bool, SkuCode: string }
+BuyConsumableCommand { SlotIndexes: object }
+BuyHeroItemCommand { SlotIndex: int }
+BuyNewTabTooltipModel { PriceDescription: string }
+CPUInfoTracking { ClockFrequencyHz: number, CoreCount: number, CPUCount: number, HardwareThreadCount: number, Name: string }
+CasteInventoryItemModel { CanBeSold: bool, ConstructionPoints: int, CreatureRank: int, IconUrl: string, IsNewlyAdded: bool, IsRequirementMet: bool, ItemType: int, LayerName: string, Level: int, Name: string, SellPrice: object, SlotIndex: int, SpecContainerId: int, StackCount: int, Tooltip: object }
+Castle { AccountDisplayName: string, AccountId: int, CreationDate: datetime, CreatureTiers: object, LayoutId: int, ModificationDate: datetime, OasisNameId: int, Rooms: object, ThemeId: int, TrapTiers: object }
+CastleAttackComment { AccountId: int, AttackId: string, AvatarId: int, Comment: object }
+CastleAttackedNotification { AttackCount: int, DeathCount: int, DefendLogEntry: object, HeroCorpses: object, SuccessfulAttackCount: int, WinRatio: float, WinRatioDifficulty: int }
+CastleBlueprintTemplate { Rooms: object }
+CastleBoughtNotification { BuildInfo: object, IsStartupCastle: bool }
+CastleBuildable { Id: int, Orientation: int, SkuCode: string, SpecContainerId: int, SpecContainerId: number, SpecContainerId: number }
+CastleBuildableCommand { Id: int, Orientation: int, RoomId: int, RoomZoneId: int, SpecContainerId: int, SpecContainerId: number, SpecContainerId: number, IsCastlePublishable: bool }
+CastleBuilding { ExpirableId: string, Rank: int }
+CastleCell { Type: int, Type: number, Type: number }
+CastleCompetitionPopupPanelNavigationModel { AttackSource: int, PosX: int, PosY: int, UbisoftCompetitionId: int }
+CastleCreature { AggroPropagationOffsetX: float, AggroPropagationOffsetZ: float, IsSleeping: bool, TotemCastleBuildableId: int }
+CastleDPSBoostConsumableTemplate { IncreasedDPS: float }
+CastleDetailsPanelNavigationModel { CastleInfoModel: object }
+CastleDifficultySettings { CastleDifficulty: int, LevelFrom: int, LevelTo: int }
+CastleDraftRollbackCompletedNotification { BuildInfo: object, Failure: bool }
+CastleExpansion { SpecialGroundIds: number, SpecialGroundIds: number, SpecialGroundIds: number }
+CastleExpansionPattern { CastleExpansions: object, EntranceX: int, EntranceY: int, ExitX: int, ExitY: int }
+CastleForSale { CanBePurchased: bool, CastleDescriptionOasisID: int, CastleIconUrl: string, CastleModelIndex: int, CastleTitleOasisID: int, DebugName: string, FakePriceOasisID: int, IsInteractive: bool, IsStartupCastle: bool, MineStatuses: object, SaleId: int, SpawnPlotId: int, ThemeFilter: int, UbisoftCastleId: int }
+CastleForSaleInfoSummary { Amount: object, CanBePurchased: bool, CastleDescriptionOasisID: int, CastleIconUrl: string, CastleInfoSummary: object, CastleModelIndex: int, CastleTitleOasisID: int, FakePriceOasisID: int, IsInteractive: bool, SaleId: int, SpawnPlotId: int }
+CastleGround { GroundType: int, Id: int, SpecContainerId: int, SpecContainerId: number, SpecContainerId: number }
+CastleGroundGenerationRoomSettings { Padding: int, RoomHeight: int, RoomWidth: int }
+CastleGroundGenerationSettings { AuthorizeHolesInDiagonals: bool, CastleExpansionPatterns: object, DefaultGrounds: number, EntranceRoomSettings: object, ExitRoomSettings: object, ExpandHoleChance: float, HolePercentage: float, SpecialGroundCount: int, SpecialGroundMinDistance: int }
+CastleHeartBuildingInfoDataModel { CurrentAttackTicketsInBossRoom: int, CurrentAttackTicketsInCastle: int, CurrentConstructionPoints: int, CurrentHardCapBonusCastle: int, MaxAttackTicketsInBossRoom: int, MaxAttackTicketsInCastle: int, MaxConstructionPoints: int }
+CastleHeartBuildingUpgradePopupDataModel { NewAttackTicketsInBossRoom: int, NewAttackTicketsInCastle: int, NewConstructionPoints: int, NewHardCapBonusCastle: int }
+CastleHeroCorpse { Amounts: object, ElapsedTimeSinceDeath: float, EntityHarvestId: int, GlobalX: int, GlobalZ: int, HeroDisplayName: string, HeroLevel: int, HeroSpecContainerId: int, Items: object }
+CastleId { CastleType: int, Id: int }
+CastleInfo { AttackabilityStatus: int, AttackCount: int, AttackerStatus: int, AttackSource: int, AttackType: int, AverageDuration: int, BestHeroSpecContainerId: int, CastleType: int, CastleValidationDuration: int, CompletionReward: object, DefenderAccountSummary: object, DefenderActiveConsumables: object, Difficulty: int, FromMachineLearning: bool, IsAlmostEmpty: bool, IsCastleAttackable: bool, IsNew: bool, IsShielded: bool, IsTargetedAttack: bool, LastCastleRating: int, LastPublishedDate: datetime, LastSeenOnline: datetime, Level: int, PotentialLoot: object, RevengeAttackId: string, RoomCount: int, ShieldExpirationDate: datetime, Stats: object, SuccessfulAttackCount: int, TrophyScore: int, TrophyScoreVariationLose: int, TrophyScoreVariationReason: int, TrophyScoreVariationWin: int, VictoryConditionLevel: int, VictoryConditionRewardRatios: number }
+CastleInfoModel { AttackerTrophyScore: int, BestHeroOwned: bool, BestHeroSku: string, CastleInfo: object, CrownBonuses: number, DefenderActiveConsumables: object, DefenderSpecialPackModel: object, GuildIconUrl: string, GuildLayerName: string, IsCastleAttackable: bool, IsCastleAttackableForTargetedAttack: bool, IsRegionBoss: bool, SubLeagueModel: object, TargetedAttackAvailableCount: int, ValidatedAttackSource: int, WinRatioDefaultValue: float, WinRatioDifficultyOasisName: string }
+CastleInfoSummary { ActivationDate: datetime, AttackerStatus: int, AttackType: int, CastleHeartRank: int, CastleIconUrl: string, CastleThemeId: int, CastleType: int, DeActivationDate: datetime, DefenderAccountSummary: object, FromMachineLearning: bool, IsBranded: bool, IsCastleAttackable: bool, IsNew: bool, IsShielded: bool, LastComment: object, LastPublishedDate: datetime, Level: int, TrophyCooldownTimer: datetime, TrophyScore: int, UbisoftCompetitionId: int, VictoryConditionLevel: int, WinRatioDifficulty: int }
+CastleInventory { Creatures: object, Decorations: object, Rooms: object, Traps: object }
+CastleInventoryAction { Type: int }
+CastleInventoryAddedAction { Count: int, ItemType: int, SpecId: int, Type: int }
+CastleInventoryChangedNotification { Actions: object }
+CastleInventoryItem { AutoLevelUp: bool, AvailableCount: int, BlueprintUnlocked: bool, NewlyAdded: bool, SpecContainerId: int }
+CastleInventoryItemAddedEventArgs { Item: object }
+CastleInventoryItemRemovedEventArgs { Item: object, ItemSold: bool }
+CastleInventoryItemTemplate { AvailableCount: int, SpecContainerId: int }
+CastleInventoryMenuNavigationButtonModel { IsDisabledOnConsoleUI: bool, ItemType: int, LayerName: string, OasisId: int, Url: string }
+CastleInventoryPanelNavigationModel { CastleInventoryViewModel: object, IsOpalPanel: bool, MenuNavigationButtons: object, Tab: int, Title: string }
+CastleInventoryRefreshedEventArgs { CastleInventoryViewModel: object, Inventory: object }
+CastleInventoryRemovedAction { Count: int, ItemSold: bool, ItemType: int, SpecId: int }
+CastleItemValue { DebugName: string, ItemCount: int, ItemId: int, ItemType: int, Value: int }
+CastleLayout { Height: int, Id: int, SpecialCells: object, Width: int }
+CastleLayoutCell { Type: int, Type: number, Type: number }
+CastleLevelAdjustment { Adjustment: int, CpMaxFrom: int, CpMaxTo: int, CpMaxTresholdFrom: int, CpMaxTresholdTo: int }
+CastleLevelInfoModel { Level: int }
+CastleLevelReachedObjectiveRequirement { Level: int }
+CastleLevelUpEventArgs { Level: int, OldLevel: int }
+CastleLevelUpInfoModel { Level: int, OldLevel: int }
+CastleLevelUpNotification { AccountId: int, Level: int, OldLevel: int }
+CastleLoadConfig { CastleId: int, CastleMode: int, UbisoftCompetitionId: int }
+CastleLockedByObjectiveEventArgs { CastleId: object }
+CastleObjectiveStatusModel { IsLocked: bool, ObjectiveSummaryEntryModel: object }
+CastleObjectiveStatusUpdatedEventArgs { CastleId: object, CastleObjectiveStatusModel: object }
+CastlePopupPanelNavigationModel { AttackRegionId: int, AttackSource: int, AttackType: int, CastleId: int, CastleType: int, IsBossCastle: bool, IsOpalPanel: bool, PanelName: int, PosX: int, PosY: int, SubLeagueModel: object }
+CastlePopupRewardsTooltipModel { BuffGold: int, BuffLifeForce: int, BuffXp: int, ChestGold: int, ChestLifeForce: int, CreaturesAndTrapsGold: int, CreaturesAndTrapsLifeForce: int, CreaturesAndTrapsXp: int, LeagueBonusIGC: int, LeagueBonusLifeForce: int, LeagueName: string, MinesIGCAmount: int, MinesLifeForceAmount: int, MinesPremiumCashAmount: int, TotalMinesCount: int, Type: int }
+CastlePopupStarsTooltipModel { CrownBonuses: number, Type: int }
+CastlePropertiesChangedEventArgs { Properties: object }
+CastlePropertiesModel { ArchitectOfficeReadyToUpgrade: bool, CanValidateCastle: bool, CastleValidated: bool, CastleValidationDuration: int, CurrentConstructionPoints: int, CurrentRoomCount: int, DelegatedCastleValidationPendingTime: int, IsCastlePublishEnable: bool, IsCastleShareable: bool, IsCastleValid: bool, IsCurrentCastlePublished: bool, IsDelegatedCastleValidationPending: bool, IsRollbackAvailable: bool, MaxConstructionPoints: int, MaxRoomCount: int, PortalReadyToUpgrade: bool }
+CastleRankToVisualRankIndex { MaxCastleRank: int, VisualIndex: int }
+CastleRatedNotification { AttackId: string, CastleRating: int, Message: object }
+CastleRatingFreePrize { Amount: int, Chance: float, CurrencyType: int }
+CastleRenovationCollectedMaterialModel { DestinationInventory: int, DestinationSlotId: int, Item: object, SourceInventory: int, SourceSlotId: int }
+CastleRenovationInventorySlotModel { IsOwned: bool, Item: object }
+CastleRenovationLevelChangedEventArgs { CastleRenovationLevel: int }
+CastleRenovationLevelCompletedPanelNavigationModel { Description: string, IsOpalPanel: bool, IsRenovationCompleted: bool, LayerName: string, Level: int, LevelNameOasisId: int, PanelName: int, Title: string }
+CastleRenovationLevelModel { CastleRenovationLevel: int, CompletionInformation: object, InventorySlotModels: object, IsCompleted: bool, LevelNameOasisId: int, RewardNameOasisId: int }
+CastleRenovationLevelReachedObjectiveRequirement { CastleRenovationLevel: int }
+CastleRenovationMaterialsCollectedEventArgs { CastleRenovationLevel: int, CollectedMaterialModels: object }
+CastleRenovationMaterialsReadyForCollectEventArgs { AreRequiredMaterialsInHeroInventory: bool }
+CastleRenovationPanelNavigationModel { CastleRenovationLevelModels: object, CurrentRenovationLevel: int, IsOpalPanel: bool, PanelName: int }
+CastleRenovationProgressionLockModel { AreRequirementsMet: bool, CastleRenovationLevel: int }
+CastleRenovationUpgradeReadyEventArgs { NextCastleRenovationLevel: int }
+CastleRenovationVisual { Fx: object, VisualGroup: string }
+CastleRoom { Buildings: object, Creatures: object, Decorations: object, DefenseIngredientBoosts: object, Traps: object, Triggers: object }
+CastleRoomBuildable { BoostId: int, RoomZoneId: int }
+CastleSelectionPopulatedEventArgs { AttackRegion: object, Result: object, ResultFromCache: bool, SpecialPackModels: object }
+CastleStats { AttackCount: int, HeroesKilled: int, MaxConstructionPoints: int, SuccessfulAttackCount: int, TotalConstructionPoints: int, TrapCount: int, WinRatio: float, WinRatioDifficulty: int }
+CastleSummary { AccountDisplayName: string, AccountId: int, AvatarId: int, IsPublished: bool, LastPublishedDate: datetime, Level: int }
+CastleSummaryModel { AvatarUrl: string, Castle: object }
+CastleThemeInfoModel { CanAfford: bool, Description: string, IconUrl: string, Id: int, IsCastlePreviewable: bool, IsCastleValid: bool, Name: string }
+CastleTrap { BeatIndex: int, PowerSupplyCastleBuildableId: int }
+CastleTrigger { SizeX: number, SizeY: number }
+CastleValidationDelegationExpirable { ExpirableType: int, RefundableIGC: int, RefundableLifeForce: int, RefundablePremiunCash: int, Visibility: int }
+CastleValidationIntroPanelNavigationModel { CastleLevel: int, IsOpalPanel: bool, PanelName: int }
+CastleValidationOutroPanelNavigationModel { CastleLevel: int }
+CastleValidationRequestedNotification { RequestorAccountId: int, Visibility: int }
+CastleValidityChangedEventArgs { CastleValidityFeedbackModel: object }
+CastleValidityFeedbackModel { InvalidCastleFeedback: string, InvalidCastleFeedbackTitle: string, IsCastlePreviewable: bool, IsCastleShareable: bool, IsCastleValid: bool }
+CastleVisitPanelNavigationModel { CanBePurchased: bool, CastleName: string, FakePrice: string, SaleId: int }
+CastleVisitSound { AmbienceSound: object, CastleSaleId: int, Music: object }
+CastleWinRatioDifficultySettings { OasisId: int, WinRatioFrom: float, WinRatioTo: float }
+CastlesForSaleSelectionResult { CastlesForSale: object }
+ChapterLeaderboardEntry { AccountSummary: object, Position: int, Score: int, Seconds: number }
+ChapterLeaderboardPage { Leaders: object, MyEntry: object }
+ChapterTicketRewardItem { TicketCount: int }
+Character3DViewportModel { Height: int, PosX: int, PosY: int, Width: int }
+ChatInhibitionRule { Threshold: number, Timespan: number, Type: int }
+ChatLanguage { DebugName: string, IconUrl: string, LanguageCode: string, OasisNameId: int }
+ChatLanguageModel { DisplayName: string, IconUrl: string, LanguageCode: string }
+ChatMessage { ChatMessageType: int, Message: string, MessageDateTime: datetime, PresenceStatus: int, ProfileSummaryModel: object }
+ChatNewMessageEventArgs { ChatRoomMessagesModel: object }
+ChatPanelNavigationModel { ChatRoomConfigModel: object, CurrentChatRoomMessagesModel: object, OpenMinimized: bool }
+ChatRoom { ChatRoomType: int, CodeName: string, DebugName: string, LanguageCode: string, OasisNameId: int, RoomId: int }
+ChatRoomConfigModel { ChatKeepAliveDelay: int, ChatLanguages: object, ChatReconnectionDelay: int, ChatRoomInfos: object, MaxMessagesCount: int, RoomTypes: object, SelectedLanguageCode: string, SelectedRoomId: int, SelectedRoomType: int }
+ChatRoomInfo { ChatEnabled: bool, RoomName: string }
+ChatRoomInfoModel { RoomDisplayName: string, RoomId: int, RoomLanguage: string, RoomType: int }
+ChatRoomMessageSentTracking { MessageSentCount: int, RoomId: int }
+ChatRoomTracking { RoomId: int }
+ChatUserPresenceUpdatedEventArgs { PresenceStatus: int, ProfileSummaryModel: object, RichPresenceStatus: int, RoomId: int }
+ChooseFirstHeroConfirmationPanelNavigationModel { AreAllHeroesOwned: bool, HeroIconUrl: string, HeroOasisId: int, HeroOasisName: string, HeroSpecContainerId: int }
+ChooseFirstHeroPanelNavigationModel { ExplanationText: string }
+ClientCallProfilingTracking { Duration: float, PathAndQuery: string }
+ClientIdleCommand { IdleTime: int }
+ClientSettings { AccountCacheValidation: bool, ClientTrackingSettings: object, EnableDebugPanelController: bool, FriendReferalUrl: string, MaintenanceUrl: string, PrimaryShopBlingsUrl: string, PrimaryShopNonBlingsUrl: string, PrimaryShopPremiumPurchaseUrl: string, PrimaryShopProductPageUrl: string, PrimaryShopUrl: string, ShowWelcomePage: bool, WelcomePageSmallUrl: string, WelcomePageUrl: string, XmppInfo: object }
+ClientTrackingSettings { ClientIdleInterval: int, EnabledNavigationTrackings: object, EnableProfiling: bool, GameStateTrackingInterval: int, GlanceViewDurationTriggerInSeconds: int, IdleTimeThresholds: object }
+CloseMessageBoxEventArgs { Id: int }
+ClosePanelAssignmentActionSpec { PanelName: string, TargetEntitySearch: object }
+ClosePopupAssignmentActionSpec { Id: string }
+ClosePopupEventArgs { Id: string }
+CloseWebBrowserEventArgs { HideBlackOverlay: bool }
+CommunityEventAccountTimeShiftChangedNotification { TimeShift: int }
+CommunityEventEndedEventArgs { CommunityEvent: object }
+CommunityEventGlobalTimeShiftChangedNotification { TimeShift: int }
+CommunityEventStartedEventArgs { CommunityEvent: object }
+CommunityEventTimeShiftChangedEventArgs { TimeShift: int }
+CompetitionEndedNoRewardsNewsData { CastleAccountSummary: object, DisplayNameOasisId: int, Rank: int, UbisoftCompetitionId: int }
+CompetitionEndedRewardsWonNewsData { CastleAccountSummary: object, DisplayNameOasisId: int, Rank: int, UbisoftCompetitionId: int }
+CompleteAssignmentCommand { AssignmentId: int }
+CompletedAssignmentsChangedEventArgs { CompletedAssignments: number, LastCompletedAssignmentId: int }
+ConditionPowerUpUnlock { Heroes: number, MinItemLevel: int, MinItemQuality: int, NamedItemPowerUpLevelUnlock: object, PowerUpId: int }
+ConstructionPointsBuiltCondition { Count: int }
+ConsumableActivatedNotification { ActiveConsumable: object }
+ConsumableActivationConfirmationPanelNavigationModel { IconSynergyName: string, IconUrl: string, InventorySlotIndex: int, IsAlreadyActive: bool, Name: string, TemplateId: int }
+ConsumableBuyBackSlot { Item: object }
+ConsumableExpirable { CommunityEventId: int, ConsumableType: int, ExpirableType: int, TemplateId: int }
+ConsumableExpiredNotification { ConsumableType: int, TemplateId: int, Index: int, NotificationType: int }
+ConsumableTemplate { BuildingRequirementRank: int, BuildingRequirementSpecContainerId: int, IsLootable: bool, MaxInventoryStackCount: int, Name: object, Price: object, Quality: int, Rarity: int, SteamAssetSpec: object, SteamAssetUiSpec: object, TemplateId: int, Ui: object }
+ConsumableTooltipModel { ConsumableType: int, DisplayRemainingTime: bool, Duration: int, IsInAttack: bool, Quality: int, Quantity: int, QuantityAvailableForAttack: int, RemainingTime: int, Type: int }
+ContextualActionData { ActionType: int, ContextualActionDataInputType: int }
+ContextualActionSettings { OasisId: int }
+CountAchievement { Count: int }
+CountdownTimerPanelNavigationModel { IsTestAttack: bool }
+Country { CountryISOCode: string, Name: object, Ui: object, ZoneCodeName: string }
+CountryModel { CountryCode: string, IconUrl: string, Name: string, ZoneCode: string }
+CraftTestResult { LevelModifierItemCount: number, LevelToChanceModifiersFromSettings: object, LevelToChanceModifiersTestResult: object }
+CraftingMaterial { Id: int, Quantity: int }
+CraftingMaterialCollectingModel { LayerName: string }
+CraftingMaterialConsumptionModel { Cost: object, CraftingMaterials: object }
+CraftingMaterialInformation { BaseCraftingMaterialRequirement: object, HeroSpecificCraftingMaterialRequirement: object, PerLevelCraftingMaterialRequirement: object }
+CraftingMaterialMineHarvestCompletedEventArgs { CraftingMaterials: object }
+CraftingMaterialMineInformationModel { CraftingMaterialMineState: int, CraftingMaterials: object, RemainingTime: int }
+CraftingMaterialMineTooltipModel { CraftingMaterialMineInformationModel: object, Type: int }
+CraftingMaterialModel { ActualCount: int, HasEnoughCraftingMaterial: bool, IconUrl: string, IsConsumed: bool, LayerName: string, Quality: int, RequiredCount: int, TemplateId: int }
+CraftingMaterialRequirement { Amount: int, TemplateId: int }
+CraftingMaterialsPack { DebugName: string, FixedCraftingMaterials: object, FullRandomCraftingMaterialCount: int, Id: int, LayerName: string, OasisDescriptionId: int, OasisNameId: int, RandomCraftingMaterialsByQuality: object, RandomCraftingMaterialsByQualityList: object, ShopIconUrl: string, UseSmartLootCraftingPriority: bool }
+CraftingMaterialsPackModel { LayerName: string, SpecContainerId: int, Type: int }
+CraftingMaterialsPackPurchasedNotification { CraftingMaterialsGained: object }
+CraftingMaterialsPackResultModel { CraftingMaterialsGained: object }
+CraftingMaterialsRewardItem { CraftingMaterials: object }
+CraftingStampingCounterModel { UIGridItemModel: object }
+CreatureBoostPanelNavigationModel { ActiveBoostDurationLeft: int, ActiveBoostTotalDuration: int, BoostDescription: string, BoostDuration: int, BoostLayerName: string, BoostName: string, CanAfford: bool, Cost: object, CraftingMaterials: object, CreatureName: string, CurrentBoostedCreatureCount: int, IsBoostable: bool, MaxBoostedCreatureCount: int }
+CreatureTrapAbilityModel { Description: string, Formulas: object, IconUrl: string, LayerName: string, Title: string }
+CreatureTrapCraftingItemModel { IsBlueprintLocked: bool, IsCraftable: bool }
+CreatureTrapLevelUpPanelNavigationModel { ShopCategory: int }
+CreatureTrapPanelNavigationModel { CreatureTrapUpgradeModel: object, SpecContainerId: int, Tier: int }
+CreatureTrapSpecializationModel { Description: string, Formulas: object, IconUrl: string, Name: string, SpecializationId: int }
+CreatureTrapSpecializationPanelNavigationModel { GameEntityType: int, PosX: int, PosY: int }
+CreatureTrapSpecializationViewModel { CreatureTrapSpecializations: object, CurrentSpecializationId: int, SpecContainerId: int, Tier: int, Title: string }
+CreatureTrapTooltipModel { Abilities: object, AttackSpeed: string, AutoLevelUp: bool, BehaviorCategory: string, DamageFormula: string, DefensePoints: int, Health: int, IsOldIngredient: bool, Level: int, MaxLevel: int, MovementSpeed: string, RequiredCraftingMaterials: object, ShopContext: int, ShowSpecializations: bool, Specializations: object, Tier: int, Type: int }
+CreatureTrapUnlockModel { IconUrl: string, Name: string }
+CreatureTrapUpgradeModel { BuildingRequirementName: string, BuildingRequirementRank: int, CanAfford: bool, CreatureName: string, CurrentEffectiveLevel: int, CurrentHealth: int, DamageFormula: string, EffectiveLevel: int, Health: int, IconUrl: string, IsBuildingRequirementMet: bool, IsMaxTier: int, MaxEffectiveLevel: int, MaxHealth: int, NextTier: int, SpecContainerId: int, TotalUnits: int, Unlocks: object }
+CreditsDepartmentSpecializationsSettings { Employees: object, SpecializationName: string, SpecializationNameOasisId: int, Specializations: object, SubSpecializations: object }
+CreditsDepartmentsSettings { DepartmentName: string, DepartmentOasisId: int, DepartmentSubCategories: object, DepartmentSubSpecializations: object, Employees: object }
+CreditsSubSpecializationsSettings { Employees: object, JobName: string, JobNameOasisId: int }
+CrownsDiminishingReturn { DeathCount: int, DiminishingReturnMultiplier: float }
+CsvDataTypeInfo { Name: string, Value: int }
+CsvEntity { Name: string, Properties: object }
+CsvProperty { Name: string, Type: int }
+CsvSchema { Entities: object, Types: object }
+CurrencyAccumulationAchievement { CurrencyType: int }
+CurrencyAmount { Amount: int, CurrencyType: int }
+CurrencyAmountRewardItem { CurrencyAmount: object, LargeIconUrl: string, SmallIconUrl: string }
+CurrencySettings { OasisIdIGC: int, OasisIdLifeForce: int, OasisIdPremiumCash: int }
+CustomTextContainer { Items: object }
+DamageMultiplier { LevelDiff: int, Multiplier: float }
+DataNavigationModel { HideLobbyBar: bool, IsPopup: bool, ShowClose: bool, ShowOverlay: bool }
+DatabaseMigrationStatus { Log: string, Success: bool }
+DeathDetail { AttackFrameCount: int, DamageSource: int, DefenseIngredientId: int, GlobalX: int, GlobalZ: int, RoomId: int, RoomId: number, RoomId: number }
+DebugPanelNavigationModel { DebugPanelName: string }
+DebugUserSettings { DebugFrame: number, LoadAtDebugFrame: bool, ProceduralCastleGenerationNumberOfIterations: int, ProceduralCastleGenerationRuleMasks: number, ProtoDynamicCreatureSpawning: bool, ProtoGiveXpAsLoot: bool, ProtoLootFollowHero: bool, ProtoLootIsPickable: bool, TimeScaleCheatsFactors: number }
+DecorationTooltipModel { DecorationPointsCost: int, DecorationType: int, HealthPoints: int, HitPoints: int, Type: int }
+DefeatCastleAchievement { CastleDifficulties: object }
+DefeatCastleStrikeAchievement { IsFriend: bool }
+DefendLog { DefendLogEntries: object, OfflinePeriod: object }
+DefendLogEntry { AttackDurationInMilliseconds: int, AttackerAccountSummary: object, AttackId: string, AttackStartDateTime: datetime, AttackType: int, CastleRating: int, CompletionType: int, HasReplay: bool, HeroSpecContainerId: int, IsCastleAttackable: bool, IsRevengeAttack: bool, IsShielded: bool, IsTargetedAttack: bool, Level: int, Message: object, PillagedMines: object, PotionUsed: int, ResurrectionCount: int, RevengeEnabled: bool, StolenIGC: object, StolenLifeForce: object, TrophyScoreVariation: int, VictoryConditionLevel: int, VictoryConditionRewardRatios: number, VictoryConditionType: int }
+DefendLogEntryDeletedNotification { LastValidEntryDate: datetime }
+DefendLogEntryModel { AvatarUrl: string, DefendLogEntry: object, HeroIconModel: object, Message: string, SpecialPackModel: object }
+DefendLogEventArgs { DefendLogEntry: object }
+DefendLogModel { CrownBonuses: number, CurrentEntryModels: object, OfflineEntryModels: object, OfflineSummary: object, OlderEntryModels: object }
+DefendLogSummary { StolenIGC: object, StolenLifeForce: object, TrophyScoreVariation: int }
+DefendLogViewModel { DefendLogModel: object, TargetedAttackAvailableCount: int }
+DefenseButtonsSettings { Bottom: number, Hovered: number, Idle: number, Pickup: number, Selected: number, Specialization: number }
+DefenseEntityTooltipModel { CPCost: int, DefenseRating: int, SpecialAbilities: object, TimeToLevelUp: int }
+DefenseHudPanelNavigationModel { BuildViewModel: object, IsCastleValidated: bool, IsDelegatedCastleValidationPending: bool }
+DefenseHudSettings { CastleNotValidatedLayerName: string, CastleValidatedLayerName: string }
+DefenseIngredientArchetype { Specialization: int, Tier: int }
+DefenseIngredientBoostExpirable { BoostId: int, DefenseIngredientId: int, DefenseItemType: int, ExpirableType: int }
+DefenseIngredientBuiltCondition { Count: int, ItemType: int, SpecContainerId: int }
+DefenseIngredientDestroyedCondition { Count: int, ItemType: int, SpecContainerId: int }
+DefenseIngredientLoot { Gold: int, HealthOrbFragments: int, Id: int, InventoryItems: object, LifeForce: int, PremiumCash: int, Xp: int }
+DefenseIngredientRewardItem { Count: int, ItemType: int, SpecId: int }
+DefenseIngredientSparedCondition { ItemType: int, SpecContainerId: int }
+DefenseIngredientSpecializedEventArgs { GameEntityType: int, SpecContainerId: int, SpecializationId: int }
+DefenseIngredientStampingModel { CraftingMaterials: object, CurrencyAmount: object, Id: int, OasisNameId: int, RemainingStampCount: int }
+DefenseIngredientTier { AutoLevelUp: bool, SpecContainerId: int, Specialization: int, Tier: int }
+DestroyFieldTriggers { OnChestLocked: bool, OnMaxActivationReached: bool }
+DiskInfoTracking { DriveLetter: string, FileSystemName: string, FreeSpaceBytes: number, TotalSpaceBytes: number, UsedSpaceBytes: number }
+DisplayAdapterInfoTracking { DisplayMode: object, DriverDesc: string, GPUCount: number, LastSupportedDirectXVersion: string, Name: string, VRAMBytes: number }
+DisplayModeInfoTracking { BitsPerPixel: number, Height: number, RefreshRate: number, Width: number }
+DisplayPlayerCastleInAttackSelectionAssignmentActionSpec { DisplayPlayerCastle: bool }
+DistanceFieldSettings { Gradient: float, InnerColor: int, InnerGradient: float, InnerOffsetX: float, InnerOffsetY: float, InnerSize: float, OuterColor: int, OuterGradient: float, OuterOffsetX: float, OuterOffsetY: float, OuterSize: float, Thickness: float }
+DistanceFieldSettingsModel { DistanceFields: object }
+DoorStateTriggers { OnAfterAggroActivityEnded: int, OnAfterAggroActivityEndedAndTestAttackCondition: int, OnAggroEnded: int, OnAggroStarted: int, OnAllTotemsDeactivated: int, OnChestLocked: int, OnChestOpened: int, OnCreation: int, OnCreatureAlerted: int, OnNoCreaturesAlerted: int, OnTestAttackStarted: int, OnTotemActivated: int }
+DownloadCompletedTaskTracking { Duration: int, IsFirstInstall: bool }
+DownloadPackageCompletedTracking { DownloadSize: number, Duration: int, IsSuccessful: bool, PackageVersionId: object }
+DownloadPackageStartedTracking { PackageVersionId: object, Url: string, VersionName: string }
+DownloadPatcherCompletedTracking { DownloadSize: number, Duration: int, IsSuccessful: bool, PackageVersionId: object }
+DownloadPatcherStartedTracking { PackageVersionId: object, Url: string, VersionName: string }
+DownloadStartedTaskTracking { IsFirstInstall: bool }
+DraftValidatedNotification { BoostedCreatures: object, BoostedTraps: object, CastleValidationDuration: float, DefenderAccountId: int, IsDraftPublished: bool, IsRollbackAvailable: bool, SleepingCreatures: number }
+DropCountModifer { AttackerCastleLevelDiff: int, DropModifier: float }
+DuplicatedSpecException { Spec: object, SpecContainer: object }
+DurationByVictoryCondition { BaseDuration: int, CPMultiplier: float }
+DyeInfoModel { AnimationName: string, CanBeTinted: bool, Color: string, ColorName: string }
+EffectLevelLimitation { ItemLevel: int, MaxEffectLevel: int, MinEffectLevel: int }
+EmoteRewardItem { EmoteId: int }
+EnableHeroLevelUpNotificationAssignmentActionSpec { Enable: bool }
+EnableHeroVoiceOverAssignmentActionSpec { EnableHeroVoiceOver: bool }
+EndAttackInfo { AttackId: string, BoostGold: int, BoostLifeForce: int, BoostXp: int, CastleRatingFreePrize: object, CastleShieldedByAttacker: bool, CastleShieldedDuringAttack: bool, CastleValidationDuration: int, CompletionReward: object, CompletionType: int, DailyQuestGold: int, DeathCount: int, DefenderAccountDisplayName: string, DefenderCastleId: int, DefenderCastleType: int, DefenderLossIGC: int, DefenderLossLifeForce: int, DefenderOasisNameId: int, Duration: int, EnterTreasureRoom: bool, HeroLevel: int, InitialGold: int, InitialXp: int, IsCastleAttackable: bool, IsCompletionRewardMissed: bool, IsNewUbisoftCompetitionLeader: bool, IsShielded: bool, IsTutorial: bool, IsUbisoftCompetitionValid: bool, KillsGold: int, KillsLifeForce: int, KillsXp: int, LastComment: object, LeagueBonusGold: int, LeagueBonusLifeForce: int, LootTransferenceCost: int, MaxVictoryConditionLevel: int, PillagedIGCMineCount: int, PillagedIGCMinesAmount: int, PillagedLifeForceMineCount: int, PillagedLifeForceMinesAmount: int, PillagedPremiumCashMineCount: int, PillagedPremiumCashMinesAmount: int, RevengeEnabled: bool, TotalGold: int, TotalLifeForce: int, TotalPremiumCash: int, TotalXp: int, TreasureRoomGold: int, TreasureRoomLifeForce: int, TreasureRoomReward: object, TreasureRoomXp: int, TrophyScoreVariation: object, UpdatedAccountStats: object, VictoryConditionLevel: int, VictoryConditionRewardRatios: number, VictoryConditionType: int }
+EndBuildParams { BuildHistoryIndex: int }
+EngineSetting { IsEngine: bool, Name: string, Value: string, Version: int }
+EngineTracking { EngineTrackingAverageFps: float, EngineTrackingTimeBetween20and59Fps: float, EngineTrackingTimeGreater59Fps: float, EngineTrackingTimeLess20Fps: float }
+EntitiesUIContainerParameter { IconOffset3D: object, SpecificZoomSettings: object, UIContainer: number, UseHeadNode: bool, ZBias: float }
+EquipmentAbilityModel { Description: string, DescriptionFormatter: string, Prefix: string, Suffix: string, Value: int }
+EquipmentAchievement { EquippedParts: object }
+EquipmentCategoryDefinition { EffectCount: int, OasisIds: object }
+EquipmentTemplateIds { BackTemplateId: int, Finger1TemplateId: int, GlovesTemplateId: int, HelmTemplateId: int, NeckTemplateId: int, OffhandTemplateId: int, ShouldersTemplateId: int, SuitOfArmorTemplateId: int, WeaponTemplateId: int }
+EquipmentTooltipModel { ArchetypeStats: object, ComparedMagicalProperties: object, CompareGearScore: int, GearScore: int, GearScoreType: string, GenderSafeItemTypeName: string, HeroNameRequirement: string, IsComparing: bool, IsComparingMagicalProperties: bool, IsEquipped: bool, IsItemLevelHidden: bool, IsUpgraded: bool, ItemCategoryType: int, ItemQuality: int, ItemType: int, LevelMax: int, MagicalProperties: object, PowerUpModel: object, ShowArchetype: bool, ShowWeaponDescription: bool, Type: int, WeaponDescription: string, WeaponIcon: string, WeaponSpecialEffect: string }
+EquippedConsumablesViewModelEventArgs { EquippedItems: object }
+EquippedHeroConsumableItemModel { AbilitySlotIndex: int, IconUrl: string, LayerName: string, SlotIndex: int, StackCount: int, TemplateId: int, Tooltip: object }
+EquippedHeroItemModel { DyeInfoModel: object, EquippableItemSlots: object, IconUrl: string, IsDefaultItem: bool, IsMaxLevel: bool, ItemLevel: int, ItemSlot: int, Quality: int, Rarity: int, Type: object }
+EquippedSpellChangedEventArgs { EquippedSpellViewModel: object }
+EquippedSpellModel { IconUrl: string, LayerName: string, Level: int, Name: string, SlotIndex: int, SpecContainerId: int, Tooltip: object }
+ErrorMessageInformation { Id: int, IsContinueButtonEnabled: bool, IsForumLinkEnabled: bool, OasisButtonCaptionId: int, OasisMessageId: int, OasisTitleId: int }
+ErrorMessageModel { AdvancedMessage: string, ButtonCaption: string, IsButtonEnabled: bool, IsForumLinkEnabled: bool, Message: string, PanelName: int, Title: string, Type: int }
+ErrorMessageUpdatedEventArgs { ErrorData: object, ShouldShow: bool }
+ErrorResultModel { ErrorCode: int }
+ExecuteAssignmentActionCommand { ActionIndex: int, AssignmentId: int }
+Expirable { DueDate: datetime, DurationSeconds: int, ExpirableType: int, Id: string, IsPaused: bool }
+ExpirableAddedNotification { Expirable: object }
+ExpirableRemovedNotification { ExpirableId: string }
+ExpirableUpdatedNotification { DueDate: datetime, DurationSeconds: int, ExpirableId: string, IsPaused: bool }
+ExpireExpirableCommand { ExpirableId: string, PayToForceExpiration: bool }
+ExtraDamageInfo { DamageMultiplierByTargetType: object, ExtraCriticalChance: float, ExtraCriticalDamage: float, IgnoreArmor: int, ReduceDodgeChance: float }
+FacebookAccountSummary { AvatarUrl: string, FacebookName: string, FacebookUid: string }
+FacebookConnectEventArgs { IsSuccessful: bool }
+FacebookLinkedAccountSummary { AccountId: int, AvatarUrl: string, DisplayName: string, FacebookName: string, FacebookUid: string, HasInvited: bool, IsFriend: bool }
+FbAccountInformation { first_name: string, id: string, last_name: string, name: string }
+FbGetFriends { data: object }
+FbUserInfo { id: string, name: string }
+FightDynamics { BasicRoomCaps: object, BossRoomCaps: object, BossUsesHardCap: bool, CanGainActivationDistance: float, CanLoseActivationDistance: float, CastleLevelBonuses: object, IgnoreCapsInUbisoftCastles: bool }
+FightDynamicsCaps { SimultaneousDefendersCPHardCap: int, SimultaneousDefendersCPSoftCap: int }
+FightDynamicsCastleLevelBonus { Bonus: float, MaxCastleLevel: int }
+Filter { Matched: bool, Matches: object, Replacement: string }
+FilterModel { Code: string, IconUrl: string, Name: string }
+FinishNowModel { BuyUrl: string, CanAfford: bool, CurrencyAmount: object, IconUrl: string, ShopCategory: int }
+FinishNowPanelNavigationModel { FinishNowModel: object }
+FootstepsSoundSettings { FloorMaterialIndexByMaterialType: object, HeroFootStepSoundsTable: object }
+ForgeCollectCommand { HeroItemSlot: int, InventorySlotIndex: int }
+ForgeConfirmationPopupPanelNavigationModel { AverageItemLevel: int, HeroItemQuality: int }
+ForgeCookingTimerUpdatedEventArgs { CurrencyAmount: object, RatioPercentage: float, RemainingTime: int }
+ForgeCraftCommand { HeroItemSlots: object, InventorySlotIndexes: number, Quality: int, ShopSkuCode: string }
+ForgeExpirable { ExpirableType: int, ForgeMode: int }
+ForgeFinishNowPanelNavigationModel { CurrencyAmount: object, ForgeMode: int, ItemQuality: int }
+ForgeInfo { BuildingNotificationIconUrl: string, BuildingProgressBarIconUrl: string, ShouldShowFinishNowOption: bool, TierTable: object }
+ForgeInventoryTabChangedEventArgs { HeroInventoryPanelNavigationModel: object }
+ForgeItemCollectModel { IconUrl: string, Level: int, OasisName: string, OasisNameId: int, TooltipModel: object }
+ForgeItemCookingModel { CurrencyAmount: object, ForgeMode: int, LevelMax: int, LevelMin: int, RemainingTime: int, ShouldShowFinishNowOption: bool, TotalDuration: int }
+ForgeItemReadyNotification { AccountForgedItem: object, ExpirableId: string, ForgeMode: int }
+ForgeItemSelectionEventArgs { ForgeItemSlots: object, ForgeMysteryBoxModel: object }
+ForgeItemSelectionModel { Duration: int, ForgeMode: int, RequiredItemSlotCount: int }
+ForgeItemSlotModel { HeroItemSlot: int, InventorySlotIndex: int }
+ForgeModel { CraftingSlotQuality: int, ItemQuality: int }
+ForgeMysteryBoxItemModel { AddedItemForgeSoundId: number, ForgeSlotId: int, HeroInventoryItemModel: object, InventorySlotId: int, ItemSlotModel: object }
+ForgeMysteryBoxModel { CraftingMaterialsRequirement: object, ForgeMode: int, ForgeModel: object, ForgeMysteryBoxItemModel: object, ForgeSkuModel: object, ForgeSlotId: int, IsAllRequiredSlotFilled: bool, LevelMax: int, LevelMin: int, SelectedItemSlotCount: int }
+ForgeNotificationsUpdatedEventArgs { UpgradableItemsCount: int, UpgradableSlots: object }
+ForgePanelNavigationModel { ForgeMode: int, ForgeModel: object, ForgeState: int, HeroInventoryPanelNavigationModel: object, IsForgeInventoryOpenedChangingTab: bool, ShopPanelNavigationModel: object }
+ForgeQualitySelectionModel { ForgeMode: int, Options: object }
+ForgeQualitySelectionOptionModel { BuildingRankRequirement: int, IsBuildingRankRequirementMet: bool, ItemQuality: int, MaxCraftableItemCount: int, OasisName: string, OasisNameId: int }
+ForgeReforgeCommand { HeroItemSlot: int, InventorySlotIndex: int, Quality: int, ShopSkuCode: string }
+ForgeSkuModel { CanAfford: bool, Price: object, SkuCode: string }
+ForgeStartedNotification { AccountForgedItem: object }
+ForgeTier { BuildingRankRequirement: int, Duration: int, LevelToChanceModifiers: object, OptionOasisId: int, RequiredItemCount: int, ShopConfirmationOasisId: int, ShopConfirmationShopIconUrl: string }
+ForgeUpgradeCommand { ConsumedHeroInventory: object, HeroItemSlot: int, InventorySlotIndex: int, ShopSkuCode: string }
+ForgedItemCount { AccountForgedItemCount: int, TotalForgedItemCount: int }
+FreeTrialActivatedNotification { FreeTrialType: int, HeroFreeTrialInfoId: int }
+FreeTrialConditionCompletedNotification { HeroSpecContainerId: int, PriceReductionConditionCompletedId: int }
+FreeTrialPanelNavigationModel { IconUrl: string, RemainingDays: int }
+FreeWorkerPanelNavigationModel { BuyUrl: string, CurrencyAmount: object }
+FriendAvatarUpdatedNotification { FriendAccountId: int, FriendAvatarId: int }
+FriendInviteNotification { Invitation: object }
+FriendLeaderboardModel { DisplayName: string, FacebookLinkedAccount: object, Id: int, IsCurrentUser: bool, Rank: int, TrophyScore: int }
+FriendLeagueUpdatedNotification { FriendAccountId: int, LeagueId: int, SubLeagueId: int }
+FriendNotificationsPanelNavigationModel { DebounceSearchValue: int, ShowFriendReferral: bool }
+FriendReferral { NonRegisteredAccounts: object }
+FriendReward { Id: int, Name: object, RefferedFriendsCount: int, RequiredLevel: int, Reward: object }
+FriendRewardGrantedNewsData { RequiredLevel: int, RequiredReferralFriends: int, Reward: object }
+FriendTrophyScoreChangedNotification { FriendAccountId: int, TrophyScore: int }
+FriendsLeaderboardModel { Leaderboard: object }
+FriendsViewModel { CurrentAccountId: int, Friends: object, FriendshipInvitations: object, SpecialPackModels: object, TargetedAttackAvailableCount: int }
+FriendshipActionEventArgs { AccountSummary: object, FriendsLeaderboard: object }
+FriendshipAddedNotification { FriendAccountSummary: object }
+FriendshipInvitation { CreationDate: datetime, FriendAccountId: int, FriendAvatarId: int, FriendDisplayName: string, HasAccepted: bool, HasDeclined: bool, IsCastleAttackable: bool, IsInvitationOwner: bool, LeagueId: int }
+FriendshipInvitationCancelledNotification { FriendAccountId: int, Index: int, NotificationType: int }
+FriendshipInvitationDeclinedNotification { FriendAccountId: int }
+FriendshipInvitationEventArgs { FriendAccountId: int, FriendsLeaderboard: object, Invitation: object, InvitationsToMeCount: int }
+FriendshipInvitationModel { AvatarUrl: string, FriendshipInvitation: object, IsCastleAttackableForTargetedAttack: bool }
+FriendshipInvitationUpdatedNotification { FriendshipInvitation: object }
+FriendshipRemovedNotification { FriendAccountId: int, Index: int, NotificationType: int }
+GPUTimings { SettingsMS: number }
+GameButtonEventArgs { Button: int }
+GameCameraZoomLevel { AttachCameraLight: bool, Distance: float, EaseInDuration: float, EaseInFactor: float, FOV: float, Pitch: float, ShowWalls: bool, TargetOffsetX: float, TargetOffsetY: float, TargetOffsetZ: float }
+GameEngineSettings { EngineSettings: object }
+GameResizedModel { CurrentScreenHeight: int, CurrentScreenWidth: int, PreviousScreenHeight: int, PreviousScreenWidth: int }
+GameStartTracking { GameClientVersion: string, MachineId: string }
+GameStateSoundPresets { ActivationPresets: object, DeactivationPresets: object }
+GameStateSoundPresetsInfo { GlobalPresets: object, PresetsByHeroId: object }
+GameStateSoundPresetsSettings { GameStateSoundPresetsInfos: object }
+GameStateTracking { GameStateId: int, GameStateIdleTime: int, GameStateTotalTime: int, GameStateType: int, NextGameStateType: int }
+GameStates { AccountCreation: int, Attack: int, AttackSelection: int, Build: int, CastleVisit: int, Home: int, Patcher: int, Replay: int, StarterCastleSelection: int, StartMenu: int, UPlayLinking: int }
+GameUrlEventArgModel { ActionName: string, ControllerName: string, DataNavigationInfo: object, Parameters: string }
+GamepadButtonContextualActionData { Buttons: number, ContextualActionDataInputType: int }
+GamepadStickContextualActionData { ContextualActionDataInputType: int, Stick: int }
+GameplayToolboxAppConfig { BranchName: string, CommunityEventSettingsPath: string, EnableDevMode: bool, GameEnvironmentName: string, GameplaySettingsPath: string, GameServerUrl: string, HMACAccessKeyID: string, HMACSecret: string, RootSettingsPath: string, ShopSettingsPath: string, SteamAppID: number }
+GearIcons { InventoryIconUrl: string, ShopIconUrl: string }
+GetBuffsViewModel { Buffs: object }
+GetBuildShortcutKeysModel { BuildShortcutKeyModels: object }
+GetCastleInventoryViewModel { Inventory: object }
+GetCategoryConfigViewModel { Filters: object }
+GetChatRoomMessagesModel { ChatRoomInfo: object, ChatRoomMessages: object }
+GetEquippedConsumablesViewModel { EquippedItems: object }
+GetEquippedItemsViewModel { Equipment: object }
+GetEquippedSpellViewModel { EquippedSpells: object }
+GetHeroInventoryEventArgs { GetHeroInventoryViewModel: object }
+GetHeroInventoryViewModel { CanBuyNewInventoryTab: bool, CurrentDisplayedInventory: object, CurrentTabIndex: int, InventoryTabs: object, MaxSlotCount: int, Price: object }
+GetHeroStatsModel { HeroLevel: int, HeroName: string, HeroStatsModel: object }
+GetMoreCastlesButtonUpdatedEventArgs { CanAfford: bool }
+GetNewsViewModel { CurrentAccountId: int, News: object }
+GetProductsViewModel { Products: object }
+GetSelectedAttackRegionViewModel { AttackRegionId: int, HasPendingUpdateRegionStatus: bool }
+GetSpellFamiliesViewModel { Families: object }
+GetSpellShortcutKeysModel { SpellShortcutKeyModels: object }
+GetSpellsViewModel { Spells: object }
+GetUbisoftCompetitionViewModel { UbisoftCompetitionInfo: object }
+GiveGiftResult { InvalidAccounts: int, ProcessedAccounts: int }
+GlobalNotification { Id: string, NotificationType: int }
+GoldBoostConsumableTemplate { AttackIncreasedGold: float, MineIncreasedGold: float }
+GraphicsInfoTracking { CurrentDirectXVersionLetter: string, CurrentDirectXVersionMajor: number, CurrentDirectXVersionMinor: number, DisplayAdapters: object, ScreenCount: number }
+GroupsByRank { Groups: number }
+Guild { Description: object, DisplayName: string, Emblem: object, Id: int, InviteRequests: object, JoinRequests: object, LanguageCode: string, Members: object, PendingValidationCastleIds: number, Rank: int, RecruitmentMode: int, Stats: object, TrophyScore: int, WelcomeMessage: object }
+GuildAcceptJoinRequestStatus { AccountId: int, IsSuccess: bool }
+GuildBattleLog { BattleLogEntries: object }
+GuildBattleLogModel { BattleLogEntries: object, LastConnectionTime: datetime }
+GuildBattleLogModelRefreshedEventArgs { Model: object }
+GuildEmblem { Id: int }
+GuildHeader { DisplayName: string, Emblem: object, Id: int }
+GuildHeaderModel { GuildHeader: object, IconName: string }
+GuildInfoPopupPanelNavigationModel { GuildId: int, IsOpalPanel: bool, PanelName: int, SelectedTab: int }
+GuildInvitation { CreationDate: datetime, GuildSummary: object }
+GuildInvitationReceivedNotification { GuildInvitation: object }
+GuildInvitationRemovedNotification { AccountId: int, GuildId: int }
+GuildJoinRequestAddedNotification { GuildId: int }
+GuildJoinRequestReceivedNotification { Requestor: object }
+GuildJoinRequestRemovedNotification { AccountId: int, GuildId: int }
+GuildJoinedEventArgs { GuildId: int }
+GuildLeaderboardEntry { GuildSummary: object, Score: int, Seconds: number }
+GuildLeaderboardPage { CurrentGuild: object, Entries: object, FirstEntryRank: int, Leaders: object, RemainingTime: int, TotalCount: number }
+GuildLeftEventArgs { GuildId: int, GuildStillExists: bool }
+GuildLeftNotification { GuildId: int, GuildStillExists: bool }
+GuildListingItemModel { CanAcceptInvitation: bool, GuildSummary: object, IsInvitation: bool, MaxMemberCount: int, Rank: int, SeparatorOasisId: int }
+GuildListingModel { CanCreateGuild: bool, CanScrollDown: bool, CanScrollUp: bool, Items: object, PageIndex: int }
+GuildListingModelRefreshedEventArgs { Model: object }
+GuildManagementPanelNavigationModel { IsOpalPanel: bool, Model: object, PanelName: int }
+GuildMember { AccountSummary: object, JoinDate: datetime, Title: int }
+GuildMemberJoinedNotification { Guild: object, JoinerId: int }
+GuildMemberLeftNotification { Guild: object, Index: int, NotificationType: int }
+GuildMemberModel { AccountSummary: object, AvatarLayerName: string, CanAttackAsTargetAttack: bool, CanAttackAsTestAttack: bool, CanAttackAsValidation: bool, CanRemoveMember: bool, CanVisitCastle: bool, ShowAttackAsTargetAttack: bool }
+GuildMemberTitleUpdatedNotification { AccountId: int, GuildId: int, Title: int }
+GuildMemberTrophyScoreChangedNotification { GuildRank: int, GuildTrophyScore: int, MemberAccountId: int, MemberTrophyScore: int }
+GuildNotificationCountUpdatedEventArgs { Count: int, InviteCount: int, NewBattleLogEntriesCount: int, RequestCount: int, ValidationRequestCount: int }
+GuildProfileModel { CanEdit: bool, CanLeave: bool, CanRequestJoin: bool, Description: string, DisplayName: string, Emblem: object, HasPendingInvitation: bool, HasPendingJoinRequest: bool, Id: int, IsGuildFull: bool, JoinRequests: object, LanguageCode: string, LeaderDisplayName: string, MaxMemberCount: int, MemberCount: int, Members: object, Rank: int, RecruitmentMode: int, TrophyScore: int, WelcomeMessage: string }
+GuildProfileModelRefreshedEventArgs { Model: object }
+GuildProfilePanelNavigationModel { GuildId: int, IsOpalPanel: bool, PanelName: int, SelectedTab: int }
+GuildSearchResult { GuildSummaries: object, HasMore: bool }
+GuildSettingsUpdatedNotification { Description: object, GuildEmblem: object, GuildId: int, LanguageCode: string, RecruitmentMode: int }
+GuildSummary { DisplayName: string, Emblem: object, Id: int, LanguageCode: string, LeaderAccountId: int, LeaderDisplayName: string, MemberCount: int, TrophyScore: int }
+GuildWelcomePagePanelNavigationModel { ExcludeModalPopupOpening: bool, GuildProfileModel: object, IsOpalPanel: bool, PanelName: int }
+HMACDictionaryItem { AccessKeyID: string, Description: string, Secret: string }
+HarvestCollectedEventArgs { AmountCollected: object, CastleLevel: int, EntityHarvestId: int, EntityHarvestType: int, XpEarned: int }
+HarvestCollectingStartedEventArgs { CurrencyType: int, EntityHarvestId: int, EntityHarvestType: int }
+HarvestCommandCompletedEventArgs { AmountCollected: object, CastleLevel: int, EntityHarvestId: int, EntityHarvestType: int, HarvestedHeroItems: object, XpEarned: int }
+HarvestHeroCorpseCommand { HeroCorpseId: int, SlotsUpdates: object }
+HarvestHoverModel { AmountToCollect: object, EntityHarvestId: int, EntityHarvestType: int, IsCookingReady: bool, Position: object, RemainingTime: int, Xp: int }
+HarvestListEntity { HarvestRefreshPositions: object }
+HarvestMineBuildingCommand { CurrencyType: int, MineBuildingId: int }
+HarvestMineStatusAddedEventArgs { CurrencyType: int, EntityHarvestId: int, EntityHarvestType: int }
+HarvestOutEventArgs { EntityHarvestId: int, EntityHarvestType: int, IsCookingReady: bool }
+HarvestPositionModel { MaxIconSize: int, MaxZoom: int, MinIconSize: int, MinZoom: int, MinZoom: int, MinZoom: int, Zoom: int }
+HarvestReadyForCollectEventArgs { HarvestHoverModel: object }
+HarvestRefreshPosition { CurrencyType: int, EntityHarvestId: int, EntityHarvestType: int, Position: object }
+HarvestRefreshedEventArgs { EntitiesReadyToCollect: object }
+HarvestRemovedEventArgs { EntityHarvestId: int, EntityHarvestType: int, IsCookingReady: bool }
+HarvestResult { EntityHarvestId: int, EntityHarvestType: int, HarvestedAmount: object, HarvestedHeroItems: object, RemainingTime: int, ResultCode: int }
+HarvestViewModel { HeroCorpsesReadyToCollect: object, MinesReadyToCollect: object }
+HarvestingCompletedNotification { Result: object, Index: int, NotificationType: int }
+HealthPotionConsumableTemplate { RestorePoints: int }
+Hero { AttackRegions: object, Equipment: object, EquippedConsumables: object, EquippedSpells: object, ExpirationDate: datetime, HeroSpecContainerId: int, HeroStatModifier: object, Level: int, OwnerSpecialPacks: number, PriceReductionIds: number, Stats: object, XP: int }
+HeroBiographyPanelNavigationModel { HeroTooltipModel: object, IsLocked: bool, PanelName: int, SpecContainerId: number }
+HeroConsumableCountChangedEventArgs { AbilitySlotIndex: int, SlotIndex: int, StackCount: int }
+HeroConsumableEquipNotification { ConsumableItem: object, HeroSpecContainerId: int }
+HeroConsumableEquippedEventArgs { ConsumableItem: object }
+HeroConsumableItem { StackCount: int }
+HeroConsumableSlot { SlotIndex: int, StackCount: int, TemplateId: int }
+HeroConsumableUnequipNotification { HeroSpecContainerId: int, SlotIndex: int }
+HeroConsumableUnequippedEventArgs { SlotIndex: int }
+HeroCorpseHarvestHoverEventArgs { HeroCorpseHarvestHoverModel: object }
+HeroCorpseHarvestHoverModel { ElapsedTimeSinceDeath: float, FreeSlotsRequirement: int, HasItemsToCollect: bool, HeroDisplayName: string, HeroIconModel: object, HeroLevel: number, HeroSpecContainerId: number, IsHeroInventoryLargeEnough: bool, IsStorageFull: bool }
+HeroCorpseHarvestingTooltipModel { CurrencyType: int, DeathTime: int, FreeSlotsRequirement: int, HasItemsToCollect: bool, HeroDisplayName: string, HeroLevel: int, IconUrl: string, IsHeroInventoryLargeEnough: bool, IsStorageFull: bool, Type: int }
+HeroCreatedEventArgs { ErrorMessage: string, IsSuccess: bool }
+HeroCreationBiographyViewModel { HeroCreationHeroInfos: object }
+HeroCreationHeroInfo { CreationIconLeftOffset: int, CreationIconOverUrl: string, CreationIconSelectedUrl: string, CreationIconTopOffset: int, CreationIconUpUrl: string, IsLocked: bool, SpecialPackGroup: int, TooltipModel: object }
+HeroDeathModel { CastleType: int, IsResurrectionAffordable: bool, IsResurrectionAllowed: bool, IsRevengeAttack: int, IsTestAttack: bool, LoseTrophyCooldownRemainingTime: int, ResurrectionCost: number, TrophyScoreLost: int, TrophyScoreRestartAttackGain: int, TrophyScoreRestartAttackLost: int }
+HeroDeathPanelNavigationModel { HeroDeathInfo: object }
+HeroDyeAppliedNotification { DyeTemplateId: int, HeroItemSlot: int, HeroSpecContainerId: int }
+HeroEquipConsumableCommand { EquippedSlotIndex: int, HeroId: int, TemplateId: int }
+HeroEquipSpellCommand { HeroId: int, SlotIndex: int, SpellId: int }
+HeroEquipment { Back: object, Body: object, Costume: object, Finger1: object, Hands: object, Head: object, MainHand: object, Neck: object, OffHand: object, Pet: object, Shoulders: object }
+HeroEquipmentBuyBackSlot { Item: object }
+HeroEquipmentEquipCommand { DestinationSlot: int, HeroId: int, SourceSlotId: int }
+HeroEquipmentEquipNotification { EquipmentItem: object, HeroItemSlot: int, HeroSpecContainerId: int }
+HeroEquipmentEquippedEventArgs { EquippedHeroItem: object, WhenDyeApplied: bool }
+HeroEquipmentItem { ArchetypeId: int, DyeTemplateId: int, Effects: object, IsBranded: bool, IsSellable: bool, ItemLevel: int, PowerUp: object, PrimaryStatsModifiers: number, TemplateId: int }
+HeroEquipmentRefreshedEventArgs { Equipment: object, HeroSpecContainerId: int }
+HeroEquipmentUnequipCommand { DestinationSlotId: int, HeroId: int, SourceSlot: int }
+HeroEquipmentUnequipNotification { HeroItemSlot: int, HeroSpecContainerId: int }
+HeroEquipmentUnequippedEventArgs { ItemSlot: int, ItemType: object }
+HeroEventArgs { CurrentHero: object, PreviousHero: object }
+HeroFreeTrialInfoPeriod { Id: int, UnlockEndTime: datetime, UnlockStartTime: datetime }
+HeroFreeTrialInfoViewedCommand { HeroFreeTrialInfoId: int }
+HeroIconModel { HeroSpecContainerId: int, IconUrl: string, Level: int, SpecialPackGroup: int }
+HeroInventoryAddedNotification { InventorySlot: object, NewlyAdded: bool }
+HeroInventoryItemAddedEventArgs { GetHeroInventoryViewModel: object, HeroInventoryItem: object }
+HeroInventoryItemModel { ConsumableType: int, DyeInfoModel: object, EquippableItemSlots: object, HasRequiredLevel: bool, HeroItemCategoryType: int, HeroItemType: object, IconSynergyName: string, IconUrl: string, InventoryItemType: int, IsEquippable: bool, IsLocked: bool, IsMaxLevel: bool, ItemDefinition: object, NewlyAdded: bool, Quality: int, Rarity: int, SlotIndex: int, StackCount: int }
+HeroInventoryItemRemovedEventArgs { GetHeroInventoryViewModel: object, InventoryItemType: int, SlotIndex: int }
+HeroInventoryItemUpdatedEventArgs { GetHeroInventoryViewModel: object, InventoryItemType: int, NewlyAdded: bool, SlotIndex: int, StackCount: int }
+HeroInventoryNewItemCountChangedEventArgs { NewItemCount: int }
+HeroInventoryPanelNavigationModel { GetEquippedItemsViewModel: object, GetHeroInventoryViewModel: object, GetHeroStatsModel: object, PanelName: int }
+HeroInventoryRefreshedEventArgs { GetHeroInventoryViewModel: object }
+HeroInventoryRemovedNotification { SlotIndex: int }
+HeroInventorySettings { DefaultIconLayerNames: object, EmptyIconLayerName: string, MissingIconLayerName: string, SlotBgLayerNames: object }
+HeroInventorySlotUpdate { Count: int, ItemType: int, SlotIndex: int, TemplateId: int }
+HeroInventorySlotUpdateForConsumable { ItemType: int }
+HeroInventorySlotUpdateForHeroEquipment { HeroItem: object, ItemType: int }
+HeroInventoryUpdatedNotification { SlotIndex: int, StackCount: int }
+HeroItem { AcquisitionDate: datetime, SellPrice: int }
+HeroItemArchetype { Id: int, Name: object, Probability: float }
+HeroItemBuildingRequirement { BuildingRequirementRank: int, BuildingRequirementSpecContainerId: int, MaxLevel: int, MinLevel: int }
+HeroItemCategory { AllowedEffects: object, CategoryType: int, IsItemLevelHidden: bool }
+HeroItemEffectTemplate { BaseValue: float, DebugName: string, EffectCategory: int, FormatValueAsPercentage: bool, FormatValuePrecision: int, FormatWithPlusSign: bool, Id: int, LayerName: string, LevelReplacementIcon: string, LevelReplacementThreshold: int, MaxItemLevel: int, MinItemQuality: int, NamedItemEffectLevelUnlock: object, OasisDescription: int, OasisName: int, RandomChance: float, Type: int, ValuePerLevel: float }
+HeroItemPrimaryStats { HeroItemArchetype: object, StatMaxValues: number, StatValues: number }
+HeroItemQualityFxCollection { Fx: object }
+HeroItemTypeElement { HeroItemTypeId: int, RandomChance: float }
+HeroLevelReachedObjectiveRequirement { Level: int }
+HeroLevelUpFriendNewsData { HeroLevel: int, HeroName: string, HeroSpecContainerId: int }
+HeroLevelUpOwnNewsData { HeroLevel: int, HeroName: string, HeroSpecContainerId: int }
+HeroLevelUpPanelNavigationModel { ExcludeModalPopupOpening: bool, HeroUpgradeModel: object, IsOpalPanel: bool, PanelName: int }
+HeroLevelUpReadyPanelNavigationModel { HeroSpecContainerId: int, Level: int }
+HeroModel { Biography: string, CanAfford: bool, Description: string, HeroFullName: string, IconUrl: string, IsHeroOwned: bool, IsInFreeTrial: bool, IsSpecialPack: bool, LongHeroName: string, PriceReductionConditionModels: object, RegularPrice: object, SpecContainerId: int }
+HeroModifier { HeroCreationIconLeftOffset: int, HeroCreationIconOverUrl: string, HeroCreationIconSelectedUrl: string, HeroCreationIconTopOffset: int, HeroCreationIconUpUrl: string, HeroIconUrl: string, HeroPortraitUrl: string, HeroRoundedIconUrl: string, HeroRoundedLargeIconUrl: string, HeroShopIconUrl: string, HeroVisualGroupNames: object, StatModifierIconUrl: string, StatModifierOasisDescription: int, Stats: object, TooltipIconUrl: string }
+HeroProfileViewModel { Equipment: object, EquippedSpells: object, GetHeroStatsModel: object }
+HeroSampleSkillModel { IconUrl: string, LayerName: string, Name: string, SpecContainerId: int }
+HeroSelectedNotification { HeroSpecContainerId: int }
+HeroSelectionModel { Description: string, HeroSpecContainerId: int, IconUrl: string, IsCurrentHero: bool, IsOwned: bool, IsSpecialPack: bool, Level: int, Name: string, Requirement: string, SkuCode: string, SpecialPackGroup: int }
+HeroSelectionPanelNavigationModel { CurrentHeroSpecContainerId: int, HeroSelections: object, LayerName: string }
+HeroSpellNewItemCountChangedEventArgs { NewItemCount: int }
+HeroSpellSlot { SlotIndex: int, SpellSpecContainerId: int }
+HeroStat { StatType: int }
+HeroStatModifier { StatType: int, Value: float }
+HeroStatsModel { EquipmentAbilities: object, MaxResistance: float, Stats: object, WeightType: int }
+HeroStatsSummaryChangedEventArgs { HeroStatsSummaryModel: object }
+HeroStatsSummaryModel { HeroLevel: int, HeroName: string, HeroPictureUrl: string, LevelExperienceStats: object }
+HeroTooltipModel { Biography: string, Level: int, LongHeroName: string, SampleSkills: object, SpecContainerId: int, SpecialPackGroup: int, StatModifierDescription: string, StatModifierIconUrl: string, TooltipIconUrl: string, Type: int }
+HeroTrainerBuildingInfoDataModel { CurrentMaxHeroLevel: int, MaxMaxHeroLevel: int }
+HeroTrainerBuildingUpgradePopupModel { NewMaxHeroLevel: int }
+HeroUnequipSpellCommand { HeroId: int, SlotIndex: int }
+HeroUnlockRewardItem { ExpirationDate: datetime, HeroSpecContainerId: int }
+HeroUnlockedNotification { Hero: object }
+HeroUpgradeModel { BuildingRequirementName: string, BuildingRequirementRank: int, CanAfford: bool, CurrentDPS: float, CurrentHealth: float, CurrentLevelXp: int, CurrentMagicalArmor: float, CurrentMana: float, CurrentPhysicalArmor: float, CurrentXp: int, DPSIncrease: float, HealthIncrease: float, HeroIconModel: object, IsBuildingRequirementMet: bool, IsXpRequirementMet: bool, LongHeroName: string, MagicalArmorIncrease: float, ManaIncrease: float, MaxDPS: float, MaxHealth: float, MaxMagicalArmor: float, MaxMana: float, MaxPhysicalArmor: float, NextLevel: int, PhysicalArmorIncrease: float, SpecContainerId: int, UnlockedAbilities: object, XpRequirement: int }
+HeroUpgradePanelNavigationModel { HeroModel: object, PanelName: int }
+HeroUpgradeTooltipModel { DPSIncrease: float, HealthIncrease: float, IsXpRequirementMet: bool, LongHeroName: string, ManaIncrease: float, NextLevel: int, SpecContainerId: int, Type: int, UnlockedAbilities: object, XpRequirement: int }
+HeroUpgradeUnlockedAbilityModel { AbilityLevel: int, IconUrl: string, Name: string, SpecContainerId: int }
+HeroXpChangedNotification { HeroSpecContainerId: int, Level: int, LevelChanged: bool, TotalXp: int, XpAdded: int }
+HeroesEventArgs { Heroes: object }
+HideTooltipEventArgs { Id: int }
+HitInformation { DamageSource: int, DamageValue: int, DefenseIngredientId: int, Details: object, HitSuccess: int, HitTotal: int, SpecContainerId: int }
+HitInformationDetail { DamageValue: int, HeroGlobalX: int, HeroGlobalZ: int, HeroX: int, HeroY: int }
+HomePanelButtonSettings { ButtonContainer: string, Index: int, NavigationURL: string, OasisID: int }
+HudAbilityCancelledEventArgs { AbilitySlotIndex: int }
+HudAbilityCooldownEndedEventArgs { AbilitySlotIndex: int }
+HudAbilityCooldownModel { AbilitySlotIndex: int, ChargeUpRatio: float, CooldownRatio: float, InvalidAttackActionType: int, PowerUpRatio: float }
+HudAbilityCooldownUpdatedEventArgs { HudAbilityCooldownModels: object }
+HudAbilityLaunchedEventArgs { AbilitySlotIndex: int, CooldownDuration: float }
+HudCastleValidationKillCountUpdatedEventArgs { KilledCreaturesCount: number, TotalCreaturesCount: number }
+HudCastleValidationMineCountUpdatedEventArgs { DestroyedMineCount: number, TotalMineCount: number }
+HudCastleValidationTimeUpdatedEventArgs { Time: float }
+HudEnemyTargettedEventArgs { BossPictureVariable: string, BuffsViewModel: object, GameEntityId: number, GameEntityType: int, HideLevelInHud: bool, Level: number, Life: number, MaxLife: number, Name: string, Rank: number, Tier: number }
+HudHeroInfoModel { CurrentLevelXp: number, IconLayerName: string, IsMaxLevel: int, Level: number, Life: number, Mana: number, MaxLife: number, MaxMana: number, NextLevelXp: number, PortraitUrl: string, Xp: number }
+HudHeroLevelUpEventArgs { HeroSpecContainerId: int, NewLevel: number }
+HudItemLootedEventArgs { DyeInfoModel: object, IconTexture: string, IGC: int, ItemName: string, ItemQuality: int, LifeForce: int, LootType: int }
+HudLifeChangedEventArgs { DelayedLife: number, Life: number, MaxLife: number }
+HudManaChangedEventArgs { FromRegen: bool, Mana: number, MaxMana: number, PreviousMana: number }
+HudPanelNavigationModel { CurrentArmor: int, CurrentHealth: int, CurrentLevelXp: int, CurrentMana: int, CurrentResistance: int, EquippedConsumablesViewModel: object, EquippedSpellViewModel: object, HudType: int, IGC: int, IsInAttack: bool, IsTestAttack: bool, LifeForce: int, MaxArmor: int, MaxHealth: int, MaxIGC: int, MaxLifeForce: int, MaxMana: int, MaxResistance: int, NewCountByIcons: object, NewObjectives: int, NextLevelXp: int, PremiumCash: int, XP: int }
+HudResistanceChangedEventArgs { MaxResistance: number, Resistance: number }
+HudReturnToLobbyEventArgs { CanPayToKeepItems: bool, LootTransferenceCost: int }
+HudXpChangedEventArgs { CurrentLevelXp: number, IsMaxLevel: bool, Level: number, NextLevelXp: number, Xp: number }
+InboxCollectCommand { ObjectId: string }
+InboxCollectToBuyBackCommand { BuybackId: string, ObjectId: string }
+InboxCollectToHeroEquipmentCommand { HeroId: int, HeroItemSlot: int }
+InboxCollectToHeroInventoryCommand { SlotIndexes: object }
+InboxConsumableItem { HeroItem: object, ItemType: int }
+InboxHeroEquipmentItem { HeroItem: object, ItemType: int, ItemType: int, ObjectId: string }
+InboxItem { ItemType: int, ObjectId: string }
+InboxItemsAddedNotification { InboxItems: object }
+InstallCompletedTaskTracking { Duration: int, IsFirstInstall: bool }
+InstallPackageCompletedTracking { Duration: int, IsSuccessful: bool, PackageVersionId: object }
+InstallPackageStartedTracking { PackageVersionId: object, PatchFlags: int, VersionName: string }
+InstallStartedTaskTracking { IsFirstInstall: bool, CreationDate: datetime, TrackingTagId: int }
+InternalTooltipOptions { callback: string, fadeIn: int, fadeOut: int, JQueryTemplate: string, left: int, top: int }
+InvalidActionFeedback { Priority: int }
+InvalidAttackActionsFeedbacks { CannotCollectLoot_InventoryIsFull: object, CannotDrinkPotion_FullHealth: object, CannotDrinkPotion_OutOfPotion: object, CannotUseSkill_BusyWithAnotherAction: object, CannotUseSkill_Cooldown: object, CannotUseSkill_Disabled: object, CannotUseSkill_OutOfMana: object, CannotUseSkill_Silenced: object, CannotUseSkill_Stunned: object }
+InvalidBuildActionsFeedbacks { BossNotInBossRoom: object, CannotAddSecondBoss: object, CannotCloneStampEntity: object, CannotDropInEntranceRoom: object, CannotPlaceMoreDecorationsInRoom: object, CannotPlaceMoreRooms: object, CannotPlaceSecondEntranceRoom: object, CannotPlaceSecondThroneRoom: object, CannotPlaceTotemInBossRoom: object, CannotRemoveEntranceRoom: object, CannotRemoveThroneRoom: object, CpZoneHasNotEnoughCapacity: object, CreaturePivotNotInCapacityBoosterZone: object, EntitySectionsOverlapping: object, ExceedingCastleMaxCp: object, InvalidBoostTarget: object, NoOtherPossibleOrientations: object, RoomBuildableOverInvalidGround: object, RoomBuildableOverRoomJunction: object, RoomOutOfCastleGrid: object, TrapExclusionRadiusColliding: object }
+InvalidCastleFeedbacksInfos { FeedbackTitleText: object, NoCreatures: object, NoEntranceRoom: object, NoPathToThroneRoom: object, NotEnoughRooms: object, NoThroneRoom: object, UnconnectedRooms: object }
+InventoryBuyTabPanelNavigationModel { CanAfford: bool, Price: object, SkuCode: string }
+InventoryConsumablesInfo { StackCount: int, TemplateId: int }
+InventoryDecoration { Level: int }
+InventoryDefenseIngredientBoost { Level: int }
+InventoryItem { TemplateId: int }
+InventoryItemRewardItem { Item: object }
+InventoryItemWithGenerationInfo { InventoryItem: object, ItemGenerationInfo: object }
+InventoryMoveItemCommand { Count: int, DestinationInventory: int, DestinationSlotId: int, SourceInventory: int, SourceSlotId: int }
+InventoryPanelNavigationModel { IsInventoryOpenedChangingTab: bool }
+InventoryRoom { Level: int }
+InventorySwapItemCommand { DestinationSlotId: int, SourceSlotId: int }
+InventoryTabAddedEventArgs { GetHeroInventoryViewModel: object }
+InventoryTabAddedNotification { InventoryTabCount: int }
+InventoryTabModel { AvailableSlots: int, IconUrl: string, Name: string, TabIndex: int, TabSize: int }
+InventoryTabRewardItem { Count: int }
+InventoryTemplate { Creatures: object, Decorations: object, DefenseIngredientBoosts: object, Heroes: object, HeroItems: object, InventoryTabCount: int, Rooms: object, Traps: object, UnlockedEmotes: number }
+ItemDefinition { HasRequiredLevel: bool, IsEquipable: bool, ItemHtmlTag: string, ItemId: int, ItemType: int }
+ItemEffect { Id: int, Level: int, Type: int }
+ItemGenerationInfo { GenerationNumber: int, GenerationSystem: int }
+ItemPowerUp { Id: int, Level: int }
+ItemPurchasedEventArgs { ShopSku: object }
+JobStrategy { JobType: int, RetryCount: int, RetryInterval: int }
+JobSummary { DueDate: datetime, Id: string, ProcessingServer: string, RetryCount: int, Status: int, Type: int }
+JoinRequestModel { AcceptInhibitedAsGuildFull: bool, AccountSummary: object, AvatarLayerName: string }
+KillEntitiesAchievement { BossCreaturesOnly: bool, CreatureIds: number, EntityType: int }
+KillingCreaturesOverTimeVoConfig { CreaturesCount: float, TimePeriod: int, Vo: object }
+LastVisitedShop { Url: string }
+LaunchAttackParam { AccountId: int, CastleType: int, PosX: int, PosY: int }
+LeaderLeaderboardEntryModel { LeaderEntryModel: object, RewardModel: object }
+LeaderboardEntry { AccountSummary: object, IsCastleAttackable: bool, Score: int, Seconds: number }
+LeaderboardEntryModel { AccountSummary: object, AvatarUrl: string, Country: object, IsCastleAttackable: bool, IsCastleAttackableForTargetedAttack: bool, IsDemoted: bool, IsPromoted: bool, NextSeasonSubLeagueModel: object, Rank: int, Score: int, SpecialPackModel: object, SubLeagueModel: object }
+LeaderboardFiltersModel { Filters: object, LeagueFilterModels: object, SelectedFilterCode: string, SelectedLeagueId: int, SelectedSubLeagueId: int }
+LeaderboardPage { ActiveCountries: object, ActiveZones: object, CurrentUser: object, Entries: object, FirstEntryRank: int, Leaders: object, NextSeasonStartingDate: datetime, PreviousLeagueInfo: object, RemainingTime: int, SeasonalReward: object, TotalCount: number, WorldLeader: object }
+LeaderboardProgressBarModel { NextSubLeagueDetailedModel: object, PreviousSubLeagueDetailedModel: object }
+League { Id: int, LargeIconUrl: string, Name: object, SmallIconUrl: string, SubLeagues: object }
+LeagueFilterModel { LeagueId: int, Name: string, SubLeagueId: int }
+LeagueModel { LargeIconUrl: string, Name: string, ScoreMax: int, ScoreMin: int, SmallIconUrl: string, SubLeagueModels: object }
+LeaguePopupModel { CurrentSubLeagueModel: object, CurrentSubLeagueReward: object, IsDemoted: bool, IsLeagueRanked: bool, IsMaintained: bool, IsPlaced: bool, IsPromoted: bool, IsUnranked: bool, IsWorldRanked: bool, NextSeasonStartingDate: datetime, PreviousLeagueRank: int, PreviousSubLeagueReward: object, PreviousWorldRank: int, SeasonalReward: object, SeasonalRewardTooltip: object }
+LeaguePopupPanelNavigationModel { IsOpalPanel: bool, LeaguePopupModel: object, PanelName: int }
+LeagueProgressionPanelNavigationModel { CurrentLeagueId: int, CurrentSubLeagueId: int, IsLastLeagueSelected: bool, LeagueModels: object, SelectedLeagueId: int, SelectedSubLeagueId: int, SubLeagueDetailedModel: object }
+LeagueRankReachedNewsData { IsMaintained: bool, IsPromoted: bool, LeagueId: int, LeagueRank: int, SubLeagueId: int, SubLeagueName: string, SubLeaguePrefixName: string, SubLeagueSmallIconUrl: string }
+LeagueUpdatedNewsData { CurrentLeagueId: int, CurrentSubleagueId: int, IsDemoted: bool, IsMaintained: bool, IsPlaced: bool, IsPromoted: bool, IsUnranked: bool, PreviousLeagueId: int, PreviousSubleagueId: int, SubLeagueName: string, SubLeaguePrefixName: string, SubLeagueSmallIconUrl: string }
+LeagueUpdatedNotification { LeagueId: int, SubLeagueId: int }
+LeaveCastlePanelNavigationModel { CastleType: int, DefenderCastleName: string, HeroSpecContainerId: int, IsCastleValidated: bool, IsPvECompetition: bool, IsTestAttack: bool, IsThemePreview: bool, TrophyScoreLost: int }
+LegalNotice { Copyrights: object, SpecializationName: string, SpecializationNameOasisId: int }
+LevelDifferenceModifier { Lose: int, Win: int }
+LevelExperienceStatsModel { currentXp: int, nextLevelXp: int, previousLevelXp: int }
+LevelProductionPack { Level: int, RandomQualityQuantity: int }
+LevelRenovationCompletionInformation { DescriptionOasisId: int, LayerName: string, TitleOasisId: int }
+LevelRenovationInformation { Cost: object, LevelNameOasisId: int, LevelRenovationCompletionInformation: object, RewardNameOasisId: int }
+LevelsDifferenceXpModifier { LevelsDifference: int, XpModifier: float }
+LifeForceBoostConsumableTemplate { AttackIncreasedLifeForce: float, MineIncreasedLifeForce: float }
+LifeShieldUpdate { Id: int, Ratio: float }
+LimitedQuantityRewardItem { ShopSkusPack: object, LargeIconUrl: string, SmallIconUrl: string }
+LinkedAccountResult { FacebookFriendsLinked: object, FacebookFriendsNotLinked: object, ReconnectUrl: string, RequireReconnect: bool }
+LinkedAccountResultModel { FacebookFriends: object }
+LinkedAccountResultViewModel { FacebookFriendsLinked: object, FacebookFriendsNotLinked: object, ReconnectUrl: string, RequireReconnect: bool }
+LoadingScreenUpdatedEventArgs { LoadingBackgroundUrl: string, ShouldShow: bool }
+LobbyBarModel { BuildNotificationsCount: int, GuildNotificationsCount: int, NewsNotificationCount: int, PendingFriendsCount: int, ProfileSummary: object, WalletSummary: object }
+LockButtonEventArgs { Button: int }
+LoginResult { AccountId: int, ConnectionToken: string, ProfileId: string }
+Loot { CreatureId: int, InventoryItem: object, InventoryItemIndex: int, LootAmount: int, LootType: int, SourceEntityId: int, SourceEntityType: int }
+LootModifierTable { Minus1Level: float, Minus2Levels: float, Minus3Levels: float, Minus4Levels: float, Minus5Levels: float, Plus1Level: float, Plus2Levels: float, Plus3Levels: float, Plus4Levels: float, Plus5Levels: float, Plus6Levels: float, SameLevel: float }
+LootedHeroItemParam { ItemId: int, ItemIndex: int }
+LoseTrophyCooldownRemainingTimeUpdatedEventArgs { LoseTrophyCooldownRemainingTime: int }
+LossPonderation { AttackCastlePercentageLoss: float, AttackerDefenderLevelDiff: int, ShieldDuration: int }
+MagicFindBoostConsumableTemplate { IncreasedChance: float }
+MagicalPropertiesReplacementPreference { ReplacedDebugName: string, ReplacedEffect: object, ReplacementEffects: object }
+MagicalPropertyModel { ChanceToLevelUp: float, Comparison: int, FormatValueAsPercentage: bool, FormatValuePrecision: int, FormatWithPlusSign: int, Icon: string, Id: int, IsMagicalPropertyMaxedOut: bool, IsMagicalPropertyMaxedOutForItemLevel: bool, Level: int, LevelReplacementIcon: string, LevelUpText: string, Name: string, OasisDescription: int, Type: int, Value: float }
+MaintenanceGlobalNotification { MaintenanceScheduledDate: datetime, MaintenanceScheduledInSeconds: int }
+Match { Length: int, Locale: string, Matched: string, Quantity: float, Root: string, Severity: string, Start: int, Tags: object, Type: string }
+MaterialsCountByQualityList { Count: int, Qualities: object }
+MemoryInfoTracking { ClockFrequencyHz: number, MemoryTypeName: string, TotalBytes: number }
+Message { Data: object, DateSent: datetime, SenderId: int, Type: int }
+MessageBoxAssignmentActionSpec { ButtonPressedAfterTimer: int, ControllerName: string, HasTimer: bool, Height: int, HideNavigation: bool, Id: int, IsCloseButtonVisible: bool, IsModal: bool, OffsetBottom: int, OffsetLeft: int, OffsetRight: int, OffsetTop: int, Position: int, PositionElementId: string, Submenu: string, Text: string, TimeBeforeClosing: int, Title: string, Type: int, Width: int }
+MessageBoxClosedEventArgs { ButtonClicked: int, Id: int }
+MessageBoxEventArgs { MessageBoxOption: object }
+MessageBoxInformation { ButtonPressedAfterTimer: int, HasTimer: bool, Id: int, MessageBoxButtonConfig: int, MessageOasisId: int, TimeBeforeClosing: int, TitleOasisId: int }
+MessageBoxPanelNavigationModel { IsOpalPanel: bool, MessageBoxOption: object, PanelName: int }
+MessageNotification { Sender: int, ThreadId: number }
+MessagePreview { Data: object, Type: int }
+MessagingSettings { HasEmailNotification: bool }
+MineBuildingDestructibleStateChangedEventArgs { BuildingId: int, IsDestroyed: bool }
+MineBuildingInfoDataModel { CurrentCapacity: int, CurrentHealth: int, CurrentProductionRate: int, HasMultipleRanks: bool, MaxCapacity: int, MaxHealth: int, MaxProductionRate: int, ProductionPeriodInHours: int, ProductionPeriodInMinutes: int, ProductionPeriodInSeconds: int }
+MineBuildingUpgradePopupDataModel { NewCapacity: int, NewHealth: int, NewProductionRate: int }
+MineCount { Count: number, MineFieldIngredientId: int }
+MineEnabledNotification { CastleBuildingId: int, ProductionExpirableId: string, Index: int, NotificationType: int }
+MineHarvestHoverEventArgs { MineHarvestHoverModel: object }
+MineHarvestHoverModel { IsStorageFull: bool, MineDisplayName: string, MineMaxCapacity: int, MineRank: int, MineSpecContainerId: number }
+MinePillagedNotification { CastleBuildingId: int, Destroyed: bool, ShieldExpirableId: string, StolenAmount: int }
+MineProductionCompletedEventArgs { MineProductionCompletedInfosModel: object }
+MineProductionCompletedInfosModel { BuildingId: int, BuilingSpecContainerId: int, ProductionAdded: int }
+MineProductionCompletedNotification { BuildingId: int, InventoryItemAdded: object, NextProductionExpirableId: string, ProductionAdded: int, ProductionLevel: int }
+MineProductionExpirable { BuildingId: int, ExpirableType: int, ProductionValue: int }
+MineProductionRemainingTimeUpdatedEventArgs { EntityHarvestId: int, EntityHarvestType: int, ProductionLevel: int, ProductionLevelMax: int, RemainingTime: int }
+MineProductionStartedNotification { BuildingId: int, NextProductionExpirableId: string, ProductionLevel: int }
+MineShieldAddedEventArgs { BuildingId: int, ShieldRemainingTime: int }
+MineShieldExpirable { BuildingId: int, ExpirableType: int }
+MineShieldExpiredNotification { CastleBuildingId: int, ExpirableId: string }
+MineStatus { CumulatedAmount: int, CumulatedHeroItems: object, IsActive: bool, IsDestroyed: bool, ProductionExpirableId: string, Productionlevel: int, ShieldExpirableId: string }
+MineTimeBonusPanelNavigationModel { TimeBonus: float }
+MovementSpeed { Id: int, Name: object, SpeedFrom: float, SpeedTo: float }
+MultiPanelNavigationModel { Models: object }
+MultiplePriceTooltipModel { Amounts: object, IsAffordable: bool }
+MyRankingModel { Country: object, RankInCountry: number, RankInFriends: number, RankInWorld: number, RankInZone: number, Zone: object }
+NamedItemEffectLevelUnlock { MaxEffectLevel: int, MinItemLevel: int }
+NamedItemPowerUpLevelUnlock { MaxPowerUpLevel: int, MinItemLevel: int }
+NarrativeVoTextPage { Text: string, TextOasisId: int, Vo: object }
+NavBarPanelNavigationModel { CrownsCount: int, HeroID: int, HeroLevel: int, IconLayerName: string, IsAttackDefenseVisible: bool, IsInAttackSelection: bool, NextLevelXp: int, PanelName: int, WalletSummaryModel: object, Xp: int }
+NavigationTracking { GameUrl: string }
+NearDeathFxInfo { Fx: object, Threshold: float }
+News { Data: object, Id: string, IsUnread: bool, Priority: int, PublishDate: datetime }
+NewsAddedNotification { NewsItem: object }
+NewsCategorySettings { Priority: int, Type: int }
+NewsChangedEventArgs { News: object, UnreadCount: int }
+NewsData { RequiresUserAction: bool, Type: int }
+NewsResult { LastViewedNewsId: string, News: object }
+NewsViewModel { AvatarUrl: string, IsCastleAttackable: bool, News: object, SpecialPackModel: object }
+NoHeroDeathCondition { DebugName: string, OasisId: int }
+Notification { Index: int, NotificationType: int }
+OSInfoTracking { Is64Bit: bool, IsoRegionalCode: string, Name: string, ServicePack: number }
+ObjectiveActivatedEventArgs { Conditions: object, Description: int, LayerName: string, ObjectiveId: int }
+ObjectiveCompletedEventArgs { CompletedObjectiveId: int, UnlockedObjectives: object }
+ObjectiveCompletedNotification { ObjectiveId: int }
+ObjectiveCompletedObjectiveRequirement { ObjectiveId: int }
+ObjectiveCompletedPanelNavigationModel { Description: string, ExcludeModalPopupOpening: bool, Id: int, IsOpalPanel: bool, PanelName: int, Reward: object, RewardXp: int, Title: string }
+ObjectiveCondition { DebugName: string, OasisId: int }
+ObjectiveConditionModel { ConditionId: int, Description: string, Progression: int, ProgressionTarget: int, Status: int }
+ObjectiveConditionUpdatedEventArgs { Condition: object, ObjectiveId: int }
+ObjectiveEntryModel { Category: int, Conditions: object, Description: string, HasAudioPlayed: bool, HasViewed: bool, HeroSpecContainerId: int, IconUrl: string, Id: int, IsFailed: bool, Progression: object, Reward: object, Status: int, Title: string, Type: int }
+ObjectiveListPanelNavigationModel { IsOpalPanel: bool, PanelName: int }
+ObjectiveListUpdatedEventArgs { UnlockedObjectives: object }
+ObjectivePopupClosedEventArgs { ObjectiveEntryModel: object }
+ObjectivePopupPanelNavigationModel { ActionButtonModel: object, Conditions: object, Description: string, ExcludeModalPopupOpening: bool, IconLayerName: string, IsCompleted: bool, IsFailed: bool, IsNew: bool, IsOpalPanel: bool, ObjectiveId: int, PanelName: int, Reward: object, Title: string, VoiceOverSoundId: string }
+ObjectiveProgressionModel { Current: int, Total: int }
+ObjectiveProgressionUpdatedNotification { NewCount: int, ObjectiveId: int }
+ObjectiveRequirement { AttackRegionId: int }
+ObjectiveSummaryEntryModel { Category: int, Description: string, IconUrl: string, Id: int, Instruction: string, Reward: object, Title: string, Type: int }
+ObjectiveUnlockCommand { ObjectiveId: int }
+ObjectiveUnlockedEventArgs { UnlockedObjective: object, UnlockedObjectives: object }
+ObjectiveUnlockedNotification { AccountObjective: object }
+ObjectiveViewedCommand { ObjectiveId: int }
+OpenPanelAssignmentActionSpec { IsOpalPanel: bool, PanelName: string, TargetEntitySearch: object }
+OpenWebBrowserEventArgs { CloseButtonLeft: int, CloseButtonTop: int, HideBlackOverlay: bool, SetCloseButtonPosition: bool, ShowBlackOverlay: bool }
+OptionControlSchemePanelNavigationModel { GameStateType: int }
+OptionGamePlayModel { AutoFireOnDirectModeEnabled: bool, LootCollectorFilterEnabled: bool, ProfanityFilterEnabled: bool, StopContinuousMoveOnClickReleaseEnabled: bool, UseCameraDampingEnabled: bool }
+OptionInformation { Category: int, OasisId: int }
+OptionModel { GamePlay: object, Sound: object, Video: object }
+OptionPanelNavigationModel { IsOpalPanel: bool, OptionViewModel: object, Tab: int }
+OptionParameterBaseModel { DisplayName: string, IsEnabled: bool, ParameterName: string, Type: int }
+OptionParameterCheckboxModel { IsChecked: bool, Type: int }
+OptionParameterComboboxModel { SelectedKey: int, Type: int, Values: object }
+OptionParameterSliderModel { Interval: float, MaxValue: float, MinValue: float, Type: int, Value: float, ValueToRoundDisplayValue: int }
+OptionSoundModel { EnableAmbienceText: string, EnableMusicText: string, EnableSfxText: string, EnableVoiceText: string, GeneralVolumeText: string, VolumeCoef: int }
+OptionValueChangedEventArgs { EnableSave: bool, HasSavedOnce: bool }
+OptionValueModel { Key: int, Value: string }
+OptionVideoApplyPanelNavigationModel { IsClosingOptionPanel: bool, IsOpalPanel: bool, PanelName: int }
+OptionVideoModel { AdvancedParameters: object, BasicParameters: object, Configurations: object }
+OptionViewModel { AudioAmbienceEnable: bool, AudioMasterVolumeRatio: float, AudioMusicEnable: bool, AudioSfxEnable: bool, AudioVoiceEnable: bool, AutoFireOnDirectModeEnabled: bool, CurrentQuality: int, DefaultLevel: int, Distortion: bool, EnableAmbienceText: string, EnableMusicText: string, EnableSfxText: string, EnableVoiceText: string, Fog: bool, FPSClamping: int, FPSClampingNoFocus: int, FXAA: int, Gamma: float, GeneralVolumeText: string, Glow: bool, LensFlare: bool, MinHeroItemQualityToPickUp: int, ObjectComplexity: int, PostEffects: bool, ProfanityFilterEnabled: bool, RenderQuality: float, ScreenSize: int, Shadows: int, SSAO: int, StopContinuousMoveOnClickReleaseEnabled: bool, UseCameraDampingEnabled: bool, UseTopFrustumOnly: bool, VolumeCoef: int, VSync: bool, WindowType: int }
+OptionViewModelChangedEventArgs { OptionViewModel: object }
+OrientedSpawnPosition { Orientation: int, Orientation: float, Orientation: float }
+PackageVersionInfoIdTracking { PackageName: string, Type: int }
+PanelNamesListEventArgs { CurrentAbsoluteTimeInSeconds: float, PanelNamesList: object }
+PanelNavigationEventArgs { CurrentAbsoluteTimeInSeconds: float, GameEntityID: number, PanelId: string, PanelNavigationModel: object }
+PanelNavigationModel { Attachment: int, DataNavigationInfo: object, ExcludeModalPopupOpening: bool, IsOpalPanel: bool, PanelName: int }
+PanelSettings { ContainerControls: object, ContainerFilename: number, IconOffset3D: object, PanelLayer: int, SpecificZoomSettings: object, SubContainerFilenames: object, TooltipContainers: object, UseHeadNode: bool, ZBias: float }
+PanelSoundPresets { ActivationPresets: object, DeactivationPresets: object }
+PanelSoundPresetsSettings { SoundPresetsByPanel: object }
+PanelTracking { OpenCloseDurationInseconds: int, Panel: int }
+PanelVisibilityInformation { CastleRenovationLevel: int, PanelName: int }
+PausePanelNavigationModel { DisableLeaveCastle: bool, DisableRestartCastle: bool, IsAttack: bool, IsRevengeAttack: bool }
+PcConfigurationTracking { AudioInfo: object, CPUInfo: object, DiskInfo: object, GraphicsInfo: object, MemoryInfo: object, OSInfo: object, CreationDate: datetime, TrackingTagId: int }
+PendingRegionsChangedViewModel { UpdatedAttackRegions: object }
+Period { EndDateTime: datetime, StartDateTime: datetime }
+PetScaleInfo { CreatureId: int, Scale: float }
+PillagedMine { CastleBuildingId: int, IsDestroyed: bool, StolenAmount: int, StolenHeroItems: object }
+PlayGameClickedTracking { Platform: int, CreationDate: datetime, TrackingTagId: int }
+PlayMovieAssignmentActionSpec { IsMovieSkippable: bool, MovieFile: string }
+PlaySoundEventAssignmentActionSpec { SoundEvent: object }
+PlayerInteractionModel { AccountDisplayName: string, AccountId: int, AttackSource: int, CastleType: int, IsAddFriendVisible: bool, IsAttackVisible: bool, IsCastleAttackable: bool, IsChallengeVisible: bool, IsFriend: bool, IsGuildKickOutVisible: bool, IsGuildPromoteAsLeader: bool, IsGuildRecruitVisible: bool, IsIgnoreVisible: bool }
+PlayerInteractionParams { AttackSource: int, IsAddFriendVisible: bool, IsAttackVisible: bool, IsChallengeVisible: bool, IsIgnoreVisible: bool }
+PlayerLoadConfig { HeroSpecContainerId: int }
+PopUpNarrativeVoTextPagesSpec { NarrativeVoTextPages: object }
+PopupAssignmentActionSpec { ActionName: string, ArrowDirection: int, ArrowPosition: int, ControllerName: string, GameButtonId: int, HideOverlay: bool, Id: string, InventoryItemDefinition: object, IsCloseButtonVisible: bool, Left: int, NarrativePictureUrl: string, OffsetLeft: int, OffsetTop: int, OverlayAlpha: float, ParentContainer: string, PopupBindingVariable: string, PopUpNarrativeVoTextPages: object, Position: int, PositionElementId: string, ShopItemDefinition: object, ShowOverlay: bool, StaticScreenText: string, StaticScreenTextOasisId: int, TargetEntitySearch: object, Text: string, TextAnimationCharsDelayScale: float, TextAnimationDelay: float, TextAnimationDuration: float, TextAnimationEffect: string, TextOasisId: int, Title: string, TitleOasisId: int, Top: int, Type: int }
+PopupClosedEventArgs { ButtonClicked: int, Id: string }
+PopupEventArgs { PopupOption: object }
+PopupOnTargetAssignmentActionSpec { Direction: int, LocalOffset: object, Selections: object, Type: int, ViewOffsetX: float, ViewOffsetY: float }
+PopupOptionsModel { ArrowDirection: int, ArrowPosition: int, GameButtonId: int, GameEntityId: number, HideOverlay: bool, Id: string, InventoryItemDefinition: object, IsCloseButtonVisible: bool, IsOpalPanel: bool, Left: int, NarrativePictureUrl: string, OffsetLeft: int, OffsetTop: int, OverlayAlpha: float, PanelName: int, ParentContainer: string, PopupBindingVariable: string, Position: int, PositionElementId: string, ShopItemDefinition: object, ShowOverlay: bool, StaticScreenText: string, Text: string, TextAnimationCharsDelayScale: float, TextAnimationDelay: float, TextAnimationDuration: float, TextAnimationEffect: string, Texts: object, Title: string, Top: int, Type: int }
+PopupShowMoreTextEventArgs { Id: string }
+PotentialLoot { BoostIGC: int, BoostLifeForce: int, BoostXp: int, IGC: int, IGCMineCount: int, LeagueBonusIGC: int, LeagueBonusLifeForce: int, LifeForce: int, LifeForceMineCount: int, MinesStealableIGC: int, MinesStealableLifeForce: int, MinesStealablePremiumCash: int, PremiumCashMineCount: int, RareDefenseIngredientRatio: float, TreasureRoomStealableIGC: int, TreasureRoomStealableLifeForce: int, Xp: int }
+PotionConsumableTemplate { AbilityId: int, MinLevelRequirement: int }
+PotionUsageRestriction { HeroLevelMax: int, HeroLevelMin: int, MaxPotionUse: int }
+PowerUpLevelLimitation { ItemLevel: int, MaxPowerUpLevel: int, MinPowerUpLevel: int }
+PowerUpModel { Description: string, Icon: string, Level: int, Name: string }
+PremiumCashBoostConsumableTemplate { MineIncreasedPremiumCash: float, BuffSpecContainerId: int, Duration: int }
+PreviousLeagueInfo { PreviousLeagueId: int, PreviousLeagueRank: int, PreviousSubLeagueId: int, PreviousWorldRank: int }
+PriceReductionConditionModel { Completed: bool, CurrentPrice: object, Id: int, Level: int, PriceReduction: object }
+PrimaryStatModifierRange { MaxValue: float, MinValue: float }
+PrivateAdminMessageData { Body: string }
+PrivateAdminMessageNotification { Message: string }
+PrivateAdminMessagePreviewData { Summary: string }
+PrivateProfileModel { FriendshipInvitations: object, FriendsLeaderboard: object, HeroIconModels: object, LatestCompletedAchievements: object, Profile: object, ProfileSummaryModel: object }
+ProceduralBuildingRestriction { CanSpawnInPve: bool, MaxInstances: int }
+ProceduralRoomBuildableSpawnInfo { Description: string, RandomSpawnPositions: object, RoomBuildableType: int, SpecContainerId: int }
+ProfanityContentItem { Filter: object }
+ProfanityFilteredCastleComment { Language: string, Value: string }
+ProfanityFilteredDescription { Language: string, Value: string }
+ProfanityFilteredString { Language: string, Value: string }
+ProfanityProofCastleComment { Filtered: object, Raw: string }
+ProfanityProofDescription { Filtered: object, Raw: string }
+ProfanityProofString { Filtered: object, Raw: string }
+ProfilePanelNavigationModel { AccountId: int, Tab: int }
+ProfilePictureModel { AvatarId: int, IconUrl: string, LayerName: string }
+ProfilePictureModelEventArgs { AvatarId: int, IconUrl: string }
+ProfileSearchResult { MaxResult: int, Query: string, Results: object }
+ProfileSearchResultModel { MaxResult: int, Query: string, Results: object, SpecialPackModels: object }
+ProfileSummaryChangedEventArgs { AccountId: int, AvatarId: int, DisplayName: string, SpecialPackModel: object, TrophyScore: int }
+ProfileSummaryModel { AccountId: int, AvatarId: int, CanRecruit: bool, CastleLevel: int, DisplayName: string, HasPendingInvitation: bool, HasPendingJoinRequest: bool, IsCastleAttackable: bool, IsCastleAttackableForTargetedAttack: bool, LeagueId: int, SpecialPackModel: object, TargetedAttackAvailableCount: int, TrophyScore: int, ValidatedAttackSource: int }
+ProgressionLock { CastleLevelRequirement: int, CastleRenovationLevelRequirement: int, Comment: string, HeroLevelRequirement: int, IsDisabled: bool, LockedButtons: object, LockType: int }
+ProgressionLockUpdatedEventArgs { AreRequirementsMet: bool, CastleLevelRequirement: int, CastleRenovationLevelRequirement: int, GameButtons: object, HeroLevelRequirement: int, LockType: int }
+PropertyLevelUpChance { Chance: float, LevelFrom: int, LevelTo: int, PropertyLevel: int }
+ProxyLoadLoginPage { LoginPageUrl: string }
+ProxyLoggedIn { LoginToken: string, SGToken: string }
+ProxyMaintenanceInfoModel { EndTime: string, StartTime: string }
+ProxySetVersionLabel { TextID: int, TextParams: object }
+ProxyShowMessageBox { ButtonTextIDs: number, InfoTextID: int, TextParams: object, TitleTextID: int }
+ProxyUpdateProgressionBar { Progress: int, TextID: int, TextParams: object }
+PublicProfileModel { GuildHeaderModel: object, HasPendingInvitationFromCurrentPlayer: bool, HeroIconModels: object, IsFriend: bool, LatestCompletedAchievements: object, Profile: object, ProfileSummaryModel: object, UbisoftCompetitionId: int }
+QuitGamePanelNavigationModel { IsCastleShareable: bool, IsCastleValidated: bool, IsNUECompleted: bool }
+RMClientPackagesVersion { ClientGamePublicationLabel: string, RMPackageVersions: object }
+RMLauncherPatch { FullDownloadSize: number, FullInstallUrl: string, PatchDownloadSize: number, PatchInstallUrl: string, RMLauncherPatchFlags: int, VersionName: string }
+RMPackageId { MachineType: int, PackageName: string, RMPackageType: int }
+RMPackagePatch { FullDownloadSize: number, FullInstallUrl: string, PatchDownloadSize: number, PatchInstallUrl: string, RMPackagePatchFlags: int, RMPackageVersion: object }
+RMPackageVersion { RMPackageId: object, VersionName: string }
+RMServerPackagesVersion { BranchName: string, GamePublicationLabel: string, RMPackagePatches: object }
+RandomCastlesResult { CastleInfos: object, HasReachLastPage: bool }
+RandomCurrencyAmount { Amount: object, Probability: float }
+RareDefenseIngredientColorItem { Colour: string, UpperBound: float }
+ReachLevelAchievement { Heroes: object }
+ReachLevelInfo { HeroSpecContainerId: int, Level: int }
+ReceiveCriticalDamageVoConfig { DamageHpThreshold: float, Vo: object }
+RegionMapCastle { RegionMapId: int, UiContainerName: string }
+RegionMapPanelNavigationModel { AttackRegionsViewModel: object, CurrentRegion: int, PanelName: int, PendingRegionsChangedViewModel: object }
+RegionMapSettings { MaxCol: int, RegionMapCastles: object }
+RemoveCastleRoomCommand { RemovedBuildingsInstanceId: number, RemovedCreaturesSpecContainerId: number, RemovedDecorationsSpecContainerId: number, RemovedDefenseIngredientBoostsSpecContainerId: number, RemovedTrapsSpecContainerId: number }
+RenovateBuildingPanelNavigationModel { BuildingDescriptionOasisId: int, BuildingNameOasisId: int, BuildingType: int, LayerName: string, RequiredLevel: int }
+ReplayModeConfig { AttackId: string, FileName: string, Repeat: bool, ReplayMode: int }
+ReplaySpeedChangedEventArgs { CurrentReplaySpeed: number }
+ReplayToolbarModel { AttackDurationInMilliseconds: int, AttackerDisplayName: string, AttackerSpecialPackModel: object, DefenderDisplayName: string, DefenderSpecialPackModel: object }
+ReplayUpdateTimeEventArgs { CurrentReplayTime: int, ReplayLength: int }
+RequirementConditionLock { RequirementName: string, RequirementRank: int }
+ResearchSpec { ParentSpecContainerId: int, RequiredLevel: int, Tier: int }
+ResistanceSettings { ResistanceReductionImmunityDuration: float, ResistanceRemovedMultiplier: float, ResistanceReplenishDuration: float }
+RestartAttackPanelNavigationModel { CastleType: int, DefenderCastleName: string, HeroIconModel: object, HeroSpecContainerId: int, IsPvECompetition: bool, IsTargetedAttack: bool, IsTestAttack: bool, TargetedAttackAvailableCount: int, TargetedAttackMaxCount: int }
+RestoreMinesBuildingCommand { CastleBuildingIds: number, IsCastlePublishable: bool }
+ResurrectionCostByLevel { Cost: int, LevelFrom: int, LevelTo: int }
+ResurrectionInfo { NextResurrectionCost: int, NextTrophyScoreLost: int, ResurrectionCost: int, ResurrectionCount: int }
+Reward { FakeRewardItems: object, LargeIconUrl: string, RewardItems: object, SmallIconUrl: string }
+RewardItemBase { LargeIconUrl: string, SmallIconUrl: string }
+RewardItemModel { Count: int, CreatureRank: int, DyeInfoModel: object, HeroItemQuality: int, IsCreature: bool, IsHeroItem: bool, ItemBase: object, LargeIconUrl: string, Name: string, SmallIconUrl: string, Tooltip: object }
+RewardModel { FakeRewardItemModels: object, OverrideRewardItemModel: object, RewardItemModels: object }
+RollbackUpdatedEventArgs { DelegatedCastleValidationPendingTime: int, IsDelegatedCastleValidationPending: bool, IsRollbackEnabled: bool, IsTestAttackButtonEnabled: bool }
+RoomBuildableIntersectionFlag { BuildableType: string, Flags: int }
+RoomDecorationPointsPanelNavigationModel { DecorationPoints: int, IconUrl: string, MaxDecorationPoints: int }
+RoomDecorationPointsUpdatedEventArgs { DecorationPoints: int, IconUrl: string, MaxDecorationPoints: int }
+RoomObject { AttachmentNode: number, Children: object, EffectName: number, IgnoreForRoomOrientations: number, Orientation: object, Probability: float, SpecContainerId: int, SpecContainerType: int, SpecContainerType: float, SpecContainerType: float, SpecContainerType: float }
+RoomObstacle { Orientation: int, Thickness: float, Width: float, Width: float, Width: float }
+RoomPlayerSpawnPoint { PlayerSpawnCellX: float, PlayerSpawnCellY: float, PlayerSpawnOrientation: object }
+RoomSection { Passages: object, Passages: int, Passages: int }
+RoomTooltipModel { DecorationSlotCount: int, RoomModelCategory: int, Type: int }
+RoomZone { MaxConstructionPoints: int, RoomZoneCells: object }
+RoomZoneCell { CellTypeMask: number, CellTypeMask: number, CellTypeMask: number }
+ScreenPositionModel { PositionX: int, PositionY: int }
+ScreenResolutionModel { Height: int, Index: int, Text: string, Width: int }
+SearchQuery { MaxRecord: int, Query: string }
+SeasonalCompetitionModel { BestWorldUser: object, CurrentUser: object, Entries: object, FilterModel: object, IsFirstPageAvailable: bool, IsNextPageAvailable: bool, IsPreviousPageAvailable: bool, IsRankPageAvailable: bool, LeaderboardProgressBarModel: object, Leaders: object, NextSeasonSubLeagueModel: object, PageSize: int, RemainingTime: int, TotalCount: int }
+SeasonalCompetitionPanelNavigationModel { FilterCode: string, IsPanelOpened: bool, LeaderboardLevel: int, LeaderboardSeekMode: int }
+SeasonalCompetitionRemainingTimeUpdatedEventArgs { RemainingTime: int }
+SeasonalCompetitionSchedule { ClosingPeriod: int, DebugName: string, EntryTimeToLive: int, GiveRewardJobDelayMinutes: int, GlobalLockTimeout: int, ReferenceDate: datetime, SeasonalRewardConfig: object }
+SeasonalCompetitionStartedNotification { StartDate: datetime }
+SeasonalEntitiesOverrides { CreaturesOverrides: object, RoomsOverrides: object, TrapsOverrides: object }
+SeasonalEventInfo { Id: number, Name: string }
+SeasonalRewardConfig { ClosingPeriodCount: int, Offset: int, StoredScoreCount: int }
+SecurableObject { Id: string }
+SecurableObjectPackageType { PackageType: int }
+SecurityContext { Id: string }
+SecurityContextBranch { BranchName: string }
+SecurityContextBranchEnvironment { BranchName: string, EnvironmentName: string, EnvironmentType: int }
+SecurityGroup { Members: object }
+SecurityPermission { AccessType: int, Id: string, OperationType: int, SecurableObject: object, SecurityContext: object }
+SecurityPrincipal { Name: string, Permissions: object }
+SecurityPrincipalPermissions { Name: string, Permissions: object }
+SelectHeroCommand { HeroId: int }
+SelectableHeroListChangedEventArgs { HeroList: object }
+SellDefenseIngredientCommand { Count: int, ItemId: int, ItemType: int, Tier: int }
+SellHeroItemCommand { BuyBackId: string, ClientSellPrice: object, HeroItemEntityType: int, SlotIndex: int, TemplateId: int }
+ServerAssignmentActionCompletedEventArgs { AssignmentActionIndex: int, AssignmentId: int }
+ServerAssignmentActionCompletedNotification { AssignmentActionIndex: int, AssignmentId: int }
+ServerCommand { HeroItemSlot: int, InventorySlotIndex: int }
+ServerDefinitions { ServerInfos: object }
+ServerEndAttackEndedEventArgs { EndAttackInfo: object }
+ServerInfo { ApplicationID: string, DeploymentServiceID: string, RelativePathToApplication: string, ServerName: string }
+SessionTracking { AttackTotalTime: int, BuildTotalTime: int, IdleTime: int, LauncherTotalTime: int, LobbyTotalTime: int }
+SetAfterAttackNavigationAssignmentActionSpec { GameStateType: int }
+SetAutoEquippableCategoryAssignmentActionSpec { HeroItemCategoryType: int, IsAutoEquip: bool }
+SetAvatarCommand { AvatarId: int }
+SetCastleInventoryItemViewedCommand { ItemType: int, SpecContainerId: int }
+SetLastViewedDateCommand { Type: int, ViewedDate: datetime }
+SetLastViewedDefendLogCommand { ViewedDate: datetime }
+SetLastViewedNewsCommand { NewsId: string }
+SetProfanityFilteringCommand { Enabled: bool }
+ShieldAddedNotification { ExpirableId: string }
+ShieldEndExpirable { ExpirableType: int }
+ShieldExpiredNotification { ExpirableId: string }
+ShieldInfo { IsShielded: bool, ShieldExpirableDueDate: datetime }
+ShieldRemainingTimeUpdatedEventArgs { ShieldRemainingTime: int }
+ShopCategoryFilter { DefaultValueId: int, Hidden: bool, Type: int }
+ShopCategoryModel { ShopCategory: int }
+ShopCategorySettings { Category: int, Filters: object }
+ShopConfirmationPopupModel { IsContainingPremiumCash: bool, ShopProduct: object, Tooltip: object }
+ShopConfirmationPopupPanelNavigationModel { DyeInfoModel: object, InitialCurrencyType: int, IsOpalPanel: bool, ItemCount: int, ItemId: int, ItemType: int, PanelName: int, ShopConfirmationPopupModel: object, WalletAmount: int }
+ShopConfirmationPopupSettings { OasisIdBuy: int, OasisIdBuyAndEquip: int, OasisIdTotalAfterPurchase: int }
+ShopDiscount { DiscountType: int, ExpirationDate: datetime, PercentOff: int, StartDate: datetime }
+ShopFilter { Type: int, Values: object }
+ShopFilterModel { DefaultValueId: int, Hidden: bool, SelectedValueId: int, Type: int, Values: object }
+ShopFilterValue { Id: int }
+ShopFilterValueDecorationCategory { DecorationCategoryMask: int, DecorationCategoryMaskName: string, DecorationCategoryMaskOasisId: int }
+ShopFilterValueHero { HeroName: string, SpecContainerId: int, Id: int }
+ShopFilterValueId { Id: int, Type: int }
+ShopFilterValueLevel { LevelMax: int, LevelMin: int, Id: int }
+ShopFilterValueUnifiedShop { FilterOasisId: int, FilterOasisName: string, ShopCategory: int }
+ShopGlanceViewTracking { ItemCount: int, ItemId: int, ItemType: int, ShopGlanceViewInSeconds: int }
+ShopHeroLevelBuyModel { ButtonText: string, Level: int, Price: object, SkuCode: string }
+ShopItemRefreshedEventArgs { GetProductsViewModel: object }
+ShopItemsListToDisplayOnlyEventArgs { IsDisabled: bool, ShopItemIds: object }
+ShopMenuNavigation { ShopMenuNavigationButtons: object }
+ShopMenuNavigationButton { EmptyMessageOasisId: int, GameButton: int, IconClass: string, IsDisabledInNUE: bool, IsDisabledOnConsoleUI: bool, IsDisabledOnPCUI: bool, IsLockedDuringItemCrafting: bool, IsLockedDuringItemReforging: bool, IsLockedDuringItemUpgrading: bool, LayerName: string, NewItemCount: int, OasisId: int, ShopCategoriesMerged: object, ShopCategory: int, ShopContext: int, Title: string, Url: string }
+ShopNewItemsCountRefreshedEventArgs { ShopCategory: int, ShopCategoryNewItemsCount: int }
+ShopPackOpenningModel { AreCraftingMaterialsAddedToBuyBack: bool, MaterialCount: int, Materials: object }
+ShopPanelNavigationModel { BuildingId: int, BuildingMaxRank: int, BuildingRank: int, BuildingType: int, CategoryConfigViewModel: object, EmptyMessageOasisId: int, ForgeMode: int, ForgeState: int, HasMetUpgradeRequirements: bool, IsBuildMode: bool, PrimaryShopEnabled: bool, ProductsViewModel: object, ShopMenuNavigation: object, Tab: int, Title: string }
+ShopProductModel { AlreadyOwnedCount: int, BuildingRequirementRank: int, BuildingRequiremntName: string, BuyableCount: int, BuyBackCreationDate: datetime, BuyBackId: string, BuyButtonOasisId: int, BuyButtonOasisName: string, CanAfford: bool, ConsumableType: int, CraftingMaterials: object, CreatureRank: int, CreatureTrapCraftingItemModel: object, Description: string, DiscountExpirationRemainingTime: int, DiscountPercentOff: int, DiscountType: int, DyeInfoModel: object, HeroLevelBuyModel: object, HeroRequirementLevel: int, HeroRequirementName: string, HidePriceAndUpgrade: bool, IconUrl: string, InvIconUrl: string, IsBestSeller: bool, IsBuildingRequirementMet: bool, IsFullRequirementMet: bool, IsHeroInFreeTrial: bool, IsHeroRequirementMet: bool, IsLimitedQuantity: bool, IsNew: bool, IsNewlyUnlocked: bool, IsPremiumLocked: bool, IsRare: bool, IsRequirementMet: bool, IsStealableMine: bool, ItemCount: int, ItemId: int, ItemType: int, LayerName: string, Level: int, LimitedQuantityConsumed: int, LimitedQuantityMax: int, LimitedQuantityNextUnlockCastleLevelRequirement: int, LimitedQuantityNextUnlockQuantity: int, LimitedTimeInSeconds: int, Quality: int, ShopContentButtonType: int, ShopContext: int, ShowButton: bool, Skus: object, SpecialPackGroup: int, Title: string, TooltipModel: object, Weight: int }
+ShopRefreshedEventArgs { BuildingRank: int, ShopPanelNavigationModel: object }
+ShopSku { Code: string, CraftingMaterials: object, CreationDate: datetime, DescriptionOasisId: int, Discounts: object, IconUrl: string, InternalDescription: string, IsActive: bool, IsBestSeller: bool, IsLimitedQuantity: bool, IsLocked: bool, ItemCount: int, ItemId: int, ItemType: int, LimitedQuantityMax: int, MaxOwningCount: int, PremiumEstimatedValue: int, Price: object, ShopContext: int, TitleOasisId: int, Weight: int }
+ShopSkuModel { ActualPrice: object, LimitedQuantityMax: int, PremiumEstimatedValue: int, RegularPrice: object, ShopButtonUrl: string, SkuCode: string }
+ShopSkuModifier { LimitedQuantityConsumed: int, LimitedQuantityMax: int, LimitedQuantityNextUnlockCastleLevelRequirement: int, LimitedQuantityNextUnlockQuantity: int, SkuCode: string, Unlock: bool }
+ShortcutCodeCollection { ControllerShortcuts: object, KeyboardShortcuts: object, MouseShortcuts: object }
+ShortcutKeyCode { Key: int }
+ShortcutMouseButtonCode { MouseButton: int }
+ShowAttackReportEventArgs { AttackInfo: object, HeroIconModel: object }
+ShowBuildingHoverTooltipEventArgs { BuildingName: string, BuildingRank: int, MaxBuildingRank: int, SpecialMessage: string, SpecialMessage: int, SpecialMessage: int }
+ShowCreatureHoverTooltipEventArgs { CameraZoom: float, CreatureName: string, IsCreatureSleeping: bool, ToolTipModel: object, ToolTipModel: int, ToolTipModel: int }
+ShowLotteryTicketPanelNavigationModel { IsOpalPanel: bool, PanelName: int, PlayScratchAnimation: bool }
+ShowMoreCastleNotification { AttackSelectionResult: object, RegionId: int }
+ShowPopupMenuEventArgs { fontSize: float, height: int, itemLabels: object, rightAligned: bool, selectedItem: int, width: int, width: int, width: int }
+ShowTooltipEventArgs { Id: int, TooltipModel: object, TooltipOptions: object }
+ShowTrapHoverTooltipEventArgs { CameraZoom: float, IsPowered: int, PowerConsumption: int, TrapName: string, TrapName: int, TrapName: int }
+ShowTrapPowerSupplyHoverTooltipEventArgs { Name: string, Name: int, Name: int }
+ShowVictoryAnimationEventArgs { CastleLevel: int, HeroDied: bool, IsCastleShielded: bool, IsChestLocked: bool, IsTestAttack: bool, RewardModel: object, SleepingCreaturesCount: number, TimerDuration: float }
+SimulationLaunchConfig { AttackRegionId: int, AttackSource: int, AttackType: int, CastleLoadConfig: object, EnvironmentSettingsType: int, GameStateModifier: int, InputMode: int, PlayerLoadConfig: object, ReplayModeConfig: object, RevengeAttackId: string, SimulationMode: int, WorldName: string }
+SkillTreePanelNavigationModel { EquippedSpells: object, ExcludeModalPopupOpening: bool, FamilyId: int, IsOpalPanel: bool, SpellTrees: object }
+SkusModifiersUpdatedNotification { ShopSkuModifiers: object }
+SleepyGiantAccountInformation { Achievements: object }
+SliderSettings { Max: float, Min: float, Precision: int, Step: float }
+Spec { Tag: number }
+SpecialPack { AdditionalInventoryTabCount: int, AdditionalWorkerCabinCount: int, Amounts: object, BoostedHeroes: object, BuyExclusionList: number, CastleVisualGroupNames: object, CraftingMaterials: object, Creatures: object, DebugName: string, Decorations: object, EarlyHeroAccess: number, HeroItems: object, IconLayerName: string, IconUrl: string, IconUrlLarge: string, Id: int, PackDescriptionOasisId: int, PackNameOasisId: int, ProductPageUrl: string, Rank: int, ShopSkus: object, SpecialPackGroup: int, Traps: object, UnlockedEmotes: number, UnlockedThemes: number }
+SpecialPackModel { IconLayerName: string, IconUrl: string, IconUrlLarge: string, SpecialPackId: int }
+Spell { Level: int, NewlyAdded: bool, SpellSpecContainerId: int }
+SpellFamilyModel { IconUrl: string, Id: int, LayerName: string, Name: string, NewlyAddedCount: int }
+SpellModel { CurrentLevel: int, IconUrl: string, LastUnlockedLevel: int, LayerName: string, MaxLevel: int, Name: string, NewlyAdded: bool, NextLevelPrice: object, NextLevelSkuCode: string, SpecContainerId: int, UnlockHeroLevelRequirement: int }
+SpellShortcutKeyModel { AbilitySlotIndex: int, ShortcutKey: string, ShortcutMouseButton: int }
+SpellTooltipModel { Cooldown: float, DescriptionFormulas: object, HeroDamagePerSecond: float, HeroLevel: int, HeroNameRequirement: string, ManaBuilder: int, ManaBuilderDescription: string, ManaCost: int, ManaCostPerSecond: float, SpellLevel: int, Type: int }
+SpellTreeViewModel { SpellFamily: object, Spells: object }
+SpellUnlockedChangedEventArgs { UnlockedSpell: object }
+SpellUnlockedNotification { Spell: object }
+SpellViewedCommand { Spell: object }
+StartAssignmentCommand { AssignmentId: int }
+StartAttackEventArgs { AttackInfoModel: object }
+StartSpeedBoost { AParameter: float, Cooldown: float, InitialSpeedBoostMultiplier: float }
+StarterCastleInfoModel { CanBePurchased: bool, CastleIconName: string, CastleName: string, Description: string, FakePrice: string, IsScrollExpanded: bool, SaleId: int }
+StatModel { FromValue: float, ShouldDisplaySign: bool, StatType: int, ToValue: float }
+StateMachineTracking { States: object }
+StateMachineTrackingState { ReasonForFailure: string, State: string, Successful: bool }
+StealableMine { CastleBuildingId: int, IsShielded: bool, MaxStealableAmount: int, StealableAmount: int, StealableHeroItems: object }
+SteamAssetContextSetting { ItemType: int, Name: object, Nested: bool, UserFacing: bool }
+SteamAssetTagCategorySetting { Id: int, Name: object }
+SteamAssetTagSetting { CategoryId: int, Name: object }
+SteamIconExportConfig { TemplateSpecs: object }
+SteamIconExportTemplateSpec { BottomMargin: int, Height: int, LeftMargin: int, RightMargin: int, TextureName: string, TopMargin: int, Width: int }
+SteamResult { Error: string, ShouldRetry: int, Success: bool }
+StorageBuildingInfoDataModel { CurrentCapacity: int, MaxCapacity: int }
+StorageBuildingUpgradePopupDataModel { NewCapacity: int }
+StoreReplayInfo { FileSize: number }
+SubLeague { AttackBonus: float, BaseSeasonalReward: object, Id: int, LargeIconUrl: string, LeaderClosingPeriodRewards: object, LeaderSeasonalRewards: object, LeagueMaintainReward: object, LeagueReachedReward: object, Name: object, PrefixOasisId: int, ScoreFrom: int, ScoreTo: int, SmallIconUrl: string }
+SubLeagueDetailedModel { RewardModel: object, ScoreMax: int, ScoreMin: int, SubLeagueModel: object }
+SubLeagueModel { AttackBonus: float, LargeIconUrl: string, Name: string, PrefixName: string, SmallIconUrl: string }
+SwitchProfileHeroEventArgs { HeroProfileViewModel: object }
+SynergyFontSettings { AlternateFonts: object, DefaultSynergyFontTexture: string }
+TargetedAttackEventArgs { ShowTargetedAttackNotification: bool, TargetedAttackAvailableCount: int }
+TargetedAttackExpirable { ExpirableType: int }
+TargetedAttackPanelNavigationModel { ShouldShowTargetedAttackNotification: bool, TargetedAttackAvailableCount: int }
+TargetedAttackReloadedNotification { TargetedAttackAvailableCount: int }
+TextUpdatedEventArgs { Text: string }
+TextValidatedEventArgs { IsEnterPressed: bool }
+Thanks { DoubleOThanks: object, SpecialThanks: object }
+Theme { GroupNames: number, InvIconUrl: string, LargeIconUrl: string, Name: object, OasisDescriptionId: int, PrivateTheme: bool, ShopIconUrl: string, StartupTheme: bool, SteamAssetSpec: object, SteamAssetUiSpec: object, ThemeId: int }
+ThemeRemovedNotification { ThemeId: int }
+ThemeRewardItem { ThemeId: int }
+ThemeSelectedNotification { ThemeId: int }
+ThemeUnlockedNotification { ThemeId: int }
+Thread { Messages: object, Participants: object, ThreadHeader: object, ThreadId: number, ThreadPerspective: object }
+ThreadCollectionPage { ItemListCountPerPage: int, ItemListIndex: int, ThreadList: object, TotalThreadCount: int }
+ThreadHeader { FirstMessageSentDate: datetime, LastMessageSentDate: datetime, MessageCount: int, Subject: string, ThreadType: int }
+ThreadParticipantPerspective { HasReplied: bool, HasUnreadMessages: bool, HasUnsubscribed: bool, LastReadMessageIndex: int }
+ThreadSummary { LastMessagePreview: object, PartialParticipantList: object, ThreadHeader: object, ThreadId: number, ThreadUserPerspective: object }
+TimeBonusGrantedEventArgs { BonusTime: float }
+TimeCost { Cost: object, TimeThreshold: int }
+TooltipManagerSettings { ContainerFilename: string }
+TooltipModel { AnchorPosition: int, ArrowPosition: int, BuildingRequirementName: string, BuildingRequirementRank: int, BuyBackId: string, BuyPrice: object, CanBeSold: bool, Description: string, IsAffordable: bool, IsBuildingRequirementMet: bool, IsEntityTooltip: bool, IsLevelRequirementMet: bool, IsOwned: bool, IsSteamMarketable: bool, IsUpgrading: bool, LevelRequirement: int, LimitedTimeInSeconds: int, MaxAffordableCount: int, MaxOwningCount: int, OffsetPositionX: float, OffsetPositionY: float, SellPrice: object, ShouldHidePriceSection: bool, TemporaryShopItemDescription: string, Title: string, TooltipContext: int, TooltipOpeningDelay: float, Type: int, UpdateLocked: bool }
+TotemTooltipModel { CPCapacity: int, HealtPoints: int, Level: int, Type: int }
+TraceRouteHop { Address: string, Pings: number }
+TraceRouteTracking { HostName: string, TraceRoute: object }
+TrackingBase { CreationDate: datetime, TrackingTagId: int }
+TrackingCommand { TrackingTag: object }
+TrapTooltipModel { IsPowerNeeded: bool, PowerConsumption: int, PowerSupplied: int, ShowTotemBoostHint: bool }
+TreasureChestLockCountdown { CPFrom: int, CPTo: int, DurationsByVictoryCondition: object }
+TreasureRoomChestLockInfo { Animation: number }
+TreasureRoomGoldPileEntry { MaxAmount: int, MinAmount: int, PileCount: int }
+TreasureRoomLoot { GoldDrops: number, HeroItem: object, LifeForceDrops: number, Xp: int }
+TrophiesModifier { From: float, To: float, TrophyMultiplier: float }
+TrophyGainBucket { CastleRatio: float, MaxCrownGain: float, MinCrownGain: float }
+TrophyScoreChange { TrophyScoreAttackerVariation: int, TrophyScoreDefenderVariation: int }
+TrophyScoreChangedEventArgs { TrophyScore: int }
+TrophyScoreChangedNotification { TrophyScore: int }
+UIAttackOasisSettings { MineTimeBonus: int, TimerExpired: int, TimeToBeat: int, YourTime: int }
+UIBuildingOasisSettings { UpgradePanel: object }
+UIBuyButtonSkuControlModel { BuyBackId: string, GridItemModel: object, SkuCode: string }
+UICastleInventoryOasisSettings { OasisPanelTitle: int }
+UICastleValidationOasisSettings { CreaturesNumber: int, MinesNumber: int }
+UICommonOasisSettings { HeroItemCategoryTypeQualifier: object }
+UIGridItemModel { BuildingRequirementName: string, BuildingRequirementRank: int, ButtonName: string, BuyBackId: string, BuyButtonOasisName: string, CanAfford: bool, CanDisableParentContainerInput: bool, ConsumableType: int, CraftingMaterialModels: object, CreatureRank: int, DiscountPercentOff: int, DiscountType: int, DyeInfoModel: object, HeroRequirementLevel: int, HeroRequirementName: string, HideBuyButton: bool, IsBuildingRequirementMet: bool, IsCraftable: bool, IsHeroRequirementMet: bool, IsLimitedQuantityV2: bool, IsLimitedTimeIconVisible: bool, IsLocked: bool, IsNewlyUnlocked: bool, IsPremiumLocked: bool, IsRankIconVisible: bool, IsRare: bool, IsShopPanelContext: bool, IsSimpleBuyButton: bool, IsStealableMine: bool, ItemCount: int, ItemId: int, ItemName: string, ItemType: int, LayerName: string, Level: int, LockText: string, MaxAffordableCount: int, MaxAffordableCountV2: int, MaxLimitedCount: int, MaxLimitedCountV2: int, MaxOwningCountV2: int, OwnedCountV2: int, Quality: int, RankIconLayerName: string, RemainingLimitedCount: int, RemainingLimitedCountV2: int, ShopContext: int, Skus: object, StackCount: int, TooltipModel: object }
+UIGridSkuModel { ActualPrice: object, BuyableCount: int, IsLimitedQuantity: bool, PremiumEstimatedValue: int, RegularPrice: object, ShopButtonUrl: string, SkuCode: string }
+UIHeroDeathSettings { HealCost: int, LostCrown: int }
+UIItemSlotModel { EquippedItemModel: object, InventoryItemModel: object }
+UILocalizedLanguageCode { Code: string, OasisId: int }
+UIOptionInformation { Text: string }
+UIPausePanelOasisSettings { ButtonContinue: int, ButtonControls: int, ButtonCredits: int, ButtonExit: int, ButtonLeaveCastle: int, ButtonRestartCastle: int, ButtonSettings: int }
+UIProfilePanelSettings { OasisIdAchievementScore: int, OasisIdCastlesLooted: int, OasisIdCreaturesDefeated: int, OasisIdCrowns: int, OasisIdGoldCollected: int, OasisIdHeroesDefeated: int, OasisIdTimeAttacksCreated: int, OasisIdTimeAttacksParticipated: int, OasisIdTimeAttacksWon: int, OasisIdWinningStreak: int }
+UIShopOasisSettings { RequirementBuilding: int, RequirementHero: int }
+UISkillSlotModel { EquippedHeroConsumableItemModel: object, EquippedSpellModel: object, IsPotionSlot: bool, SpellModel: object }
+UIStatParameter { DescriptionOasisId: int, FloatPrecision: int, IsPercentage: bool, NameOasisId: int }
+UITabInventoryModel { TabIndex: int }
+UITimeFormatterOasisSettings { AFewSecondsAgo: int, Day: int, Days: int, Hour: int, Hours: int, Minute: int, Minutes: int, Month: int, Months: int, Second: int, Seconds: int, Week: int, Weeks: int, XAgo: int, XLeft: int }
+UITooltipOasisSettings { BuildingRequirement: int, CreatureAttackSpeed: int, CreatureMovementSpeed: int, ItemRank: int, LevelAbbreviation: int, LevelRequirement: int, TrapPowerCost: int }
+UIUpgradePanelOasisSettings { Capacity: int, Health: int, ProductionRate: int, Rank: int }
+UIValidateCaslteOasisSettings { BuyValidateDescriptionText: int, GuildValidationButtonText: int, GuildValidationDescriptionText: int, TicketButtonText: int, TicketDescriptionText: int, ValidateButtonText: int, ValidateDescriptionText: int }
+UbisoftCastle { ActivationDate: datetime, CastleIconUrl: string, CastleValidationDuration: float, DeActivationDate: datetime, ForceCastleLevelOnBuildables: bool, IsBranded: bool, IsDisabled: bool, IsForSaleCastle: bool, IsHidden: bool, IsTutorialCastle: bool, Level: int, OasisDescription: int, OasisName: int }
+UbisoftCompetitionDetailPanelNavigationModel { UbisoftCompetitionId: int }
+UbisoftCompetitionInfo { BestScore: int, CastleId: int, CastleLevel: int, CastleName: string, CastleType: int, CurrentUserLeaderboardEntry: object, FriendLeaderboard: object, GlobalLeaderboard: object, MaxReward: object, MinParticipantRequired: int, OasisNameId: int, ParticipantCount: int, RemainingTime: int, UbisoftCompetitionId: int, UbisoftCompetitionWasEnded: bool }
+UbisoftCompetitionInfoModel { CurrentUserLeaderboardEntry: object, MaxHeroLevel: int, RemainingTime: int, TopUserLeaderboardEntry: object, UbisoftCompetitionId: int }
+UbisoftCompetitionLeaderboardEntry { AccountSummary: object, IsFriend: bool, Rank: int, Reward: object, Score: int }
+UbisoftCompetitionSummary { CastleId: int, CastleName: string, CastleType: int, Duration: int, HeroLevel: int, LastMessageSummary: string, LeaderLeaderboardEntry: object, OasisNameId: int, ParticipantCount: int, RemainingTime: int, UbisoftCompetitionId: int }
+UiBuildingRank { InvIconUrl: string, LayerName: string, ShopIconUrl: string }
+UiCreatureTrapDescription { DescriptionFormulas: object, DescriptionOasisId: int, IconUrl: string, NameOasisId: int, Tier: int }
+UiCreatureTrapRank { InvIconUrl: string, LayerName: string, ShopIconUrl: string }
+UiCreatureTrapSpecialization { DebugName: string, Descriptions: object, SpecializationId: int, Unlocks: object }
+UiCreatureTrapUnlock { IconUrl: string, OasisId: int, Tier: int }
+UiDefenseIngredientAbility { Formulas: object, Name: object, OnlyForTiers: number, Ui: object }
+UnlockButtonEventArgs { Button: int }
+UnlockCastleThemePopupPanelNavigationModel { CanAfford: bool, CurrencyAmount: object, InvIconUrl: string, SkuCode: string, ThemeName: string }
+UnlockedObjectivesModel { Objectives: object }
+UnreadInformation { TotalUnreadThreadCount: int, UnreadThreadInformations: object }
+UnreadThreadInformation { ThreadId: number, UnreadMessageCount: int }
+UpdateAttackReportEventArgs { CrownBonuses: number, EndAttackInfo: object, HeroSpecContainerId: int, SubLeagueModel: object, UbisoftCompetitionId: int }
+UpdateBuildingUpgradeButtonEventArgs { BuildingPopupInfoViewModel: object }
+UpdateCastleCreatureCommand { AggroPropagationOffsetX: float, AggroPropagationOffsetZ: float, IsSleeping: bool, TotemCastleBuildableId: int }
+UpdateCastleTrapCommand { BeatIndex: int, PowerSupplyCastleBuildableId: int }
+UpdateCastleTriggerCommand { SizeX: number, SizeY: number }
+UpdatePanelScreenPositionEventArgs { ScreenPositionModel: object }
+UpgradeBuildingCommand { BuildingUpgradeRank: int, ConsumedHeroInventory: object, SkuCode: string }
+UpgradeCompletedCameraMovementSettings { Duration: float, EaseInOut: float, EndZoom: float, IgnoreFirstUpgrade: bool, IgnoreNearestZoomLevel: bool, TargetOnCastleCenter: bool }
+UpgradeItemUnlockModel { HasNewInstance: bool, IconUrl: string, ItemLevel: int, ItemType: int, LayerName: string, SpecContainerId: int, Tooltip: object }
+UpgradeProductionMineBuildingCommand { MineBuildingId: int, IsCastlePublishable: bool }
+UpgradeStatModel { Boost: int, BoostText: string, CurrentValue: int, Icon: string, MaxValue: int, NextValue: int, SubTitle: string, Title: string }
+UserConfigurationGamePlayModel { AutoFireOnDirectModeEnabled: bool, LootCollectorFilter: int, ProfanityFilterEnable: bool, StopContinuousMoveOnClickReleaseEnable: bool, UseCameraDamping: bool }
+UserConfigurationModel { UserConfigurationGamePlayModel: object, UserConfigurationSoundModel: object, UserConfigurationVideoModel: object }
+UserConfigurationSoundModel { AudioAmbienceEnable: bool, AudioMasterVolumeRatio: float, AudioMusicEnable: bool, AudioSfxEnable: bool, AudioVoiceEnable: bool }
+UserConfigurationVideoModel { DefaultLevel: int, Distortion: bool, Fog: bool, FPSClamping: int, FPSClampingNoFocus: int, FXAA: int, Gamma: float, Glow: bool, LensFlare: bool, ObjectComplexity: int, PostEffects: bool, RenderQuality: float, ScreenSize: int, Shadows: int, SSAO: int, UseTopFrustumOnly: bool, VSync: bool, WindowType: int }
+UserMessageData { Body: string }
+UserMessagePreviewData { Summary: string }
+UserSettingEmote { AnimationName: string }
+UserSettings { AttackUserSettings: object, AudioAmbienceEnable: bool, AudioMasterVolumeRatio: float, AudioMusicEnable: bool, AudioSfxEnable: bool, AudioVoiceEnable: bool, AutoFireOnDirectModeEnabled: bool, IsWindowMaximized: bool, ProfanityFilteringEnable: bool, RuntimeConfiguration: string, ShortcutsDictionary: object, ShortcutsDictionaryVersion: number, ShortcutsInstantCast: bool, StopContinuousMoveOnClickRelease: bool, WindowHeight: number, WindowWidth: number }
+ValidationAttemptNewsData { AttackerDisplayName: string, AttackerId: int, AttackerSpecialPackIconUrl: string, RequiresUserAction: bool, Type: int }
+VictoryConditionLevelChangedEventArgs { VictoryConditionLevel: int }
+VictoryConditionStarAnimationPanelNavigationModel { PosX: int, PosY: int }
+VictoryPanelNavigationModel { posX: int, posY: int, RewardModel: object }
+VideoCaptureChangedEventArgs { Enable: bool, NbFilesInFolder: int }
+VideoCapturePanelNavigationModel { Capturing: bool, IsOpalPanel: bool, NbFilesInFolder: int, PanelName: int }
+VideoCaptureTracking { GameStateType: int, IsEnable: bool }
+ViewFinishResizeEventArgs { ViewName: string }
+ViewableItem { LastViewedDate: datetime, Type: int }
+VirtualTransaction { AccountId: int, Amount: object, Description: string, Id: number, ProductId: int, ServerName: string, State: int, TransactionDateTime: datetime }
+VisualFxSpecList { FxList: object }
+VisualRenderableInfo { TextureFileName: number }
+Wallet { InGameCoin: number, InGameCoinStorageCapacity: number, LifeForce: number, LifeForceStorageCapacity: number, PremiumCash: number }
+WalletCapacityUpdatedNotification { Amount: int, CurrencyType: int }
+WalletCurrencyUpdatedEventArgs { AmountChangedBy: int, CurrencyType: int, IsStorageReadyToUpgrade: bool, MaxAmount: int, NewAmount: int }
+WalletSummaryModel { Gold: object, IsGoldStorageReadyToUpgrade: bool, IsLifeForceStorageReadyToUpgrade: bool, LifeForce: object, MaxGold: object, MaxLifeForce: object, PremiumCash: object }
+WalletUpdatedNotification { Amounts: object, UpdateTag: int }
+WatchedReplayTracking { AttackId: string, EndFrame: number, FrameCount: number, FrameDuration: float, IsValid: bool, ReplayUrl: string }
+WeaponArchetype { Damage: float, GearScoreMultiplier: float, HeroId: int, Range: float, Speed: float }
+WebBrowserSettings { CloseButtonLeftOffset: float, CloseButtonTopOffset: float, ContentHeight: int, ContentWidth: int, EnableAudioPresets: bool, FixedHeight: float, FixedWidth: float, HeightMargin: float, HeightRatio: float, HeightRatioWideScreen: float, HideScrollBars: bool, IsFixedSize: bool, Left: float, Name: string, Top: float, UseBlackOverlay: bool, UseBorder: bool, UseRatios: bool, WidthMargin: float, WidthRatio: float, WidthRatioWideScreen: float }
+WebViews { ErrorView: int, GlobalView: int, HtmlTo3DView: int, LoadingView: int, TopView: int }
+WheelButtonSettings { OasisId: int, url: string }
+WheelPanelNavigationModel { ActiveWheel: int, IsCastleValidated: bool, LeftWheelButtonsAreDisabled: number, RightWheelButtonsAreDisabled: number }
+WheelSettings { CastleNotValidatedLayerName: string, CastleValidatedLayerName: string, LeftWheel: object, RightWheel: object }
+WorkerCabinBuildingInfoDataModel { CurrentWorkerCount: int, MaxWorkerCount: int }
+WorkerCabinBuildingUpgradePopupDataModel { NewWorkerCount: int }
+WorkerCabinRewardItem { Count: int }
+WorldRankReachedNewsData { WorldRank: int }
+XPChangedEventArgs { Hero: object, LevelChanged: bool, XPChanged: int }
+XmppInfo { ConferenceServer: string, Domain: string, Enabled: bool, Password: string, Port: int, Server: string, Username: string }
+XpBoostConsumableTemplate { IncreasedXp: float }
+XpLeashBoostConsumableTemplate { IncreasedXp: float, LevelDiffFrom: int, LevelDiffTo: int }
+XpLootBaseCpMultiplierTableEntry { MaxLevel: int, MinLevel: int, XpLootBaseCpMultiplier: float }
+XpRewardItem { Xp: int }
+YoutubePanelNavigationModel { IsOpalPanel: bool, PanelName: int }
+Zone { CodeName: string, Name: object }
+ZoneModel { Name: string, ZoneCode: string }
+ZoomSettings { Distance: float, IsHidingTexts: bool, Zoom: float }

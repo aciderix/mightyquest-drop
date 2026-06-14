@@ -35,11 +35,37 @@ including game-tuning settings. Examples:
 - **Design data**: `AttackSettings`, `AttackerRewardSettings`, `VisualBuildSettings`,
   etc. — the actual gameplay tuning the server shipped to the client.
 
+## Typed schemas (`extract_typed_schemas.py`)
+A second automatic pass adds **field types** by walking each contract's
+*serialize* method and pairing every `writeKey("Field")` with the value-writer
+call that follows it. The writer primitives were named by decompiling them once:
+
+| writer VA | type | how identified |
+|-----------|------|----------------|
+| `0x009aad80` | `int` | login slice |
+| `0x009ab060` | `string` | login slice |
+| `0x009ab3f0` | `bool` | writes the literal `"false"` |
+| `0x009aae20` | `float` | formatter handles `"toobig"` |
+| `0x009aae70` | `datetime` | ISO-8601 format `%04d-%02d-%02dT%02d:%02d:%02dZ` |
+| `0x009aa*` (other) | `number` | scalar primitive band, exact width unresolved |
+| outside the primitive band | `object` | per-contract nested object/array writer |
+
+Output: `re/catalog/network/schemas_typed.json` / `.txt` —
+**1,269 contracts, 5,126 typed fields** (int 2204, object 1016, string 743,
+bool 660, float 237, number 204, datetime 62). Validated on `LoginResult`,
+`CastleInfo`.
+
+### Request vs response (protocol direction)
+The 1,269 typed contracts are exactly those with a **serialize** method — i.e.
+the ones the **client emits** (requests / client→server). Contracts that appear
+only in `schemas.json` (names) but not in `schemas_typed.json` are
+**deserialize-only**: the client only reads them, so they are **server→client
+responses/config** (e.g. `GameServerConnectionConfig`). This split tells a
+server implementer which side produces each message.
+
 ## Caveats / next refinements
-- Field **types** aren't captured yet (only names + order). Types can be added by
-  reading each method's writer-primitive calls (writeInt/writeString/writeArray/
-  writeObject) — a follow-up pass on the same methods.
-- A few stubs (~150) had no fields recovered (empty/marker contracts or unusual
-  vtable shapes); revisit if needed.
-- Nested object/array fields are listed by key; the referenced child contract can
-  be linked by matching field name → contract name.
+- Read-only (response) contracts are typed only by name so far; a symmetric pass
+  over the *deserialize* readers (`readInt`/`readString`/…) would type them too.
+- The `number` band groups numeric widths (int64/uint/float32/…) not yet split.
+- Nested `object` fields are linked to their child contract by matching the field
+  name to a contract name.
