@@ -19,7 +19,7 @@ The image is an **unpacked dump** of an Ubisoft-protected binary. The leftover
 `.UBX0` / `.UBX1` sections (entropy ~7–8, i.e. encrypted) are protector
 artifacts; `.UBX1` also holds the rebuilt import table. **Caveat:** the import
 address table was only partially reconstructed during unpacking — most DLLs list
-a single resolved import (see `re/artifacts/pe_layout.txt`). IAT repair is a
+a single resolved import (see `re/catalog/pe/pe_layout.txt`). IAT repair is a
 prerequisite for clean disassembly (see ROADMAP phase 1).
 
 Good news for RE: the build retains **RTTI** (`.?AVInputEngine_Z@@` …) and
@@ -36,7 +36,7 @@ identifiable by the `_Z` class-name suffix convention
 
 ## 3. Module map (game vs third-party)
 
-Generated tally: `re/artifacts/module_split.txt`.
+Generated tally: `re/catalog/pe/module_split.txt`.
 
 **Game code (Ubisoft) — what we care about:**
 

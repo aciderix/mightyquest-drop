@@ -6,19 +6,20 @@ ordered to reach a *bootable, login-able* client against a community backend as
 early as possible, deferring deep engine RE until it's actually needed.
 
 ## Phase 0 — Recon (DONE)
-- [x] PE layout, sections, imports, entropy → `re/artifacts/pe_layout.txt`
+- [x] PE layout, sections, imports, entropy → `re/catalog/pe/pe_layout.txt`
 - [x] Identify engine (Zouna/Opal) and tech stack
-- [x] Separate game code from third-party libs → `re/artifacts/module_split.txt`
-- [x] Reconstruct game source tree → `re/artifacts/game_source_tree.txt`
-- [x] Enumerate server API: 30 controllers + 100+ DTOs → `re/artifacts/server_*.txt`
+- [x] Separate game code from third-party libs → `re/catalog/pe/module_split.txt`
+- [x] Reconstruct game source tree → `re/catalog/pe/game_source_tree.txt`
+- [x] Enumerate server API: 30 controllers + 100+ DTOs → `re/catalog/network/server_*.txt`
 
-## Phase 1 — Make the binary analysable
+## Phase 1 — Make the binary analysable  (in progress)
+- [x] RTTI class/vtable recovery → 119 classes, 79 vtables (`re/tools/rtti.py`).
+- [x] Ghidra 12.x headless analysis set up + running (`re/docs/02-TOOLING.md`).
+- [x] Function auto-labeling from source paths scripted (`re/ghidra/ExportAndLabel.java`)
+      → emits `re/catalog/functions.csv`.
+- [x] Unicorn micro-emulation harness ready (`re/tools/emu.py`).
 - [ ] Repair the import address table (the dump only resolved 1 import/DLL).
-- [ ] Load into a disassembler with RTTI parsing (vtable/class recovery).
-      *Tooling decision pending* — Ghidra (headless, free, scriptable) vs a
-      lighter capstone/pefile pipeline already available here.
-- [ ] Auto-rename functions from assert/source-path strings (we have full paths;
-      a string-xref pass maps many functions to their source file/line).
+      This is the remaining blocker for clean cross-references to library/OS calls.
 
 ## Phase 2 — Recover the network protocol (highest leverage)
 - [ ] Pick the **login/boot vertical slice** and reverse its serializers to get

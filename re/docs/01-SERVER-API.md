@@ -1,7 +1,7 @@
 # Server API surface (community-server target)
 
-> Source of truth: `re/artifacts/server_controllers.txt` (30 controllers) and
-> `re/artifacts/server_contracts.txt` (100+ DTOs), extracted from the client's
+> Source of truth: `re/catalog/network/server_controllers.txt` (30 controllers) and
+> `re/catalog/network/server_contracts.txt` (100+ DTOs), extracted from the client's
 > embedded `GameServerProxies` code.
 
 The client talks to the backend through generated RPC **controllers**. Each

@@ -103,13 +103,16 @@ def section_report(pe: pefile.PE) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("exe", nargs="?", default=DEFAULT_EXE)
-    ap.add_argument("--out", default="re/artifacts")
+    ap.add_argument("--out", default="re/catalog")
     ap.add_argument("--minlen", type=int, default=6)
     args = ap.parse_args()
 
     if not os.path.exists(args.exe):
         sys.exit(f"not found: {args.exe}")
-    os.makedirs(args.out, exist_ok=True)
+    pe_dir = os.path.join(args.out, "pe")
+    net_dir = os.path.join(args.out, "network")
+    for d in (pe_dir, net_dir):
+        os.makedirs(d, exist_ok=True)
 
     pe = pefile.PE(args.exe, fast_load=True)
     pe.parse_data_directories()
@@ -117,7 +120,7 @@ def main() -> int:
         data = f.read()
 
     # 1) PE layout
-    with open(os.path.join(args.out, "pe_layout.txt"), "w") as f:
+    with open(os.path.join(pe_dir, "pe_layout.txt"), "w") as f:
         f.write(section_report(pe))
 
     # 2) Collect strings once
@@ -126,7 +129,7 @@ def main() -> int:
     # 3) Reconstruct game source tree
     src_re = re.compile(r"[A-Za-z]:\\HQ\\[^\s\"<>|]*?\.(h|cpp|c|inl|hpp)", re.IGNORECASE)
     src_paths = sorted({m.group(0) for s in strings for m in src_re.finditer(s)})
-    with open(os.path.join(args.out, "game_source_tree.txt"), "w") as f:
+    with open(os.path.join(pe_dir, "game_source_tree.txt"), "w") as f:
         f.write("\n".join(src_paths) + "\n")
 
     # 4) Game vs third-party tally
@@ -140,7 +143,7 @@ def main() -> int:
     for name, pat in THIRD_PARTY.items():
         tp_counts[name] = len(re.findall(pat, blob, re.IGNORECASE))
 
-    with open(os.path.join(args.out, "module_split.txt"), "w") as f:
+    with open(os.path.join(pe_dir, "module_split.txt"), "w") as f:
         f.write("# GAME modules (Ubisoft source roots) — keep\n\n")
         for root, n in root_counts.most_common():
             f.write(f"  {n:5d}  {root:32}  {GAME_ROOTS[root]}\n")
@@ -152,14 +155,21 @@ def main() -> int:
     # 5) Server protocol contracts (.NET assembly-qualified type names)
     ctr_re = re.compile(r"[A-Za-z0-9_]+(?:\.[A-Za-z0-9_]+)+,\s*(?:Contracts\.Common|Hyperquest[A-Za-z0-9.]*)")
     contracts = sorted({m.group(0) for s in strings for m in ctr_re.finditer(s)})
-    with open(os.path.join(args.out, "server_contracts.txt"), "w") as f:
+    with open(os.path.join(net_dir, "server_contracts.txt"), "w") as f:
         f.write("\n".join(contracts) + "\n")
 
-    print(f"[+] artifacts written to {args.out}/")
-    print(f"    pe_layout.txt          PE sections / imports")
-    print(f"    game_source_tree.txt   {len(src_paths)} game source files referenced")
-    print(f"    module_split.txt       game vs third-party module tally")
-    print(f"    server_contracts.txt   {len(contracts)} server protocol DTOs")
+    # 6) Server RPC controllers (from generated proxy source paths)
+    ctl_re = re.compile(r"\\([A-Za-z0-9]+Controller)Base\.cpp", re.IGNORECASE)
+    controllers = sorted({m.group(1) for p in src_paths for m in ctl_re.finditer(p)})
+    with open(os.path.join(net_dir, "server_controllers.txt"), "w") as f:
+        f.write("\n".join(controllers) + "\n")
+
+    print(f"[+] artifacts written under {args.out}/")
+    print(f"    pe/pe_layout.txt            PE sections / imports")
+    print(f"    pe/game_source_tree.txt     {len(src_paths)} game source files referenced")
+    print(f"    pe/module_split.txt         game vs third-party module tally")
+    print(f"    network/server_contracts.txt   {len(contracts)} server protocol DTOs")
+    print(f"    network/server_controllers.txt {len(controllers)} RPC controllers")
     return 0
 
 
