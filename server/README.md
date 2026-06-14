@@ -36,8 +36,9 @@ game on a Windows box; the analysis dump in this repo does not execute.)
 - [x] Boot/login shaped responses + universal request logging.
 - [ ] Replace example payloads with real per-controller logic, guided by the
       captured request log + the typed schemas.
-- [ ] Validate response shapes offline against the client's real deserializer
-      (`re/tools/validate_codec.py`, Unicorn) before needing the live client.
+- [~] Validate response shapes offline against the client's real deserializer
+      (`re/tools/validate_codec.py`, Unicorn): integer reader proven end-to-end;
+      bool/string readers WIP (more parser-context emulation needed).
 - [ ] Account/profile persistence; then the castle/attack loop.
 
 ## Legal

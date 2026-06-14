@@ -95,17 +95,22 @@ class Emu:
         def hook_code(uc, address, size, _):
             if self.trace and self._in_text(address):
                 print(f"  exec {address:#010x}")
-            # Intercepted in-code routine: snapshot its args, then return without
-            # executing it (used to observe e.g. JSON writer primitives).
+            # Intercepted in-code routine. A string label just records args and
+            # returns 1; a callable runs custom logic (e.g. feed JSON bytes) and
+            # its return value becomes EAX. Either way we emulate a return.
             if address in self.intercepts:
                 esp = uc.reg_read(UC_X86_REG_ESP)
                 a0, a1 = struct.unpack("<II", uc.mem_read(esp + 4, 8))
-                self.trace_calls.append((
-                    self.intercepts[address],
-                    uc.reg_read(UC_X86_REG_ECX), uc.reg_read(UC_X86_REG_EDX), a0, a1))
+                ecx = uc.reg_read(UC_X86_REG_ECX)
+                h = self.intercepts[address]
+                if callable(h):
+                    eax = h(uc, ecx, a0, a1) or 0
+                else:
+                    self.trace_calls.append((h, ecx, uc.reg_read(UC_X86_REG_EDX), a0, a1))
+                    eax = 1
                 ret = struct.unpack("<I", uc.mem_read(esp, 4))[0]
                 uc.reg_write(UC_X86_REG_ESP, esp + 4)
-                uc.reg_write(UC_X86_REG_EAX, 1)
+                uc.reg_write(UC_X86_REG_EAX, eax)
                 uc.reg_write(UC_X86_REG_EIP, ret)
                 return
             # A CALL that left .text -> external/import/garbage. Emulate a near
