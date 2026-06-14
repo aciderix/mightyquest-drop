@@ -6,7 +6,12 @@
 | `analyze.py` | PE layout, module split, source-tree, server contracts/controllers | pefile |
 | `rtti.py`    | C++ class catalog + vtables from MSVC RTTI | pefile |
 | `emu.py`     | Unicorn micro-emulation harness (run one routine) | pefile, unicorn |
-| `re/ghidra/ExportAndLabel.java` | Ghidra post-script: label functions from source-path strings + export `functions.csv` | Ghidra |
+| `label_from_strings.py` | Map functions -> origin `.cpp` via source-path xref; GAME/THIRD_PARTY split | pefile + functions.csv |
+| `re/ghidra/ExportAndLabel.java` | Ghidra post-script: export `functions.csv` (57,660 fns) | Ghidra |
+
+> Note: the Ghidra script reliably exports the function list, but in-Ghidra
+> labeling from source paths was superseded by `label_from_strings.py`, which
+> does the xref in Python (more robust to Ghidra's reference/escaping quirks).
 
 Install once: `pip install pefile capstone unicorn`.
 
