@@ -1,0 +1,40 @@
+# PE section layout
+
+name            vaddr      vsize        raw  entropy  note
+.text          0x1000   0x9ea14f   0x9ea200    6.618  code
+.rdata       0x9ec000   0x1cf404   0x1cf600    5.893  read-only data / RTTI / vtables
+.data        0xbbc000   0x15b6c4   0x15b800    1.875  writable data
+.tls         0xd18000        0x9      0x200    0.000  thread-local storage
+.UBX0        0xd19000   0x4db382   0x4db400    7.050  Ubisoft protector artifact (high entropy)
+.UBX1       0x11f5000   0x7a2c8c   0x7a2e00    7.985  Ubisoft protector / rebuilt import table (encrypted)
+.reloc      0x1998000       0xb4      0x200    2.112  base relocations
+.rsrc       0x1999000    0x22e4d    0x23000    5.696  resources (icons/version/manifest)
+
+# Imported DLLs
+
+  steam_api.dll
+  KERNEL32.dll
+  USER32.dll
+  GDI32.dll
+  COMDLG32.dll
+  ADVAPI32.dll
+  SHELL32.dll
+  ole32.dll
+  OLEAUT32.dll
+  d3dx9_43.dll
+  WINHTTP.dll
+  d3d9.dll
+  DSOUND.dll
+  libcef.dll
+  bink2w32.dll
+  WS2_32.dll
+  MSVCR110.dll
+  XINPUT9_1_0.dll
+  DINPUT8.dll
+  VERSION.dll
+  WINMM.dll
+  KERNEL32.dll
+  KERNEL32.dll
+
+EntryPoint RVA: 0x1d17
+ImageBase:      0x400000
