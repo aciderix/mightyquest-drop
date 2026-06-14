@@ -1,0 +1,11 @@
+Opal\Zouna\LibPC\Includes\BitmapPc_Z.h
+Opal\Zouna\LibPC\Includes\HttpProxyManagerPC_Z.h
+Opal\Zouna\LibPC\Includes\MoviePlayerPC_Z.h
+Opal\Zouna\LibPC\Includes\NetworkManagerPC_Z.h
+Opal\Zouna\LibPC\Includes\ParticlesPC_Z.h
+Opal\Zouna\LibPC\Includes\RuntimeConfigurationPC_Z.h
+Opal\Zouna\LibPC\Includes\ShaderPc_Z.h
+Opal\Zouna\LibPC\Includes\SkinPc_Z.h
+Opal\Zouna\LibPC\Includes\TexturePc_Z.h
+opal\zouna\libpc\includes\MeshPc_Z.h
+opal\zouna\libpc\includes\hw\KeyboardPC_Z.h
