@@ -1,0 +1,3 @@
+requests.log
+__pycache__/
+*.pyc
