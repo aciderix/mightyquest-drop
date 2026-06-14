@@ -22,12 +22,14 @@ early as possible, deferring deep engine RE until it's actually needed.
       This is the remaining blocker for clean cross-references to library/OS calls.
 
 ## Phase 2 — Recover the network protocol (highest leverage)
-- [ ] Pick the **login/boot vertical slice** and reverse its serializers to get
-      exact JSON shapes (`AccountController`, `BootConfig`,
-      `GameServerConnectionConfig`, `EnvironmentManager.ServerInfo`).
-- [ ] Recover endpoint URLs/verbs from the `Argo`/curl request builders.
-- [ ] Document the wire format in `re/docs/02-WIRE-FORMAT.md` (one file per
-      controller as they're reversed).
+- [x] Login/boot vertical slice: recovered JSON schemas for `LoginResult`,
+      `GameServerConnectionConfig`, `AccountLite` and the JSON writer primitives,
+      verified by Unicorn emulation → `re/docs/04-WIRE-FORMAT-LOGIN.md`.
+- [ ] Extract the remaining login serializers (SessionTracking, ProxyLoadLoginPage,
+      AccountInformationBase) the same way.
+- [ ] Recover endpoint URLs/verbs from the `Argo`/curl request builders + the
+      controller dispatch near `EnvironmentManager.ServerInfo`.
+- [ ] Continue per-controller in `re/docs/04+` as each is reversed.
 
 ## Phase 3 — Minimal community server
 - [ ] Implement a stub backend (any language) answering boot → login → profile.

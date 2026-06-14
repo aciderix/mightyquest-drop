@@ -56,6 +56,8 @@ class Emu:
         self.default_stub_ret = default_stub_ret
         self.trace = trace
         self.stub_rets = {}     # va -> forced EAX for specific external calls
+        self.intercepts = {}    # va -> label: record args + emulate a return
+        self.trace_calls = []   # recorded (label, ecx, edx, arg0, arg1)
         self.mapped = []        # (start, end) of mapped exec sections
         self.text_range = None
         self.uc = Uc(UC_ARCH_X86, UC_MODE_32)
@@ -93,14 +95,27 @@ class Emu:
         def hook_code(uc, address, size, _):
             if self.trace and self._in_text(address):
                 print(f"  exec {address:#010x}")
+            # Intercepted in-code routine: snapshot its args, then return without
+            # executing it (used to observe e.g. JSON writer primitives).
+            if address in self.intercepts:
+                esp = uc.reg_read(UC_X86_REG_ESP)
+                a0, a1 = struct.unpack("<II", uc.mem_read(esp + 4, 8))
+                self.trace_calls.append((
+                    self.intercepts[address],
+                    uc.reg_read(UC_X86_REG_ECX), uc.reg_read(UC_X86_REG_EDX), a0, a1))
+                ret = struct.unpack("<I", uc.mem_read(esp, 4))[0]
+                uc.reg_write(UC_X86_REG_ESP, esp + 4)
+                uc.reg_write(UC_X86_REG_EAX, 1)
+                uc.reg_write(UC_X86_REG_EIP, ret)
+                return
             # A CALL that left .text -> external/import/garbage. Emulate a near
             # RET: pop return address, force EAX, resume at caller.
             if not self._in_text(address):
-                esp = uc.reg_read(UC_REG_ESP)
+                esp = uc.reg_read(UC_X86_REG_ESP)
                 ret = struct.unpack("<I", uc.mem_read(esp, 4))[0]
-                uc.reg_write(UC_REG_ESP, esp + 4)
-                uc.reg_write(UC_REG_EAX, self.stub_rets.get(address, self.default_stub_ret))
-                uc.reg_write(UC_REG_EIP, ret)
+                uc.reg_write(UC_X86_REG_ESP, esp + 4)
+                uc.reg_write(UC_X86_REG_EAX, self.stub_rets.get(address, self.default_stub_ret))
+                uc.reg_write(UC_X86_REG_EIP, ret)
         self.uc.hook_add(UC_HOOK_CODE, hook_code)
 
         def hook_unmapped(uc, access, address, size, value, _):
@@ -125,10 +140,10 @@ class Emu:
         for a in reversed(args):
             esp -= 4; self.uc.mem_write(esp, struct.pack("<I", a & 0xFFFFFFFF))
         esp -= 4; self.uc.mem_write(esp, struct.pack("<I", SENTINEL))
-        self.uc.reg_write(UC_REG_ESP, esp)
-        self.uc.reg_write(UC_REG_EBP, esp)
+        self.uc.reg_write(UC_X86_REG_ESP, esp)
+        self.uc.reg_write(UC_X86_REG_EBP, esp)
         if ecx is not None:
-            self.uc.reg_write(UC_REG_ECX, ecx)
+            self.uc.reg_write(UC_X86_REG_ECX, ecx)
         # map a 1-page landing for the sentinel so the fetch hook can stop us
         try:
             self.uc.mem_map(_align_down(SENTINEL), PAGE)
@@ -138,10 +153,10 @@ class Emu:
             self.uc.emu_start(func_va, SENTINEL, timeout=timeout_s * 1_000_000,
                               count=max_insn)
         except UcError as e:
-            eip = self.uc.reg_read(UC_REG_EIP)
+            eip = self.uc.reg_read(UC_X86_REG_EIP)
             if eip != SENTINEL:
                 raise RuntimeError(f"emu fault at {eip:#x}: {e}")
-        return self.uc.reg_read(UC_REG_EAX)
+        return self.uc.reg_read(UC_X86_REG_EAX)
 
 
 def _self_test(exe):
