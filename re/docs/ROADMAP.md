@@ -29,6 +29,9 @@ early as possible, deferring deep engine RE until it's actually needed.
       AccountInformationBase) the same way.
 - [x] Endpoint/routing model recovered: RPC-over-HTTP-POST-JSON via `Argo`
       (vtable dispatch, not REST) + boot/connection sequence -> `06-ENDPOINTS.md`.
+- [x] **Exact routes confirmed from real traffic**: `/<Service>Service.hqs/<Method>`
+      (GET=read, POST=command); SendCommands command-bus -> `08-REAL-TRAFFIC.md`,
+      `re/catalog/network/endpoints_observed.txt`.
 - [ ] Continue per-controller in `re/docs/04+` as each is reversed.
 
 ## Phase 3 — Minimal community server

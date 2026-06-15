@@ -1,0 +1,25 @@
+# Real server endpoints — observed in live client↔server traffic (mqel_network logs,
+# captured from a community server attempt). This is the actual Argo routing that
+# static analysis of the client could not fully resolve.
+#
+# Pattern:  <VERB> /<Service>Service.hqs/<Method>
+#   GET  = reads (often empty request body)
+#   POST = commands / mutations (JSON body)
+#
+# verb  route
+POST /ServerCommandService.hqs/SendCommands
+POST /AttackService.hqs/StartAttack
+POST /AttackService.hqs/EndAttack
+GET /AttackSelectionService.hqs/GetCastleInfo
+GET /AttackSelectionService.hqs/GetAttackSelectionList
+GET /AccountInformationService.hqs/GetAccountInformation
+GET /CastleForSaleService.hqs/GetCastlesForSale
+POST /SeasonalCompetitionService.hqs/CheckSeasonalCompetitionRewards
+POST /HeroService.hqs/ChooseFirstHero
+POST /AccountService.hqs/ChooseDisplayName
+GET /CastleForSaleService.hqs/GetCastleForSaleBuildInfo
+
+# ServerCommandService.hqs/SendCommands is a COMMAND BUS: the client batches
+# commands (TrackingCommand, ClientIdleCommand, Buy*Command, HeroEquip*Command,
+# InventoryMoveItemCommand, LogoutCommand, ...) in one POST; the server replies
+# with {} or a list of *Notification objects (WalletUpdatedNotification, etc.).
