@@ -35,6 +35,35 @@ including game-tuning settings. Examples:
 - **Design data**: `AttackSettings`, `AttackerRewardSettings`, `VisualBuildSettings`,
   etc. — the actual gameplay tuning the server shipped to the client.
 
+## Precise wire shapes (what makes a message well-formed)
+Every scalar serialize/deserialize **primitive** was decompiled and mapped to an
+exact **wire shape** — the only thing that decides if a field is well-formed on
+the wire:
+
+| shape | on the wire | covers |
+|-------|-------------|--------|
+| `num` | bare number `42` | int/uint/byte/short/long/ulong/double/duration/int-enum (buffer widths 4/11/12/22/20 → byte/uint/int/int64/double) |
+| `str` | quoted `"..."` | string, **datetime** (ISO-8601), **enum** (quoted name), guid |
+| `bool`| `true`/`false` | bool |
+| `arr` | `[ ... ]` | array readers (a `]` branch) + plural field names of a known contract |
+| `obj` | `{ ... }` | nested contract |
+
+Two corrections that matter for a community server (each is a classic
+silent-break source): **enums are quoted strings, not numbers** (the writer/reader
+emit/parse the enum name — `009aaf00`/`009a8670`), and **datetimes are quoted
+ISO strings** (writer `009aae70`, reader `009a8f90`). Both were previously lumped
+into "number". Arrays (`ServerInfos: ServerInfo[]`) are now distinguished from
+single objects.
+
+**Authority:** the *serialize* side is the reliable source of a field's shape
+(its object/array writers are unambiguous), so the generator prefers it. The
+*deserialize* walker is noisier — its dispatch loop reads the incoming JSON *key*
+via a string primitive, which a static walker can misattribute as a field value
+(verified on `ShopFilterValueId`: two ints, mis-seen as a string). So the
+`validate_consistency.py` "type" diffs are mostly deserialize-walker artifacts,
+not real protocol conflicts; the dynamic round-trip (`autovalidate.py`, which
+*runs* the real code) is the ground truth.
+
 ## Typed schemas (`extract_typed_schemas.py`)
 A second automatic pass adds **field types** by walking each contract's
 *serialize* method and pairing every `writeKey("Field")` with the value-writer

@@ -31,33 +31,25 @@ OUT = "re/catalog/network/consistency_report.txt"
 WRITE_KEY = 0x009ab550
 UNKNOWN_FIELD = 0x009a9ce0
 
-# writer VA -> type, reader VA -> type (from 05-SCHEMA-CATALOG.md), normalised to
-# comparable categories so writeInt vs readInt etc. line up.
-WRITERS = {0x009aad80: "int", 0x009ab060: "string", 0x009ab3f0: "bool",
-           0x009aae20: "float", 0x009aae70: "datetime"}
-READERS = {0x009a8d30: "int", 0x009a9450: "string", 0x009a8c90: "bool",
-           0x009a9170: "duration"}
-PRIM_W = (0x009aa000, 0x009ac000)
-PRIM_R = (0x009a8000, 0x009aa000)
-NUM = {"int", "number", "float", "duration"}      # treat numeric widths as one
-
-
-def category(t):
-    return "num" if t in NUM else t
+# precise per-primitive wire shapes (num/str/bool/arr/obj), shared with the
+# schema extractor so write-side and read-side line up.
+import importlib.util as _ilu
+_spec = _ilu.spec_from_file_location("ets", "re/tools/extract_typed_schemas.py")
+_ets = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_ets)
+writer_shape, reader_shape = _ets.writer_shape, _ets.reader_shape
 
 
 def compatible(wt, rt):
-    """do the write-side and read-side types agree?
+    """do the write-side and read-side wire shapes agree?
 
-    Scalar types (string/bool/datetime) must match exactly. The reader side
-    under-detects nested objects (some object readers fall in the numeric band),
-    so object<->num is treated as compatible rather than a false conflict."""
-    a, b = category(wt), category(rt)
+    Exact match passes. Complex shapes (num/obj/arr) are mutually tolerant because
+    the reader side under-detects nested objects/arrays (their readers can fall in
+    the numeric band) — not a real protocol conflict. Genuine shape conflicts
+    (e.g. str vs bool) are still reported."""
+    a, b = wt, rt
     if a == b:
         return True
-    # the reader side under-detects nested objects and datetimes (their readers
-    # fall in the numeric band), so these pair with num rather than conflicting.
-    return {a, b} <= {"num", "object"} or {a, b} <= {"num", "datetime"}
+    return {a, b} <= {"num", "obj", "arr"}
 
 
 def main():
@@ -129,13 +121,13 @@ def main():
                         if t == WRITE_KEY:
                             is_ser = True; pend = last_id; awaiting = True; continue
                         if awaiting and pend:
-                            typ = WRITERS.get(t, "number" if PRIM_W[0] <= t < PRIM_W[1] else "object")
+                            typ = writer_shape(t)
                             fields[pend] = typ; awaiting = False; pend = None
                     else:
                         if t == UNKNOWN_FIELD:
                             is_deser = True; last_id = None; continue
                         if last_id is not None and t != maddr:
-                            typ = READERS.get(t, "number" if PRIM_R[0] <= t < PRIM_R[1] else "object")
+                            typ = reader_shape(t)
                             fields[last_id] = typ; last_id = None
                 else:
                     if is_writer: awaiting = False

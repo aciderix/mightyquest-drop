@@ -1,5 +1,6 @@
 // Generated from the reversed schema catalog (re/tools/gen_types.py).
 // direction: request = client->server, response = server->client.
+// wire shapes: num->number, str->string, bool->boolean, arr->T[], obj->T.
 
 /** both */
 export interface AbilityFamily {
@@ -269,13 +270,13 @@ export interface AccountInformation {
   CompletedAchievements: number;
   CountryCode: string;
   DefendLog: DefendLog;
-  Expirables: Expirable;
+  Expirables: Expirable[];
   Guild: Guild;
-  GuildInvitations: GuildInvitation;
+  GuildInvitations: GuildInvitation[];
   IsCastleAttackable: boolean;
   LastViewedFreeTrialInfoDate: string;
   News: News;
-  ShopSkuModifiers: ShopSkuModifier;
+  ShopSkuModifiers: ShopSkuModifier[];
   TargetedAttackAvailableCount: number;
 }
 
@@ -286,13 +287,13 @@ export interface AccountInformationBase {
   CompletedAchievements: number;
   CountryCode: string;
   DefendLog: DefendLog;
-  Expirables: Expirable;
+  Expirables: Expirable[];
   Guild: Guild;
-  GuildInvitations: GuildInvitation;
+  GuildInvitations: GuildInvitation[];
   IsCastleAttackable: boolean;
   LastViewedFreeTrialInfoDate: string;
   News: News;
-  ShopSkuModifiers: ShopSkuModifier;
+  ShopSkuModifiers: ShopSkuModifier[];
   TargetedAttackAvailableCount: number;
 }
 
@@ -300,7 +301,7 @@ export interface AccountInformationBase {
 export interface AccountInventory {
   CastleRenovationItems: unknown;
   ForgedItem: unknown;
-  HeroItems: HeroItem;
+  HeroItems: HeroItem[];
   InventoryTabCount: number;
   PendingSharedItems: unknown;
 }
@@ -353,7 +354,7 @@ export interface AccountPremiumCash {
 export interface AccountPublicProfile {
   AccountStats: AccountStats;
   AccountSummary: AccountSummary;
-  Achievements: Achievement;
+  Achievements: Achievement[];
   CastleLevel: number;
   CastleStats: CastleStats;
   GamerScore: number;
@@ -485,7 +486,7 @@ export interface AchievementCompletedNotification {
 
 /** both */
 export interface AchievementContainer {
-  Achievements: Achievement;
+  Achievements: Achievement[];
   CompletedCount: number;
   TotalCount: number;
 }
@@ -729,7 +730,7 @@ export interface AlertedCountChangedEventArgs {
 /** both */
 export interface AllLifeShieldsUpdatedEventArgs {
   HasLastLifeShieldDurationAlmostEnded: boolean;
-  LifeShieldUpdates: LifeShieldUpdate;
+  LifeShieldUpdates: LifeShieldUpdate[];
 }
 
 /** both */
@@ -878,23 +879,23 @@ export interface AssignmentsCompletedAssignmentConditionSpec {
 /** response */
 export interface AttackAdvisorSettings {
   ActiveCastlesCount: number;
-  ActivityBuckets: number;
-  ActivityBucketsAdvisorLifetime: string;
-  AttackRegions: number;
+  ActivityBuckets: ActivityBucket[];
+  ActivityBucketsAdvisorLifetime: number;
+  AttackRegions: AttackRegion[];
   BrandedCastleDisplayedPerRegion: number;
   CastleCountAfterLessAttackedSelection: number;
   CastleCountAfterRetrieval: number;
   CastleCountAfterTrophyGainFiltering: number;
-  LastConnectionMaxThreshold: string;
-  LastConnectionMinThreshold: string;
+  LastConnectionMaxThreshold: number;
+  LastConnectionMinThreshold: number;
   LessAttackedCastlesCount: number;
   MaxSuggestionCountByLevel: number;
   MaxValidableCastleCountByLevel: number;
   MinAttackablePvpCastleLevel: number;
   MinAttackCountForBestHeroDisplay: number;
   SampleGroupMachineLearning: number;
-  TrophyGainBuckets: number;
-  ValidableCastleTimeToLive: string;
+  TrophyGainBuckets: TrophyGainBucket[];
+  ValidableCastleTimeToLive: number;
 }
 
 /** unknown */
@@ -942,7 +943,7 @@ export interface AttackImpactSoundLevelsProfile {
 /** both */
 export interface AttackImpactSoundSettings {
   AttackImpactSoundLevelsPerArmorType: number;
-  AttackImpactSoundLevelsProfiles: AttackImpactSoundLevelsProfile;
+  AttackImpactSoundLevelsProfiles: AttackImpactSoundLevelsProfile[];
   AttackImpactSoundsById: unknown;
   CriticalHitImpactSound: unknown;
   ReflectedDamageImpactSound: unknown;
@@ -976,7 +977,7 @@ export interface AttackInfo {
   IsTutorial: boolean;
   Level: number;
   LoseTrophyCooldownTimer: string;
-  StealableMines: StealableMine;
+  StealableMines: StealableMine[];
   TargetedAttackAvailableCount: number;
   TrapLoot: unknown;
   TreasureRoomGoldRatio: number;
@@ -1071,7 +1072,7 @@ export interface AttackRegionsChangedEventArgs {
 
 /** both */
 export interface AttackRegionsViewModel {
-  AttackRegions: AttackRegion;
+  AttackRegions: AttackRegion[];
 }
 
 /** both */
@@ -1106,7 +1107,7 @@ export interface AttackReportPredefinedComment {
 
 /** both */
 export interface AttackSelectionByLevelResult {
-  Castles: Castle;
+  Castles: Castle[];
   Level: number;
 }
 
@@ -1142,7 +1143,7 @@ export interface AttackSelectionResult {
 export interface AttackSelectionResultModel {
   AttackRegion: AttackRegion;
   Result: unknown;
-  SpecialPackModels: SpecialPackModel;
+  SpecialPackModels: SpecialPackModel[];
 }
 
 /** response */
@@ -1150,11 +1151,11 @@ export interface AttackSettings {
   ActionLineCheckHeight: number;
   AggroConeAngle: number;
   AggroConeRadius: number;
-  AggroPropagationOffset: number;
+  AggroPropagationOffset: unknown;
   AggroPropagationRange: number;
   AggroRange: number;
   AttackerDeathPopupDelay: number;
-  AttackSpeedTable: number;
+  AttackSpeedTable: unknown[];
   AttackTimerStartAnimationTimeExpired: number;
   BasicAttackBuffId: number;
   BigFlinchMinDamageRatio: number;
@@ -1166,25 +1167,25 @@ export interface AttackSettings {
   CreatureBasicAttackBuffId: number;
   CreatureCatchUpBuffId: number;
   CreatureRoomBuildablesCreationInterval: number;
-  CriticalHitCameraShakeAnimation: number;
+  CriticalHitCameraShakeAnimation: string;
   DefaultAttackRange: number;
   DefaultCreatureCreationPriorityCoefficient: number;
   DefaultFacingDamping: number;
   DefaultRoomBuildableEntitiesCreationDistance: number;
-  DefaultSpawnedEntityAggroTarget: number;
+  DefaultSpawnedEntityAggroTarget: unknown;
   DoorTriggerCollisionDistance: number;
   EscapeDelayToMarkAsDefeat: number;
   FarmGruntThreshold: number;
   FarmMpsThreshold: number;
   FarmTrapIds: number;
-  FightDynamics: number;
-  GainTrophyCooldownTimerDuration: string;
+  FightDynamics: FightDynamics;
+  GainTrophyCooldownTimerDuration: number;
   HealthOrbBuffId: number;
   HeroManaDescriptionOasisIds: unknown;
   HeroRegenerationDuration: number;
-  HeroTrapXpRewardShape: number;
+  HeroTrapXpRewardShape: unknown;
   InputBufferingDuration: number;
-  InvalidActionsFeedbacks: number;
+  InvalidActionsFeedbacks: unknown;
   LeashBehaviorBuffSpecContainerIds: number;
   LifeShieldDurationRatioEndAnimation: number;
   LootAnimationDuration: number;
@@ -1201,18 +1202,18 @@ export interface AttackSettings {
   LootForcedAttractionDelay: number;
   LootForcedAttractionVelocity: number;
   LootRadius: number;
-  LoseTrophyCooldownTimerDuration: string;
-  LossPonderationTable: number;
+  LoseTrophyCooldownTimerDuration: number;
+  LossPonderationTable: unknown[];
   MaxAggroPropagationDistanceOfPathFindResult: number;
   MaxCpCreatureCreation: number;
-  MaximumAllowedAttackTimeDiscrepancy: string;
+  MaximumAllowedAttackTimeDiscrepancy: number;
   MaximumSpawnDelay: number;
   MaxLevelDifferenceForBossAttack: number;
   MaxMpsStored: number;
   MinCastleLevelForPVPAttack: number;
-  MineDestroyedTimeBonus: string;
+  MineDestroyedTimeBonus: number;
   MineEmptyAmountDrop: number;
-  MineLossPonderationTable: number;
+  MineLossPonderationTable: unknown[];
   MinePeriodStealableAmountInSeconds: number;
   MineShieldedAmoutDrop: number;
   MinimumCooldownAfterReduction: number;
@@ -1222,7 +1223,7 @@ export interface AttackSettings {
   MinimumMoveDistanceHysteresisModifier: number;
   MinimumSpawnDelay: number;
   MoveAndCastDetectionAngle: number;
-  MovementSpeedTable: number;
+  MovementSpeedTable: unknown[];
   MultiKillTimeInterval: number;
   NavigationCollisionRaycastLength: number;
   NavigationCollisionTurnDuration: number;
@@ -1232,15 +1233,15 @@ export interface AttackSettings {
   PetLootActive: boolean;
   PlayerDistanceToDoTasks: number;
   PositionRestrictionDistanceFlexibilities: unknown;
-  PotionUsageRestrictions: number;
+  PotionUsageRestrictions: PotionUsageRestriction[];
   PremiumCashMineLossAmount: number;
-  PremiumCashMineLossPonderationTable: number;
+  PremiumCashMineLossPonderationTable: unknown[];
   PresetTargetDefinitions: unknown;
   QueueCoolingDownAbilities: boolean;
   RandomizedLifeValueRandomCallsCount: number;
   RandomizedLifeValueRangeModifier: number;
   RegenerationBehaviorBuffSpecContainerId: number;
-  ResistanceSettings: number;
+  ResistanceSettings: ResistanceSettings;
   ResurrectBuffId: number;
   RoomBuildableEntitiesCreationDistanceByType: unknown;
   SelectNextAttackedUnitDelay: number;
@@ -1253,7 +1254,7 @@ export interface AttackSettings {
   StorageChestCageRadius: number;
   SubstituteActionMoveToSpeedMultiplier: number;
   TargetedAttackMaxCount: number;
-  TargetedAttackReloadDuration: string;
+  TargetedAttackReloadDuration: number;
   TargetEntityHealthBarDelayInSeconds: number;
   TimerEndingCountdownDurationInSeconds: number;
   TreasureDoorEffectSpecContainerId: number;
@@ -1296,17 +1297,17 @@ export interface AttackerAvatarUpdatedNotification {
 /** response */
 export interface AttackerRewardSettings {
   BossLootRatio: number;
-  CrownsDiminishingReturns: number;
-  DeathResetTimerDuration: string;
-  HealthOrbFragmentsModifierTable: number;
+  CrownsDiminishingReturns: CrownsDiminishingReturn[];
+  DeathResetTimerDuration: number;
+  HealthOrbFragmentsModifierTable: unknown;
   LootTransfereCostsPerLevel: number;
   MineDestroyedVictoryCondition: number;
   RareDefenseIngredientBonusFactor: number;
   RareDefenseIngredientBonusMinimumRatio: number;
-  RareDefenseIngredientColorList: number;
+  RareDefenseIngredientColorList: unknown[];
   SmartLootWeeklyContentStopLimit: number;
   TreasureRoomGoldDropValueModifier: number;
-  TreasureRoomGoldPiles: number;
+  TreasureRoomGoldPiles: unknown[];
   TreasureRoomLifeForceDropValueModifier: number;
   TreasureRoomMaxGoldRatio: number;
   TreasureRoomMaxLifeForceRatio: number;
@@ -1565,7 +1566,7 @@ export interface AvatarUpdatedNotification {
 
 /** both */
 export interface AvatarsModel {
-  Avatars: Avatar;
+  Avatars: Avatar[];
   CurrentAvatar: unknown;
 }
 
@@ -1644,7 +1645,7 @@ export interface BattleLogEntry {
   IsShielded: boolean;
   IsTargetedAttack: boolean;
   Message: Message;
-  PillagedMines: PillagedMine;
+  PillagedMines: PillagedMine[];
   PotionUsed: number;
   ResurrectionCount: number;
   RevengeStatus: number;
@@ -1799,7 +1800,7 @@ export interface BoostInfoModel {
   CanAffordCurrency: boolean;
   CanAffordMaterials: boolean;
   Cost: unknown;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   CurrentBoostedCreatureCount: number;
   IsBoostable: boolean;
   IsBoostPending: boolean;
@@ -2040,7 +2041,7 @@ export interface BuildEntitiesAchievement {
 
 /** both */
 export interface BuildEntityEventArgs {
-  ContextualActionDatas: ContextualActionData;
+  ContextualActionDatas: ContextualActionData[];
   GameEntityId: number;
   IsNewEntity: boolean;
   SpecContainerId: number;
@@ -2109,9 +2110,9 @@ export interface BuildInfo {
   DecorationNextIndex: number;
   Draft: unknown;
   HeroCorpses: unknown;
-  InventoryDecorations: InventoryDecoration;
-  InventoryDefenseIngredientBoosts: InventoryDefenseIngredientBoost;
-  InventoryRooms: InventoryRoom;
+  InventoryDecorations: InventoryDecoration[];
+  InventoryDefenseIngredientBoosts: InventoryDefenseIngredientBoost[];
+  InventoryRooms: InventoryRoom[];
   InventoryThemes: number;
   IsDraftPublished: boolean;
   IsRollbackAvailable: boolean;
@@ -2350,7 +2351,7 @@ export interface BuildingNavBarPanelNavigationModel {
 
 /** response */
 export interface BuildingNavBarSettings {
-  Links: number;
+  Links: unknown[];
 }
 
 /** both */
@@ -2564,12 +2565,12 @@ export interface BuildingUpgradeStartedNotification {
 
 /** both */
 export interface BuildingUpgradeTimerPositionRefreshedEventArgs {
-  BuildingUpgradeModels: BuildingUpgradeModel;
+  BuildingUpgradeModels: BuildingUpgradeModel[];
 }
 
 /** both */
 export interface BuildingUpgradeViewModel {
-  BuildingUpgradeModels: BuildingUpgradeModel;
+  BuildingUpgradeModels: BuildingUpgradeModel[];
 }
 
 /** unknown */
@@ -2870,7 +2871,7 @@ export interface CastleExpansion {
 
 /** both */
 export interface CastleExpansionPattern {
-  CastleExpansions: CastleExpansion;
+  CastleExpansions: CastleExpansion[];
   EntranceX: number;
   EntranceY: number;
   ExitX: number;
@@ -2945,7 +2946,7 @@ export interface CastleGroundGenerationRoomSettings {
 /** both */
 export interface CastleGroundGenerationSettings {
   AuthorizeHolesInDiagonals: boolean;
-  CastleExpansionPatterns: CastleExpansionPattern;
+  CastleExpansionPatterns: CastleExpansionPattern[];
   DefaultGrounds: number;
   EntranceRoomSettings: unknown;
   ExitRoomSettings: unknown;
@@ -3174,7 +3175,7 @@ export interface CastleItemValue {
 
 /** response */
 export interface CastleItemValueSettings {
-  Items: number;
+  Items: unknown[];
 }
 
 /** both */
@@ -3428,7 +3429,7 @@ export interface CastleRenovationMaterialsReadyForCollectEventArgs {
 
 /** request */
 export interface CastleRenovationPanelNavigationModel {
-  CastleRenovationLevelModels: CastleRenovationLevelModel;
+  CastleRenovationLevelModels: CastleRenovationLevelModel[];
   CurrentRenovationLevel: number;
   IsOpalPanel: boolean;
   PanelName: number;
@@ -3485,7 +3486,7 @@ export interface CastleSelectionPopulatedEventArgs {
   AttackRegion: AttackRegion;
   Result: unknown;
   ResultFromCache: boolean;
-  SpecialPackModels: SpecialPackModel;
+  SpecialPackModels: SpecialPackModel[];
 }
 
 /** unknown */
@@ -3755,9 +3756,9 @@ export interface ChatRoom {
 /** both */
 export interface ChatRoomConfigModel {
   ChatKeepAliveDelay: number;
-  ChatLanguages: ChatLanguage;
+  ChatLanguages: ChatLanguage[];
   ChatReconnectionDelay: number;
-  ChatRoomInfos: ChatRoomInfo;
+  ChatRoomInfos: ChatRoomInfo[];
   MaxMessagesCount: number;
   RoomTypes: unknown;
   SelectedLanguageCode: string;
@@ -3951,7 +3952,7 @@ export interface CommunityEventAccountTimeShiftChangedNotification {
 
 /** response */
 export interface CommunityEventBoostSettings {
-  BoostCommunityEvents: number;
+  BoostCommunityEvents: BoostCommunityEvent[];
 }
 
 /** unknown */
@@ -3982,7 +3983,7 @@ export interface CommunityEventLootSettings {
 
 /** response */
 export interface CommunityEventSkuSettings {
-  SkuCommunityEvents: number;
+  SkuCommunityEvents: SkuCommunityEvent[];
 }
 
 /** both */
@@ -4443,7 +4444,7 @@ export interface CraftingMaterialCollectingModel {
 /** request */
 export interface CraftingMaterialConsumptionModel {
   Cost: unknown;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
 }
 
 /** both */
@@ -4455,13 +4456,13 @@ export interface CraftingMaterialInformation {
 
 /** both */
 export interface CraftingMaterialMineHarvestCompletedEventArgs {
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
 }
 
 /** both */
 export interface CraftingMaterialMineInformationModel {
   CraftingMaterialMineState: number;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   RemainingTime: number;
 }
 
@@ -4534,7 +4535,7 @@ export interface CraftingMaterialsPacksSettings {
 
 /** request */
 export interface CraftingMaterialsRewardItem {
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
 }
 
 /** request */
@@ -4560,7 +4561,7 @@ export interface CreatureBoostPanelNavigationModel {
   BoostName: string;
   CanAfford: boolean;
   Cost: unknown;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   CreatureName: string;
   CurrentBoostedCreatureCount: number;
   IsBoostable: boolean;
@@ -4575,9 +4576,9 @@ export interface CreatureBoostSpec {
 
 /** response */
 export interface CreatureRankColorTableEntry {
-  CreatureRank: number;
-  DarkColor: number;
-  LightColor: number;
+  CreatureRank: string;
+  DarkColor: string;
+  LightColor: string;
 }
 
 /** unknown */
@@ -4906,13 +4907,13 @@ export interface CustomUiFormulaSpec {
 
 /** response */
 export interface DamageFloatingTextOverride {
-  FloatingTextByMinDamageHealthRatios: number;
+  FloatingTextByMinDamageHealthRatios: unknown[];
 }
 
 /** response */
 export interface DamageFloatingTextOverrides {
-  AttackerDamageFloatingTextOverride: number;
-  DefenderDamageFloatingTextOverride: number;
+  AttackerDamageFloatingTextOverride: unknown;
+  DefenderDamageFloatingTextOverride: unknown;
 }
 
 /** unknown */
@@ -5105,7 +5106,7 @@ export interface DefendLogEntry {
   IsTargetedAttack: boolean;
   Level: number;
   Message: Message;
-  PillagedMines: PillagedMine;
+  PillagedMines: PillagedMine[];
   PotionUsed: number;
   ResurrectionCount: number;
   RevengeEnabled: boolean;
@@ -5235,7 +5236,7 @@ export interface DefenseIngredientLoot {
   Gold: number;
   HealthOrbFragments: number;
   Id: number;
-  InventoryItems: InventoryItem;
+  InventoryItems: InventoryItem[];
   LifeForce: number;
   PremiumCash: number;
   Xp: number;
@@ -5263,7 +5264,7 @@ export interface DefenseIngredientSpecializedEventArgs {
 
 /** both */
 export interface DefenseIngredientStampingModel {
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   CurrencyAmount: CurrencyAmount;
   Id: number;
   OasisNameId: number;
@@ -5811,7 +5812,7 @@ export interface EngineTracking {
 export interface EntitiesUIContainerParameter {
   IconOffset3D: unknown;
   SpecificZoomSettings: unknown;
-  UIContainer: number;
+  UIContainer: string;
   UseHeadNode: boolean;
   ZBias: number;
 }
@@ -5868,23 +5869,23 @@ export interface EntitySpawnOperationSpec {
 
 /** response */
 export interface EnvironmentSettings {
-  EastColor: number;
-  EnvironmentName: number;
+  EastColor: string;
+  EnvironmentName: string;
   FogCenterDensity: number;
-  FogColor: number;
+  FogColor: string;
   FogIntensity: number;
   FogRampTexture: string;
   FogThreshold: number;
-  GroundColor: number;
+  GroundColor: string;
   LightingMaterialFileName: string;
-  NorthColor: number;
+  NorthColor: string;
   SkyBoxFileName: string;
-  SkyColor: number;
-  SouthColor: number;
+  SkyColor: string;
+  SouthColor: string;
   SunMaterialFileName: string;
   SunPitch: number;
   SunYaw: number;
-  WestColor: number;
+  WestColor: string;
 }
 
 /** unknown */
@@ -5894,7 +5895,7 @@ export interface EnvironmentSettingsCollection {
 
 /** response */
 export interface EnvironmentSettingsGroup {
-  EnvironmentSettingsList: number;
+  EnvironmentSettingsList: unknown[];
 }
 
 /** both */
@@ -5926,12 +5927,12 @@ export interface EquipmentCategorySettings {
 /** response */
 export interface EquipmentGenerationSettings {
   GearScoreMultiplier: number;
-  MagicalProperties: number;
-  MagicalPropertiesLevelLimitations: number;
+  MagicalProperties: unknown[];
+  MagicalPropertiesLevelLimitations: unknown[];
   MaxResistance: number;
-  MinimumConditionPowerUpUnlockList: number;
+  MinimumConditionPowerUpUnlockList: unknown[];
   NamedItemPrimaryStatsValue: number;
-  PowerUpLevelLimitations: number;
+  PowerUpLevelLimitations: PowerUpLevelLimitation[];
   PrimaryStatLevelAdvantage: unknown;
   PrimaryStatLevelDisadvantage: unknown;
   ResistanceRandomMinRange: number;
@@ -6060,7 +6061,7 @@ export interface ErrorResultModel {
 
 /** response */
 export interface ErrorSettings {
-  Errors: number;
+  Errors: unknown[];
   ForumLinkMainOasisId: number;
   ForumLinkSecondaryOasisId: number;
 }
@@ -6274,14 +6275,14 @@ export interface FloatValueSpec {
 
 /** response */
 export interface FloatingTextByMinRatio {
-  FloatingText: number;
+  FloatingText: unknown;
   MinRatio: number;
 }
 
 /** response */
 export interface FloatingTextSettings {
   AlphaEaseOutFactor: number;
-  Color: number;
+  Color: string;
   Duration: number;
   EmitAngle: number;
   EmiterHeight: number;
@@ -6294,7 +6295,7 @@ export interface FloatingTextSettings {
   EndAlpha: number;
   EndScale: number;
   FollowEntity: boolean;
-  FontSettings: number;
+  FontSettings: unknown;
   Gravity: number;
   OasisId: number;
   OasisIdPlural: number;
@@ -6302,7 +6303,7 @@ export interface FloatingTextSettings {
   ScaleEaseOutFactor: number;
   StartAlpha: number;
   StartScale: number;
-  SynergyMaterialFileName: number;
+  SynergyMaterialFileName: string;
 }
 
 /** unknown */
@@ -6432,7 +6433,7 @@ export interface ForgeModel {
 
 /** both */
 export interface ForgeMysteryBoxItemModel {
-  AddedItemForgeSoundId: number;
+  AddedItemForgeSoundId: string;
   ForgeSlotId: number;
   HeroInventoryItemModel: HeroInventoryItemModel;
   InventorySlotId: number;
@@ -6496,16 +6497,16 @@ export interface ForgeReforgeCommand {
 /** response */
 export interface ForgeSettings {
   AssignmentCompletedForRegularForge: number;
-  CraftTable: number;
+  CraftTable: unknown;
   ForgeSpecContainerId: number;
   MaxForgeItemLevel: number;
   MinCraftQuality: unknown;
   MinReforgeQuality: unknown;
-  NewPlayerExperienceForgeDuration: string;
-  PremiumPurchaseForgeDuration: string;
-  PropertyLevelUpChances: number;
-  ReforgeTable: number;
-  UpgradeTable: number;
+  NewPlayerExperienceForgeDuration: number;
+  PremiumPurchaseForgeDuration: number;
+  PropertyLevelUpChances: PropertyLevelUpChance[];
+  ReforgeTable: unknown;
+  UpgradeTable: unknown;
 }
 
 /** both */
@@ -6657,8 +6658,8 @@ export interface FriendsLeaderboardModel {
 export interface FriendsViewModel {
   CurrentAccountId: number;
   Friends: unknown;
-  FriendshipInvitations: FriendshipInvitation;
-  SpecialPackModels: SpecialPackModel;
+  FriendshipInvitations: FriendshipInvitation[];
+  SpecialPackModels: SpecialPackModel[];
   TargetedAttackAvailableCount: number;
 }
 
@@ -6787,7 +6788,7 @@ export interface GameCameraZoomLevel {
 
 /** both */
 export interface GameEngineSettings {
-  EngineSettings: EngineSetting;
+  EngineSettings: EngineSetting[];
 }
 
 /** unknown */
@@ -6838,7 +6839,7 @@ export interface GameStateSoundPresetsInfo {
 
 /** both */
 export interface GameStateSoundPresetsSettings {
-  GameStateSoundPresetsInfos: GameStateSoundPresetsInfo;
+  GameStateSoundPresetsInfos: GameStateSoundPresetsInfo[];
 }
 
 /** request */
@@ -7064,7 +7065,7 @@ export interface GetBuffsViewModel {
 
 /** both */
 export interface GetBuildShortcutKeysModel {
-  BuildShortcutKeyModels: BuildShortcutKeyModel;
+  BuildShortcutKeyModels: BuildShortcutKeyModel[];
 }
 
 /** both */
@@ -7074,7 +7075,7 @@ export interface GetCastleInventoryViewModel {
 
 /** both */
 export interface GetCategoryConfigViewModel {
-  Filters: Filter;
+  Filters: Filter[];
 }
 
 /** both */
@@ -7149,12 +7150,12 @@ export interface GetSpellFamiliesViewModel {
 
 /** both */
 export interface GetSpellShortcutKeysModel {
-  SpellShortcutKeyModels: SpellShortcutKeyModel;
+  SpellShortcutKeyModels: SpellShortcutKeyModel[];
 }
 
 /** both */
 export interface GetSpellsViewModel {
-  Spells: Spell;
+  Spells: Spell[];
 }
 
 /** both */
@@ -7511,16 +7512,16 @@ export interface GuildSearchResult {
 /** response */
 export interface GuildSettings {
   AvengeeCrownsRatioOnRevenge: number;
-  EntryTimeToLive: string;
-  GiveRewardJobDelay: string;
-  GlobalLockTimeout: string;
-  GuildLeaderRewards: number;
+  EntryTimeToLive: number;
+  GiveRewardJobDelay: number;
+  GlobalLockTimeout: number;
+  GuildLeaderRewards: unknown[];
   Languages: unknown;
   LeaderDisplayedCount: number;
   MaxBattleLogEntries: number;
   MaxEntriesPerRequest: number;
   MaxMembers: number;
-  Period: string;
+  Period: Period;
   ReferenceDate: number;
 }
 
@@ -7605,7 +7606,7 @@ export interface HarvestHoverModel {
 
 /** both */
 export interface HarvestListEntity {
-  HarvestRefreshPositions: HarvestRefreshPosition;
+  HarvestRefreshPositions: HarvestRefreshPosition[];
 }
 
 /** request */
@@ -7708,7 +7709,7 @@ export interface HealthPotionConsumableTemplate {
 
 /** both */
 export interface Hero {
-  AttackRegions: AttackRegion;
+  AttackRegions: AttackRegion[];
   Equipment: unknown;
   EquippedConsumables: unknown;
   EquippedSpells: unknown;
@@ -7810,7 +7811,7 @@ export interface HeroCorpseHarvestingTooltipModel {
 
 /** response */
 export interface HeroCorpseSettings {
-  HeroCorpseCooldownPerAttacker: string;
+  HeroCorpseCooldownPerAttacker: number;
   HeroCorpseEffectIdsByHeroId: unknown;
   MaxHeroCorpsesInCastle: number;
 }
@@ -7823,7 +7824,7 @@ export interface HeroCreatedEventArgs {
 
 /** both */
 export interface HeroCreationBiographyViewModel {
-  HeroCreationHeroInfos: HeroCreationHeroInfo;
+  HeroCreationHeroInfos: HeroCreationHeroInfo[];
 }
 
 /** both */
@@ -8258,22 +8259,22 @@ export interface HeroItemTemplates {
 
 /** response */
 export interface HeroItemTextParams {
-  BackgroundColor: number;
+  BackgroundColor: string;
   BackgroundMarginX: number;
   BackgroundMarginY: number;
   Colors: unknown;
-  FontParams: number;
+  FontParams: unknown;
   HeightOffset: number;
 }
 
 /** response */
 export interface HeroItemType {
-  EquipUserInterfaceSoundId: number;
-  HeroItemCategoryType: number;
+  EquipUserInterfaceSoundId: string;
+  HeroItemCategoryType: string;
   Id: number;
   InternalDescription: string;
   OasisID: number;
-  VisualType: number;
+  VisualType: string;
 }
 
 /** both */
@@ -8342,7 +8343,7 @@ export interface HeroModel {
   IsInFreeTrial: boolean;
   IsSpecialPack: boolean;
   LongHeroName: string;
-  PriceReductionConditionModels: PriceReductionConditionModel;
+  PriceReductionConditionModels: PriceReductionConditionModel[];
   RegularPrice: unknown;
   SpecContainerId: number;
 }
@@ -8781,7 +8782,7 @@ export interface HudAbilityCooldownModel {
 
 /** both */
 export interface HudAbilityCooldownUpdatedEventArgs {
-  HudAbilityCooldownModels: HudAbilityCooldownModel;
+  HudAbilityCooldownModels: HudAbilityCooldownModel[];
 }
 
 /** both */
@@ -8980,7 +8981,7 @@ export interface InboxItem {
 
 /** request */
 export interface InboxItemsAddedNotification {
-  InboxItems: InboxItem;
+  InboxItems: InboxItem[];
 }
 
 /** unknown */
@@ -9228,7 +9229,7 @@ export interface InventoryTemplate {
   Decorations: unknown;
   DefenseIngredientBoosts: unknown;
   Heroes: unknown;
-  HeroItems: HeroItem;
+  HeroItems: HeroItem[];
   InventoryTabCount: number;
   Rooms: unknown;
   Traps: unknown;
@@ -9429,8 +9430,8 @@ export interface LeaderboardEntryModel {
 
 /** both */
 export interface LeaderboardFiltersModel {
-  Filters: Filter;
-  LeagueFilterModels: LeagueFilterModel;
+  Filters: Filter[];
+  LeagueFilterModels: LeagueFilterModel[];
   SelectedFilterCode: string;
   SelectedLeagueId: number;
   SelectedSubLeagueId: number;
@@ -9470,7 +9471,7 @@ export interface League {
   LargeIconUrl: string;
   Name: unknown;
   SmallIconUrl: string;
-  SubLeagues: SubLeague;
+  SubLeagues: SubLeague[];
 }
 
 /** both */
@@ -9487,7 +9488,7 @@ export interface LeagueModel {
   ScoreMax: number;
   ScoreMin: number;
   SmallIconUrl: string;
-  SubLeagueModels: SubLeagueModel;
+  SubLeagueModels: SubLeagueModel[];
 }
 
 /** request */
@@ -9521,7 +9522,7 @@ export interface LeagueProgressionPanelNavigationModel {
   CurrentLeagueId: number;
   CurrentSubLeagueId: number;
   IsLastLeagueSelected: boolean;
-  LeagueModels: LeagueModel;
+  LeagueModels: LeagueModel[];
   SelectedLeagueId: number;
   SelectedSubLeagueId: number;
   SubLeagueDetailedModel: SubLeagueDetailedModel;
@@ -10553,9 +10554,9 @@ export interface OSInfoTracking {
 
 /** response */
 export interface Objective {
-  Category: number;
+  Category: string;
   ClientSideCompletion: boolean;
-  Conditions: number;
+  Conditions: unknown[];
   DebugName: string;
   Description: number;
   IconUrl: string;
@@ -10563,9 +10564,9 @@ export interface Objective {
   Instruction: number;
   ManualPopupTriggerOnCompletion: boolean;
   PerHeroReward: unknown;
-  Progression: number;
-  Requirements: number;
-  Reward: number;
+  Progression: unknown;
+  Requirements: unknown[];
+  Reward: Reward;
   ShowUnlockedPopup: boolean;
   Title: number;
   VoiceOverSoundId: string;
@@ -11129,18 +11130,18 @@ export interface OverrideCameraOcclusionFlagsAssignmentActionSpec {
 
 /** response */
 export interface PackageAsset {
-  ResourcePath: number;
+  ResourcePath: string;
 }
 
 /** response */
 export interface PackageContent {
-  Assets: number;
+  Assets: unknown[];
   PackageName: string;
 }
 
 /** response */
 export interface PackageContentCollection {
-  Packages: number;
+  Packages: unknown[];
 }
 
 /** both */
@@ -11187,7 +11188,7 @@ export interface PanelNotShownAssignmentConditionSpec {
 /** both */
 export interface PanelSettings {
   ContainerControls: unknown;
-  ContainerFilename: number;
+  ContainerFilename: string;
   IconOffset3D: unknown;
   PanelLayer: number;
   SpecificZoomSettings: unknown;
@@ -11391,7 +11392,7 @@ export interface PlayerLoadConfig {
 
 /** request */
 export interface PopUpNarrativeVoTextPagesSpec {
-  NarrativeVoTextPages: NarrativeVoTextPage;
+  NarrativeVoTextPages: NarrativeVoTextPage[];
 }
 
 /** request */
@@ -11606,7 +11607,7 @@ export interface PreviousLeagueInfo {
 export interface PriceReductionCondition {
   DebugName: string;
   Id: number;
-  PriceReduction: number;
+  PriceReduction: unknown[];
   Title: number;
 }
 
@@ -11642,9 +11643,9 @@ export interface PrivateAdminMessagePreviewData {
 
 /** request */
 export interface PrivateProfileModel {
-  FriendshipInvitations: FriendshipInvitation;
+  FriendshipInvitations: FriendshipInvitation[];
   FriendsLeaderboard: unknown;
-  HeroIconModels: HeroIconModel;
+  HeroIconModels: HeroIconModel[];
   LatestCompletedAchievements: unknown;
   Profile: unknown;
   ProfileSummaryModel: ProfileSummaryModel;
@@ -11743,7 +11744,7 @@ export interface ProfileSearchResultModel {
   MaxResult: number;
   Query: string;
   Results: unknown;
-  SpecialPackModels: SpecialPackModel;
+  SpecialPackModels: SpecialPackModel[];
 }
 
 /** unknown */
@@ -11856,7 +11857,7 @@ export interface ProxyUpdateProgressionBar {
 export interface PublicProfileModel {
   GuildHeaderModel: GuildHeaderModel;
   HasPendingInvitationFromCurrentPlayer: boolean;
-  HeroIconModels: HeroIconModel;
+  HeroIconModels: HeroIconModel[];
   IsFriend: boolean;
   LatestCompletedAchievements: unknown;
   Profile: unknown;
@@ -11883,8 +11884,8 @@ export interface PushableSpec {
 
 /** response */
 export interface QualityColorTableEntry {
-  DarkColor: number;
-  LightColor: number;
+  DarkColor: string;
+  LightColor: string;
   Quality: unknown;
 }
 
@@ -11898,7 +11899,7 @@ export interface QuitGamePanelNavigationModel {
 /** both */
 export interface RMClientPackagesVersion {
   ClientGamePublicationLabel: string;
-  RMPackageVersions: RMPackageVersion;
+  RMPackageVersions: RMPackageVersion[];
 }
 
 /** both */
@@ -11943,7 +11944,7 @@ export interface RMServerPackagesVersion {
 
 /** both */
 export interface RandomCastlesResult {
-  CastleInfos: CastleInfo;
+  CastleInfos: CastleInfo[];
   HasReachLastPage: boolean;
 }
 
@@ -12035,7 +12036,7 @@ export interface RegionMapPanelNavigationModel {
 /** both */
 export interface RegionMapSettings {
   MaxCol: number;
-  RegionMapCastles: RegionMapCastle;
+  RegionMapCastles: RegionMapCastle[];
 }
 
 /** unknown */
@@ -12223,7 +12224,7 @@ export interface RewardItemModel {
 export interface RewardModel {
   FakeRewardItemModels: unknown;
   OverrideRewardItemModel: unknown;
-  RewardItemModels: RewardItemModel;
+  RewardItemModels: RewardItemModel[];
 }
 
 /** both */
@@ -12278,7 +12279,7 @@ export interface RoomConnectorNodeInfo {
 
 /** response */
 export interface RoomConnectorNodeInfoCollection {
-  RoomConnectorNodeInfos: RoomConnectorNodeInfo;
+  RoomConnectorNodeInfos: RoomConnectorNodeInfo[];
 }
 
 /** request */
@@ -12297,9 +12298,9 @@ export interface RoomDecorationPointsUpdatedEventArgs {
 
 /** request */
 export interface RoomObject {
-  AttachmentNode: number;
+  AttachmentNode: string;
   Children: unknown;
-  EffectName: number;
+  EffectName: string;
   IgnoreForRoomOrientations: number;
   Orientation: unknown;
   Probability: number;
@@ -12380,7 +12381,7 @@ export interface RoomTooltipModel {
 /** both */
 export interface RoomZone {
   MaxConstructionPoints: number;
-  RoomZoneCells: RoomZoneCell;
+  RoomZoneCells: RoomZoneCell[];
 }
 
 /** both */
@@ -12399,8 +12400,8 @@ export interface RoomZoneInfo {
 
 /** response */
 export interface RoomZoneInfoCollection {
-  RoomZoneInfos: RoomZoneInfo;
-  RoomZoneMaterialInfo: number;
+  RoomZoneInfos: RoomZoneInfo[];
+  RoomZoneMaterialInfo: RoomZoneMaterialInfo;
 }
 
 /** unknown */
@@ -12551,7 +12552,7 @@ export interface SeasonalEntitiesOverrides {
 
 /** both */
 export interface SeasonalEventInfo {
-  Id: number;
+  Id: string;
   Name: string;
 }
 
@@ -12724,7 +12725,7 @@ export interface ServerCommand {
 
 /** both */
 export interface ServerDefinitions {
-  ServerInfos: ServerInfo;
+  ServerInfos: ServerInfo[];
 }
 
 /** both */
@@ -12910,7 +12911,7 @@ export interface ShopCategoryModel {
 /** both */
 export interface ShopCategorySettings {
   Category: number;
-  Filters: Filter;
+  Filters: Filter[];
 }
 
 /** both */
@@ -13028,7 +13029,7 @@ export interface ShopItemsListToDisplayOnlyEventArgs {
 
 /** both */
 export interface ShopMenuNavigation {
-  ShopMenuNavigationButtons: ShopMenuNavigationButton;
+  ShopMenuNavigationButtons: ShopMenuNavigationButton[];
 }
 
 /** both */
@@ -13096,7 +13097,7 @@ export interface ShopProductModel {
   BuyButtonOasisName: string;
   CanAfford: boolean;
   ConsumableType: number;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   CreatureRank: number;
   CreatureTrapCraftingItemModel: CreatureTrapCraftingItemModel;
   Description: string;
@@ -13151,20 +13152,20 @@ export interface ShopRefreshedEventArgs {
 
 /** response */
 export interface ShopSettings {
-  BuyBackTimeout: string;
+  BuyBackTimeout: number;
   BuyButtonOasisIds: unknown;
-  CategorySettings: number;
+  CategorySettings: unknown[];
   DefaultIconFileName: string;
-  Filters: number;
+  Filters: Filter[];
   InfinitePackId: number;
-  NewnessDuration: string;
+  NewnessDuration: number;
   SellConsumablePriceRatioIGC: number;
   SellConsumablePriceRatioPremium: number;
   SellDefenseIngredientPriceModifier: number;
   SellDefenseIngredientPricePremiumCashModifier: number;
   SellPremiumCashIGCRatio: number;
   ShopContentButtonOasisIds: unknown;
-  ShopMenuNavigation: number;
+  ShopMenuNavigation: ShopMenuNavigation;
   UpgradePriceModifier: number;
 }
 
@@ -13176,7 +13177,7 @@ export interface ShopShownAssignmentTriggerSpec {
 /** both */
 export interface ShopSku {
   Code: string;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   CreationDate: string;
   DescriptionOasisId: number;
   Discounts: unknown;
@@ -13390,12 +13391,12 @@ export interface SkuCommunityEvent {
 
 /** request */
 export interface SkusModifiersUpdatedNotification {
-  ShopSkuModifiers: ShopSkuModifier;
+  ShopSkuModifiers: ShopSkuModifier[];
 }
 
 /** request */
 export interface SleepyGiantAccountInformation {
-  Achievements: Achievement;
+  Achievements: Achievement[];
 }
 
 /** both */
@@ -13410,7 +13411,7 @@ export interface SliderSettings {
 export interface SoundEventWrapper {
   FireAndForget: boolean;
   Probability: number;
-  SoundEventResource: number;
+  SoundEventResource: string;
   SoundEventResourceSeasonalOverrides: unknown;
 }
 
@@ -13473,13 +13474,13 @@ export interface SpawnerSpec {
 
 /** both */
 export interface Spec {
-  Tag: number;
+  Tag: string;
 }
 
 /** response */
 export interface SpecContainer {
   Name: string;
-  Specs: number;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -13496,12 +13497,12 @@ export interface SpecialPack {
   BoostedHeroes: unknown;
   BuyExclusionList: number;
   CastleVisualGroupNames: unknown;
-  CraftingMaterials: CraftingMaterial;
+  CraftingMaterials: CraftingMaterial[];
   Creatures: unknown;
   DebugName: string;
   Decorations: unknown;
   EarlyHeroAccess: number;
-  HeroItems: HeroItem;
+  HeroItems: HeroItem[];
   IconLayerName: string;
   IconUrl: string;
   IconUrlLarge: string;
@@ -13510,7 +13511,7 @@ export interface SpecialPack {
   PackNameOasisId: number;
   ProductPageUrl: string;
   Rank: number;
-  ShopSkus: ShopSku;
+  ShopSkus: ShopSku[];
   SpecialPackGroup: number;
   Traps: unknown;
   UnlockedEmotes: number;
@@ -13601,7 +13602,7 @@ export interface SpellTooltipModel {
 /** both */
 export interface SpellTreeViewModel {
   SpellFamily: unknown;
-  Spells: Spell;
+  Spells: Spell[];
 }
 
 /** both */
@@ -13970,8 +13971,8 @@ export interface TeleportOperationSpec {
 
 /** response */
 export interface TextFontParams {
-  FontSettings: number;
-  SynergyMaterialFileName: number;
+  FontSettings: unknown;
+  SynergyMaterialFileName: string;
 }
 
 /** both */
@@ -14032,7 +14033,7 @@ export interface ThemeUnlockedNotification {
 
 /** both */
 export interface Thread {
-  Messages: Message;
+  Messages: Message[];
   Participants: unknown;
   ThreadHeader: ThreadHeader;
   ThreadId: number;
@@ -14278,7 +14279,7 @@ export interface TreasureChestSpec {
 
 /** both */
 export interface TreasureRoomChestLockInfo {
-  Animation: number;
+  Animation: string;
 }
 
 /** both */
@@ -14348,7 +14349,7 @@ export interface UIAttackOasisSettings {
 
 /** response */
 export interface UIAttackReportSettings {
-  PredefinedComments: number;
+  PredefinedComments: unknown[];
 }
 
 /** unknown */
@@ -14427,7 +14428,7 @@ export interface UIGridItemModel {
   CanAfford: boolean;
   CanDisableParentContainerInput: boolean;
   ConsumableType: number;
-  CraftingMaterialModels: CraftingMaterialModel;
+  CraftingMaterialModels: CraftingMaterialModel[];
   CreatureRank: number;
   DiscountPercentOff: number;
   DiscountType: number;
@@ -14658,7 +14659,7 @@ export interface UbisoftCastle {
 export interface UbisoftCompetitionAttackerRewardTier {
   MaxParticipantCount: number;
   MinParticipantCount: number;
-  RewardsByAttackerRank: number;
+  RewardsByAttackerRank: unknown[];
 }
 
 /** request */
@@ -14705,12 +14706,12 @@ export interface UbisoftCompetitionLeaderboardEntry {
 
 /** response */
 export interface UbisoftCompetitionSchedule {
-  Periods: number;
+  Periods: Period[];
 }
 
 /** response */
 export interface UbisoftCompetitionSchedulePeriod {
-  CastleIds: number;
+  CastleIds: CastleId[];
 }
 
 /** unknown */
@@ -14908,13 +14909,13 @@ export interface UnlockObjectiveAssignmentActionSpec {
 
 /** both */
 export interface UnlockedObjectivesModel {
-  Objectives: Objective;
+  Objectives: Objective[];
 }
 
 /** both */
 export interface UnreadInformation {
   TotalUnreadThreadCount: number;
-  UnreadThreadInformations: UnreadThreadInformation;
+  UnreadThreadInformations: UnreadThreadInformation[];
 }
 
 /** both */
@@ -15208,52 +15209,52 @@ export interface VisualActivateAnimationCollectionFx {
 
 /** response */
 export interface VisualAnimatedEntitySettings {
-  AggroIdle: number;
+  AggroIdle: string;
   AggroIdleDurationAfterAbility: number;
   AggroIdleDurationDefault: number;
-  BallisticKnockBack: number;
-  BuilderDrag: number;
-  BuilderDrop: number;
-  Celebration: number;
-  CelebrationLoose: number;
-  ClosedDoor: number;
-  CloseDoor: number;
-  CreateObstacle: number;
-  CriticalFlinch: number;
-  DamageObstacle: number;
-  Deactivated: number;
-  Death: number;
+  BallisticKnockBack: string;
+  BuilderDrag: string;
+  BuilderDrop: string;
+  Celebration: string;
+  CelebrationLoose: string;
+  ClosedDoor: string;
+  CloseDoor: string;
+  CreateObstacle: string;
+  CriticalFlinch: string;
+  DamageObstacle: string;
+  Deactivated: string;
+  Death: string;
   DeathAnimationMaxDuration: number;
-  DefaultAbility: number;
-  DefaultAttachmentBone: number;
-  DefaultLeftFootBone: number;
-  DefaultRightFootBone: number;
-  DestroyObstacle: number;
-  EmoteAnimations: number;
-  Flinch: number;
-  Harvest: number;
-  HeroAggroIdleToIdle: number;
-  HeroDiedRejoicing: number;
-  HomePageAngry: number;
-  HomePageVictory: number;
-  HorizontalKnockBack: number;
-  Idle: number;
-  InteractionOpenChest: number;
-  InteractionOpenDoor: number;
+  DefaultAbility: string;
+  DefaultAttachmentBone: string;
+  DefaultLeftFootBone: string;
+  DefaultRightFootBone: string;
+  DestroyObstacle: string;
+  EmoteAnimations: unknown[];
+  Flinch: string;
+  Harvest: string;
+  HeroAggroIdleToIdle: string;
+  HeroDiedRejoicing: unknown[];
+  HomePageAngry: string;
+  HomePageVictory: string;
+  HorizontalKnockBack: string;
+  Idle: string;
+  InteractionOpenChest: string;
+  InteractionOpenDoor: string;
   InteractionsByType: unknown;
   LoopDeactivatedAnimation: boolean;
-  LootAction: number;
-  MineBuildingCollected: number;
-  MineBuildingCollecting: number;
-  MineBuildingDamageReceived: number;
-  MineBuildingReadyToCollect: number;
-  MineBuildingReadyToCollectIdle: number;
-  Navigation: number;
-  OpenDoor: number;
-  OpenedDoor: number;
-  Spawn: number;
-  Stun: number;
-  Walk: number;
+  LootAction: string;
+  MineBuildingCollected: string;
+  MineBuildingCollecting: string;
+  MineBuildingDamageReceived: string;
+  MineBuildingReadyToCollect: string;
+  MineBuildingReadyToCollectIdle: string;
+  Navigation: string;
+  OpenDoor: string;
+  OpenedDoor: string;
+  Spawn: string;
+  Stun: string;
+  Walk: string;
 }
 
 /** unknown */
@@ -15909,7 +15910,7 @@ export interface VisualRandomAnimationSpec {
 
 /** both */
 export interface VisualRenderableInfo {
-  TextureFileName: number;
+  TextureFileName: string;
 }
 
 /** unknown */
@@ -15932,7 +15933,7 @@ export interface VisualRoomConnectionFxSpec {
 
 /** response */
 export interface VisualRoomZoneFxCollection {
-  VisualRoomZoneFx: number;
+  VisualRoomZoneFx: unknown[];
 }
 
 /** unknown */

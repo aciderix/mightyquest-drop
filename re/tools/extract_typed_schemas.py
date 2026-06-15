@@ -30,46 +30,46 @@ OUTDIR = "re/catalog/network"
 WRITE_KEY = 0x009ab550
 UNKNOWN_FIELD = 0x009a9ce0       # called by every deserialize method (its marker)
 
-# reader primitive VA -> type (named by decompilation, see 05-SCHEMA-CATALOG.md)
-READERS = {
-    0x009a8d30: "int",
-    0x009a9450: "string",
-    0x009a8c90: "bool",
-    0x009a9170: "duration",
+# Exact per-primitive WIRE SHAPE — what the field looks like on the wire. This is
+# what makes a message well-formed: a bare number, a quoted string, true/false,
+# an array, or a nested object. (Numeric width — int/uint/byte/long/double — is
+# recorded for value validity but all share the `num` wire shape.) Identified by
+# decompiling every scalar writer/reader (see 05-SCHEMA-CATALOG.md):
+#   buffer widths 4/11/12/22/20 -> byte/uint/int/int64/double; "false" -> bool;
+#   ISO format -> datetime(quoted); enum writes/reads a quoted name; readers with
+#   a ']' branch -> array.
+W_SHAPE = {
+    0x009aad80: "num", 0x009aadd0: "num", 0x009aad30: "num", 0x009aafc0: "num",
+    0x009ab010: "num", 0x009aae20: "num", 0x009aaf40: "num", 0x009aaf50: "num",
+    0x009aaf30: "num", 0x009aaf60: "num", 0x009aaf70: "num",
+    0x009ab060: "str", 0x009aae70: "str", 0x009aaf00: "str",   # string/datetime/enum
+    0x009ab3f0: "bool",
 }
-READER_LO, READER_HI = 0x009a8000, 0x009aa000
+R_SHAPE = {
+    0x009a8d30: "num", 0x009a8d40: "num", 0x009a9390: "num",
+    0x009a9170: "num", 0x009a9440: "num", 0x009a8d20: "num", 0x009a93a0: "num",
+    0x009a9410: "num", 0x009a93b0: "num", 0x009a98a0: "arr",
+    0x009a9450: "str", 0x009a9b10: "str", 0x009a8670: "str", 0x009a8e70: "str",
+    0x009a8f90: "str",   # datetime reader (parses the quoted ISO-8601 string)
+    0x009a8c90: "bool", 0x009a99d0: "arr", 0x009a9680: "obj",
+}
+W_BAND, R_BAND = (0x009aa000, 0x009ac000), (0x009a8000, 0x009aa000)
 
 
-def read_type_of(va):
-    if va in READERS:
-        return READERS[va]
-    if READER_LO <= va < READER_HI:
-        return "number"
-    return "object"
+def writer_shape(va):
+    if va in W_SHAPE: return W_SHAPE[va]
+    return "num" if W_BAND[0] <= va < W_BAND[1] else "obj"
+
+
+def reader_shape(va):
+    if va in R_SHAPE: return R_SHAPE[va]
+    return "num" if R_BAND[0] <= va < R_BAND[1] else "obj"
 
 # writer primitive VA -> field type. Identified by decompiling each primitive
 # (see 05-SCHEMA-CATALOG.md): bool writes "false", datetime uses an ISO-8601
 # format, float's formatter handles "toobig", etc. Scalar JSON primitives live
 # in the 0x009aa000-0x009ac000 band; writers outside it are per-contract
 # generated object/array writers (nested values).
-WRITERS = {
-    0x009aad80: "int",
-    0x009ab060: "string",
-    0x009ab3f0: "bool",
-    0x009aae20: "float",
-    0x009aae70: "datetime",
-}
-PRIM_LO, PRIM_HI = 0x009aa000, 0x009ac000
-
-
-def type_of(writer_va):
-    if writer_va in WRITERS:
-        return WRITERS[writer_va]
-    if PRIM_LO <= writer_va < PRIM_HI:
-        return "number"          # numeric scalar, exact width unresolved
-    return "object"              # nested object/array (per-contract writer)
-
-
 def load_pe():
     pe = pefile.PE(EXE, fast_load=True)
     base = pe.OPTIONAL_HEADER.ImageBase
@@ -184,7 +184,7 @@ def main():
                     if tgt == UNKNOWN_FIELD:
                         is_deser = True; last_ident = None; continue
                     if last_ident is not None and tgt != maddr:
-                        pairs.append((last_ident, read_type_of(tgt)))
+                        pairs.append((last_ident, reader_shape(tgt)))
                         last_ident = None
                 else:
                     last_ident = None
@@ -215,7 +215,7 @@ def main():
             if m is None or not (tlo <= m < thi): continue
             sp = walk_serialize(m)
             if sp:
-                fields = [[k, type_of(w)] for k, w in sp if k != contract]
+                fields = [[k, writer_shape(w)] for k, w in sp if k != contract]
                 for _, w in sp: writer_freq[w] += 1
                 if fields: ser[contract] = fields
                 continue
@@ -227,7 +227,7 @@ def main():
     if args.discover:
         print("Top writer primitives (addr: count) — name these in WRITERS:")
         for w, c in writer_freq.most_common(25):
-            print(f"  0x{w:08x}  {c:6d}  {WRITERS.get(w, '?')}")
+            print(f"  0x{w:08x}  {c:6d}  {writer_shape(w)}")
         return
 
     # merge: prefer serialize fields (richer types: datetime/float); attach a

@@ -10,8 +10,8 @@
  },
  "AbilityLevelAutoAimParam": {
   "AutoAimType": 0,
-  "EffectRadius": 0.0,
-  "MaxDistance": 0.0,
+  "EffectRadius": 0,
+  "MaxDistance": 0,
   "TargetType": 0
  },
  "AbilityLevelInfo": {
@@ -45,7 +45,7 @@
   "RequiredModifiers": 0
  },
  "AcceleratorFactorInfo": {
-  "AcceleratorFactor": 0.0
+  "AcceleratorFactor": 0
  },
  "AccountAttackRegion": {
   "AttackRegionId": 0,
@@ -128,9 +128,11 @@
    "DefendLogEntries": {},
    "OfflinePeriod": {}
   },
-  "Expirables": {
-   "ExpirableType": 0
-  },
+  "Expirables": [
+   {
+    "ExpirableType": 0
+   }
+  ],
   "Guild": {
    "Description": {},
    "DisplayName": "string",
@@ -147,36 +149,40 @@
    "TrophyScore": 0,
    "WelcomeMessage": {}
   },
-  "GuildInvitations": {
-   "CreationDate": "2015-01-01T00:00:00Z",
-   "GuildSummary": {
-    "DisplayName": "string",
-    "Emblem": {},
-    "Id": 0,
-    "LanguageCode": "string",
-    "LeaderAccountId": 0,
-    "LeaderDisplayName": "string",
-    "MemberCount": 0,
-    "TrophyScore": 0
+  "GuildInvitations": [
+   {
+    "CreationDate": "string",
+    "GuildSummary": {
+     "DisplayName": "string",
+     "Emblem": {},
+     "Id": 0,
+     "LanguageCode": "string",
+     "LeaderAccountId": 0,
+     "LeaderDisplayName": "string",
+     "MemberCount": 0,
+     "TrophyScore": 0
+    }
    }
-  },
+  ],
   "IsCastleAttackable": false,
-  "LastViewedFreeTrialInfoDate": "2015-01-01T00:00:00Z",
+  "LastViewedFreeTrialInfoDate": "string",
   "News": {
    "Data": {},
    "Id": "string",
    "IsUnread": false,
    "Priority": 0,
-   "PublishDate": "2015-01-01T00:00:00Z"
+   "PublishDate": "string"
   },
-  "ShopSkuModifiers": {
-   "LimitedQuantityConsumed": 0,
-   "LimitedQuantityMax": 0,
-   "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
-   "LimitedQuantityNextUnlockQuantity": 0,
-   "SkuCode": "string",
-   "Unlock": false
-  },
+  "ShopSkuModifiers": [
+   {
+    "LimitedQuantityConsumed": 0,
+    "LimitedQuantityMax": 0,
+    "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
+    "LimitedQuantityNextUnlockQuantity": 0,
+    "SkuCode": "string",
+    "Unlock": false
+   }
+  ],
   "TargetedAttackAvailableCount": 0
  },
  "AccountInformationBase": {
@@ -218,9 +224,11 @@
    "DefendLogEntries": {},
    "OfflinePeriod": {}
   },
-  "Expirables": {
-   "ExpirableType": 0
-  },
+  "Expirables": [
+   {
+    "ExpirableType": 0
+   }
+  ],
   "Guild": {
    "Description": {},
    "DisplayName": "string",
@@ -237,45 +245,51 @@
    "TrophyScore": 0,
    "WelcomeMessage": {}
   },
-  "GuildInvitations": {
-   "CreationDate": "2015-01-01T00:00:00Z",
-   "GuildSummary": {
-    "DisplayName": "string",
-    "Emblem": {},
-    "Id": 0,
-    "LanguageCode": "string",
-    "LeaderAccountId": 0,
-    "LeaderDisplayName": "string",
-    "MemberCount": 0,
-    "TrophyScore": 0
+  "GuildInvitations": [
+   {
+    "CreationDate": "string",
+    "GuildSummary": {
+     "DisplayName": "string",
+     "Emblem": {},
+     "Id": 0,
+     "LanguageCode": "string",
+     "LeaderAccountId": 0,
+     "LeaderDisplayName": "string",
+     "MemberCount": 0,
+     "TrophyScore": 0
+    }
    }
-  },
+  ],
   "IsCastleAttackable": false,
-  "LastViewedFreeTrialInfoDate": "2015-01-01T00:00:00Z",
+  "LastViewedFreeTrialInfoDate": "string",
   "News": {
    "Data": {},
    "Id": "string",
    "IsUnread": false,
    "Priority": 0,
-   "PublishDate": "2015-01-01T00:00:00Z"
+   "PublishDate": "string"
   },
-  "ShopSkuModifiers": {
-   "LimitedQuantityConsumed": 0,
-   "LimitedQuantityMax": 0,
-   "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
-   "LimitedQuantityNextUnlockQuantity": 0,
-   "SkuCode": "string",
-   "Unlock": false
-  },
+  "ShopSkuModifiers": [
+   {
+    "LimitedQuantityConsumed": 0,
+    "LimitedQuantityMax": 0,
+    "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
+    "LimitedQuantityNextUnlockQuantity": 0,
+    "SkuCode": "string",
+    "Unlock": false
+   }
+  ],
   "TargetedAttackAvailableCount": 0
  },
  "AccountInventory": {
   "CastleRenovationItems": {},
   "ForgedItem": {},
-  "HeroItems": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
-   "SellPrice": 0
-  },
+  "HeroItems": [
+   {
+    "AcquisitionDate": "string",
+    "SellPrice": 0
+   }
+  ],
   "InventoryTabCount": 0,
   "PendingSharedItems": {}
  },
@@ -298,7 +312,7 @@
  },
  "AccountObjective": {
   "HasViewed": false,
-  "LastStatusDate": "2015-01-01T00:00:00Z",
+  "LastStatusDate": "string",
   "ObjectiveId": 0,
   "ProgressionCount": 0,
   "Status": 0
@@ -346,9 +360,11 @@
    "SubLeagueId": 0,
    "TrophyScore": 0
   },
-  "Achievements": {
-   "Count": 0
-  },
+  "Achievements": [
+   {
+    "Count": 0
+   }
+  ],
   "CastleLevel": 0,
   "CastleStats": {
    "AttackCount": 0,
@@ -357,7 +373,7 @@
    "SuccessfulAttackCount": 0,
    "TotalConstructionPoints": 0,
    "TrapCount": 0,
-   "WinRatio": 0.0,
+   "WinRatio": 0,
    "WinRatioDifficulty": 0
   },
   "GamerScore": 0,
@@ -442,7 +458,7 @@
   "Email": "string",
   "Id": 0,
   "IsCastleAttackable": false,
-  "LastShownWelcomePageDate": "2015-01-01T00:00:00Z",
+  "LastShownWelcomePageDate": "string",
   "LeagueId": 0,
   "PlatformId": "string",
   "Privileges": 0,
@@ -482,9 +498,11 @@
   "NotificationType": 0
  },
  "AchievementContainer": {
-  "Achievements": {
-   "Count": 0
-  },
+  "Achievements": [
+   {
+    "Count": 0
+   }
+  ],
   "CompletedCount": 0,
   "TotalCount": 0
  },
@@ -492,7 +510,7 @@
   "Achievement": {
    "Count": 0
   },
-  "CompletionDate": "2015-01-01T00:00:00Z",
+  "CompletionDate": "string",
   "CompletionDateFriendly": "string",
   "CompletionPercentage": 0
  },
@@ -531,8 +549,8 @@
   "UserActivity": 0
  },
  "AddCastleCreatureCommand": {
-  "AggroPropagationOffsetX": 0.0,
-  "AggroPropagationOffsetZ": 0.0,
+  "AggroPropagationOffsetX": 0,
+  "AggroPropagationOffsetZ": 0,
   "TotemCastleBuildableId": 0
  },
  "AddCastleInventoryItemCommand": {
@@ -556,7 +574,7 @@
  "AdminCastleStats": {
   "AttackCount": 0,
   "SuccessfulAttackCount": 0,
-  "WinRatio": 0.0
+  "WinRatio": 0
  },
  "AlertedCountChangedEventArgs": {
   "CurrentAlertedCount": 0,
@@ -564,10 +582,12 @@
  },
  "AllLifeShieldsUpdatedEventArgs": {
   "HasLastLifeShieldDurationAlmostEnded": false,
-  "LifeShieldUpdates": {
-   "Id": 0,
-   "Ratio": 0.0
-  }
+  "LifeShieldUpdates": [
+   {
+    "Id": 0,
+    "Ratio": 0
+   }
+  ]
  },
  "AlternateLocaleFont": {
   "Locales": {},
@@ -589,10 +609,10 @@
    "Castle": {
     "AccountDisplayName": "string",
     "AccountId": 0,
-    "CreationDate": "2015-01-01T00:00:00Z",
+    "CreationDate": "string",
     "CreatureTiers": {},
     "LayoutId": 0,
-    "ModificationDate": "2015-01-01T00:00:00Z",
+    "ModificationDate": "string",
     "OasisNameId": 0,
     "Rooms": {},
     "ThemeId": 0,
@@ -600,7 +620,7 @@
    },
    "CastleHeartRank": 0,
    "CastleType": 0,
-   "CastleValidationDuration": 0.0,
+   "CastleValidationDuration": 0,
    "CreatureLoot": {},
    "DecorationLoot": {},
    "DefenderActiveConsumables": {},
@@ -608,31 +628,33 @@
    "FirstResurrectionCost": 0,
    "FreeInventorySlotsCount": 0,
    "Hero": {
-    "AttackRegions": {
-     "AttackRegionId": 0,
-     "BossCastleId": 0,
-     "BossName": 0,
-     "DebugName": "string",
-     "HasMLPrediction": false,
-     "IsCompetitionRegion": false,
-     "IsFriendRegion": false,
-     "LevelMax": 0,
-     "LevelMin": 0,
-     "Name": 0,
-     "OverPosX": 0,
-     "OverPosY": 0,
-     "ShowUbisoftCastle": false,
-     "ShowUserCastle": false,
-     "ShowValidableCastle": false
-    },
+    "AttackRegions": [
+     {
+      "AttackRegionId": 0,
+      "BossCastleId": 0,
+      "BossName": 0,
+      "DebugName": "string",
+      "HasMLPrediction": false,
+      "IsCompetitionRegion": false,
+      "IsFriendRegion": false,
+      "LevelMax": 0,
+      "LevelMin": 0,
+      "Name": 0,
+      "OverPosX": 0,
+      "OverPosY": 0,
+      "ShowUbisoftCastle": false,
+      "ShowUserCastle": false,
+      "ShowValidableCastle": false
+     }
+    ],
     "Equipment": {},
     "EquippedConsumables": {},
     "EquippedSpells": {},
-    "ExpirationDate": "2015-01-01T00:00:00Z",
+    "ExpirationDate": "string",
     "HeroSpecContainerId": 0,
     "HeroStatModifier": {
      "StatType": 0,
-     "Value": 0.0
+     "Value": 0
     },
     "Level": 0,
     "OwnerSpecialPacks": 0,
@@ -650,19 +672,21 @@
    "IsTargetedAttack": false,
    "IsTutorial": false,
    "Level": 0,
-   "LoseTrophyCooldownTimer": "2015-01-01T00:00:00Z",
-   "StealableMines": {
-    "CastleBuildingId": 0,
-    "IsShielded": false,
-    "MaxStealableAmount": 0,
-    "StealableAmount": 0,
-    "StealableHeroItems": {}
-   },
+   "LoseTrophyCooldownTimer": "string",
+   "StealableMines": [
+    {
+     "CastleBuildingId": 0,
+     "IsShielded": false,
+     "MaxStealableAmount": 0,
+     "StealableAmount": 0,
+     "StealableHeroItems": {}
+    }
+   ],
    "TargetedAttackAvailableCount": 0,
    "TrapLoot": {},
-   "TreasureRoomGoldRatio": 0.0,
+   "TreasureRoomGoldRatio": 0,
    "TreasureRoomHeroItem": {},
-   "TreasureRoomLifeForceRatio": 0.0,
+   "TreasureRoomLifeForceRatio": 0,
    "TreasureRoomReward": {},
    "TreasureRoomStealableIGC": {},
    "TreasureRoomStealableLifeForce": {},
@@ -687,14 +711,14 @@
   "EndAttackParams": {}
  },
  "ArchetypeStatModel": {
-  "CompareValue": 0.0,
+  "CompareValue": 0,
   "FormatValueAsPercentage": false,
   "FormatValuePrecision": 0,
-  "MaxValue": 0.0,
+  "MaxValue": 0,
   "Name": "string",
   "ShowAsSlider": false,
   "ShowTextValue": false,
-  "Value": 0.0
+  "Value": 0
  },
  "ArchitectOfficeBuildingInfoDataModel": {
   "CurrentMaxRooms": 0,
@@ -704,12 +728,12 @@
   "NewMaxRooms": 0
  },
  "ArmorArchetype": {
-  "Damage": 0.0,
-  "Health": 0.0,
+  "Damage": 0,
+  "Health": 0,
   "Id": 0,
   "Name": {},
-  "Probability": 0.0,
-  "Resistance": 0.0
+  "Probability": 0,
+  "Resistance": 0
  },
  "AssignmentCompletedNotification": {
   "AssignmentId": 0
@@ -720,23 +744,54 @@
  },
  "AttackAdvisorSettings": {
   "ActiveCastlesCount": 0,
-  "ActivityBuckets": 0,
-  "ActivityBucketsAdvisorLifetime": "0",
-  "AttackRegions": 0,
+  "ActivityBuckets": [
+   {
+    "AttackableCastleStatus": 0,
+    "BucketId": 0,
+    "MinSize": 0,
+    "UserActivity": 0
+   }
+  ],
+  "ActivityBucketsAdvisorLifetime": 0,
+  "AttackRegions": [
+   {
+    "AttackRegionId": 0,
+    "BossCastleId": 0,
+    "BossName": 0,
+    "DebugName": "string",
+    "HasMLPrediction": false,
+    "IsCompetitionRegion": false,
+    "IsFriendRegion": false,
+    "LevelMax": 0,
+    "LevelMin": 0,
+    "Name": 0,
+    "OverPosX": 0,
+    "OverPosY": 0,
+    "ShowUbisoftCastle": false,
+    "ShowUserCastle": false,
+    "ShowValidableCastle": false
+   }
+  ],
   "BrandedCastleDisplayedPerRegion": 0,
   "CastleCountAfterLessAttackedSelection": 0,
   "CastleCountAfterRetrieval": 0,
   "CastleCountAfterTrophyGainFiltering": 0,
-  "LastConnectionMaxThreshold": "0",
-  "LastConnectionMinThreshold": "0",
+  "LastConnectionMaxThreshold": 0,
+  "LastConnectionMinThreshold": 0,
   "LessAttackedCastlesCount": 0,
   "MaxSuggestionCountByLevel": 0,
   "MaxValidableCastleCountByLevel": 0,
   "MinAttackCountForBestHeroDisplay": 0,
   "MinAttackablePvpCastleLevel": 0,
   "SampleGroupMachineLearning": 0,
-  "TrophyGainBuckets": 0,
-  "ValidableCastleTimeToLive": "0"
+  "TrophyGainBuckets": [
+   {
+    "CastleRatio": 0,
+    "MaxCrownGain": 0,
+    "MinCrownGain": 0
+   }
+  ],
+  "ValidableCastleTimeToLive": 0
  },
  "AttackImpactSoundInfos": {
   "HeroImpactSound": {},
@@ -747,9 +802,11 @@
  },
  "AttackImpactSoundSettings": {
   "AttackImpactSoundLevelsPerArmorType": 0,
-  "AttackImpactSoundLevelsProfiles": {
-   "LevelsMaxDamageRatios": 0
-  },
+  "AttackImpactSoundLevelsProfiles": [
+   {
+    "LevelsMaxDamageRatios": 0
+   }
+  ],
   "AttackImpactSoundsById": {},
   "CriticalHitImpactSound": {},
   "ReflectedDamageImpactSound": {}
@@ -768,10 +825,10 @@
   "Castle": {
    "AccountDisplayName": "string",
    "AccountId": 0,
-   "CreationDate": "2015-01-01T00:00:00Z",
+   "CreationDate": "string",
    "CreatureTiers": {},
    "LayoutId": 0,
-   "ModificationDate": "2015-01-01T00:00:00Z",
+   "ModificationDate": "string",
    "OasisNameId": 0,
    "Rooms": {},
    "ThemeId": 0,
@@ -779,7 +836,7 @@
   },
   "CastleHeartRank": 0,
   "CastleType": 0,
-  "CastleValidationDuration": 0.0,
+  "CastleValidationDuration": 0,
   "CreatureLoot": {},
   "DecorationLoot": {},
   "DefenderActiveConsumables": {},
@@ -787,31 +844,33 @@
   "FirstResurrectionCost": 0,
   "FreeInventorySlotsCount": 0,
   "Hero": {
-   "AttackRegions": {
-    "AttackRegionId": 0,
-    "BossCastleId": 0,
-    "BossName": 0,
-    "DebugName": "string",
-    "HasMLPrediction": false,
-    "IsCompetitionRegion": false,
-    "IsFriendRegion": false,
-    "LevelMax": 0,
-    "LevelMin": 0,
-    "Name": 0,
-    "OverPosX": 0,
-    "OverPosY": 0,
-    "ShowUbisoftCastle": false,
-    "ShowUserCastle": false,
-    "ShowValidableCastle": false
-   },
+   "AttackRegions": [
+    {
+     "AttackRegionId": 0,
+     "BossCastleId": 0,
+     "BossName": 0,
+     "DebugName": "string",
+     "HasMLPrediction": false,
+     "IsCompetitionRegion": false,
+     "IsFriendRegion": false,
+     "LevelMax": 0,
+     "LevelMin": 0,
+     "Name": 0,
+     "OverPosX": 0,
+     "OverPosY": 0,
+     "ShowUbisoftCastle": false,
+     "ShowUserCastle": false,
+     "ShowValidableCastle": false
+    }
+   ],
    "Equipment": {},
    "EquippedConsumables": {},
    "EquippedSpells": {},
-   "ExpirationDate": "2015-01-01T00:00:00Z",
+   "ExpirationDate": "string",
    "HeroSpecContainerId": 0,
    "HeroStatModifier": {
     "StatType": 0,
-    "Value": 0.0
+    "Value": 0
    },
    "Level": 0,
    "OwnerSpecialPacks": 0,
@@ -829,19 +888,21 @@
   "IsTargetedAttack": false,
   "IsTutorial": false,
   "Level": 0,
-  "LoseTrophyCooldownTimer": "2015-01-01T00:00:00Z",
-  "StealableMines": {
-   "CastleBuildingId": 0,
-   "IsShielded": false,
-   "MaxStealableAmount": 0,
-   "StealableAmount": 0,
-   "StealableHeroItems": {}
-  },
+  "LoseTrophyCooldownTimer": "string",
+  "StealableMines": [
+   {
+    "CastleBuildingId": 0,
+    "IsShielded": false,
+    "MaxStealableAmount": 0,
+    "StealableAmount": 0,
+    "StealableHeroItems": {}
+   }
+  ],
   "TargetedAttackAvailableCount": 0,
   "TrapLoot": {},
-  "TreasureRoomGoldRatio": 0.0,
+  "TreasureRoomGoldRatio": 0,
   "TreasureRoomHeroItem": {},
-  "TreasureRoomLifeForceRatio": 0.0,
+  "TreasureRoomLifeForceRatio": 0,
   "TreasureRoomReward": {},
   "TreasureRoomStealableIGC": {},
   "TreasureRoomStealableLifeForce": {},
@@ -873,10 +934,10 @@
    "Castle": {
     "AccountDisplayName": "string",
     "AccountId": 0,
-    "CreationDate": "2015-01-01T00:00:00Z",
+    "CreationDate": "string",
     "CreatureTiers": {},
     "LayoutId": 0,
-    "ModificationDate": "2015-01-01T00:00:00Z",
+    "ModificationDate": "string",
     "OasisNameId": 0,
     "Rooms": {},
     "ThemeId": 0,
@@ -884,7 +945,7 @@
    },
    "CastleHeartRank": 0,
    "CastleType": 0,
-   "CastleValidationDuration": 0.0,
+   "CastleValidationDuration": 0,
    "CreatureLoot": {},
    "DecorationLoot": {},
    "DefenderActiveConsumables": {},
@@ -892,31 +953,33 @@
    "FirstResurrectionCost": 0,
    "FreeInventorySlotsCount": 0,
    "Hero": {
-    "AttackRegions": {
-     "AttackRegionId": 0,
-     "BossCastleId": 0,
-     "BossName": 0,
-     "DebugName": "string",
-     "HasMLPrediction": false,
-     "IsCompetitionRegion": false,
-     "IsFriendRegion": false,
-     "LevelMax": 0,
-     "LevelMin": 0,
-     "Name": 0,
-     "OverPosX": 0,
-     "OverPosY": 0,
-     "ShowUbisoftCastle": false,
-     "ShowUserCastle": false,
-     "ShowValidableCastle": false
-    },
+    "AttackRegions": [
+     {
+      "AttackRegionId": 0,
+      "BossCastleId": 0,
+      "BossName": 0,
+      "DebugName": "string",
+      "HasMLPrediction": false,
+      "IsCompetitionRegion": false,
+      "IsFriendRegion": false,
+      "LevelMax": 0,
+      "LevelMin": 0,
+      "Name": 0,
+      "OverPosX": 0,
+      "OverPosY": 0,
+      "ShowUbisoftCastle": false,
+      "ShowUserCastle": false,
+      "ShowValidableCastle": false
+     }
+    ],
     "Equipment": {},
     "EquippedConsumables": {},
     "EquippedSpells": {},
-    "ExpirationDate": "2015-01-01T00:00:00Z",
+    "ExpirationDate": "string",
     "HeroSpecContainerId": 0,
     "HeroStatModifier": {
      "StatType": 0,
-     "Value": 0.0
+     "Value": 0
     },
     "Level": 0,
     "OwnerSpecialPacks": 0,
@@ -934,19 +997,21 @@
    "IsTargetedAttack": false,
    "IsTutorial": false,
    "Level": 0,
-   "LoseTrophyCooldownTimer": "2015-01-01T00:00:00Z",
-   "StealableMines": {
-    "CastleBuildingId": 0,
-    "IsShielded": false,
-    "MaxStealableAmount": 0,
-    "StealableAmount": 0,
-    "StealableHeroItems": {}
-   },
+   "LoseTrophyCooldownTimer": "string",
+   "StealableMines": [
+    {
+     "CastleBuildingId": 0,
+     "IsShielded": false,
+     "MaxStealableAmount": 0,
+     "StealableAmount": 0,
+     "StealableHeroItems": {}
+    }
+   ],
    "TargetedAttackAvailableCount": 0,
    "TrapLoot": {},
-   "TreasureRoomGoldRatio": 0.0,
+   "TreasureRoomGoldRatio": 0,
    "TreasureRoomHeroItem": {},
-   "TreasureRoomLifeForceRatio": 0.0,
+   "TreasureRoomLifeForceRatio": 0,
    "TreasureRoomReward": {},
    "TreasureRoomStealableIGC": {},
    "TreasureRoomStealableLifeForce": {},
@@ -1025,23 +1090,25 @@
   "UpdatedAttackRegions": {}
  },
  "AttackRegionsViewModel": {
-  "AttackRegions": {
-   "AttackRegionId": 0,
-   "BossCastleId": 0,
-   "BossName": 0,
-   "DebugName": "string",
-   "HasMLPrediction": false,
-   "IsCompetitionRegion": false,
-   "IsFriendRegion": false,
-   "LevelMax": 0,
-   "LevelMin": 0,
-   "Name": 0,
-   "OverPosX": 0,
-   "OverPosY": 0,
-   "ShowUbisoftCastle": false,
-   "ShowUserCastle": false,
-   "ShowValidableCastle": false
-  }
+  "AttackRegions": [
+   {
+    "AttackRegionId": 0,
+    "BossCastleId": 0,
+    "BossName": 0,
+    "DebugName": "string",
+    "HasMLPrediction": false,
+    "IsCompetitionRegion": false,
+    "IsFriendRegion": false,
+    "LevelMax": 0,
+    "LevelMin": 0,
+    "Name": 0,
+    "OverPosX": 0,
+    "OverPosY": 0,
+    "ShowUbisoftCastle": false,
+    "ShowUserCastle": false,
+    "ShowValidableCastle": false
+   }
+  ]
  },
  "AttackReplay": {
   "AccountID": 0,
@@ -1051,24 +1118,26 @@
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
-   "RewardItemModels": {
-    "Count": 0,
-    "CreatureRank": 0,
-    "DyeInfoModel": {
-     "AnimationName": "string",
-     "CanBeTinted": false,
-     "Color": "string",
-     "ColorName": "string"
-    },
-    "HeroItemQuality": 0,
-    "IsCreature": false,
-    "IsHeroItem": false,
-    "ItemBase": {},
-    "LargeIconUrl": "string",
-    "Name": "string",
-    "SmallIconUrl": "string",
-    "Tooltip": {}
-   }
+   "RewardItemModels": [
+    {
+     "Count": 0,
+     "CreatureRank": 0,
+     "DyeInfoModel": {
+      "AnimationName": "string",
+      "CanBeTinted": false,
+      "Color": "string",
+      "ColorName": "string"
+     },
+     "HeroItemQuality": 0,
+     "IsCreature": false,
+     "IsHeroItem": false,
+     "ItemBase": {},
+     "LargeIconUrl": "string",
+     "Name": "string",
+     "SmallIconUrl": "string",
+     "Tooltip": {}
+    }
+   ]
   }
  },
  "AttackReportPredefinedComment": {
@@ -1077,18 +1146,20 @@
   "ShortDescriptionOasisID": 0
  },
  "AttackSelectionByLevelResult": {
-  "Castles": {
-   "AccountDisplayName": "string",
-   "AccountId": 0,
-   "CreationDate": "2015-01-01T00:00:00Z",
-   "CreatureTiers": {},
-   "LayoutId": 0,
-   "ModificationDate": "2015-01-01T00:00:00Z",
-   "OasisNameId": 0,
-   "Rooms": {},
-   "ThemeId": 0,
-   "TrapTiers": {}
-  },
+  "Castles": [
+   {
+    "AccountDisplayName": "string",
+    "AccountId": 0,
+    "CreationDate": "string",
+    "CreatureTiers": {},
+    "LayoutId": 0,
+    "ModificationDate": "string",
+    "OasisNameId": 0,
+    "Rooms": {},
+    "ThemeId": 0,
+    "TrapTiers": {}
+   }
+  ],
   "Level": 0
  },
  "AttackSelectionCastlePanelNavigationModel": {
@@ -1108,14 +1179,14 @@
    "Status": 0
   },
   "CastleInfoSummary": {
-   "ActivationDate": "2015-01-01T00:00:00Z",
+   "ActivationDate": "string",
    "AttackType": 0,
    "AttackerStatus": 0,
    "CastleHeartRank": 0,
    "CastleIconUrl": "string",
    "CastleThemeId": 0,
    "CastleType": 0,
-   "DeActivationDate": "2015-01-01T00:00:00Z",
+   "DeActivationDate": "string",
    "DefenderAccountSummary": {},
    "FromMachineLearning": false,
    "IsBranded": false,
@@ -1123,9 +1194,9 @@
    "IsNew": false,
    "IsShielded": false,
    "LastComment": {},
-   "LastPublishedDate": "2015-01-01T00:00:00Z",
+   "LastPublishedDate": "string",
    "Level": 0,
-   "TrophyCooldownTimer": "2015-01-01T00:00:00Z",
+   "TrophyCooldownTimer": "string",
    "TrophyScore": 0,
    "UbisoftCompetitionId": 0,
    "VictoryConditionLevel": 0,
@@ -1179,8 +1250,8 @@
    "IsShielded": false,
    "IsTargetedAttack": false,
    "LastCastleRating": 0,
-   "LastPublishedDate": "2015-01-01T00:00:00Z",
-   "LastSeenOnline": "2015-01-01T00:00:00Z",
+   "LastPublishedDate": "string",
+   "LastSeenOnline": "string",
    "Level": 0,
    "PotentialLoot": {
     "BoostIGC": 0,
@@ -1196,14 +1267,14 @@
     "MinesStealableLifeForce": 0,
     "MinesStealablePremiumCash": 0,
     "PremiumCashMineCount": 0,
-    "RareDefenseIngredientRatio": 0.0,
+    "RareDefenseIngredientRatio": 0,
     "TreasureRoomStealableIGC": 0,
     "TreasureRoomStealableLifeForce": 0,
     "Xp": 0
    },
    "RevengeAttackId": "string",
    "RoomCount": 0,
-   "ShieldExpirationDate": "2015-01-01T00:00:00Z",
+   "ShieldExpirationDate": "string",
    "Stats": {},
    "SuccessfulAttackCount": 0,
    "TrophyScore": 0,
@@ -1243,21 +1314,23 @@
    "ShowValidableCastle": false
   },
   "Result": {},
-  "SpecialPackModels": {
-   "IconLayerName": "string",
-   "IconUrl": "string",
-   "IconUrlLarge": "string",
-   "SpecialPackId": 0
-  }
+  "SpecialPackModels": [
+   {
+    "IconLayerName": "string",
+    "IconUrl": "string",
+    "IconUrlLarge": "string",
+    "SpecialPackId": 0
+   }
+  ]
  },
  "AttackSettings": {
   "ActionLineCheckHeight": 0,
   "AggroConeAngle": 0,
   "AggroConeRadius": 0,
-  "AggroPropagationOffset": 0,
+  "AggroPropagationOffset": {},
   "AggroPropagationRange": 0,
   "AggroRange": 0,
-  "AttackSpeedTable": 0,
+  "AttackSpeedTable": [],
   "AttackTimerStartAnimationTimeExpired": 0,
   "AttackerDeathPopupDelay": 0,
   "BasicAttackBuffId": 0,
@@ -1270,25 +1343,33 @@
   "CreatureBasicAttackBuffId": 0,
   "CreatureCatchUpBuffId": 0,
   "CreatureRoomBuildablesCreationInterval": 0,
-  "CriticalHitCameraShakeAnimation": 0,
+  "CriticalHitCameraShakeAnimation": "string",
   "DefaultAttackRange": 0,
   "DefaultCreatureCreationPriorityCoefficient": 0,
   "DefaultFacingDamping": 0,
   "DefaultRoomBuildableEntitiesCreationDistance": 0,
-  "DefaultSpawnedEntityAggroTarget": 0,
+  "DefaultSpawnedEntityAggroTarget": {},
   "DoorTriggerCollisionDistance": 0,
   "EscapeDelayToMarkAsDefeat": 0,
   "FarmGruntThreshold": 0,
   "FarmMpsThreshold": 0,
   "FarmTrapIds": 0,
-  "FightDynamics": 0,
-  "GainTrophyCooldownTimerDuration": "0",
+  "FightDynamics": {
+   "BasicRoomCaps": {},
+   "BossRoomCaps": {},
+   "BossUsesHardCap": false,
+   "CanGainActivationDistance": 0,
+   "CanLoseActivationDistance": 0,
+   "CastleLevelBonuses": {},
+   "IgnoreCapsInUbisoftCastles": false
+  },
+  "GainTrophyCooldownTimerDuration": 0,
   "HealthOrbBuffId": 0,
   "HeroManaDescriptionOasisIds": {},
   "HeroRegenerationDuration": 0,
-  "HeroTrapXpRewardShape": 0,
+  "HeroTrapXpRewardShape": {},
   "InputBufferingDuration": 0,
-  "InvalidActionsFeedbacks": 0,
+  "InvalidActionsFeedbacks": {},
   "LeashBehaviorBuffSpecContainerIds": 0,
   "LifeShieldDurationRatioEndAnimation": 0,
   "LootAnimationDuration": 0,
@@ -1305,18 +1386,18 @@
   "LootForcedAttractionDelay": 0,
   "LootForcedAttractionVelocity": 0,
   "LootRadius": 0,
-  "LoseTrophyCooldownTimerDuration": "0",
-  "LossPonderationTable": 0,
+  "LoseTrophyCooldownTimerDuration": 0,
+  "LossPonderationTable": [],
   "MaxAggroPropagationDistanceOfPathFindResult": 0,
   "MaxCpCreatureCreation": 0,
   "MaxLevelDifferenceForBossAttack": 0,
   "MaxMpsStored": 0,
-  "MaximumAllowedAttackTimeDiscrepancy": "0",
+  "MaximumAllowedAttackTimeDiscrepancy": 0,
   "MaximumSpawnDelay": 0,
   "MinCastleLevelForPVPAttack": 0,
-  "MineDestroyedTimeBonus": "0",
+  "MineDestroyedTimeBonus": 0,
   "MineEmptyAmountDrop": 0,
-  "MineLossPonderationTable": 0,
+  "MineLossPonderationTable": [],
   "MinePeriodStealableAmountInSeconds": 0,
   "MineShieldedAmoutDrop": 0,
   "MinimumCooldownAfterReduction": 0,
@@ -1326,7 +1407,7 @@
   "MinimumMoveDistanceHysteresisModifier": 0,
   "MinimumSpawnDelay": 0,
   "MoveAndCastDetectionAngle": 0,
-  "MovementSpeedTable": 0,
+  "MovementSpeedTable": [],
   "MultiKillTimeInterval": 0,
   "NavigationCollisionRaycastLength": 0,
   "NavigationCollisionTurnDuration": 0,
@@ -1336,15 +1417,25 @@
   "PetLootActive": false,
   "PlayerDistanceToDoTasks": 0,
   "PositionRestrictionDistanceFlexibilities": {},
-  "PotionUsageRestrictions": 0,
+  "PotionUsageRestrictions": [
+   {
+    "HeroLevelMax": 0,
+    "HeroLevelMin": 0,
+    "MaxPotionUse": 0
+   }
+  ],
   "PremiumCashMineLossAmount": 0,
-  "PremiumCashMineLossPonderationTable": 0,
+  "PremiumCashMineLossPonderationTable": [],
   "PresetTargetDefinitions": {},
   "QueueCoolingDownAbilities": false,
   "RandomizedLifeValueRandomCallsCount": 0,
   "RandomizedLifeValueRangeModifier": 0,
   "RegenerationBehaviorBuffSpecContainerId": 0,
-  "ResistanceSettings": 0,
+  "ResistanceSettings": {
+   "ResistanceReductionImmunityDuration": 0,
+   "ResistanceRemovedMultiplier": 0,
+   "ResistanceReplenishDuration": 0
+  },
   "ResurrectBuffId": 0,
   "RoomBuildableEntitiesCreationDistanceByType": {},
   "SelectNextAttackedUnitDelay": 0,
@@ -1358,7 +1449,7 @@
   "SubstituteActionMoveToSpeedMultiplier": 0,
   "TargetEntityHealthBarDelayInSeconds": 0,
   "TargetedAttackMaxCount": 0,
-  "TargetedAttackReloadDuration": "0",
+  "TargetedAttackReloadDuration": 0,
   "TimerEndingCountdownDurationInSeconds": 0,
   "TreasureDoorEffectSpecContainerId": 0,
   "TreasureRoomEntranceTriggerFieldName": "string",
@@ -1369,8 +1460,8 @@
  "AttackSpeed": {
   "Id": 0,
   "Name": {},
-  "SpeedFrom": 0.0,
-  "SpeedTo": 0.0
+  "SpeedFrom": 0,
+  "SpeedTo": 0
  },
  "AttackStartCountdownPanelNavigationModel": {
   "CountdownStep": 0
@@ -1385,17 +1476,22 @@
  },
  "AttackerRewardSettings": {
   "BossLootRatio": 0,
-  "CrownsDiminishingReturns": 0,
-  "DeathResetTimerDuration": "0",
-  "HealthOrbFragmentsModifierTable": 0,
+  "CrownsDiminishingReturns": [
+   {
+    "DeathCount": 0,
+    "DiminishingReturnMultiplier": 0
+   }
+  ],
+  "DeathResetTimerDuration": 0,
+  "HealthOrbFragmentsModifierTable": {},
   "LootTransfereCostsPerLevel": 0,
   "MineDestroyedVictoryCondition": 0,
   "RareDefenseIngredientBonusFactor": 0,
   "RareDefenseIngredientBonusMinimumRatio": 0,
-  "RareDefenseIngredientColorList": 0,
+  "RareDefenseIngredientColorList": [],
   "SmartLootWeeklyContentStopLimit": 0,
   "TreasureRoomGoldDropValueModifier": 0,
-  "TreasureRoomGoldPiles": 0,
+  "TreasureRoomGoldPiles": [],
   "TreasureRoomLifeForceDropValueModifier": 0,
   "TreasureRoomMaxGoldRatio": 0,
   "TreasureRoomMaxLifeForceRatio": 0,
@@ -1438,19 +1534,21 @@
   "NotificationType": 0
  },
  "AvatarsModel": {
-  "Avatars": {
-   "AnimationName": "string",
-   "DebugName": "string",
-   "IconUrl": "string",
-   "Id": 0,
-   "IsPrivate": false,
-   "LayerName": "string"
-  },
+  "Avatars": [
+   {
+    "AnimationName": "string",
+    "DebugName": "string",
+    "IconUrl": "string",
+    "Id": 0,
+    "IsPrivate": false,
+    "LayerName": "string"
+   }
+  ],
   "CurrentAvatar": {}
  },
  "BakedDamageInfo": {
-  "CriticalHitChance": 0.0,
-  "CriticalHitDamageMultiplier": 0.0,
+  "CriticalHitChance": 0,
+  "CriticalHitDamageMultiplier": 0,
   "SourceEntityId": 0,
   "SourceLevel": 0
  },
@@ -1465,7 +1563,7 @@
  "BattleLogEntry": {
   "AttackDurationInMilliseconds": 0,
   "AttackId": "string",
-  "AttackStartDateTime": "2015-01-01T00:00:00Z",
+  "AttackStartDateTime": "string",
   "AttackType": 0,
   "AttackerAccountSummary": {},
   "AttackerTrophyScoreVariation": 0,
@@ -1483,16 +1581,18 @@
   "IsTargetedAttack": false,
   "Message": {
    "Data": {},
-   "DateSent": "2015-01-01T00:00:00Z",
+   "DateSent": "string",
    "SenderId": 0,
    "Type": 0
   },
-  "PillagedMines": {
-   "CastleBuildingId": 0,
-   "IsDestroyed": false,
-   "StolenAmount": 0,
-   "StolenHeroItems": {}
-  },
+  "PillagedMines": [
+   {
+    "CastleBuildingId": 0,
+    "IsDestroyed": false,
+    "StolenAmount": 0,
+    "StolenHeroItems": {}
+   }
+  ],
   "PotionUsed": 0,
   "ResurrectionCount": 0,
   "RevengeStatus": 0,
@@ -1504,7 +1604,7 @@
  },
  "BattleLogEntryAddedNotification": {
   "Entry": {},
-  "LastValidEntryDate": "2015-01-01T00:00:00Z"
+  "LastValidEntryDate": "string"
  },
  "BattleLogEntryDeletedNotification": {
   "LastValidEntry": "string"
@@ -1512,7 +1612,7 @@
  "BattleLogEntryModel": {
   "AttackDurationInMilliseconds": 0,
   "AttackId": "string",
-  "AttackStartDateTime": "2015-01-01T00:00:00Z",
+  "AttackStartDateTime": "string",
   "AttackType": 0,
   "CastleLevel": 0,
   "CastleRating": 0,
@@ -1558,7 +1658,7 @@
   "SkuCode": "string"
  },
  "BoostConsumableTemplate": {
-  "IncreasedXp": 0.0
+  "IncreasedXp": 0
  },
  "BoostIconPanelNavigationModel": {
   "IsOpalPanel": false,
@@ -1576,10 +1676,12 @@
   "CanAffordCurrency": false,
   "CanAffordMaterials": false,
   "Cost": {},
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
   "CurrentBoostedCreatureCount": 0,
   "IsBoostPending": false,
   "IsBoostable": false,
@@ -1623,10 +1725,10 @@
   "BossName": "string"
  },
  "BoundingRect": {
-  "MaxX": 0.0,
-  "MaxY": 0.0,
-  "MinX": 0.0,
-  "MinY": 0.0
+  "MaxX": 0,
+  "MaxY": 0,
+  "MinX": 0,
+  "MinY": 0
  },
  "Branch": {
   "GamePublicationLabelMajorSuffix": 0,
@@ -1641,7 +1743,7 @@
    "IsRatioFixed": false,
    "LayerName": "string",
    "MinimumStackCountToDisplay": 0,
-   "RemainingTimeRatio": 0.0,
+   "RemainingTimeRatio": 0,
    "SpecContainerId": 0,
    "StackCount": 0,
    "TileAnimationType": 0,
@@ -1663,7 +1765,7 @@
   "IsRatioFixed": false,
   "LayerName": "string",
   "MinimumStackCountToDisplay": 0,
-  "RemainingTimeRatio": 0.0,
+  "RemainingTimeRatio": 0,
   "SpecContainerId": 0,
   "StackCount": 0,
   "TileAnimationType": 0,
@@ -1694,10 +1796,12 @@
  "BuildCraftingMaterialMinePanelNavigationModel": {
   "CraftingMaterialMineInformationModel": {
    "CraftingMaterialMineState": 0,
-   "CraftingMaterials": {
-    "Id": 0,
-    "Quantity": 0
-   },
+   "CraftingMaterials": [
+    {
+     "Id": 0,
+     "Quantity": 0
+    }
+   ],
    "RemainingTime": 0
   },
   "PanelName": 0
@@ -1713,10 +1817,12 @@
   "EntityType": 0
  },
  "BuildEntityEventArgs": {
-  "ContextualActionDatas": {
-   "ActionType": 0,
-   "ContextualActionDataInputType": 0
-  },
+  "ContextualActionDatas": [
+   {
+    "ActionType": 0,
+    "ContextualActionDataInputType": 0
+   }
+  ],
   "GameEntityId": 0,
   "IsNewEntity": false,
   "SpecContainerId": 0,
@@ -1730,13 +1836,13 @@
   "ItemTypeOasisId": 0,
   "Level": 0,
   "Name": "string",
-  "TooltipDisplayDelay": 0.0
+  "TooltipDisplayDelay": 0
  },
  "BuildHarvestingPanelNavigationModel": {
   "PanelName": 0
  },
  "BuildHistory": {
-  "BuildDateTime": "2015-01-01T00:00:00Z",
+  "BuildDateTime": "string",
   "Duration": 0,
   "Id": {}
  },
@@ -1755,7 +1861,7 @@
    "SuccessfulAttackCount": 0,
    "TotalConstructionPoints": 0,
    "TrapCount": 0,
-   "WinRatio": 0.0,
+   "WinRatio": 0,
    "WinRatioDifficulty": 0
   },
   "CastleType": 0,
@@ -1764,15 +1870,21 @@
   "DecorationNextIndex": 0,
   "Draft": {},
   "HeroCorpses": {},
-  "InventoryDecorations": {
-   "Level": 0
-  },
-  "InventoryDefenseIngredientBoosts": {
-   "Level": 0
-  },
-  "InventoryRooms": {
-   "Level": 0
-  },
+  "InventoryDecorations": [
+   {
+    "Level": 0
+   }
+  ],
+  "InventoryDefenseIngredientBoosts": [
+   {
+    "Level": 0
+   }
+  ],
+  "InventoryRooms": [
+   {
+    "Level": 0
+   }
+  ],
   "InventoryThemes": 0,
   "IsDraftPublished": false,
   "IsRollbackAvailable": false,
@@ -1781,7 +1893,7 @@
   "OwnerSpecialPacks": 0,
   "RoomNextIndex": 0,
   "ShieldEndExpirableId": "string",
-  "TimerDuration": 0.0,
+  "TimerDuration": 0,
   "TrapArchetypes": {},
   "TrapNextIndex": 0,
   "TriggerNextIndex": 0,
@@ -1800,7 +1912,7 @@
     "SuccessfulAttackCount": 0,
     "TotalConstructionPoints": 0,
     "TrapCount": 0,
-    "WinRatio": 0.0,
+    "WinRatio": 0,
     "WinRatioDifficulty": 0
    },
    "CastleType": 0,
@@ -1809,15 +1921,21 @@
    "DecorationNextIndex": 0,
    "Draft": {},
    "HeroCorpses": {},
-   "InventoryDecorations": {
-    "Level": 0
-   },
-   "InventoryDefenseIngredientBoosts": {
-    "Level": 0
-   },
-   "InventoryRooms": {
-    "Level": 0
-   },
+   "InventoryDecorations": [
+    {
+     "Level": 0
+    }
+   ],
+   "InventoryDefenseIngredientBoosts": [
+    {
+     "Level": 0
+    }
+   ],
+   "InventoryRooms": [
+    {
+     "Level": 0
+    }
+   ],
    "InventoryThemes": 0,
    "IsDraftPublished": false,
    "IsRollbackAvailable": false,
@@ -1826,7 +1944,7 @@
    "OwnerSpecialPacks": 0,
    "RoomNextIndex": 0,
    "ShieldEndExpirableId": "string",
-   "TimerDuration": 0.0,
+   "TimerDuration": 0,
    "TrapArchetypes": {},
    "TrapNextIndex": 0,
    "TriggerNextIndex": 0,
@@ -1928,13 +2046,15 @@
    "IsInFreeTrial": false,
    "IsSpecialPack": false,
    "LongHeroName": "string",
-   "PriceReductionConditionModels": {
-    "Completed": false,
-    "CurrentPrice": {},
-    "Id": 0,
-    "Level": 0,
-    "PriceReduction": {}
-   },
+   "PriceReductionConditionModels": [
+    {
+     "Completed": false,
+     "CurrentPrice": {},
+     "Id": 0,
+     "Level": 0,
+     "PriceReduction": {}
+    }
+   ],
    "RegularPrice": {},
    "SpecContainerId": 0
   },
@@ -1960,7 +2080,7 @@
   "BuildingType": 0
  },
  "BuildingNavBarSettings": {
-  "Links": 0
+  "Links": []
  },
  "BuildingPopupInfoViewModel": {
   "BuildingId": 0,
@@ -2124,38 +2244,42 @@
   "ExpirableId": "string"
  },
  "BuildingUpgradeTimerPositionRefreshedEventArgs": {
-  "BuildingUpgradeModels": {
-   "BuildingPopupPositionModel": {
-    "Zoom": 0
-   },
-   "BuildingUpgradeInfosModel": {
-    "BuildingId": 0,
-    "BuildingType": 0,
-    "BuildingUpgradeCost": 0,
-    "BuildingUpgradeDuration": 0,
-    "BuildingUpgradeProgressionPercentage": 0,
-    "BuildingUpgradeRank": 0,
-    "BuildingUpgradeRemainingTime": 0,
-    "BuilingSpecContainerId": 0
+  "BuildingUpgradeModels": [
+   {
+    "BuildingPopupPositionModel": {
+     "Zoom": 0
+    },
+    "BuildingUpgradeInfosModel": {
+     "BuildingId": 0,
+     "BuildingType": 0,
+     "BuildingUpgradeCost": 0,
+     "BuildingUpgradeDuration": 0,
+     "BuildingUpgradeProgressionPercentage": 0,
+     "BuildingUpgradeRank": 0,
+     "BuildingUpgradeRemainingTime": 0,
+     "BuilingSpecContainerId": 0
+    }
    }
-  }
+  ]
  },
  "BuildingUpgradeViewModel": {
-  "BuildingUpgradeModels": {
-   "BuildingPopupPositionModel": {
-    "Zoom": 0
-   },
-   "BuildingUpgradeInfosModel": {
-    "BuildingId": 0,
-    "BuildingType": 0,
-    "BuildingUpgradeCost": 0,
-    "BuildingUpgradeDuration": 0,
-    "BuildingUpgradeProgressionPercentage": 0,
-    "BuildingUpgradeRank": 0,
-    "BuildingUpgradeRemainingTime": 0,
-    "BuilingSpecContainerId": 0
+  "BuildingUpgradeModels": [
+   {
+    "BuildingPopupPositionModel": {
+     "Zoom": 0
+    },
+    "BuildingUpgradeInfosModel": {
+     "BuildingId": 0,
+     "BuildingType": 0,
+     "BuildingUpgradeCost": 0,
+     "BuildingUpgradeDuration": 0,
+     "BuildingUpgradeProgressionPercentage": 0,
+     "BuildingUpgradeRank": 0,
+     "BuildingUpgradeRemainingTime": 0,
+     "BuilingSpecContainerId": 0
+    }
    }
-  }
+  ]
  },
  "BusInfos": {
   "AmbienceBusIds": {},
@@ -2220,10 +2344,10 @@
  "Castle": {
   "AccountDisplayName": "string",
   "AccountId": 0,
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CreationDate": "string",
   "CreatureTiers": {},
   "LayoutId": 0,
-  "ModificationDate": "2015-01-01T00:00:00Z",
+  "ModificationDate": "string",
   "OasisNameId": 0,
   "Rooms": {},
   "ThemeId": 0,
@@ -2241,7 +2365,7 @@
   "DefendLogEntry": {
    "AttackDurationInMilliseconds": 0,
    "AttackId": "string",
-   "AttackStartDateTime": "2015-01-01T00:00:00Z",
+   "AttackStartDateTime": "string",
    "AttackType": 0,
    "AttackerAccountSummary": {},
    "CastleRating": 0,
@@ -2255,16 +2379,18 @@
    "Level": 0,
    "Message": {
     "Data": {},
-    "DateSent": "2015-01-01T00:00:00Z",
+    "DateSent": "string",
     "SenderId": 0,
     "Type": 0
    },
-   "PillagedMines": {
-    "CastleBuildingId": 0,
-    "IsDestroyed": false,
-    "StolenAmount": 0,
-    "StolenHeroItems": {}
-   },
+   "PillagedMines": [
+    {
+     "CastleBuildingId": 0,
+     "IsDestroyed": false,
+     "StolenAmount": 0,
+     "StolenHeroItems": {}
+    }
+   ],
    "PotionUsed": 0,
    "ResurrectionCount": 0,
    "RevengeEnabled": false,
@@ -2277,7 +2403,7 @@
   },
   "HeroCorpses": {},
   "SuccessfulAttackCount": 0,
-  "WinRatio": 0.0,
+  "WinRatio": 0,
   "WinRatioDifficulty": 0
  },
  "CastleBlueprintTemplate": {
@@ -2295,7 +2421,7 @@
     "SuccessfulAttackCount": 0,
     "TotalConstructionPoints": 0,
     "TrapCount": 0,
-    "WinRatio": 0.0,
+    "WinRatio": 0,
     "WinRatioDifficulty": 0
    },
    "CastleType": 0,
@@ -2304,15 +2430,21 @@
    "DecorationNextIndex": 0,
    "Draft": {},
    "HeroCorpses": {},
-   "InventoryDecorations": {
-    "Level": 0
-   },
-   "InventoryDefenseIngredientBoosts": {
-    "Level": 0
-   },
-   "InventoryRooms": {
-    "Level": 0
-   },
+   "InventoryDecorations": [
+    {
+     "Level": 0
+    }
+   ],
+   "InventoryDefenseIngredientBoosts": [
+    {
+     "Level": 0
+    }
+   ],
+   "InventoryRooms": [
+    {
+     "Level": 0
+    }
+   ],
    "InventoryThemes": 0,
    "IsDraftPublished": false,
    "IsRollbackAvailable": false,
@@ -2321,7 +2453,7 @@
    "OwnerSpecialPacks": 0,
    "RoomNextIndex": 0,
    "ShieldEndExpirableId": "string",
-   "TimerDuration": 0.0,
+   "TimerDuration": 0,
    "TrapArchetypes": {},
    "TrapNextIndex": 0,
    "TriggerNextIndex": 0,
@@ -2356,13 +2488,13 @@
   "UbisoftCompetitionId": 0
  },
  "CastleCreature": {
-  "AggroPropagationOffsetX": 0.0,
-  "AggroPropagationOffsetZ": 0.0,
+  "AggroPropagationOffsetX": 0,
+  "AggroPropagationOffsetZ": 0,
   "IsSleeping": false,
   "TotemCastleBuildableId": 0
  },
  "CastleDPSBoostConsumableTemplate": {
-  "IncreasedDPS": 0.0
+  "IncreasedDPS": 0
  },
  "CastleDetailsPanelNavigationModel": {
   "CastleInfoModel": {
@@ -2390,8 +2522,8 @@
     "IsShielded": false,
     "IsTargetedAttack": false,
     "LastCastleRating": 0,
-    "LastPublishedDate": "2015-01-01T00:00:00Z",
-    "LastSeenOnline": "2015-01-01T00:00:00Z",
+    "LastPublishedDate": "string",
+    "LastSeenOnline": "string",
     "Level": 0,
     "PotentialLoot": {
      "BoostIGC": 0,
@@ -2407,14 +2539,14 @@
      "MinesStealableLifeForce": 0,
      "MinesStealablePremiumCash": 0,
      "PremiumCashMineCount": 0,
-     "RareDefenseIngredientRatio": 0.0,
+     "RareDefenseIngredientRatio": 0,
      "TreasureRoomStealableIGC": 0,
      "TreasureRoomStealableLifeForce": 0,
      "Xp": 0
     },
     "RevengeAttackId": "string",
     "RoomCount": 0,
-    "ShieldExpirationDate": "2015-01-01T00:00:00Z",
+    "ShieldExpirationDate": "string",
     "Stats": {},
     "SuccessfulAttackCount": 0,
     "TrophyScore": 0,
@@ -2433,7 +2565,7 @@
    "IsCastleAttackableForTargetedAttack": false,
    "IsRegionBoss": false,
    "SubLeagueModel": {
-    "AttackBonus": 0.0,
+    "AttackBonus": 0,
     "LargeIconUrl": "string",
     "Name": "string",
     "PrefixName": "string",
@@ -2441,7 +2573,7 @@
    },
    "TargetedAttackAvailableCount": 0,
    "ValidatedAttackSource": 0,
-   "WinRatioDefaultValue": 0.0,
+   "WinRatioDefaultValue": 0,
    "WinRatioDifficultyOasisName": "string"
   }
  },
@@ -2462,7 +2594,7 @@
     "SuccessfulAttackCount": 0,
     "TotalConstructionPoints": 0,
     "TrapCount": 0,
-    "WinRatio": 0.0,
+    "WinRatio": 0,
     "WinRatioDifficulty": 0
    },
    "CastleType": 0,
@@ -2471,15 +2603,21 @@
    "DecorationNextIndex": 0,
    "Draft": {},
    "HeroCorpses": {},
-   "InventoryDecorations": {
-    "Level": 0
-   },
-   "InventoryDefenseIngredientBoosts": {
-    "Level": 0
-   },
-   "InventoryRooms": {
-    "Level": 0
-   },
+   "InventoryDecorations": [
+    {
+     "Level": 0
+    }
+   ],
+   "InventoryDefenseIngredientBoosts": [
+    {
+     "Level": 0
+    }
+   ],
+   "InventoryRooms": [
+    {
+     "Level": 0
+    }
+   ],
    "InventoryThemes": 0,
    "IsDraftPublished": false,
    "IsRollbackAvailable": false,
@@ -2488,7 +2626,7 @@
    "OwnerSpecialPacks": 0,
    "RoomNextIndex": 0,
    "ShieldEndExpirableId": "string",
-   "TimerDuration": 0.0,
+   "TimerDuration": 0,
    "TrapArchetypes": {},
    "TrapNextIndex": 0,
    "TriggerNextIndex": 0,
@@ -2501,9 +2639,11 @@
   "SpecialGroundIds": 0
  },
  "CastleExpansionPattern": {
-  "CastleExpansions": {
-   "SpecialGroundIds": 0
-  },
+  "CastleExpansions": [
+   {
+    "SpecialGroundIds": 0
+   }
+  ],
   "EntranceX": 0,
   "EntranceY": 0,
   "ExitX": 0,
@@ -2531,14 +2671,14 @@
   "CastleDescriptionOasisID": 0,
   "CastleIconUrl": "string",
   "CastleInfoSummary": {
-   "ActivationDate": "2015-01-01T00:00:00Z",
+   "ActivationDate": "string",
    "AttackType": 0,
    "AttackerStatus": 0,
    "CastleHeartRank": 0,
    "CastleIconUrl": "string",
    "CastleThemeId": 0,
    "CastleType": 0,
-   "DeActivationDate": "2015-01-01T00:00:00Z",
+   "DeActivationDate": "string",
    "DefenderAccountSummary": {},
    "FromMachineLearning": false,
    "IsBranded": false,
@@ -2546,9 +2686,9 @@
    "IsNew": false,
    "IsShielded": false,
    "LastComment": {},
-   "LastPublishedDate": "2015-01-01T00:00:00Z",
+   "LastPublishedDate": "string",
    "Level": 0,
-   "TrophyCooldownTimer": "2015-01-01T00:00:00Z",
+   "TrophyCooldownTimer": "string",
    "TrophyScore": 0,
    "UbisoftCompetitionId": 0,
    "VictoryConditionLevel": 0,
@@ -2573,20 +2713,24 @@
  },
  "CastleGroundGenerationSettings": {
   "AuthorizeHolesInDiagonals": false,
-  "CastleExpansionPatterns": {
-   "CastleExpansions": {
-    "SpecialGroundIds": 0
-   },
-   "EntranceX": 0,
-   "EntranceY": 0,
-   "ExitX": 0,
-   "ExitY": 0
-  },
+  "CastleExpansionPatterns": [
+   {
+    "CastleExpansions": [
+     {
+      "SpecialGroundIds": 0
+     }
+    ],
+    "EntranceX": 0,
+    "EntranceY": 0,
+    "ExitX": 0,
+    "ExitY": 0
+   }
+  ],
   "DefaultGrounds": 0,
   "EntranceRoomSettings": {},
   "ExitRoomSettings": {},
-  "ExpandHoleChance": 0.0,
-  "HolePercentage": 0.0,
+  "ExpandHoleChance": 0,
+  "HolePercentage": 0,
   "SpecialGroundCount": 0,
   "SpecialGroundMinDistance": 0
  },
@@ -2607,7 +2751,7 @@
  },
  "CastleHeroCorpse": {
   "Amounts": {},
-  "ElapsedTimeSinceDeath": 0.0,
+  "ElapsedTimeSinceDeath": 0,
   "EntityHarvestId": 0,
   "GlobalX": 0,
   "GlobalZ": 0,
@@ -2641,8 +2785,8 @@
   "IsShielded": false,
   "IsTargetedAttack": false,
   "LastCastleRating": 0,
-  "LastPublishedDate": "2015-01-01T00:00:00Z",
-  "LastSeenOnline": "2015-01-01T00:00:00Z",
+  "LastPublishedDate": "string",
+  "LastSeenOnline": "string",
   "Level": 0,
   "PotentialLoot": {
    "BoostIGC": 0,
@@ -2658,14 +2802,14 @@
    "MinesStealableLifeForce": 0,
    "MinesStealablePremiumCash": 0,
    "PremiumCashMineCount": 0,
-   "RareDefenseIngredientRatio": 0.0,
+   "RareDefenseIngredientRatio": 0,
    "TreasureRoomStealableIGC": 0,
    "TreasureRoomStealableLifeForce": 0,
    "Xp": 0
   },
   "RevengeAttackId": "string",
   "RoomCount": 0,
-  "ShieldExpirationDate": "2015-01-01T00:00:00Z",
+  "ShieldExpirationDate": "string",
   "Stats": {},
   "SuccessfulAttackCount": 0,
   "TrophyScore": 0,
@@ -2700,8 +2844,8 @@
    "IsShielded": false,
    "IsTargetedAttack": false,
    "LastCastleRating": 0,
-   "LastPublishedDate": "2015-01-01T00:00:00Z",
-   "LastSeenOnline": "2015-01-01T00:00:00Z",
+   "LastPublishedDate": "string",
+   "LastSeenOnline": "string",
    "Level": 0,
    "PotentialLoot": {
     "BoostIGC": 0,
@@ -2717,14 +2861,14 @@
     "MinesStealableLifeForce": 0,
     "MinesStealablePremiumCash": 0,
     "PremiumCashMineCount": 0,
-    "RareDefenseIngredientRatio": 0.0,
+    "RareDefenseIngredientRatio": 0,
     "TreasureRoomStealableIGC": 0,
     "TreasureRoomStealableLifeForce": 0,
     "Xp": 0
    },
    "RevengeAttackId": "string",
    "RoomCount": 0,
-   "ShieldExpirationDate": "2015-01-01T00:00:00Z",
+   "ShieldExpirationDate": "string",
    "Stats": {},
    "SuccessfulAttackCount": 0,
    "TrophyScore": 0,
@@ -2743,7 +2887,7 @@
   "IsCastleAttackableForTargetedAttack": false,
   "IsRegionBoss": false,
   "SubLeagueModel": {
-   "AttackBonus": 0.0,
+   "AttackBonus": 0,
    "LargeIconUrl": "string",
    "Name": "string",
    "PrefixName": "string",
@@ -2751,18 +2895,18 @@
   },
   "TargetedAttackAvailableCount": 0,
   "ValidatedAttackSource": 0,
-  "WinRatioDefaultValue": 0.0,
+  "WinRatioDefaultValue": 0,
   "WinRatioDifficultyOasisName": "string"
  },
  "CastleInfoSummary": {
-  "ActivationDate": "2015-01-01T00:00:00Z",
+  "ActivationDate": "string",
   "AttackType": 0,
   "AttackerStatus": 0,
   "CastleHeartRank": 0,
   "CastleIconUrl": "string",
   "CastleThemeId": 0,
   "CastleType": 0,
-  "DeActivationDate": "2015-01-01T00:00:00Z",
+  "DeActivationDate": "string",
   "DefenderAccountSummary": {},
   "FromMachineLearning": false,
   "IsBranded": false,
@@ -2770,9 +2914,9 @@
   "IsNew": false,
   "IsShielded": false,
   "LastComment": {},
-  "LastPublishedDate": "2015-01-01T00:00:00Z",
+  "LastPublishedDate": "string",
   "Level": 0,
-  "TrophyCooldownTimer": "2015-01-01T00:00:00Z",
+  "TrophyCooldownTimer": "string",
   "TrophyScore": 0,
   "UbisoftCompetitionId": 0,
   "VictoryConditionLevel": 0,
@@ -2846,7 +2990,7 @@
   "Value": 0
  },
  "CastleItemValueSettings": {
-  "Items": 0
+  "Items": []
  },
  "CastleLayout": {
   "Height": 0,
@@ -2948,7 +3092,7 @@
   "PosX": 0,
   "PosY": 0,
   "SubLeagueModel": {
-   "AttackBonus": 0.0,
+   "AttackBonus": 0,
    "LargeIconUrl": "string",
    "Name": "string",
    "PrefixName": "string",
@@ -3007,14 +3151,14 @@
   "CastleRating": 0,
   "Message": {
    "Data": {},
-   "DateSent": "2015-01-01T00:00:00Z",
+   "DateSent": "string",
    "SenderId": 0,
    "Type": 0
   }
  },
  "CastleRatingFreePrize": {
   "Amount": 0,
-  "Chance": 0.0,
+  "Chance": 0,
   "CurrencyType": 0
  },
  "CastleRenovationCollectedMaterialModel": {
@@ -3060,14 +3204,16 @@
   "AreRequiredMaterialsInHeroInventory": false
  },
  "CastleRenovationPanelNavigationModel": {
-  "CastleRenovationLevelModels": {
-   "CastleRenovationLevel": 0,
-   "CompletionInformation": {},
-   "InventorySlotModels": {},
-   "IsCompleted": false,
-   "LevelNameOasisId": 0,
-   "RewardNameOasisId": 0
-  },
+  "CastleRenovationLevelModels": [
+   {
+    "CastleRenovationLevel": 0,
+    "CompletionInformation": {},
+    "InventorySlotModels": {},
+    "IsCompleted": false,
+    "LevelNameOasisId": 0,
+    "RewardNameOasisId": 0
+   }
+  ],
   "CurrentRenovationLevel": 0,
   "IsOpalPanel": false,
   "PanelName": 0
@@ -3115,12 +3261,14 @@
   },
   "Result": {},
   "ResultFromCache": false,
-  "SpecialPackModels": {
-   "IconLayerName": "string",
-   "IconUrl": "string",
-   "IconUrlLarge": "string",
-   "SpecialPackId": 0
-  }
+  "SpecialPackModels": [
+   {
+    "IconLayerName": "string",
+    "IconUrl": "string",
+    "IconUrlLarge": "string",
+    "SpecialPackId": 0
+   }
+  ]
  },
  "CastleStats": {
   "AttackCount": 0,
@@ -3129,7 +3277,7 @@
   "SuccessfulAttackCount": 0,
   "TotalConstructionPoints": 0,
   "TrapCount": 0,
-  "WinRatio": 0.0,
+  "WinRatio": 0,
   "WinRatioDifficulty": 0
  },
  "CastleSummary": {
@@ -3137,7 +3285,7 @@
   "AccountId": 0,
   "AvatarId": 0,
   "IsPublished": false,
-  "LastPublishedDate": "2015-01-01T00:00:00Z",
+  "LastPublishedDate": "string",
   "Level": 0
  },
  "CastleSummaryModel": {
@@ -3145,10 +3293,10 @@
   "Castle": {
    "AccountDisplayName": "string",
    "AccountId": 0,
-   "CreationDate": "2015-01-01T00:00:00Z",
+   "CreationDate": "string",
    "CreatureTiers": {},
    "LayoutId": 0,
-   "ModificationDate": "2015-01-01T00:00:00Z",
+   "ModificationDate": "string",
    "OasisNameId": 0,
    "Rooms": {},
    "ThemeId": 0,
@@ -3220,8 +3368,8 @@
  },
  "CastleWinRatioDifficultySettings": {
   "OasisId": 0,
-  "WinRatioFrom": 0.0,
-  "WinRatioTo": 0.0
+  "WinRatioFrom": 0,
+  "WinRatioTo": 0
  },
  "CastlesForSaleSelectionResult": {
   "CastlesForSale": {}
@@ -3282,7 +3430,7 @@
  "ChatMessage": {
   "ChatMessageType": 0,
   "Message": "string",
-  "MessageDateTime": "2015-01-01T00:00:00Z",
+  "MessageDateTime": "string",
   "PresenceStatus": 0,
   "ProfileSummaryModel": {
    "AccountId": 0,
@@ -3312,17 +3460,21 @@
  "ChatPanelNavigationModel": {
   "ChatRoomConfigModel": {
    "ChatKeepAliveDelay": 0,
-   "ChatLanguages": {
-    "DebugName": "string",
-    "IconUrl": "string",
-    "LanguageCode": "string",
-    "OasisNameId": 0
-   },
+   "ChatLanguages": [
+    {
+     "DebugName": "string",
+     "IconUrl": "string",
+     "LanguageCode": "string",
+     "OasisNameId": 0
+    }
+   ],
    "ChatReconnectionDelay": 0,
-   "ChatRoomInfos": {
-    "ChatEnabled": false,
-    "RoomName": "string"
-   },
+   "ChatRoomInfos": [
+    {
+     "ChatEnabled": false,
+     "RoomName": "string"
+    }
+   ],
    "MaxMessagesCount": 0,
    "RoomTypes": {},
    "SelectedLanguageCode": "string",
@@ -3342,17 +3494,21 @@
  },
  "ChatRoomConfigModel": {
   "ChatKeepAliveDelay": 0,
-  "ChatLanguages": {
-   "DebugName": "string",
-   "IconUrl": "string",
-   "LanguageCode": "string",
-   "OasisNameId": 0
-  },
+  "ChatLanguages": [
+   {
+    "DebugName": "string",
+    "IconUrl": "string",
+    "LanguageCode": "string",
+    "OasisNameId": 0
+   }
+  ],
   "ChatReconnectionDelay": 0,
-  "ChatRoomInfos": {
-   "ChatEnabled": false,
-   "RoomName": "string"
-  },
+  "ChatRoomInfos": [
+   {
+    "ChatEnabled": false,
+    "RoomName": "string"
+   }
+  ],
   "MaxMessagesCount": 0,
   "RoomTypes": {},
   "SelectedLanguageCode": "string",
@@ -3413,7 +3569,7 @@
   "ExplanationText": "string"
  },
  "ClientCallProfilingTracking": {
-  "Duration": 0.0,
+  "Duration": 0,
   "PathAndQuery": "string"
  },
  "ClientIdleCommand": {
@@ -3484,7 +3640,7 @@
   "TimeShift": 0
  },
  "CommunityEventBoostSettings": {
-  "BoostCommunityEvents": 0
+  "BoostCommunityEvents": []
  },
  "CommunityEventEndedEventArgs": {
   "CommunityEvent": {
@@ -3498,7 +3654,7 @@
   "TimeShift": 0
  },
  "CommunityEventSkuSettings": {
-  "SkuCommunityEvents": 0
+  "SkuCommunityEvents": []
  },
  "CommunityEventStartedEventArgs": {
   "CommunityEvent": {
@@ -3643,10 +3799,12 @@
  },
  "CraftingMaterialConsumptionModel": {
   "Cost": {},
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  }
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ]
  },
  "CraftingMaterialInformation": {
   "BaseCraftingMaterialRequirement": {},
@@ -3654,26 +3812,32 @@
   "PerLevelCraftingMaterialRequirement": {}
  },
  "CraftingMaterialMineHarvestCompletedEventArgs": {
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  }
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ]
  },
  "CraftingMaterialMineInformationModel": {
   "CraftingMaterialMineState": 0,
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
   "RemainingTime": 0
  },
  "CraftingMaterialMineTooltipModel": {
   "CraftingMaterialMineInformationModel": {
    "CraftingMaterialMineState": 0,
-   "CraftingMaterials": {
-    "Id": 0,
-    "Quantity": 0
-   },
+   "CraftingMaterials": [
+    {
+     "Id": 0,
+     "Quantity": 0
+    }
+   ],
    "RemainingTime": 0
   },
   "Type": 0
@@ -3717,10 +3881,12 @@
   "CraftingMaterialsGained": {}
  },
  "CraftingMaterialsRewardItem": {
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  }
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ]
  },
  "CraftingStampingCounterModel": {
   "UIGridItemModel": {
@@ -3732,16 +3898,18 @@
    "CanAfford": false,
    "CanDisableParentContainerInput": false,
    "ConsumableType": 0,
-   "CraftingMaterialModels": {
-    "ActualCount": 0,
-    "HasEnoughCraftingMaterial": false,
-    "IconUrl": "string",
-    "IsConsumed": false,
-    "LayerName": "string",
-    "Quality": 0,
-    "RequiredCount": 0,
-    "TemplateId": 0
-   },
+   "CraftingMaterialModels": [
+    {
+     "ActualCount": 0,
+     "HasEnoughCraftingMaterial": false,
+     "IconUrl": "string",
+     "IsConsumed": false,
+     "LayerName": "string",
+     "Quality": 0,
+     "RequiredCount": 0,
+     "TemplateId": 0
+    }
+   ],
    "CreatureRank": 0,
    "DiscountPercentOff": 0,
    "DiscountType": 0,
@@ -3810,19 +3978,21 @@
   "BoostName": "string",
   "CanAfford": false,
   "Cost": {},
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
   "CreatureName": "string",
   "CurrentBoostedCreatureCount": 0,
   "IsBoostable": false,
   "MaxBoostedCreatureCount": 0
  },
  "CreatureRankColorTableEntry": {
-  "CreatureRank": 0,
-  "DarkColor": 0,
-  "LightColor": 0
+  "CreatureRank": "string",
+  "DarkColor": "string",
+  "LightColor": "string"
  },
  "CreatureTrapAbilityModel": {
   "Description": "string",
@@ -3945,7 +4115,7 @@
  },
  "CrownsDiminishingReturn": {
   "DeathCount": 0,
-  "DiminishingReturnMultiplier": 0.0
+  "DiminishingReturnMultiplier": 0
  },
  "CsvDataTypeInfo": {
   "Name": "string",
@@ -3991,15 +4161,15 @@
   "Items": {}
  },
  "DamageFloatingTextOverride": {
-  "FloatingTextByMinDamageHealthRatios": 0
+  "FloatingTextByMinDamageHealthRatios": []
  },
  "DamageFloatingTextOverrides": {
-  "AttackerDamageFloatingTextOverride": 0,
-  "DefenderDamageFloatingTextOverride": 0
+  "AttackerDamageFloatingTextOverride": {},
+  "DefenderDamageFloatingTextOverride": {}
  },
  "DamageMultiplier": {
   "LevelDiff": 0,
-  "Multiplier": 0.0
+  "Multiplier": 0
  },
  "DataNavigationModel": {
   "HideLobbyBar": false,
@@ -4053,7 +4223,7 @@
  "DefendLogEntry": {
   "AttackDurationInMilliseconds": 0,
   "AttackId": "string",
-  "AttackStartDateTime": "2015-01-01T00:00:00Z",
+  "AttackStartDateTime": "string",
   "AttackType": 0,
   "AttackerAccountSummary": {},
   "CastleRating": 0,
@@ -4067,16 +4237,18 @@
   "Level": 0,
   "Message": {
    "Data": {},
-   "DateSent": "2015-01-01T00:00:00Z",
+   "DateSent": "string",
    "SenderId": 0,
    "Type": 0
   },
-  "PillagedMines": {
-   "CastleBuildingId": 0,
-   "IsDestroyed": false,
-   "StolenAmount": 0,
-   "StolenHeroItems": {}
-  },
+  "PillagedMines": [
+   {
+    "CastleBuildingId": 0,
+    "IsDestroyed": false,
+    "StolenAmount": 0,
+    "StolenHeroItems": {}
+   }
+  ],
   "PotionUsed": 0,
   "ResurrectionCount": 0,
   "RevengeEnabled": false,
@@ -4088,14 +4260,14 @@
   "VictoryConditionType": 0
  },
  "DefendLogEntryDeletedNotification": {
-  "LastValidEntryDate": "2015-01-01T00:00:00Z"
+  "LastValidEntryDate": "string"
  },
  "DefendLogEntryModel": {
   "AvatarUrl": "string",
   "DefendLogEntry": {
    "AttackDurationInMilliseconds": 0,
    "AttackId": "string",
-   "AttackStartDateTime": "2015-01-01T00:00:00Z",
+   "AttackStartDateTime": "string",
    "AttackType": 0,
    "AttackerAccountSummary": {},
    "CastleRating": 0,
@@ -4109,16 +4281,18 @@
    "Level": 0,
    "Message": {
     "Data": {},
-    "DateSent": "2015-01-01T00:00:00Z",
+    "DateSent": "string",
     "SenderId": 0,
     "Type": 0
    },
-   "PillagedMines": {
-    "CastleBuildingId": 0,
-    "IsDestroyed": false,
-    "StolenAmount": 0,
-    "StolenHeroItems": {}
-   },
+   "PillagedMines": [
+    {
+     "CastleBuildingId": 0,
+     "IsDestroyed": false,
+     "StolenAmount": 0,
+     "StolenHeroItems": {}
+    }
+   ],
    "PotionUsed": 0,
    "ResurrectionCount": 0,
    "RevengeEnabled": false,
@@ -4147,7 +4321,7 @@
   "DefendLogEntry": {
    "AttackDurationInMilliseconds": 0,
    "AttackId": "string",
-   "AttackStartDateTime": "2015-01-01T00:00:00Z",
+   "AttackStartDateTime": "string",
    "AttackType": 0,
    "AttackerAccountSummary": {},
    "CastleRating": 0,
@@ -4161,16 +4335,18 @@
    "Level": 0,
    "Message": {
     "Data": {},
-    "DateSent": "2015-01-01T00:00:00Z",
+    "DateSent": "string",
     "SenderId": 0,
     "Type": 0
    },
-   "PillagedMines": {
-    "CastleBuildingId": 0,
-    "IsDestroyed": false,
-    "StolenAmount": 0,
-    "StolenHeroItems": {}
-   },
+   "PillagedMines": [
+    {
+     "CastleBuildingId": 0,
+     "IsDestroyed": false,
+     "StolenAmount": 0,
+     "StolenHeroItems": {}
+    }
+   ],
    "PotionUsed": 0,
    "ResurrectionCount": 0,
    "RevengeEnabled": false,
@@ -4255,17 +4431,19 @@
   "Gold": 0,
   "HealthOrbFragments": 0,
   "Id": 0,
-  "InventoryItems": {
-   "ArchetypeId": 0,
-   "DyeTemplateId": 0,
-   "Effects": {},
-   "IsBranded": false,
-   "IsSellable": false,
-   "ItemLevel": 0,
-   "PowerUp": {},
-   "PrimaryStatsModifiers": 0,
-   "TemplateId": 0
-  },
+  "InventoryItems": [
+   {
+    "ArchetypeId": 0,
+    "DyeTemplateId": 0,
+    "Effects": {},
+    "IsBranded": false,
+    "IsSellable": false,
+    "ItemLevel": 0,
+    "PowerUp": {},
+    "PrimaryStatsModifiers": 0,
+    "TemplateId": 0
+   }
+  ],
   "LifeForce": 0,
   "PremiumCash": 0,
   "Xp": 0
@@ -4285,10 +4463,12 @@
   "SpecializationId": 0
  },
  "DefenseIngredientStampingModel": {
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
   "CurrencyAmount": {
    "Amount": 0,
    "CurrencyType": 0
@@ -4332,18 +4512,18 @@
   "DisplayPlayerCastle": false
  },
  "DistanceFieldSettings": {
-  "Gradient": 0.0,
+  "Gradient": 0,
   "InnerColor": 0,
-  "InnerGradient": 0.0,
-  "InnerOffsetX": 0.0,
-  "InnerOffsetY": 0.0,
-  "InnerSize": 0.0,
+  "InnerGradient": 0,
+  "InnerOffsetX": 0,
+  "InnerOffsetY": 0,
+  "InnerSize": 0,
   "OuterColor": 0,
-  "OuterGradient": 0.0,
-  "OuterOffsetX": 0.0,
-  "OuterOffsetY": 0.0,
-  "OuterSize": 0.0,
-  "Thickness": 0.0
+  "OuterGradient": 0,
+  "OuterOffsetX": 0,
+  "OuterOffsetY": 0,
+  "OuterSize": 0,
+  "Thickness": 0
  },
  "DistanceFieldSettingsModel": {
   "DistanceFields": {}
@@ -4394,7 +4574,7 @@
  "DraftValidatedNotification": {
   "BoostedCreatures": {},
   "BoostedTraps": {},
-  "CastleValidationDuration": 0.0,
+  "CastleValidationDuration": 0,
   "DefenderAccountId": 0,
   "IsDraftPublished": false,
   "IsRollbackAvailable": false,
@@ -4402,20 +4582,24 @@
  },
  "DropCountModifer": {
   "AttackerCastleLevelDiff": 0,
-  "DropModifier": 0.0
+  "DropModifier": 0
  },
  "DuplicatedSpecException": {
   "Spec": {
-   "Tag": 0
+   "Tag": "string"
   },
   "SpecContainer": {
    "Name": "string",
-   "Specs": 0
+   "Specs": [
+    {
+     "Tag": "string"
+    }
+   ]
   }
  },
  "DurationByVictoryCondition": {
   "BaseDuration": 0,
-  "CPMultiplier": 0.0
+  "CPMultiplier": 0
  },
  "DyeInfoModel": {
   "AnimationName": "string",
@@ -4444,7 +4628,7 @@
   "BoostXp": 0,
   "CastleRatingFreePrize": {
    "Amount": 0,
-   "Chance": 0.0,
+   "Chance": 0,
    "CurrencyType": 0
   },
   "CastleShieldedByAttacker": false,
@@ -4510,39 +4694,39 @@
   "Version": 0
  },
  "EngineTracking": {
-  "EngineTrackingAverageFps": 0.0,
-  "EngineTrackingTimeBetween20and59Fps": 0.0,
-  "EngineTrackingTimeGreater59Fps": 0.0,
-  "EngineTrackingTimeLess20Fps": 0.0
+  "EngineTrackingAverageFps": 0,
+  "EngineTrackingTimeBetween20and59Fps": 0,
+  "EngineTrackingTimeGreater59Fps": 0,
+  "EngineTrackingTimeLess20Fps": 0
  },
  "EntitiesUIContainerParameter": {
   "IconOffset3D": {},
   "SpecificZoomSettings": {},
-  "UIContainer": 0,
+  "UIContainer": "string",
   "UseHeadNode": false,
-  "ZBias": 0.0
+  "ZBias": 0
  },
  "EnvironmentSettings": {
-  "EastColor": 0,
-  "EnvironmentName": 0,
+  "EastColor": "string",
+  "EnvironmentName": "string",
   "FogCenterDensity": 0,
-  "FogColor": 0,
+  "FogColor": "string",
   "FogIntensity": 0,
   "FogRampTexture": "string",
   "FogThreshold": 0,
-  "GroundColor": 0,
+  "GroundColor": "string",
   "LightingMaterialFileName": "string",
-  "NorthColor": 0,
+  "NorthColor": "string",
   "SkyBoxFileName": "string",
-  "SkyColor": 0,
-  "SouthColor": 0,
+  "SkyColor": "string",
+  "SouthColor": "string",
   "SunMaterialFileName": "string",
   "SunPitch": 0,
   "SunYaw": 0,
-  "WestColor": 0
+  "WestColor": "string"
  },
  "EnvironmentSettingsGroup": {
-  "EnvironmentSettingsList": 0
+  "EnvironmentSettingsList": []
  },
  "EquipmentAbilityModel": {
   "Description": "string",
@@ -4564,12 +4748,18 @@
  },
  "EquipmentGenerationSettings": {
   "GearScoreMultiplier": 0,
-  "MagicalProperties": 0,
-  "MagicalPropertiesLevelLimitations": 0,
+  "MagicalProperties": [],
+  "MagicalPropertiesLevelLimitations": [],
   "MaxResistance": 0,
-  "MinimumConditionPowerUpUnlockList": 0,
+  "MinimumConditionPowerUpUnlockList": [],
   "NamedItemPrimaryStatsValue": 0,
-  "PowerUpLevelLimitations": 0,
+  "PowerUpLevelLimitations": [
+   {
+    "ItemLevel": 0,
+    "MaxPowerUpLevel": 0,
+    "MinPowerUpLevel": 0
+   }
+  ],
   "PrimaryStatLevelAdvantage": {},
   "PrimaryStatLevelDisadvantage": {},
   "ResistanceRandomMinRange": 0,
@@ -4684,7 +4874,7 @@
   "ErrorCode": 0
  },
  "ErrorSettings": {
-  "Errors": 0,
+  "Errors": [],
   "ForumLinkMainOasisId": 0,
   "ForumLinkSecondaryOasisId": 0
  },
@@ -4704,7 +4894,7 @@
   "ExpirableId": "string"
  },
  "ExpirableUpdatedNotification": {
-  "DueDate": "2015-01-01T00:00:00Z",
+  "DueDate": "string",
   "DurationSeconds": 0,
   "ExpirableId": "string",
   "IsPaused": false
@@ -4715,10 +4905,10 @@
  },
  "ExtraDamageInfo": {
   "DamageMultiplierByTargetType": {},
-  "ExtraCriticalChance": 0.0,
-  "ExtraCriticalDamage": 0.0,
+  "ExtraCriticalChance": 0,
+  "ExtraCriticalDamage": 0,
   "IgnoreArmor": 0,
-  "ReduceDodgeChance": 0.0
+  "ReduceDodgeChance": 0
  },
  "FacebookAccountSummary": {
   "AvatarUrl": "string",
@@ -4754,8 +4944,8 @@
   "BasicRoomCaps": {},
   "BossRoomCaps": {},
   "BossUsesHardCap": false,
-  "CanGainActivationDistance": 0.0,
-  "CanLoseActivationDistance": 0.0,
+  "CanGainActivationDistance": 0,
+  "CanLoseActivationDistance": 0,
   "CastleLevelBonuses": {},
   "IgnoreCapsInUbisoftCastles": false
  },
@@ -4764,7 +4954,7 @@
   "SimultaneousDefendersCPSoftCap": 0
  },
  "FightDynamicsCastleLevelBonus": {
-  "Bonus": 0.0,
+  "Bonus": 0,
   "MaxCastleLevel": 0
  },
  "Filter": {
@@ -4800,12 +4990,12 @@
   }
  },
  "FloatingTextByMinRatio": {
-  "FloatingText": 0,
+  "FloatingText": {},
   "MinRatio": 0
  },
  "FloatingTextSettings": {
   "AlphaEaseOutFactor": 0,
-  "Color": 0,
+  "Color": "string",
   "Duration": 0,
   "EmitAngle": 0,
   "EmitSpeed": 0,
@@ -4818,7 +5008,7 @@
   "EndAlpha": 0,
   "EndScale": 0,
   "FollowEntity": false,
-  "FontSettings": 0,
+  "FontSettings": {},
   "Gravity": 0,
   "OasisId": 0,
   "OasisIdPlural": 0,
@@ -4826,7 +5016,7 @@
   "ScaleEaseOutFactor": 0,
   "StartAlpha": 0,
   "StartScale": 0,
-  "SynergyMaterialFileName": 0
+  "SynergyMaterialFileName": "string"
  },
  "FootstepsSoundSettings": {
   "FloorMaterialIndexByMaterialType": {},
@@ -4845,7 +5035,7 @@
    "Amount": 0,
    "CurrencyType": 0
   },
-  "RatioPercentage": 0.0,
+  "RatioPercentage": 0,
   "RemainingTime": 0
  },
  "ForgeCraftCommand": {
@@ -4890,7 +5080,7 @@
     "HeroName": "string",
     "HeroStatsModel": {
      "EquipmentAbilities": {},
-     "MaxResistance": 0.0,
+     "MaxResistance": 0,
      "Stats": {},
      "WeightType": 0
     }
@@ -4962,7 +5152,7 @@
     }
    },
    "ForgeMysteryBoxItemModel": {
-    "AddedItemForgeSoundId": 0,
+    "AddedItemForgeSoundId": "string",
     "ForgeSlotId": 0,
     "HeroInventoryItemModel": {
      "ConsumableType": 0,
@@ -4976,12 +5166,12 @@
      "HasRequiredLevel": false,
      "HeroItemCategoryType": 0,
      "HeroItemType": {
-      "EquipUserInterfaceSoundId": 0,
-      "HeroItemCategoryType": 0,
+      "EquipUserInterfaceSoundId": "string",
+      "HeroItemCategoryType": "string",
       "Id": 0,
       "InternalDescription": "string",
       "OasisID": 0,
-      "VisualType": 0
+      "VisualType": "string"
      },
      "IconSynergyName": "string",
      "IconUrl": "string",
@@ -5045,7 +5235,7 @@
   }
  },
  "ForgeMysteryBoxItemModel": {
-  "AddedItemForgeSoundId": 0,
+  "AddedItemForgeSoundId": "string",
   "ForgeSlotId": 0,
   "HeroInventoryItemModel": {
    "ConsumableType": 0,
@@ -5059,12 +5249,12 @@
    "HasRequiredLevel": false,
    "HeroItemCategoryType": 0,
    "HeroItemType": {
-    "EquipUserInterfaceSoundId": 0,
-    "HeroItemCategoryType": 0,
+    "EquipUserInterfaceSoundId": "string",
+    "HeroItemCategoryType": "string",
     "Id": 0,
     "InternalDescription": "string",
     "OasisID": 0,
-    "VisualType": 0
+    "VisualType": "string"
    },
    "IconSynergyName": "string",
    "IconUrl": "string",
@@ -5110,7 +5300,7 @@
    }
   },
   "ForgeMysteryBoxItemModel": {
-   "AddedItemForgeSoundId": 0,
+   "AddedItemForgeSoundId": "string",
    "ForgeSlotId": 0,
    "HeroInventoryItemModel": {
     "ConsumableType": 0,
@@ -5124,12 +5314,12 @@
     "HasRequiredLevel": false,
     "HeroItemCategoryType": 0,
     "HeroItemType": {
-     "EquipUserInterfaceSoundId": 0,
-     "HeroItemCategoryType": 0,
+     "EquipUserInterfaceSoundId": "string",
+     "HeroItemCategoryType": "string",
      "Id": 0,
      "InternalDescription": "string",
      "OasisID": 0,
-     "VisualType": 0
+     "VisualType": "string"
     },
     "IconSynergyName": "string",
     "IconUrl": "string",
@@ -5206,7 +5396,7 @@
     "HeroName": "string",
     "HeroStatsModel": {
      "EquipmentAbilities": {},
-     "MaxResistance": 0.0,
+     "MaxResistance": 0,
      "Stats": {},
      "WeightType": 0
     }
@@ -5228,25 +5418,27 @@
    "PrimaryShopEnabled": false,
    "ProductsViewModel": {},
    "ShopMenuNavigation": {
-    "ShopMenuNavigationButtons": {
-     "EmptyMessageOasisId": 0,
-     "GameButton": 0,
-     "IconClass": "string",
-     "IsDisabledInNUE": false,
-     "IsDisabledOnConsoleUI": false,
-     "IsDisabledOnPCUI": false,
-     "IsLockedDuringItemCrafting": false,
-     "IsLockedDuringItemReforging": false,
-     "IsLockedDuringItemUpgrading": false,
-     "LayerName": "string",
-     "NewItemCount": 0,
-     "OasisId": 0,
-     "ShopCategoriesMerged": {},
-     "ShopCategory": 0,
-     "ShopContext": 0,
-     "Title": "string",
-     "Url": "string"
-    }
+    "ShopMenuNavigationButtons": [
+     {
+      "EmptyMessageOasisId": 0,
+      "GameButton": 0,
+      "IconClass": "string",
+      "IsDisabledInNUE": false,
+      "IsDisabledOnConsoleUI": false,
+      "IsDisabledOnPCUI": false,
+      "IsLockedDuringItemCrafting": false,
+      "IsLockedDuringItemReforging": false,
+      "IsLockedDuringItemUpgrading": false,
+      "LayerName": "string",
+      "NewItemCount": 0,
+      "OasisId": 0,
+      "ShopCategoriesMerged": {},
+      "ShopCategory": 0,
+      "ShopContext": 0,
+      "Title": "string",
+      "Url": "string"
+     }
+    ]
    },
    "Tab": 0,
    "Title": "string"
@@ -5272,16 +5464,23 @@
  },
  "ForgeSettings": {
   "AssignmentCompletedForRegularForge": 0,
-  "CraftTable": 0,
+  "CraftTable": {},
   "ForgeSpecContainerId": 0,
   "MaxForgeItemLevel": 0,
   "MinCraftQuality": {},
   "MinReforgeQuality": {},
-  "NewPlayerExperienceForgeDuration": "0",
-  "PremiumPurchaseForgeDuration": "0",
-  "PropertyLevelUpChances": 0,
-  "ReforgeTable": 0,
-  "UpgradeTable": 0
+  "NewPlayerExperienceForgeDuration": 0,
+  "PremiumPurchaseForgeDuration": 0,
+  "PropertyLevelUpChances": [
+   {
+    "Chance": 0,
+    "LevelFrom": 0,
+    "LevelTo": 0,
+    "PropertyLevel": 0
+   }
+  ],
+  "ReforgeTable": {},
+  "UpgradeTable": {}
  },
  "ForgeSkuModel": {
   "CanAfford": false,
@@ -5393,23 +5592,27 @@
  "FriendsViewModel": {
   "CurrentAccountId": 0,
   "Friends": {},
-  "FriendshipInvitations": {
-   "CreationDate": "2015-01-01T00:00:00Z",
-   "FriendAccountId": 0,
-   "FriendAvatarId": 0,
-   "FriendDisplayName": "string",
-   "HasAccepted": false,
-   "HasDeclined": false,
-   "IsCastleAttackable": false,
-   "IsInvitationOwner": false,
-   "LeagueId": 0
-  },
-  "SpecialPackModels": {
-   "IconLayerName": "string",
-   "IconUrl": "string",
-   "IconUrlLarge": "string",
-   "SpecialPackId": 0
-  },
+  "FriendshipInvitations": [
+   {
+    "CreationDate": "string",
+    "FriendAccountId": 0,
+    "FriendAvatarId": 0,
+    "FriendDisplayName": "string",
+    "HasAccepted": false,
+    "HasDeclined": false,
+    "IsCastleAttackable": false,
+    "IsInvitationOwner": false,
+    "LeagueId": 0
+   }
+  ],
+  "SpecialPackModels": [
+   {
+    "IconLayerName": "string",
+    "IconUrl": "string",
+    "IconUrlLarge": "string",
+    "SpecialPackId": 0
+   }
+  ],
   "TargetedAttackAvailableCount": 0
  },
  "FriendshipActionEventArgs": {
@@ -5438,7 +5641,7 @@
   "FriendAccountSummary": {}
  },
  "FriendshipInvitation": {
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CreationDate": "string",
   "FriendAccountId": 0,
   "FriendAvatarId": 0,
   "FriendDisplayName": "string",
@@ -5465,7 +5668,7 @@
  "FriendshipInvitationModel": {
   "AvatarUrl": "string",
   "FriendshipInvitation": {
-   "CreationDate": "2015-01-01T00:00:00Z",
+   "CreationDate": "string",
    "FriendAccountId": 0,
    "FriendAvatarId": 0,
    "FriendDisplayName": "string",
@@ -5479,7 +5682,7 @@
  },
  "FriendshipInvitationUpdatedNotification": {
   "FriendshipInvitation": {
-   "CreationDate": "2015-01-01T00:00:00Z",
+   "CreationDate": "string",
    "FriendAccountId": 0,
    "FriendAvatarId": 0,
    "FriendDisplayName": "string",
@@ -5503,23 +5706,25 @@
  },
  "GameCameraZoomLevel": {
   "AttachCameraLight": false,
-  "Distance": 0.0,
-  "EaseInDuration": 0.0,
-  "EaseInFactor": 0.0,
-  "FOV": 0.0,
-  "Pitch": 0.0,
+  "Distance": 0,
+  "EaseInDuration": 0,
+  "EaseInFactor": 0,
+  "FOV": 0,
+  "Pitch": 0,
   "ShowWalls": false,
-  "TargetOffsetX": 0.0,
-  "TargetOffsetY": 0.0,
-  "TargetOffsetZ": 0.0
+  "TargetOffsetX": 0,
+  "TargetOffsetY": 0,
+  "TargetOffsetZ": 0
  },
  "GameEngineSettings": {
-  "EngineSettings": {
-   "IsEngine": false,
-   "Name": "string",
-   "Value": "string",
-   "Version": 0
-  }
+  "EngineSettings": [
+   {
+    "IsEngine": false,
+    "Name": "string",
+    "Value": "string",
+    "Version": 0
+   }
+  ]
  },
  "GameResizedModel": {
   "CurrentScreenHeight": 0,
@@ -5546,10 +5751,12 @@
   "PresetsByHeroId": {}
  },
  "GameStateSoundPresetsSettings": {
-  "GameStateSoundPresetsInfos": {
-   "GlobalPresets": {},
-   "PresetsByHeroId": {}
-  }
+  "GameStateSoundPresetsInfos": [
+   {
+    "GlobalPresets": {},
+    "PresetsByHeroId": {}
+   }
+  ]
  },
  "GameStateTracking": {
   "GameStateId": 0,
@@ -5606,20 +5813,24 @@
   "Buffs": {}
  },
  "GetBuildShortcutKeysModel": {
-  "BuildShortcutKeyModels": {
-   "ShortcutKey": "string",
-   "SlotIndex": 0
-  }
+  "BuildShortcutKeyModels": [
+   {
+    "ShortcutKey": "string",
+    "SlotIndex": 0
+   }
+  ]
  },
  "GetCastleInventoryViewModel": {
   "Inventory": {}
  },
  "GetCategoryConfigViewModel": {
-  "Filters": {
-   "Matched": false,
-   "Matches": {},
-   "Replacement": "string"
-  }
+  "Filters": [
+   {
+    "Matched": false,
+    "Matches": {},
+    "Replacement": "string"
+   }
+  ]
  },
  "GetChatRoomMessagesModel": {
   "ChatRoomInfo": {
@@ -5660,7 +5871,7 @@
   "HeroName": "string",
   "HeroStatsModel": {
    "EquipmentAbilities": {},
-   "MaxResistance": 0.0,
+   "MaxResistance": 0,
    "Stats": {},
    "WeightType": 0
   }
@@ -5675,7 +5886,7 @@
    "Id": "string",
    "IsUnread": false,
    "Priority": 0,
-   "PublishDate": "2015-01-01T00:00:00Z"
+   "PublishDate": "string"
   }
  },
  "GetProductsViewModel": {
@@ -5689,18 +5900,22 @@
   "Families": {}
  },
  "GetSpellShortcutKeysModel": {
-  "SpellShortcutKeyModels": {
-   "AbilitySlotIndex": 0,
-   "ShortcutKey": "string",
-   "ShortcutMouseButton": 0
-  }
+  "SpellShortcutKeyModels": [
+   {
+    "AbilitySlotIndex": 0,
+    "ShortcutKey": "string",
+    "ShortcutMouseButton": 0
+   }
+  ]
  },
  "GetSpellsViewModel": {
-  "Spells": {
-   "Level": 0,
-   "NewlyAdded": false,
-   "SpellSpecContainerId": 0
-  }
+  "Spells": [
+   {
+    "Level": 0,
+    "NewlyAdded": false,
+    "SpellSpecContainerId": 0
+   }
+  ]
  },
  "GetUbisoftCompetitionViewModel": {
   "UbisoftCompetitionInfo": {
@@ -5726,11 +5941,11 @@
   "ProcessedAccounts": 0
  },
  "GlobalNotification": {
-  "StartDate": "2015-01-01T00:00:00Z"
+  "StartDate": "string"
  },
  "GoldBoostConsumableTemplate": {
-  "AttackIncreasedGold": 0.0,
-  "MineIncreasedGold": 0.0
+  "AttackIncreasedGold": 0,
+  "MineIncreasedGold": 0
  },
  "GraphicsInfoTracking": {
   "CurrentDirectXVersionLetter": "string",
@@ -5767,7 +5982,7 @@
  },
  "GuildBattleLogModel": {
   "BattleLogEntries": {},
-  "LastConnectionTime": "2015-01-01T00:00:00Z"
+  "LastConnectionTime": "string"
  },
  "GuildBattleLogModelRefreshedEventArgs": {
   "Model": {}
@@ -5795,7 +6010,7 @@
   "SelectedTab": 0
  },
  "GuildInvitation": {
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CreationDate": "string",
   "GuildSummary": {
    "DisplayName": "string",
    "Emblem": {},
@@ -5809,7 +6024,7 @@
  },
  "GuildInvitationReceivedNotification": {
   "GuildInvitation": {
-   "CreationDate": "2015-01-01T00:00:00Z",
+   "CreationDate": "string",
    "GuildSummary": {
     "DisplayName": "string",
     "Emblem": {},
@@ -5921,7 +6136,7 @@
    "SubLeagueId": 0,
    "TrophyScore": 0
   },
-  "JoinDate": "2015-01-01T00:00:00Z",
+  "JoinDate": "string",
   "Title": 0
  },
  "GuildMemberJoinedNotification": {
@@ -6046,16 +6261,19 @@
  },
  "GuildSettings": {
   "AvengeeCrownsRatioOnRevenge": 0,
-  "EntryTimeToLive": "0",
-  "GiveRewardJobDelay": "0",
-  "GlobalLockTimeout": "0",
-  "GuildLeaderRewards": 0,
+  "EntryTimeToLive": 0,
+  "GiveRewardJobDelay": 0,
+  "GlobalLockTimeout": 0,
+  "GuildLeaderRewards": [],
   "Languages": {},
   "LeaderDisplayedCount": 0,
   "MaxBattleLogEntries": 0,
   "MaxEntriesPerRequest": 0,
   "MaxMembers": 0,
-  "Period": "0",
+  "Period": {
+   "EndDateTime": "string",
+   "StartDateTime": "string"
+  },
   "ReferenceDate": 0
  },
  "GuildSettingsUpdatedNotification": {
@@ -6143,12 +6361,14 @@
   "Xp": 0
  },
  "HarvestListEntity": {
-  "HarvestRefreshPositions": {
-   "CurrencyType": 0,
-   "EntityHarvestId": 0,
-   "EntityHarvestType": 0,
-   "Position": {}
-  }
+  "HarvestRefreshPositions": [
+   {
+    "CurrencyType": 0,
+    "EntityHarvestId": 0,
+    "EntityHarvestType": 0,
+    "Position": {}
+   }
+  ]
  },
  "HarvestMineBuildingCommand": {
   "CurrencyType": 0,
@@ -6217,31 +6437,33 @@
   "RestorePoints": 0
  },
  "Hero": {
-  "AttackRegions": {
-   "AttackRegionId": 0,
-   "BossCastleId": 0,
-   "BossName": 0,
-   "DebugName": "string",
-   "HasMLPrediction": false,
-   "IsCompetitionRegion": false,
-   "IsFriendRegion": false,
-   "LevelMax": 0,
-   "LevelMin": 0,
-   "Name": 0,
-   "OverPosX": 0,
-   "OverPosY": 0,
-   "ShowUbisoftCastle": false,
-   "ShowUserCastle": false,
-   "ShowValidableCastle": false
-  },
+  "AttackRegions": [
+   {
+    "AttackRegionId": 0,
+    "BossCastleId": 0,
+    "BossName": 0,
+    "DebugName": "string",
+    "HasMLPrediction": false,
+    "IsCompetitionRegion": false,
+    "IsFriendRegion": false,
+    "LevelMax": 0,
+    "LevelMin": 0,
+    "Name": 0,
+    "OverPosX": 0,
+    "OverPosY": 0,
+    "ShowUbisoftCastle": false,
+    "ShowUserCastle": false,
+    "ShowValidableCastle": false
+   }
+  ],
   "Equipment": {},
   "EquippedConsumables": {},
   "EquippedSpells": {},
-  "ExpirationDate": "2015-01-01T00:00:00Z",
+  "ExpirationDate": "string",
   "HeroSpecContainerId": 0,
   "HeroStatModifier": {
    "StatType": 0,
-   "Value": 0.0
+   "Value": 0
   },
   "Level": 0,
   "OwnerSpecialPacks": 0,
@@ -6295,7 +6517,7 @@
  },
  "HeroCorpseHarvestHoverEventArgs": {
   "HeroCorpseHarvestHoverModel": {
-   "ElapsedTimeSinceDeath": 0.0,
+   "ElapsedTimeSinceDeath": 0,
    "FreeSlotsRequirement": 0,
    "HasItemsToCollect": false,
    "HeroDisplayName": "string",
@@ -6312,7 +6534,7 @@
   }
  },
  "HeroCorpseHarvestHoverModel": {
-  "ElapsedTimeSinceDeath": 0.0,
+  "ElapsedTimeSinceDeath": 0,
   "FreeSlotsRequirement": 0,
   "HasItemsToCollect": false,
   "HeroDisplayName": "string",
@@ -6340,7 +6562,7 @@
   "Type": 0
  },
  "HeroCorpseSettings": {
-  "HeroCorpseCooldownPerAttacker": "0",
+  "HeroCorpseCooldownPerAttacker": 0,
   "HeroCorpseEffectIdsByHeroId": {},
   "MaxHeroCorpsesInCastle": 0
  },
@@ -6349,27 +6571,29 @@
   "IsSuccess": false
  },
  "HeroCreationBiographyViewModel": {
-  "HeroCreationHeroInfos": {
-   "CreationIconLeftOffset": 0,
-   "CreationIconOverUrl": "string",
-   "CreationIconSelectedUrl": "string",
-   "CreationIconTopOffset": 0,
-   "CreationIconUpUrl": "string",
-   "IsLocked": false,
-   "SpecialPackGroup": 0,
-   "TooltipModel": {
-    "CurrencyType": 0,
-    "DeathTime": 0,
-    "FreeSlotsRequirement": 0,
-    "HasItemsToCollect": false,
-    "HeroDisplayName": "string",
-    "HeroLevel": 0,
-    "IconUrl": "string",
-    "IsHeroInventoryLargeEnough": false,
-    "IsStorageFull": false,
-    "Type": 0
+  "HeroCreationHeroInfos": [
+   {
+    "CreationIconLeftOffset": 0,
+    "CreationIconOverUrl": "string",
+    "CreationIconSelectedUrl": "string",
+    "CreationIconTopOffset": 0,
+    "CreationIconUpUrl": "string",
+    "IsLocked": false,
+    "SpecialPackGroup": 0,
+    "TooltipModel": {
+     "CurrencyType": 0,
+     "DeathTime": 0,
+     "FreeSlotsRequirement": 0,
+     "HasItemsToCollect": false,
+     "HeroDisplayName": "string",
+     "HeroLevel": 0,
+     "IconUrl": "string",
+     "IsHeroInventoryLargeEnough": false,
+     "IsStorageFull": false,
+     "Type": 0
+    }
    }
-  }
+  ]
  },
  "HeroCreationHeroInfo": {
   "CreationIconLeftOffset": 0,
@@ -6486,8 +6710,8 @@
  },
  "HeroFreeTrialInfoPeriod": {
   "Id": 0,
-  "UnlockEndTime": "2015-01-01T00:00:00Z",
-  "UnlockStartTime": "2015-01-01T00:00:00Z"
+  "UnlockEndTime": "string",
+  "UnlockStartTime": "string"
  },
  "HeroFreeTrialInfoViewedCommand": {
   "HeroFreeTrialInfoId": 0
@@ -6525,12 +6749,12 @@
   "HasRequiredLevel": false,
   "HeroItemCategoryType": 0,
   "HeroItemType": {
-   "EquipUserInterfaceSoundId": 0,
-   "HeroItemCategoryType": 0,
+   "EquipUserInterfaceSoundId": "string",
+   "HeroItemCategoryType": "string",
    "Id": 0,
    "InternalDescription": "string",
    "OasisID": 0,
-   "VisualType": 0
+   "VisualType": "string"
   },
   "IconSynergyName": "string",
   "IconUrl": "string",
@@ -6597,7 +6821,7 @@
    "HeroName": "string",
    "HeroStatsModel": {
     "EquipmentAbilities": {},
-    "MaxResistance": 0.0,
+    "MaxResistance": 0,
     "Stats": {},
     "WeightType": 0
    }
@@ -6631,7 +6855,7 @@
  },
  "HeroInventorySlotUpdateForHeroEquipment": {
   "HeroItem": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
+   "AcquisitionDate": "string",
    "SellPrice": 0
   },
   "ItemType": 0
@@ -6641,15 +6865,15 @@
   "StackCount": 0
  },
  "HeroItem": {
-  "AcquisitionDate": "2015-01-01T00:00:00Z",
+  "AcquisitionDate": "string",
   "SellPrice": 0
  },
  "HeroItemArchetype": {
-  "Damage": 0.0,
-  "GearScoreMultiplier": 0.0,
+  "Damage": 0,
+  "GearScoreMultiplier": 0,
   "HeroId": 0,
-  "Range": 0.0,
-  "Speed": 0.0
+  "Range": 0,
+  "Speed": 0
  },
  "HeroItemBuildingRequirement": {
   "BuildingRequirementRank": 0,
@@ -6663,7 +6887,7 @@
   "IsItemLevelHidden": false
  },
  "HeroItemEffectTemplate": {
-  "BaseValue": 0.0,
+  "BaseValue": 0,
   "DebugName": "string",
   "EffectCategory": 0,
   "FormatValueAsPercentage": false,
@@ -6681,17 +6905,17 @@
   },
   "OasisDescription": 0,
   "OasisName": 0,
-  "RandomChance": 0.0,
+  "RandomChance": 0,
   "Type": 0,
-  "ValuePerLevel": 0.0
+  "ValuePerLevel": 0
  },
  "HeroItemPrimaryStats": {
   "HeroItemArchetype": {
-   "Damage": 0.0,
-   "GearScoreMultiplier": 0.0,
+   "Damage": 0,
+   "GearScoreMultiplier": 0,
    "HeroId": 0,
-   "Range": 0.0,
-   "Speed": 0.0
+   "Range": 0,
+   "Speed": 0
   },
   "StatMaxValues": 0,
   "StatValues": 0
@@ -6700,24 +6924,24 @@
   "Fx": {}
  },
  "HeroItemTextParams": {
-  "BackgroundColor": 0,
+  "BackgroundColor": "string",
   "BackgroundMarginX": 0,
   "BackgroundMarginY": 0,
   "Colors": {},
-  "FontParams": 0,
+  "FontParams": {},
   "HeightOffset": 0
  },
  "HeroItemType": {
-  "EquipUserInterfaceSoundId": 0,
-  "HeroItemCategoryType": 0,
+  "EquipUserInterfaceSoundId": "string",
+  "HeroItemCategoryType": "string",
   "Id": 0,
   "InternalDescription": "string",
   "OasisID": 0,
-  "VisualType": 0
+  "VisualType": "string"
  },
  "HeroItemTypeElement": {
   "HeroItemTypeId": 0,
-  "RandomChance": 0.0
+  "RandomChance": 0
  },
  "HeroLevelReachedObjectiveRequirement": {
   "Level": 0
@@ -6738,15 +6962,15 @@
    "BuildingRequirementName": "string",
    "BuildingRequirementRank": 0,
    "CanAfford": false,
-   "CurrentDPS": 0.0,
-   "CurrentHealth": 0.0,
+   "CurrentDPS": 0,
+   "CurrentHealth": 0,
    "CurrentLevelXp": 0,
-   "CurrentMagicalArmor": 0.0,
-   "CurrentMana": 0.0,
-   "CurrentPhysicalArmor": 0.0,
+   "CurrentMagicalArmor": 0,
+   "CurrentMana": 0,
+   "CurrentPhysicalArmor": 0,
    "CurrentXp": 0,
-   "DPSIncrease": 0.0,
-   "HealthIncrease": 0.0,
+   "DPSIncrease": 0,
+   "HealthIncrease": 0,
    "HeroIconModel": {
     "HeroSpecContainerId": 0,
     "IconUrl": "string",
@@ -6756,15 +6980,15 @@
    "IsBuildingRequirementMet": false,
    "IsXpRequirementMet": false,
    "LongHeroName": "string",
-   "MagicalArmorIncrease": 0.0,
-   "ManaIncrease": 0.0,
-   "MaxDPS": 0.0,
-   "MaxHealth": 0.0,
-   "MaxMagicalArmor": 0.0,
-   "MaxMana": 0.0,
-   "MaxPhysicalArmor": 0.0,
+   "MagicalArmorIncrease": 0,
+   "ManaIncrease": 0,
+   "MaxDPS": 0,
+   "MaxHealth": 0,
+   "MaxMagicalArmor": 0,
+   "MaxMana": 0,
+   "MaxPhysicalArmor": 0,
    "NextLevel": 0,
-   "PhysicalArmorIncrease": 0.0,
+   "PhysicalArmorIncrease": 0,
    "SpecContainerId": 0,
    "UnlockedAbilities": {},
    "XpRequirement": 0
@@ -6786,13 +7010,15 @@
   "IsInFreeTrial": false,
   "IsSpecialPack": false,
   "LongHeroName": "string",
-  "PriceReductionConditionModels": {
-   "Completed": false,
-   "CurrentPrice": {},
-   "Id": 0,
-   "Level": 0,
-   "PriceReduction": {}
-  },
+  "PriceReductionConditionModels": [
+   {
+    "Completed": false,
+    "CurrentPrice": {},
+    "Id": 0,
+    "Level": 0,
+    "PriceReduction": {}
+   }
+  ],
   "RegularPrice": {},
   "SpecContainerId": 0
  },
@@ -6821,7 +7047,7 @@
    "HeroName": "string",
    "HeroStatsModel": {
     "EquipmentAbilities": {},
-    "MaxResistance": 0.0,
+    "MaxResistance": 0,
     "Stats": {},
     "WeightType": 0
    }
@@ -6866,11 +7092,11 @@
  },
  "HeroStatModifier": {
   "StatType": 0,
-  "Value": 0.0
+  "Value": 0
  },
  "HeroStatsModel": {
   "EquipmentAbilities": {},
-  "MaxResistance": 0.0,
+  "MaxResistance": 0,
   "Stats": {},
   "WeightType": 0
  },
@@ -6912,36 +7138,38 @@
   "SlotIndex": 0
  },
  "HeroUnlockRewardItem": {
-  "ExpirationDate": "2015-01-01T00:00:00Z",
+  "ExpirationDate": "string",
   "HeroSpecContainerId": 0
  },
  "HeroUnlockedNotification": {
   "Hero": {
-   "AttackRegions": {
-    "AttackRegionId": 0,
-    "BossCastleId": 0,
-    "BossName": 0,
-    "DebugName": "string",
-    "HasMLPrediction": false,
-    "IsCompetitionRegion": false,
-    "IsFriendRegion": false,
-    "LevelMax": 0,
-    "LevelMin": 0,
-    "Name": 0,
-    "OverPosX": 0,
-    "OverPosY": 0,
-    "ShowUbisoftCastle": false,
-    "ShowUserCastle": false,
-    "ShowValidableCastle": false
-   },
+   "AttackRegions": [
+    {
+     "AttackRegionId": 0,
+     "BossCastleId": 0,
+     "BossName": 0,
+     "DebugName": "string",
+     "HasMLPrediction": false,
+     "IsCompetitionRegion": false,
+     "IsFriendRegion": false,
+     "LevelMax": 0,
+     "LevelMin": 0,
+     "Name": 0,
+     "OverPosX": 0,
+     "OverPosY": 0,
+     "ShowUbisoftCastle": false,
+     "ShowUserCastle": false,
+     "ShowValidableCastle": false
+    }
+   ],
    "Equipment": {},
    "EquippedConsumables": {},
    "EquippedSpells": {},
-   "ExpirationDate": "2015-01-01T00:00:00Z",
+   "ExpirationDate": "string",
    "HeroSpecContainerId": 0,
    "HeroStatModifier": {
     "StatType": 0,
-    "Value": 0.0
+    "Value": 0
    },
    "Level": 0,
    "OwnerSpecialPacks": 0,
@@ -6954,15 +7182,15 @@
   "BuildingRequirementName": "string",
   "BuildingRequirementRank": 0,
   "CanAfford": false,
-  "CurrentDPS": 0.0,
-  "CurrentHealth": 0.0,
+  "CurrentDPS": 0,
+  "CurrentHealth": 0,
   "CurrentLevelXp": 0,
-  "CurrentMagicalArmor": 0.0,
-  "CurrentMana": 0.0,
-  "CurrentPhysicalArmor": 0.0,
+  "CurrentMagicalArmor": 0,
+  "CurrentMana": 0,
+  "CurrentPhysicalArmor": 0,
   "CurrentXp": 0,
-  "DPSIncrease": 0.0,
-  "HealthIncrease": 0.0,
+  "DPSIncrease": 0,
+  "HealthIncrease": 0,
   "HeroIconModel": {
    "HeroSpecContainerId": 0,
    "IconUrl": "string",
@@ -6972,15 +7200,15 @@
   "IsBuildingRequirementMet": false,
   "IsXpRequirementMet": false,
   "LongHeroName": "string",
-  "MagicalArmorIncrease": 0.0,
-  "ManaIncrease": 0.0,
-  "MaxDPS": 0.0,
-  "MaxHealth": 0.0,
-  "MaxMagicalArmor": 0.0,
-  "MaxMana": 0.0,
-  "MaxPhysicalArmor": 0.0,
+  "MagicalArmorIncrease": 0,
+  "ManaIncrease": 0,
+  "MaxDPS": 0,
+  "MaxHealth": 0,
+  "MaxMagicalArmor": 0,
+  "MaxMana": 0,
+  "MaxPhysicalArmor": 0,
   "NextLevel": 0,
-  "PhysicalArmorIncrease": 0.0,
+  "PhysicalArmorIncrease": 0,
   "SpecContainerId": 0,
   "UnlockedAbilities": {},
   "XpRequirement": 0
@@ -6996,24 +7224,26 @@
    "IsInFreeTrial": false,
    "IsSpecialPack": false,
    "LongHeroName": "string",
-   "PriceReductionConditionModels": {
-    "Completed": false,
-    "CurrentPrice": {},
-    "Id": 0,
-    "Level": 0,
-    "PriceReduction": {}
-   },
+   "PriceReductionConditionModels": [
+    {
+     "Completed": false,
+     "CurrentPrice": {},
+     "Id": 0,
+     "Level": 0,
+     "PriceReduction": {}
+    }
+   ],
    "RegularPrice": {},
    "SpecContainerId": 0
   },
   "PanelName": 0
  },
  "HeroUpgradeTooltipModel": {
-  "DPSIncrease": 0.0,
-  "HealthIncrease": 0.0,
+  "DPSIncrease": 0,
+  "HealthIncrease": 0,
   "IsXpRequirementMet": false,
   "LongHeroName": "string",
-  "ManaIncrease": 0.0,
+  "ManaIncrease": 0,
   "NextLevel": 0,
   "SpecContainerId": 0,
   "Type": 0,
@@ -7069,23 +7299,25 @@
  },
  "HudAbilityCooldownModel": {
   "AbilitySlotIndex": 0,
-  "ChargeUpRatio": 0.0,
-  "CooldownRatio": 0.0,
+  "ChargeUpRatio": 0,
+  "CooldownRatio": 0,
   "InvalidAttackActionType": 0,
-  "PowerUpRatio": 0.0
+  "PowerUpRatio": 0
  },
  "HudAbilityCooldownUpdatedEventArgs": {
-  "HudAbilityCooldownModels": {
-   "AbilitySlotIndex": 0,
-   "ChargeUpRatio": 0.0,
-   "CooldownRatio": 0.0,
-   "InvalidAttackActionType": 0,
-   "PowerUpRatio": 0.0
-  }
+  "HudAbilityCooldownModels": [
+   {
+    "AbilitySlotIndex": 0,
+    "ChargeUpRatio": 0,
+    "CooldownRatio": 0,
+    "InvalidAttackActionType": 0,
+    "PowerUpRatio": 0
+   }
+  ]
  },
  "HudAbilityLaunchedEventArgs": {
   "AbilitySlotIndex": 0,
-  "CooldownDuration": 0.0
+  "CooldownDuration": 0
  },
  "HudCastleValidationKillCountUpdatedEventArgs": {
   "KilledCreaturesCount": 0,
@@ -7096,7 +7328,7 @@
   "TotalMineCount": 0
  },
  "HudCastleValidationTimeUpdatedEventArgs": {
-  "Time": 0.0
+  "Time": 0
  },
  "HudEnemyTargettedEventArgs": {
   "BossPictureVariable": "string",
@@ -7209,14 +7441,14 @@
  },
  "InboxConsumableItem": {
   "HeroItem": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
+   "AcquisitionDate": "string",
    "SellPrice": 0
   },
   "ItemType": 0
  },
  "InboxHeroEquipmentItem": {
   "HeroItem": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
+   "AcquisitionDate": "string",
    "SellPrice": 0
   },
   "ItemType": 0,
@@ -7224,21 +7456,23 @@
  },
  "InboxItem": {
   "HeroItem": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
+   "AcquisitionDate": "string",
    "SellPrice": 0
   },
   "ItemType": 0,
   "ObjectId": "string"
  },
  "InboxItemsAddedNotification": {
-  "InboxItems": {
-   "HeroItem": {
-    "AcquisitionDate": "2015-01-01T00:00:00Z",
-    "SellPrice": 0
-   },
-   "ItemType": 0,
-   "ObjectId": "string"
-  }
+  "InboxItems": [
+   {
+    "HeroItem": {
+     "AcquisitionDate": "string",
+     "SellPrice": 0
+    },
+    "ItemType": 0,
+    "ObjectId": "string"
+   }
+  ]
  },
  "InstallCompletedTaskTracking": {
   "Duration": 0,
@@ -7255,7 +7489,7 @@
   "VersionName": "string"
  },
  "InstallStartedTaskTracking": {
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CreationDate": "string",
   "IsFirstInstall": false,
   "TrackingTagId": 0
  },
@@ -7403,10 +7637,12 @@
   "Creatures": {},
   "Decorations": {},
   "DefenseIngredientBoosts": {},
-  "HeroItems": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
-   "SellPrice": 0
-  },
+  "HeroItems": [
+   {
+    "AcquisitionDate": "string",
+    "SellPrice": 0
+   }
+  ],
   "Heroes": {},
   "InventoryTabCount": 0,
   "Rooms": {},
@@ -7436,11 +7672,13 @@
  "ItemPurchasedEventArgs": {
   "ShopSku": {
    "Code": "string",
-   "CraftingMaterials": {
-    "Id": 0,
-    "Quantity": 0
-   },
-   "CreationDate": "2015-01-01T00:00:00Z",
+   "CraftingMaterials": [
+    {
+     "Id": 0,
+     "Quantity": 0
+    }
+   ],
+   "CreationDate": "string",
    "DescriptionOasisId": 0,
    "Discounts": {},
    "IconUrl": "string",
@@ -7467,7 +7705,7 @@
   "RetryInterval": 0
  },
  "JobSummary": {
-  "DueDate": "2015-01-01T00:00:00Z",
+  "DueDate": "string",
   "Id": "string",
   "ProcessingServer": "string",
   "RetryCount": 0,
@@ -7503,7 +7741,7 @@
   "EntityType": 0
  },
  "KillingCreaturesOverTimeVoConfig": {
-  "CreaturesCount": 0.0,
+  "CreaturesCount": 0,
   "TimePeriod": 0,
   "Vo": {}
  },
@@ -7525,24 +7763,26 @@
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
-   "RewardItemModels": {
-    "Count": 0,
-    "CreatureRank": 0,
-    "DyeInfoModel": {
-     "AnimationName": "string",
-     "CanBeTinted": false,
-     "Color": "string",
-     "ColorName": "string"
-    },
-    "HeroItemQuality": 0,
-    "IsCreature": false,
-    "IsHeroItem": false,
-    "ItemBase": {},
-    "LargeIconUrl": "string",
-    "Name": "string",
-    "SmallIconUrl": "string",
-    "Tooltip": {}
-   }
+   "RewardItemModels": [
+    {
+     "Count": 0,
+     "CreatureRank": 0,
+     "DyeInfoModel": {
+      "AnimationName": "string",
+      "CanBeTinted": false,
+      "Color": "string",
+      "ColorName": "string"
+     },
+     "HeroItemQuality": 0,
+     "IsCreature": false,
+     "IsHeroItem": false,
+     "ItemBase": {},
+     "LargeIconUrl": "string",
+     "Name": "string",
+     "SmallIconUrl": "string",
+     "Tooltip": {}
+    }
+   ]
   }
  },
  "LeaderboardEntry": {
@@ -7610,7 +7850,7 @@
    "SpecialPackId": 0
   },
   "SubLeagueModel": {
-   "AttackBonus": 0.0,
+   "AttackBonus": 0,
    "LargeIconUrl": "string",
    "Name": "string",
    "PrefixName": "string",
@@ -7618,16 +7858,20 @@
   }
  },
  "LeaderboardFiltersModel": {
-  "Filters": {
-   "Matched": false,
-   "Matches": {},
-   "Replacement": "string"
-  },
-  "LeagueFilterModels": {
-   "LeagueId": 0,
-   "Name": "string",
-   "SubLeagueId": 0
-  },
+  "Filters": [
+   {
+    "Matched": false,
+    "Matches": {},
+    "Replacement": "string"
+   }
+  ],
+  "LeagueFilterModels": [
+   {
+    "LeagueId": 0,
+    "Name": "string",
+    "SubLeagueId": 0
+   }
+  ],
   "SelectedFilterCode": "string",
   "SelectedLeagueId": 0,
   "SelectedSubLeagueId": 0
@@ -7639,7 +7883,7 @@
   "Entries": {},
   "FirstEntryRank": 0,
   "Leaders": {},
-  "NextSeasonStartingDate": "2015-01-01T00:00:00Z",
+  "NextSeasonStartingDate": "string",
   "PreviousLeagueInfo": {
    "PreviousLeagueId": 0,
    "PreviousLeagueRank": 0,
@@ -7660,21 +7904,23 @@
   "LargeIconUrl": "string",
   "Name": {},
   "SmallIconUrl": "string",
-  "SubLeagues": {
-   "AttackBonus": 0.0,
-   "BaseSeasonalReward": {},
-   "Id": 0,
-   "LargeIconUrl": "string",
-   "LeaderClosingPeriodRewards": {},
-   "LeaderSeasonalRewards": {},
-   "LeagueMaintainReward": {},
-   "LeagueReachedReward": {},
-   "Name": {},
-   "PrefixOasisId": 0,
-   "ScoreFrom": 0,
-   "ScoreTo": 0,
-   "SmallIconUrl": "string"
-  }
+  "SubLeagues": [
+   {
+    "AttackBonus": 0,
+    "BaseSeasonalReward": {},
+    "Id": 0,
+    "LargeIconUrl": "string",
+    "LeaderClosingPeriodRewards": {},
+    "LeaderSeasonalRewards": {},
+    "LeagueMaintainReward": {},
+    "LeagueReachedReward": {},
+    "Name": {},
+    "PrefixOasisId": 0,
+    "ScoreFrom": 0,
+    "ScoreTo": 0,
+    "SmallIconUrl": "string"
+   }
+  ]
  },
  "LeagueFilterModel": {
   "LeagueId": 0,
@@ -7687,13 +7933,15 @@
   "ScoreMax": 0,
   "ScoreMin": 0,
   "SmallIconUrl": "string",
-  "SubLeagueModels": {
-   "AttackBonus": 0.0,
-   "LargeIconUrl": "string",
-   "Name": "string",
-   "PrefixName": "string",
-   "SmallIconUrl": "string"
-  }
+  "SubLeagueModels": [
+   {
+    "AttackBonus": 0,
+    "LargeIconUrl": "string",
+    "Name": "string",
+    "PrefixName": "string",
+    "SmallIconUrl": "string"
+   }
+  ]
  },
  "LeaguePopupModel": {
   "CurrentSubLeagueModel": {},
@@ -7705,7 +7953,7 @@
   "IsPromoted": false,
   "IsUnranked": false,
   "IsWorldRanked": false,
-  "NextSeasonStartingDate": "2015-01-01T00:00:00Z",
+  "NextSeasonStartingDate": "string",
   "PreviousLeagueRank": 0,
   "PreviousSubLeagueReward": {},
   "PreviousWorldRank": 0,
@@ -7724,7 +7972,7 @@
    "IsPromoted": false,
    "IsUnranked": false,
    "IsWorldRanked": false,
-   "NextSeasonStartingDate": "2015-01-01T00:00:00Z",
+   "NextSeasonStartingDate": "string",
    "PreviousLeagueRank": 0,
    "PreviousSubLeagueReward": {},
    "PreviousWorldRank": 0,
@@ -7737,49 +7985,55 @@
   "CurrentLeagueId": 0,
   "CurrentSubLeagueId": 0,
   "IsLastLeagueSelected": false,
-  "LeagueModels": {
-   "LargeIconUrl": "string",
-   "Name": "string",
-   "ScoreMax": 0,
-   "ScoreMin": 0,
-   "SmallIconUrl": "string",
-   "SubLeagueModels": {
-    "AttackBonus": 0.0,
+  "LeagueModels": [
+   {
     "LargeIconUrl": "string",
     "Name": "string",
-    "PrefixName": "string",
-    "SmallIconUrl": "string"
+    "ScoreMax": 0,
+    "ScoreMin": 0,
+    "SmallIconUrl": "string",
+    "SubLeagueModels": [
+     {
+      "AttackBonus": 0,
+      "LargeIconUrl": "string",
+      "Name": "string",
+      "PrefixName": "string",
+      "SmallIconUrl": "string"
+     }
+    ]
    }
-  },
+  ],
   "SelectedLeagueId": 0,
   "SelectedSubLeagueId": 0,
   "SubLeagueDetailedModel": {
    "RewardModel": {
     "FakeRewardItemModels": {},
     "OverrideRewardItemModel": {},
-    "RewardItemModels": {
-     "Count": 0,
-     "CreatureRank": 0,
-     "DyeInfoModel": {
-      "AnimationName": "string",
-      "CanBeTinted": false,
-      "Color": "string",
-      "ColorName": "string"
-     },
-     "HeroItemQuality": 0,
-     "IsCreature": false,
-     "IsHeroItem": false,
-     "ItemBase": {},
-     "LargeIconUrl": "string",
-     "Name": "string",
-     "SmallIconUrl": "string",
-     "Tooltip": {}
-    }
+    "RewardItemModels": [
+     {
+      "Count": 0,
+      "CreatureRank": 0,
+      "DyeInfoModel": {
+       "AnimationName": "string",
+       "CanBeTinted": false,
+       "Color": "string",
+       "ColorName": "string"
+      },
+      "HeroItemQuality": 0,
+      "IsCreature": false,
+      "IsHeroItem": false,
+      "ItemBase": {},
+      "LargeIconUrl": "string",
+      "Name": "string",
+      "SmallIconUrl": "string",
+      "Tooltip": {}
+     }
+    ]
    },
    "ScoreMax": 0,
    "ScoreMin": 0,
    "SubLeagueModel": {
-    "AttackBonus": 0.0,
+    "AttackBonus": 0,
     "LargeIconUrl": "string",
     "Name": "string",
     "PrefixName": "string",
@@ -7860,15 +8114,15 @@
  },
  "LevelsDifferenceXpModifier": {
   "LevelsDifference": 0,
-  "XpModifier": 0.0
+  "XpModifier": 0
  },
  "LifeForceBoostConsumableTemplate": {
-  "AttackIncreasedLifeForce": 0.0,
-  "MineIncreasedLifeForce": 0.0
+  "AttackIncreasedLifeForce": 0,
+  "MineIncreasedLifeForce": 0
  },
  "LifeShieldUpdate": {
   "Id": 0,
-  "Ratio": 0.0
+  "Ratio": 0
  },
  "LimitedQuantityRewardItem": {
   "LargeIconUrl": "string",
@@ -7934,18 +8188,18 @@
   "SourceEntityType": 0
  },
  "LootModifierTable": {
-  "Minus1Level": 0.0,
-  "Minus2Levels": 0.0,
-  "Minus3Levels": 0.0,
-  "Minus4Levels": 0.0,
-  "Minus5Levels": 0.0,
-  "Plus1Level": 0.0,
-  "Plus2Levels": 0.0,
-  "Plus3Levels": 0.0,
-  "Plus4Levels": 0.0,
-  "Plus5Levels": 0.0,
-  "Plus6Levels": 0.0,
-  "SameLevel": 0.0
+  "Minus1Level": 0,
+  "Minus2Levels": 0,
+  "Minus3Levels": 0,
+  "Minus4Levels": 0,
+  "Minus5Levels": 0,
+  "Plus1Level": 0,
+  "Plus2Levels": 0,
+  "Plus3Levels": 0,
+  "Plus4Levels": 0,
+  "Plus5Levels": 0,
+  "Plus6Levels": 0,
+  "SameLevel": 0
  },
  "LootedHeroItemParam": {
   "ItemId": 0,
@@ -7955,12 +8209,12 @@
   "LoseTrophyCooldownRemainingTime": 0
  },
  "LossPonderation": {
-  "AttackCastlePercentageLoss": 0.0,
+  "AttackCastlePercentageLoss": 0,
   "AttackerDefenderLevelDiff": 0,
   "ShieldDuration": 0
  },
  "MagicFindBoostConsumableTemplate": {
-  "IncreasedChance": 0.0
+  "IncreasedChance": 0
  },
  "MagicalPropertiesReplacementPreference": {
   "ReplacedDebugName": "string",
@@ -7968,7 +8222,7 @@
   "ReplacementEffects": {}
  },
  "MagicalPropertyModel": {
-  "ChanceToLevelUp": 0.0,
+  "ChanceToLevelUp": 0,
   "Comparison": 0,
   "FormatValueAsPercentage": false,
   "FormatValuePrecision": 0,
@@ -7983,17 +8237,17 @@
   "Name": "string",
   "OasisDescription": 0,
   "Type": 0,
-  "Value": 0.0
+  "Value": 0
  },
  "MaintenanceGlobalNotification": {
-  "MaintenanceScheduledDate": "2015-01-01T00:00:00Z",
+  "MaintenanceScheduledDate": "string",
   "MaintenanceScheduledInSeconds": 0
  },
  "Match": {
   "Length": 0,
   "Locale": "string",
   "Matched": "string",
-  "Quantity": 0.0,
+  "Quantity": 0,
   "Root": "string",
   "Severity": "string",
   "Start": 0,
@@ -8011,7 +8265,7 @@
  },
  "Message": {
   "Data": {},
-  "DateSent": "2015-01-01T00:00:00Z",
+  "DateSent": "string",
   "SenderId": 0,
   "Type": 0
  },
@@ -8180,13 +8434,13 @@
   "ShieldExpirableId": "string"
  },
  "MineTimeBonusPanelNavigationModel": {
-  "TimeBonus": 0.0
+  "TimeBonus": 0
  },
  "MovementSpeed": {
   "Id": 0,
   "Name": {},
-  "SpeedFrom": 0.0,
-  "SpeedTo": 0.0
+  "SpeedFrom": 0,
+  "SpeedTo": 0
  },
  "MultiPanelNavigationModel": {
   "Models": {}
@@ -8259,14 +8513,14 @@
  },
  "NearDeathFxInfo": {
   "Fx": {},
-  "Threshold": 0.0
+  "Threshold": 0
  },
  "News": {
   "Data": {},
   "Id": "string",
   "IsUnread": false,
   "Priority": 0,
-  "PublishDate": "2015-01-01T00:00:00Z"
+  "PublishDate": "string"
  },
  "NewsAddedNotification": {
   "NewsItem": {}
@@ -8281,7 +8535,7 @@
    "Id": "string",
    "IsUnread": false,
    "Priority": 0,
-   "PublishDate": "2015-01-01T00:00:00Z"
+   "PublishDate": "string"
   },
   "UnreadCount": 0
  },
@@ -8302,7 +8556,7 @@
    "Id": "string",
    "IsUnread": false,
    "Priority": 0,
-   "PublishDate": "2015-01-01T00:00:00Z"
+   "PublishDate": "string"
   }
  },
  "NewsViewModel": {
@@ -8313,7 +8567,7 @@
    "Id": "string",
    "IsUnread": false,
    "Priority": 0,
-   "PublishDate": "2015-01-01T00:00:00Z"
+   "PublishDate": "string"
   },
   "SpecialPackModel": {
    "IconLayerName": "string",
@@ -8331,7 +8585,7 @@
   "CastleRating": 0,
   "Message": {
    "Data": {},
-   "DateSent": "2015-01-01T00:00:00Z",
+   "DateSent": "string",
    "SenderId": 0,
    "Type": 0
   }
@@ -8343,9 +8597,9 @@
   "ServicePack": 0
  },
  "Objective": {
-  "Category": 0,
+  "Category": "string",
   "ClientSideCompletion": false,
-  "Conditions": 0,
+  "Conditions": [],
   "DebugName": "string",
   "Description": 0,
   "IconUrl": "string",
@@ -8353,9 +8607,14 @@
   "Instruction": 0,
   "ManualPopupTriggerOnCompletion": false,
   "PerHeroReward": {},
-  "Progression": 0,
-  "Requirements": 0,
-  "Reward": 0,
+  "Progression": {},
+  "Requirements": [],
+  "Reward": {
+   "FakeRewardItems": {},
+   "LargeIconUrl": "string",
+   "RewardItems": {},
+   "SmallIconUrl": "string"
+  },
   "ShowUnlockedPopup": false,
   "Title": 0,
   "VoiceOverSoundId": "string"
@@ -8520,7 +8779,7 @@
  "ObjectiveUnlockedNotification": {
   "AccountObjective": {
    "HasViewed": false,
-   "LastStatusDate": "2015-01-01T00:00:00Z",
+   "LastStatusDate": "string",
    "ObjectiveId": 0,
    "ProgressionCount": 0,
    "Status": 0
@@ -8564,7 +8823,7 @@
   "IsOpalPanel": false,
   "OptionViewModel": {
    "AudioAmbienceEnable": false,
-   "AudioMasterVolumeRatio": 0.0,
+   "AudioMasterVolumeRatio": 0,
    "AudioMusicEnable": false,
    "AudioSfxEnable": false,
    "AudioVoiceEnable": false,
@@ -8580,7 +8839,7 @@
    "FPSClampingNoFocus": 0,
    "FXAA": 0,
    "Fog": false,
-   "Gamma": 0.0,
+   "Gamma": 0,
    "GeneralVolumeText": "string",
    "Glow": false,
    "LensFlare": false,
@@ -8588,7 +8847,7 @@
    "ObjectComplexity": 0,
    "PostEffects": false,
    "ProfanityFilterEnabled": false,
-   "RenderQuality": 0.0,
+   "RenderQuality": 0,
    "SSAO": 0,
    "ScreenSize": 0,
    "Shadows": 0,
@@ -8602,11 +8861,11 @@
   "Tab": 0
  },
  "OptionParameterBaseModel": {
-  "Interval": 0.0,
-  "MaxValue": 0.0,
-  "MinValue": 0.0,
+  "Interval": 0,
+  "MaxValue": 0,
+  "MinValue": 0,
   "Type": 0,
-  "Value": 0.0,
+  "Value": 0,
   "ValueToRoundDisplayValue": 0
  },
  "OptionParameterCheckboxModel": {
@@ -8619,11 +8878,11 @@
   "Values": {}
  },
  "OptionParameterSliderModel": {
-  "Interval": 0.0,
-  "MaxValue": 0.0,
-  "MinValue": 0.0,
+  "Interval": 0,
+  "MaxValue": 0,
+  "MinValue": 0,
   "Type": 0,
-  "Value": 0.0,
+  "Value": 0,
   "ValueToRoundDisplayValue": 0
  },
  "OptionSoundModel": {
@@ -8654,7 +8913,7 @@
  },
  "OptionViewModel": {
   "AudioAmbienceEnable": false,
-  "AudioMasterVolumeRatio": 0.0,
+  "AudioMasterVolumeRatio": 0,
   "AudioMusicEnable": false,
   "AudioSfxEnable": false,
   "AudioVoiceEnable": false,
@@ -8670,7 +8929,7 @@
   "FPSClampingNoFocus": 0,
   "FXAA": 0,
   "Fog": false,
-  "Gamma": 0.0,
+  "Gamma": 0,
   "GeneralVolumeText": "string",
   "Glow": false,
   "LensFlare": false,
@@ -8678,7 +8937,7 @@
   "ObjectComplexity": 0,
   "PostEffects": false,
   "ProfanityFilterEnabled": false,
-  "RenderQuality": 0.0,
+  "RenderQuality": 0,
   "SSAO": 0,
   "ScreenSize": 0,
   "Shadows": 0,
@@ -8692,7 +8951,7 @@
  "OptionViewModelChangedEventArgs": {
   "OptionViewModel": {
    "AudioAmbienceEnable": false,
-   "AudioMasterVolumeRatio": 0.0,
+   "AudioMasterVolumeRatio": 0,
    "AudioMusicEnable": false,
    "AudioSfxEnable": false,
    "AudioVoiceEnable": false,
@@ -8708,7 +8967,7 @@
    "FPSClampingNoFocus": 0,
    "FXAA": 0,
    "Fog": false,
-   "Gamma": 0.0,
+   "Gamma": 0,
    "GeneralVolumeText": "string",
    "Glow": false,
    "LensFlare": false,
@@ -8716,7 +8975,7 @@
    "ObjectComplexity": 0,
    "PostEffects": false,
    "ProfanityFilterEnabled": false,
-   "RenderQuality": 0.0,
+   "RenderQuality": 0,
    "SSAO": 0,
    "ScreenSize": 0,
    "Shadows": 0,
@@ -8729,35 +8988,63 @@
   }
  },
  "OrientedSpawnPosition": {
-  "Orientation": 0.0
+  "Orientation": 0
  },
  "PackageAsset": {
-  "ResourcePath": 0
+  "ResourcePath": "string"
  },
  "PackageContent": {
-  "Assets": 0,
+  "Assets": [],
   "PackageName": "string"
  },
  "PackageContentCollection": {
-  "Packages": 0
+  "Packages": []
  },
  "PackageVersionInfoIdTracking": {
   "PackageName": "string",
   "Type": 0
  },
  "PanelNamesListEventArgs": {
-  "CurrentAbsoluteTimeInSeconds": 0.0,
+  "CurrentAbsoluteTimeInSeconds": 0,
   "PanelNamesList": {}
  },
  "PanelNavigationEventArgs": {
-  "CurrentAbsoluteTimeInSeconds": 0.0,
+  "CurrentAbsoluteTimeInSeconds": 0,
   "GameEntityID": 0,
   "PanelId": "string",
   "PanelNavigationModel": {
    "RewardModel": {
     "FakeRewardItemModels": {},
     "OverrideRewardItemModel": {},
-    "RewardItemModels": {
+    "RewardItemModels": [
+     {
+      "Count": 0,
+      "CreatureRank": 0,
+      "DyeInfoModel": {
+       "AnimationName": "string",
+       "CanBeTinted": false,
+       "Color": "string",
+       "ColorName": "string"
+      },
+      "HeroItemQuality": 0,
+      "IsCreature": false,
+      "IsHeroItem": false,
+      "ItemBase": {},
+      "LargeIconUrl": "string",
+      "Name": "string",
+      "SmallIconUrl": "string",
+      "Tooltip": {}
+     }
+    ]
+   }
+  }
+ },
+ "PanelNavigationModel": {
+  "RewardModel": {
+   "FakeRewardItemModels": {},
+   "OverrideRewardItemModel": {},
+   "RewardItemModels": [
+    {
      "Count": 0,
      "CreatureRank": 0,
      "DyeInfoModel": {
@@ -8775,43 +9062,19 @@
      "SmallIconUrl": "string",
      "Tooltip": {}
     }
-   }
-  }
- },
- "PanelNavigationModel": {
-  "RewardModel": {
-   "FakeRewardItemModels": {},
-   "OverrideRewardItemModel": {},
-   "RewardItemModels": {
-    "Count": 0,
-    "CreatureRank": 0,
-    "DyeInfoModel": {
-     "AnimationName": "string",
-     "CanBeTinted": false,
-     "Color": "string",
-     "ColorName": "string"
-    },
-    "HeroItemQuality": 0,
-    "IsCreature": false,
-    "IsHeroItem": false,
-    "ItemBase": {},
-    "LargeIconUrl": "string",
-    "Name": "string",
-    "SmallIconUrl": "string",
-    "Tooltip": {}
-   }
+   ]
   }
  },
  "PanelSettings": {
   "ContainerControls": {},
-  "ContainerFilename": 0,
+  "ContainerFilename": "string",
   "IconOffset3D": {},
   "PanelLayer": 0,
   "SpecificZoomSettings": {},
   "SubContainerFilenames": {},
   "TooltipContainers": {},
   "UseHeadNode": false,
-  "ZBias": 0.0
+  "ZBias": 0
  },
  "PanelSoundPresets": {
   "ActivationPresets": {},
@@ -8837,7 +9100,7 @@
  "PcConfigurationTracking": {
   "AudioInfo": {},
   "CPUInfo": {},
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CreationDate": "string",
   "DiskInfo": {},
   "GraphicsInfo": {},
   "MemoryInfo": {},
@@ -8848,12 +9111,12 @@
   "UpdatedAttackRegions": {}
  },
  "Period": {
-  "EndDateTime": "2015-01-01T00:00:00Z",
-  "StartDateTime": "2015-01-01T00:00:00Z"
+  "EndDateTime": "string",
+  "StartDateTime": "string"
  },
  "PetScaleInfo": {
   "CreatureId": 0,
-  "Scale": 0.0
+  "Scale": 0
  },
  "PillagedMine": {
   "CastleBuildingId": 0,
@@ -8862,7 +9125,7 @@
   "StolenHeroItems": {}
  },
  "PlayGameClickedTracking": {
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CreationDate": "string",
   "Platform": 0,
   "TrackingTagId": 0
  },
@@ -8899,11 +9162,13 @@
   "HeroSpecContainerId": 0
  },
  "PopUpNarrativeVoTextPagesSpec": {
-  "NarrativeVoTextPages": {
-   "Text": "string",
-   "TextOasisId": 0,
-   "Vo": {}
-  }
+  "NarrativeVoTextPages": [
+   {
+    "Text": "string",
+    "TextOasisId": 0,
+    "Vo": {}
+   }
+  ]
  },
  "PopupAssignmentActionSpec": {
   "ActionName": "string",
@@ -8919,7 +9184,7 @@
   "NarrativePictureUrl": "string",
   "OffsetLeft": 0,
   "OffsetTop": 0,
-  "OverlayAlpha": 0.0,
+  "OverlayAlpha": 0,
   "ParentContainer": "string",
   "PopUpNarrativeVoTextPages": {},
   "PopupBindingVariable": "string",
@@ -8931,9 +9196,9 @@
   "StaticScreenTextOasisId": 0,
   "TargetEntitySearch": {},
   "Text": "string",
-  "TextAnimationCharsDelayScale": 0.0,
-  "TextAnimationDelay": 0.0,
-  "TextAnimationDuration": 0.0,
+  "TextAnimationCharsDelayScale": 0,
+  "TextAnimationDelay": 0,
+  "TextAnimationDuration": 0,
   "TextAnimationEffect": "string",
   "TextOasisId": 0,
   "Title": "string",
@@ -8953,8 +9218,8 @@
   "LocalOffset": {},
   "Selections": {},
   "Type": 0,
-  "ViewOffsetX": 0.0,
-  "ViewOffsetY": 0.0
+  "ViewOffsetX": 0,
+  "ViewOffsetY": 0
  },
  "PopupOptionsModel": {
   "ArrowDirection": 0,
@@ -8970,7 +9235,7 @@
   "NarrativePictureUrl": "string",
   "OffsetLeft": 0,
   "OffsetTop": 0,
-  "OverlayAlpha": 0.0,
+  "OverlayAlpha": 0,
   "PanelName": 0,
   "ParentContainer": "string",
   "PopupBindingVariable": "string",
@@ -8980,9 +9245,9 @@
   "ShowOverlay": false,
   "StaticScreenText": "string",
   "Text": "string",
-  "TextAnimationCharsDelayScale": 0.0,
-  "TextAnimationDelay": 0.0,
-  "TextAnimationDuration": 0.0,
+  "TextAnimationCharsDelayScale": 0,
+  "TextAnimationDelay": 0,
+  "TextAnimationDuration": 0,
   "TextAnimationEffect": "string",
   "Texts": {},
   "Title": "string",
@@ -9006,7 +9271,7 @@
   "MinesStealableLifeForce": 0,
   "MinesStealablePremiumCash": 0,
   "PremiumCashMineCount": 0,
-  "RareDefenseIngredientRatio": 0.0,
+  "RareDefenseIngredientRatio": 0,
   "TreasureRoomStealableIGC": 0,
   "TreasureRoomStealableLifeForce": 0,
   "Xp": 0
@@ -9036,7 +9301,7 @@
  "PremiumCashBoostConsumableTemplate": {
   "BuffSpecContainerId": 0,
   "Duration": 0,
-  "MineIncreasedPremiumCash": 0.0
+  "MineIncreasedPremiumCash": 0
  },
  "PreviousLeagueInfo": {
   "PreviousLeagueId": 0,
@@ -9047,7 +9312,7 @@
  "PriceReductionCondition": {
   "DebugName": "string",
   "Id": 0,
-  "PriceReduction": 0,
+  "PriceReduction": [],
   "Title": 0
  },
  "PriceReductionConditionModel": {
@@ -9058,8 +9323,8 @@
   "PriceReduction": {}
  },
  "PrimaryStatModifierRange": {
-  "MaxValue": 0.0,
-  "MinValue": 0.0
+  "MaxValue": 0,
+  "MinValue": 0
  },
  "PrivateAdminMessageData": {
   "Body": "string"
@@ -9072,23 +9337,27 @@
  },
  "PrivateProfileModel": {
   "FriendsLeaderboard": {},
-  "FriendshipInvitations": {
-   "CreationDate": "2015-01-01T00:00:00Z",
-   "FriendAccountId": 0,
-   "FriendAvatarId": 0,
-   "FriendDisplayName": "string",
-   "HasAccepted": false,
-   "HasDeclined": false,
-   "IsCastleAttackable": false,
-   "IsInvitationOwner": false,
-   "LeagueId": 0
-  },
-  "HeroIconModels": {
-   "HeroSpecContainerId": 0,
-   "IconUrl": "string",
-   "Level": 0,
-   "SpecialPackGroup": 0
-  },
+  "FriendshipInvitations": [
+   {
+    "CreationDate": "string",
+    "FriendAccountId": 0,
+    "FriendAvatarId": 0,
+    "FriendDisplayName": "string",
+    "HasAccepted": false,
+    "HasDeclined": false,
+    "IsCastleAttackable": false,
+    "IsInvitationOwner": false,
+    "LeagueId": 0
+   }
+  ],
+  "HeroIconModels": [
+   {
+    "HeroSpecContainerId": 0,
+    "IconUrl": "string",
+    "Level": 0,
+    "SpecialPackGroup": 0
+   }
+  ],
   "LatestCompletedAchievements": {},
   "Profile": {},
   "ProfileSummaryModel": {
@@ -9181,12 +9450,14 @@
   "MaxResult": 0,
   "Query": "string",
   "Results": {},
-  "SpecialPackModels": {
-   "IconLayerName": "string",
-   "IconUrl": "string",
-   "IconUrlLarge": "string",
-   "SpecialPackId": 0
-  }
+  "SpecialPackModels": [
+   {
+    "IconLayerName": "string",
+    "IconUrl": "string",
+    "IconUrlLarge": "string",
+    "SpecialPackId": 0
+   }
+  ]
  },
  "ProfileSummaryChangedEventArgs": {
   "AccountId": 0,
@@ -9239,7 +9510,7 @@
   "LockType": 0
  },
  "PropertyLevelUpChance": {
-  "Chance": 0.0,
+  "Chance": 0,
   "LevelFrom": 0,
   "LevelTo": 0,
   "PropertyLevel": 0
@@ -9280,12 +9551,14 @@
    "IconName": "string"
   },
   "HasPendingInvitationFromCurrentPlayer": false,
-  "HeroIconModels": {
-   "HeroSpecContainerId": 0,
-   "IconUrl": "string",
-   "Level": 0,
-   "SpecialPackGroup": 0
-  },
+  "HeroIconModels": [
+   {
+    "HeroSpecContainerId": 0,
+    "IconUrl": "string",
+    "Level": 0,
+    "SpecialPackGroup": 0
+   }
+  ],
   "IsFriend": false,
   "LatestCompletedAchievements": {},
   "Profile": {},
@@ -9313,8 +9586,8 @@
   "UbisoftCompetitionId": 0
  },
  "QualityColorTableEntry": {
-  "DarkColor": 0,
-  "LightColor": 0,
+  "DarkColor": "string",
+  "LightColor": "string",
   "Quality": {}
  },
  "QuitGamePanelNavigationModel": {
@@ -9324,14 +9597,16 @@
  },
  "RMClientPackagesVersion": {
   "ClientGamePublicationLabel": "string",
-  "RMPackageVersions": {
-   "RMPackageId": {
-    "MachineType": 0,
-    "PackageName": "string",
-    "RMPackageType": 0
-   },
-   "VersionName": "string"
-  }
+  "RMPackageVersions": [
+   {
+    "RMPackageId": {
+     "MachineType": 0,
+     "PackageName": "string",
+     "RMPackageType": 0
+    },
+    "VersionName": "string"
+   }
+  ]
  },
  "RMLauncherPatch": {
   "FullDownloadSize": 0,
@@ -9375,70 +9650,72 @@
   "RMPackagePatches": {}
  },
  "RandomCastlesResult": {
-  "CastleInfos": {
-   "AttackCount": 0,
-   "AttackSource": 0,
-   "AttackType": 0,
-   "AttackabilityStatus": 0,
-   "AttackerStatus": 0,
-   "AverageDuration": 0,
-   "BestHeroSpecContainerId": 0,
-   "CastleType": 0,
-   "CastleValidationDuration": 0,
-   "CompletionReward": {},
-   "DefenderAccountSummary": {},
-   "DefenderActiveConsumables": {},
-   "Difficulty": 0,
-   "FromMachineLearning": false,
-   "IsAlmostEmpty": false,
-   "IsCastleAttackable": false,
-   "IsNew": false,
-   "IsShielded": false,
-   "IsTargetedAttack": false,
-   "LastCastleRating": 0,
-   "LastPublishedDate": "2015-01-01T00:00:00Z",
-   "LastSeenOnline": "2015-01-01T00:00:00Z",
-   "Level": 0,
-   "PotentialLoot": {
-    "BoostIGC": 0,
-    "BoostLifeForce": 0,
-    "BoostXp": 0,
-    "IGC": 0,
-    "IGCMineCount": 0,
-    "LeagueBonusIGC": 0,
-    "LeagueBonusLifeForce": 0,
-    "LifeForce": 0,
-    "LifeForceMineCount": 0,
-    "MinesStealableIGC": 0,
-    "MinesStealableLifeForce": 0,
-    "MinesStealablePremiumCash": 0,
-    "PremiumCashMineCount": 0,
-    "RareDefenseIngredientRatio": 0.0,
-    "TreasureRoomStealableIGC": 0,
-    "TreasureRoomStealableLifeForce": 0,
-    "Xp": 0
-   },
-   "RevengeAttackId": "string",
-   "RoomCount": 0,
-   "ShieldExpirationDate": "2015-01-01T00:00:00Z",
-   "Stats": {},
-   "SuccessfulAttackCount": 0,
-   "TrophyScore": 0,
-   "TrophyScoreVariationLose": 0,
-   "TrophyScoreVariationReason": 0,
-   "TrophyScoreVariationWin": 0,
-   "VictoryConditionLevel": 0,
-   "VictoryConditionRewardRatios": 0
-  },
+  "CastleInfos": [
+   {
+    "AttackCount": 0,
+    "AttackSource": 0,
+    "AttackType": 0,
+    "AttackabilityStatus": 0,
+    "AttackerStatus": 0,
+    "AverageDuration": 0,
+    "BestHeroSpecContainerId": 0,
+    "CastleType": 0,
+    "CastleValidationDuration": 0,
+    "CompletionReward": {},
+    "DefenderAccountSummary": {},
+    "DefenderActiveConsumables": {},
+    "Difficulty": 0,
+    "FromMachineLearning": false,
+    "IsAlmostEmpty": false,
+    "IsCastleAttackable": false,
+    "IsNew": false,
+    "IsShielded": false,
+    "IsTargetedAttack": false,
+    "LastCastleRating": 0,
+    "LastPublishedDate": "string",
+    "LastSeenOnline": "string",
+    "Level": 0,
+    "PotentialLoot": {
+     "BoostIGC": 0,
+     "BoostLifeForce": 0,
+     "BoostXp": 0,
+     "IGC": 0,
+     "IGCMineCount": 0,
+     "LeagueBonusIGC": 0,
+     "LeagueBonusLifeForce": 0,
+     "LifeForce": 0,
+     "LifeForceMineCount": 0,
+     "MinesStealableIGC": 0,
+     "MinesStealableLifeForce": 0,
+     "MinesStealablePremiumCash": 0,
+     "PremiumCashMineCount": 0,
+     "RareDefenseIngredientRatio": 0,
+     "TreasureRoomStealableIGC": 0,
+     "TreasureRoomStealableLifeForce": 0,
+     "Xp": 0
+    },
+    "RevengeAttackId": "string",
+    "RoomCount": 0,
+    "ShieldExpirationDate": "string",
+    "Stats": {},
+    "SuccessfulAttackCount": 0,
+    "TrophyScore": 0,
+    "TrophyScoreVariationLose": 0,
+    "TrophyScoreVariationReason": 0,
+    "TrophyScoreVariationWin": 0,
+    "VictoryConditionLevel": 0,
+    "VictoryConditionRewardRatios": 0
+   }
+  ],
   "HasReachLastPage": false
  },
  "RandomCurrencyAmount": {
   "Amount": {},
-  "Probability": 0.0
+  "Probability": 0
  },
  "RareDefenseIngredientColorItem": {
   "Colour": "string",
-  "UpperBound": 0.0
+  "UpperBound": 0
  },
  "ReachLevelAchievement": {
   "Heroes": {}
@@ -9448,7 +9725,7 @@
   "Level": 0
  },
  "ReceiveCriticalDamageVoConfig": {
-  "DamageHpThreshold": 0.0,
+  "DamageHpThreshold": 0,
   "Vo": {}
  },
  "RegionMapCastle": {
@@ -9457,23 +9734,25 @@
  },
  "RegionMapPanelNavigationModel": {
   "AttackRegionsViewModel": {
-   "AttackRegions": {
-    "AttackRegionId": 0,
-    "BossCastleId": 0,
-    "BossName": 0,
-    "DebugName": "string",
-    "HasMLPrediction": false,
-    "IsCompetitionRegion": false,
-    "IsFriendRegion": false,
-    "LevelMax": 0,
-    "LevelMin": 0,
-    "Name": 0,
-    "OverPosX": 0,
-    "OverPosY": 0,
-    "ShowUbisoftCastle": false,
-    "ShowUserCastle": false,
-    "ShowValidableCastle": false
-   }
+   "AttackRegions": [
+    {
+     "AttackRegionId": 0,
+     "BossCastleId": 0,
+     "BossName": 0,
+     "DebugName": "string",
+     "HasMLPrediction": false,
+     "IsCompetitionRegion": false,
+     "IsFriendRegion": false,
+     "LevelMax": 0,
+     "LevelMin": 0,
+     "Name": 0,
+     "OverPosX": 0,
+     "OverPosY": 0,
+     "ShowUbisoftCastle": false,
+     "ShowUserCastle": false,
+     "ShowValidableCastle": false
+    }
+   ]
   },
   "CurrentRegion": 0,
   "PanelName": 0,
@@ -9483,10 +9762,12 @@
  },
  "RegionMapSettings": {
   "MaxCol": 0,
-  "RegionMapCastles": {
-   "RegionMapId": 0,
-   "UiContainerName": "string"
-  }
+  "RegionMapCastles": [
+   {
+    "RegionMapId": 0,
+    "UiContainerName": "string"
+   }
+  ]
  },
  "RemoveCastleRoomCommand": {
   "RemovedBuildingsInstanceId": 0,
@@ -9532,9 +9813,9 @@
   "Tier": 0
  },
  "ResistanceSettings": {
-  "ResistanceReductionImmunityDuration": 0.0,
-  "ResistanceRemovedMultiplier": 0.0,
-  "ResistanceReplenishDuration": 0.0
+  "ResistanceReductionImmunityDuration": 0,
+  "ResistanceRemovedMultiplier": 0,
+  "ResistanceReplenishDuration": 0
  },
  "RestartAttackPanelNavigationModel": {
   "CastleType": 0,
@@ -9602,24 +9883,26 @@
  "RewardModel": {
   "FakeRewardItemModels": {},
   "OverrideRewardItemModel": {},
-  "RewardItemModels": {
-   "Count": 0,
-   "CreatureRank": 0,
-   "DyeInfoModel": {
-    "AnimationName": "string",
-    "CanBeTinted": false,
-    "Color": "string",
-    "ColorName": "string"
-   },
-   "HeroItemQuality": 0,
-   "IsCreature": false,
-   "IsHeroItem": false,
-   "ItemBase": {},
-   "LargeIconUrl": "string",
-   "Name": "string",
-   "SmallIconUrl": "string",
-   "Tooltip": {}
-  }
+  "RewardItemModels": [
+   {
+    "Count": 0,
+    "CreatureRank": 0,
+    "DyeInfoModel": {
+     "AnimationName": "string",
+     "CanBeTinted": false,
+     "Color": "string",
+     "ColorName": "string"
+    },
+    "HeroItemQuality": 0,
+    "IsCreature": false,
+    "IsHeroItem": false,
+    "ItemBase": {},
+    "LargeIconUrl": "string",
+    "Name": "string",
+    "SmallIconUrl": "string",
+    "Tooltip": {}
+   }
+  ]
  },
  "RollbackUpdatedEventArgs": {
   "DelegatedCastleValidationPendingTime": 0,
@@ -9645,23 +9928,23 @@
   "MaxDecorationPoints": 0
  },
  "RoomObject": {
-  "AttachmentNode": 0,
+  "AttachmentNode": "string",
   "Children": {},
-  "EffectName": 0,
+  "EffectName": "string",
   "IgnoreForRoomOrientations": 0,
   "Orientation": {},
-  "Probability": 0.0,
+  "Probability": 0,
   "SpecContainerId": 0,
-  "SpecContainerType": 0.0
+  "SpecContainerType": 0
  },
  "RoomObstacle": {
   "Orientation": 0,
-  "Thickness": 0.0,
-  "Width": 0.0
+  "Thickness": 0,
+  "Width": 0
  },
  "RoomPlayerSpawnPoint": {
-  "PlayerSpawnCellX": 0.0,
-  "PlayerSpawnCellY": 0.0,
+  "PlayerSpawnCellX": 0,
+  "PlayerSpawnCellY": 0,
   "PlayerSpawnOrientation": {}
  },
  "RoomSection": {
@@ -9674,16 +9957,18 @@
  },
  "RoomZone": {
   "MaxConstructionPoints": 0,
-  "RoomZoneCells": {
-   "CellTypeMask": 0
-  }
+  "RoomZoneCells": [
+   {
+    "CellTypeMask": 0
+   }
+  ]
  },
  "RoomZoneCell": {
   "CellTypeMask": 0
  },
  "RoomZoneInfoCollection": {
   "RoomZoneInfos": {},
-  "RoomZoneMaterialInfo": 0
+  "RoomZoneMaterialInfo": {}
  },
  "ScreenPositionModel": {
   "PositionX": 0,
@@ -9737,7 +10022,7 @@
   "EntryTimeToLive": 0,
   "GiveRewardJobDelayMinutes": 0,
   "GlobalLockTimeout": 0,
-  "ReferenceDate": "2015-01-01T00:00:00Z",
+  "ReferenceDate": "string",
   "SeasonalRewardConfig": {
    "ClosingPeriodCount": 0,
    "Offset": 0,
@@ -9745,7 +10030,7 @@
   }
  },
  "SeasonalCompetitionStartedNotification": {
-  "StartDate": "2015-01-01T00:00:00Z"
+  "StartDate": "string"
  },
  "SeasonalEntitiesOverrides": {
   "CreaturesOverrides": {},
@@ -9753,7 +10038,7 @@
   "TrapsOverrides": {}
  },
  "SeasonalEventInfo": {
-  "Id": 0,
+  "Id": "string",
   "Name": "string"
  },
  "SeasonalRewardConfig": {
@@ -9832,12 +10117,14 @@
   "InventorySlotIndex": 0
  },
  "ServerDefinitions": {
-  "ServerInfos": {
-   "ApplicationID": "string",
-   "DeploymentServiceID": "string",
-   "RelativePathToApplication": "string",
-   "ServerName": "string"
-  }
+  "ServerInfos": [
+   {
+    "ApplicationID": "string",
+    "DeploymentServiceID": "string",
+    "RelativePathToApplication": "string",
+    "ServerName": "string"
+   }
+  ]
  },
  "ServerEndAttackEndedEventArgs": {
   "EndAttackInfo": {
@@ -9847,7 +10134,7 @@
    "BoostXp": 0,
    "CastleRatingFreePrize": {
     "Amount": 0,
-    "Chance": 0.0,
+    "Chance": 0,
     "CurrencyType": 0
    },
    "CastleShieldedByAttacker": false,
@@ -9933,10 +10220,10 @@
  },
  "SetLastViewedDateCommand": {
   "Type": 0,
-  "ViewedDate": "2015-01-01T00:00:00Z"
+  "ViewedDate": "string"
  },
  "SetLastViewedDefendLogCommand": {
-  "ViewedDate": "2015-01-01T00:00:00Z"
+  "ViewedDate": "string"
  },
  "SetLastViewedNewsCommand": {
   "NewsId": "string"
@@ -9955,7 +10242,7 @@
  },
  "ShieldInfo": {
   "IsShielded": false,
-  "ShieldExpirableDueDate": "2015-01-01T00:00:00Z"
+  "ShieldExpirableDueDate": "string"
  },
  "ShieldRemainingTimeUpdatedEventArgs": {
   "ShieldRemainingTime": 0
@@ -9970,11 +10257,13 @@
  },
  "ShopCategorySettings": {
   "Category": 0,
-  "Filters": {
-   "Matched": false,
-   "Matches": {},
-   "Replacement": "string"
-  }
+  "Filters": [
+   {
+    "Matched": false,
+    "Matches": {},
+    "Replacement": "string"
+   }
+  ]
  },
  "ShopConfirmationPopupModel": {
   "IsContainingPremiumCash": false,
@@ -9991,9 +10280,9 @@
  },
  "ShopDiscount": {
   "DiscountType": 0,
-  "ExpirationDate": "2015-01-01T00:00:00Z",
+  "ExpirationDate": "string",
   "PercentOff": 0,
-  "StartDate": "2015-01-01T00:00:00Z"
+  "StartDate": "string"
  },
  "ShopFilter": {
   "Type": 0,
@@ -10055,25 +10344,27 @@
   "ShopItemIds": {}
  },
  "ShopMenuNavigation": {
-  "ShopMenuNavigationButtons": {
-   "EmptyMessageOasisId": 0,
-   "GameButton": 0,
-   "IconClass": "string",
-   "IsDisabledInNUE": false,
-   "IsDisabledOnConsoleUI": false,
-   "IsDisabledOnPCUI": false,
-   "IsLockedDuringItemCrafting": false,
-   "IsLockedDuringItemReforging": false,
-   "IsLockedDuringItemUpgrading": false,
-   "LayerName": "string",
-   "NewItemCount": 0,
-   "OasisId": 0,
-   "ShopCategoriesMerged": {},
-   "ShopCategory": 0,
-   "ShopContext": 0,
-   "Title": "string",
-   "Url": "string"
-  }
+  "ShopMenuNavigationButtons": [
+   {
+    "EmptyMessageOasisId": 0,
+    "GameButton": 0,
+    "IconClass": "string",
+    "IsDisabledInNUE": false,
+    "IsDisabledOnConsoleUI": false,
+    "IsDisabledOnPCUI": false,
+    "IsLockedDuringItemCrafting": false,
+    "IsLockedDuringItemReforging": false,
+    "IsLockedDuringItemUpgrading": false,
+    "LayerName": "string",
+    "NewItemCount": 0,
+    "OasisId": 0,
+    "ShopCategoriesMerged": {},
+    "ShopCategory": 0,
+    "ShopContext": 0,
+    "Title": "string",
+    "Url": "string"
+   }
+  ]
  },
  "ShopMenuNavigationButton": {
   "EmptyMessageOasisId": 0,
@@ -10117,25 +10408,27 @@
   "PrimaryShopEnabled": false,
   "ProductsViewModel": {},
   "ShopMenuNavigation": {
-   "ShopMenuNavigationButtons": {
-    "EmptyMessageOasisId": 0,
-    "GameButton": 0,
-    "IconClass": "string",
-    "IsDisabledInNUE": false,
-    "IsDisabledOnConsoleUI": false,
-    "IsDisabledOnPCUI": false,
-    "IsLockedDuringItemCrafting": false,
-    "IsLockedDuringItemReforging": false,
-    "IsLockedDuringItemUpgrading": false,
-    "LayerName": "string",
-    "NewItemCount": 0,
-    "OasisId": 0,
-    "ShopCategoriesMerged": {},
-    "ShopCategory": 0,
-    "ShopContext": 0,
-    "Title": "string",
-    "Url": "string"
-   }
+   "ShopMenuNavigationButtons": [
+    {
+     "EmptyMessageOasisId": 0,
+     "GameButton": 0,
+     "IconClass": "string",
+     "IsDisabledInNUE": false,
+     "IsDisabledOnConsoleUI": false,
+     "IsDisabledOnPCUI": false,
+     "IsLockedDuringItemCrafting": false,
+     "IsLockedDuringItemReforging": false,
+     "IsLockedDuringItemUpgrading": false,
+     "LayerName": "string",
+     "NewItemCount": 0,
+     "OasisId": 0,
+     "ShopCategoriesMerged": {},
+     "ShopCategory": 0,
+     "ShopContext": 0,
+     "Title": "string",
+     "Url": "string"
+    }
+   ]
   },
   "Tab": 0,
   "Title": "string"
@@ -10144,17 +10437,19 @@
   "AlreadyOwnedCount": 0,
   "BuildingRequirementRank": 0,
   "BuildingRequiremntName": "string",
-  "BuyBackCreationDate": "2015-01-01T00:00:00Z",
+  "BuyBackCreationDate": "string",
   "BuyBackId": "string",
   "BuyButtonOasisId": 0,
   "BuyButtonOasisName": "string",
   "BuyableCount": 0,
   "CanAfford": false,
   "ConsumableType": 0,
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
   "CreatureRank": 0,
   "CreatureTrapCraftingItemModel": {
    "IsBlueprintLocked": false,
@@ -10235,7 +10530,55 @@
    "PrimaryShopEnabled": false,
    "ProductsViewModel": {},
    "ShopMenuNavigation": {
-    "ShopMenuNavigationButtons": {
+    "ShopMenuNavigationButtons": [
+     {
+      "EmptyMessageOasisId": 0,
+      "GameButton": 0,
+      "IconClass": "string",
+      "IsDisabledInNUE": false,
+      "IsDisabledOnConsoleUI": false,
+      "IsDisabledOnPCUI": false,
+      "IsLockedDuringItemCrafting": false,
+      "IsLockedDuringItemReforging": false,
+      "IsLockedDuringItemUpgrading": false,
+      "LayerName": "string",
+      "NewItemCount": 0,
+      "OasisId": 0,
+      "ShopCategoriesMerged": {},
+      "ShopCategory": 0,
+      "ShopContext": 0,
+      "Title": "string",
+      "Url": "string"
+     }
+    ]
+   },
+   "Tab": 0,
+   "Title": "string"
+  }
+ },
+ "ShopSettings": {
+  "BuyBackTimeout": 0,
+  "BuyButtonOasisIds": {},
+  "CategorySettings": [],
+  "DefaultIconFileName": "string",
+  "Filters": [
+   {
+    "Matched": false,
+    "Matches": {},
+    "Replacement": "string"
+   }
+  ],
+  "InfinitePackId": 0,
+  "NewnessDuration": 0,
+  "SellConsumablePriceRatioIGC": 0,
+  "SellConsumablePriceRatioPremium": 0,
+  "SellDefenseIngredientPriceModifier": 0,
+  "SellDefenseIngredientPricePremiumCashModifier": 0,
+  "SellPremiumCashIGCRatio": 0,
+  "ShopContentButtonOasisIds": {},
+  "ShopMenuNavigation": {
+   "ShopMenuNavigationButtons": [
+    {
      "EmptyMessageOasisId": 0,
      "GameButton": 0,
      "IconClass": "string",
@@ -10254,35 +10597,19 @@
      "Title": "string",
      "Url": "string"
     }
-   },
-   "Tab": 0,
-   "Title": "string"
-  }
- },
- "ShopSettings": {
-  "BuyBackTimeout": "0",
-  "BuyButtonOasisIds": {},
-  "CategorySettings": 0,
-  "DefaultIconFileName": "string",
-  "Filters": 0,
-  "InfinitePackId": 0,
-  "NewnessDuration": "0",
-  "SellConsumablePriceRatioIGC": 0,
-  "SellConsumablePriceRatioPremium": 0,
-  "SellDefenseIngredientPriceModifier": 0,
-  "SellDefenseIngredientPricePremiumCashModifier": 0,
-  "SellPremiumCashIGCRatio": 0,
-  "ShopContentButtonOasisIds": {},
-  "ShopMenuNavigation": 0,
+   ]
+  },
   "UpgradePriceModifier": 0
  },
  "ShopSku": {
   "Code": "string",
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
-  "CreationDate": "2015-01-01T00:00:00Z",
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
+  "CreationDate": "string",
   "DescriptionOasisId": 0,
   "Discounts": {},
   "IconUrl": "string",
@@ -10349,10 +10676,10 @@
    "Castle": {
     "AccountDisplayName": "string",
     "AccountId": 0,
-    "CreationDate": "2015-01-01T00:00:00Z",
+    "CreationDate": "string",
     "CreatureTiers": {},
     "LayoutId": 0,
-    "ModificationDate": "2015-01-01T00:00:00Z",
+    "ModificationDate": "string",
     "OasisNameId": 0,
     "Rooms": {},
     "ThemeId": 0,
@@ -10360,7 +10687,7 @@
    },
    "CastleHeartRank": 0,
    "CastleType": 0,
-   "CastleValidationDuration": 0.0,
+   "CastleValidationDuration": 0,
    "CreatureLoot": {},
    "DecorationLoot": {},
    "DefenderActiveConsumables": {},
@@ -10368,31 +10695,33 @@
    "FirstResurrectionCost": 0,
    "FreeInventorySlotsCount": 0,
    "Hero": {
-    "AttackRegions": {
-     "AttackRegionId": 0,
-     "BossCastleId": 0,
-     "BossName": 0,
-     "DebugName": "string",
-     "HasMLPrediction": false,
-     "IsCompetitionRegion": false,
-     "IsFriendRegion": false,
-     "LevelMax": 0,
-     "LevelMin": 0,
-     "Name": 0,
-     "OverPosX": 0,
-     "OverPosY": 0,
-     "ShowUbisoftCastle": false,
-     "ShowUserCastle": false,
-     "ShowValidableCastle": false
-    },
+    "AttackRegions": [
+     {
+      "AttackRegionId": 0,
+      "BossCastleId": 0,
+      "BossName": 0,
+      "DebugName": "string",
+      "HasMLPrediction": false,
+      "IsCompetitionRegion": false,
+      "IsFriendRegion": false,
+      "LevelMax": 0,
+      "LevelMin": 0,
+      "Name": 0,
+      "OverPosX": 0,
+      "OverPosY": 0,
+      "ShowUbisoftCastle": false,
+      "ShowUserCastle": false,
+      "ShowValidableCastle": false
+     }
+    ],
     "Equipment": {},
     "EquippedConsumables": {},
     "EquippedSpells": {},
-    "ExpirationDate": "2015-01-01T00:00:00Z",
+    "ExpirationDate": "string",
     "HeroSpecContainerId": 0,
     "HeroStatModifier": {
      "StatType": 0,
-     "Value": 0.0
+     "Value": 0
     },
     "Level": 0,
     "OwnerSpecialPacks": 0,
@@ -10410,19 +10739,21 @@
    "IsTargetedAttack": false,
    "IsTutorial": false,
    "Level": 0,
-   "LoseTrophyCooldownTimer": "2015-01-01T00:00:00Z",
-   "StealableMines": {
-    "CastleBuildingId": 0,
-    "IsShielded": false,
-    "MaxStealableAmount": 0,
-    "StealableAmount": 0,
-    "StealableHeroItems": {}
-   },
+   "LoseTrophyCooldownTimer": "string",
+   "StealableMines": [
+    {
+     "CastleBuildingId": 0,
+     "IsShielded": false,
+     "MaxStealableAmount": 0,
+     "StealableAmount": 0,
+     "StealableHeroItems": {}
+    }
+   ],
    "TargetedAttackAvailableCount": 0,
    "TrapLoot": {},
-   "TreasureRoomGoldRatio": 0.0,
+   "TreasureRoomGoldRatio": 0,
    "TreasureRoomHeroItem": {},
-   "TreasureRoomLifeForceRatio": 0.0,
+   "TreasureRoomLifeForceRatio": 0,
    "TreasureRoomReward": {},
    "TreasureRoomStealableIGC": {},
    "TreasureRoomStealableLifeForce": {},
@@ -10453,7 +10784,7 @@
   "SpecialMessage": 0
  },
  "ShowCreatureHoverTooltipEventArgs": {
-  "CameraZoom": 0.0,
+  "CameraZoom": 0,
   "CreatureName": "string",
   "IsCreatureSleeping": false,
   "ToolTipModel": 0
@@ -10471,7 +10802,7 @@
   "RegionId": 0
  },
  "ShowPopupMenuEventArgs": {
-  "fontSize": 0.0,
+  "fontSize": 0,
   "height": 0,
   "itemLabels": {},
   "rightAligned": false,
@@ -10495,7 +10826,7 @@
   "TooltipOptions": {}
  },
  "ShowTrapHoverTooltipEventArgs": {
-  "CameraZoom": 0.0,
+  "CameraZoom": 0,
   "IsPowered": 0,
   "PowerConsumption": 0,
   "TrapName": 0
@@ -10512,27 +10843,29 @@
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
-   "RewardItemModels": {
-    "Count": 0,
-    "CreatureRank": 0,
-    "DyeInfoModel": {
-     "AnimationName": "string",
-     "CanBeTinted": false,
-     "Color": "string",
-     "ColorName": "string"
-    },
-    "HeroItemQuality": 0,
-    "IsCreature": false,
-    "IsHeroItem": false,
-    "ItemBase": {},
-    "LargeIconUrl": "string",
-    "Name": "string",
-    "SmallIconUrl": "string",
-    "Tooltip": {}
-   }
+   "RewardItemModels": [
+    {
+     "Count": 0,
+     "CreatureRank": 0,
+     "DyeInfoModel": {
+      "AnimationName": "string",
+      "CanBeTinted": false,
+      "Color": "string",
+      "ColorName": "string"
+     },
+     "HeroItemQuality": 0,
+     "IsCreature": false,
+     "IsHeroItem": false,
+     "ItemBase": {},
+     "LargeIconUrl": "string",
+     "Name": "string",
+     "SmallIconUrl": "string",
+     "Tooltip": {}
+    }
+   ]
   },
   "SleepingCreaturesCount": 0,
-  "TimerDuration": 0.0
+  "TimerDuration": 0
  },
  "SimulationLaunchConfig": {
   "AttackRegionId": 0,
@@ -10567,38 +10900,46 @@
   "SpellTrees": {}
  },
  "SkusModifiersUpdatedNotification": {
-  "ShopSkuModifiers": {
-   "LimitedQuantityConsumed": 0,
-   "LimitedQuantityMax": 0,
-   "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
-   "LimitedQuantityNextUnlockQuantity": 0,
-   "SkuCode": "string",
-   "Unlock": false
-  }
+  "ShopSkuModifiers": [
+   {
+    "LimitedQuantityConsumed": 0,
+    "LimitedQuantityMax": 0,
+    "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
+    "LimitedQuantityNextUnlockQuantity": 0,
+    "SkuCode": "string",
+    "Unlock": false
+   }
+  ]
  },
  "SleepyGiantAccountInformation": {
-  "Achievements": {
-   "Count": 0
-  }
+  "Achievements": [
+   {
+    "Count": 0
+   }
+  ]
  },
  "SliderSettings": {
-  "Max": 0.0,
-  "Min": 0.0,
+  "Max": 0,
+  "Min": 0,
   "Precision": 0,
-  "Step": 0.0
+  "Step": 0
  },
  "SoundEventWrapper": {
   "FireAndForget": false,
   "Probability": 0,
-  "SoundEventResource": 0,
+  "SoundEventResource": "string",
   "SoundEventResourceSeasonalOverrides": {}
  },
  "Spec": {
-  "Tag": 0
+  "Tag": "string"
  },
  "SpecContainer": {
   "Name": "string",
-  "Specs": 0
+  "Specs": [
+   {
+    "Tag": "string"
+   }
+  ]
  },
  "SpecialPack": {
   "AdditionalInventoryTabCount": 0,
@@ -10607,18 +10948,22 @@
   "BoostedHeroes": {},
   "BuyExclusionList": 0,
   "CastleVisualGroupNames": {},
-  "CraftingMaterials": {
-   "Id": 0,
-   "Quantity": 0
-  },
+  "CraftingMaterials": [
+   {
+    "Id": 0,
+    "Quantity": 0
+   }
+  ],
   "Creatures": {},
   "DebugName": "string",
   "Decorations": {},
   "EarlyHeroAccess": 0,
-  "HeroItems": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
-   "SellPrice": 0
-  },
+  "HeroItems": [
+   {
+    "AcquisitionDate": "string",
+    "SellPrice": 0
+   }
+  ],
   "IconLayerName": "string",
   "IconUrl": "string",
   "IconUrlLarge": "string",
@@ -10627,32 +10972,36 @@
   "PackNameOasisId": 0,
   "ProductPageUrl": "string",
   "Rank": 0,
-  "ShopSkus": {
-   "Code": "string",
-   "CraftingMaterials": {
-    "Id": 0,
-    "Quantity": 0
-   },
-   "CreationDate": "2015-01-01T00:00:00Z",
-   "DescriptionOasisId": 0,
-   "Discounts": {},
-   "IconUrl": "string",
-   "InternalDescription": "string",
-   "IsActive": false,
-   "IsBestSeller": false,
-   "IsLimitedQuantity": false,
-   "IsLocked": false,
-   "ItemCount": 0,
-   "ItemId": 0,
-   "ItemType": 0,
-   "LimitedQuantityMax": 0,
-   "MaxOwningCount": 0,
-   "PremiumEstimatedValue": 0,
-   "Price": {},
-   "ShopContext": 0,
-   "TitleOasisId": 0,
-   "Weight": 0
-  },
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "string",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": 0,
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
   "SpecialPackGroup": 0,
   "Traps": {},
   "UnlockedEmotes": 0,
@@ -10695,25 +11044,27 @@
   "ShortcutMouseButton": 0
  },
  "SpellTooltipModel": {
-  "Cooldown": 0.0,
+  "Cooldown": 0,
   "DescriptionFormulas": {},
-  "HeroDamagePerSecond": 0.0,
+  "HeroDamagePerSecond": 0,
   "HeroLevel": 0,
   "HeroNameRequirement": "string",
   "ManaBuilder": 0,
   "ManaBuilderDescription": "string",
   "ManaCost": 0,
-  "ManaCostPerSecond": 0.0,
+  "ManaCostPerSecond": 0,
   "SpellLevel": 0,
   "Type": 0
  },
  "SpellTreeViewModel": {
   "SpellFamily": {},
-  "Spells": {
-   "Level": 0,
-   "NewlyAdded": false,
-   "SpellSpecContainerId": 0
-  }
+  "Spells": [
+   {
+    "Level": 0,
+    "NewlyAdded": false,
+    "SpellSpecContainerId": 0
+   }
+  ]
  },
  "SpellUnlockedChangedEventArgs": {
   "UnlockedSpell": {}
@@ -10751,10 +11102,10 @@
     "Castle": {
      "AccountDisplayName": "string",
      "AccountId": 0,
-     "CreationDate": "2015-01-01T00:00:00Z",
+     "CreationDate": "string",
      "CreatureTiers": {},
      "LayoutId": 0,
-     "ModificationDate": "2015-01-01T00:00:00Z",
+     "ModificationDate": "string",
      "OasisNameId": 0,
      "Rooms": {},
      "ThemeId": 0,
@@ -10762,7 +11113,7 @@
     },
     "CastleHeartRank": 0,
     "CastleType": 0,
-    "CastleValidationDuration": 0.0,
+    "CastleValidationDuration": 0,
     "CreatureLoot": {},
     "DecorationLoot": {},
     "DefenderActiveConsumables": {},
@@ -10770,31 +11121,33 @@
     "FirstResurrectionCost": 0,
     "FreeInventorySlotsCount": 0,
     "Hero": {
-     "AttackRegions": {
-      "AttackRegionId": 0,
-      "BossCastleId": 0,
-      "BossName": 0,
-      "DebugName": "string",
-      "HasMLPrediction": false,
-      "IsCompetitionRegion": false,
-      "IsFriendRegion": false,
-      "LevelMax": 0,
-      "LevelMin": 0,
-      "Name": 0,
-      "OverPosX": 0,
-      "OverPosY": 0,
-      "ShowUbisoftCastle": false,
-      "ShowUserCastle": false,
-      "ShowValidableCastle": false
-     },
+     "AttackRegions": [
+      {
+       "AttackRegionId": 0,
+       "BossCastleId": 0,
+       "BossName": 0,
+       "DebugName": "string",
+       "HasMLPrediction": false,
+       "IsCompetitionRegion": false,
+       "IsFriendRegion": false,
+       "LevelMax": 0,
+       "LevelMin": 0,
+       "Name": 0,
+       "OverPosX": 0,
+       "OverPosY": 0,
+       "ShowUbisoftCastle": false,
+       "ShowUserCastle": false,
+       "ShowValidableCastle": false
+      }
+     ],
      "Equipment": {},
      "EquippedConsumables": {},
      "EquippedSpells": {},
-     "ExpirationDate": "2015-01-01T00:00:00Z",
+     "ExpirationDate": "string",
      "HeroSpecContainerId": 0,
      "HeroStatModifier": {
       "StatType": 0,
-      "Value": 0.0
+      "Value": 0
      },
      "Level": 0,
      "OwnerSpecialPacks": 0,
@@ -10812,19 +11165,21 @@
     "IsTargetedAttack": false,
     "IsTutorial": false,
     "Level": 0,
-    "LoseTrophyCooldownTimer": "2015-01-01T00:00:00Z",
-    "StealableMines": {
-     "CastleBuildingId": 0,
-     "IsShielded": false,
-     "MaxStealableAmount": 0,
-     "StealableAmount": 0,
-     "StealableHeroItems": {}
-    },
+    "LoseTrophyCooldownTimer": "string",
+    "StealableMines": [
+     {
+      "CastleBuildingId": 0,
+      "IsShielded": false,
+      "MaxStealableAmount": 0,
+      "StealableAmount": 0,
+      "StealableHeroItems": {}
+     }
+    ],
     "TargetedAttackAvailableCount": 0,
     "TrapLoot": {},
-    "TreasureRoomGoldRatio": 0.0,
+    "TreasureRoomGoldRatio": 0,
     "TreasureRoomHeroItem": {},
-    "TreasureRoomLifeForceRatio": 0.0,
+    "TreasureRoomLifeForceRatio": 0,
     "TreasureRoomReward": {},
     "TreasureRoomStealableIGC": {},
     "TreasureRoomStealableLifeForce": {},
@@ -10847,9 +11202,9 @@
   }
  },
  "StartSpeedBoost": {
-  "AParameter": 0.0,
-  "Cooldown": 0.0,
-  "InitialSpeedBoostMultiplier": 0.0
+  "AParameter": 0,
+  "Cooldown": 0,
+  "InitialSpeedBoostMultiplier": 0
  },
  "StarterCastleInfoModel": {
   "CanBePurchased": false,
@@ -10861,10 +11216,10 @@
   "SaleId": 0
  },
  "StatModel": {
-  "FromValue": 0.0,
+  "FromValue": 0,
   "ShouldDisplaySign": false,
   "StatType": 0,
-  "ToValue": 0.0
+  "ToValue": 0
  },
  "StateMachineTracking": {
   "States": {}
@@ -10923,7 +11278,7 @@
   "FileSize": 0
  },
  "SubLeague": {
-  "AttackBonus": 0.0,
+  "AttackBonus": 0,
   "BaseSeasonalReward": {},
   "Id": 0,
   "LargeIconUrl": "string",
@@ -10941,29 +11296,31 @@
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
-   "RewardItemModels": {
-    "Count": 0,
-    "CreatureRank": 0,
-    "DyeInfoModel": {
-     "AnimationName": "string",
-     "CanBeTinted": false,
-     "Color": "string",
-     "ColorName": "string"
-    },
-    "HeroItemQuality": 0,
-    "IsCreature": false,
-    "IsHeroItem": false,
-    "ItemBase": {},
-    "LargeIconUrl": "string",
-    "Name": "string",
-    "SmallIconUrl": "string",
-    "Tooltip": {}
-   }
+   "RewardItemModels": [
+    {
+     "Count": 0,
+     "CreatureRank": 0,
+     "DyeInfoModel": {
+      "AnimationName": "string",
+      "CanBeTinted": false,
+      "Color": "string",
+      "ColorName": "string"
+     },
+     "HeroItemQuality": 0,
+     "IsCreature": false,
+     "IsHeroItem": false,
+     "ItemBase": {},
+     "LargeIconUrl": "string",
+     "Name": "string",
+     "SmallIconUrl": "string",
+     "Tooltip": {}
+    }
+   ]
   },
   "ScoreMax": 0,
   "ScoreMin": 0,
   "SubLeagueModel": {
-   "AttackBonus": 0.0,
+   "AttackBonus": 0,
    "LargeIconUrl": "string",
    "Name": "string",
    "PrefixName": "string",
@@ -10971,7 +11328,7 @@
   }
  },
  "SubLeagueModel": {
-  "AttackBonus": 0.0,
+  "AttackBonus": 0,
   "LargeIconUrl": "string",
   "Name": "string",
   "PrefixName": "string",
@@ -10986,7 +11343,7 @@
     "HeroName": "string",
     "HeroStatsModel": {
      "EquipmentAbilities": {},
-     "MaxResistance": 0.0,
+     "MaxResistance": 0,
      "Stats": {},
      "WeightType": 0
     }
@@ -11012,8 +11369,8 @@
   "TargetedAttackAvailableCount": 0
  },
  "TextFontParams": {
-  "FontSettings": 0,
-  "SynergyMaterialFileName": 0
+  "FontSettings": {},
+  "SynergyMaterialFileName": "string"
  },
  "TextUpdatedEventArgs": {
   "Text": "string"
@@ -11051,16 +11408,18 @@
   "ThemeId": 0
  },
  "Thread": {
-  "Messages": {
-   "Data": {},
-   "DateSent": "2015-01-01T00:00:00Z",
-   "SenderId": 0,
-   "Type": 0
-  },
+  "Messages": [
+   {
+    "Data": {},
+    "DateSent": "string",
+    "SenderId": 0,
+    "Type": 0
+   }
+  ],
   "Participants": {},
   "ThreadHeader": {
-   "FirstMessageSentDate": "2015-01-01T00:00:00Z",
-   "LastMessageSentDate": "2015-01-01T00:00:00Z",
+   "FirstMessageSentDate": "string",
+   "LastMessageSentDate": "string",
    "MessageCount": 0,
    "Subject": "string",
    "ThreadType": 0
@@ -11075,8 +11434,8 @@
   "TotalThreadCount": 0
  },
  "ThreadHeader": {
-  "FirstMessageSentDate": "2015-01-01T00:00:00Z",
-  "LastMessageSentDate": "2015-01-01T00:00:00Z",
+  "FirstMessageSentDate": "string",
+  "LastMessageSentDate": "string",
   "MessageCount": 0,
   "Subject": "string",
   "ThreadType": 0
@@ -11091,8 +11450,8 @@
   "LastMessagePreview": {},
   "PartialParticipantList": {},
   "ThreadHeader": {
-   "FirstMessageSentDate": "2015-01-01T00:00:00Z",
-   "LastMessageSentDate": "2015-01-01T00:00:00Z",
+   "FirstMessageSentDate": "string",
+   "LastMessageSentDate": "string",
    "MessageCount": 0,
    "Subject": "string",
    "ThreadType": 0
@@ -11101,7 +11460,7 @@
   "ThreadUserPerspective": {}
  },
  "TimeBonusGrantedEventArgs": {
-  "BonusTime": 0.0
+  "BonusTime": 0
  },
  "TimeCost": {
   "Cost": {},
@@ -11154,7 +11513,7 @@
   "DurationsByVictoryCondition": {}
  },
  "TreasureRoomChestLockInfo": {
-  "Animation": 0
+  "Animation": "string"
  },
  "TreasureRoomGoldPileEntry": {
   "MaxAmount": 0,
@@ -11164,24 +11523,24 @@
  "TreasureRoomLoot": {
   "GoldDrops": 0,
   "HeroItem": {
-   "AcquisitionDate": "2015-01-01T00:00:00Z",
+   "AcquisitionDate": "string",
    "SellPrice": 0
   },
   "LifeForceDrops": 0,
   "Xp": 0
  },
  "TrophiesModifier": {
-  "From": 0.0,
-  "To": 0.0,
-  "TrophyMultiplier": 0.0
+  "From": 0,
+  "To": 0,
+  "TrophyMultiplier": 0
  },
  "TrophiesSettings": {
   "NumberOfStarsTrophiesModifiers": 0
  },
  "TrophyGainBucket": {
-  "CastleRatio": 0.0,
-  "MaxCrownGain": 0.0,
-  "MinCrownGain": 0.0
+  "CastleRatio": 0,
+  "MaxCrownGain": 0,
+  "MinCrownGain": 0
  },
  "TrophyScoreChange": {
   "TrophyScoreAttackerVariation": 0,
@@ -11200,7 +11559,7 @@
   "YourTime": 0
  },
  "UIAttackReportSettings": {
-  "PredefinedComments": 0
+  "PredefinedComments": []
  },
  "UIBuildingOasisSettings": {
   "UpgradePanel": {}
@@ -11229,16 +11588,18 @@
   "CanAfford": false,
   "CanDisableParentContainerInput": false,
   "ConsumableType": 0,
-  "CraftingMaterialModels": {
-   "ActualCount": 0,
-   "HasEnoughCraftingMaterial": false,
-   "IconUrl": "string",
-   "IsConsumed": false,
-   "LayerName": "string",
-   "Quality": 0,
-   "RequiredCount": 0,
-   "TemplateId": 0
-  },
+  "CraftingMaterialModels": [
+   {
+    "ActualCount": 0,
+    "HasEnoughCraftingMaterial": false,
+    "IconUrl": "string",
+    "IsConsumed": false,
+    "LayerName": "string",
+    "Quality": 0,
+    "RequiredCount": 0,
+    "TemplateId": 0
+   }
+  ],
   "CreatureRank": 0,
   "DiscountPercentOff": 0,
   "DiscountType": 0,
@@ -11431,10 +11792,10 @@
   "ValidateDescriptionText": 0
  },
  "UbisoftCastle": {
-  "ActivationDate": "2015-01-01T00:00:00Z",
+  "ActivationDate": "string",
   "CastleIconUrl": "string",
-  "CastleValidationDuration": 0.0,
-  "DeActivationDate": "2015-01-01T00:00:00Z",
+  "CastleValidationDuration": 0,
+  "DeActivationDate": "string",
   "ForceCastleLevelOnBuildables": false,
   "IsBranded": false,
   "IsDisabled": false,
@@ -11448,7 +11809,7 @@
  "UbisoftCompetitionAttackerRewardTier": {
   "MaxParticipantCount": 0,
   "MinParticipantCount": 0,
-  "RewardsByAttackerRank": 0
+  "RewardsByAttackerRank": []
  },
  "UbisoftCompetitionDetailPanelNavigationModel": {
   "UbisoftCompetitionId": 0
@@ -11508,10 +11869,20 @@
   "Score": 0
  },
  "UbisoftCompetitionSchedule": {
-  "Periods": 0
+  "Periods": [
+   {
+    "EndDateTime": "string",
+    "StartDateTime": "string"
+   }
+  ]
  },
  "UbisoftCompetitionSchedulePeriod": {
-  "CastleIds": 0
+  "CastleIds": [
+   {
+    "CastleType": 0,
+    "Id": 0
+   }
+  ]
  },
  "UbisoftCompetitionSummary": {
   "CastleId": 0,
@@ -11574,31 +11945,40 @@
   "ThemeName": "string"
  },
  "UnlockedObjectivesModel": {
-  "Objectives": {
-   "Category": 0,
-   "ClientSideCompletion": false,
-   "Conditions": 0,
-   "DebugName": "string",
-   "Description": 0,
-   "IconUrl": "string",
-   "Id": 0,
-   "Instruction": 0,
-   "ManualPopupTriggerOnCompletion": false,
-   "PerHeroReward": {},
-   "Progression": 0,
-   "Requirements": 0,
-   "Reward": 0,
-   "ShowUnlockedPopup": false,
-   "Title": 0,
-   "VoiceOverSoundId": "string"
-  }
+  "Objectives": [
+   {
+    "Category": "string",
+    "ClientSideCompletion": false,
+    "Conditions": [],
+    "DebugName": "string",
+    "Description": 0,
+    "IconUrl": "string",
+    "Id": 0,
+    "Instruction": 0,
+    "ManualPopupTriggerOnCompletion": false,
+    "PerHeroReward": {},
+    "Progression": {},
+    "Requirements": [],
+    "Reward": {
+     "FakeRewardItems": {},
+     "LargeIconUrl": "string",
+     "RewardItems": {},
+     "SmallIconUrl": "string"
+    },
+    "ShowUnlockedPopup": false,
+    "Title": 0,
+    "VoiceOverSoundId": "string"
+   }
+  ]
  },
  "UnreadInformation": {
   "TotalUnreadThreadCount": 0,
-  "UnreadThreadInformations": {
-   "ThreadId": 0,
-   "UnreadMessageCount": 0
-  }
+  "UnreadThreadInformations": [
+   {
+    "ThreadId": 0,
+    "UnreadMessageCount": 0
+   }
+  ]
  },
  "UnreadThreadInformation": {
   "ThreadId": 0,
@@ -11613,7 +11993,7 @@
    "BoostXp": 0,
    "CastleRatingFreePrize": {
     "Amount": 0,
-    "Chance": 0.0,
+    "Chance": 0,
     "CurrencyType": 0
    },
    "CastleShieldedByAttacker": false,
@@ -11671,7 +12051,7 @@
   },
   "HeroSpecContainerId": 0,
   "SubLeagueModel": {
-   "AttackBonus": 0.0,
+   "AttackBonus": 0,
    "LargeIconUrl": "string",
    "Name": "string",
    "PrefixName": "string",
@@ -11717,8 +12097,8 @@
   }
  },
  "UpdateCastleCreatureCommand": {
-  "AggroPropagationOffsetX": 0.0,
-  "AggroPropagationOffsetZ": 0.0,
+  "AggroPropagationOffsetX": 0,
+  "AggroPropagationOffsetZ": 0,
   "IsSleeping": false,
   "TotemCastleBuildableId": 0
  },
@@ -11742,9 +12122,9 @@
   "SkuCode": "string"
  },
  "UpgradeCompletedCameraMovementSettings": {
-  "Duration": 0.0,
-  "EaseInOut": 0.0,
-  "EndZoom": 0.0,
+  "Duration": 0,
+  "EaseInOut": 0,
+  "EndZoom": 0,
   "IgnoreFirstUpgrade": false,
   "IgnoreNearestZoomLevel": false,
   "TargetOnCastleCenter": false
@@ -11789,7 +12169,7 @@
   },
   "UserConfigurationSoundModel": {
    "AudioAmbienceEnable": false,
-   "AudioMasterVolumeRatio": 0.0,
+   "AudioMasterVolumeRatio": 0,
    "AudioMusicEnable": false,
    "AudioSfxEnable": false,
    "AudioVoiceEnable": false
@@ -11801,12 +12181,12 @@
    "FPSClampingNoFocus": 0,
    "FXAA": 0,
    "Fog": false,
-   "Gamma": 0.0,
+   "Gamma": 0,
    "Glow": false,
    "LensFlare": false,
    "ObjectComplexity": 0,
    "PostEffects": false,
-   "RenderQuality": 0.0,
+   "RenderQuality": 0,
    "SSAO": 0,
    "ScreenSize": 0,
    "Shadows": 0,
@@ -11817,7 +12197,7 @@
  },
  "UserConfigurationSoundModel": {
   "AudioAmbienceEnable": false,
-  "AudioMasterVolumeRatio": 0.0,
+  "AudioMasterVolumeRatio": 0,
   "AudioMusicEnable": false,
   "AudioSfxEnable": false,
   "AudioVoiceEnable": false
@@ -11829,12 +12209,12 @@
   "FPSClampingNoFocus": 0,
   "FXAA": 0,
   "Fog": false,
-  "Gamma": 0.0,
+  "Gamma": 0,
   "Glow": false,
   "LensFlare": false,
   "ObjectComplexity": 0,
   "PostEffects": false,
-  "RenderQuality": 0.0,
+  "RenderQuality": 0,
   "SSAO": 0,
   "ScreenSize": 0,
   "Shadows": 0,
@@ -11860,7 +12240,7 @@
    "UseCameraDamping": false
   },
   "AudioAmbienceEnable": false,
-  "AudioMasterVolumeRatio": 0.0,
+  "AudioMasterVolumeRatio": 0,
   "AudioMusicEnable": false,
   "AudioSfxEnable": false,
   "AudioVoiceEnable": false,
@@ -11893,24 +12273,26 @@
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
-   "RewardItemModels": {
-    "Count": 0,
-    "CreatureRank": 0,
-    "DyeInfoModel": {
-     "AnimationName": "string",
-     "CanBeTinted": false,
-     "Color": "string",
-     "ColorName": "string"
-    },
-    "HeroItemQuality": 0,
-    "IsCreature": false,
-    "IsHeroItem": false,
-    "ItemBase": {},
-    "LargeIconUrl": "string",
-    "Name": "string",
-    "SmallIconUrl": "string",
-    "Tooltip": {}
-   }
+   "RewardItemModels": [
+    {
+     "Count": 0,
+     "CreatureRank": 0,
+     "DyeInfoModel": {
+      "AnimationName": "string",
+      "CanBeTinted": false,
+      "Color": "string",
+      "ColorName": "string"
+     },
+     "HeroItemQuality": 0,
+     "IsCreature": false,
+     "IsHeroItem": false,
+     "ItemBase": {},
+     "LargeIconUrl": "string",
+     "Name": "string",
+     "SmallIconUrl": "string",
+     "Tooltip": {}
+    }
+   ]
   },
   "posX": 0,
   "posY": 0
@@ -11933,7 +12315,7 @@
   "ViewName": "string"
  },
  "ViewableItem": {
-  "LastViewedDate": "2015-01-01T00:00:00Z",
+  "LastViewedDate": "string",
   "Type": 0
  },
  "VirtualTransaction": {
@@ -11944,64 +12326,64 @@
   "ProductId": 0,
   "ServerName": "string",
   "State": 0,
-  "TransactionDateTime": "2015-01-01T00:00:00Z"
+  "TransactionDateTime": "string"
  },
  "VisualAnimatedEntitySettings": {
-  "AggroIdle": 0,
+  "AggroIdle": "string",
   "AggroIdleDurationAfterAbility": 0,
   "AggroIdleDurationDefault": 0,
-  "BallisticKnockBack": 0,
-  "BuilderDrag": 0,
-  "BuilderDrop": 0,
-  "Celebration": 0,
-  "CelebrationLoose": 0,
-  "CloseDoor": 0,
-  "ClosedDoor": 0,
-  "CreateObstacle": 0,
-  "CriticalFlinch": 0,
-  "DamageObstacle": 0,
-  "Deactivated": 0,
-  "Death": 0,
+  "BallisticKnockBack": "string",
+  "BuilderDrag": "string",
+  "BuilderDrop": "string",
+  "Celebration": "string",
+  "CelebrationLoose": "string",
+  "CloseDoor": "string",
+  "ClosedDoor": "string",
+  "CreateObstacle": "string",
+  "CriticalFlinch": "string",
+  "DamageObstacle": "string",
+  "Deactivated": "string",
+  "Death": "string",
   "DeathAnimationMaxDuration": 0,
-  "DefaultAbility": 0,
-  "DefaultAttachmentBone": 0,
-  "DefaultLeftFootBone": 0,
-  "DefaultRightFootBone": 0,
-  "DestroyObstacle": 0,
-  "EmoteAnimations": 0,
-  "Flinch": 0,
-  "Harvest": 0,
-  "HeroAggroIdleToIdle": 0,
-  "HeroDiedRejoicing": 0,
-  "HomePageAngry": 0,
-  "HomePageVictory": 0,
-  "HorizontalKnockBack": 0,
-  "Idle": 0,
-  "InteractionOpenChest": 0,
-  "InteractionOpenDoor": 0,
+  "DefaultAbility": "string",
+  "DefaultAttachmentBone": "string",
+  "DefaultLeftFootBone": "string",
+  "DefaultRightFootBone": "string",
+  "DestroyObstacle": "string",
+  "EmoteAnimations": [],
+  "Flinch": "string",
+  "Harvest": "string",
+  "HeroAggroIdleToIdle": "string",
+  "HeroDiedRejoicing": [],
+  "HomePageAngry": "string",
+  "HomePageVictory": "string",
+  "HorizontalKnockBack": "string",
+  "Idle": "string",
+  "InteractionOpenChest": "string",
+  "InteractionOpenDoor": "string",
   "InteractionsByType": {},
   "LoopDeactivatedAnimation": false,
-  "LootAction": 0,
-  "MineBuildingCollected": 0,
-  "MineBuildingCollecting": 0,
-  "MineBuildingDamageReceived": 0,
-  "MineBuildingReadyToCollect": 0,
-  "MineBuildingReadyToCollectIdle": 0,
-  "Navigation": 0,
-  "OpenDoor": 0,
-  "OpenedDoor": 0,
-  "Spawn": 0,
-  "Stun": 0,
-  "Walk": 0
+  "LootAction": "string",
+  "MineBuildingCollected": "string",
+  "MineBuildingCollecting": "string",
+  "MineBuildingDamageReceived": "string",
+  "MineBuildingReadyToCollect": "string",
+  "MineBuildingReadyToCollectIdle": "string",
+  "Navigation": "string",
+  "OpenDoor": "string",
+  "OpenedDoor": "string",
+  "Spawn": "string",
+  "Stun": "string",
+  "Walk": "string"
  },
  "VisualFxSpecList": {
   "FxList": {}
  },
  "VisualRenderableInfo": {
-  "TextureFileName": 0
+  "TextureFileName": "string"
  },
  "VisualRoomZoneFxCollection": {
-  "VisualRoomZoneFx": 0
+  "VisualRoomZoneFx": []
  },
  "VoiceOverSounds": {
   "SoundsById": {}
@@ -12041,39 +12423,39 @@
   "AttackId": "string",
   "EndFrame": 0,
   "FrameCount": 0,
-  "FrameDuration": 0.0,
+  "FrameDuration": 0,
   "IsValid": false,
   "ReplayUrl": "string"
  },
  "WeaponArchetype": {
-  "Damage": 0.0,
-  "GearScoreMultiplier": 0.0,
+  "Damage": 0,
+  "GearScoreMultiplier": 0,
   "HeroId": 0,
-  "Range": 0.0,
-  "Speed": 0.0
+  "Range": 0,
+  "Speed": 0
  },
  "WebBrowserSettings": {
-  "CloseButtonLeftOffset": 0.0,
-  "CloseButtonTopOffset": 0.0,
+  "CloseButtonLeftOffset": 0,
+  "CloseButtonTopOffset": 0,
   "ContentHeight": 0,
   "ContentWidth": 0,
   "EnableAudioPresets": false,
-  "FixedHeight": 0.0,
-  "FixedWidth": 0.0,
-  "HeightMargin": 0.0,
-  "HeightRatio": 0.0,
-  "HeightRatioWideScreen": 0.0,
+  "FixedHeight": 0,
+  "FixedWidth": 0,
+  "HeightMargin": 0,
+  "HeightRatio": 0,
+  "HeightRatioWideScreen": 0,
   "HideScrollBars": false,
   "IsFixedSize": false,
-  "Left": 0.0,
+  "Left": 0,
   "Name": "string",
-  "Top": 0.0,
+  "Top": 0,
   "UseBlackOverlay": false,
   "UseBorder": false,
   "UseRatios": false,
-  "WidthMargin": 0.0,
-  "WidthRatio": 0.0,
-  "WidthRatioWideScreen": 0.0
+  "WidthMargin": 0,
+  "WidthRatio": 0,
+  "WidthRatioWideScreen": 0
  },
  "WebViews": {
   "ErrorView": 0,
@@ -12113,31 +12495,33 @@
  },
  "XPChangedEventArgs": {
   "Hero": {
-   "AttackRegions": {
-    "AttackRegionId": 0,
-    "BossCastleId": 0,
-    "BossName": 0,
-    "DebugName": "string",
-    "HasMLPrediction": false,
-    "IsCompetitionRegion": false,
-    "IsFriendRegion": false,
-    "LevelMax": 0,
-    "LevelMin": 0,
-    "Name": 0,
-    "OverPosX": 0,
-    "OverPosY": 0,
-    "ShowUbisoftCastle": false,
-    "ShowUserCastle": false,
-    "ShowValidableCastle": false
-   },
+   "AttackRegions": [
+    {
+     "AttackRegionId": 0,
+     "BossCastleId": 0,
+     "BossName": 0,
+     "DebugName": "string",
+     "HasMLPrediction": false,
+     "IsCompetitionRegion": false,
+     "IsFriendRegion": false,
+     "LevelMax": 0,
+     "LevelMin": 0,
+     "Name": 0,
+     "OverPosX": 0,
+     "OverPosY": 0,
+     "ShowUbisoftCastle": false,
+     "ShowUserCastle": false,
+     "ShowValidableCastle": false
+    }
+   ],
    "Equipment": {},
    "EquippedConsumables": {},
    "EquippedSpells": {},
-   "ExpirationDate": "2015-01-01T00:00:00Z",
+   "ExpirationDate": "string",
    "HeroSpecContainerId": 0,
    "HeroStatModifier": {
     "StatType": 0,
-    "Value": 0.0
+    "Value": 0
    },
    "Level": 0,
    "OwnerSpecialPacks": 0,
@@ -12158,17 +12542,17 @@
   "Username": "string"
  },
  "XpBoostConsumableTemplate": {
-  "IncreasedXp": 0.0
+  "IncreasedXp": 0
  },
  "XpLeashBoostConsumableTemplate": {
-  "IncreasedXp": 0.0,
+  "IncreasedXp": 0,
   "LevelDiffFrom": 0,
   "LevelDiffTo": 0
  },
  "XpLootBaseCpMultiplierTableEntry": {
   "MaxLevel": 0,
   "MinLevel": 0,
-  "XpLootBaseCpMultiplier": 0.0
+  "XpLootBaseCpMultiplier": 0
  },
  "XpRewardItem": {
   "Xp": 0
@@ -12191,8 +12575,8 @@
   "ZoneCode": "string"
  },
  "ZoomSettings": {
-  "Distance": 0.0,
+  "Distance": 0,
   "IsHidingTexts": false,
-  "Zoom": 0.0
+  "Zoom": 0
  }
 }

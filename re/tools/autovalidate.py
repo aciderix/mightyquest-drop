@@ -35,25 +35,21 @@ FAKE_ADVANCE, FAKE_ERROR = SCRATCH_BASE + 0x10, SCRATCH_BASE + 0x20
 OBJSZ = 0x800
 
 
-SCALAR = {"int", "number", "float", "bool", "string", "datetime", "duration"}
+SCALAR = {"num", "str", "bool"}      # wire shapes that are simple scalars
 
 
 def kind_of(t):
-    if t == "string": return "str"
-    if t == "bool": return "bool"
-    if t == "float": return "float"
-    if t == "datetime": return "datetime"
-    return "num"          # int / number / duration -> numeric reader
+    return t          # shapes are already num / str / bool
 
 
 def feed_bytes(kind, val):
     if kind == "str":
-        return b'"' + str(val).encode() + b'",'
+        # an ISO string satisfies plain-string AND datetime readers; enum readers
+        # (string lookup) may reject it -> that field just won't discover (safe).
+        return b'"2015-06-15T00:00:00Z",' if val == "_dt_" else b'"' + str(val).encode() + b'",'
     if kind == "bool":
         return (b"true," if val else b"false,")
-    if kind == "datetime":
-        return b'"2015-06-15T00:00:00Z",'
-    return str(val).encode() + b","   # numeric / float
+    return str(val).encode() + b","   # numeric
 
 
 def cstr(e, a, n=40):
