@@ -70,9 +70,17 @@ Each contract carries a `direction`, from which method(s) exist:
 `schemas.json` (names only) still has the widest coverage (2,051); the typed
 catalog covers the subset whose serialize/deserialize shape was recognised.
 
+## Offline validation against the real codec
+The recovered format is not just read statically — it is **executed**: 
+`re/tools/validate_codec.py` runs the client's own serializer/deserializer under
+Unicorn and round-trips values through them (no game, no Windows). Both
+directions pass 12/12: int/bool/string readers, the whole-object `LoginResult`
+deserialize via its real field dispatcher, the `LoginResult` serialize, and a
+serialize→deserialize round-trip. (Key harness detail: the codec's char-advance
+primitive is `stdcall`, so the intercept layer pops its callee args — see
+`emu.py` `intercept_cleanup`.)
+
 ## Caveats / next refinements
-- Read-only (response) contracts are typed only by name so far; a symmetric pass
-  over the *deserialize* readers (`readInt`/`readString`/…) would type them too.
 - The `number` band groups numeric widths (int64/uint/float32/…) not yet split.
 - Nested `object` fields are linked to their child contract by matching the field
   name to a contract name.

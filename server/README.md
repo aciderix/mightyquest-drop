@@ -40,9 +40,10 @@ game on a Windows box; the analysis dump in this repo does not execute.)
 - [x] Boot/login shaped responses + universal request logging.
 - [ ] Replace example payloads with real per-controller logic, guided by the
       captured request log + the typed schemas.
-- [~] Validate response shapes offline against the client's real deserializer
-      (`re/tools/validate_codec.py`, Unicorn): integer reader proven end-to-end;
-      bool/string readers WIP (more parser-context emulation needed).
+- [x] Validate the wire format offline against the client's real codec
+      (`re/tools/validate_codec.py`, Unicorn): both directions proven — int/bool/
+      string readers, whole-object `LoginResult` deserialize, `LoginResult`
+      serialize, and a serialize→deserialize round-trip (12/12).
 - [ ] Account/profile persistence; then the castle/attack loop.
 
 ## Legal

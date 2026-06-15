@@ -40,6 +40,8 @@ PAGE = 0x1000
 STACK_BASE = 0x70000000
 STACK_SIZE = 0x200000
 SCRATCH_BASE = 0x60000000   # caller-provided scratch/output buffers
+HEAP_BASE = 0x50000000      # fake allocator (when heap_stub=True)
+HEAP_SIZE = 0x4000000
 SENTINEL = 0x5EED_DEAD      # return address that stops emulation
 
 
@@ -48,23 +50,39 @@ def _align_up(x):   return (x + PAGE - 1) & ~(PAGE - 1)
 
 
 class Emu:
-    def __init__(self, exe_path, default_stub_ret=0, trace=False):
+    def __init__(self, exe_path, default_stub_ret=0, trace=False, heap_stub=False):
         self.pe = pefile.PE(exe_path, fast_load=True)
         self.base = self.pe.OPTIONAL_HEADER.ImageBase
         with open(exe_path, "rb") as f:
             self.data = f.read()
         self.default_stub_ret = default_stub_ret
         self.trace = trace
+        # heap_stub: external (non-.text) calls return a fresh writable heap block
+        # instead of 0, so malloc/std::string paths don't null-deref.
+        self.heap_stub = heap_stub
+        self.heap = HEAP_BASE
         self.stub_rets = {}     # va -> forced EAX for specific external calls
         self.intercepts = {}    # va -> label: record args + emulate a return
+        self.intercept_cleanup = {}  # va -> stdcall arg bytes the callee pops
         self.trace_calls = []   # recorded (label, ecx, edx, arg0, arg1)
         self.mapped = []        # (start, end) of mapped exec sections
         self.text_range = None
         self.uc = Uc(UC_ARCH_X86, UC_MODE_32)
+        self._enable_fpu_sse()
         self._map_image()
         self._map_region(STACK_BASE, STACK_SIZE)
         self._map_region(SCRATCH_BASE, 0x100000)
+        if heap_stub:
+            self._map_region(HEAP_BASE, HEAP_SIZE)
         self._install_hooks()
+
+    def _enable_fpu_sse(self):
+        """Unicorn boots with SSE disabled; real MSVC code (std::string, sprintf,
+        float fmt) uses SSE. Clear CR0.EM, set CR0.MP, set CR4.OSFXSR/OSXMMEXCPT."""
+        cr0 = self.uc.reg_read(UC_X86_REG_CR0)
+        self.uc.reg_write(UC_X86_REG_CR0, (cr0 & ~(1 << 2)) | (1 << 1))
+        cr4 = self.uc.reg_read(UC_X86_REG_CR4)
+        self.uc.reg_write(UC_X86_REG_CR4, cr4 | (1 << 9) | (1 << 10))
 
     # ---- memory setup -------------------------------------------------
     def _map_region(self, addr, size):
@@ -109,7 +127,7 @@ class Emu:
                     self.trace_calls.append((h, ecx, uc.reg_read(UC_X86_REG_EDX), a0, a1))
                     eax = 1
                 ret = struct.unpack("<I", uc.mem_read(esp, 4))[0]
-                uc.reg_write(UC_X86_REG_ESP, esp + 4)
+                uc.reg_write(UC_X86_REG_ESP, esp + 4 + self.intercept_cleanup.get(address, 0))
                 uc.reg_write(UC_X86_REG_EAX, eax)
                 uc.reg_write(UC_X86_REG_EIP, ret)
                 return
@@ -119,7 +137,13 @@ class Emu:
                 esp = uc.reg_read(UC_X86_REG_ESP)
                 ret = struct.unpack("<I", uc.mem_read(esp, 4))[0]
                 uc.reg_write(UC_X86_REG_ESP, esp + 4)
-                uc.reg_write(UC_X86_REG_EAX, self.stub_rets.get(address, self.default_stub_ret))
+                if address in self.stub_rets:
+                    eax = self.stub_rets[address]
+                elif self.heap_stub:
+                    eax = self.heap; self.heap += 0x800   # fresh writable block
+                else:
+                    eax = self.default_stub_ret
+                uc.reg_write(UC_X86_REG_EAX, eax)
                 uc.reg_write(UC_X86_REG_EIP, ret)
         self.uc.hook_add(UC_HOOK_CODE, hook_code)
 
