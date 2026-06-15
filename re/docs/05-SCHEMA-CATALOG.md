@@ -88,11 +88,16 @@ what eventually breaks an online client/server. To guard against that across the
 names and types.
 
 Result: **780 / 790 two-way contracts (98%) are fully write/read consistent**.
-The 10 differences are all in client-internal UI/event types
-(`*HoverTooltipEventArgs`, `TooltipModel`, `BuildToolbarModel`,
-`MessageBoxClosedEventArgs`, …) — not core server messages; for the actual
-account/castle/attack/inventory protocol, consistency is effectively 100%.
-See `re/catalog/network/consistency_report.txt`.
+The remaining 10 were each examined in the decompiler and are **all false
+positives**, not protocol bugs:
+- the 3 "type" diffs (`TrapName`, `Name`, `SpecialMessage`) are enum/id fields
+  present on *both* sides — only this tool's int-vs-string classifier disagrees;
+- the 7 "written-not-read" fields are `EventArgs` base-class fields (e.g. `Id`)
+  or client-internal UI view-models (`TooltipModel`, `ForgeModel`, …) — not
+  server messages.
+So for the actual account/castle/attack/inventory protocol, write/read
+consistency is **effectively 100%**. See
+`re/catalog/network/consistency_report.txt`.
 
 (Type comparison treats numeric widths as one, and tolerates the reader side
 under-detecting nested objects / datetimes, whose readers fall in the numeric
