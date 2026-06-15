@@ -28,15 +28,21 @@
   "HeroMinimumLevel": 0,
   "RequiredAbilities": {}
  },
+ "AbilitySpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "AbstractFriendNewsData": {
-  "RequiredLevel": 0,
-  "RequiredReferralFriends": 0,
-  "Reward": {
-   "FakeRewardItems": {},
-   "LargeIconUrl": "string",
-   "RewardItems": {},
-   "SmallIconUrl": "string"
-  }
+  "FriendAccountId": 0,
+  "FriendAvatarId": 0,
+  "FriendDisplayName": "string",
+  "FriendSpecialPacks": 0,
+  "RequiresUserAction": false,
+  "Type": "Ability"
  },
  "AbstractShortcutCode": {
   "CanStillBeTriggeredWithShiftPressedA": false,
@@ -55,7 +61,10 @@
   "BuyBackItems": {}
  },
  "AccountBuyBackSlot": {
-  "Item": {}
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "Id": "string",
+  "ItemType": "Building",
+  "Price": {}
  },
  "AccountExportMetadata": {
   "ArchiveName": "string",
@@ -90,6 +99,65 @@
   "TotalCreaturesKilled": 0
  },
  "AccountInformation": {
+  "AccountId": 0,
+  "ActiveConsumables": [
+   {
+    "ConsumableType": 0,
+    "ExpirableId": "string",
+    "InitialDuration": 0,
+    "TemplateId": 0
+   }
+  ],
+  "AvatarId": 0,
+  "BuildInfo": {
+   "ArchitectOfficeRank": 0,
+   "BuildingNextIndex": 0,
+   "CastleHeartRank": 0,
+   "CastleStats": {
+    "AttackCount": 0,
+    "HeroesKilled": 0,
+    "MaxConstructionPoints": 0,
+    "SuccessfulAttackCount": 0,
+    "TotalConstructionPoints": 0,
+    "TrapCount": 0,
+    "WinRatio": 0.0,
+    "WinRatioDifficulty": 0
+   },
+   "CastleType": "Ubisoft",
+   "CreatureArchetypes": {},
+   "CreatureNextIndex": 0,
+   "DecorationNextIndex": 0,
+   "Draft": {},
+   "HeroCorpses": {},
+   "InventoryDecorations": {},
+   "InventoryDefenseIngredientBoosts": {},
+   "InventoryRooms": [
+    {
+     "AutoLevelUp": false,
+     "AvailableCount": 0,
+     "BlueprintUnlocked": false,
+     "Level": 0,
+     "NewlyAdded": false,
+     "SpecContainerId": 0
+    }
+   ],
+   "InventoryThemes": 0,
+   "IsDraftPublished": false,
+   "IsRollbackAvailable": false,
+   "Level": 0,
+   "MineStatuses": {},
+   "OwnerSpecialPacks": 0,
+   "RoomNextIndex": 0,
+   "ShieldEndExpirableId": "string",
+   "TimerDuration": 0.0,
+   "TrapArchetypes": {},
+   "TrapNextIndex": 0,
+   "TriggerNextIndex": 0,
+   "WorkersAvailable": 0,
+   "WorkersCabinRank": 0
+  },
+  "BuyBack": {},
+  "CastleRenovationLevel": "RenovationComplete",
   "ClientSettings": {
    "AccountCacheValidation": false,
    "ClientTrackingSettings": {
@@ -123,16 +191,38 @@
   },
   "CommunityEventTimeShift": 0,
   "CompletedAchievements": 0,
+  "CompletedAssignments": 0,
   "CountryCode": "CA",
   "DefendLog": {
    "DefendLogEntries": {},
    "OfflinePeriod": {}
   },
+  "DisplayName": "string",
+  "DisplayNameValidationDate": "2015-06-15T00:00:00Z",
   "Expirables": [
    {
-    "ExpirableType": 0
+    "DueDate": "2015-06-15T00:00:00Z",
+    "DurationSeconds": 0,
+    "ExpirableType": 0,
+    "Id": "string",
+    "IsPaused": false
    }
   ],
+  "Friends": {},
+  "FriendshipInvitations": [
+   {
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "FriendAccountId": 0,
+    "FriendAvatarId": 0,
+    "FriendDisplayName": "string",
+    "HasAccepted": false,
+    "HasDeclined": false,
+    "IsCastleAttackable": false,
+    "IsInvitationOwner": false,
+    "LeagueId": 0
+   }
+  ],
+  "GamerScore": 0,
   "Guild": {
    "Description": {},
    "DisplayName": "string",
@@ -164,8 +254,18 @@
     }
    }
   ],
+  "HeroFreeTrialInfoPeriod": {
+   "Id": 0,
+   "UnlockEndTime": "2015-06-15T00:00:00Z",
+   "UnlockStartTime": "2015-06-15T00:00:00Z"
+  },
+  "Heroes": {},
+  "Inbox": {},
+  "Inventory": {},
   "IsCastleAttackable": false,
+  "LastViewedDates": {},
   "LastViewedFreeTrialInfoDate": "2015-06-15T00:00:00Z",
+  "LeagueId": 0,
   "News": {
    "Data": {},
    "Id": "string",
@@ -173,6 +273,35 @@
    "Priority": 0,
    "PublishDate": "2015-06-15T00:00:00Z"
   },
+  "Objectives": [
+   {
+    "Category": "Armor",
+    "ClientSideCompletion": false,
+    "Conditions": [],
+    "DebugName": "string",
+    "Description": 0,
+    "IconUrl": "string",
+    "Id": 0,
+    "Instruction": 0,
+    "ManualPopupTriggerOnCompletion": false,
+    "PerHeroReward": {},
+    "Progression": {},
+    "Requirements": [],
+    "Reward": {
+     "FakeRewardItems": {},
+     "LargeIconUrl": "string",
+     "RewardItems": {},
+     "SmallIconUrl": "string"
+    },
+    "ShowUnlockedPopup": false,
+    "Title": 0,
+    "VoiceOverSoundId": "Objective300_VO_NUE_005_01FEN_DRY16574"
+   }
+  ],
+  "Privileges": 0,
+  "ProfanityFiltering": false,
+  "RecommendedFriends": {},
+  "SelectedHeroId": 0,
   "ShopSkuModifiers": [
    {
     "LimitedQuantityConsumed": 0,
@@ -183,103 +312,153 @@
     "Unlock": false
    }
   ],
-  "TargetedAttackAvailableCount": 0
+  "SpecialPacks": 0,
+  "Stats": {},
+  "SubLeagueId": 0,
+  "TargetedAttackAvailableCount": 0,
+  "TrophyScore": 0,
+  "UnlockedAvatars": 0,
+  "UnlockedEmotes": 0,
+  "UnlockedSpells": {},
+  "Wallet": {
+   "InGameCoin": 0,
+   "InGameCoinStorageCapacity": 0,
+   "LifeForce": 0,
+   "LifeForceStorageCapacity": 0,
+   "PremiumCash": 0
+  }
  },
  "AccountInformationBase": {
-  "ClientSettings": {
-   "AccountCacheValidation": false,
-   "ClientTrackingSettings": {
-    "ClientIdleInterval": 0,
-    "EnableProfiling": false,
-    "EnabledNavigationTrackings": {},
-    "GameStateTrackingInterval": 0,
-    "GlanceViewDurationTriggerInSeconds": 0,
-    "IdleTimeThresholds": {}
-   },
-   "EnableDebugPanelController": false,
-   "FriendReferalUrl": "string",
-   "MaintenanceUrl": "string",
-   "PrimaryShopBlingsUrl": "string",
-   "PrimaryShopNonBlingsUrl": "string",
-   "PrimaryShopPremiumPurchaseUrl": "string",
-   "PrimaryShopProductPageUrl": "string",
-   "PrimaryShopUrl": "string",
-   "ShowWelcomePage": false,
-   "WelcomePageSmallUrl": "string",
-   "WelcomePageUrl": "string",
-   "XmppInfo": {
-    "ConferenceServer": "string",
-    "Domain": "string",
-    "Enabled": false,
-    "Password": "string",
-    "Port": 0,
-    "Server": "string",
-    "Username": "string"
-   }
-  },
-  "CommunityEventTimeShift": 0,
-  "CompletedAchievements": 0,
-  "CountryCode": "CA",
-  "DefendLog": {
-   "DefendLogEntries": {},
-   "OfflinePeriod": {}
-  },
-  "Expirables": [
+  "AccountId": 0,
+  "ActiveConsumables": [
    {
-    "ExpirableType": 0
+    "ConsumableType": 0,
+    "ExpirableId": "string",
+    "InitialDuration": 0,
+    "TemplateId": 0
    }
   ],
-  "Guild": {
-   "Description": {},
-   "DisplayName": "string",
-   "Emblem": {},
-   "Id": 0,
-   "InviteRequests": {},
-   "JoinRequests": {},
-   "LanguageCode": "de",
-   "Members": {},
-   "PendingValidationCastleIds": 0,
-   "Rank": "Boss",
-   "RecruitmentMode": 0,
-   "Stats": {},
-   "TrophyScore": 0,
-   "WelcomeMessage": {}
+  "AvatarId": 0,
+  "BuildInfo": {
+   "ArchitectOfficeRank": 0,
+   "BuildingNextIndex": 0,
+   "CastleHeartRank": 0,
+   "CastleStats": {
+    "AttackCount": 0,
+    "HeroesKilled": 0,
+    "MaxConstructionPoints": 0,
+    "SuccessfulAttackCount": 0,
+    "TotalConstructionPoints": 0,
+    "TrapCount": 0,
+    "WinRatio": 0.0,
+    "WinRatioDifficulty": 0
+   },
+   "CastleType": "Ubisoft",
+   "CreatureArchetypes": {},
+   "CreatureNextIndex": 0,
+   "DecorationNextIndex": 0,
+   "Draft": {},
+   "HeroCorpses": {},
+   "InventoryDecorations": {},
+   "InventoryDefenseIngredientBoosts": {},
+   "InventoryRooms": [
+    {
+     "AutoLevelUp": false,
+     "AvailableCount": 0,
+     "BlueprintUnlocked": false,
+     "Level": 0,
+     "NewlyAdded": false,
+     "SpecContainerId": 0
+    }
+   ],
+   "InventoryThemes": 0,
+   "IsDraftPublished": false,
+   "IsRollbackAvailable": false,
+   "Level": 0,
+   "MineStatuses": {},
+   "OwnerSpecialPacks": 0,
+   "RoomNextIndex": 0,
+   "ShieldEndExpirableId": "string",
+   "TimerDuration": 0.0,
+   "TrapArchetypes": {},
+   "TrapNextIndex": 0,
+   "TriggerNextIndex": 0,
+   "WorkersAvailable": 0,
+   "WorkersCabinRank": 0
   },
-  "GuildInvitations": [
+  "BuyBack": {},
+  "CastleRenovationLevel": "RenovationComplete",
+  "CompletedAssignments": 0,
+  "DisplayName": "string",
+  "DisplayNameValidationDate": "2015-06-15T00:00:00Z",
+  "Friends": {},
+  "FriendshipInvitations": [
    {
     "CreationDate": "2015-06-15T00:00:00Z",
-    "GuildSummary": {
-     "DisplayName": "string",
-     "Emblem": {},
-     "Id": 0,
-     "LanguageCode": "de",
-     "LeaderAccountId": 0,
-     "LeaderDisplayName": "string",
-     "MemberCount": 0,
-     "TrophyScore": 0
-    }
+    "FriendAccountId": 0,
+    "FriendAvatarId": 0,
+    "FriendDisplayName": "string",
+    "HasAccepted": false,
+    "HasDeclined": false,
+    "IsCastleAttackable": false,
+    "IsInvitationOwner": false,
+    "LeagueId": 0
    }
   ],
-  "IsCastleAttackable": false,
-  "LastViewedFreeTrialInfoDate": "2015-06-15T00:00:00Z",
-  "News": {
-   "Data": {},
-   "Id": "string",
-   "IsUnread": false,
-   "Priority": 0,
-   "PublishDate": "2015-06-15T00:00:00Z"
+  "GamerScore": 0,
+  "HeroFreeTrialInfoPeriod": {
+   "Id": 0,
+   "UnlockEndTime": "2015-06-15T00:00:00Z",
+   "UnlockStartTime": "2015-06-15T00:00:00Z"
   },
-  "ShopSkuModifiers": [
+  "Heroes": {},
+  "Inbox": {},
+  "Inventory": {},
+  "LastViewedDates": {},
+  "LeagueId": 0,
+  "Objectives": [
    {
-    "LimitedQuantityConsumed": 0,
-    "LimitedQuantityMax": 0,
-    "LimitedQuantityNextUnlockCastleLevelRequirement": 0,
-    "LimitedQuantityNextUnlockQuantity": 0,
-    "SkuCode": "string",
-    "Unlock": false
+    "Category": "Armor",
+    "ClientSideCompletion": false,
+    "Conditions": [],
+    "DebugName": "string",
+    "Description": 0,
+    "IconUrl": "string",
+    "Id": 0,
+    "Instruction": 0,
+    "ManualPopupTriggerOnCompletion": false,
+    "PerHeroReward": {},
+    "Progression": {},
+    "Requirements": [],
+    "Reward": {
+     "FakeRewardItems": {},
+     "LargeIconUrl": "string",
+     "RewardItems": {},
+     "SmallIconUrl": "string"
+    },
+    "ShowUnlockedPopup": false,
+    "Title": 0,
+    "VoiceOverSoundId": "Objective300_VO_NUE_005_01FEN_DRY16574"
    }
   ],
-  "TargetedAttackAvailableCount": 0
+  "Privileges": 0,
+  "ProfanityFiltering": false,
+  "RecommendedFriends": {},
+  "SelectedHeroId": 0,
+  "SpecialPacks": 0,
+  "Stats": {},
+  "SubLeagueId": 0,
+  "TrophyScore": 0,
+  "UnlockedAvatars": 0,
+  "UnlockedEmotes": 0,
+  "UnlockedSpells": {},
+  "Wallet": {
+   "InGameCoin": 0,
+   "InGameCoinStorageCapacity": 0,
+   "LifeForce": 0,
+   "LifeForceStorageCapacity": 0,
+   "PremiumCash": 0
+  }
  },
  "AccountInventory": {
   "CastleRenovationItems": {},
@@ -362,7 +541,16 @@
   },
   "Achievements": [
    {
-    "Count": 0
+    "DebugName": "string",
+    "Description": "string",
+    "DescriptionId": 0,
+    "Icon": "default",
+    "Id": 0,
+    "Points": 0,
+    "SteamId": "string",
+    "SteamStatId": "AmountOfGoldCollected",
+    "Title": "string",
+    "TitleId": 0
    }
   ],
   "CastleLevel": 0,
@@ -483,11 +671,29 @@
   }
  },
  "Achievement": {
-  "Count": 0
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "AchievementCompletedModel": {
   "Achievement": {
-   "Count": 0
+   "DebugName": "string",
+   "Description": "string",
+   "DescriptionId": 0,
+   "Icon": "default",
+   "Id": 0,
+   "Points": 0,
+   "SteamId": "string",
+   "SteamStatId": "AmountOfGoldCollected",
+   "Title": "string",
+   "TitleId": 0
   }
  },
  "AchievementCompletedNotification": {
@@ -500,7 +706,16 @@
  "AchievementContainer": {
   "Achievements": [
    {
-    "Count": 0
+    "DebugName": "string",
+    "Description": "string",
+    "DescriptionId": 0,
+    "Icon": "default",
+    "Id": 0,
+    "Points": 0,
+    "SteamId": "string",
+    "SteamStatId": "AmountOfGoldCollected",
+    "Title": "string",
+    "TitleId": 0
    }
   ],
   "CompletedCount": 0,
@@ -508,7 +723,16 @@
  },
  "AchievementProgression": {
   "Achievement": {
-   "Count": 0
+   "DebugName": "string",
+   "Description": "string",
+   "DescriptionId": 0,
+   "Icon": "default",
+   "Id": 0,
+   "Points": 0,
+   "SteamId": "string",
+   "SteamStatId": "AmountOfGoldCollected",
+   "Title": "string",
+   "TitleId": 0
   },
   "CompletionDate": "2015-06-15T00:00:00Z",
   "CompletionDateFriendly": "string",
@@ -551,6 +775,8 @@
  "AddCastleCreatureCommand": {
   "AggroPropagationOffsetX": 0.0,
   "AggroPropagationOffsetZ": 0.0,
+  "ConsumedHeroInventory": {},
+  "SkuCode": "string",
   "TotemCastleBuildableId": 0
  },
  "AddCastleInventoryItemCommand": {
@@ -559,11 +785,15 @@
  },
  "AddCastleTrapCommand": {
   "BeatIndex": 0,
-  "PowerSupplyCastleBuildableId": 0
+  "ConsumedHeroInventory": {},
+  "PowerSupplyCastleBuildableId": 0,
+  "SkuCode": "string"
  },
  "AddCastleTriggerCommand": {
+  "ConsumedHeroInventory": {},
   "SizeX": 0,
-  "SizeY": 0
+  "SizeY": 0,
+  "SkuCode": "string"
  },
  "AdminBuildingUpgrade": {
   "BuildingId": 0,
@@ -721,11 +951,71 @@
   "Value": 0.0
  },
  "ArchitectOfficeBuildingInfoDataModel": {
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
+  "CurrentBuildingRank": 0,
   "CurrentMaxRooms": 0,
+  "Description": "string",
+  "IconUrl": "string",
+  "MaxBuildingRank": 0,
   "MaxMaxRooms": 0
  },
  "ArchitectOfficeBuildingUpgradePopupDataModel": {
-  "NewMaxRooms": 0
+  "BuildingInfoModel": {
+   "BuildingInfoDataModel": {
+    "Boost": 0,
+    "BoostText": "string",
+    "BuildingName": "string",
+    "BuildingType": "ArchitectOffice",
+    "CurrentBuildingRank": 0,
+    "Description": "string",
+    "IconUrl": "string",
+    "MaxBuildingRank": 0
+   }
+  },
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "CanAfford": false,
+  "HeroLevelRequirement": 0,
+  "IsActive": false,
+  "IsBuildingRequirementMet": false,
+  "IsHeroLevelRequirementMet": 0,
+  "NewMaxRooms": 0,
+  "NextBuildingRank": 0,
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": "Building",
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
+  "UnlockedItems": {},
+  "UpgradeDurationInSeconds": 0
  },
  "ArmorArchetype": {
   "Damage": 0.0,
@@ -736,11 +1026,21 @@
   "Resistance": 0.0
  },
  "AssignmentCompletedNotification": {
-  "AssignmentId": 0
+  "AssignmentId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "AssignmentGroup": {
   "Id": 0,
   "Name": "string"
+ },
+ "AssignmentSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "AttackAdvisorSettings": {
   "ActiveCastlesCount": 0,
@@ -1066,6 +1366,8 @@
  },
  "AttackRegionCompletedNotification": {
   "CompletedAttackRegionId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "UnlockedAttackRegionId": 0
  },
  "AttackRegionModel": {
@@ -1088,7 +1390,7 @@
   "AttackRegionId": 0
  },
  "AttackRegionsChangedEventArgs": {
-  "UpdatedAttackRegions": {}
+  "UpdatedAttackRegions": []
  },
  "AttackRegionsViewModel": {
   "AttackRegions": [
@@ -1116,6 +1418,11 @@
   "AttackHistoryIndex": 0
  },
  "AttackReportPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
@@ -1164,6 +1471,7 @@
   "Level": 0
  },
  "AttackSelectionCastlePanelNavigationModel": {
+  "Attachment": 0,
   "AttackRegionModel": {
    "AttackRegionId": 0,
    "BossCastleId": 0,
@@ -1221,6 +1529,9 @@
     "Type": "Ability"
    }
   },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
   "SpecialPackModel": {
    "IconLayerName": "string",
@@ -1289,6 +1600,9 @@
  },
  "AttackSelectionPlayerMiniCastlePanelNavigationModel": {
   "AreRequiredMaterialsInHeroInventory": false,
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
@@ -1465,7 +1779,12 @@
   "SpeedTo": 0.0
  },
  "AttackStartCountdownPanelNavigationModel": {
-  "CountdownStep": 0
+  "Attachment": 0,
+  "CountdownStep": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "AttackUserSettings": {
   "MinHeroItemQualityToPickUp": "Epic",
@@ -1473,7 +1792,9 @@
  },
  "AttackerAvatarUpdatedNotification": {
   "AttackerAccountId": 0,
-  "AttackerAvatarId": 0
+  "AttackerAvatarId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "AttackerRewardSettings": {
   "BossLootRatio": 0,
@@ -1503,6 +1824,14 @@
  "AudioInfoTracking": {
   "HasAudioDeviceAvailable": false
  },
+ "AuraSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "Avatar": {
   "AnimationName": "string",
   "DebugName": "string",
@@ -1512,12 +1841,17 @@
   "LayerName": "string"
  },
  "AvatarEditPanelPanelNavigationModel": {
+  "Attachment": 0,
   "AvatarCategory": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
  "AvatarRewardItem": {
-  "AvatarId": 0
+  "AvatarId": 0,
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string"
  },
  "AvatarUnlockedNotification": {
   "AvatarId": 0,
@@ -1528,11 +1862,6 @@
   "AvatarCategory": 0,
   "AvatarId": 0,
   "IconUrl": "string"
- },
- "AvatarUpdatedNotification": {
-  "AvatarId": 0,
-  "Index": 0,
-  "NotificationType": "CastleBought"
  },
  "AvatarsModel": {
   "Avatars": [
@@ -1605,10 +1934,14 @@
  },
  "BattleLogEntryAddedNotification": {
   "Entry": {},
-  "LastValidEntryDate": "2015-06-15T00:00:00Z"
+  "Index": 0,
+  "LastValidEntryDate": "2015-06-15T00:00:00Z",
+  "NotificationType": "CastleBought"
  },
  "BattleLogEntryDeletedNotification": {
-  "LastValidEntry": "string"
+  "Index": 0,
+  "LastValidEntry": "string",
+  "NotificationType": "CastleBought"
  },
  "BattleLogEntryModel": {
   "AttackDurationInMilliseconds": 0,
@@ -1636,13 +1969,20 @@
  },
  "BattleLogEntryUpdatedNotification": {
   "AttackId": "string",
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "RevengeStatus": 0
  },
  "BattleLogNewItemCountChangedEventArgs": {
   "NewDefendLogEntry": 0
  },
  "BattleLogPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "FriendsOnly": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "ReplayAttackId": "string",
   "Tab": 0
  },
@@ -1655,13 +1995,30 @@
   "ConsumedHeroInventory": {},
   "ExpirableId": "string",
   "Id": 0,
+  "IsCastlePublishable": false,
   "ItemType": "Building",
   "SkuCode": "string"
  },
  "BoostConsumableTemplate": {
-  "IncreasedXp": 0.0
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "BoostIconPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "IsTotem": false,
   "PanelName": "AttackReportPanel"
@@ -1723,7 +2080,13 @@
  "BossKilledFriendNewsData": {
   "AttackRegionId": 0,
   "BossLevel": 0,
-  "BossName": "string"
+  "BossName": "string",
+  "FriendAccountId": 0,
+  "FriendAvatarId": 0,
+  "FriendDisplayName": "string",
+  "FriendSpecialPacks": 0,
+  "RequiresUserAction": false,
+  "Type": "Ability"
  },
  "BoundingRect": {
   "MaxX": 0.0,
@@ -1755,8 +2118,13 @@
   "SpecContainerId": 0
  },
  "BuffInfoPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroBuffTooltips": {},
   "HeroBuffs": {},
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "TargetBuffTooltips": {},
   "TargetBuffs": {}
  },
@@ -1772,6 +2140,14 @@
   "TileAnimationType": "verticalTopToBottom",
   "Tooltip": {}
  },
+ "BuffSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "BuffStopTriggers": {
   "OnBuffedEntityAllLifeShieldsRemoved": false,
   "OnBuffedEntityDied": false,
@@ -1780,21 +2156,52 @@
   "OnBuffedEntityStunned": false
  },
  "BuffTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
+  "Description": "string",
   "Duration": 0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "RemainingTime": 0,
+  "SellPrice": {},
   "ShouldDisplayTimeInformation": false,
-  "Type": "Ability"
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "BuildBasicTextInfoPanelNavigationModel": {
-  "LocalizedMessage": "string"
- },
- "BuildBuildingPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "LocalizedMessage": "string",
   "PanelName": "AttackReportPanel"
  },
  "BuildCommand": {
   "IsCastlePublishable": false
  },
  "BuildCraftingMaterialMinePanelNavigationModel": {
+  "Attachment": 0,
   "CraftingMaterialMineInformationModel": {
    "CraftingMaterialMineState": 0,
    "CraftingMaterials": [
@@ -1805,18 +2212,32 @@
    ],
    "RemainingTime": 0
   },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
  "BuildCreaturePanelNavigationModel": {
-  "PanelName": "AttackReportPanel"
- },
- "BuildDecorationPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
  "BuildEntitiesAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
   "Count": 0,
-  "EntityType": "Creature"
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "EntityType": "Creature",
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "BuildEntityEventArgs": {
   "ContextualActionDatas": [
@@ -1839,9 +2260,6 @@
   "Level": 0,
   "Name": "string",
   "TooltipDisplayDelay": 0.0
- },
- "BuildHarvestingPanelNavigationModel": {
-  "PanelName": "AttackReportPanel"
  },
  "BuildHistory": {
   "BuildDateTime": "2015-06-15T00:00:00Z",
@@ -1872,19 +2290,16 @@
   "DecorationNextIndex": 0,
   "Draft": {},
   "HeroCorpses": {},
-  "InventoryDecorations": [
-   {
-    "Level": 0
-   }
-  ],
-  "InventoryDefenseIngredientBoosts": [
-   {
-    "Level": 0
-   }
-  ],
+  "InventoryDecorations": {},
+  "InventoryDefenseIngredientBoosts": {},
   "InventoryRooms": [
    {
-    "Level": 0
+    "AutoLevelUp": false,
+    "AvailableCount": 0,
+    "BlueprintUnlocked": false,
+    "Level": 0,
+    "NewlyAdded": false,
+    "SpecContainerId": 0
    }
   ],
   "InventoryThemes": 0,
@@ -1923,19 +2338,16 @@
    "DecorationNextIndex": 0,
    "Draft": {},
    "HeroCorpses": {},
-   "InventoryDecorations": [
-    {
-     "Level": 0
-    }
-   ],
-   "InventoryDefenseIngredientBoosts": [
-    {
-     "Level": 0
-    }
-   ],
+   "InventoryDecorations": {},
+   "InventoryDefenseIngredientBoosts": {},
    "InventoryRooms": [
     {
-     "Level": 0
+     "AutoLevelUp": false,
+     "AvailableCount": 0,
+     "BlueprintUnlocked": false,
+     "Level": 0,
+     "NewlyAdded": false,
+     "SpecContainerId": 0
     }
    ],
    "InventoryThemes": 0,
@@ -1952,7 +2364,9 @@
    "TriggerNextIndex": 0,
    "WorkersAvailable": 0,
    "WorkersCabinRank": 0
-  }
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "BuildInteractionState": {
   "Enable": false,
@@ -1978,12 +2392,6 @@
   "BuildToolMode": "Move",
   "PickedUpEntityId": 0
  },
- "BuildTotemPanelNavigationModel": {
-  "PanelName": "AttackReportPanel"
- },
- "BuildTrapPanelNavigationModel": {
-  "PanelName": "AttackReportPanel"
- },
  "BuildUIFeedbackInfos": {
   "AggroZoneCreatureFloatingText": {},
   "AggroZonePowerSupplyFloatingText": {},
@@ -2003,64 +2411,66 @@
  },
  "BuildingExpirable": {
   "BuildingId": 0,
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
   "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false,
   "SpecContainerId": 0
  },
  "BuildingFinishNowModel": {
   "BuildingName": "string",
-  "BuildingRank": 0
+  "BuildingRank": 0,
+  "BuyUrl": "string",
+  "CanAfford": false,
+  "CurrencyAmount": {
+   "Amount": 0,
+   "CurrencyType": "IGC"
+  },
+  "IconUrl": "string",
+  "ShopCategory": "Armor"
  },
  "BuildingInfoDataModel": {
-  "CurrentAttackTicketsInBossRoom": 0,
-  "CurrentAttackTicketsInCastle": 0,
-  "CurrentConstructionPoints": 0,
-  "CurrentHardCapBonusCastle": 0,
-  "MaxAttackTicketsInBossRoom": 0,
-  "MaxAttackTicketsInCastle": 0,
-  "MaxConstructionPoints": 0
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
+  "CurrentBuildingRank": 0,
+  "Description": "string",
+  "IconUrl": "string",
+  "MaxBuildingRank": 0
  },
  "BuildingInfoModel": {
   "BuildingInfoDataModel": {
-   "CurrentAttackTicketsInBossRoom": 0,
-   "CurrentAttackTicketsInCastle": 0,
-   "CurrentConstructionPoints": 0,
-   "CurrentHardCapBonusCastle": 0,
-   "MaxAttackTicketsInBossRoom": 0,
-   "MaxAttackTicketsInCastle": 0,
-   "MaxConstructionPoints": 0
+   "Boost": 0,
+   "BoostText": "string",
+   "BuildingName": "string",
+   "BuildingType": "ArchitectOffice",
+   "CurrentBuildingRank": 0,
+   "Description": "string",
+   "IconUrl": "string",
+   "MaxBuildingRank": 0
   }
- },
- "BuildingInfoPanelNavigationModel": {
-  "BuildingId": 0
  },
  "BuildingInstanceRequirement": {
   "BuildingRequirementRank": 0,
   "BuildingRequirementSpecContainerId": 0
  },
  "BuildingItemUpgradePanelNavigationModel": {
-  "HeroModel": {
-   "Biography": "string",
-   "CanAfford": false,
-   "Description": "string",
-   "HeroFullName": "string",
-   "IconUrl": "string",
-   "IsHeroOwned": false,
-   "IsInFreeTrial": false,
-   "IsSpecialPack": false,
-   "LongHeroName": "string",
-   "PriceReductionConditionModels": [
-    {
-     "Completed": false,
-     "CurrentPrice": {},
-     "Id": 0,
-     "Level": 0,
-     "PriceReduction": {}
-    }
-   ],
-   "RegularPrice": {},
-   "SpecContainerId": 0
+  "Attachment": 0,
+  "CurrencyAmount": {
+   "Amount": 0,
+   "CurrencyType": "IGC"
   },
-  "PanelName": "AttackReportPanel"
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "InFreeTrial": false,
+  "IsOpalPanel": false,
+  "ItemType": "Building",
+  "Level": 0,
+  "PanelName": "AttackReportPanel",
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "BuildingNavBarLinkModel": {
   "BuildingType": "ArchitectOffice",
@@ -2079,7 +2489,12 @@
   "DefendLinks": {}
  },
  "BuildingNavBarPanelNavigationModel": {
-  "BuildingType": "ArchitectOffice"
+  "Attachment": 0,
+  "BuildingType": "ArchitectOffice",
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "BuildingNavBarSettings": {
   "Links": []
@@ -2120,7 +2535,12 @@
   }
  },
  "BuildingPopupNavigationModel": {
-  "BuildingId": 0
+  "Attachment": 0,
+  "BuildingId": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "BuildingPopupPositionModel": {
   "Zoom": 0
@@ -2133,16 +2553,54 @@
  "BuildingRankCondition": {
   "$type": "HyperQuest.GameServer.Contracts.BuildingRankCondition, HyperQuest.GameServer.Contracts",
   "Count": 0,
+  "DebugName": "string",
+  "OasisId": 0,
   "Rank": "Boss",
   "SpecContainerId": 0
  },
+ "BuildingSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "BuildingTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "CreationDuration": 0,
+  "Description": "string",
   "ExistingInstances": 0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
   "MaxBuildingRank": 0,
   "MaxInstances": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "Rank": "Boss",
-  "Type": "Ability"
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "BuildingUpgradeCompletedEventArgs": {
   "BuildingUpgradeInfosModel": {
@@ -2158,10 +2616,33 @@
  },
  "BuildingUpgradeCompletedNotification": {
   "BuildingId": 0,
-  "NewRank": 0
+  "Index": 0,
+  "NewRank": 0,
+  "NotificationType": "CastleBought"
  },
  "BuildingUpgradeConfirmationPopupPanelNavigationModel": {
-  "BuildingId": 0
+  "Attachment": 0,
+  "BuildingId": 0,
+  "DataNavigationInfo": {},
+  "DyeInfoModel": {
+   "AnimationName": "string",
+   "CanBeTinted": false,
+   "Color": "string",
+   "ColorName": "string"
+  },
+  "ExcludeModalPopupOpening": false,
+  "InitialCurrencyType": 0,
+  "IsOpalPanel": false,
+  "ItemCount": 0,
+  "ItemId": 0,
+  "ItemType": "Building",
+  "PanelName": "AttackReportPanel",
+  "ShopConfirmationPopupModel": {
+   "IsContainingPremiumCash": false,
+   "ShopProduct": {},
+   "Tooltip": {}
+  },
+  "WalletAmount": 0
  },
  "BuildingUpgradeInfosModel": {
   "BuildingId": 0,
@@ -2201,11 +2682,14 @@
   }
  },
  "BuildingUpgradePanelNavigationModel": {
+  "Attachment": 0,
   "BuildingId": 0,
   "BuildingRequirementLock": {},
   "BuildingType": "ArchitectOffice",
+  "DataNavigationInfo": {},
   "Description": "string",
   "Duration": 0,
+  "ExcludeModalPopupOpening": false,
   "HeroRequirementLock": {},
   "IsActive": false,
   "IsOpalPanel": false,
@@ -2220,11 +2704,113 @@
   "UpgradeStats": {}
  },
  "BuildingUpgradePopupDataModel": {
-  "NewMaxRooms": 0
+  "BuildingInfoModel": {
+   "BuildingInfoDataModel": {
+    "Boost": 0,
+    "BoostText": "string",
+    "BuildingName": "string",
+    "BuildingType": "ArchitectOffice",
+    "CurrentBuildingRank": 0,
+    "Description": "string",
+    "IconUrl": "string",
+    "MaxBuildingRank": 0
+   }
+  },
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "CanAfford": false,
+  "HeroLevelRequirement": 0,
+  "IsActive": false,
+  "IsBuildingRequirementMet": false,
+  "IsHeroLevelRequirementMet": 0,
+  "NextBuildingRank": 0,
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": "Building",
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
+  "UnlockedItems": {},
+  "UpgradeDurationInSeconds": 0
  },
  "BuildingUpgradePopupModel": {
   "BuildingUpgradePopupDataModel": {
-   "NewMaxRooms": 0
+   "BuildingInfoModel": {
+    "BuildingInfoDataModel": {
+     "Boost": 0,
+     "BoostText": "string",
+     "BuildingName": "string",
+     "BuildingType": "ArchitectOffice",
+     "CurrentBuildingRank": 0,
+     "Description": "string",
+     "IconUrl": "string",
+     "MaxBuildingRank": 0
+    }
+   },
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "CanAfford": false,
+   "HeroLevelRequirement": 0,
+   "IsActive": false,
+   "IsBuildingRequirementMet": false,
+   "IsHeroLevelRequirementMet": 0,
+   "NextBuildingRank": 0,
+   "ShopSkus": [
+    {
+     "Code": "string",
+     "CraftingMaterials": [
+      {
+       "Id": 0,
+       "Quantity": 0
+      }
+     ],
+     "CreationDate": "2015-06-15T00:00:00Z",
+     "DescriptionOasisId": 0,
+     "Discounts": {},
+     "IconUrl": "string",
+     "InternalDescription": "string",
+     "IsActive": false,
+     "IsBestSeller": false,
+     "IsLimitedQuantity": false,
+     "IsLocked": false,
+     "ItemCount": 0,
+     "ItemId": 0,
+     "ItemType": "Building",
+     "LimitedQuantityMax": 0,
+     "MaxOwningCount": 0,
+     "PremiumEstimatedValue": 0,
+     "Price": {},
+     "ShopContext": 0,
+     "TitleOasisId": 0,
+     "Weight": 0
+    }
+   ],
+   "UnlockedItems": {},
+   "UpgradeDurationInSeconds": 0
   }
  },
  "BuildingUpgradeStartedEventArgs": {
@@ -2244,7 +2830,9 @@
  },
  "BuildingUpgradeStartedNotification": {
   "BuildingId": 0,
-  "ExpirableId": "string"
+  "ExpirableId": "string",
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "BuildingUpgradeTimerPositionRefreshedEventArgs": {
   "BuildingUpgradeModels": [
@@ -2291,34 +2879,81 @@
   "SfxBusIds": {},
   "VoiceBusIds": {}
  },
- "BuyBackAddedNotification": {
-  "AccountBuyBackSlot": {
-   "Item": {}
-  }
- },
  "BuyBackCommand": {
   "BuyBackId": "string",
   "SlotIndexes": {}
  },
  "BuyBackExpirable": {
-  "ExpirableType": 0
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
+  "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false
  },
  "BuyBackUpdatedNotification": {
   "AccountBuyBackSlot": {
-   "Item": {}
-  }
+   "CreationDate": "2015-06-15T00:00:00Z",
+   "Id": "string",
+   "ItemType": "Building",
+   "Price": {}
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "BuyCommand": {
-  "SlotIndex": 0
+  "ClientCraftingMaterials": {},
+  "ClientPrice": {},
+  "ConsumedHeroInventory": {},
+  "DiscountApplied": false,
+  "SkuCode": "string"
  },
  "BuyConsumableCommand": {
+  "ClientCraftingMaterials": {},
+  "ClientPrice": {},
+  "ConsumedHeroInventory": {},
+  "DiscountApplied": false,
+  "SkuCode": "string",
   "SlotIndexes": {}
  },
  "BuyHeroItemCommand": {
+  "ClientCraftingMaterials": {},
+  "ClientPrice": {},
+  "ConsumedHeroInventory": {},
+  "DiscountApplied": false,
+  "SkuCode": "string",
   "SlotIndex": 0
  },
  "BuyNewTabTooltipModel": {
-  "PriceDescription": "string"
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "PriceDescription": "string",
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "CPUInfoTracking": {
   "CPUCount": 0,
@@ -2326,6 +2961,14 @@
   "CoreCount": 0,
   "HardwareThreadCount": 0,
   "Name": "string"
+ },
+ "CameraSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "CasteInventoryItemModel": {
   "CanBeSold": false,
@@ -2405,6 +3048,8 @@
    "VictoryConditionType": 0
   },
   "HeroCorpses": {},
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "SuccessfulAttackCount": 0,
   "WinRatio": 0.0,
   "WinRatioDifficulty": 0
@@ -2433,19 +3078,16 @@
    "DecorationNextIndex": 0,
    "Draft": {},
    "HeroCorpses": {},
-   "InventoryDecorations": [
-    {
-     "Level": 0
-    }
-   ],
-   "InventoryDefenseIngredientBoosts": [
-    {
-     "Level": 0
-    }
-   ],
+   "InventoryDecorations": {},
+   "InventoryDefenseIngredientBoosts": {},
    "InventoryRooms": [
     {
-     "Level": 0
+     "AutoLevelUp": false,
+     "AvailableCount": 0,
+     "BlueprintUnlocked": false,
+     "Level": 0,
+     "NewlyAdded": false,
+     "SpecContainerId": 0
     }
    ],
    "InventoryThemes": 0,
@@ -2463,11 +3105,15 @@
    "WorkersAvailable": 0,
    "WorkersCabinRank": 0
   },
-  "IsStartupCastle": false
+  "Index": 0,
+  "IsStartupCastle": false,
+  "NotificationType": "CastleBought"
  },
  "CastleBuildable": {
-  "BoostId": 0,
-  "RoomZoneId": 0
+  "Id": 0,
+  "Orientation": "Back",
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "CastleBuildableCommand": {
   "Id": 0,
@@ -2478,14 +3124,25 @@
   "SpecContainerId": 0
  },
  "CastleBuilding": {
+  "BoostId": 0,
   "ExpirableId": "string",
-  "Rank": "Boss"
+  "Id": 0,
+  "Orientation": "Back",
+  "Rank": "Boss",
+  "RoomZoneId": 0,
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "CastleCell": {
   "Type": "Ability"
  },
  "CastleCompetitionPopupPanelNavigationModel": {
+  "Attachment": 0,
   "AttackSource": "Chat",
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "PosX": 0,
   "PosY": 0,
   "UbisoftCompetitionId": 0
@@ -2493,14 +3150,35 @@
  "CastleCreature": {
   "AggroPropagationOffsetX": 0.0,
   "AggroPropagationOffsetZ": 0.0,
+  "BoostId": 0,
+  "Id": 0,
   "IsSleeping": false,
+  "Orientation": "Back",
+  "RoomZoneId": 0,
+  "SkuCode": "string",
+  "SpecContainerId": 0,
   "TotemCastleBuildableId": 0
  },
  "CastleDPSBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.CastleDPSBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
-  "IncreasedDPS": 0.0
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
+  "IncreasedDPS": 0.0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "CastleDetailsPanelNavigationModel": {
+  "Attachment": 0,
   "CastleInfoModel": {
    "AttackerTrophyScore": 0,
    "BestHeroOwned": false,
@@ -2579,7 +3257,11 @@
    "ValidatedAttackSource": 0,
    "WinRatioDefaultValue": 0.0,
    "WinRatioDifficultyOasisName": "string"
-  }
+  },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "CastleDifficultySettings": {
   "CastleDifficulty": "Easy",
@@ -2607,19 +3289,16 @@
    "DecorationNextIndex": 0,
    "Draft": {},
    "HeroCorpses": {},
-   "InventoryDecorations": [
-    {
-     "Level": 0
-    }
-   ],
-   "InventoryDefenseIngredientBoosts": [
-    {
-     "Level": 0
-    }
-   ],
+   "InventoryDecorations": {},
+   "InventoryDefenseIngredientBoosts": {},
    "InventoryRooms": [
     {
-     "Level": 0
+     "AutoLevelUp": false,
+     "AvailableCount": 0,
+     "BlueprintUnlocked": false,
+     "Level": 0,
+     "NewlyAdded": false,
+     "SpecContainerId": 0
     }
    ],
    "InventoryThemes": 0,
@@ -2637,7 +3316,9 @@
    "WorkersAvailable": 0,
    "WorkersCabinRank": 0
   },
-  "Failure": false
+  "Failure": false,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "CastleExpansion": {
   "SpecialGroundIds": 0
@@ -2739,19 +3420,79 @@
   "SpecialGroundMinDistance": 0
  },
  "CastleHeartBuildingInfoDataModel": {
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
   "CurrentAttackTicketsInBossRoom": 0,
   "CurrentAttackTicketsInCastle": 0,
+  "CurrentBuildingRank": 0,
   "CurrentConstructionPoints": 0,
   "CurrentHardCapBonusCastle": 0,
+  "Description": "string",
+  "IconUrl": "string",
   "MaxAttackTicketsInBossRoom": 0,
   "MaxAttackTicketsInCastle": 0,
+  "MaxBuildingRank": 0,
   "MaxConstructionPoints": 0
  },
  "CastleHeartBuildingUpgradePopupDataModel": {
+  "BuildingInfoModel": {
+   "BuildingInfoDataModel": {
+    "Boost": 0,
+    "BoostText": "string",
+    "BuildingName": "string",
+    "BuildingType": "ArchitectOffice",
+    "CurrentBuildingRank": 0,
+    "Description": "string",
+    "IconUrl": "string",
+    "MaxBuildingRank": 0
+   }
+  },
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "CanAfford": false,
+  "HeroLevelRequirement": 0,
+  "IsActive": false,
+  "IsBuildingRequirementMet": false,
+  "IsHeroLevelRequirementMet": 0,
   "NewAttackTicketsInBossRoom": 0,
   "NewAttackTicketsInCastle": 0,
   "NewConstructionPoints": 0,
-  "NewHardCapBonusCastle": 0
+  "NewHardCapBonusCastle": 0,
+  "NextBuildingRank": 0,
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": "Building",
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
+  "UnlockedItems": {},
+  "UpgradeDurationInSeconds": 0
  },
  "CastleHeroCorpse": {
   "Amounts": {},
@@ -2942,7 +3683,9 @@
   "Type": "Ability"
  },
  "CastleInventoryChangedNotification": {
-  "Actions": {}
+  "Actions": {},
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "CastleInventoryItem": {
   "AutoLevelUp": false,
@@ -2970,9 +3713,13 @@
   "Url": "string"
  },
  "CastleInventoryPanelNavigationModel": {
+  "Attachment": 0,
   "CastleInventoryViewModel": {},
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "MenuNavigationButtons": {},
+  "PanelName": "AttackReportPanel",
   "Tab": 0,
   "Title": "string"
  },
@@ -2984,7 +3731,8 @@
   "Count": 0,
   "ItemSold": false,
   "ItemType": "Building",
-  "SpecId": 0
+  "SpecId": 0,
+  "Type": "Ability"
  },
  "CastleItemValue": {
   "DebugName": "string",
@@ -3028,7 +3776,9 @@
  },
  "CastleLevelUpNotification": {
   "AccountId": 0,
+  "Index": 0,
   "Level": 0,
+  "NotificationType": "CastleBought",
   "OldLevel": 0
  },
  "CastleLoadConfig": {
@@ -3085,11 +3835,14 @@
   }
  },
  "CastlePopupPanelNavigationModel": {
+  "Attachment": 0,
   "AttackRegionId": 0,
   "AttackSource": "Chat",
   "AttackType": 0,
   "CastleId": 0,
   "CastleType": "Ubisoft",
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsBossCastle": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
@@ -3104,26 +3857,82 @@
   }
  },
  "CastlePopupRewardsTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
   "BuffGold": 0,
   "BuffLifeForce": 0,
   "BuffXp": 0,
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "ChestGold": 0,
   "ChestLifeForce": 0,
   "CreaturesAndTrapsGold": 0,
   "CreaturesAndTrapsLifeForce": 0,
   "CreaturesAndTrapsXp": 0,
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
   "LeagueBonusIGC": 0,
   "LeagueBonusLifeForce": 0,
   "LeagueName": "string",
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
   "MinesIGCAmount": 0,
   "MinesLifeForceAmount": 0,
   "MinesPremiumCashAmount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
   "TotalMinesCount": 0,
-  "Type": "Ability"
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "CastlePopupStarsTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "CrownBonuses": 0,
-  "Type": "Ability"
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "CastlePropertiesChangedEventArgs": {
   "Properties": {}
@@ -3153,12 +3962,14 @@
  "CastleRatedNotification": {
   "AttackId": "string",
   "CastleRating": 0,
+  "Index": 0,
   "Message": {
    "Data": {},
    "DateSent": "2015-06-15T00:00:00Z",
    "SenderId": 0,
    "Type": "Ability"
-  }
+  },
+  "NotificationType": "CastleBought"
  },
  "CastleRatingFreePrize": {
   "Amount": 0,
@@ -3180,7 +3991,10 @@
   "CastleRenovationLevel": "RenovationComplete"
  },
  "CastleRenovationLevelCompletedPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "Description": "string",
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "IsRenovationCompleted": false,
   "LayerName": "string",
@@ -3208,6 +4022,7 @@
   "AreRequiredMaterialsInHeroInventory": false
  },
  "CastleRenovationPanelNavigationModel": {
+  "Attachment": 0,
   "CastleRenovationLevelModels": [
    {
     "CastleRenovationLevel": "RenovationComplete",
@@ -3219,6 +4034,8 @@
    }
   ],
   "CurrentRenovationLevel": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
@@ -3238,12 +4055,20 @@
   "Creatures": {},
   "Decorations": {},
   "DefenseIngredientBoosts": {},
+  "Id": 0,
+  "Orientation": "Back",
+  "SkuCode": "string",
+  "SpecContainerId": 0,
   "Traps": {},
   "Triggers": {}
  },
  "CastleRoomBuildable": {
   "BoostId": 0,
-  "RoomZoneId": 0
+  "Id": 0,
+  "Orientation": "Back",
+  "RoomZoneId": 0,
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "CastleSelectionPopulatedEventArgs": {
   "AttackRegion": {
@@ -3318,28 +4143,54 @@
  },
  "CastleTrap": {
   "BeatIndex": 0,
-  "PowerSupplyCastleBuildableId": 0
+  "BoostId": 0,
+  "Id": 0,
+  "Orientation": "Back",
+  "PowerSupplyCastleBuildableId": 0,
+  "RoomZoneId": 0,
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "CastleTrigger": {
+  "BoostId": 0,
+  "Id": 0,
+  "Orientation": "Back",
+  "RoomZoneId": 0,
   "SizeX": 0,
-  "SizeY": 0
+  "SizeY": 0,
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "CastleValidationDelegationExpirable": {
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
   "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false,
   "RefundableIGC": 0,
   "RefundableLifeForce": 0,
   "RefundablePremiunCash": 0,
   "Visibility": 0
  },
  "CastleValidationIntroPanelNavigationModel": {
+  "Attachment": 0,
   "CastleLevel": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
  "CastleValidationOutroPanelNavigationModel": {
-  "CastleLevel": 0
+  "Attachment": 0,
+  "CastleLevel": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "CastleValidationRequestedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "RequestorAccountId": 0,
   "Visibility": 0
  },
@@ -3360,9 +4211,14 @@
   "IsCastleValid": false
  },
  "CastleVisitPanelNavigationModel": {
+  "Attachment": 0,
   "CanBePurchased": false,
   "CastleName": "string",
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "FakePrice": "string",
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "SaleId": 0
  },
  "CastleVisitSound": {
@@ -3407,6 +4263,8 @@
   "MyEntry": {}
  },
  "ChapterTicketRewardItem": {
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string",
   "TicketCount": 0
  },
  "Character3DViewportModel": {
@@ -3462,6 +4320,7 @@
   "ChatRoomMessagesModel": {}
  },
  "ChatPanelNavigationModel": {
+  "Attachment": 0,
   "ChatRoomConfigModel": {
    "ChatKeepAliveDelay": 0,
    "ChatLanguages": [
@@ -3486,7 +4345,11 @@
    "SelectedRoomType": 0
   },
   "CurrentChatRoomMessagesModel": {},
-  "OpenMinimized": false
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "OpenMinimized": false,
+  "PanelName": "AttackReportPanel"
  },
  "ChatRoom": {
   "ChatRoomType": 0,
@@ -3530,11 +4393,15 @@
   "RoomType": 0
  },
  "ChatRoomMessageSentTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "MessageSentCount": 0,
-  "RoomId": 0
+  "RoomId": 0,
+  "TrackingTagId": 0
  },
  "ChatRoomTracking": {
-  "RoomId": 0
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "RoomId": 0,
+  "TrackingTagId": 0
  },
  "ChatUserPresenceUpdatedEventArgs": {
   "PresenceStatus": 0,
@@ -3564,17 +4431,29 @@
  },
  "ChooseFirstHeroConfirmationPanelNavigationModel": {
   "AreAllHeroesOwned": false,
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroIconUrl": "string",
   "HeroOasisId": 0,
   "HeroOasisName": "string",
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "ChooseFirstHeroPanelNavigationModel": {
-  "ExplanationText": "string"
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "ExplanationText": "string",
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "ClientCallProfilingTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "Duration": 0.0,
-  "PathAndQuery": "string"
+  "PathAndQuery": "string",
+  "TrackingTagId": 0
  },
  "ClientIdleCommand": {
   "IdleTime": 0
@@ -3623,12 +4502,17 @@
  },
  "ClosePanelAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+  "Conditions": [],
   "PanelName": "AttackReportPanel",
+  "StartDelay": 0.0,
+  "StartType": "WithPrevious",
   "TargetEntitySearch": {}
  },
  "ClosePopupAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
-  "Id": "string"
+  "Conditions": [],
+  "Id": "string",
+  "StartType": "WithPrevious"
  },
  "ClosePopupEventArgs": {
   "Id": "string"
@@ -3643,6 +4527,8 @@
   "Id": 0
  },
  "CommunityEventAccountTimeShiftChangedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "TimeShift": 0
  },
  "CommunityEventBoostSettings": {
@@ -3657,6 +4543,8 @@
   }
  },
  "CommunityEventGlobalTimeShiftChangedNotification": {
+  "Id": "string",
+  "NotificationType": "CastleBought",
   "TimeShift": 0
  },
  "CommunityEventSkuSettings": {
@@ -3677,12 +4565,8 @@
   "CastleAccountSummary": {},
   "DisplayNameOasisId": 0,
   "Rank": "Boss",
-  "UbisoftCompetitionId": 0
- },
- "CompetitionEndedRewardsWonNewsData": {
-  "CastleAccountSummary": {},
-  "DisplayNameOasisId": 0,
-  "Rank": "Boss",
+  "RequiresUserAction": false,
+  "Type": "Ability",
   "UbisoftCompetitionId": 0
  },
  "CompleteAssignmentCommand": {
@@ -3704,7 +4588,9 @@
  },
  "ConstructionPointsBuiltCondition": {
   "$type": "HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
-  "Count": 0
+  "Count": 0,
+  "DebugName": "string",
+  "OasisId": 0
  },
  "ConsumableActivatedNotification": {
   "ActiveConsumable": {
@@ -3712,23 +4598,38 @@
    "ExpirableId": "string",
    "InitialDuration": 0,
    "TemplateId": 0
-  }
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ConsumableActivationConfirmationPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IconSynergyName": "string",
   "IconUrl": "string",
   "InventorySlotIndex": 0,
   "IsAlreadyActive": false,
+  "IsOpalPanel": false,
   "Name": "string",
+  "PanelName": "AttackReportPanel",
   "TemplateId": 0
  },
  "ConsumableBuyBackSlot": {
-  "Item": {}
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "Id": "string",
+  "Item": {},
+  "ItemType": "Building",
+  "Price": {}
  },
  "ConsumableExpirable": {
   "CommunityEventId": 0,
   "ConsumableType": 0,
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
   "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false,
   "TemplateId": 0
  },
  "ConsumableExpiredNotification": {
@@ -3752,15 +4653,43 @@
   "Ui": {}
  },
  "ConsumableTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "ConsumableType": 0,
+  "Description": "string",
   "DisplayRemainingTime": false,
   "Duration": 0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
   "IsInAttack": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "Quality": "Epic",
   "Quantity": 0,
   "QuantityAvailableForAttack": 0,
   "RemainingTime": 0,
-  "Type": "Ability"
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "ContextRoomConnectorNodeInfo": {
   "Angle": 0,
@@ -3775,10 +4704,25 @@
   "OasisId": 0
  },
  "CountAchievement": {
-  "CurrencyType": "IGC"
+  "Count": 0,
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "CountdownTimerPanelNavigationModel": {
-  "IsTestAttack": false
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "IsTestAttack": false,
+  "PanelName": "AttackReportPanel"
  },
  "Country": {
   "CountryISOCode": "string",
@@ -3802,16 +4746,26 @@
   "Quantity": 0
  },
  "CraftingMaterialCollectingModel": {
-  "LayerName": "string"
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "LayerName": "string",
+  "PanelName": "AttackReportPanel"
  },
  "CraftingMaterialConsumptionModel": {
+  "Attachment": 0,
   "Cost": {},
   "CraftingMaterials": [
    {
     "Id": 0,
     "Quantity": 0
    }
-  ]
+  ],
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "CraftingMaterialInformation": {
   "BaseCraftingMaterialRequirement": {},
@@ -3837,6 +4791,13 @@
   "RemainingTime": 0
  },
  "CraftingMaterialMineTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "CraftingMaterialMineInformationModel": {
    "CraftingMaterialMineState": 0,
    "CraftingMaterials": [
@@ -3847,7 +4808,28 @@
    ],
    "RemainingTime": 0
   },
-  "Type": "Ability"
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "CraftingMaterialModel": {
   "ActualCount": 0,
@@ -3877,12 +4859,42 @@
   "UseSmartLootCraftingPriority": false
  },
  "CraftingMaterialsPackModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
   "LayerName": "string",
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
   "SpecContainerId": 0,
-  "Type": "Ability"
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "CraftingMaterialsPackPurchasedNotification": {
-  "CraftingMaterialsGained": {}
+  "CraftingMaterialsGained": {},
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "CraftingMaterialsPackResultModel": {
   "CraftingMaterialsGained": {}
@@ -3894,9 +4906,16 @@
     "Id": 0,
     "Quantity": 0
    }
-  ]
+  ],
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string"
  },
  "CraftingStampingCounterModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "UIGridItemModel": {
    "BuildingRequirementName": "string",
    "BuildingRequirementRank": 0,
@@ -3964,22 +4983,42 @@
    "Skus": {},
    "StackCount": 0,
    "TooltipModel": {
-    "CurrencyType": "IGC",
-    "DeathTime": 0,
-    "FreeSlotsRequirement": 0,
-    "HasItemsToCollect": false,
-    "HeroDisplayName": "string",
-    "HeroLevel": 0,
-    "IconUrl": "string",
-    "IsHeroInventoryLargeEnough": false,
-    "IsStorageFull": false,
-    "Type": "Ability"
+    "AnchorPosition": 0,
+    "ArrowPosition": "MiddleLeft",
+    "BuildingRequirementName": "string",
+    "BuildingRequirementRank": 0,
+    "BuyBackId": "string",
+    "BuyPrice": {},
+    "CanBeSold": false,
+    "Description": "string",
+    "IsAffordable": false,
+    "IsBuildingRequirementMet": false,
+    "IsEntityTooltip": false,
+    "IsLevelRequirementMet": false,
+    "IsOwned": false,
+    "IsSteamMarketable": false,
+    "IsUpgrading": false,
+    "LevelRequirement": 0,
+    "LimitedTimeInSeconds": 0,
+    "MaxAffordableCount": 0,
+    "MaxOwningCount": 0,
+    "OffsetPositionX": 0.0,
+    "OffsetPositionY": 0.0,
+    "SellPrice": {},
+    "ShouldHidePriceSection": false,
+    "TemporaryShopItemDescription": "string",
+    "Title": "string",
+    "TooltipContext": 0,
+    "TooltipOpeningDelay": 0.0,
+    "Type": "Ability",
+    "UpdateLocked": false
    }
   }
  },
  "CreatureBoostPanelNavigationModel": {
   "ActiveBoostDurationLeft": 0,
   "ActiveBoostTotalDuration": 0,
+  "Attachment": 0,
   "BoostDescription": "string",
   "BoostDuration": 0,
   "BoostLayerName": "string",
@@ -3994,13 +5033,25 @@
   ],
   "CreatureName": "string",
   "CurrentBoostedCreatureCount": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsBoostable": false,
-  "MaxBoostedCreatureCount": 0
+  "IsOpalPanel": false,
+  "MaxBoostedCreatureCount": 0,
+  "PanelName": "AttackReportPanel"
  },
  "CreatureRankColorTableEntry": {
   "CreatureRank": "Boss",
   "DarkColor": "2015-06-15T00:00:00Z",
   "LightColor": "2015-06-15T00:00:00Z"
+ },
+ "CreatureSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "CreatureTrapAbilityModel": {
   "Description": "string",
@@ -4014,9 +5065,7 @@
   "IsCraftable": false
  },
  "CreatureTrapLevelUpPanelNavigationModel": {
-  "ShopCategory": "Armor"
- },
- "CreatureTrapPanelNavigationModel": {
+  "Attachment": 0,
   "CreatureTrapUpgradeModel": {
    "BuildingRequirementName": "string",
    "BuildingRequirementRank": 0,
@@ -4037,6 +5086,40 @@
    "TotalUnits": 0,
    "Unlocks": {}
   },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
+  "ShopCategory": "Armor",
+  "SpecContainerId": 0,
+  "Tier": 0
+ },
+ "CreatureTrapPanelNavigationModel": {
+  "Attachment": 0,
+  "CreatureTrapUpgradeModel": {
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "CanAfford": false,
+   "CreatureName": "string",
+   "CurrentEffectiveLevel": 0,
+   "CurrentHealth": 0,
+   "DamageFormula": "string",
+   "EffectiveLevel": 0,
+   "Health": 0,
+   "IconUrl": "string",
+   "IsBuildingRequirementMet": false,
+   "IsMaxTier": 0,
+   "MaxEffectiveLevel": 0,
+   "MaxHealth": 0,
+   "NextTier": 0,
+   "SpecContainerId": 0,
+   "TotalUnits": 0,
+   "Unlocks": {}
+  },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "SpecContainerId": 0,
   "Tier": 0
  },
@@ -4048,9 +5131,36 @@
   "SpecializationId": 0
  },
  "CreatureTrapSpecializationPanelNavigationModel": {
+  "Attachment": 0,
+  "CreatureTrapUpgradeModel": {
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "CanAfford": false,
+   "CreatureName": "string",
+   "CurrentEffectiveLevel": 0,
+   "CurrentHealth": 0,
+   "DamageFormula": "string",
+   "EffectiveLevel": 0,
+   "Health": 0,
+   "IconUrl": "string",
+   "IsBuildingRequirementMet": false,
+   "IsMaxTier": 0,
+   "MaxEffectiveLevel": 0,
+   "MaxHealth": 0,
+   "NextTier": 0,
+   "SpecContainerId": 0,
+   "TotalUnits": 0,
+   "Unlocks": {}
+  },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "GameEntityType": 0,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "PosX": 0,
-  "PosY": 0
+  "PosY": 0,
+  "SpecContainerId": 0,
+  "Tier": 0
  },
  "CreatureTrapSpecializationViewModel": {
   "CreatureTrapSpecializations": {},
@@ -4061,22 +5171,50 @@
  },
  "CreatureTrapTooltipModel": {
   "Abilities": {},
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
   "AttackSpeed": "string",
   "AutoLevelUp": false,
   "BehaviorCategory": "string",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "DamageFormula": "string",
   "DefensePoints": 0,
+  "Description": "string",
   "Health": 0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
   "IsOldIngredient": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
   "Level": 0,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
   "MaxLevel": 0,
+  "MaxOwningCount": 0,
   "MovementSpeed": "string",
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "RequiredCraftingMaterials": {},
+  "SellPrice": {},
   "ShopContext": 0,
+  "ShouldHidePriceSection": false,
   "ShowSpecializations": false,
   "Specializations": {},
+  "TemporaryShopItemDescription": "string",
   "Tier": 0,
-  "Type": "Ability"
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "CreatureTrapUnlockModel": {
   "IconUrl": "string",
@@ -4143,7 +5281,18 @@
  },
  "CurrencyAccumulationAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.CurrencyAccumulationAchievement, HyperQuest.GameServer.Contracts",
-  "CurrencyType": "IGC"
+  "Count": 0,
+  "CurrencyType": "IGC",
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "CurrencyAmount": {
   "Amount": 0,
@@ -4200,7 +5349,12 @@
   "RoomId": 0
  },
  "DebugPanelNavigationModel": {
-  "DebugPanelName": "string"
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "DebugPanelName": "string",
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "DebugUserSettings": {
   "DebugFrame": 0,
@@ -4213,20 +5367,78 @@
   "ProtoLootIsPickable": false,
   "TimeScaleCheatsFactors": 0
  },
+ "DecorationSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "DecorationTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "DecorationPointsCost": 0,
   "DecorationType": "Floor",
+  "Description": "string",
   "HealthPoints": 0,
   "HitPoints": 0,
-  "Type": "Ability"
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "DefeatCastleAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.DefeatCastleAchievement, HyperQuest.GameServer.Contracts",
-  "CastleDifficulties": {}
+  "CastleDifficulties": {},
+  "Count": 0,
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "DefeatCastleStrikeAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.DefeatCastleStrikeAchievement, HyperQuest.GameServer.Contracts",
-  "IsFriend": false
+  "Count": 0,
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "Icon": "default",
+  "Id": 0,
+  "IsFriend": false,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "DefendLog": {
   "DefendLogEntries": {},
@@ -4272,7 +5484,9 @@
   "VictoryConditionType": 0
  },
  "DefendLogEntryDeletedNotification": {
-  "LastValidEntryDate": "2015-06-15T00:00:00Z"
+  "Index": 0,
+  "LastValidEntryDate": "2015-06-15T00:00:00Z",
+  "NotificationType": "CastleBought"
  },
  "DefendLogEntryModel": {
   "AvatarUrl": "string",
@@ -4403,23 +5617,38 @@
  "DefenseEntityTooltipModel": {
   "CPCost": 0,
   "DefenseRating": 0,
+  "GameEntityId": 0,
+  "ItemTypeOasisId": 0,
+  "Level": 0,
+  "Name": "string",
   "SpecialAbilities": {},
-  "TimeToLevelUp": 0
+  "TimeToLevelUp": 0,
+  "TooltipDisplayDelay": 0.0
  },
  "DefenseHudPanelNavigationModel": {
+  "Attachment": 0,
   "BuildViewModel": {
    "Level": 0,
    "Properties": {},
    "ShieldRemainingTime": 0
   },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsCastleValidated": false,
-  "IsDelegatedCastleValidationPending": false
+  "IsDelegatedCastleValidationPending": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "DefenseHudSettings": {
   "CastleNotValidatedLayerName": "string",
   "CastleValidatedLayerName": "string"
  },
  "DefenseIngredientArchetype": {
+  "AutoLevelUp": false,
+  "AvailableCount": 0,
+  "BlueprintUnlocked": false,
+  "NewlyAdded": false,
+  "SpecContainerId": 0,
   "Specialization": 0,
   "Tier": 0
  },
@@ -4427,18 +5656,26 @@
   "BoostId": 0,
   "DefenseIngredientId": 0,
   "DefenseItemType": 0,
-  "ExpirableType": 0
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
+  "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false
+ },
+ "DefenseIngredientBoostSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "DefenseIngredientBuiltCondition": {
   "$type": "HyperQuest.GameServer.Contracts.DefenseIngredientBuiltCondition, HyperQuest.GameServer.Contracts",
   "Count": 0,
+  "DebugName": "string",
   "ItemType": "Building",
-  "SpecContainerId": 0
- },
- "DefenseIngredientDestroyedCondition": {
-  "$type": "HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
-  "Count": 0,
-  "ItemType": "Building",
+  "OasisId": 0,
   "SpecContainerId": 0
  },
  "DefenseIngredientLoot": {
@@ -4447,14 +5684,6 @@
   "Id": 0,
   "InventoryItems": [
    {
-    "ArchetypeId": 0,
-    "DyeTemplateId": 0,
-    "Effects": {},
-    "IsBranded": false,
-    "IsSellable": false,
-    "ItemLevel": 0,
-    "PowerUp": {},
-    "PrimaryStatsModifiers": 0,
     "TemplateId": 0
    }
   ],
@@ -4466,10 +5695,14 @@
   "$type": "HyperQuest.GameServer.Contracts.DefenseIngredientRewardItem, HyperQuest.GameServer.Contracts",
   "Count": 0,
   "ItemType": "Building",
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string",
   "SpecId": 0
  },
  "DefenseIngredientSparedCondition": {
+  "DebugName": "string",
   "ItemType": "Building",
+  "OasisId": 0,
   "SpecContainerId": 0
  },
  "DefenseIngredientSpecializedEventArgs": {
@@ -4525,6 +5758,7 @@
  },
  "DisplayPlayerCastleInAttackSelectionAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+  "Conditions": [],
   "DisplayPlayerCastle": false
  },
  "DistanceFieldSettings": {
@@ -4558,42 +5792,35 @@
   "OnTestAttackStarted": "Close",
   "OnTotemActivated": "Close"
  },
- "DownloadCompletedTaskTracking": {
-  "Duration": 0,
-  "IsFirstInstall": false
- },
- "DownloadPackageCompletedTracking": {
-  "DownloadSize": 0,
-  "Duration": 0,
-  "IsSuccessful": false,
-  "PackageVersionId": {}
- },
  "DownloadPackageStartedTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "PackageVersionId": {},
+  "TrackingTagId": 0,
   "Url": "string",
   "VersionName": "string"
  },
  "DownloadPatcherCompletedTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "DownloadSize": 0,
   "Duration": 0,
   "IsSuccessful": false,
-  "PackageVersionId": {}
- },
- "DownloadPatcherStartedTracking": {
   "PackageVersionId": {},
-  "Url": "string",
-  "VersionName": "string"
+  "TrackingTagId": 0
  },
  "DownloadStartedTaskTracking": {
-  "IsFirstInstall": false
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "IsFirstInstall": false,
+  "TrackingTagId": 0
  },
  "DraftValidatedNotification": {
   "BoostedCreatures": {},
   "BoostedTraps": {},
   "CastleValidationDuration": 0.0,
   "DefenderAccountId": 0,
+  "Index": 0,
   "IsDraftPublished": false,
   "IsRollbackAvailable": false,
+  "NotificationType": "CastleBought",
   "SleepingCreatures": 0
  },
  "DropCountModifer": {
@@ -4628,8 +5855,18 @@
   "MaxEffectLevel": 0,
   "MinEffectLevel": 0
  },
+ "EffectSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "EmoteRewardItem": {
-  "EmoteId": 0
+  "EmoteId": 0,
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string"
  },
  "EnableHeroLevelUpNotificationAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.EnableHeroLevelUpNotificationAssignmentActionSpec, HyperQuest.GameServer.Contracts",
@@ -4637,7 +5874,11 @@
  },
  "EnableHeroVoiceOverAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
-  "EnableHeroVoiceOver": false
+  "Conditions": [],
+  "Disabled": false,
+  "EnableHeroVoiceOver": false,
+  "SoundEvent": {},
+  "Tag": "string"
  },
  "EndAttackInfo": {
   "AttackId": "string",
@@ -4755,7 +5996,18 @@
  },
  "EquipmentAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.EquipmentAchievement, HyperQuest.GameServer.Contracts",
-  "EquippedParts": {}
+  "Count": 0,
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "EquippedParts": {},
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "EquipmentCategoryDefinition": {
   "EffectCount": 0,
@@ -4796,38 +6048,66 @@
   "WeaponTemplateId": 0
  },
  "EquipmentTooltipModel": {
+  "AnchorPosition": 0,
   "ArchetypeStats": {},
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "CompareGearScore": 0,
   "ComparedMagicalProperties": {},
+  "Description": "string",
   "GearScore": 0,
   "GearScoreType": "string",
   "GenderSafeItemTypeName": "string",
   "HeroNameRequirement": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
   "IsComparing": false,
   "IsComparingMagicalProperties": false,
+  "IsEntityTooltip": false,
   "IsEquipped": false,
   "IsItemLevelHidden": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
   "IsUpgraded": false,
+  "IsUpgrading": false,
   "ItemCategoryType": 0,
   "ItemQuality": 0,
   "ItemType": "Building",
   "LevelMax": 0,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
   "MagicalProperties": {},
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "PowerUpModel": {
    "Description": "string",
    "Icon": "default",
    "Level": 0,
    "Name": "string"
   },
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
   "ShowArchetype": false,
   "ShowWeaponDescription": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
   "Type": "Ability",
+  "UpdateLocked": false,
   "WeaponDescription": "string",
   "WeaponIcon": "string",
   "WeaponSpecialEffect": "string"
  },
  "EquippedConsumablesViewModelEventArgs": {
-  "EquippedItems": {}
+  "EquippedItems": []
  },
  "EquippedHeroConsumableItemModel": {
   "AbilitySlotIndex": "Spell1",
@@ -4877,9 +6157,13 @@
  },
  "ErrorMessageModel": {
   "AdvancedMessage": "string",
+  "Attachment": 0,
   "ButtonCaption": "string",
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsButtonEnabled": false,
   "IsForumLinkEnabled": false,
+  "IsOpalPanel": false,
   "Message": "string",
   "PanelName": "AttackReportPanel",
   "Title": "string",
@@ -4902,24 +6186,39 @@
   "AssignmentId": 0
  },
  "Expirable": {
-  "ExpirableType": 0
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
+  "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false
  },
  "ExpirableAddedNotification": {
   "Expirable": {
-   "ExpirableType": 0
-  }
+   "DueDate": "2015-06-15T00:00:00Z",
+   "DurationSeconds": 0,
+   "ExpirableType": 0,
+   "Id": "string",
+   "IsPaused": false
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ExpirableRemovedNotification": {
-  "ExpirableId": "string"
+  "ExpirableId": "string",
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ExpirableUpdatedNotification": {
   "DueDate": "2015-06-15T00:00:00Z",
   "DurationSeconds": 0,
   "ExpirableId": "string",
-  "IsPaused": false
+  "Index": 0,
+  "IsPaused": false,
+  "NotificationType": "CastleBought"
  },
  "ExpireExpirableCommand": {
   "ExpirableId": "string",
+  "IsCastlePublishable": false,
   "PayToForceExpiration": false
  },
  "ExtraDamageInfo": {
@@ -4997,6 +6296,9 @@
   "ShopCategory": "Armor"
  },
  "FinishNowPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "FinishNowModel": {
    "BuyUrl": "string",
    "CanAfford": false,
@@ -5006,7 +6308,9 @@
    },
    "IconUrl": "string",
    "ShopCategory": "Armor"
-  }
+  },
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "FloatingTextByMinRatio": {
   "FloatingText": {},
@@ -5041,13 +6345,30 @@
   "FloorMaterialIndexByMaterialType": {},
   "HeroFootStepSoundsTable": {}
  },
- "ForgeCollectCommand": {
-  "HeroItemSlot": 0,
-  "InventorySlotIndex": 0
- },
  "ForgeConfirmationPopupPanelNavigationModel": {
+  "Attachment": 0,
   "AverageItemLevel": 0,
-  "HeroItemQuality": 0
+  "DataNavigationInfo": {},
+  "DyeInfoModel": {
+   "AnimationName": "string",
+   "CanBeTinted": false,
+   "Color": "string",
+   "ColorName": "string"
+  },
+  "ExcludeModalPopupOpening": false,
+  "HeroItemQuality": 0,
+  "InitialCurrencyType": 0,
+  "IsOpalPanel": false,
+  "ItemCount": 0,
+  "ItemId": 0,
+  "ItemType": "Building",
+  "PanelName": "AttackReportPanel",
+  "ShopConfirmationPopupModel": {
+   "IsContainingPremiumCash": false,
+   "ShopProduct": {},
+   "Tooltip": {}
+  },
+  "WalletAmount": 0
  },
  "ForgeCookingTimerUpdatedEventArgs": {
   "CurrencyAmount": {
@@ -5064,16 +6385,25 @@
   "ShopSkuCode": "string"
  },
  "ForgeExpirable": {
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
   "ExpirableType": 0,
-  "ForgeMode": 0
+  "ForgeMode": 0,
+  "Id": "string",
+  "IsPaused": false
  },
  "ForgeFinishNowPanelNavigationModel": {
+  "Attachment": 0,
   "CurrencyAmount": {
    "Amount": 0,
    "CurrencyType": "IGC"
   },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "ForgeMode": 0,
-  "ItemQuality": 0
+  "IsOpalPanel": false,
+  "ItemQuality": 0,
+  "PanelName": "AttackReportPanel"
  },
  "ForgeInfo": {
   "BuildingNotificationIconUrl": "string",
@@ -5083,6 +6413,9 @@
  },
  "ForgeInventoryTabChangedEventArgs": {
   "HeroInventoryPanelNavigationModel": {
+   "Attachment": 0,
+   "DataNavigationInfo": {},
+   "ExcludeModalPopupOpening": false,
    "GetEquippedItemsViewModel": {
     "Equipment": {}
    },
@@ -5104,33 +6437,58 @@
      "WeightType": 0
     }
    },
+   "IsInventoryOpenedChangingTab": false,
+   "IsOpalPanel": false,
    "PanelName": "AttackReportPanel"
   }
  },
  "ForgeItemCollectModel": {
+  "CraftingSlotQuality": 0,
   "IconUrl": "string",
+  "ItemQuality": 0,
   "Level": 0,
   "OasisName": "string",
   "OasisNameId": 0,
   "TooltipModel": {
-   "CurrencyType": "IGC",
-   "DeathTime": 0,
-   "FreeSlotsRequirement": 0,
-   "HasItemsToCollect": false,
-   "HeroDisplayName": "string",
-   "HeroLevel": 0,
-   "IconUrl": "string",
-   "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false,
-   "Type": "Ability"
+   "AnchorPosition": 0,
+   "ArrowPosition": "MiddleLeft",
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "BuyBackId": "string",
+   "BuyPrice": {},
+   "CanBeSold": false,
+   "Description": "string",
+   "IsAffordable": false,
+   "IsBuildingRequirementMet": false,
+   "IsEntityTooltip": false,
+   "IsLevelRequirementMet": false,
+   "IsOwned": false,
+   "IsSteamMarketable": false,
+   "IsUpgrading": false,
+   "LevelRequirement": 0,
+   "LimitedTimeInSeconds": 0,
+   "MaxAffordableCount": 0,
+   "MaxOwningCount": 0,
+   "OffsetPositionX": 0.0,
+   "OffsetPositionY": 0.0,
+   "SellPrice": {},
+   "ShouldHidePriceSection": false,
+   "TemporaryShopItemDescription": "string",
+   "Title": "string",
+   "TooltipContext": 0,
+   "TooltipOpeningDelay": 0.0,
+   "Type": "Ability",
+   "UpdateLocked": false
   }
  },
  "ForgeItemCookingModel": {
+  "CraftingSlotQuality": 0,
   "CurrencyAmount": {
    "Amount": 0,
    "CurrencyType": "IGC"
   },
   "ForgeMode": 0,
+  "ItemQuality": 0,
   "LevelMax": 0,
   "LevelMin": 0,
   "RemainingTime": 0,
@@ -5145,7 +6503,9 @@
    "ItemLevelAverage": 0
   },
   "ExpirableId": "string",
-  "ForgeMode": 0
+  "ForgeMode": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ForgeItemSelectionEventArgs": {
   "ForgeItemSlots": {},
@@ -5153,22 +6513,8 @@
    "CraftingMaterialsRequirement": {},
    "ForgeMode": 0,
    "ForgeModel": {
-    "IconUrl": "string",
-    "Level": 0,
-    "OasisName": "string",
-    "OasisNameId": 0,
-    "TooltipModel": {
-     "CurrencyType": "IGC",
-     "DeathTime": 0,
-     "FreeSlotsRequirement": 0,
-     "HasItemsToCollect": false,
-     "HeroDisplayName": "string",
-     "HeroLevel": 0,
-     "IconUrl": "string",
-     "IsHeroInventoryLargeEnough": false,
-     "IsStorageFull": false,
-     "Type": "Ability"
-    }
+    "CraftingSlotQuality": 0,
+    "ItemQuality": 0
    },
    "ForgeMysteryBoxItemModel": {
     "AddedItemForgeSoundId": "0x0000000000000000",
@@ -5227,8 +6573,10 @@
   }
  },
  "ForgeItemSelectionModel": {
+  "CraftingSlotQuality": 0,
   "Duration": 0,
   "ForgeMode": 0,
+  "ItemQuality": 0,
   "RequiredItemSlotCount": 0
  },
  "ForgeItemSlotModel": {
@@ -5236,22 +6584,8 @@
   "InventorySlotIndex": 0
  },
  "ForgeModel": {
-  "IconUrl": "string",
-  "Level": 0,
-  "OasisName": "string",
-  "OasisNameId": 0,
-  "TooltipModel": {
-   "CurrencyType": "IGC",
-   "DeathTime": 0,
-   "FreeSlotsRequirement": 0,
-   "HasItemsToCollect": false,
-   "HeroDisplayName": "string",
-   "HeroLevel": 0,
-   "IconUrl": "string",
-   "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false,
-   "Type": "Ability"
-  }
+  "CraftingSlotQuality": 0,
+  "ItemQuality": 0
  },
  "ForgeMysteryBoxItemModel": {
   "AddedItemForgeSoundId": "0x0000000000000000",
@@ -5301,22 +6635,8 @@
   "CraftingMaterialsRequirement": {},
   "ForgeMode": 0,
   "ForgeModel": {
-   "IconUrl": "string",
-   "Level": 0,
-   "OasisName": "string",
-   "OasisNameId": 0,
-   "TooltipModel": {
-    "CurrencyType": "IGC",
-    "DeathTime": 0,
-    "FreeSlotsRequirement": 0,
-    "HasItemsToCollect": false,
-    "HeroDisplayName": "string",
-    "HeroLevel": 0,
-    "IconUrl": "string",
-    "IsHeroInventoryLargeEnough": false,
-    "IsStorageFull": false,
-    "Type": "Ability"
-   }
+   "CraftingSlotQuality": 0,
+   "ItemQuality": 0
   },
   "ForgeMysteryBoxItemModel": {
    "AddedItemForgeSoundId": "0x0000000000000000",
@@ -5378,27 +6698,19 @@
   "UpgradableSlots": {}
  },
  "ForgePanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "ForgeMode": 0,
   "ForgeModel": {
-   "IconUrl": "string",
-   "Level": 0,
-   "OasisName": "string",
-   "OasisNameId": 0,
-   "TooltipModel": {
-    "CurrencyType": "IGC",
-    "DeathTime": 0,
-    "FreeSlotsRequirement": 0,
-    "HasItemsToCollect": false,
-    "HeroDisplayName": "string",
-    "HeroLevel": 0,
-    "IconUrl": "string",
-    "IsHeroInventoryLargeEnough": false,
-    "IsStorageFull": false,
-    "Type": "Ability"
-   }
+   "CraftingSlotQuality": 0,
+   "ItemQuality": 0
   },
   "ForgeState": 0,
   "HeroInventoryPanelNavigationModel": {
+   "Attachment": 0,
+   "DataNavigationInfo": {},
+   "ExcludeModalPopupOpening": false,
    "GetEquippedItemsViewModel": {
     "Equipment": {}
    },
@@ -5420,20 +6732,29 @@
      "WeightType": 0
     }
    },
+   "IsInventoryOpenedChangingTab": false,
+   "IsOpalPanel": false,
    "PanelName": "AttackReportPanel"
   },
   "IsForgeInventoryOpenedChangingTab": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "ShopPanelNavigationModel": {
+   "Attachment": 0,
    "BuildingId": 0,
    "BuildingMaxRank": 0,
    "BuildingRank": 0,
    "BuildingType": "ArchitectOffice",
    "CategoryConfigViewModel": {},
+   "DataNavigationInfo": {},
    "EmptyMessageOasisId": 0,
+   "ExcludeModalPopupOpening": false,
    "ForgeMode": 0,
    "ForgeState": 0,
    "HasMetUpgradeRequirements": false,
    "IsBuildMode": false,
+   "IsOpalPanel": false,
+   "PanelName": "AttackReportPanel",
    "PrimaryShopEnabled": false,
    "ProductsViewModel": {},
    "ShopMenuNavigation": {
@@ -5464,7 +6785,9 @@
   }
  },
  "ForgeQualitySelectionModel": {
+  "CraftingSlotQuality": 0,
   "ForgeMode": 0,
+  "ItemQuality": 0,
   "Options": {}
  },
  "ForgeQualitySelectionOptionModel": {
@@ -5512,7 +6835,9 @@
    "ForgeMode": 0,
    "Item": {},
    "ItemLevelAverage": 0
-  }
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ForgeTier": {
   "BuildingRankRequirement": 0,
@@ -5535,29 +6860,47 @@
  },
  "FreeTrialActivatedNotification": {
   "FreeTrialType": 0,
-  "HeroFreeTrialInfoId": 0
+  "HeroFreeTrialInfoId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "FreeTrialConditionCompletedNotification": {
   "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "PriceReductionConditionCompletedId": 0
  },
  "FreeTrialPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IconUrl": "string",
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "RemainingDays": 0
  },
  "FreeWorkerPanelNavigationModel": {
+  "Attachment": 0,
   "BuyUrl": "string",
   "CurrencyAmount": {
    "Amount": 0,
    "CurrencyType": "IGC"
-  }
+  },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "FriendAvatarUpdatedNotification": {
   "FriendAccountId": 0,
-  "FriendAvatarId": 0
+  "FriendAvatarId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "FriendInviteNotification": {
-  "Invitation": {}
+  "Index": 0,
+  "Invitation": {},
+  "NotificationType": "CastleBought"
  },
  "FriendLeaderboardModel": {
   "DisplayName": "string",
@@ -5569,11 +6912,18 @@
  },
  "FriendLeagueUpdatedNotification": {
   "FriendAccountId": 0,
+  "Index": 0,
   "LeagueId": 0,
+  "NotificationType": "CastleBought",
   "SubLeagueId": 0
  },
  "FriendNotificationsPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "DebounceSearchValue": 0,
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "ShowFriendReferral": false
  },
  "FriendReferral": {
@@ -5593,17 +6943,25 @@
   }
  },
  "FriendRewardGrantedNewsData": {
+  "FriendAccountId": 0,
+  "FriendAvatarId": 0,
+  "FriendDisplayName": "string",
+  "FriendSpecialPacks": 0,
   "RequiredLevel": 0,
   "RequiredReferralFriends": 0,
+  "RequiresUserAction": false,
   "Reward": {
    "FakeRewardItems": {},
    "LargeIconUrl": "string",
    "RewardItems": {},
    "SmallIconUrl": "string"
-  }
+  },
+  "Type": "Ability"
  },
  "FriendTrophyScoreChangedNotification": {
   "FriendAccountId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "TrophyScore": 0
  },
  "FriendsLeaderboardModel": {
@@ -5658,7 +7016,9 @@
   "FriendsLeaderboard": {}
  },
  "FriendshipAddedNotification": {
-  "FriendAccountSummary": {}
+  "FriendAccountSummary": {},
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "FriendshipInvitation": {
   "CreationDate": "2015-06-15T00:00:00Z",
@@ -5677,7 +7037,9 @@
   "NotificationType": "CastleBought"
  },
  "FriendshipInvitationDeclinedNotification": {
-  "FriendAccountId": 0
+  "FriendAccountId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "FriendshipInvitationEventArgs": {
   "FriendAccountId": 0,
@@ -5711,18 +7073,23 @@
    "IsCastleAttackable": false,
    "IsInvitationOwner": false,
    "LeagueId": 0
-  }
- },
- "FriendshipRemovedNotification": {
-  "FriendAccountId": 0,
+  },
   "Index": 0,
   "NotificationType": "CastleBought"
+ },
+ "FxSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "GPUTimings": {
   "SettingsMS": 0
  },
  "GameButtonEventArgs": {
-  "Button": 0
+  "Button": "string"
  },
  "GameCameraZoomLevel": {
   "AttachCameraLight": false,
@@ -5759,8 +7126,10 @@
   "HttpCompression": false
  },
  "GameStartTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "GameClientVersion": "string",
-  "MachineId": "string"
+  "MachineId": "string",
+  "TrackingTagId": 0
  },
  "GameStateSoundPresets": {
   "ActivationPresets": {},
@@ -5779,11 +7148,13 @@
   ]
  },
  "GameStateTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "GameStateId": 0,
   "GameStateIdleTime": 0,
   "GameStateTotalTime": 0,
   "GameStateType": "AccountCreation",
-  "NextGameStateType": 0
+  "NextGameStateType": 0,
+  "TrackingTagId": 0
  },
  "GameStates": {
   "AccountCreation": 0,
@@ -5805,10 +7176,12 @@
   "Parameters": "string"
  },
  "GamepadButtonContextualActionData": {
+  "ActionType": 0,
   "Buttons": 0,
   "ContextualActionDataInputType": 0
  },
  "GamepadStickContextualActionData": {
+  "ActionType": 0,
   "ContextualActionDataInputType": 0,
   "Stick": 0
  },
@@ -5961,12 +7334,27 @@
   "ProcessedAccounts": 0
  },
  "GlobalNotification": {
-  "StartDate": "2015-06-15T00:00:00Z"
+  "Id": "string",
+  "NotificationType": "CastleBought"
  },
  "GoldBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.GoldBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
   "AttackIncreasedGold": 0.0,
-  "MineIncreasedGold": 0.0
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "MineIncreasedGold": 0.0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "GraphicsInfoTracking": {
   "CurrentDirectXVersionLetter": "string",
@@ -6025,6 +7413,9 @@
   "IconName": "string"
  },
  "GuildInfoPopupPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "GuildId": 0,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
@@ -6056,21 +7447,25 @@
     "MemberCount": 0,
     "TrophyScore": 0
    }
-  }
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "GuildInvitationRemovedNotification": {
   "AccountId": 0,
-  "GuildId": 0
+  "GuildId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "GuildJoinRequestAddedNotification": {
-  "GuildId": 0
+  "GuildId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "GuildJoinRequestReceivedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "Requestor": {}
- },
- "GuildJoinRequestRemovedNotification": {
-  "AccountId": 0,
-  "GuildId": 0
  },
  "GuildJoinedEventArgs": {
   "GuildId": 0
@@ -6103,7 +7498,9 @@
  },
  "GuildLeftNotification": {
   "GuildId": 0,
-  "GuildStillExists": false
+  "GuildStillExists": false,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "GuildListingItemModel": {
   "CanAcceptInvitation": false,
@@ -6133,6 +7530,9 @@
   "Model": {}
  },
  "GuildManagementPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "Model": {},
   "PanelName": "AttackReportPanel"
@@ -6177,7 +7577,9 @@
    "TrophyScore": 0,
    "WelcomeMessage": {}
   },
-  "JoinerId": 0
+  "Index": 0,
+  "JoinerId": 0,
+  "NotificationType": "CastleBought"
  },
  "GuildMemberLeftNotification": {
   "Guild": {
@@ -6230,13 +7632,17 @@
  "GuildMemberTitleUpdatedNotification": {
   "AccountId": 0,
   "GuildId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "Title": 0
  },
  "GuildMemberTrophyScoreChangedNotification": {
   "GuildRank": 0,
   "GuildTrophyScore": 0,
+  "Index": 0,
   "MemberAccountId": 0,
-  "MemberTrophyScore": 0
+  "MemberTrophyScore": 0,
+  "NotificationType": "CastleBought"
  },
  "GuildNotificationCountUpdatedEventArgs": {
   "Count": 0,
@@ -6270,12 +7676,6 @@
  "GuildProfileModelRefreshedEventArgs": {
   "Model": {}
  },
- "GuildProfilePanelNavigationModel": {
-  "GuildId": 0,
-  "IsOpalPanel": false,
-  "PanelName": "AttackReportPanel",
-  "SelectedTab": 0
- },
  "GuildSearchResult": {
   "GuildSummaries": {},
   "HasMore": false
@@ -6303,7 +7703,9 @@
    "Id": 0
   },
   "GuildId": 0,
+  "Index": 0,
   "LanguageCode": "de",
+  "NotificationType": "CastleBought",
   "RecruitmentMode": 0
  },
  "GuildSummary": {
@@ -6317,6 +7719,8 @@
   "TrophyScore": 0
  },
  "GuildWelcomePagePanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "ExcludeModalPopupOpening": false,
   "GuildProfileModel": {
    "CanEdit": false,
@@ -6370,6 +7774,7 @@
  },
  "HarvestHeroCorpseCommand": {
   "HeroCorpseId": 0,
+  "IsCastlePublishable": false,
   "SlotsUpdates": {}
  },
  "HarvestHoverModel": {
@@ -6393,12 +7798,13 @@
  },
  "HarvestMineBuildingCommand": {
   "CurrencyType": "IGC",
+  "IsCastlePublishable": false,
   "MineBuildingId": 0
  },
  "HarvestMineStatusAddedEventArgs": {
   "CurrencyType": "IGC",
   "EntityHarvestId": 0,
-  "EntityHarvestType": 0
+  "EntityHarvestType": {}
  },
  "HarvestOutEventArgs": {
   "EntityHarvestId": 0,
@@ -6434,7 +7840,7 @@
  },
  "HarvestRemovedEventArgs": {
   "EntityHarvestId": 0,
-  "EntityHarvestType": 0,
+  "EntityHarvestType": "string",
   "IsCookingReady": false
  },
  "HarvestResult": {
@@ -6456,7 +7862,21 @@
  },
  "HealthPotionConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
-  "RestorePoints": 0
+  "AbilityId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "MinLevelRequirement": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "RestorePoints": 0,
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "Hero": {
   "AttackRegions": [
@@ -6494,19 +7914,51 @@
   "XP": 0
  },
  "HeroBiographyPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroTooltipModel": {
+   "AnchorPosition": 0,
+   "ArrowPosition": "MiddleLeft",
    "Biography": "string",
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "BuyBackId": "string",
+   "BuyPrice": {},
+   "CanBeSold": false,
+   "Description": "string",
+   "IsAffordable": false,
+   "IsBuildingRequirementMet": false,
+   "IsEntityTooltip": false,
+   "IsLevelRequirementMet": false,
+   "IsOwned": false,
+   "IsSteamMarketable": false,
+   "IsUpgrading": false,
    "Level": 0,
+   "LevelRequirement": 0,
+   "LimitedTimeInSeconds": 0,
    "LongHeroName": "string",
+   "MaxAffordableCount": 0,
+   "MaxOwningCount": 0,
+   "OffsetPositionX": 0.0,
+   "OffsetPositionY": 0.0,
    "SampleSkills": {},
+   "SellPrice": {},
+   "ShouldHidePriceSection": false,
    "SpecContainerId": 0,
    "SpecialPackGroup": "Diamond",
    "StatModifierDescription": "string",
    "StatModifierIconUrl": "string",
+   "TemporaryShopItemDescription": "string",
+   "Title": "string",
+   "TooltipContext": 0,
    "TooltipIconUrl": "string",
-   "Type": "Ability"
+   "TooltipOpeningDelay": 0.0,
+   "Type": "Ability",
+   "UpdateLocked": false
   },
   "IsLocked": false,
+  "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
   "SpecContainerId": 0
  },
@@ -6517,14 +7969,17 @@
  },
  "HeroConsumableEquipNotification": {
   "ConsumableItem": {},
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "HeroConsumableEquippedEventArgs": {
   "ConsumableItem": {}
  },
  "HeroConsumableItem": {
   "$type": "HyperQuest.GameServer.Contracts.HeroConsumableItem, HyperQuest.GameServer.Contracts",
-  "StackCount": 0
+  "StackCount": 0,
+  "TemplateId": 0
  },
  "HeroConsumableSlot": {
   "SlotIndex": 0,
@@ -6533,6 +7988,8 @@
  },
  "HeroConsumableUnequipNotification": {
   "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "SlotIndex": 0
  },
  "HeroConsumableUnequippedEventArgs": {
@@ -6540,7 +7997,10 @@
  },
  "HeroCorpseHarvestHoverEventArgs": {
   "HeroCorpseHarvestHoverModel": {
+   "AmountToCollect": {},
    "ElapsedTimeSinceDeath": 0.0,
+   "EntityHarvestId": 0,
+   "EntityHarvestType": 0,
    "FreeSlotsRequirement": 0,
    "HasItemsToCollect": false,
    "HeroDisplayName": "string",
@@ -6552,12 +8012,19 @@
    },
    "HeroLevel": 0,
    "HeroSpecContainerId": 0,
+   "IsCookingReady": false,
    "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false
+   "IsStorageFull": false,
+   "Position": {},
+   "RemainingTime": 0,
+   "Xp": 0
   }
  },
  "HeroCorpseHarvestHoverModel": {
+  "AmountToCollect": {},
   "ElapsedTimeSinceDeath": 0.0,
+  "EntityHarvestId": 0,
+  "EntityHarvestType": 0,
   "FreeSlotsRequirement": 0,
   "HasItemsToCollect": false,
   "HeroDisplayName": "string",
@@ -6569,20 +8036,52 @@
   },
   "HeroLevel": 0,
   "HeroSpecContainerId": 0,
+  "IsCookingReady": false,
   "IsHeroInventoryLargeEnough": false,
-  "IsStorageFull": false
+  "IsStorageFull": false,
+  "Position": {},
+  "RemainingTime": 0,
+  "Xp": 0
  },
  "HeroCorpseHarvestingTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "CurrencyType": "IGC",
   "DeathTime": 0,
+  "Description": "string",
   "FreeSlotsRequirement": 0,
   "HasItemsToCollect": false,
   "HeroDisplayName": "string",
   "HeroLevel": 0,
   "IconUrl": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
   "IsHeroInventoryLargeEnough": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
   "IsStorageFull": false,
-  "Type": "Ability"
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "HeroCorpseSettings": {
   "HeroCorpseCooldownPerAttacker": 0,
@@ -6604,16 +8103,35 @@
     "IsLocked": false,
     "SpecialPackGroup": "Diamond",
     "TooltipModel": {
-     "CurrencyType": "IGC",
-     "DeathTime": 0,
-     "FreeSlotsRequirement": 0,
-     "HasItemsToCollect": false,
-     "HeroDisplayName": "string",
-     "HeroLevel": 0,
-     "IconUrl": "string",
-     "IsHeroInventoryLargeEnough": false,
-     "IsStorageFull": false,
-     "Type": "Ability"
+     "AnchorPosition": 0,
+     "ArrowPosition": "MiddleLeft",
+     "BuildingRequirementName": "string",
+     "BuildingRequirementRank": 0,
+     "BuyBackId": "string",
+     "BuyPrice": {},
+     "CanBeSold": false,
+     "Description": "string",
+     "IsAffordable": false,
+     "IsBuildingRequirementMet": false,
+     "IsEntityTooltip": false,
+     "IsLevelRequirementMet": false,
+     "IsOwned": false,
+     "IsSteamMarketable": false,
+     "IsUpgrading": false,
+     "LevelRequirement": 0,
+     "LimitedTimeInSeconds": 0,
+     "MaxAffordableCount": 0,
+     "MaxOwningCount": 0,
+     "OffsetPositionX": 0.0,
+     "OffsetPositionY": 0.0,
+     "SellPrice": {},
+     "ShouldHidePriceSection": false,
+     "TemporaryShopItemDescription": "string",
+     "Title": "string",
+     "TooltipContext": 0,
+     "TooltipOpeningDelay": 0.0,
+     "Type": "Ability",
+     "UpdateLocked": false
     }
    }
   ]
@@ -6627,16 +8145,35 @@
   "IsLocked": false,
   "SpecialPackGroup": "Diamond",
   "TooltipModel": {
-   "CurrencyType": "IGC",
-   "DeathTime": 0,
-   "FreeSlotsRequirement": 0,
-   "HasItemsToCollect": false,
-   "HeroDisplayName": "string",
-   "HeroLevel": 0,
-   "IconUrl": "string",
-   "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false,
-   "Type": "Ability"
+   "AnchorPosition": 0,
+   "ArrowPosition": "MiddleLeft",
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "BuyBackId": "string",
+   "BuyPrice": {},
+   "CanBeSold": false,
+   "Description": "string",
+   "IsAffordable": false,
+   "IsBuildingRequirementMet": false,
+   "IsEntityTooltip": false,
+   "IsLevelRequirementMet": false,
+   "IsOwned": false,
+   "IsSteamMarketable": false,
+   "IsUpgrading": false,
+   "LevelRequirement": 0,
+   "LimitedTimeInSeconds": 0,
+   "MaxAffordableCount": 0,
+   "MaxOwningCount": 0,
+   "OffsetPositionX": 0.0,
+   "OffsetPositionY": 0.0,
+   "SellPrice": {},
+   "ShouldHidePriceSection": false,
+   "TemporaryShopItemDescription": "string",
+   "Title": "string",
+   "TooltipContext": 0,
+   "TooltipOpeningDelay": 0.0,
+   "Type": "Ability",
+   "UpdateLocked": false
   }
  },
  "HeroDeathModel": {
@@ -6652,12 +8189,19 @@
   "TrophyScoreRestartAttackLost": 0
  },
  "HeroDeathPanelNavigationModel": {
-  "HeroDeathInfo": {}
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "HeroDeathInfo": {},
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "HeroDyeAppliedNotification": {
   "DyeTemplateId": 0,
   "HeroItemSlot": 0,
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "HeroEquipConsumableCommand": {
   "EquippedSlotIndex": 0,
@@ -6683,7 +8227,11 @@
   "Shoulders": {}
  },
  "HeroEquipmentBuyBackSlot": {
-  "Item": {}
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "Id": "string",
+  "Item": {},
+  "ItemType": "Building",
+  "Price": {}
  },
  "HeroEquipmentEquipCommand": {
   "DestinationSlot": 0,
@@ -6693,7 +8241,9 @@
  "HeroEquipmentEquipNotification": {
   "EquipmentItem": {},
   "HeroItemSlot": 0,
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "HeroEquipmentEquippedEventArgs": {
   "EquippedHeroItem": {},
@@ -6722,7 +8272,9 @@
  },
  "HeroEquipmentUnequipNotification": {
   "HeroItemSlot": 0,
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "HeroEquipmentUnequippedEventArgs": {
   "ItemSlot": 0,
@@ -6747,8 +8299,10 @@
   "SpecialPackGroup": "Diamond"
  },
  "HeroInventoryAddedNotification": {
+  "Index": 0,
   "InventorySlot": {},
-  "NewlyAdded": false
+  "NewlyAdded": false,
+  "NotificationType": "CastleBought"
  },
  "HeroInventoryItemAddedEventArgs": {
   "GetHeroInventoryViewModel": {
@@ -6829,6 +8383,9 @@
   "NewItemCount": 0
  },
  "HeroInventoryPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "GetEquippedItemsViewModel": {
    "Equipment": {}
   },
@@ -6850,6 +8407,8 @@
     "WeightType": 0
    }
   },
+  "IsInventoryOpenedChangingTab": false,
+  "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
  "HeroInventoryRefreshedEventArgs": {
@@ -6863,6 +8422,8 @@
   }
  },
  "HeroInventoryRemovedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "SlotIndex": 0
  },
  "HeroInventorySettings": {
@@ -6872,19 +8433,30 @@
   "SlotBgLayerNames": {}
  },
  "HeroInventorySlotUpdate": {
-  "ItemType": "Building"
+  "Count": 0,
+  "ItemType": "Building",
+  "SlotIndex": 0,
+  "TemplateId": 0
  },
  "HeroInventorySlotUpdateForConsumable": {
-  "ItemType": "Building"
+  "Count": 0,
+  "ItemType": "Building",
+  "SlotIndex": 0,
+  "TemplateId": 0
  },
  "HeroInventorySlotUpdateForHeroEquipment": {
+  "Count": 0,
   "HeroItem": {
    "AcquisitionDate": "2015-06-15T00:00:00Z",
    "SellPrice": 0
   },
-  "ItemType": "Building"
+  "ItemType": "Building",
+  "SlotIndex": 0,
+  "TemplateId": 0
  },
  "HeroInventoryUpdatedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "SlotIndex": 0,
   "StackCount": 0
  },
@@ -6893,11 +8465,9 @@
   "SellPrice": 0
  },
  "HeroItemArchetype": {
-  "Damage": 0.0,
-  "GearScoreMultiplier": 0.0,
-  "HeroId": 0,
-  "Range": 0.0,
-  "Speed": 0.0
+  "Id": 0,
+  "Name": {},
+  "Probability": 0.0
  },
  "HeroItemBuildingRequirement": {
   "BuildingRequirementRank": 0,
@@ -6935,17 +8505,23 @@
  },
  "HeroItemPrimaryStats": {
   "HeroItemArchetype": {
-   "Damage": 0.0,
-   "GearScoreMultiplier": 0.0,
-   "HeroId": 0,
-   "Range": 0.0,
-   "Speed": 0.0
+   "Id": 0,
+   "Name": {},
+   "Probability": 0.0
   },
   "StatMaxValues": 0,
   "StatValues": 0
  },
  "HeroItemQualityFxCollection": {
   "Fx": {}
+ },
+ "HeroItemSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "HeroItemTextParams": {
   "BackgroundColor": "2015-06-15T00:00:00Z",
@@ -6967,20 +8543,20 @@
   "HeroItemTypeId": 0,
   "RandomChance": 0.0
  },
- "HeroLevelReachedObjectiveRequirement": {
-  "Level": 0
- },
- "HeroLevelUpFriendNewsData": {
-  "HeroLevel": 0,
-  "HeroName": "string",
-  "HeroSpecContainerId": 0
- },
  "HeroLevelUpOwnNewsData": {
+  "FriendAccountId": 0,
+  "FriendAvatarId": 0,
+  "FriendDisplayName": "string",
+  "FriendSpecialPacks": 0,
   "HeroLevel": 0,
   "HeroName": "string",
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "RequiresUserAction": false,
+  "Type": "Ability"
  },
  "HeroLevelUpPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "ExcludeModalPopupOpening": false,
   "HeroUpgradeModel": {
    "BuildingRequirementName": "string",
@@ -7021,8 +8597,13 @@
   "PanelName": "AttackReportPanel"
  },
  "HeroLevelUpReadyPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroSpecContainerId": 0,
-  "Level": 0
+  "IsOpalPanel": false,
+  "Level": 0,
+  "PanelName": "AttackReportPanel"
  },
  "HeroModel": {
   "Biography": "string",
@@ -7084,7 +8665,9 @@
   "SpecContainerId": 0
  },
  "HeroSelectedNotification": {
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "HeroSelectionModel": {
   "Description": "string",
@@ -7100,9 +8683,22 @@
   "SpecialPackGroup": "Diamond"
  },
  "HeroSelectionPanelNavigationModel": {
+  "Attachment": 0,
   "CurrentHeroSpecContainerId": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroSelections": {},
-  "LayerName": "string"
+  "IsOpalPanel": false,
+  "LayerName": "string",
+  "PanelName": "AttackReportPanel"
+ },
+ "HeroSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "HeroSpellNewItemCountChangedEventArgs": {
   "NewItemCount": 0
@@ -7139,22 +8735,112 @@
   "LevelExperienceStats": {}
  },
  "HeroTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
   "Biography": "string",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
   "Level": 0,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
   "LongHeroName": "string",
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "SampleSkills": {},
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
   "SpecContainerId": 0,
   "SpecialPackGroup": "Diamond",
   "StatModifierDescription": "string",
   "StatModifierIconUrl": "string",
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
   "TooltipIconUrl": "string",
-  "Type": "Ability"
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "HeroTrainerBuildingInfoDataModel": {
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
+  "CurrentBuildingRank": 0,
   "CurrentMaxHeroLevel": 0,
+  "Description": "string",
+  "IconUrl": "string",
+  "MaxBuildingRank": 0,
   "MaxMaxHeroLevel": 0
  },
  "HeroTrainerBuildingUpgradePopupModel": {
+  "BuildingUpgradePopupDataModel": {
+   "BuildingInfoModel": {
+    "BuildingInfoDataModel": {
+     "Boost": 0,
+     "BoostText": "string",
+     "BuildingName": "string",
+     "BuildingType": "ArchitectOffice",
+     "CurrentBuildingRank": 0,
+     "Description": "string",
+     "IconUrl": "string",
+     "MaxBuildingRank": 0
+    }
+   },
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "CanAfford": false,
+   "HeroLevelRequirement": 0,
+   "IsActive": false,
+   "IsBuildingRequirementMet": false,
+   "IsHeroLevelRequirementMet": 0,
+   "NextBuildingRank": 0,
+   "ShopSkus": [
+    {
+     "Code": "string",
+     "CraftingMaterials": [
+      {
+       "Id": 0,
+       "Quantity": 0
+      }
+     ],
+     "CreationDate": "2015-06-15T00:00:00Z",
+     "DescriptionOasisId": 0,
+     "Discounts": {},
+     "IconUrl": "string",
+     "InternalDescription": "string",
+     "IsActive": false,
+     "IsBestSeller": false,
+     "IsLimitedQuantity": false,
+     "IsLocked": false,
+     "ItemCount": 0,
+     "ItemId": 0,
+     "ItemType": "Building",
+     "LimitedQuantityMax": 0,
+     "MaxOwningCount": 0,
+     "PremiumEstimatedValue": 0,
+     "Price": {},
+     "ShopContext": 0,
+     "TitleOasisId": 0,
+     "Weight": 0
+    }
+   ],
+   "UnlockedItems": {},
+   "UpgradeDurationInSeconds": 0
+  },
   "NewMaxHeroLevel": 0
  },
  "HeroUnequipSpellCommand": {
@@ -7163,7 +8849,9 @@
  },
  "HeroUnlockRewardItem": {
   "ExpirationDate": "2015-06-15T00:00:00Z",
-  "HeroSpecContainerId": 0
+  "HeroSpecContainerId": 0,
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string"
  },
  "HeroUnlockedNotification": {
   "Hero": {
@@ -7200,7 +8888,9 @@
    "PriceReductionIds": 0,
    "Stats": {},
    "XP": 0
-  }
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "HeroUpgradeModel": {
   "BuildingRequirementName": "string",
@@ -7238,6 +8928,13 @@
   "XpRequirement": 0
  },
  "HeroUpgradePanelNavigationModel": {
+  "Attachment": 0,
+  "CurrencyAmount": {
+   "Amount": 0,
+   "CurrencyType": "IGC"
+  },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroModel": {
    "Biography": "string",
    "CanAfford": false,
@@ -7260,18 +8957,52 @@
    "RegularPrice": {},
    "SpecContainerId": 0
   },
-  "PanelName": "AttackReportPanel"
+  "InFreeTrial": false,
+  "IsOpalPanel": false,
+  "ItemType": "Building",
+  "Level": 0,
+  "PanelName": "AttackReportPanel",
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "HeroUpgradeTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "DPSIncrease": 0.0,
+  "Description": "string",
   "HealthIncrease": 0.0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
   "IsXpRequirementMet": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
   "LongHeroName": "string",
   "ManaIncrease": 0.0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
   "NextLevel": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
   "SpecContainerId": 0,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
   "Type": "Ability",
   "UnlockedAbilities": {},
+  "UpdateLocked": false,
   "XpRequirement": 0
  },
  "HeroUpgradeUnlockedAbilityModel": {
@@ -7282,8 +9013,10 @@
  },
  "HeroXpChangedNotification": {
   "HeroSpecContainerId": 0,
+  "Index": 0,
   "Level": 0,
   "LevelChanged": false,
+  "NotificationType": "CastleBought",
   "TotalXp": 0,
   "XpAdded": 0
  },
@@ -7410,16 +9143,20 @@
   "PreviousMana": 0
  },
  "HudPanelNavigationModel": {
+  "Attachment": 0,
   "CurrentArmor": 0,
   "CurrentHealth": 0,
   "CurrentLevelXp": 0,
   "CurrentMana": 0,
   "CurrentResistance": 0,
+  "DataNavigationInfo": {},
   "EquippedConsumablesViewModel": {},
   "EquippedSpellViewModel": {},
+  "ExcludeModalPopupOpening": false,
   "HudType": 0,
   "IGC": 0,
   "IsInAttack": false,
+  "IsOpalPanel": false,
   "IsTestAttack": false,
   "LifeForce": 0,
   "MaxArmor": 0,
@@ -7431,6 +9168,7 @@
   "NewCountByIcons": {},
   "NewObjectives": 0,
   "NextLevelXp": 0,
+  "PanelName": "AttackReportPanel",
   "PremiumCash": 0,
   "XP": 0
  },
@@ -7450,7 +9188,7 @@
   "Xp": 0
  },
  "InboxCollectCommand": {
-  "SlotIndexes": {}
+  "ObjectId": "string"
  },
  "InboxCollectToBuyBackCommand": {
   "BuybackId": "string",
@@ -7458,9 +9196,11 @@
  },
  "InboxCollectToHeroEquipmentCommand": {
   "HeroId": 0,
-  "HeroItemSlot": 0
+  "HeroItemSlot": 0,
+  "ObjectId": "string"
  },
  "InboxCollectToHeroInventoryCommand": {
+  "ObjectId": "string",
   "SlotIndexes": {}
  },
  "InboxConsumableItem": {
@@ -7468,7 +9208,8 @@
    "AcquisitionDate": "2015-06-15T00:00:00Z",
    "SellPrice": 0
   },
-  "ItemType": "Building"
+  "ItemType": "Building",
+  "ObjectId": "string"
  },
  "InboxHeroEquipmentItem": {
   "HeroItem": {
@@ -7479,37 +9220,37 @@
   "ObjectId": "string"
  },
  "InboxItem": {
-  "HeroItem": {
-   "AcquisitionDate": "2015-06-15T00:00:00Z",
-   "SellPrice": 0
-  },
   "ItemType": "Building",
   "ObjectId": "string"
  },
  "InboxItemsAddedNotification": {
   "InboxItems": [
    {
-    "HeroItem": {
-     "AcquisitionDate": "2015-06-15T00:00:00Z",
-     "SellPrice": 0
-    },
     "ItemType": "Building",
     "ObjectId": "string"
    }
-  ]
+  ],
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "InstallCompletedTaskTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "Duration": 0,
-  "IsFirstInstall": false
+  "IsFirstInstall": false,
+  "TrackingTagId": 0
  },
  "InstallPackageCompletedTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "Duration": 0,
   "IsSuccessful": false,
-  "PackageVersionId": {}
+  "PackageVersionId": {},
+  "TrackingTagId": 0
  },
  "InstallPackageStartedTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "PackageVersionId": {},
   "PatchFlags": 0,
+  "TrackingTagId": 0,
   "VersionName": "string"
  },
  "InstallStartedTaskTracking": {
@@ -7526,6 +9267,8 @@
   "top": 0
  },
  "InvalidActionFeedback": {
+  "DebugMsg": "string",
+  "OasisId": 0,
   "Priority": 0
  },
  "InvalidAttackActionsFeedbacks": {
@@ -7572,7 +9315,12 @@
   "UnconnectedRooms": {}
  },
  "InventoryBuyTabPanelNavigationModel": {
+  "Attachment": 0,
   "CanAfford": false,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "Price": {},
   "SkuCode": "string"
  },
@@ -7580,37 +9328,17 @@
   "StackCount": 0,
   "TemplateId": 0
  },
- "InventoryDecoration": {
-  "Level": 0
- },
- "InventoryDefenseIngredientBoost": {
-  "Level": 0
- },
  "InventoryItem": {
-  "ArchetypeId": 0,
-  "DyeTemplateId": 0,
-  "Effects": {},
-  "IsBranded": false,
-  "IsSellable": false,
-  "ItemLevel": 0,
-  "PowerUp": {},
-  "PrimaryStatsModifiers": 0,
   "TemplateId": 0
  },
  "InventoryItemRewardItem": {
   "$type": "HyperQuest.GameServer.Contracts.InventoryItemRewardItem, HyperQuest.GameServer.Contracts",
-  "Item": {}
+  "Item": {},
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string"
  },
  "InventoryItemWithGenerationInfo": {
   "InventoryItem": {
-   "ArchetypeId": 0,
-   "DyeTemplateId": 0,
-   "Effects": {},
-   "IsBranded": false,
-   "IsSellable": false,
-   "ItemLevel": 0,
-   "PowerUp": {},
-   "PrimaryStatsModifiers": 0,
    "TemplateId": 0
   },
   "ItemGenerationInfo": {
@@ -7626,10 +9354,20 @@
   "SourceSlotId": 0
  },
  "InventoryPanelNavigationModel": {
-  "IsInventoryOpenedChangingTab": false
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsInventoryOpenedChangingTab": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "InventoryRoom": {
-  "Level": 0
+  "AutoLevelUp": false,
+  "AvailableCount": 0,
+  "BlueprintUnlocked": false,
+  "Level": 0,
+  "NewlyAdded": false,
+  "SpecContainerId": 0
  },
  "InventorySwapItemCommand": {
   "DestinationSlotId": 0,
@@ -7646,7 +9384,9 @@
   }
  },
  "InventoryTabAddedNotification": {
-  "InventoryTabCount": 0
+  "Index": 0,
+  "InventoryTabCount": 0,
+  "NotificationType": "CastleBought"
  },
  "InventoryTabModel": {
   "AvailableSlots": 0,
@@ -7656,7 +9396,9 @@
   "TabSize": 0
  },
  "InventoryTabRewardItem": {
-  "Count": 0
+  "Count": 0,
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string"
  },
  "InventoryTemplate": {
   "Creatures": {},
@@ -7763,8 +9505,19 @@
  "KillEntitiesAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
   "BossCreaturesOnly": false,
+  "Count": 0,
   "CreatureIds": 0,
-  "EntityType": "Creature"
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "EntityType": "Creature",
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "KillingCreaturesOverTimeVoConfig": {
   "CreaturesCount": 0.0,
@@ -7987,6 +9740,9 @@
   "SeasonalRewardTooltip": {}
  },
  "LeaguePopupPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "LeaguePopupModel": {
    "CurrentSubLeagueModel": {},
@@ -8008,9 +9764,13 @@
   "PanelName": "AttackReportPanel"
  },
  "LeagueProgressionPanelNavigationModel": {
+  "Attachment": 0,
   "CurrentLeagueId": 0,
   "CurrentSubLeagueId": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsLastLeagueSelected": false,
+  "IsOpalPanel": false,
   "LeagueModels": [
    {
     "LargeIconUrl": "string",
@@ -8029,6 +9789,7 @@
     ]
    }
   ],
+  "PanelName": "AttackReportPanel",
   "SelectedLeagueId": 0,
   "SelectedSubLeagueId": 0,
   "SubLeagueDetailedModel": {
@@ -8072,10 +9833,12 @@
   "IsPromoted": false,
   "LeagueId": 0,
   "LeagueRank": 0,
+  "RequiresUserAction": false,
   "SubLeagueId": 0,
   "SubLeagueName": "string",
   "SubLeaguePrefixName": "string",
-  "SubLeagueSmallIconUrl": "string"
+  "SubLeagueSmallIconUrl": "string",
+  "Type": "Ability"
  },
  "LeagueUpdatedNewsData": {
   "CurrentLeagueId": 0,
@@ -8087,22 +9850,31 @@
   "IsUnranked": false,
   "PreviousLeagueId": 0,
   "PreviousSubleagueId": 0,
+  "RequiresUserAction": false,
   "SubLeagueName": "string",
   "SubLeaguePrefixName": "string",
-  "SubLeagueSmallIconUrl": "string"
+  "SubLeagueSmallIconUrl": "string",
+  "Type": "Ability"
  },
  "LeagueUpdatedNotification": {
+  "Index": 0,
   "LeagueId": 0,
+  "NotificationType": "CastleBought",
   "SubLeagueId": 0
  },
  "LeaveCastlePanelNavigationModel": {
+  "Attachment": 0,
   "CastleType": "Ubisoft",
+  "DataNavigationInfo": {},
   "DefenderCastleName": "string",
+  "ExcludeModalPopupOpening": false,
   "HeroSpecContainerId": 0,
   "IsCastleValidated": false,
+  "IsOpalPanel": false,
   "IsPvECompetition": false,
   "IsTestAttack": false,
   "IsThemePreview": false,
+  "PanelName": "AttackReportPanel",
   "TrophyScoreLost": 0
  },
  "LegalNotice": {
@@ -8145,7 +9917,21 @@
  "LifeForceBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.LifeForceBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
   "AttackIncreasedLifeForce": 0.0,
-  "MineIncreasedLifeForce": 0.0
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "MineIncreasedLifeForce": 0.0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "LifeShieldUpdate": {
   "Id": 0,
@@ -8157,8 +9943,8 @@
   "SmallIconUrl": "string"
  },
  "LinkedAccountResult": {
-  "FacebookFriendsLinked": {},
-  "FacebookFriendsNotLinked": {},
+  "FacebookFriendsLinked": [],
+  "FacebookFriendsNotLinked": [],
   "ReconnectUrl": "string",
   "RequireReconnect": false
  },
@@ -8198,14 +9984,6 @@
  "Loot": {
   "CreatureId": 0,
   "InventoryItem": {
-   "ArchetypeId": 0,
-   "DyeTemplateId": 0,
-   "Effects": {},
-   "IsBranded": false,
-   "IsSellable": false,
-   "ItemLevel": 0,
-   "PowerUp": {},
-   "PrimaryStatsModifiers": 0,
    "TemplateId": 0
   },
   "InventoryItemIndex": 0,
@@ -8242,7 +10020,21 @@
  },
  "MagicFindBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.MagicFindBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
-  "IncreasedChance": 0.0
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
+  "IncreasedChance": 0.0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "MagicalPropertiesReplacementPreference": {
   "ReplacedDebugName": "string",
@@ -8268,8 +10060,10 @@
   "Value": 0.0
  },
  "MaintenanceGlobalNotification": {
+  "Id": "string",
   "MaintenanceScheduledDate": "2015-06-15T00:00:00Z",
-  "MaintenanceScheduledInSeconds": 0
+  "MaintenanceScheduledInSeconds": 0,
+  "NotificationType": "CastleBought"
  },
  "Match": {
   "Length": 0,
@@ -8336,11 +10130,16 @@
   "TitleOasisId": 0
  },
  "MessageBoxPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "MessageBoxOption": {},
   "PanelName": "AttackReportPanel"
  },
  "MessageNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "Sender": 0,
   "ThreadId": 0
  },
@@ -8356,10 +10155,18 @@
   "IsDestroyed": false
  },
  "MineBuildingInfoDataModel": {
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
+  "CurrentBuildingRank": 0,
   "CurrentCapacity": 0,
   "CurrentHealth": 0,
   "CurrentProductionRate": 0,
+  "Description": "string",
   "HasMultipleRanks": false,
+  "IconUrl": "string",
+  "MaxBuildingRank": 0,
   "MaxCapacity": 0,
   "MaxHealth": 0,
   "MaxProductionRate": 0,
@@ -8368,9 +10175,61 @@
   "ProductionPeriodInSeconds": 0
  },
  "MineBuildingUpgradePopupDataModel": {
+  "BuildingInfoModel": {
+   "BuildingInfoDataModel": {
+    "Boost": 0,
+    "BoostText": "string",
+    "BuildingName": "string",
+    "BuildingType": "ArchitectOffice",
+    "CurrentBuildingRank": 0,
+    "Description": "string",
+    "IconUrl": "string",
+    "MaxBuildingRank": 0
+   }
+  },
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "CanAfford": false,
+  "HeroLevelRequirement": 0,
+  "IsActive": false,
+  "IsBuildingRequirementMet": false,
+  "IsHeroLevelRequirementMet": 0,
   "NewCapacity": 0,
   "NewHealth": 0,
-  "NewProductionRate": 0
+  "NewProductionRate": 0,
+  "NextBuildingRank": 0,
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": "Building",
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
+  "UnlockedItems": {},
+  "UpgradeDurationInSeconds": 0
  },
  "MineCount": {
   "Count": 0,
@@ -8384,23 +10243,39 @@
  },
  "MineHarvestHoverEventArgs": {
   "MineHarvestHoverModel": {
+   "AmountToCollect": {},
+   "EntityHarvestId": 0,
+   "EntityHarvestType": 0,
+   "IsCookingReady": false,
    "IsStorageFull": false,
    "MineDisplayName": "string",
    "MineMaxCapacity": 0,
    "MineRank": 0,
-   "MineSpecContainerId": 0
+   "MineSpecContainerId": 0,
+   "Position": {},
+   "RemainingTime": 0,
+   "Xp": 0
   }
  },
  "MineHarvestHoverModel": {
+  "AmountToCollect": {},
+  "EntityHarvestId": 0,
+  "EntityHarvestType": 0,
+  "IsCookingReady": false,
   "IsStorageFull": false,
   "MineDisplayName": "string",
   "MineMaxCapacity": 0,
   "MineRank": 0,
-  "MineSpecContainerId": 0
+  "MineSpecContainerId": 0,
+  "Position": {},
+  "RemainingTime": 0,
+  "Xp": 0
  },
  "MinePillagedNotification": {
   "CastleBuildingId": 0,
   "Destroyed": false,
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "ShieldExpirableId": "string",
   "StolenAmount": 0
  },
@@ -8418,14 +10293,20 @@
  },
  "MineProductionCompletedNotification": {
   "BuildingId": 0,
+  "Index": 0,
   "InventoryItemAdded": {},
   "NextProductionExpirableId": "string",
+  "NotificationType": "CastleBought",
   "ProductionAdded": 0,
   "ProductionLevel": 0
  },
  "MineProductionExpirable": {
   "BuildingId": 0,
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
   "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false,
   "ProductionValue": 0
  },
  "MineProductionRemainingTimeUpdatedEventArgs": {
@@ -8437,7 +10318,9 @@
  },
  "MineProductionStartedNotification": {
   "BuildingId": 0,
+  "Index": 0,
   "NextProductionExpirableId": "string",
+  "NotificationType": "CastleBought",
   "ProductionLevel": 0
  },
  "MineShieldAddedEventArgs": {
@@ -8446,11 +10329,17 @@
  },
  "MineShieldExpirable": {
   "BuildingId": 0,
-  "ExpirableType": 0
+  "DueDate": "2015-06-15T00:00:00Z",
+  "DurationSeconds": 0,
+  "ExpirableType": 0,
+  "Id": "string",
+  "IsPaused": false
  },
  "MineShieldExpiredNotification": {
   "CastleBuildingId": 0,
-  "ExpirableId": "string"
+  "ExpirableId": "string",
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "MineStatus": {
   "CumulatedAmount": 0,
@@ -8462,13 +10351,32 @@
   "ShieldExpirableId": "string"
  },
  "MineTimeBonusPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "TimeBonus": 0.0
+ },
+ "MissileSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
+ "ModifiedLootCommunityEvent": {
+  "DebugName": "string",
+  "EventEndTime": "2015-06-15T00:00:00Z",
+  "EventStartTime": "2015-06-15T00:00:00Z",
+  "Id": 0
  },
  "MovementSpeed": {
   "Id": 0,
   "Name": {},
-  "SpeedFrom": 0.0,
-  "SpeedTo": 0.0
+  "SpeedFrom": 0,
+  "SpeedTo": 0
  },
  "MultiPanelNavigationModel": {
   "Models": {}
@@ -8507,12 +10415,16 @@
   "Vo": {}
  },
  "NavBarPanelNavigationModel": {
+  "Attachment": 0,
   "CrownsCount": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "HeroID": 0,
   "HeroLevel": 0,
   "IconLayerName": "string",
   "IsAttackDefenseVisible": false,
   "IsInAttackSelection": false,
+  "IsOpalPanel": false,
   "NextLevelXp": 0,
   "PanelName": "AttackReportPanel",
   "WalletSummaryModel": {
@@ -8537,7 +10449,9 @@
   "UseMinimumNavigationSpeed": false
  },
  "NavigationTracking": {
-  "GameUrl": "string"
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "GameUrl": "string",
+  "TrackingTagId": 0
  },
  "NearDeathFxInfo": {
   "Fx": {},
@@ -8551,7 +10465,9 @@
   "PublishDate": "2015-06-15T00:00:00Z"
  },
  "NewsAddedNotification": {
-  "NewsItem": {}
+  "Index": 0,
+  "NewsItem": {},
+  "NotificationType": "CastleBought"
  },
  "NewsCategorySettings": {
   "Priority": 0,
@@ -8568,14 +10484,8 @@
   "UnreadCount": 0
  },
  "NewsData": {
-  "IsMaintained": false,
-  "IsPromoted": false,
-  "LeagueId": 0,
-  "LeagueRank": 0,
-  "SubLeagueId": 0,
-  "SubLeagueName": "string",
-  "SubLeaguePrefixName": "string",
-  "SubLeagueSmallIconUrl": "string"
+  "RequiresUserAction": false,
+  "Type": "Ability"
  },
  "NewsResult": {
   "LastViewedNewsId": "string",
@@ -8609,14 +10519,8 @@
   "OasisId": 0
  },
  "Notification": {
-  "AttackId": "string",
-  "CastleRating": 0,
-  "Message": {
-   "Data": {},
-   "DateSent": "2015-06-15T00:00:00Z",
-   "SenderId": 0,
-   "Type": "Ability"
-  }
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "OSInfoTracking": {
   "Is64Bit": false,
@@ -8658,6 +10562,8 @@
   "UnlockedObjectives": {}
  },
  "ObjectiveCompletedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "ObjectiveId": 0
  },
  "ObjectiveCompletedObjectiveRequirement": {
@@ -8665,6 +10571,8 @@
   "ObjectiveId": 0
  },
  "ObjectiveCompletedPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "Description": "string",
   "ExcludeModalPopupOpening": false,
   "Id": 0,
@@ -8716,6 +10624,9 @@
   "Type": "Ability"
  },
  "ObjectiveListPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
  },
@@ -8750,7 +10661,9 @@
    "NavigationUrl": "string",
    "OasisId": 0
   },
+  "Attachment": 0,
   "Conditions": {},
+  "DataNavigationInfo": {},
   "Description": "string",
   "ExcludeModalPopupOpening": false,
   "IconLayerName": "string",
@@ -8777,11 +10690,10 @@
   "Total": 0
  },
  "ObjectiveProgressionUpdatedNotification": {
+  "Index": 0,
   "NewCount": 0,
+  "NotificationType": "CastleBought",
   "ObjectiveId": 0
- },
- "ObjectiveRequirement": {
-  "AttackRegionId": 0
  },
  "ObjectiveSummaryEntryModel": {
   "Category": "Armor",
@@ -8798,9 +10710,6 @@
   "Title": "string",
   "Type": "Ability"
  },
- "ObjectiveUnlockCommand": {
-  "ObjectiveId": 0
- },
  "ObjectiveUnlockedEventArgs": {
   "UnlockedObjective": {},
   "UnlockedObjectives": {}
@@ -8812,13 +10721,16 @@
    "ObjectiveId": 0,
    "ProgressionCount": 0,
    "Status": 0
-  }
+  },
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ObjectiveViewedCommand": {
   "ObjectiveId": 0
  },
  "OpenPanelAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.OpenPanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+  "Conditions": [],
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
   "TargetEntitySearch": {}
@@ -8831,7 +10743,12 @@
   "ShowBlackOverlay": false
  },
  "OptionControlSchemePanelNavigationModel": {
-  "GameStateType": "AccountCreation"
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "GameStateType": "AccountCreation",
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "OptionGamePlayModel": {
   "AutoFireOnDirectModeEnabled": false,
@@ -8850,6 +10767,9 @@
   "Video": {}
  },
  "OptionPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "OptionViewModel": {
    "AudioAmbienceEnable": false,
@@ -8888,29 +10808,37 @@
    "VolumeCoef": 0,
    "WindowType": 0
   },
+  "PanelName": "AttackReportPanel",
   "Tab": 0
  },
  "OptionParameterBaseModel": {
-  "Interval": 0.0,
-  "MaxValue": 0.0,
-  "MinValue": 0.0,
-  "Type": "Ability",
-  "Value": 0.0,
-  "ValueToRoundDisplayValue": 0
+  "DisplayName": "string",
+  "IsEnabled": false,
+  "ParameterName": "string",
+  "Type": "Ability"
  },
  "OptionParameterCheckboxModel": {
+  "DisplayName": "string",
   "IsChecked": false,
+  "IsEnabled": false,
+  "ParameterName": "string",
   "Type": "Ability"
  },
  "OptionParameterComboboxModel": {
+  "DisplayName": "string",
+  "IsEnabled": false,
+  "ParameterName": "string",
   "SelectedKey": 0,
   "Type": "Ability",
   "Values": {}
  },
  "OptionParameterSliderModel": {
+  "DisplayName": "string",
   "Interval": 0.0,
+  "IsEnabled": false,
   "MaxValue": 0.0,
   "MinValue": 0.0,
+  "ParameterName": "string",
   "Type": "Ability",
   "Value": 0.0,
   "ValueToRoundDisplayValue": 0
@@ -8932,6 +10860,9 @@
   "Value": "string"
  },
  "OptionVideoApplyPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsClosingOptionPanel": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel"
@@ -9043,57 +10974,19 @@
   "GameEntityID": 0,
   "PanelId": "string",
   "PanelNavigationModel": {
-   "RewardModel": {
-    "FakeRewardItemModels": {},
-    "OverrideRewardItemModel": {},
-    "RewardItemModels": [
-     {
-      "Count": 0,
-      "CreatureRank": "Boss",
-      "DyeInfoModel": {
-       "AnimationName": "string",
-       "CanBeTinted": false,
-       "Color": "string",
-       "ColorName": "string"
-      },
-      "HeroItemQuality": 0,
-      "IsCreature": false,
-      "IsHeroItem": false,
-      "ItemBase": {},
-      "LargeIconUrl": "string",
-      "Name": "string",
-      "SmallIconUrl": "string",
-      "Tooltip": {}
-     }
-    ]
-   }
+   "Attachment": 0,
+   "DataNavigationInfo": {},
+   "ExcludeModalPopupOpening": false,
+   "IsOpalPanel": false,
+   "PanelName": "AttackReportPanel"
   }
  },
  "PanelNavigationModel": {
-  "RewardModel": {
-   "FakeRewardItemModels": {},
-   "OverrideRewardItemModel": {},
-   "RewardItemModels": [
-    {
-     "Count": 0,
-     "CreatureRank": "Boss",
-     "DyeInfoModel": {
-      "AnimationName": "string",
-      "CanBeTinted": false,
-      "Color": "string",
-      "ColorName": "string"
-     },
-     "HeroItemQuality": 0,
-     "IsCreature": false,
-     "IsHeroItem": false,
-     "ItemBase": {},
-     "LargeIconUrl": "string",
-     "Name": "string",
-     "SmallIconUrl": "string",
-     "Tooltip": {}
-    }
-   ]
-  }
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "PanelSettings": {
   "ContainerControls": {},
@@ -9107,25 +11000,32 @@
   "ZBias": 0.0
  },
  "PanelSoundPresets": {
-  "ActivationPresets": {},
-  "DeactivationPresets": {}
+  "ActivationPresets": [],
+  "DeactivationPresets": []
  },
  "PanelSoundPresetsSettings": {
   "SoundPresetsByPanel": {}
  },
  "PanelTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "OpenCloseDurationInseconds": 0,
-  "Panel": 0
+  "Panel": 0,
+  "TrackingTagId": 0
  },
  "PanelVisibilityInformation": {
   "CastleRenovationLevel": "RenovationComplete",
   "PanelName": "AttackReportPanel"
  },
  "PausePanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "DisableLeaveCastle": false,
   "DisableRestartCastle": false,
+  "ExcludeModalPopupOpening": false,
   "IsAttack": false,
-  "IsRevengeAttack": false
+  "IsOpalPanel": false,
+  "IsRevengeAttack": false,
+  "PanelName": "AttackReportPanel"
  },
  "PcConfigurationTracking": {
   "AudioInfo": {},
@@ -9161,6 +11061,7 @@
  },
  "PlayMovieAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.PlayMovieAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+  "EndTriggers": [],
   "IsMovieSkippable": false,
   "MovieFile": "string"
  },
@@ -9201,14 +11102,20 @@
     "TextOasisId": 0,
     "Vo": {}
    }
-  ]
+  ],
+  "Tag": "0x0000000000000000"
  },
  "PopupAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
   "ActionName": "string",
   "ArrowDirection": "Down",
   "ArrowPosition": "MiddleLeft",
+  "Conditions": [],
   "ControllerName": "string",
+  "Disabled": false,
+  "Duration": 0,
+  "EndTriggers": [],
+  "EndType": "WithPrevious",
   "GameButtonId": "AttackSelectionBossShortcutButton",
   "HideOverlay": false,
   "Id": "string",
@@ -9226,6 +11133,8 @@
   "PositionElementId": "string",
   "ShopItemDefinition": {},
   "ShowOverlay": false,
+  "StartDelay": 0.0,
+  "StartType": "WithPrevious",
   "StaticScreenText": "string",
   "StaticScreenTextOasisId": 0,
   "TargetEntitySearch": {},
@@ -9258,6 +11167,9 @@
  "PopupOptionsModel": {
   "ArrowDirection": "Down",
   "ArrowPosition": "MiddleLeft",
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "GameButtonId": "AttackSelectionBossShortcutButton",
   "GameEntityId": 0,
   "HideOverlay": false,
@@ -9311,7 +11223,20 @@
   "Xp": 0
  },
  "PotionConsumableTemplate": {
-  "RestorePoints": 0
+  "AbilityId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "MinLevelRequirement": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "PotionUsageRestriction": {
   "HeroLevelMax": 0,
@@ -9335,8 +11260,20 @@
  "PremiumCashBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.PremiumCashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
   "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
   "Duration": 0,
-  "MineIncreasedPremiumCash": 0.0
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "MineIncreasedPremiumCash": 0.0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "PreviousLeagueInfo": {
   "PreviousLeagueId": 0,
@@ -9365,7 +11302,9 @@
   "Body": "string"
  },
  "PrivateAdminMessageNotification": {
-  "Message": "string"
+  "Index": 0,
+  "Message": "string",
+  "NotificationType": "CastleBought"
  },
  "PrivateAdminMessagePreviewData": {
   "Summary": "string"
@@ -9465,6 +11404,11 @@
  },
  "ProfilePanelNavigationModel": {
   "AccountId": 0,
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "Tab": 0
  },
  "ProfilePictureModel": {
@@ -9626,9 +11570,14 @@
   "Quality": {}
  },
  "QuitGamePanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsCastleShareable": false,
   "IsCastleValidated": false,
-  "IsNUECompleted": false
+  "IsNUECompleted": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel"
  },
  "RMClientPackagesVersion": {
   "ClientGamePublicationLabel": "string",
@@ -9754,7 +11703,17 @@
  },
  "ReachLevelAchievement": {
   "$type": "HyperQuest.GameServer.Contracts.ReachLevelAchievement, HyperQuest.GameServer.Contracts",
-  "Heroes": {}
+  "DebugName": "string",
+  "Description": "string",
+  "DescriptionId": 0,
+  "Heroes": {},
+  "Icon": "default",
+  "Id": 0,
+  "Points": 0,
+  "SteamId": "string",
+  "SteamStatId": "AmountOfGoldCollected",
+  "Title": "string",
+  "TitleId": 0
  },
  "ReachLevelInfo": {
   "HeroSpecContainerId": 0,
@@ -9769,6 +11728,7 @@
   "UiContainerName": "UI_Common_RegionMap_Castle_BlingsLanding"
  },
  "RegionMapPanelNavigationModel": {
+  "Attachment": 0,
   "AttackRegionsViewModel": {
    "AttackRegions": [
     {
@@ -9791,6 +11751,9 @@
    ]
   },
   "CurrentRegion": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
   "PendingRegionsChangedViewModel": {
    "UpdatedAttackRegions": {}
@@ -9813,10 +11776,15 @@
   "RemovedTrapsSpecContainerId": 0
  },
  "RenovateBuildingPanelNavigationModel": {
+  "Attachment": 0,
   "BuildingDescriptionOasisId": 0,
   "BuildingNameOasisId": 0,
   "BuildingType": "ArchitectOffice",
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
   "LayerName": "string",
+  "PanelName": "AttackReportPanel",
   "RequiredLevel": 0
  },
  "ReplayModeConfig": {
@@ -9854,8 +11822,11 @@
   "ResistanceReplenishDuration": 0.0
  },
  "RestartAttackPanelNavigationModel": {
+  "Attachment": 0,
   "CastleType": "Ubisoft",
+  "DataNavigationInfo": {},
   "DefenderCastleName": "string",
+  "ExcludeModalPopupOpening": false,
   "HeroIconModel": {
    "HeroSpecContainerId": 0,
    "IconUrl": "string",
@@ -9863,9 +11834,11 @@
    "SpecialPackGroup": "Diamond"
   },
   "HeroSpecContainerId": 0,
+  "IsOpalPanel": false,
   "IsPvECompetition": false,
   "IsTargetedAttack": false,
   "IsTestAttack": false,
+  "PanelName": "AttackReportPanel",
   "TargetedAttackAvailableCount": 0,
   "TargetedAttackMaxCount": 0
  },
@@ -9891,10 +11864,6 @@
   "SmallIconUrl": "string"
  },
  "RewardItemBase": {
-  "CurrencyAmount": {
-   "Amount": 0,
-   "CurrencyType": "IGC"
-  },
   "LargeIconUrl": "string",
   "SmallIconUrl": "string"
  },
@@ -9954,9 +11923,14 @@
   "RoomConnectorNodeInfos": {}
  },
  "RoomDecorationPointsPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "DecorationPoints": 0,
+  "ExcludeModalPopupOpening": false,
   "IconUrl": "string",
-  "MaxDecorationPoints": 0
+  "IsOpalPanel": false,
+  "MaxDecorationPoints": 0,
+  "PanelName": "AttackReportPanel"
  },
  "RoomDecorationPointsUpdatedEventArgs": {
   "DecorationPoints": 0,
@@ -9984,12 +11958,48 @@
   "PlayerSpawnOrientation": {}
  },
  "RoomSection": {
-  "Passages": 0
+  "Passages": {}
+ },
+ "RoomSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
  },
  "RoomTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "DecorationSlotCount": 0,
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "RoomModelCategory": "Corner",
-  "Type": "Ability"
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "RoomZone": {
   "MaxConstructionPoints": 0,
@@ -10044,10 +12054,15 @@
   "TotalCount": 0
  },
  "SeasonalCompetitionPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "FilterCode": "string",
+  "IsOpalPanel": false,
   "IsPanelOpened": false,
   "LeaderboardLevel": 0,
-  "LeaderboardSeekMode": 0
+  "LeaderboardSeekMode": 0,
+  "PanelName": "AttackReportPanel"
  },
  "SeasonalCompetitionRemainingTimeUpdatedEventArgs": {
   "RemainingTime": 0
@@ -10066,6 +12081,8 @@
   }
  },
  "SeasonalCompetitionStartedNotification": {
+  "Id": "string",
+  "NotificationType": "CastleBought",
   "StartDate": "2015-06-15T00:00:00Z"
  },
  "SeasonalEntitiesOverrides": {
@@ -10086,21 +12103,26 @@
   "Id": "string"
  },
  "SecurableObjectPackageType": {
+  "Id": "string",
   "PackageType": 0
  },
  "SecurityContext": {
   "Id": "string"
  },
  "SecurityContextBranch": {
-  "BranchName": "string"
+  "BranchName": "string",
+  "Id": "string"
  },
  "SecurityContextBranchEnvironment": {
   "BranchName": "string",
   "EnvironmentName": "Default",
-  "EnvironmentType": 0
+  "EnvironmentType": 0,
+  "Id": "string"
  },
  "SecurityGroup": {
-  "Members": {}
+  "Members": {},
+  "Name": "string",
+  "Permissions": {}
  },
  "SecurityPermission": {
   "AccessType": 0,
@@ -10115,7 +12137,7 @@
  },
  "SecurityPrincipal": {
   "Name": "string",
-  "Permissions": {}
+  "Permissions": []
  },
  "SecurityPrincipalPermissions": {
   "Name": "string",
@@ -10146,11 +12168,9 @@
  },
  "ServerAssignmentActionCompletedNotification": {
   "AssignmentActionIndex": 0,
-  "AssignmentId": 0
- },
- "ServerCommand": {
-  "HeroItemSlot": 0,
-  "InventorySlotIndex": 0
+  "AssignmentId": 0,
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "ServerDefinitions": {
   "ServerInfos": [
@@ -10236,9 +12256,11 @@
  "SessionTracking": {
   "AttackTotalTime": 0,
   "BuildTotalTime": 0,
+  "CreationDate": "2015-06-15T00:00:00Z",
   "IdleTime": 0,
   "LauncherTotalTime": 0,
-  "LobbyTotalTime": 0
+  "LobbyTotalTime": 0,
+  "TrackingTagId": 0
  },
  "SetAfterAttackNavigationAssignmentActionSpec": {
   "$type": "HyperQuest.GameServer.Contracts.SetAfterAttackNavigationAssignmentActionSpec, HyperQuest.GameServer.Contracts",
@@ -10268,15 +12290,6 @@
  },
  "SetProfanityFilteringCommand": {
   "Enabled": false
- },
- "ShieldAddedNotification": {
-  "ExpirableId": "string"
- },
- "ShieldEndExpirable": {
-  "ExpirableType": 0
- },
- "ShieldExpiredNotification": {
-  "ExpirableId": "string"
  },
  "ShieldInfo": {
   "IsShielded": false,
@@ -10309,7 +12322,27 @@
   "Tooltip": {}
  },
  "ShopConfirmationPopupPanelNavigationModel": {
-  "BuildingId": 0
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "DyeInfoModel": {
+   "AnimationName": "string",
+   "CanBeTinted": false,
+   "Color": "string",
+   "ColorName": "string"
+  },
+  "ExcludeModalPopupOpening": false,
+  "InitialCurrencyType": 0,
+  "IsOpalPanel": false,
+  "ItemCount": 0,
+  "ItemId": 0,
+  "ItemType": "Building",
+  "PanelName": "AttackReportPanel",
+  "ShopConfirmationPopupModel": {
+   "IsContainingPremiumCash": false,
+   "ShopProduct": {},
+   "Tooltip": {}
+  },
+  "WalletAmount": 0
  },
  "ShopConfirmationPopupSettings": {
   "OasisIdBuy": 0,
@@ -10340,7 +12373,8 @@
   "$type": "HyperQuest.GameServer.Contracts.ShopFilterValueDecorationCategory, HyperQuest.GameServer.Contracts",
   "DecorationCategoryMask": 0,
   "DecorationCategoryMaskName": "All_Unlocalized",
-  "DecorationCategoryMaskOasisId": 0
+  "DecorationCategoryMaskOasisId": 0,
+  "Id": 0
  },
  "ShopFilterValueHero": {
   "$type": "HyperQuest.GameServer.Contracts.ShopFilterValueHero, HyperQuest.GameServer.Contracts",
@@ -10362,13 +12396,16 @@
   "$type": "HyperQuest.GameServer.Contracts.ShopFilterValueUnifiedShop, HyperQuest.GameServer.Contracts",
   "FilterOasisId": 0,
   "FilterOasisName": "string",
+  "Id": 0,
   "ShopCategory": "Armor"
  },
  "ShopGlanceViewTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "ItemCount": 0,
   "ItemId": 0,
   "ItemType": "Building",
-  "ShopGlanceViewInSeconds": 0
+  "ShopGlanceViewInSeconds": 0,
+  "TrackingTagId": 0
  },
  "ShopHeroLevelBuyModel": {
   "ButtonText": "string",
@@ -10433,20 +12470,30 @@
  },
  "ShopPackOpenningModel": {
   "AreCraftingMaterialsAddedToBuyBack": false,
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
   "MaterialCount": 0,
-  "Materials": {}
+  "Materials": {},
+  "PanelName": "AttackReportPanel"
  },
  "ShopPanelNavigationModel": {
+  "Attachment": 0,
   "BuildingId": 0,
   "BuildingMaxRank": 0,
   "BuildingRank": 0,
   "BuildingType": "ArchitectOffice",
   "CategoryConfigViewModel": {},
+  "DataNavigationInfo": {},
   "EmptyMessageOasisId": 0,
+  "ExcludeModalPopupOpening": false,
   "ForgeMode": 0,
   "ForgeState": 0,
   "HasMetUpgradeRequirements": false,
   "IsBuildMode": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "PrimaryShopEnabled": false,
   "ProductsViewModel": {},
   "ShopMenuNavigation": {
@@ -10543,32 +12590,56 @@
   "SpecialPackGroup": "Diamond",
   "Title": "string",
   "TooltipModel": {
-   "CurrencyType": "IGC",
-   "DeathTime": 0,
-   "FreeSlotsRequirement": 0,
-   "HasItemsToCollect": false,
-   "HeroDisplayName": "string",
-   "HeroLevel": 0,
-   "IconUrl": "string",
-   "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false,
-   "Type": "Ability"
+   "AnchorPosition": 0,
+   "ArrowPosition": "MiddleLeft",
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "BuyBackId": "string",
+   "BuyPrice": {},
+   "CanBeSold": false,
+   "Description": "string",
+   "IsAffordable": false,
+   "IsBuildingRequirementMet": false,
+   "IsEntityTooltip": false,
+   "IsLevelRequirementMet": false,
+   "IsOwned": false,
+   "IsSteamMarketable": false,
+   "IsUpgrading": false,
+   "LevelRequirement": 0,
+   "LimitedTimeInSeconds": 0,
+   "MaxAffordableCount": 0,
+   "MaxOwningCount": 0,
+   "OffsetPositionX": 0.0,
+   "OffsetPositionY": 0.0,
+   "SellPrice": {},
+   "ShouldHidePriceSection": false,
+   "TemporaryShopItemDescription": "string",
+   "Title": "string",
+   "TooltipContext": 0,
+   "TooltipOpeningDelay": 0.0,
+   "Type": "Ability",
+   "UpdateLocked": false
   },
   "Weight": 0
  },
  "ShopRefreshedEventArgs": {
   "BuildingRank": 0,
   "ShopPanelNavigationModel": {
+   "Attachment": 0,
    "BuildingId": 0,
    "BuildingMaxRank": 0,
    "BuildingRank": 0,
    "BuildingType": "ArchitectOffice",
    "CategoryConfigViewModel": {},
+   "DataNavigationInfo": {},
    "EmptyMessageOasisId": 0,
+   "ExcludeModalPopupOpening": false,
    "ForgeMode": 0,
    "ForgeState": 0,
    "HasMetUpgradeRequirements": false,
    "IsBuildMode": false,
+   "IsOpalPanel": false,
+   "PanelName": "AttackReportPanel",
    "PrimaryShopEnabled": false,
    "ProductsViewModel": {},
    "ShopMenuNavigation": {
@@ -10698,10 +12769,18 @@
   "MouseShortcuts": {}
  },
  "ShortcutKeyCode": {
-  "Key": 0
+  "CanStillBeTriggeredWithShiftPressedA": false,
+  "IgnoredModifiers": 0,
+  "IsGrabbable": false,
+  "Key": 0,
+  "RequiredModifiers": 0
  },
  "ShortcutMouseButtonCode": {
-  "MouseButton": 0
+  "CanStillBeTriggeredWithShiftPressedA": false,
+  "IgnoredModifiers": 0,
+  "IsGrabbable": false,
+  "MouseButton": 0,
+  "RequiredModifiers": 0
  },
  "ShowAttackReportEventArgs": {
   "AttackInfo": {
@@ -10823,15 +12902,18 @@
   "BuildingName": "string",
   "BuildingRank": 0,
   "MaxBuildingRank": 0,
-  "SpecialMessage": 0
+  "SpecialMessage": "string"
  },
  "ShowCreatureHoverTooltipEventArgs": {
   "CameraZoom": 0.0,
   "CreatureName": "string",
   "IsCreatureSleeping": false,
-  "ToolTipModel": 0
+  "ToolTipModel": {}
  },
  "ShowLotteryTicketPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "PanelName": "AttackReportPanel",
   "PlayScratchAnimation": false
@@ -10841,6 +12923,8 @@
    "BossCastle": {},
    "CastlesByLevel": {}
   },
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "RegionId": 0
  },
  "ShowPopupMenuEventArgs": {
@@ -10854,16 +12938,35 @@
  "ShowTooltipEventArgs": {
   "Id": 0,
   "TooltipModel": {
-   "CurrencyType": "IGC",
-   "DeathTime": 0,
-   "FreeSlotsRequirement": 0,
-   "HasItemsToCollect": false,
-   "HeroDisplayName": "string",
-   "HeroLevel": 0,
-   "IconUrl": "string",
-   "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false,
-   "Type": "Ability"
+   "AnchorPosition": 0,
+   "ArrowPosition": "MiddleLeft",
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "BuyBackId": "string",
+   "BuyPrice": {},
+   "CanBeSold": false,
+   "Description": "string",
+   "IsAffordable": false,
+   "IsBuildingRequirementMet": false,
+   "IsEntityTooltip": false,
+   "IsLevelRequirementMet": false,
+   "IsOwned": false,
+   "IsSteamMarketable": false,
+   "IsUpgrading": false,
+   "LevelRequirement": 0,
+   "LimitedTimeInSeconds": 0,
+   "MaxAffordableCount": 0,
+   "MaxOwningCount": 0,
+   "OffsetPositionX": 0.0,
+   "OffsetPositionY": 0.0,
+   "SellPrice": {},
+   "ShouldHidePriceSection": false,
+   "TemporaryShopItemDescription": "string",
+   "Title": "string",
+   "TooltipContext": 0,
+   "TooltipOpeningDelay": 0.0,
+   "Type": "Ability",
+   "UpdateLocked": false
   },
   "TooltipOptions": {}
  },
@@ -10871,10 +12974,10 @@
   "CameraZoom": 0.0,
   "IsPowered": 0,
   "PowerConsumption": 0,
-  "TrapName": 0
+  "TrapName": "string"
  },
  "ShowTrapPowerSupplyHoverTooltipEventArgs": {
-  "Name": 0
+  "Name": "string"
  },
  "ShowVictoryAnimationEventArgs": {
   "CastleLevel": 0,
@@ -10935,13 +13038,18 @@
   "WorldName": "string"
  },
  "SkillTreePanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
   "EquippedSpells": {},
   "ExcludeModalPopupOpening": false,
   "FamilyId": 0,
   "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "SpellTrees": {}
  },
  "SkusModifiersUpdatedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "ShopSkuModifiers": [
    {
     "LimitedQuantityConsumed": 0,
@@ -10954,11 +13062,150 @@
   ]
  },
  "SleepyGiantAccountInformation": {
+  "AccountId": 0,
   "Achievements": [
    {
-    "Count": 0
+    "DebugName": "string",
+    "Description": "string",
+    "DescriptionId": 0,
+    "Icon": "default",
+    "Id": 0,
+    "Points": 0,
+    "SteamId": "string",
+    "SteamStatId": "AmountOfGoldCollected",
+    "Title": "string",
+    "TitleId": 0
    }
-  ]
+  ],
+  "ActiveConsumables": [
+   {
+    "ConsumableType": 0,
+    "ExpirableId": "string",
+    "InitialDuration": 0,
+    "TemplateId": 0
+   }
+  ],
+  "AvatarId": 0,
+  "BuildInfo": {
+   "ArchitectOfficeRank": 0,
+   "BuildingNextIndex": 0,
+   "CastleHeartRank": 0,
+   "CastleStats": {
+    "AttackCount": 0,
+    "HeroesKilled": 0,
+    "MaxConstructionPoints": 0,
+    "SuccessfulAttackCount": 0,
+    "TotalConstructionPoints": 0,
+    "TrapCount": 0,
+    "WinRatio": 0.0,
+    "WinRatioDifficulty": 0
+   },
+   "CastleType": "Ubisoft",
+   "CreatureArchetypes": {},
+   "CreatureNextIndex": 0,
+   "DecorationNextIndex": 0,
+   "Draft": {},
+   "HeroCorpses": {},
+   "InventoryDecorations": {},
+   "InventoryDefenseIngredientBoosts": {},
+   "InventoryRooms": [
+    {
+     "AutoLevelUp": false,
+     "AvailableCount": 0,
+     "BlueprintUnlocked": false,
+     "Level": 0,
+     "NewlyAdded": false,
+     "SpecContainerId": 0
+    }
+   ],
+   "InventoryThemes": 0,
+   "IsDraftPublished": false,
+   "IsRollbackAvailable": false,
+   "Level": 0,
+   "MineStatuses": {},
+   "OwnerSpecialPacks": 0,
+   "RoomNextIndex": 0,
+   "ShieldEndExpirableId": "string",
+   "TimerDuration": 0.0,
+   "TrapArchetypes": {},
+   "TrapNextIndex": 0,
+   "TriggerNextIndex": 0,
+   "WorkersAvailable": 0,
+   "WorkersCabinRank": 0
+  },
+  "BuyBack": {},
+  "CastleRenovationLevel": "RenovationComplete",
+  "CompletedAssignments": 0,
+  "DisplayName": "string",
+  "DisplayNameValidationDate": "2015-06-15T00:00:00Z",
+  "Friends": {},
+  "FriendshipInvitations": [
+   {
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "FriendAccountId": 0,
+    "FriendAvatarId": 0,
+    "FriendDisplayName": "string",
+    "HasAccepted": false,
+    "HasDeclined": false,
+    "IsCastleAttackable": false,
+    "IsInvitationOwner": false,
+    "LeagueId": 0
+   }
+  ],
+  "GamerScore": 0,
+  "HeroFreeTrialInfoPeriod": {
+   "Id": 0,
+   "UnlockEndTime": "2015-06-15T00:00:00Z",
+   "UnlockStartTime": "2015-06-15T00:00:00Z"
+  },
+  "Heroes": {},
+  "Inbox": {},
+  "Inventory": {},
+  "LastViewedDates": {},
+  "LeagueId": 0,
+  "Objectives": [
+   {
+    "Category": "Armor",
+    "ClientSideCompletion": false,
+    "Conditions": [],
+    "DebugName": "string",
+    "Description": 0,
+    "IconUrl": "string",
+    "Id": 0,
+    "Instruction": 0,
+    "ManualPopupTriggerOnCompletion": false,
+    "PerHeroReward": {},
+    "Progression": {},
+    "Requirements": [],
+    "Reward": {
+     "FakeRewardItems": {},
+     "LargeIconUrl": "string",
+     "RewardItems": {},
+     "SmallIconUrl": "string"
+    },
+    "ShowUnlockedPopup": false,
+    "Title": 0,
+    "VoiceOverSoundId": "Objective300_VO_NUE_005_01FEN_DRY16574"
+   }
+  ],
+  "Privileges": 0,
+  "ProfanityFiltering": false,
+  "RecommendedFriends": {},
+  "SelectedHeroId": 0,
+  "SpecialPacks": 0,
+  "Stats": {},
+  "SubLeagueId": 0,
+  "TrophyScore": 0,
+  "UnlockedAvatars": 0,
+  "UnlockedEmotes": 0,
+  "UnlockedSpells": {},
+  "Wallet": {
+   "InGameCoin": 0,
+   "InGameCoinStorageCapacity": 0,
+   "LifeForce": 0,
+   "LifeForceStorageCapacity": 0,
+   "PremiumCash": 0
+  }
  },
  "SliderSettings": {
   "Max": 0.0,
@@ -11086,17 +13333,45 @@
   "ShortcutMouseButton": 0
  },
  "SpellTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
   "Cooldown": 0.0,
+  "Description": "string",
   "DescriptionFormulas": {},
   "HeroDamagePerSecond": 0.0,
   "HeroLevel": 0,
   "HeroNameRequirement": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
   "ManaBuilder": 0,
   "ManaBuilderDescription": "string",
   "ManaCost": 0,
   "ManaCostPerSecond": 0.0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
   "SpellLevel": 0,
-  "Type": "Ability"
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "SpellTreeViewModel": {
   "SpellFamily": {},
@@ -11112,6 +13387,8 @@
   "UnlockedSpell": {}
  },
  "SpellUnlockedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "Spell": {
    "Level": 0,
    "NewlyAdded": false,
@@ -11124,9 +13401,6 @@
    "NewlyAdded": false,
    "SpellSpecContainerId": 0
   }
- },
- "StartAssignmentCommand": {
-  "AssignmentId": 0
  },
  "StartAttackEventArgs": {
   "AttackInfoModel": {
@@ -11264,7 +13538,9 @@
   "ToValue": 0.0
  },
  "StateMachineTracking": {
-  "States": {}
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "States": {},
+  "TrackingTagId": 0
  },
  "StateMachineTrackingState": {
   "ReasonForFailure": "string",
@@ -11310,11 +13586,71 @@
   "Success": false
  },
  "StorageBuildingInfoDataModel": {
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
+  "CurrentBuildingRank": 0,
   "CurrentCapacity": 0,
+  "Description": "string",
+  "IconUrl": "string",
+  "MaxBuildingRank": 0,
   "MaxCapacity": 0
  },
  "StorageBuildingUpgradePopupDataModel": {
-  "NewCapacity": 0
+  "BuildingInfoModel": {
+   "BuildingInfoDataModel": {
+    "Boost": 0,
+    "BoostText": "string",
+    "BuildingName": "string",
+    "BuildingType": "ArchitectOffice",
+    "CurrentBuildingRank": 0,
+    "Description": "string",
+    "IconUrl": "string",
+    "MaxBuildingRank": 0
+   }
+  },
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "CanAfford": false,
+  "HeroLevelRequirement": 0,
+  "IsActive": false,
+  "IsBuildingRequirementMet": false,
+  "IsHeroLevelRequirementMet": 0,
+  "NewCapacity": 0,
+  "NextBuildingRank": 0,
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": "Building",
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
+  "UnlockedItems": {},
+  "UpgradeDurationInSeconds": 0
  },
  "StoreReplayInfo": {
   "FileSize": 0
@@ -11400,14 +13736,18 @@
   "ShowTargetedAttackNotification": false,
   "TargetedAttackAvailableCount": 0
  },
- "TargetedAttackExpirable": {
-  "ExpirableType": 0
- },
  "TargetedAttackPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "ShouldShowTargetedAttackNotification": false,
   "TargetedAttackAvailableCount": 0
  },
  "TargetedAttackReloadedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "TargetedAttackAvailableCount": 0
  },
  "TextFontParams": {
@@ -11418,7 +13758,8 @@
   "Text": "string"
  },
  "TextValidatedEventArgs": {
-  "IsEnterPressed": false
+  "IsEnterPressed": false,
+  "Text": "string"
  },
  "Thanks": {
   "DoubleOThanks": {},
@@ -11437,16 +13778,14 @@
   "SteamAssetUiSpec": {},
   "ThemeId": 0
  },
- "ThemeRemovedNotification": {
-  "ThemeId": 0
- },
  "ThemeRewardItem": {
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string",
   "ThemeId": 0
  },
  "ThemeSelectedNotification": {
-  "ThemeId": 0
- },
- "ThemeUnlockedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "ThemeId": 0
  },
  "Thread": {
@@ -11512,42 +13851,145 @@
   "ContainerFilename": "string"
  },
  "TooltipModel": {
-  "CurrencyType": "IGC",
-  "DeathTime": 0,
-  "FreeSlotsRequirement": 0,
-  "HasItemsToCollect": false,
-  "HeroDisplayName": "string",
-  "HeroLevel": 0,
-  "IconUrl": "string",
-  "IsHeroInventoryLargeEnough": false,
-  "IsStorageFull": false,
-  "Type": "Ability"
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
+  "Description": "string",
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "TotemTooltipModel": {
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
   "CPCapacity": 0,
+  "CanBeSold": false,
+  "Description": "string",
   "HealtPoints": 0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOwned": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
   "Level": 0,
-  "Type": "Ability"
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxOwningCount": 0,
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
+  "SellPrice": {},
+  "ShouldHidePriceSection": false,
+  "TemporaryShopItemDescription": "string",
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "TraceRouteHop": {
   "Address": "string",
   "Pings": 0
  },
  "TraceRouteTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "HostName": "string",
-  "TraceRoute": {}
+  "TraceRoute": {},
+  "TrackingTagId": 0
  },
  "TrackingBase": {
-  "GameUrl": "string"
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "TrackingTagId": 0
  },
  "TrackingCommand": {
   "TrackingTag": {}
  },
+ "TrapSpecContainer": {
+  "Name": "string",
+  "Specs": [
+   {
+    "Tag": "0x0000000000000000"
+   }
+  ]
+ },
  "TrapTooltipModel": {
+  "Abilities": {},
+  "AnchorPosition": 0,
+  "ArrowPosition": "MiddleLeft",
+  "AttackSpeed": "string",
+  "AutoLevelUp": false,
+  "BehaviorCategory": "string",
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "BuyBackId": "string",
+  "BuyPrice": {},
+  "CanBeSold": false,
+  "DamageFormula": "string",
+  "DefensePoints": 0,
+  "Description": "string",
+  "Health": 0,
+  "IsAffordable": false,
+  "IsBuildingRequirementMet": false,
+  "IsEntityTooltip": false,
+  "IsLevelRequirementMet": false,
+  "IsOldIngredient": false,
+  "IsOwned": false,
   "IsPowerNeeded": false,
+  "IsSteamMarketable": false,
+  "IsUpgrading": false,
+  "Level": 0,
+  "LevelRequirement": 0,
+  "LimitedTimeInSeconds": 0,
+  "MaxAffordableCount": 0,
+  "MaxLevel": 0,
+  "MaxOwningCount": 0,
+  "MovementSpeed": "string",
+  "OffsetPositionX": 0.0,
+  "OffsetPositionY": 0.0,
   "PowerConsumption": 0,
   "PowerSupplied": 0,
-  "ShowTotemBoostHint": false
+  "RequiredCraftingMaterials": {},
+  "SellPrice": {},
+  "ShopContext": 0,
+  "ShouldHidePriceSection": false,
+  "ShowSpecializations": false,
+  "ShowTotemBoostHint": false,
+  "Specializations": {},
+  "TemporaryShopItemDescription": "string",
+  "Tier": 0,
+  "Title": "string",
+  "TooltipContext": 0,
+  "TooltipOpeningDelay": 0.0,
+  "Type": "Ability",
+  "UpdateLocked": false
  },
  "TreasureChestLockCountdown": {
   "CPFrom": 0,
@@ -11592,6 +14034,8 @@
   "TrophyScore": 0
  },
  "TrophyScoreChangedNotification": {
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "TrophyScore": 0
  },
  "UIAttackOasisSettings": {
@@ -11688,16 +14132,35 @@
   "Skus": {},
   "StackCount": 0,
   "TooltipModel": {
-   "CurrencyType": "IGC",
-   "DeathTime": 0,
-   "FreeSlotsRequirement": 0,
-   "HasItemsToCollect": false,
-   "HeroDisplayName": "string",
-   "HeroLevel": 0,
-   "IconUrl": "string",
-   "IsHeroInventoryLargeEnough": false,
-   "IsStorageFull": false,
-   "Type": "Ability"
+   "AnchorPosition": 0,
+   "ArrowPosition": "MiddleLeft",
+   "BuildingRequirementName": "string",
+   "BuildingRequirementRank": 0,
+   "BuyBackId": "string",
+   "BuyPrice": {},
+   "CanBeSold": false,
+   "Description": "string",
+   "IsAffordable": false,
+   "IsBuildingRequirementMet": false,
+   "IsEntityTooltip": false,
+   "IsLevelRequirementMet": false,
+   "IsOwned": false,
+   "IsSteamMarketable": false,
+   "IsUpgrading": false,
+   "LevelRequirement": 0,
+   "LimitedTimeInSeconds": 0,
+   "MaxAffordableCount": 0,
+   "MaxOwningCount": 0,
+   "OffsetPositionX": 0.0,
+   "OffsetPositionY": 0.0,
+   "SellPrice": {},
+   "ShouldHidePriceSection": false,
+   "TemporaryShopItemDescription": "string",
+   "Title": "string",
+   "TooltipContext": 0,
+   "TooltipOpeningDelay": 0.0,
+   "Type": "Ability",
+   "UpdateLocked": false
   }
  },
  "UIGridSkuModel": {
@@ -11835,9 +14298,13 @@
  },
  "UbisoftCastle": {
   "$type": "HyperQuest.GameServer.Contracts.UbisoftCastle, HyperQuest.GameServer.Contracts",
+  "AccountDisplayName": "string",
+  "AccountId": 0,
   "ActivationDate": "2015-06-15T00:00:00Z",
   "CastleIconUrl": "string",
   "CastleValidationDuration": 0.0,
+  "CreationDate": "2015-06-15T00:00:00Z",
+  "CreatureTiers": {},
   "DeActivationDate": "2015-06-15T00:00:00Z",
   "ForceCastleLevelOnBuildables": false,
   "IsBranded": false,
@@ -11845,9 +14312,17 @@
   "IsForSaleCastle": false,
   "IsHidden": false,
   "IsTutorialCastle": false,
+  "LayoutId": 0,
   "Level": 0,
+  "ModificationDate": "2015-06-15T00:00:00Z",
   "OasisDescription": 0,
-  "OasisName": 0
+  "OasisName": 0,
+  "OasisNameId": 0,
+  "PublishedCastleId": "string",
+  "Rooms": {},
+  "Signature": "string",
+  "ThemeId": 0,
+  "TrapTiers": {}
  },
  "UbisoftCompetitionAttackerRewardTier": {
   "MaxParticipantCount": 0,
@@ -11855,6 +14330,11 @@
   "RewardsByAttackerRank": []
  },
  "UbisoftCompetitionDetailPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "UbisoftCompetitionId": 0
  },
  "UbisoftCompetitionInfo": {
@@ -11975,15 +14455,20 @@
   "Ui": {}
  },
  "UnlockButtonEventArgs": {
-  "Button": 0
+  "Button": "string"
  },
  "UnlockCastleThemePopupPanelNavigationModel": {
+  "Attachment": 0,
   "CanAfford": false,
   "CurrencyAmount": {
    "Amount": 0,
    "CurrencyType": "IGC"
   },
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "InvIconUrl": "string",
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "SkuCode": "string",
   "ThemeName": "string"
  },
@@ -12162,7 +14647,13 @@
  "UpgradeBuildingCommand": {
   "BuildingUpgradeRank": 0,
   "ConsumedHeroInventory": {},
-  "SkuCode": "string"
+  "Id": 0,
+  "IsCastlePublishable": false,
+  "Orientation": "Back",
+  "RoomId": 0,
+  "RoomZoneId": 0,
+  "SkuCode": "string",
+  "SpecContainerId": 0
  },
  "UpgradeCompletedCameraMovementSettings": {
   "Duration": 0.0,
@@ -12268,12 +14759,6 @@
  "UserInterfaceSounds": {
   "UiSoundsById": {}
  },
- "UserMessageData": {
-  "Body": "string"
- },
- "UserMessagePreviewData": {
-  "Summary": "string"
- },
  "UserSettingEmote": {
   "AnimationName": "string"
  },
@@ -12309,10 +14794,20 @@
   "VictoryConditionLevel": 0
  },
  "VictoryConditionStarAnimationPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "PosX": 0,
   "PosY": 0
  },
  "VictoryPanelNavigationModel": {
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
+  "IsOpalPanel": false,
+  "PanelName": "AttackReportPanel",
   "RewardModel": {
    "FakeRewardItemModels": {},
    "OverrideRewardItemModel": {},
@@ -12345,14 +14840,19 @@
   "NbFilesInFolder": 0
  },
  "VideoCapturePanelNavigationModel": {
+  "Attachment": 0,
   "Capturing": false,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsOpalPanel": false,
   "NbFilesInFolder": 0,
   "PanelName": "AttackReportPanel"
  },
  "VideoCaptureTracking": {
+  "CreationDate": "2015-06-15T00:00:00Z",
   "GameStateType": "AccountCreation",
-  "IsEnable": false
+  "IsEnable": false,
+  "TrackingTagId": 0
  },
  "ViewFinishResizeEventArgs": {
   "ViewName": "string"
@@ -12440,7 +14940,9 @@
  },
  "WalletCapacityUpdatedNotification": {
   "Amount": 0,
-  "CurrencyType": "IGC"
+  "CurrencyType": "IGC",
+  "Index": 0,
+  "NotificationType": "CastleBought"
  },
  "WalletCurrencyUpdatedEventArgs": {
   "AmountChangedBy": 0,
@@ -12460,20 +14962,27 @@
  },
  "WalletUpdatedNotification": {
   "Amounts": {},
+  "Index": 0,
+  "NotificationType": "CastleBought",
   "UpdateTag": 0
  },
  "WatchedReplayTracking": {
   "AttackId": "string",
+  "CreationDate": "2015-06-15T00:00:00Z",
   "EndFrame": 0,
   "FrameCount": 0,
   "FrameDuration": 0.0,
   "IsValid": false,
-  "ReplayUrl": "string"
+  "ReplayUrl": "string",
+  "TrackingTagId": 0
  },
  "WeaponArchetype": {
   "Damage": 0.0,
   "GearScoreMultiplier": 0.0,
   "HeroId": 0,
+  "Id": 0,
+  "Name": {},
+  "Probability": 0.0,
   "Range": 0.0,
   "Speed": 0.0
  },
@@ -12513,8 +15022,13 @@
  },
  "WheelPanelNavigationModel": {
   "ActiveWheel": 0,
+  "Attachment": 0,
+  "DataNavigationInfo": {},
+  "ExcludeModalPopupOpening": false,
   "IsCastleValidated": false,
+  "IsOpalPanel": false,
   "LeftWheelButtonsAreDisabled": 0,
+  "PanelName": "AttackReportPanel",
   "RightWheelButtonsAreDisabled": 0
  },
  "WheelSettings": {
@@ -12524,16 +15038,75 @@
   "RightWheel": {}
  },
  "WorkerCabinBuildingInfoDataModel": {
+  "Boost": 0,
+  "BoostText": "string",
+  "BuildingName": "string",
+  "BuildingType": "ArchitectOffice",
+  "CurrentBuildingRank": 0,
   "CurrentWorkerCount": 0,
+  "Description": "string",
+  "IconUrl": "string",
+  "MaxBuildingRank": 0,
   "MaxWorkerCount": 0
  },
  "WorkerCabinBuildingUpgradePopupDataModel": {
-  "NewWorkerCount": 0
- },
- "WorkerCabinRewardItem": {
-  "Count": 0
+  "BuildingInfoModel": {
+   "BuildingInfoDataModel": {
+    "Boost": 0,
+    "BoostText": "string",
+    "BuildingName": "string",
+    "BuildingType": "ArchitectOffice",
+    "CurrentBuildingRank": 0,
+    "Description": "string",
+    "IconUrl": "string",
+    "MaxBuildingRank": 0
+   }
+  },
+  "BuildingRequirementName": "string",
+  "BuildingRequirementRank": 0,
+  "CanAfford": false,
+  "HeroLevelRequirement": 0,
+  "IsActive": false,
+  "IsBuildingRequirementMet": false,
+  "IsHeroLevelRequirementMet": 0,
+  "NewWorkerCount": 0,
+  "NextBuildingRank": 0,
+  "ShopSkus": [
+   {
+    "Code": "string",
+    "CraftingMaterials": [
+     {
+      "Id": 0,
+      "Quantity": 0
+     }
+    ],
+    "CreationDate": "2015-06-15T00:00:00Z",
+    "DescriptionOasisId": 0,
+    "Discounts": {},
+    "IconUrl": "string",
+    "InternalDescription": "string",
+    "IsActive": false,
+    "IsBestSeller": false,
+    "IsLimitedQuantity": false,
+    "IsLocked": false,
+    "ItemCount": 0,
+    "ItemId": 0,
+    "ItemType": "Building",
+    "LimitedQuantityMax": 0,
+    "MaxOwningCount": 0,
+    "PremiumEstimatedValue": 0,
+    "Price": {},
+    "ShopContext": 0,
+    "TitleOasisId": 0,
+    "Weight": 0
+   }
+  ],
+  "UnlockedItems": {},
+  "UpgradeDurationInSeconds": 0
  },
  "WorldRankReachedNewsData": {
+  "RequiresUserAction": false,
+  "Type": "Ability",
   "WorldRank": 0
  },
  "XPChangedEventArgs": {
@@ -12586,13 +15159,41 @@
  },
  "XpBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.XpBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
-  "IncreasedXp": 0.0
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
+  "IncreasedXp": 0.0,
+  "IsLootable": false,
+  "MaxInventoryStackCount": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "XpLeashBoostConsumableTemplate": {
   "$type": "HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+  "BuffSpecContainerId": 0,
+  "BuildingRequirementRank": 0,
+  "BuildingRequirementSpecContainerId": 0,
+  "Duration": 0,
   "IncreasedXp": 0.0,
+  "IsLootable": false,
   "LevelDiffFrom": 0,
-  "LevelDiffTo": 0
+  "LevelDiffTo": 0,
+  "MaxInventoryStackCount": 0,
+  "Name": {},
+  "Price": {},
+  "Quality": "Epic",
+  "Rarity": "Named",
+  "SteamAssetSpec": {},
+  "SteamAssetUiSpec": {},
+  "TemplateId": 0,
+  "Ui": {}
  },
  "XpLootBaseCpMultiplierTableEntry": {
   "MaxLevel": 0,
@@ -12601,11 +15202,9 @@
  },
  "XpRewardItem": {
   "$type": "HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+  "LargeIconUrl": "string",
+  "SmallIconUrl": "string",
   "Xp": 0
- },
- "YoutubePanelNavigationModel": {
-  "IsOpalPanel": false,
-  "PanelName": "AttackReportPanel"
  },
  "Zone": {
   "CodeName": "string",

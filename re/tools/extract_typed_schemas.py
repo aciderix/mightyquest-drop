@@ -149,14 +149,17 @@ def main():
         return None
 
     def walk_serialize(maddr):
-        """return ordered [(key, writer_va)] for a serialize method."""
+        """return (pairs, base_calls, is_serialize). pairs = [(key, writer_va)];
+        base_calls = calls made *outside* a writeKey context (base-class serialize
+        delegation), used to recover inherited fields."""
         o = off(maddr)
-        if o is None: return None
+        if o is None: return None, [], False
         code = data[o:o + fsz(maddr)]
         last_ident = None
         cur_key = None
         awaiting = False
         pairs = []
+        base_calls = []
         is_serialize = False
         for insn in md.disasm(code, maddr):
             m = insn.mnemonic
@@ -170,6 +173,8 @@ def main():
                         continue
                     if awaiting and cur_key:
                         pairs.append((cur_key, tgt)); awaiting = False; cur_key = None
+                    elif tgt != maddr and tlo <= tgt < thi:
+                        base_calls.append(tgt)        # not after a key -> base
                 else:
                     if awaiting: awaiting = False
             else:
@@ -180,16 +185,18 @@ def main():
                     elif op.type == X86_OP_MEM and op.mem.disp and rlo <= op.mem.disp < rhi:
                         s = ident_at(op.mem.disp)
                         if s: last_ident = s
-        return pairs if is_serialize else None
+        return pairs, base_calls, is_serialize
 
     def walk_deserialize(maddr):
-        """return ordered [(key, type)] for a deserialize method (marked by a
-        call to UNKNOWN_FIELD). Each key is paired with the next reader call."""
+        """return (pairs, base_calls, is_deser). pairs = [(key, type)]; base_calls
+        = calls with no pending key (delegation to a base dispatcher), used to
+        recover inherited fields. A deserialize is marked by UNKNOWN_FIELD."""
         o = off(maddr)
-        if o is None: return None
+        if o is None: return None, [], False
         code = data[o:o + fsz(maddr)]
         last_ident = None
         pairs = []
+        base_calls = []
         is_deser = False
         for insn in md.disasm(code, maddr):
             if insn.mnemonic == "call":
@@ -201,6 +208,8 @@ def main():
                     if last_ident is not None and tgt != maddr:
                         pairs.append((last_ident, reader_type(tgt)))
                         last_ident = None
+                    elif tgt != maddr and tlo <= tgt < thi:
+                        base_calls.append(tgt)        # no pending key -> base
                 else:
                     last_ident = None
             else:
@@ -211,7 +220,7 @@ def main():
                     elif op.type == X86_OP_MEM and op.mem.disp and rlo <= op.mem.disp < rhi:
                         s = ident_at(op.mem.disp)
                         if s: last_ident = s
-        return pairs if is_deser else None
+        return pairs, base_calls, is_deser
 
     # collect serializer stubs (addr, contract)
     stubs = []
@@ -220,43 +229,93 @@ def main():
             if r["source"].endswith("Serializer.cpp") and int(r["size"]) <= 64:
                 stubs.append((int(r["address"], 16), r["source"][:-len("Serializer.cpp")]))
 
+    # pass 1: locate each contract's serialize/deserialize methods and walk them
+    ser_raw = {}    # ser_addr -> (pairs, base_calls); contract via ser_of[addr]
+    deser_raw = {}  # deser_addr -> (pairs, base_calls)
+    ser_of, deser_of = {}, {}   # method addr -> contract
     writer_freq = Counter()
-    ser, deser = {}, {}        # contract -> [(key, type)]
     for addr, contract in stubs:
         vt = vtable_of(addr)
         if vt is None: continue
         for slot in range(1, 8):
             m = u32(vt + slot * 4)
             if m is None or not (tlo <= m < thi): continue
-            sp = walk_serialize(m)
-            if sp:
-                fields = [[k, writer_type(w)] for k, w in sp if k != contract]
+            sp, sbase, is_ser = walk_serialize(m)
+            if is_ser:
+                ser_raw[m] = ([(k, w) for k, w in sp if k != contract], sbase)
+                ser_of.setdefault(m, contract)
                 for _, w in sp: writer_freq[w] += 1
-                if fields: ser[contract] = fields
                 continue
-            dp = walk_deserialize(m)
-            if dp:
-                fields = [[k, t] for k, t in dp if k != contract]
-                if fields: deser.setdefault(contract, fields)
+            dp, dbase, is_deser = walk_deserialize(m)
+            if is_deser:
+                deser_raw[m] = ([(k, t) for k, t in dp if k != contract], dbase)
+                deser_of.setdefault(m, contract)
 
     if args.discover:
-        print("Top writer primitives (addr: count) — name these in WRITERS:")
+        print("Top writer primitives (addr: count):")
         for w, c in writer_freq.most_common(25):
             print(f"  0x{w:08x}  {c:6d}  {writer_shape(w)}")
         return
 
-    # merge: prefer serialize fields (richer types: datetime/float); attach a
-    # protocol direction so a server author knows who emits each message.
+    # pass 2: resolve each method's fields, merging base-class methods first
+    # (inheritance) so inherited fields are recovered. dedup keeps first type.
+    def resolve(addr, raw, known_addrs, type_fn, seen):
+        if addr in seen or addr not in raw:
+            return []
+        seen.add(addr)
+        pairs, base_calls = raw[addr]
+        out, names = [], set()
+        for b in base_calls:                      # base fields first
+            if b in known_addrs:
+                for k, t in resolve(b, raw, known_addrs, type_fn, seen):
+                    if k not in names:
+                        names.add(k); out.append((k, t))
+        for k, w in pairs:
+            t = type_fn(w)
+            if k not in names:
+                names.add(k); out.append((k, t))
+        return out
+
+    ser_addrs, deser_addrs = set(ser_raw), set(deser_raw)
+    ser, deser = {}, {}
+    for a, c in ser_of.items():
+        f = resolve(a, ser_raw, ser_addrs, writer_type, set())
+        if f: ser[c] = f
+    for a, c in deser_of.items():
+        f = resolve(a, deser_raw, deser_addrs, lambda t: t, set())
+        if f: deser.setdefault(c, f)
+
+    # merge serialize (authoritative types) + deserialize; attach direction.
     contracts = set(ser) | set(deser)
     merged = {}
     for c in contracts:
         if c in ser and c in deser:
-            direction, fields = "both", ser[c]
+            direction = "both"
+            names = {k for k, _ in ser[c]}
+            fields = list(ser[c]) + [[k, t] for k, t in deser[c] if k not in names]
         elif c in ser:
             direction, fields = "request", ser[c]
         else:
             direction, fields = "response", deser[c]
-        merged[c] = {"direction": direction, "fields": fields}
+        merged[c] = {"direction": direction, "fields": [list(f) for f in fields]}
+
+    # (1) gamedata merge: add observed fields the codec walk still misses, typed
+    # from the observed JSON kind. Real game data is the more complete source for
+    # settings/spec contracts.
+    GD = os.path.join(OUTDIR, "gamedata", "observed_schema.json")
+    KIND2TYPE = {"int": "int", "float": "double", "bool": "bool",
+                 "string": "string", "array": "array", "object": "object", "null": "string"}
+    gd_added = 0
+    if os.path.exists(GD):
+        observed = json.load(open(GD))
+        for c, ofields in observed.items():
+            if c not in merged:
+                continue
+            names = {k for k, _ in merged[c]["fields"]}
+            for fn, kind in ofields.items():
+                if fn not in names:
+                    merged[c]["fields"].append([fn, KIND2TYPE.get(kind, "string")])
+                    gd_added += 1
 
     os.makedirs(OUTDIR, exist_ok=True)
     with open(os.path.join(OUTDIR, "schemas_typed.json"), "w") as f:
@@ -269,7 +328,8 @@ def main():
     dirc = Counter(v["direction"] for v in merged.values())
     tc = Counter(t for v in merged.values() for _, t in v["fields"])
     total = sum(len(v["fields"]) for v in merged.values())
-    print(f"[+] {len(merged)} contracts, {total} typed fields")
+    print(f"[+] {len(merged)} contracts, {total} typed fields "
+          f"(+{gd_added} fields merged from game data)")
     print("    direction:", dict(dirc))
     print("    types:", dict(tc.most_common()))
     print(f"[+] -> {OUTDIR}/schemas_typed.json, schemas_typed.txt")

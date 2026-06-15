@@ -123,9 +123,10 @@ export interface AbilitySpec {
   Levels: unknown;
 }
 
-/** unknown */
+/** response */
 export interface AbilitySpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -165,9 +166,12 @@ export interface AbstractFieldBehaviorSpec {
 
 /** request */
 export interface AbstractFriendNewsData {
-  RequiredLevel: number;
-  RequiredReferralFriends: number;
-  Reward: Reward;
+  RequiresUserAction: boolean;
+  Type: number;
+  FriendAccountId: number;
+  FriendAvatarId: number;
+  FriendDisplayName: string;
+  FriendSpecialPacks: number;
 }
 
 /** unknown */
@@ -222,7 +226,10 @@ export interface AccountBuyBack {
 
 /** both */
 export interface AccountBuyBackSlot {
-  Item: unknown;
+  CreationDate: string;  // datetime
+  Id: string;
+  ItemType: number;
+  Price: unknown;
 }
 
 /** both */
@@ -266,6 +273,37 @@ export interface AccountIdAssignmentConditionSpec {
 
 /** request */
 export interface AccountInformation {
+  AccountId: number;
+  ActiveConsumables: ActiveConsumable[];
+  AvatarId: number;
+  BuildInfo: BuildInfo;
+  BuyBack: unknown;
+  CastleRenovationLevel: number;
+  CompletedAssignments: number;
+  DisplayName: string;
+  DisplayNameValidationDate: string;  // datetime
+  Friends: unknown;
+  FriendshipInvitations: FriendshipInvitation[];
+  GamerScore: number;
+  Heroes: unknown;
+  HeroFreeTrialInfoPeriod: HeroFreeTrialInfoPeriod;
+  Inbox: unknown;
+  Inventory: unknown;
+  LastViewedDates: unknown;
+  LeagueId: number;
+  Objectives: Objective[];
+  Privileges: number;
+  ProfanityFiltering: boolean;
+  RecommendedFriends: unknown;
+  SelectedHeroId: number;
+  SpecialPacks: number;
+  Stats: unknown;
+  SubLeagueId: number;
+  TrophyScore: number;
+  UnlockedAvatars: number;
+  UnlockedEmotes: number;
+  UnlockedSpells: unknown;
+  Wallet: Wallet;
   ClientSettings: ClientSettings;
   CommunityEventTimeShift: number;
   CompletedAchievements: number;
@@ -283,19 +321,37 @@ export interface AccountInformation {
 
 /** both */
 export interface AccountInformationBase {
-  ClientSettings: ClientSettings;
-  CommunityEventTimeShift: number;
-  CompletedAchievements: number;
-  CountryCode: string;
-  DefendLog: DefendLog;
-  Expirables: Expirable[];
-  Guild: Guild;
-  GuildInvitations: GuildInvitation[];
-  IsCastleAttackable: boolean;
-  LastViewedFreeTrialInfoDate: string;  // datetime
-  News: News;
-  ShopSkuModifiers: ShopSkuModifier[];
-  TargetedAttackAvailableCount: number;
+  AccountId: number;
+  ActiveConsumables: ActiveConsumable[];
+  AvatarId: number;
+  BuildInfo: BuildInfo;
+  BuyBack: unknown;
+  CastleRenovationLevel: number;
+  CompletedAssignments: number;
+  DisplayName: string;
+  DisplayNameValidationDate: string;  // datetime
+  Friends: unknown;
+  FriendshipInvitations: FriendshipInvitation[];
+  GamerScore: number;
+  Heroes: unknown;
+  HeroFreeTrialInfoPeriod: HeroFreeTrialInfoPeriod;
+  Inbox: unknown;
+  Inventory: unknown;
+  LastViewedDates: unknown;
+  LeagueId: number;
+  Objectives: Objective[];
+  Privileges: number;
+  ProfanityFiltering: boolean;
+  RecommendedFriends: unknown;
+  SelectedHeroId: number;
+  SpecialPacks: number;
+  Stats: unknown;
+  SubLeagueId: number;
+  TrophyScore: number;
+  UnlockedAvatars: number;
+  UnlockedEmotes: number;
+  UnlockedSpells: unknown;
+  Wallet: Wallet;
 }
 
 /** both */
@@ -468,7 +524,16 @@ export interface AccountUiCacheViewModel {
 
 /** both */
 export interface Achievement {
-  Count: number;
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
 }
 
 /** both */
@@ -632,6 +697,8 @@ export interface ActivityBucket {
 
 /** request */
 export interface AddCastleCreatureCommand {
+  ConsumedHeroInventory: unknown;
+  SkuCode: string;
   AggroPropagationOffsetX: number;
   AggroPropagationOffsetZ: number;
   TotemCastleBuildableId: number;
@@ -645,12 +712,16 @@ export interface AddCastleInventoryItemCommand {
 
 /** request */
 export interface AddCastleTrapCommand {
+  ConsumedHeroInventory: unknown;
+  SkuCode: string;
   BeatIndex: number;
   PowerSupplyCastleBuildableId: number;
 }
 
 /** request */
 export interface AddCastleTriggerCommand {
+  ConsumedHeroInventory: unknown;
+  SkuCode: string;
   SizeX: number;
   SizeY: number;
 }
@@ -773,12 +844,32 @@ export interface ArchetypeStatModel {
 
 /** request */
 export interface ArchitectOfficeBuildingInfoDataModel {
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
   CurrentMaxRooms: number;
   MaxMaxRooms: number;
 }
 
 /** request */
 export interface ArchitectOfficeBuildingUpgradePopupDataModel {
+  BuildingInfoModel: BuildingInfoModel;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  CanAfford: boolean;
+  HeroLevelRequirement: number;
+  IsActive: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsHeroLevelRequirementMet: number;
+  NextBuildingRank: number;
+  ShopSkus: ShopSku[];
+  UnlockedItems: unknown;
+  UpgradeDurationInSeconds: number;
   NewMaxRooms: number;
 }
 
@@ -823,6 +914,8 @@ export interface AssignmentCompletedAssignmentTriggerSpec {
 
 /** request */
 export interface AssignmentCompletedNotification {
+  Index: number;
+  NotificationType: number;
   AssignmentId: number;
 }
 
@@ -858,9 +951,10 @@ export interface AssignmentSpec {
   Trigger: unknown;
 }
 
-/** unknown */
+/** response */
 export interface AssignmentSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -1040,6 +1134,8 @@ export interface AttackRegion {
 
 /** request */
 export interface AttackRegionCompletedNotification {
+  Index: number;
+  NotificationType: number;
   CompletedAttackRegionId: number;
   UnlockedAttackRegionId: number;
 }
@@ -1066,9 +1162,9 @@ export interface AttackRegionUnlockedObjectiveRequirement {
   AttackRegionId: number;
 }
 
-/** both */
+/** response */
 export interface AttackRegionsChangedEventArgs {
-  UpdatedAttackRegions: unknown;
+  UpdatedAttackRegions: unknown[];
 }
 
 /** both */
@@ -1096,6 +1192,11 @@ export interface AttackReplayGameStateConfig {
 
 /** request */
 export interface AttackReportPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   RewardModel: RewardModel;
 }
 
@@ -1114,10 +1215,14 @@ export interface AttackSelectionByLevelResult {
 
 /** request */
 export interface AttackSelectionCastlePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AttackRegionModel: AttackRegionModel;
   CastleInfoSummary: CastleInfoSummary;
   CastleObjectiveStatusModel: CastleObjectiveStatusModel;
-  PanelName: number;
   SpecialPackModel: SpecialPackModel;
 }
 
@@ -1129,9 +1234,12 @@ export interface AttackSelectionCastleRefreshedEventArgs {
 
 /** request */
 export interface AttackSelectionPlayerMiniCastlePanelNavigationModel {
-  AreRequiredMaterialsInHeroInventory: boolean;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
+  AreRequiredMaterialsInHeroInventory: boolean;
 }
 
 /** both */
@@ -1275,6 +1383,11 @@ export interface AttackSpeed {
 
 /** request */
 export interface AttackStartCountdownPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CountdownStep: number;
 }
 
@@ -1291,6 +1404,8 @@ export interface AttackableCastleAssignmentConditionSpec {
 
 /** request */
 export interface AttackerAvatarUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   AttackerAccountId: number;
   AttackerAvatarId: number;
 }
@@ -1502,10 +1617,10 @@ export interface AuraSpec {
   Radius: unknown;
 }
 
-/** unknown */
+/** response */
 export interface AuraSpecContainer {
-  Type: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -1525,13 +1640,18 @@ export interface Avatar {
 
 /** request */
 export interface AvatarEditPanelPanelNavigationModel {
-  AvatarCategory: number;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
+  AvatarCategory: number;
 }
 
 /** request */
 export interface AvatarRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   AvatarId: number;
 }
 
@@ -1558,11 +1678,11 @@ export interface AvatarUpdatedEventArgs {
   IconUrl: string;
 }
 
-/** request */
+/** unknown */
 export interface AvatarUpdatedNotification {
-  AvatarId: number;
-  Index: number;
-  NotificationType: number;
+  AvatarId: unknown;
+  Index: unknown;
+  NotificationType: unknown;
 }
 
 /** both */
@@ -1659,12 +1779,16 @@ export interface BattleLogEntry {
 
 /** request */
 export interface BattleLogEntryAddedNotification {
+  Index: number;
+  NotificationType: number;
   Entry: unknown;
   LastValidEntryDate: string;  // datetime
 }
 
 /** request */
 export interface BattleLogEntryDeletedNotification {
+  Index: number;
+  NotificationType: number;
   LastValidEntry: string;
 }
 
@@ -1696,6 +1820,8 @@ export interface BattleLogEntryModel {
 
 /** request */
 export interface BattleLogEntryUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   AttackId: string;
   RevengeStatus: number;
 }
@@ -1707,6 +1833,11 @@ export interface BattleLogNewItemCountChangedEventArgs {
 
 /** request */
 export interface BattleLogPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   FriendsOnly: boolean;
   ReplayAttackId: string;
   Tab: number;
@@ -1721,7 +1852,7 @@ export interface BeamFieldSpec {
   Width: unknown;
 }
 
-/** both */
+/** response */
 export interface BehaviorCategory {
   Id: number;
   Name: unknown;
@@ -1763,6 +1894,7 @@ export interface BooleanSpec {
 
 /** request */
 export interface BoostCastleInventoryItemCommand {
+  IsCastlePublishable: boolean;
   ConsumedHeroInventory: unknown;
   ExpirableId: string;
   Id: number;
@@ -1779,14 +1911,30 @@ export interface BoostCommunityEvent {
 
 /** request */
 export interface BoostConsumableTemplate {
-  IncreasedXp: number;
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
 }
 
 /** request */
 export interface BoostIconPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
-  IsTotem: boolean;
   PanelName: number;
+  IsTotem: boolean;
 }
 
 /** both */
@@ -1833,6 +1981,12 @@ export interface BootConfig {
 
 /** request */
 export interface BossKilledFriendNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
+  FriendAccountId: number;
+  FriendAvatarId: number;
+  FriendDisplayName: string;
+  FriendSpecialPacks: number;
   AttackRegionId: number;
   BossLevel: number;
   BossName: string;
@@ -1885,6 +2039,11 @@ export interface BuffExpiredEventArgs {
 
 /** request */
 export interface BuffInfoPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   HeroBuffs: unknown;
   HeroBuffTooltips: unknown;
   TargetBuffs: unknown;
@@ -1950,9 +2109,10 @@ export interface BuffSpec {
   RemoveIfCreatorDied: unknown;
 }
 
-/** unknown */
+/** response */
 export interface BuffSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -1976,10 +2136,38 @@ export interface BuffStopTriggers {
 
 /** request */
 export interface BuffTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   Duration: number;
   RemainingTime: number;
   ShouldDisplayTimeInformation: boolean;
-  Type: number;
 }
 
 /** unknown */
@@ -2005,12 +2193,17 @@ export interface BuffedSelectionSpec {
 
 /** request */
 export interface BuildBasicTextInfoPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   LocalizedMessage: string;
 }
 
-/** request */
+/** unknown */
 export interface BuildBuildingPanelNavigationModel {
-  PanelName: number;
+  PanelName: unknown;
 }
 
 /** request */
@@ -2020,22 +2213,40 @@ export interface BuildCommand {
 
 /** request */
 export interface BuildCraftingMaterialMinePanelNavigationModel {
-  CraftingMaterialMineInformationModel: CraftingMaterialMineInformationModel;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
   PanelName: number;
+  CraftingMaterialMineInformationModel: CraftingMaterialMineInformationModel;
 }
 
 /** request */
 export interface BuildCreaturePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
   PanelName: number;
 }
 
-/** request */
+/** unknown */
 export interface BuildDecorationPanelNavigationModel {
-  PanelName: number;
+  PanelName: unknown;
 }
 
 /** request */
 export interface BuildEntitiesAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
   EntityType: number;
   Count: number;
 }
@@ -2081,9 +2292,9 @@ export interface BuildEntityTooltipModel {
   TooltipDisplayDelay: number;
 }
 
-/** request */
+/** unknown */
 export interface BuildHarvestingPanelNavigationModel {
-  PanelName: number;
+  PanelName: unknown;
 }
 
 /** both */
@@ -2132,6 +2343,8 @@ export interface BuildInfo {
 
 /** request */
 export interface BuildInfoUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   BuildInfo: BuildInfo;
 }
 
@@ -2229,14 +2442,14 @@ export interface BuildToolbarModel {
   PickedUpEntityId: number;
 }
 
-/** request */
+/** unknown */
 export interface BuildTotemPanelNavigationModel {
-  PanelName: number;
+  PanelName: unknown;
 }
 
-/** request */
+/** unknown */
 export interface BuildTrapPanelNavigationModel {
-  PanelName: number;
+  PanelName: unknown;
 }
 
 /** request */
@@ -2279,26 +2492,36 @@ export interface BuildingAssignmentConditionSpec {
 
 /** request */
 export interface BuildingExpirable {
-  BuildingId: number;
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
+  BuildingId: number;
   SpecContainerId: number;
 }
 
 /** request */
 export interface BuildingFinishNowModel {
+  BuyUrl: string;
+  CanAfford: boolean;
+  CurrencyAmount: CurrencyAmount;
+  IconUrl: string;
+  ShopCategory: number;
   BuildingName: string;
   BuildingRank: number;
 }
 
 /** request */
 export interface BuildingInfoDataModel {
-  CurrentAttackTicketsInBossRoom: number;
-  CurrentAttackTicketsInCastle: number;
-  CurrentConstructionPoints: number;
-  CurrentHardCapBonusCastle: number;
-  MaxAttackTicketsInBossRoom: number;
-  MaxAttackTicketsInCastle: number;
-  MaxConstructionPoints: number;
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
 }
 
 /** both */
@@ -2306,9 +2529,9 @@ export interface BuildingInfoModel {
   BuildingInfoDataModel: BuildingInfoDataModel;
 }
 
-/** request */
+/** unknown */
 export interface BuildingInfoPanelNavigationModel {
-  BuildingId: number;
+  BuildingId: unknown;
 }
 
 /** both */
@@ -2319,8 +2542,17 @@ export interface BuildingInstanceRequirement {
 
 /** request */
 export interface BuildingItemUpgradePanelNavigationModel {
-  HeroModel: HeroModel;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
   PanelName: number;
+  CurrencyAmount: CurrencyAmount;
+  InFreeTrial: boolean;
+  ItemType: number;
+  Level: number;
+  SkuCode: string;
+  SpecContainerId: number;
 }
 
 /** both */
@@ -2347,6 +2579,11 @@ export interface BuildingNavBarModel {
 
 /** request */
 export interface BuildingNavBarPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuildingType: number;
 }
 
@@ -2386,6 +2623,11 @@ export interface BuildingPopupInfoViewModel {
 
 /** request */
 export interface BuildingPopupNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuildingId: number;
 }
 
@@ -2401,6 +2643,8 @@ export interface BuildingPopupPositionRefreshedArgs {
 
 /** request */
 export interface BuildingRankCondition {
+  DebugName: string;
+  OasisId: number;
   Count: number;
   Rank: number;
   SpecContainerId: number;
@@ -2444,9 +2688,10 @@ export interface BuildingSpec {
   ShopItemCountStrategy: unknown;
 }
 
-/** unknown */
+/** response */
 export interface BuildingSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -2457,12 +2702,40 @@ export interface BuildingSpecContainerRef {
 
 /** request */
 export interface BuildingTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   CreationDuration: number;
   ExistingInstances: number;
   MaxBuildingRank: number;
   MaxInstances: number;
   Rank: number;
-  Type: number;
 }
 
 /** unknown */
@@ -2482,19 +2755,33 @@ export interface BuildingUpgradeCompletedAssignmentTriggerSpec {
   MinRank: unknown;
 }
 
-/** both */
+/** response */
 export interface BuildingUpgradeCompletedEventArgs {
   BuildingUpgradeInfosModel: BuildingUpgradeInfosModel;
 }
 
 /** request */
 export interface BuildingUpgradeCompletedNotification {
+  Index: number;
+  NotificationType: number;
   BuildingId: number;
   NewRank: number;
 }
 
 /** request */
 export interface BuildingUpgradeConfirmationPopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
+  DyeInfoModel: DyeInfoModel;
+  InitialCurrencyType: number;
+  ItemCount: number;
+  ItemId: number;
+  ItemType: number;
+  ShopConfirmationPopupModel: ShopConfirmationPopupModel;
+  WalletAmount: number;
   BuildingId: number;
 }
 
@@ -2515,7 +2802,7 @@ export interface BuildingUpgradeInfosRefreshedEventArgs {
   BuildingUpgradeInfosModel: BuildingUpgradeInfosModel;
 }
 
-/** both */
+/** response */
 export interface BuildingUpgradeModel {
   BuildingPopupPositionModel: BuildingPopupPositionModel;
   BuildingUpgradeInfosModel: BuildingUpgradeInfosModel;
@@ -2523,6 +2810,11 @@ export interface BuildingUpgradeModel {
 
 /** request */
 export interface BuildingUpgradePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuildingId: number;
   BuildingRequirementLock: unknown;
   BuildingType: number;
@@ -2530,11 +2822,9 @@ export interface BuildingUpgradePanelNavigationModel {
   Duration: number;
   HeroRequirementLock: unknown;
   IsActive: boolean;
-  IsOpalPanel: boolean;
   LayerName: string;
   MaxRank: number;
   OptionalUpgradeText: string;
-  PanelName: number;
   Rank: number;
   Title: string;
   UnlockableItemsList: unknown;
@@ -2544,7 +2834,18 @@ export interface BuildingUpgradePanelNavigationModel {
 
 /** both */
 export interface BuildingUpgradePopupDataModel {
-  NewMaxRooms: number;
+  BuildingInfoModel: BuildingInfoModel;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  CanAfford: boolean;
+  HeroLevelRequirement: number;
+  IsActive: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsHeroLevelRequirementMet: number;
+  NextBuildingRank: number;
+  ShopSkus: ShopSku[];
+  UnlockedItems: unknown;
+  UpgradeDurationInSeconds: number;
 }
 
 /** both */
@@ -2560,6 +2861,8 @@ export interface BuildingUpgradeStartedEventArgs {
 
 /** request */
 export interface BuildingUpgradeStartedNotification {
+  Index: number;
+  NotificationType: number;
   BuildingId: number;
   ExpirableId: string;
 }
@@ -2569,7 +2872,7 @@ export interface BuildingUpgradeTimerPositionRefreshedEventArgs {
   BuildingUpgradeModels: BuildingUpgradeModel[];
 }
 
-/** both */
+/** response */
 export interface BuildingUpgradeViewModel {
   BuildingUpgradeModels: BuildingUpgradeModel[];
 }
@@ -2600,9 +2903,9 @@ export interface ButtonPressedAssignmentTriggerSpec {
   Buttons: unknown;
 }
 
-/** request */
+/** unknown */
 export interface BuyBackAddedNotification {
-  AccountBuyBackSlot: AccountBuyBackSlot;
+  AccountBuyBackSlot: unknown;
 }
 
 /** request */
@@ -2613,26 +2916,46 @@ export interface BuyBackCommand {
 
 /** request */
 export interface BuyBackExpirable {
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
 }
 
 /** request */
 export interface BuyBackUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   AccountBuyBackSlot: AccountBuyBackSlot;
 }
 
 /** request */
 export interface BuyCommand {
-  SlotIndex: number;
+  ClientCraftingMaterials: unknown;
+  ClientPrice: unknown;
+  ConsumedHeroInventory: unknown;
+  DiscountApplied: boolean;
+  SkuCode: string;
 }
 
 /** request */
 export interface BuyConsumableCommand {
+  ClientCraftingMaterials: unknown;
+  ClientPrice: unknown;
+  ConsumedHeroInventory: unknown;
+  DiscountApplied: boolean;
+  SkuCode: string;
   SlotIndexes: unknown;
 }
 
 /** request */
 export interface BuyHeroItemCommand {
+  ClientCraftingMaterials: unknown;
+  ClientPrice: unknown;
+  ConsumedHeroInventory: unknown;
+  DiscountApplied: boolean;
+  SkuCode: string;
   SlotIndex: number;
 }
 
@@ -2645,6 +2968,35 @@ export interface BuyItemObjective {
 
 /** request */
 export interface BuyNewTabTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   PriceDescription: string;
 }
 
@@ -2681,9 +3033,10 @@ export interface CameraPositionSpec {
   Zoom: unknown;
 }
 
-/** unknown */
+/** response */
 export interface CameraSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -2755,6 +3108,8 @@ export interface CastleAttackComment {
 
 /** request */
 export interface CastleAttackedNotification {
+  Index: number;
+  NotificationType: number;
   AttackCount: number;
   DeathCount: number;
   DefendLogEntry: DefendLogEntry;
@@ -2777,14 +3132,18 @@ export interface CastleBlueprintTemplate {
 
 /** request */
 export interface CastleBoughtNotification {
+  Index: number;
+  NotificationType: number;
   BuildInfo: BuildInfo;
   IsStartupCastle: boolean;
 }
 
 /** both */
 export interface CastleBuildable {
-  BoostId: number;
-  RoomZoneId: number;
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
 }
 
 /** request */
@@ -2794,13 +3153,17 @@ export interface CastleBuildableCommand {
   RoomId: number;
   RoomZoneId: number;
   SpecContainerId: number;
-  SpecContainerId: number;
-  SpecContainerId: number;
   IsCastlePublishable: boolean;
 }
 
 /** request */
 export interface CastleBuilding {
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
+  BoostId: number;
+  RoomZoneId: number;
   ExpirableId: string;
   Rank: number;
 }
@@ -2808,12 +3171,15 @@ export interface CastleBuilding {
 /** both */
 export interface CastleCell {
   Type: number;
-  Type: number;
-  Type: number;
 }
 
 /** request */
 export interface CastleCompetitionPopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AttackSource: number;
   PosX: number;
   PosY: number;
@@ -2829,6 +3195,12 @@ export interface CastleContainsEntitiesObjective {
 
 /** request */
 export interface CastleCreature {
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
+  BoostId: number;
+  RoomZoneId: number;
   AggroPropagationOffsetX: number;
   AggroPropagationOffsetZ: number;
   IsSleeping: boolean;
@@ -2837,11 +3209,30 @@ export interface CastleCreature {
 
 /** request */
 export interface CastleDPSBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
   IncreasedDPS: number;
 }
 
 /** request */
 export interface CastleDetailsPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CastleInfoModel: CastleInfoModel;
 }
 
@@ -2859,14 +3250,14 @@ export interface CastleDraftRollbackCommand {
 
 /** request */
 export interface CastleDraftRollbackCompletedNotification {
+  Index: number;
+  NotificationType: number;
   BuildInfo: BuildInfo;
   Failure: boolean;
 }
 
 /** both */
 export interface CastleExpansion {
-  SpecialGroundIds: number;
-  SpecialGroundIds: number;
   SpecialGroundIds: number;
 }
 
@@ -2933,8 +3324,6 @@ export interface CastleGround {
   GroundType: number;
   Id: number;
   SpecContainerId: number;
-  SpecContainerId: number;
-  SpecContainerId: number;
 }
 
 /** both */
@@ -2959,6 +3348,14 @@ export interface CastleGroundGenerationSettings {
 
 /** request */
 export interface CastleHeartBuildingInfoDataModel {
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
   CurrentAttackTicketsInBossRoom: number;
   CurrentAttackTicketsInCastle: number;
   CurrentConstructionPoints: number;
@@ -2970,6 +3367,18 @@ export interface CastleHeartBuildingInfoDataModel {
 
 /** request */
 export interface CastleHeartBuildingUpgradePopupDataModel {
+  BuildingInfoModel: BuildingInfoModel;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  CanAfford: boolean;
+  HeroLevelRequirement: number;
+  IsActive: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsHeroLevelRequirementMet: number;
+  NextBuildingRank: number;
+  ShopSkus: ShopSku[];
+  UnlockedItems: unknown;
+  UpgradeDurationInSeconds: number;
   NewAttackTicketsInBossRoom: number;
   NewAttackTicketsInCastle: number;
   NewConstructionPoints: number;
@@ -3104,6 +3513,8 @@ export interface CastleInventoryAddedAction {
 
 /** request */
 export interface CastleInventoryChangedNotification {
+  Index: number;
+  NotificationType: number;
   Actions: unknown;
 }
 
@@ -3144,8 +3555,12 @@ export interface CastleInventoryMenuNavigationButtonModel {
 
 /** request */
 export interface CastleInventoryPanelNavigationModel {
-  CastleInventoryViewModel: unknown;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
+  PanelName: number;
+  CastleInventoryViewModel: unknown;
   MenuNavigationButtons: unknown;
   Tab: number;
   Title: string;
@@ -3159,6 +3574,7 @@ export interface CastleInventoryRefreshedEventArgs {
 
 /** request */
 export interface CastleInventoryRemovedAction {
+  Type: number;
   Count: number;
   ItemSold: boolean;
   ItemType: number;
@@ -3187,11 +3603,9 @@ export interface CastleLayout {
   Width: number;
 }
 
-/** both */
+/** response */
 export interface CastleLayoutCell {
-  Type: number;
-  Type: number;
-  Type: number;
+  Type: string;
 }
 
 /** both */
@@ -3224,7 +3638,7 @@ export interface CastleLevelUpAssignmentTriggerSpec {
   Level: unknown;
 }
 
-/** both */
+/** response */
 export interface CastleLevelUpEventArgs {
   Level: number;
   OldLevel: number;
@@ -3238,6 +3652,8 @@ export interface CastleLevelUpInfoModel {
 
 /** request */
 export interface CastleLevelUpNotification {
+  Index: number;
+  NotificationType: number;
   AccountId: number;
   Level: number;
   OldLevel: number;
@@ -3274,14 +3690,17 @@ export interface CastleObjectiveStatusUpdatedEventArgs {
 
 /** request */
 export interface CastlePopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AttackRegionId: number;
   AttackSource: number;
   AttackType: number;
   CastleId: number;
   CastleType: number;
   IsBossCastle: boolean;
-  IsOpalPanel: boolean;
-  PanelName: number;
   PosX: number;
   PosY: number;
   SubLeagueModel: SubLeagueModel;
@@ -3289,6 +3708,35 @@ export interface CastlePopupPanelNavigationModel {
 
 /** request */
 export interface CastlePopupRewardsTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   BuffGold: number;
   BuffLifeForce: number;
   BuffXp: number;
@@ -3304,13 +3752,40 @@ export interface CastlePopupRewardsTooltipModel {
   MinesLifeForceAmount: number;
   MinesPremiumCashAmount: number;
   TotalMinesCount: number;
-  Type: number;
 }
 
 /** request */
 export interface CastlePopupStarsTooltipModel {
-  CrownBonuses: number;
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
   Type: number;
+  UpdateLocked: boolean;
+  CrownBonuses: number;
 }
 
 /** both */
@@ -3346,6 +3821,8 @@ export interface CastleRankToVisualRankIndex {
 
 /** request */
 export interface CastleRatedNotification {
+  Index: number;
+  NotificationType: number;
   AttackId: string;
   CastleRating: number;
   Message: Message;
@@ -3392,13 +3869,16 @@ export interface CastleRenovationLevelChangedEventArgs {
 
 /** request */
 export interface CastleRenovationLevelCompletedPanelNavigationModel {
-  Description: string;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
+  PanelName: number;
+  Description: string;
   IsRenovationCompleted: boolean;
   LayerName: string;
   Level: number;
   LevelNameOasisId: number;
-  PanelName: number;
   Title: string;
 }
 
@@ -3430,10 +3910,13 @@ export interface CastleRenovationMaterialsReadyForCollectEventArgs {
 
 /** request */
 export interface CastleRenovationPanelNavigationModel {
-  CastleRenovationLevelModels: CastleRenovationLevelModel[];
-  CurrentRenovationLevel: number;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
+  CastleRenovationLevelModels: CastleRenovationLevelModel[];
+  CurrentRenovationLevel: number;
 }
 
 /** both */
@@ -3468,6 +3951,10 @@ export interface CastleRenovationVisual {
 
 /** request */
 export interface CastleRoom {
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
   Buildings: unknown;
   Creatures: unknown;
   Decorations: unknown;
@@ -3478,6 +3965,10 @@ export interface CastleRoom {
 
 /** request */
 export interface CastleRoomBuildable {
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
   BoostId: number;
   RoomZoneId: number;
 }
@@ -3544,12 +4035,24 @@ export interface CastleThemeInfoModel {
 
 /** request */
 export interface CastleTrap {
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
+  BoostId: number;
+  RoomZoneId: number;
   BeatIndex: number;
   PowerSupplyCastleBuildableId: number;
 }
 
 /** request */
 export interface CastleTrigger {
+  Id: number;
+  Orientation: number;
+  SkuCode: string;
+  SpecContainerId: number;
+  BoostId: number;
+  RoomZoneId: number;
   SizeX: number;
   SizeY: number;
 }
@@ -3561,7 +4064,11 @@ export interface CastleValidationAssignmentActionSpec {
 
 /** request */
 export interface CastleValidationDelegationExpirable {
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
   RefundableIGC: number;
   RefundableLifeForce: number;
   RefundablePremiunCash: number;
@@ -3570,18 +4077,28 @@ export interface CastleValidationDelegationExpirable {
 
 /** request */
 export interface CastleValidationIntroPanelNavigationModel {
-  CastleLevel: number;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
+  CastleLevel: number;
 }
 
 /** request */
 export interface CastleValidationOutroPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CastleLevel: number;
 }
 
 /** request */
 export interface CastleValidationRequestedNotification {
+  Index: number;
+  NotificationType: number;
   RequestorAccountId: number;
   Visibility: number;
 }
@@ -3602,6 +4119,11 @@ export interface CastleValidityFeedbackModel {
 
 /** request */
 export interface CastleVisitPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CanBePurchased: boolean;
   CastleName: string;
   FakePrice: string;
@@ -3682,6 +4204,8 @@ export interface ChapterSettings {
 
 /** request */
 export interface ChapterTicketRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   TicketCount: number;
 }
 
@@ -3739,6 +4263,11 @@ export interface ChatNewMessageEventArgs {
 
 /** request */
 export interface ChatPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ChatRoomConfigModel: ChatRoomConfigModel;
   CurrentChatRoomMessagesModel: unknown;
   OpenMinimized: boolean;
@@ -3783,12 +4312,16 @@ export interface ChatRoomInfoModel {
 
 /** request */
 export interface ChatRoomMessageSentTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   MessageSentCount: number;
   RoomId: number;
 }
 
 /** request */
 export interface ChatRoomTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   RoomId: number;
 }
 
@@ -3818,6 +4351,11 @@ export interface ChatUserPresenceUpdatedEventArgs {
 
 /** request */
 export interface ChooseFirstHeroConfirmationPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AreAllHeroesOwned: boolean;
   HeroIconUrl: string;
   HeroOasisId: number;
@@ -3827,6 +4365,11 @@ export interface ChooseFirstHeroConfirmationPanelNavigationModel {
 
 /** request */
 export interface ChooseFirstHeroPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ExplanationText: string;
 }
 
@@ -3875,6 +4418,8 @@ export interface CleaveOperationSpec {
 
 /** request */
 export interface ClientCallProfilingTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   Duration: number;
   PathAndQuery: string;
 }
@@ -3921,14 +4466,19 @@ export interface CloseMessageBoxEventArgs {
 export interface ClosePanelAssignmentActionSpec {
   PanelName: string;
   TargetEntitySearch: unknown;
+  Conditions: unknown[];
+  StartDelay: number;
+  StartType: string;
 }
 
 /** request */
 export interface ClosePopupAssignmentActionSpec {
   Id: string;
+  Conditions: unknown[];
+  StartType: string;
 }
 
-/** both */
+/** response */
 export interface ClosePopupEventArgs {
   Id: string;
 }
@@ -3948,6 +4498,8 @@ export interface CommunityEvent {
 
 /** request */
 export interface CommunityEventAccountTimeShiftChangedNotification {
+  Index: number;
+  NotificationType: number;
   TimeShift: number;
 }
 
@@ -3961,7 +4513,7 @@ export interface CommunityEventBuildingRequirementSettings {
   BuildingRequirementEvents: unknown;
 }
 
-/** both */
+/** response */
 export interface CommunityEventEndedEventArgs {
   CommunityEvent: CommunityEvent;
 }
@@ -3974,6 +4526,8 @@ export interface CommunityEventFreeTrialSettings {
 
 /** request */
 export interface CommunityEventGlobalTimeShiftChangedNotification {
+  Id: string;
+  NotificationType: number;
   TimeShift: number;
 }
 
@@ -4006,18 +4560,20 @@ export interface CompareValuesBooleanSpec {
 
 /** request */
 export interface CompetitionEndedNoRewardsNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
   CastleAccountSummary: unknown;
   DisplayNameOasisId: number;
   Rank: number;
   UbisoftCompetitionId: number;
 }
 
-/** request */
+/** unknown */
 export interface CompetitionEndedRewardsWonNewsData {
   CastleAccountSummary: unknown;
-  DisplayNameOasisId: number;
-  Rank: number;
-  UbisoftCompetitionId: number;
+  DisplayNameOasisId: unknown;
+  Rank: unknown;
+  UbisoftCompetitionId: unknown;
 }
 
 /** request */
@@ -4231,16 +4787,25 @@ export interface ConstructionPointsAssignmentTriggerSpec {
 
 /** request */
 export interface ConstructionPointsBuiltCondition {
+  DebugName: string;
+  OasisId: number;
   Count: number;
 }
 
 /** request */
 export interface ConsumableActivatedNotification {
+  Index: number;
+  NotificationType: number;
   ActiveConsumable: ActiveConsumable;
 }
 
 /** request */
 export interface ConsumableActivationConfirmationPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   IconSynergyName: string;
   IconUrl: string;
   InventorySlotIndex: number;
@@ -4251,14 +4816,22 @@ export interface ConsumableActivationConfirmationPanelNavigationModel {
 
 /** request */
 export interface ConsumableBuyBackSlot {
+  CreationDate: string;  // datetime
+  Id: string;
+  ItemType: number;
+  Price: unknown;
   Item: unknown;
 }
 
 /** request */
 export interface ConsumableExpirable {
+  DueDate: string;  // datetime
+  DurationSeconds: number;
+  ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
   CommunityEventId: number;
   ConsumableType: number;
-  ExpirableType: number;
   TemplateId: number;
 }
 
@@ -4299,6 +4872,35 @@ export interface ConsumableTemplate {
 
 /** request */
 export interface ConsumableTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   ConsumableType: number;
   DisplayRemainingTime: boolean;
   Duration: number;
@@ -4307,7 +4909,6 @@ export interface ConsumableTooltipModel {
   Quantity: number;
   QuantityAvailableForAttack: number;
   RemainingTime: number;
-  Type: number;
 }
 
 /** unknown */
@@ -4376,7 +4977,17 @@ export interface CorrespondingValueSpec {
 
 /** request */
 export interface CountAchievement {
-  CurrencyType: number;
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
+  Count: number;
 }
 
 /** unknown */
@@ -4391,6 +5002,11 @@ export interface CountPriceReductionCondition {
 
 /** request */
 export interface CountdownTimerPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   IsTestAttack: boolean;
 }
 
@@ -4439,11 +5055,21 @@ export interface CraftingMaterial {
 
 /** request */
 export interface CraftingMaterialCollectingModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   LayerName: string;
 }
 
 /** request */
 export interface CraftingMaterialConsumptionModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   Cost: unknown;
   CraftingMaterials: CraftingMaterial[];
 }
@@ -4469,8 +5095,36 @@ export interface CraftingMaterialMineInformationModel {
 
 /** request */
 export interface CraftingMaterialMineTooltipModel {
-  CraftingMaterialMineInformationModel: CraftingMaterialMineInformationModel;
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
   Type: number;
+  UpdateLocked: boolean;
+  CraftingMaterialMineInformationModel: CraftingMaterialMineInformationModel;
 }
 
 /** both */
@@ -4513,13 +5167,43 @@ export interface CraftingMaterialsPack {
 
 /** request */
 export interface CraftingMaterialsPackModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   LayerName: string;
   SpecContainerId: number;
-  Type: number;
 }
 
 /** request */
 export interface CraftingMaterialsPackPurchasedNotification {
+  Index: number;
+  NotificationType: number;
   CraftingMaterialsGained: unknown;
 }
 
@@ -4536,11 +5220,18 @@ export interface CraftingMaterialsPacksSettings {
 
 /** request */
 export interface CraftingMaterialsRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   CraftingMaterials: CraftingMaterial[];
 }
 
 /** request */
 export interface CraftingStampingCounterModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   UIGridItemModel: UIGridItemModel;
 }
 
@@ -4554,6 +5245,11 @@ export interface CreatureAiSpec {
 
 /** request */
 export interface CreatureBoostPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ActiveBoostDurationLeft: number;
   ActiveBoostTotalDuration: number;
   BoostDescription: string;
@@ -4602,10 +5298,10 @@ export interface CreatureSpec {
   Rank: unknown;
 }
 
-/** unknown */
+/** response */
 export interface CreatureSpecContainer {
-  Type: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -4693,11 +5389,24 @@ export interface CreatureTrapCraftingItemModel {
 
 /** request */
 export interface CreatureTrapLevelUpPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
+  CreatureTrapUpgradeModel: CreatureTrapUpgradeModel;
+  SpecContainerId: number;
+  Tier: number;
   ShopCategory: number;
 }
 
 /** request */
 export interface CreatureTrapPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CreatureTrapUpgradeModel: CreatureTrapUpgradeModel;
   SpecContainerId: number;
   Tier: number;
@@ -4714,6 +5423,14 @@ export interface CreatureTrapSpecializationModel {
 
 /** request */
 export interface CreatureTrapSpecializationPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
+  CreatureTrapUpgradeModel: CreatureTrapUpgradeModel;
+  SpecContainerId: number;
+  Tier: number;
   GameEntityType: number;
   PosX: number;
   PosY: number;
@@ -4730,6 +5447,35 @@ export interface CreatureTrapSpecializationViewModel {
 
 /** request */
 export interface CreatureTrapTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   Abilities: unknown;
   AttackSpeed: string;
   AutoLevelUp: boolean;
@@ -4746,7 +5492,6 @@ export interface CreatureTrapTooltipModel {
   ShowSpecializations: boolean;
   Specializations: unknown;
   Tier: number;
-  Type: number;
 }
 
 /** both */
@@ -4856,6 +5601,17 @@ export interface CsvSchema {
 
 /** request */
 export interface CurrencyAccumulationAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
+  Count: number;
   CurrencyType: number;
 }
 
@@ -4975,8 +5731,6 @@ export interface DeathDetail {
   GlobalX: number;
   GlobalZ: number;
   RoomId: number;
-  RoomId: number;
-  RoomId: number;
 }
 
 /** unknown */
@@ -4995,6 +5749,11 @@ export interface DebugCameraSpec {
 
 /** request */
 export interface DebugPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   DebugPanelName: string;
 }
 
@@ -5023,18 +5782,47 @@ export interface DecorationSpec {
   DecorationType: unknown;
 }
 
-/** unknown */
+/** response */
 export interface DecorationSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** request */
 export interface DecorationTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   DecorationPointsCost: number;
   DecorationType: number;
   HealthPoints: number;
   HitPoints: number;
-  Type: number;
 }
 
 /** unknown */
@@ -5063,6 +5851,17 @@ export interface DecoratorLatchBehaviorSpec {
 
 /** request */
 export interface DefeatCastleAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
+  Count: number;
   CastleDifficulties: unknown;
 }
 
@@ -5076,6 +5875,17 @@ export interface DefeatCastleObjective {
 
 /** request */
 export interface DefeatCastleStrikeAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
+  Count: number;
   IsFriend: boolean;
 }
 
@@ -5121,6 +5931,8 @@ export interface DefendLogEntry {
 
 /** request */
 export interface DefendLogEntryDeletedNotification {
+  Index: number;
+  NotificationType: number;
   LastValidEntryDate: string;  // datetime
 }
 
@@ -5172,6 +5984,11 @@ export interface DefenseButtonsSettings {
 
 /** request */
 export interface DefenseEntityTooltipModel {
+  GameEntityId: number;
+  ItemTypeOasisId: number;
+  Level: number;
+  Name: string;
+  TooltipDisplayDelay: number;
   CPCost: number;
   DefenseRating: number;
   SpecialAbilities: unknown;
@@ -5180,6 +5997,11 @@ export interface DefenseEntityTooltipModel {
 
 /** request */
 export interface DefenseHudPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuildViewModel: BuildViewModel;
   IsCastleValidated: boolean;
   IsDelegatedCastleValidationPending: boolean;
@@ -5193,16 +6015,25 @@ export interface DefenseHudSettings {
 
 /** request */
 export interface DefenseIngredientArchetype {
+  AutoLevelUp: boolean;
+  AvailableCount: number;
+  BlueprintUnlocked: boolean;
+  NewlyAdded: boolean;
+  SpecContainerId: number;
   Specialization: number;
   Tier: number;
 }
 
 /** request */
 export interface DefenseIngredientBoostExpirable {
+  DueDate: string;  // datetime
+  DurationSeconds: number;
+  ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
   BoostId: number;
   DefenseIngredientId: number;
   DefenseItemType: number;
-  ExpirableType: number;
 }
 
 /** unknown */
@@ -5213,23 +6044,26 @@ export interface DefenseIngredientBoostSpec {
   ShopBuildingRequirementSpec: unknown;
 }
 
-/** unknown */
+/** response */
 export interface DefenseIngredientBoostSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** request */
 export interface DefenseIngredientBuiltCondition {
+  DebugName: string;
+  OasisId: number;
   Count: number;
   ItemType: number;
   SpecContainerId: number;
 }
 
-/** request */
+/** unknown */
 export interface DefenseIngredientDestroyedCondition {
-  Count: number;
-  ItemType: number;
-  SpecContainerId: number;
+  Count: unknown;
+  ItemType: unknown;
+  SpecContainerId: unknown;
 }
 
 /** both */
@@ -5245,6 +6079,8 @@ export interface DefenseIngredientLoot {
 
 /** request */
 export interface DefenseIngredientRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   Count: number;
   ItemType: number;
   SpecId: number;
@@ -5252,6 +6088,8 @@ export interface DefenseIngredientRewardItem {
 
 /** request */
 export interface DefenseIngredientSparedCondition {
+  DebugName: string;
+  OasisId: number;
   ItemType: number;
   SpecContainerId: number;
 }
@@ -5418,6 +6256,7 @@ export interface DisplayObjectiveCompletedAssignmentActionSpec {
 /** request */
 export interface DisplayPlayerCastleInAttackSelectionAssignmentActionSpec {
   DisplayPlayerCastle: boolean;
+  Conditions: unknown[];
 }
 
 /** both */
@@ -5486,22 +6325,24 @@ export interface DoorStateTriggers {
   OnTotemActivated: number;
 }
 
-/** request */
+/** unknown */
 export interface DownloadCompletedTaskTracking {
-  Duration: number;
-  IsFirstInstall: boolean;
+  Duration: unknown;
+  IsFirstInstall: unknown;
 }
 
-/** request */
+/** unknown */
 export interface DownloadPackageCompletedTracking {
-  DownloadSize: number;
-  Duration: number;
-  IsSuccessful: boolean;
+  DownloadSize: unknown;
+  Duration: unknown;
+  IsSuccessful: unknown;
   PackageVersionId: unknown;
 }
 
 /** request */
 export interface DownloadPackageStartedTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   PackageVersionId: unknown;
   Url: string;
   VersionName: string;
@@ -5509,26 +6350,32 @@ export interface DownloadPackageStartedTracking {
 
 /** request */
 export interface DownloadPatcherCompletedTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   DownloadSize: number;
   Duration: number;
   IsSuccessful: boolean;
   PackageVersionId: unknown;
 }
 
-/** request */
+/** unknown */
 export interface DownloadPatcherStartedTracking {
   PackageVersionId: unknown;
-  Url: string;
-  VersionName: string;
+  Url: unknown;
+  VersionName: unknown;
 }
 
 /** request */
 export interface DownloadStartedTaskTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   IsFirstInstall: boolean;
 }
 
 /** request */
 export interface DraftValidatedNotification {
+  Index: number;
+  NotificationType: number;
   BoostedCreatures: unknown;
   BoostedTraps: unknown;
   CastleValidationDuration: number;
@@ -5636,9 +6483,10 @@ export interface EffectOperationSpec {
   MaxRotationSpeed: unknown;
 }
 
-/** unknown */
+/** response */
 export interface EffectSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -5648,6 +6496,8 @@ export interface EffectSpecContainerRef {
 
 /** request */
 export interface EmoteRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   EmoteId: number;
 }
 
@@ -5676,7 +6526,11 @@ export interface EnableHeroLevelUpNotificationAssignmentActionSpec {
 
 /** request */
 export interface EnableHeroVoiceOverAssignmentActionSpec {
+  SoundEvent: unknown;
   EnableHeroVoiceOver: boolean;
+  Conditions: unknown[];
+  Disabled: boolean;
+  Tag: string;
 }
 
 /** unknown */
@@ -5910,6 +6764,17 @@ export interface EquipmentAbilityModel {
 
 /** request */
 export interface EquipmentAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
+  Count: number;
   EquippedParts: unknown;
 }
 
@@ -5955,6 +6820,35 @@ export interface EquipmentTemplateIds {
 
 /** request */
 export interface EquipmentTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   ArchetypeStats: unknown;
   ComparedMagicalProperties: unknown;
   CompareGearScore: number;
@@ -5975,15 +6869,14 @@ export interface EquipmentTooltipModel {
   PowerUpModel: PowerUpModel;
   ShowArchetype: boolean;
   ShowWeaponDescription: boolean;
-  Type: number;
   WeaponDescription: string;
   WeaponIcon: string;
   WeaponSpecialEffect: string;
 }
 
-/** both */
+/** response */
 export interface EquippedConsumablesViewModelEventArgs {
-  EquippedItems: unknown;
+  EquippedItems: unknown[];
 }
 
 /** both */
@@ -6039,12 +6932,16 @@ export interface ErrorMessageInformation {
 
 /** request */
 export interface ErrorMessageModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AdvancedMessage: string;
   ButtonCaption: string;
   IsButtonEnabled: boolean;
   IsForumLinkEnabled: boolean;
   Message: string;
-  PanelName: number;
   Title: string;
   Type: number;
 }
@@ -6086,21 +6983,31 @@ export interface ExecuteAssignmentActionCommand {
 
 /** both */
 export interface Expirable {
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
 }
 
 /** request */
 export interface ExpirableAddedNotification {
+  Index: number;
+  NotificationType: number;
   Expirable: Expirable;
 }
 
 /** request */
 export interface ExpirableRemovedNotification {
+  Index: number;
+  NotificationType: number;
   ExpirableId: string;
 }
 
 /** request */
 export interface ExpirableUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   DueDate: string;  // datetime
   DurationSeconds: number;
   ExpirableId: string;
@@ -6109,6 +7016,7 @@ export interface ExpirableUpdatedNotification {
 
 /** request */
 export interface ExpireExpirableCommand {
+  IsCastlePublishable: boolean;
   ExpirableId: string;
   PayToForceExpiration: boolean;
 }
@@ -6246,6 +7154,11 @@ export interface FinishNowModel {
 
 /** request */
 export interface FinishNowPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   FinishNowModel: FinishNowModel;
 }
 
@@ -6318,14 +7231,26 @@ export interface FootstepsSoundSettings {
   HeroFootStepSoundsTable: unknown;
 }
 
-/** request */
+/** unknown */
 export interface ForgeCollectCommand {
-  HeroItemSlot: number;
-  InventorySlotIndex: number;
+  HeroItemSlot: unknown;
+  InventorySlotIndex: unknown;
 }
 
 /** request */
 export interface ForgeConfirmationPopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
+  DyeInfoModel: DyeInfoModel;
+  InitialCurrencyType: number;
+  ItemCount: number;
+  ItemId: number;
+  ItemType: number;
+  ShopConfirmationPopupModel: ShopConfirmationPopupModel;
+  WalletAmount: number;
   AverageItemLevel: number;
   HeroItemQuality: number;
 }
@@ -6353,12 +7278,21 @@ export interface ForgeCraftingMaterialsSettings {
 
 /** request */
 export interface ForgeExpirable {
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
   ForgeMode: number;
 }
 
 /** request */
 export interface ForgeFinishNowPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CurrencyAmount: CurrencyAmount;
   ForgeMode: number;
   ItemQuality: number;
@@ -6379,6 +7313,8 @@ export interface ForgeInventoryTabChangedEventArgs {
 
 /** request */
 export interface ForgeItemCollectModel {
+  CraftingSlotQuality: number;
+  ItemQuality: number;
   IconUrl: string;
   Level: number;
   OasisName: string;
@@ -6388,6 +7324,8 @@ export interface ForgeItemCollectModel {
 
 /** request */
 export interface ForgeItemCookingModel {
+  CraftingSlotQuality: number;
+  ItemQuality: number;
   CurrencyAmount: CurrencyAmount;
   ForgeMode: number;
   LevelMax: number;
@@ -6399,6 +7337,8 @@ export interface ForgeItemCookingModel {
 
 /** request */
 export interface ForgeItemReadyNotification {
+  Index: number;
+  NotificationType: number;
   AccountForgedItem: AccountForgedItem;
   ExpirableId: string;
   ForgeMode: number;
@@ -6412,6 +7352,8 @@ export interface ForgeItemSelectionEventArgs {
 
 /** request */
 export interface ForgeItemSelectionModel {
+  CraftingSlotQuality: number;
+  ItemQuality: number;
   Duration: number;
   ForgeMode: number;
   RequiredItemSlotCount: number;
@@ -6425,11 +7367,8 @@ export interface ForgeItemSlotModel {
 
 /** both */
 export interface ForgeModel {
-  IconUrl: string;
-  Level: number;
-  OasisName: string;
-  OasisNameId: number;
-  TooltipModel: TooltipModel;
+  CraftingSlotQuality: number;
+  ItemQuality: number;
 }
 
 /** both */
@@ -6463,6 +7402,11 @@ export interface ForgeNotificationsUpdatedEventArgs {
 
 /** request */
 export interface ForgePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ForgeMode: number;
   ForgeModel: ForgeModel;
   ForgeState: number;
@@ -6473,6 +7417,8 @@ export interface ForgePanelNavigationModel {
 
 /** request */
 export interface ForgeQualitySelectionModel {
+  CraftingSlotQuality: number;
+  ItemQuality: number;
   ForgeMode: number;
   Options: unknown;
 }
@@ -6519,6 +7465,8 @@ export interface ForgeSkuModel {
 
 /** request */
 export interface ForgeStartedNotification {
+  Index: number;
+  NotificationType: number;
   AccountForgedItem: AccountForgedItem;
 }
 
@@ -6554,6 +7502,8 @@ export interface ForgedItemCount {
 
 /** request */
 export interface FreeTrialActivatedNotification {
+  Index: number;
+  NotificationType: number;
   FreeTrialType: number;
   HeroFreeTrialInfoId: number;
 }
@@ -6568,30 +7518,46 @@ export interface FreeTrialAssignmentActionSpec {
 
 /** request */
 export interface FreeTrialConditionCompletedNotification {
+  Index: number;
+  NotificationType: number;
   HeroSpecContainerId: number;
   PriceReductionConditionCompletedId: number;
 }
 
 /** request */
 export interface FreeTrialPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   IconUrl: string;
   RemainingDays: number;
 }
 
 /** request */
 export interface FreeWorkerPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuyUrl: string;
   CurrencyAmount: CurrencyAmount;
 }
 
 /** request */
 export interface FriendAvatarUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   FriendAccountId: number;
   FriendAvatarId: number;
 }
 
 /** request */
 export interface FriendInviteNotification {
+  Index: number;
+  NotificationType: number;
   Invitation: unknown;
 }
 
@@ -6607,6 +7573,8 @@ export interface FriendLeaderboardModel {
 
 /** request */
 export interface FriendLeagueUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   FriendAccountId: number;
   LeagueId: number;
   SubLeagueId: number;
@@ -6614,6 +7582,11 @@ export interface FriendLeagueUpdatedNotification {
 
 /** request */
 export interface FriendNotificationsPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   DebounceSearchValue: number;
   ShowFriendReferral: boolean;
 }
@@ -6634,6 +7607,12 @@ export interface FriendReward {
 
 /** request */
 export interface FriendRewardGrantedNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
+  FriendAccountId: number;
+  FriendAvatarId: number;
+  FriendDisplayName: string;
+  FriendSpecialPacks: number;
   RequiredLevel: number;
   RequiredReferralFriends: number;
   Reward: Reward;
@@ -6646,6 +7625,8 @@ export interface FriendRewardSettings {
 
 /** request */
 export interface FriendTrophyScoreChangedNotification {
+  Index: number;
+  NotificationType: number;
   FriendAccountId: number;
   TrophyScore: number;
 }
@@ -6672,6 +7653,8 @@ export interface FriendshipActionEventArgs {
 
 /** request */
 export interface FriendshipAddedNotification {
+  Index: number;
+  NotificationType: number;
   FriendAccountSummary: unknown;
 }
 
@@ -6697,6 +7680,8 @@ export interface FriendshipInvitationCancelledNotification {
 
 /** request */
 export interface FriendshipInvitationDeclinedNotification {
+  Index: number;
+  NotificationType: number;
   FriendAccountId: number;
 }
 
@@ -6717,20 +7702,22 @@ export interface FriendshipInvitationModel {
 
 /** request */
 export interface FriendshipInvitationUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   FriendshipInvitation: FriendshipInvitation;
 }
 
-/** request */
+/** unknown */
 export interface FriendshipRemovedNotification {
-  FriendAccountId: number;
-  Index: number;
-  NotificationType: number;
+  FriendAccountId: unknown;
+  Index: unknown;
+  NotificationType: unknown;
 }
 
-/** unknown */
+/** response */
 export interface FxSpecContainer {
-  Type: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -6743,9 +7730,9 @@ export interface GPUTimings {
   SettingsMS: number;
 }
 
-/** both */
+/** response */
 export interface GameButtonEventArgs {
-  Button: number;
+  Button: string;
 }
 
 /** unknown */
@@ -6816,6 +7803,8 @@ export interface GameServerConnectionConfig {
 
 /** request */
 export interface GameStartTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   GameClientVersion: string;
   MachineId: string;
 }
@@ -6845,6 +7834,8 @@ export interface GameStateSoundPresetsSettings {
 
 /** request */
 export interface GameStateTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   GameStateId: number;
   GameStateIdleTime: number;
   GameStateTotalTime: number;
@@ -6887,8 +7878,9 @@ export interface GamepadAttackSettings {
 
 /** request */
 export interface GamepadButtonContextualActionData {
-  Buttons: number;
+  ActionType: number;
   ContextualActionDataInputType: number;
+  Buttons: number;
 }
 
 /** unknown */
@@ -6900,6 +7892,7 @@ export interface GamepadSettings {
 
 /** request */
 export interface GamepadStickContextualActionData {
+  ActionType: number;
   ContextualActionDataInputType: number;
   Stick: number;
 }
@@ -7100,7 +8093,7 @@ export interface GetEquippedSpellViewModel {
   EquippedSpells: unknown;
 }
 
-/** both */
+/** response */
 export interface GetHeroInventoryEventArgs {
   GetHeroInventoryViewModel: GetHeroInventoryViewModel;
 }
@@ -7172,7 +8165,8 @@ export interface GiveGiftResult {
 
 /** both */
 export interface GlobalNotification {
-  StartDate: string;  // datetime
+  Id: string;
+  NotificationType: number;
 }
 
 /** unknown */
@@ -7194,6 +8188,20 @@ export interface GoldBoostCommunityEvent {
 
 /** request */
 export interface GoldBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
   AttackIncreasedGold: number;
   MineIncreasedGold: number;
 }
@@ -7307,9 +8315,12 @@ export interface GuildHeaderModel {
 
 /** request */
 export interface GuildInfoPopupPanelNavigationModel {
-  GuildId: number;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
+  GuildId: number;
   SelectedTab: number;
 }
 
@@ -7321,29 +8332,37 @@ export interface GuildInvitation {
 
 /** request */
 export interface GuildInvitationReceivedNotification {
+  Index: number;
+  NotificationType: number;
   GuildInvitation: GuildInvitation;
 }
 
 /** request */
 export interface GuildInvitationRemovedNotification {
+  Index: number;
+  NotificationType: number;
   AccountId: number;
   GuildId: number;
 }
 
 /** request */
 export interface GuildJoinRequestAddedNotification {
+  Index: number;
+  NotificationType: number;
   GuildId: number;
 }
 
 /** request */
 export interface GuildJoinRequestReceivedNotification {
+  Index: number;
+  NotificationType: number;
   Requestor: unknown;
 }
 
-/** request */
+/** unknown */
 export interface GuildJoinRequestRemovedNotification {
-  AccountId: number;
-  GuildId: number;
+  AccountId: unknown;
+  GuildId: unknown;
 }
 
 /** both */
@@ -7376,6 +8395,8 @@ export interface GuildLeftEventArgs {
 
 /** request */
 export interface GuildLeftNotification {
+  Index: number;
+  NotificationType: number;
   GuildId: number;
   GuildStillExists: boolean;
 }
@@ -7406,9 +8427,12 @@ export interface GuildListingModelRefreshedEventArgs {
 
 /** request */
 export interface GuildManagementPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
-  Model: unknown;
   PanelName: number;
+  Model: unknown;
 }
 
 /** both */
@@ -7420,6 +8444,8 @@ export interface GuildMember {
 
 /** request */
 export interface GuildMemberJoinedNotification {
+  Index: number;
+  NotificationType: number;
   Guild: Guild;
   JoinerId: number;
 }
@@ -7445,6 +8471,8 @@ export interface GuildMemberModel {
 
 /** request */
 export interface GuildMemberTitleUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   AccountId: number;
   GuildId: number;
   Title: number;
@@ -7452,6 +8480,8 @@ export interface GuildMemberTitleUpdatedNotification {
 
 /** request */
 export interface GuildMemberTrophyScoreChangedNotification {
+  Index: number;
+  NotificationType: number;
   GuildRank: number;
   GuildTrophyScore: number;
   MemberAccountId: number;
@@ -7496,12 +8526,12 @@ export interface GuildProfileModelRefreshedEventArgs {
   Model: unknown;
 }
 
-/** request */
+/** unknown */
 export interface GuildProfilePanelNavigationModel {
-  GuildId: number;
-  IsOpalPanel: boolean;
-  PanelName: number;
-  SelectedTab: number;
+  GuildId: unknown;
+  IsOpalPanel: unknown;
+  PanelName: unknown;
+  SelectedTab: unknown;
 }
 
 /** both */
@@ -7528,6 +8558,8 @@ export interface GuildSettings {
 
 /** request */
 export interface GuildSettingsUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   Description: unknown;
   GuildEmblem: GuildEmblem;
   GuildId: number;
@@ -7549,10 +8581,12 @@ export interface GuildSummary {
 
 /** request */
 export interface GuildWelcomePagePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
   ExcludeModalPopupOpening: boolean;
-  GuildProfileModel: GuildProfileModel;
   IsOpalPanel: boolean;
   PanelName: number;
+  GuildProfileModel: GuildProfileModel;
 }
 
 /** both */
@@ -7590,6 +8624,7 @@ export interface HarvestCommandCompletedEventArgs {
 
 /** request */
 export interface HarvestHeroCorpseCommand {
+  IsCastlePublishable: boolean;
   HeroCorpseId: number;
   SlotsUpdates: unknown;
 }
@@ -7612,15 +8647,16 @@ export interface HarvestListEntity {
 
 /** request */
 export interface HarvestMineBuildingCommand {
+  IsCastlePublishable: boolean;
   CurrencyType: number;
   MineBuildingId: number;
 }
 
-/** both */
+/** response */
 export interface HarvestMineStatusAddedEventArgs {
-  CurrencyType: number;
+  CurrencyType: string;
   EntityHarvestId: number;
-  EntityHarvestType: number;
+  EntityHarvestType: unknown;
 }
 
 /** both */
@@ -7635,8 +8671,6 @@ export interface HarvestPositionModel {
   MaxIconSize: number;
   MaxZoom: number;
   MinIconSize: number;
-  MinZoom: number;
-  MinZoom: number;
   MinZoom: number;
   Zoom: number;
 }
@@ -7659,10 +8693,10 @@ export interface HarvestRefreshedEventArgs {
   EntitiesReadyToCollect: unknown;
 }
 
-/** both */
+/** response */
 export interface HarvestRemovedEventArgs {
   EntityHarvestId: number;
-  EntityHarvestType: number;
+  EntityHarvestType: string;
   IsCookingReady: boolean;
 }
 
@@ -7705,6 +8739,20 @@ export interface HealthPotionAssignmentConditionSpec {
 
 /** request */
 export interface HealthPotionConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  AbilityId: number;
+  MinLevelRequirement: number;
   RestorePoints: number;
 }
 
@@ -7726,9 +8774,13 @@ export interface Hero {
 
 /** request */
 export interface HeroBiographyPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   HeroTooltipModel: HeroTooltipModel;
   IsLocked: boolean;
-  PanelName: number;
   SpecContainerId: number;
 }
 
@@ -7741,6 +8793,8 @@ export interface HeroConsumableCountChangedEventArgs {
 
 /** request */
 export interface HeroConsumableEquipNotification {
+  Index: number;
+  NotificationType: number;
   ConsumableItem: unknown;
   HeroSpecContainerId: number;
 }
@@ -7752,6 +8806,7 @@ export interface HeroConsumableEquippedEventArgs {
 
 /** request */
 export interface HeroConsumableItem {
+  TemplateId: number;
   StackCount: number;
 }
 
@@ -7764,6 +8819,8 @@ export interface HeroConsumableSlot {
 
 /** request */
 export interface HeroConsumableUnequipNotification {
+  Index: number;
+  NotificationType: number;
   HeroSpecContainerId: number;
   SlotIndex: number;
 }
@@ -7780,6 +8837,13 @@ export interface HeroCorpseHarvestHoverEventArgs {
 
 /** request */
 export interface HeroCorpseHarvestHoverModel {
+  AmountToCollect: unknown;
+  EntityHarvestId: number;
+  EntityHarvestType: number;
+  IsCookingReady: boolean;
+  Position: unknown;
+  RemainingTime: number;
+  Xp: number;
   ElapsedTimeSinceDeath: number;
   FreeSlotsRequirement: number;
   HasItemsToCollect: boolean;
@@ -7798,6 +8862,35 @@ export interface HeroCorpseHarvestingSpec {
 
 /** request */
 export interface HeroCorpseHarvestingTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   CurrencyType: number;
   DeathTime: number;
   FreeSlotsRequirement: number;
@@ -7807,7 +8900,6 @@ export interface HeroCorpseHarvestingTooltipModel {
   IconUrl: string;
   IsHeroInventoryLargeEnough: boolean;
   IsStorageFull: boolean;
-  Type: number;
 }
 
 /** response */
@@ -7817,7 +8909,7 @@ export interface HeroCorpseSettings {
   MaxHeroCorpsesInCastle: number;
 }
 
-/** both */
+/** response */
 export interface HeroCreatedEventArgs {
   ErrorMessage: string;
   IsSuccess: boolean;
@@ -7856,11 +8948,18 @@ export interface HeroDeathModel {
 
 /** request */
 export interface HeroDeathPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   HeroDeathInfo: unknown;
 }
 
 /** request */
 export interface HeroDyeAppliedNotification {
+  Index: number;
+  NotificationType: number;
   DyeTemplateId: number;
   HeroItemSlot: number;
   HeroSpecContainerId: number;
@@ -7897,6 +8996,10 @@ export interface HeroEquipment {
 
 /** request */
 export interface HeroEquipmentBuyBackSlot {
+  CreationDate: string;  // datetime
+  Id: string;
+  ItemType: number;
+  Price: unknown;
   Item: unknown;
 }
 
@@ -7928,6 +9031,8 @@ export interface HeroEquipmentEquipCommand {
 
 /** request */
 export interface HeroEquipmentEquipNotification {
+  Index: number;
+  NotificationType: number;
   EquipmentItem: unknown;
   HeroItemSlot: number;
   HeroSpecContainerId: number;
@@ -7967,6 +9072,8 @@ export interface HeroEquipmentUnequipCommand {
 
 /** request */
 export interface HeroEquipmentUnequipNotification {
+  Index: number;
+  NotificationType: number;
   HeroItemSlot: number;
   HeroSpecContainerId: number;
 }
@@ -8017,6 +9124,8 @@ export interface HeroInsideTriggerAssignmentConditionSpec {
 
 /** request */
 export interface HeroInventoryAddedNotification {
+  Index: number;
+  NotificationType: number;
   InventorySlot: unknown;
   NewlyAdded: boolean;
 }
@@ -8065,26 +9174,33 @@ export interface HeroInventoryItemUpdatedEventArgs {
   StackCount: number;
 }
 
-/** both */
+/** response */
 export interface HeroInventoryNewItemCountChangedEventArgs {
   NewItemCount: number;
 }
 
 /** request */
 export interface HeroInventoryPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
+  IsInventoryOpenedChangingTab: boolean;
   GetEquippedItemsViewModel: GetEquippedItemsViewModel;
   GetHeroInventoryViewModel: GetHeroInventoryViewModel;
   GetHeroStatsModel: GetHeroStatsModel;
-  PanelName: number;
 }
 
-/** both */
+/** response */
 export interface HeroInventoryRefreshedEventArgs {
   GetHeroInventoryViewModel: GetHeroInventoryViewModel;
 }
 
 /** request */
 export interface HeroInventoryRemovedNotification {
+  Index: number;
+  NotificationType: number;
   SlotIndex: number;
 }
 
@@ -8098,22 +9214,33 @@ export interface HeroInventorySettings {
 
 /** both */
 export interface HeroInventorySlotUpdate {
+  Count: number;
   ItemType: number;
+  SlotIndex: number;
+  TemplateId: number;
 }
 
 /** request */
 export interface HeroInventorySlotUpdateForConsumable {
+  Count: number;
   ItemType: number;
+  SlotIndex: number;
+  TemplateId: number;
 }
 
 /** request */
 export interface HeroInventorySlotUpdateForHeroEquipment {
-  HeroItem: HeroItem;
+  Count: number;
   ItemType: number;
+  SlotIndex: number;
+  TemplateId: number;
+  HeroItem: HeroItem;
 }
 
 /** request */
 export interface HeroInventoryUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   SlotIndex: number;
   StackCount: number;
 }
@@ -8126,11 +9253,9 @@ export interface HeroItem {
 
 /** both */
 export interface HeroItemArchetype {
-  Damage: number;
-  GearScoreMultiplier: number;
-  HeroId: number;
-  Range: number;
-  Speed: number;
+  Id: number;
+  Name: unknown;
+  Probability: number;
 }
 
 /** unknown */
@@ -8211,9 +9336,10 @@ export interface HeroItemSellSettings {
   SellRarityModifiers: unknown;
 }
 
-/** unknown */
+/** response */
 export interface HeroItemSpecContainer {
-  Type: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -8295,9 +9421,9 @@ export interface HeroLevelAssignmentConditionSpec {
   MinLevel: unknown;
 }
 
-/** request */
+/** unknown */
 export interface HeroLevelReachedObjectiveRequirement {
-  Level: number;
+  Level: unknown;
 }
 
 /** unknown */
@@ -8305,15 +9431,21 @@ export interface HeroLevelUpAssignmentTriggerSpec {
   Level: unknown;
 }
 
-/** request */
+/** unknown */
 export interface HeroLevelUpFriendNewsData {
-  HeroLevel: number;
-  HeroName: string;
-  HeroSpecContainerId: number;
+  HeroLevel: unknown;
+  HeroName: unknown;
+  HeroSpecContainerId: unknown;
 }
 
 /** request */
 export interface HeroLevelUpOwnNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
+  FriendAccountId: number;
+  FriendAvatarId: number;
+  FriendDisplayName: string;
+  FriendSpecialPacks: number;
   HeroLevel: number;
   HeroName: string;
   HeroSpecContainerId: number;
@@ -8321,14 +9453,21 @@ export interface HeroLevelUpOwnNewsData {
 
 /** request */
 export interface HeroLevelUpPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
   ExcludeModalPopupOpening: boolean;
-  HeroUpgradeModel: HeroUpgradeModel;
   IsOpalPanel: boolean;
   PanelName: number;
+  HeroUpgradeModel: HeroUpgradeModel;
 }
 
 /** request */
 export interface HeroLevelUpReadyPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   HeroSpecContainerId: number;
   Level: number;
 }
@@ -8394,6 +9533,8 @@ export interface HeroSampleSkillModel {
 
 /** request */
 export interface HeroSelectedNotification {
+  Index: number;
+  NotificationType: number;
   HeroSpecContainerId: number;
 }
 
@@ -8414,6 +9555,11 @@ export interface HeroSelectionModel {
 
 /** request */
 export interface HeroSelectionPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CurrentHeroSpecContainerId: number;
   HeroSelections: unknown;
   LayerName: string;
@@ -8453,10 +9599,10 @@ export interface HeroSpec {
   UseHighPickingStyle: unknown;
 }
 
-/** unknown */
+/** response */
 export interface HeroSpecContainer {
-  Type: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -8542,6 +9688,35 @@ export interface HeroStatsSummaryModel {
 
 /** request */
 export interface HeroTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   Biography: string;
   Level: number;
   LongHeroName: string;
@@ -8551,17 +9726,25 @@ export interface HeroTooltipModel {
   StatModifierDescription: string;
   StatModifierIconUrl: string;
   TooltipIconUrl: string;
-  Type: number;
 }
 
 /** request */
 export interface HeroTrainerBuildingInfoDataModel {
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
   CurrentMaxHeroLevel: number;
   MaxMaxHeroLevel: number;
 }
 
 /** request */
 export interface HeroTrainerBuildingUpgradePopupModel {
+  BuildingUpgradePopupDataModel: BuildingUpgradePopupDataModel;
   NewMaxHeroLevel: number;
 }
 
@@ -8595,12 +9778,16 @@ export interface HeroUnequipSpellCommand {
 
 /** request */
 export interface HeroUnlockRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   ExpirationDate: string;  // datetime
   HeroSpecContainerId: number;
 }
 
 /** request */
 export interface HeroUnlockedNotification {
+  Index: number;
+  NotificationType: number;
   Hero: Hero;
 }
 
@@ -8638,12 +9825,51 @@ export interface HeroUpgradeModel {
 
 /** request */
 export interface HeroUpgradePanelNavigationModel {
-  HeroModel: HeroModel;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
   PanelName: number;
+  CurrencyAmount: CurrencyAmount;
+  InFreeTrial: boolean;
+  ItemType: number;
+  Level: number;
+  SkuCode: string;
+  SpecContainerId: number;
+  HeroModel: HeroModel;
 }
 
 /** request */
 export interface HeroUpgradeTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   DPSIncrease: number;
   HealthIncrease: number;
   IsXpRequirementMet: boolean;
@@ -8651,7 +9877,6 @@ export interface HeroUpgradeTooltipModel {
   ManaIncrease: number;
   NextLevel: number;
   SpecContainerId: number;
-  Type: number;
   UnlockedAbilities: unknown;
   XpRequirement: number;
 }
@@ -8701,6 +9926,8 @@ export interface HeroVoicesSounds {
 
 /** request */
 export interface HeroXpChangedNotification {
+  Index: number;
+  NotificationType: number;
   HeroSpecContainerId: number;
   Level: number;
   LevelChanged: boolean;
@@ -8724,7 +9951,7 @@ export interface HideShopItemsOnlyAssignmentActionSpec {
   ShopItems: unknown;
 }
 
-/** both */
+/** response */
 export interface HideTooltipEventArgs {
   Id: number;
 }
@@ -8873,6 +10100,11 @@ export interface HudManaChangedEventArgs {
 
 /** request */
 export interface HudPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CurrentArmor: number;
   CurrentHealth: number;
   CurrentLevelXp: number;
@@ -8938,7 +10170,7 @@ export interface ImmunitySpec {
 
 /** request */
 export interface InboxCollectCommand {
-  SlotIndexes: unknown;
+  ObjectId: string;
 }
 
 /** request */
@@ -8949,39 +10181,41 @@ export interface InboxCollectToBuyBackCommand {
 
 /** request */
 export interface InboxCollectToHeroEquipmentCommand {
+  ObjectId: string;
   HeroId: number;
   HeroItemSlot: number;
 }
 
 /** request */
 export interface InboxCollectToHeroInventoryCommand {
+  ObjectId: string;
   SlotIndexes: unknown;
 }
 
 /** request */
 export interface InboxConsumableItem {
-  HeroItem: HeroItem;
   ItemType: number;
+  ObjectId: string;
+  HeroItem: HeroItem;
 }
 
 /** request */
 export interface InboxHeroEquipmentItem {
   HeroItem: HeroItem;
   ItemType: number;
-  ItemType: number;
   ObjectId: string;
 }
 
 /** both */
 export interface InboxItem {
-  HeroItem: HeroItem;
-  ItemType: number;
   ItemType: number;
   ObjectId: string;
 }
 
 /** request */
 export interface InboxItemsAddedNotification {
+  Index: number;
+  NotificationType: number;
   InboxItems: InboxItem[];
 }
 
@@ -8992,12 +10226,16 @@ export interface IncrementSavedValueOperationSpec {
 
 /** request */
 export interface InstallCompletedTaskTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   Duration: number;
   IsFirstInstall: boolean;
 }
 
 /** request */
 export interface InstallPackageCompletedTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   Duration: number;
   IsSuccessful: boolean;
   PackageVersionId: unknown;
@@ -9005,6 +10243,8 @@ export interface InstallPackageCompletedTracking {
 
 /** request */
 export interface InstallPackageStartedTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   PackageVersionId: unknown;
   PatchFlags: number;
   VersionName: string;
@@ -9052,6 +10292,8 @@ export interface InternalTooltipOptions {
 
 /** request */
 export interface InvalidActionFeedback {
+  DebugMsg: string;
+  OasisId: number;
   Priority: number;
 }
 
@@ -9112,6 +10354,11 @@ export interface InvalidCastleFeedbacksInfos {
 
 /** request */
 export interface InventoryBuyTabPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CanAfford: boolean;
   Price: unknown;
   SkuCode: string;
@@ -9123,26 +10370,18 @@ export interface InventoryConsumablesInfo {
   TemplateId: number;
 }
 
-/** request */
+/** unknown */
 export interface InventoryDecoration {
-  Level: number;
+  Level: unknown;
 }
 
-/** request */
+/** unknown */
 export interface InventoryDefenseIngredientBoost {
-  Level: number;
+  Level: unknown;
 }
 
 /** both */
 export interface InventoryItem {
-  ArchetypeId: number;
-  DyeTemplateId: number;
-  Effects: unknown;
-  IsBranded: boolean;
-  IsSellable: boolean;
-  ItemLevel: number;
-  PowerUp: unknown;
-  PrimaryStatsModifiers: number;
   TemplateId: number;
 }
 
@@ -9159,6 +10398,8 @@ export interface InventoryItemOwnedAssignmentConditionSpec {
 
 /** request */
 export interface InventoryItemRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   Item: unknown;
 }
 
@@ -9179,11 +10420,21 @@ export interface InventoryMoveItemCommand {
 
 /** request */
 export interface InventoryPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   IsInventoryOpenedChangingTab: boolean;
 }
 
 /** request */
 export interface InventoryRoom {
+  AutoLevelUp: boolean;
+  AvailableCount: number;
+  BlueprintUnlocked: boolean;
+  NewlyAdded: boolean;
+  SpecContainerId: number;
   Level: number;
 }
 
@@ -9207,6 +10458,8 @@ export interface InventoryTabAddedEventArgs {
 
 /** request */
 export interface InventoryTabAddedNotification {
+  Index: number;
+  NotificationType: number;
   InventoryTabCount: number;
 }
 
@@ -9221,6 +10474,8 @@ export interface InventoryTabModel {
 
 /** request */
 export interface InventoryTabRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   Count: number;
 }
 
@@ -9342,6 +10597,17 @@ export interface JoinRequestModel {
 
 /** request */
 export interface KillEntitiesAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
+  Count: number;
   BossCreaturesOnly: boolean;
   CreatureIds: number;
   EntityType: number;
@@ -9513,13 +10779,21 @@ export interface LeaguePopupModel {
 
 /** request */
 export interface LeaguePopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
-  LeaguePopupModel: LeaguePopupModel;
   PanelName: number;
+  LeaguePopupModel: LeaguePopupModel;
 }
 
 /** request */
 export interface LeagueProgressionPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CurrentLeagueId: number;
   CurrentSubLeagueId: number;
   IsLastLeagueSelected: boolean;
@@ -9531,6 +10805,8 @@ export interface LeagueProgressionPanelNavigationModel {
 
 /** request */
 export interface LeagueRankReachedNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
   IsMaintained: boolean;
   IsPromoted: boolean;
   LeagueId: number;
@@ -9543,6 +10819,8 @@ export interface LeagueRankReachedNewsData {
 
 /** request */
 export interface LeagueUpdatedNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
   CurrentLeagueId: number;
   CurrentSubleagueId: number;
   IsDemoted: boolean;
@@ -9559,12 +10837,19 @@ export interface LeagueUpdatedNewsData {
 
 /** request */
 export interface LeagueUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   LeagueId: number;
   SubLeagueId: number;
 }
 
 /** request */
 export interface LeaveCastlePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CastleType: number;
   DefenderCastleName: string;
   HeroSpecContainerId: number;
@@ -9629,6 +10914,20 @@ export interface LevelsDifferenceXpModifier {
 
 /** request */
 export interface LifeForceBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
   AttackIncreasedLifeForce: number;
   MineIncreasedLifeForce: number;
 }
@@ -9706,10 +11005,10 @@ export interface LinearMoveToDestinationSpec {
   OffsetDistanceToDestination: unknown;
 }
 
-/** both */
+/** response */
 export interface LinkedAccountResult {
-  FacebookFriendsLinked: unknown;
-  FacebookFriendsNotLinked: unknown;
+  FacebookFriendsLinked: unknown[];
+  FacebookFriendsNotLinked: unknown[];
   ReconnectUrl: string;
   RequireReconnect: boolean;
 }
@@ -9886,6 +11185,20 @@ export interface MagicFindBoostCommunityEvent {
 
 /** request */
 export interface MagicFindBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
   IncreasedChance: number;
 }
 
@@ -9918,6 +11231,8 @@ export interface MagicalPropertyModel {
 
 /** request */
 export interface MaintenanceGlobalNotification {
+  Id: string;
+  NotificationType: number;
   MaintenanceScheduledDate: string;  // datetime
   MaintenanceScheduledInSeconds: number;
 }
@@ -10032,9 +11347,12 @@ export interface MessageBoxInformation {
 
 /** request */
 export interface MessageBoxPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
-  MessageBoxOption: unknown;
   PanelName: number;
+  MessageBoxOption: unknown;
 }
 
 /** unknown */
@@ -10044,6 +11362,8 @@ export interface MessageBoxSettings {
 
 /** request */
 export interface MessageNotification {
+  Index: number;
+  NotificationType: number;
   Sender: number;
   ThreadId: number;
 }
@@ -10073,6 +11393,14 @@ export interface MineBuildingDestructibleStateChangedEventArgs {
 
 /** request */
 export interface MineBuildingInfoDataModel {
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
   CurrentCapacity: number;
   CurrentHealth: number;
   CurrentProductionRate: number;
@@ -10104,6 +11432,18 @@ export interface MineBuildingSpec {
 
 /** request */
 export interface MineBuildingUpgradePopupDataModel {
+  BuildingInfoModel: BuildingInfoModel;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  CanAfford: boolean;
+  HeroLevelRequirement: number;
+  IsActive: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsHeroLevelRequirementMet: number;
+  NextBuildingRank: number;
+  ShopSkus: ShopSku[];
+  UnlockedItems: unknown;
+  UpgradeDurationInSeconds: number;
   NewCapacity: number;
   NewHealth: number;
   NewProductionRate: number;
@@ -10130,6 +11470,13 @@ export interface MineHarvestHoverEventArgs {
 
 /** request */
 export interface MineHarvestHoverModel {
+  AmountToCollect: unknown;
+  EntityHarvestId: number;
+  EntityHarvestType: number;
+  IsCookingReady: boolean;
+  Position: unknown;
+  RemainingTime: number;
+  Xp: number;
   IsStorageFull: boolean;
   MineDisplayName: string;
   MineMaxCapacity: number;
@@ -10139,6 +11486,8 @@ export interface MineHarvestHoverModel {
 
 /** request */
 export interface MinePillagedNotification {
+  Index: number;
+  NotificationType: number;
   CastleBuildingId: number;
   Destroyed: boolean;
   ShieldExpirableId: string;
@@ -10159,6 +11508,8 @@ export interface MineProductionCompletedInfosModel {
 
 /** request */
 export interface MineProductionCompletedNotification {
+  Index: number;
+  NotificationType: number;
   BuildingId: number;
   InventoryItemAdded: unknown;
   NextProductionExpirableId: string;
@@ -10168,8 +11519,12 @@ export interface MineProductionCompletedNotification {
 
 /** request */
 export interface MineProductionExpirable {
-  BuildingId: number;
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
+  BuildingId: number;
   ProductionValue: number;
 }
 
@@ -10184,6 +11539,8 @@ export interface MineProductionRemainingTimeUpdatedEventArgs {
 
 /** request */
 export interface MineProductionStartedNotification {
+  Index: number;
+  NotificationType: number;
   BuildingId: number;
   NextProductionExpirableId: string;
   ProductionLevel: number;
@@ -10197,12 +11554,18 @@ export interface MineShieldAddedEventArgs {
 
 /** request */
 export interface MineShieldExpirable {
-  BuildingId: number;
+  DueDate: string;  // datetime
+  DurationSeconds: number;
   ExpirableType: number;
+  Id: string;
+  IsPaused: boolean;
+  BuildingId: number;
 }
 
 /** request */
 export interface MineShieldExpiredNotification {
+  Index: number;
+  NotificationType: number;
   CastleBuildingId: number;
   ExpirableId: string;
 }
@@ -10220,6 +11583,11 @@ export interface MineStatus {
 
 /** request */
 export interface MineTimeBonusPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   TimeBonus: number;
 }
 
@@ -10248,10 +11616,10 @@ export interface MissileSpec {
   Movement: unknown;
 }
 
-/** unknown */
+/** response */
 export interface MissileSpecContainer {
-  Type: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -10259,9 +11627,12 @@ export interface MissileSpecContainerRef {
   SpecContainerReferenceId: unknown;
 }
 
-/** unknown */
+/** response */
 export interface ModifiedLootCommunityEvent {
-  ItemDropByType: unknown;
+  DebugName: string;
+  EventEndTime: string;  // datetime
+  EventStartTime: string;  // datetime
+  Id: number;
 }
 
 /** unknown */
@@ -10317,7 +11688,7 @@ export interface MovementSpec {
   CanMove: unknown;
 }
 
-/** both */
+/** response */
 export interface MovementSpeed {
   Id: number;
   Name: unknown;
@@ -10398,6 +11769,11 @@ export interface NarrativeVoTextPage {
 
 /** request */
 export interface NavBarPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CrownsCount: number;
   HeroID: number;
   HeroLevel: number;
@@ -10405,7 +11781,6 @@ export interface NavBarPanelNavigationModel {
   IsAttackDefenseVisible: boolean;
   IsInAttackSelection: boolean;
   NextLevelXp: number;
-  PanelName: number;
   WalletSummaryModel: WalletSummaryModel;
   Xp: number;
 }
@@ -10458,6 +11833,8 @@ export interface NavigationSpec {
 
 /** request */
 export interface NavigationTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   GameUrl: string;
 }
 
@@ -10484,6 +11861,8 @@ export interface News {
 
 /** request */
 export interface NewsAddedNotification {
+  Index: number;
+  NotificationType: number;
   NewsItem: unknown;
 }
 
@@ -10501,14 +11880,8 @@ export interface NewsChangedEventArgs {
 
 /** both */
 export interface NewsData {
-  IsMaintained: boolean;
-  IsPromoted: boolean;
-  LeagueId: number;
-  LeagueRank: number;
-  SubLeagueId: number;
-  SubLeagueName: string;
-  SubLeaguePrefixName: string;
-  SubLeagueSmallIconUrl: string;
+  RequiresUserAction: boolean;
+  Type: number;
 }
 
 /** both */
@@ -10540,9 +11913,8 @@ export interface NoHeroDeathCondition {
 
 /** both */
 export interface Notification {
-  AttackId: string;
-  CastleRating: number;
-  Message: Message;
+  Index: number;
+  NotificationType: number;
 }
 
 /** both */
@@ -10594,6 +11966,8 @@ export interface ObjectiveCompletedEventArgs {
 
 /** request */
 export interface ObjectiveCompletedNotification {
+  Index: number;
+  NotificationType: number;
   ObjectiveId: number;
 }
 
@@ -10604,17 +11978,19 @@ export interface ObjectiveCompletedObjectiveRequirement {
 
 /** request */
 export interface ObjectiveCompletedPanelNavigationModel {
-  Description: string;
+  Attachment: number;
+  DataNavigationInfo: unknown;
   ExcludeModalPopupOpening: boolean;
-  Id: number;
   IsOpalPanel: boolean;
   PanelName: number;
+  Description: string;
+  Id: number;
   Reward: Reward;
   RewardXp: number;
   Title: string;
 }
 
-/** both */
+/** response */
 export interface ObjectiveCondition {
   DebugName: string;
   OasisId: number;
@@ -10655,6 +12031,9 @@ export interface ObjectiveEntryModel {
 
 /** request */
 export interface ObjectiveListPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
 }
@@ -10671,17 +12050,19 @@ export interface ObjectivePopupClosedEventArgs {
 
 /** request */
 export interface ObjectivePopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ActionButtonModel: ActionButtonModel;
   Conditions: unknown;
   Description: string;
-  ExcludeModalPopupOpening: boolean;
   IconLayerName: string;
   IsCompleted: boolean;
   IsFailed: boolean;
   IsNew: boolean;
-  IsOpalPanel: boolean;
   ObjectiveId: number;
-  PanelName: number;
   Reward: Reward;
   Title: string;
   VoiceOverSoundId: string;
@@ -10700,13 +12081,15 @@ export interface ObjectiveProgressionModel {
 
 /** request */
 export interface ObjectiveProgressionUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   NewCount: number;
   ObjectiveId: number;
 }
 
-/** request */
+/** unknown */
 export interface ObjectiveRequirement {
-  AttackRegionId: number;
+  AttackRegionId: unknown;
 }
 
 /** unknown */
@@ -10727,9 +12110,9 @@ export interface ObjectiveSummaryEntryModel {
   Type: number;
 }
 
-/** request */
+/** unknown */
 export interface ObjectiveUnlockCommand {
-  ObjectiveId: number;
+  ObjectiveId: unknown;
 }
 
 /** unknown */
@@ -10745,6 +12128,8 @@ export interface ObjectiveUnlockedEventArgs {
 
 /** request */
 export interface ObjectiveUnlockedNotification {
+  Index: number;
+  NotificationType: number;
   AccountObjective: AccountObjective;
 }
 
@@ -10869,6 +12254,7 @@ export interface OpenPanelAssignmentActionSpec {
   IsOpalPanel: boolean;
   PanelName: string;
   TargetEntitySearch: unknown;
+  Conditions: unknown[];
 }
 
 /** both */
@@ -10923,6 +12309,11 @@ export interface OperationTargetSpec {
 
 /** request */
 export interface OptionControlSchemePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   GameStateType: number;
 }
 
@@ -10950,40 +12341,51 @@ export interface OptionModel {
 
 /** request */
 export interface OptionPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
+  PanelName: number;
   OptionViewModel: OptionViewModel;
   Tab: number;
 }
 
 /** both */
 export interface OptionParameterBaseModel {
-  Interval: number;
-  MaxValue: number;
-  MinValue: number;
+  DisplayName: string;
+  IsEnabled: boolean;
+  ParameterName: string;
   Type: number;
-  Value: number;
-  ValueToRoundDisplayValue: number;
 }
 
 /** request */
 export interface OptionParameterCheckboxModel {
-  IsChecked: boolean;
+  DisplayName: string;
+  IsEnabled: boolean;
+  ParameterName: string;
   Type: number;
+  IsChecked: boolean;
 }
 
 /** request */
 export interface OptionParameterComboboxModel {
-  SelectedKey: number;
+  DisplayName: string;
+  IsEnabled: boolean;
+  ParameterName: string;
   Type: number;
+  SelectedKey: number;
   Values: unknown;
 }
 
 /** request */
 export interface OptionParameterSliderModel {
+  DisplayName: string;
+  IsEnabled: boolean;
+  ParameterName: string;
+  Type: number;
   Interval: number;
   MaxValue: number;
   MinValue: number;
-  Type: number;
   Value: number;
   ValueToRoundDisplayValue: number;
 }
@@ -11039,9 +12441,12 @@ export interface OptionValueModel {
 
 /** request */
 export interface OptionVideoApplyPanelNavigationModel {
-  IsClosingOptionPanel: boolean;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
+  IsClosingOptionPanel: boolean;
 }
 
 /** both */
@@ -11113,8 +12518,6 @@ export interface OrientationSpec {
 /** both */
 export interface OrientedSpawnPosition {
   Orientation: number;
-  Orientation: number;
-  Orientation: number;
 }
 
 /** unknown */
@@ -11178,7 +12581,11 @@ export interface PanelNavigationEventArgs {
 
 /** both */
 export interface PanelNavigationModel {
-  RewardModel: RewardModel;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
 }
 
 /** unknown */
@@ -11211,10 +12618,10 @@ export interface PanelShownAssignmentTriggerSpec {
   ParameterValue: unknown;
 }
 
-/** both */
+/** response */
 export interface PanelSoundPresets {
-  ActivationPresets: unknown;
-  DeactivationPresets: unknown;
+  ActivationPresets: unknown[];
+  DeactivationPresets: unknown[];
 }
 
 /** both */
@@ -11224,6 +12631,8 @@ export interface PanelSoundPresetsSettings {
 
 /** request */
 export interface PanelTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   OpenCloseDurationInseconds: number;
   Panel: number;
 }
@@ -11248,6 +12657,11 @@ export interface PatchingSettings {
 
 /** request */
 export interface PausePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   DisableLeaveCastle: boolean;
   DisableRestartCastle: boolean;
   IsAttack: boolean;
@@ -11353,6 +12767,7 @@ export interface PlayGameClickedTracking {
 export interface PlayMovieAssignmentActionSpec {
   IsMovieSkippable: boolean;
   MovieFile: string;
+  EndTriggers: unknown[];
 }
 
 /** request */
@@ -11393,6 +12808,7 @@ export interface PlayerLoadConfig {
 
 /** request */
 export interface PopUpNarrativeVoTextPagesSpec {
+  Tag: string;  // enum
   NarrativeVoTextPages: NarrativeVoTextPage[];
 }
 
@@ -11432,6 +12848,13 @@ export interface PopupAssignmentActionSpec {
   TitleOasisId: number;
   Top: number;
   Type: number;
+  Conditions: unknown[];
+  Disabled: boolean;
+  Duration: number;
+  EndTriggers: unknown[];
+  EndType: string;
+  StartDelay: number;
+  StartType: string;
 }
 
 /** unknown */
@@ -11463,6 +12886,11 @@ export interface PopupOnTargetAssignmentActionSpec {
 
 /** request */
 export interface PopupOptionsModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ArrowDirection: number;
   ArrowPosition: number;
   GameButtonId: number;
@@ -11471,13 +12899,11 @@ export interface PopupOptionsModel {
   Id: string;
   InventoryItemDefinition: unknown;
   IsCloseButtonVisible: boolean;
-  IsOpalPanel: boolean;
   Left: number;
   NarrativePictureUrl: string;
   OffsetLeft: number;
   OffsetTop: number;
   OverlayAlpha: number;
-  PanelName: number;
   ParentContainer: string;
   PopupBindingVariable: string;
   Position: number;
@@ -11496,7 +12922,7 @@ export interface PopupOptionsModel {
   Type: number;
 }
 
-/** both */
+/** response */
 export interface PopupShowMoreTextEventArgs {
   Id: string;
 }
@@ -11532,7 +12958,20 @@ export interface PotentialLoot {
 
 /** request */
 export interface PotionConsumableTemplate {
-  RestorePoints: number;
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  AbilityId: number;
+  MinLevelRequirement: number;
 }
 
 /** both */
@@ -11586,6 +13025,18 @@ export interface PremiumCashBoostCommunityEvent {
 
 /** request */
 export interface PremiumCashBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
   MineIncreasedPremiumCash: number;
   BuffSpecContainerId: number;
   Duration: number;
@@ -11634,6 +13085,8 @@ export interface PrivateAdminMessageData {
 
 /** request */
 export interface PrivateAdminMessageNotification {
+  Index: number;
+  NotificationType: number;
   Message: string;
 }
 
@@ -11677,13 +13130,13 @@ export interface ProfanityFilteredCastleComment {
   Value: string;
 }
 
-/** both */
+/** response */
 export interface ProfanityFilteredDescription {
   Language: string;
   Value: string;
 }
 
-/** both */
+/** response */
 export interface ProfanityFilteredString {
   Language: string;
   Value: string;
@@ -11716,6 +13169,11 @@ export interface ProfanityProofString {
 
 /** request */
 export interface ProfilePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AccountId: number;
   Tab: number;
 }
@@ -11892,6 +13350,11 @@ export interface QualityColorTableEntry {
 
 /** request */
 export interface QuitGamePanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   IsCastleShareable: boolean;
   IsCastleValidated: boolean;
   IsNUECompleted: boolean;
@@ -11992,6 +13455,16 @@ export interface ReachLeagueObjective {
 
 /** request */
 export interface ReachLevelAchievement {
+  DebugName: string;
+  Description: string;
+  DescriptionId: number;
+  Icon: string;
+  Id: number;
+  Points: number;
+  SteamId: string;
+  SteamStatId: string;
+  Title: string;
+  TitleId: number;
   Heroes: unknown;
 }
 
@@ -12028,9 +13501,13 @@ export interface RegionMapCastle {
 
 /** request */
 export interface RegionMapPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AttackRegionsViewModel: AttackRegionsViewModel;
   CurrentRegion: number;
-  PanelName: number;
   PendingRegionsChangedViewModel: PendingRegionsChangedViewModel;
 }
 
@@ -12062,6 +13539,11 @@ export interface RemoveCastleTriggerCommand {
 
 /** request */
 export interface RenovateBuildingPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuildingDescriptionOasisId: number;
   BuildingNameOasisId: number;
   BuildingType: number;
@@ -12146,6 +13628,11 @@ export interface ResistedValueSpec {
 
 /** request */
 export interface RestartAttackPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CastleType: number;
   DefenderCastleName: string;
   HeroIconModel: HeroIconModel;
@@ -12201,7 +13688,6 @@ export interface Reward {
 
 /** both */
 export interface RewardItemBase {
-  CurrencyAmount: CurrencyAmount;
   LargeIconUrl: string;
   SmallIconUrl: string;
 }
@@ -12285,6 +13771,11 @@ export interface RoomConnectorNodeInfoCollection {
 
 /** request */
 export interface RoomDecorationPointsPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   DecorationPoints: number;
   IconUrl: string;
   MaxDecorationPoints: number;
@@ -12307,17 +13798,12 @@ export interface RoomObject {
   Probability: number;
   SpecContainerId: number;
   SpecContainerType: number;
-  SpecContainerType: number;
-  SpecContainerType: number;
-  SpecContainerType: number;
 }
 
 /** both */
 export interface RoomObstacle {
   Orientation: number;
   Thickness: number;
-  Width: number;
-  Width: number;
   Width: number;
 }
 
@@ -12336,8 +13822,6 @@ export interface RoomProceduralBuildablesSpec {
 /** both */
 export interface RoomSection {
   Passages: unknown;
-  Passages: number;
-  Passages: number;
 }
 
 /** unknown */
@@ -12359,11 +13843,10 @@ export interface RoomSpec {
   TrapsCapacity: unknown;
 }
 
-/** unknown */
+/** response */
 export interface RoomSpecContainer {
-  Type: unknown;
-  p_O: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -12374,9 +13857,37 @@ export interface RoomSpecContainerRef {
 
 /** request */
 export interface RoomTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   DecorationSlotCount: number;
   RoomModelCategory: number;
-  Type: number;
 }
 
 /** both */
@@ -12387,8 +13898,6 @@ export interface RoomZone {
 
 /** both */
 export interface RoomZoneCell {
-  CellTypeMask: number;
-  CellTypeMask: number;
   CellTypeMask: number;
 }
 
@@ -12507,6 +14016,11 @@ export interface SeasonalCompetitionModel {
 
 /** request */
 export interface SeasonalCompetitionPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   FilterCode: string;
   IsPanelOpened: boolean;
   LeaderboardLevel: number;
@@ -12541,6 +14055,8 @@ export interface SeasonalCompetitionSettings {
 
 /** request */
 export interface SeasonalCompetitionStartedNotification {
+  Id: string;
+  NotificationType: number;
   StartDate: string;  // datetime
 }
 
@@ -12577,21 +14093,24 @@ export interface SecurableObject {
 
 /** request */
 export interface SecurableObjectPackageType {
+  Id: string;
   PackageType: number;
 }
 
-/** both */
+/** response */
 export interface SecurityContext {
   Id: string;
 }
 
 /** request */
 export interface SecurityContextBranch {
+  Id: string;
   BranchName: string;
 }
 
 /** request */
 export interface SecurityContextBranchEnvironment {
+  Id: string;
   BranchName: string;
   EnvironmentName: string;
   EnvironmentType: number;
@@ -12599,6 +14118,8 @@ export interface SecurityContextBranchEnvironment {
 
 /** request */
 export interface SecurityGroup {
+  Name: string;
+  Permissions: unknown;
   Members: unknown;
 }
 
@@ -12611,10 +14132,10 @@ export interface SecurityPermission {
   SecurityContext: SecurityContext;
 }
 
-/** both */
+/** response */
 export interface SecurityPrincipal {
   Name: string;
-  Permissions: unknown;
+  Permissions: unknown[];
 }
 
 /** both */
@@ -12703,6 +14224,8 @@ export interface ServerAssignmentActionCompletedEventArgs {
 
 /** request */
 export interface ServerAssignmentActionCompletedNotification {
+  Index: number;
+  NotificationType: number;
   AssignmentActionIndex: number;
   AssignmentId: number;
 }
@@ -12718,10 +14241,10 @@ export interface ServerAttackEndedAssignmentTriggerSpec {
   HeroMinLevel: unknown;
 }
 
-/** request */
+/** unknown */
 export interface ServerCommand {
-  HeroItemSlot: number;
-  InventorySlotIndex: number;
+  HeroItemSlot: unknown;
+  InventorySlotIndex: unknown;
 }
 
 /** both */
@@ -12749,6 +14272,8 @@ export interface ServerNotificationReceivedTriggerSpec {
 
 /** request */
 export interface SessionTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   AttackTotalTime: number;
   BuildTotalTime: number;
   IdleTime: number;
@@ -12871,19 +14396,19 @@ export interface ShapeSpec {
   Radius: unknown;
 }
 
-/** request */
+/** unknown */
 export interface ShieldAddedNotification {
-  ExpirableId: string;
+  ExpirableId: unknown;
 }
 
-/** request */
+/** unknown */
 export interface ShieldEndExpirable {
-  ExpirableType: number;
+  ExpirableType: unknown;
 }
 
-/** request */
+/** unknown */
 export interface ShieldExpiredNotification {
-  ExpirableId: string;
+  ExpirableId: unknown;
 }
 
 /** both */
@@ -12924,7 +14449,18 @@ export interface ShopConfirmationPopupModel {
 
 /** request */
 export interface ShopConfirmationPopupPanelNavigationModel {
-  BuildingId: number;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
+  DyeInfoModel: DyeInfoModel;
+  InitialCurrencyType: number;
+  ItemCount: number;
+  ItemId: number;
+  ItemType: number;
+  ShopConfirmationPopupModel: ShopConfirmationPopupModel;
+  WalletAmount: number;
 }
 
 /** both */
@@ -12962,13 +14498,14 @@ export interface ShopFilterSelectedAssignmentTriggerSpec {
   ShopFilterValueId: unknown;
 }
 
-/** both */
+/** response */
 export interface ShopFilterValue {
   Id: number;
 }
 
 /** request */
 export interface ShopFilterValueDecorationCategory {
+  Id: number;
   DecorationCategoryMask: number;
   DecorationCategoryMaskName: string;
   DecorationCategoryMaskOasisId: number;
@@ -12996,6 +14533,7 @@ export interface ShopFilterValueLevel {
 
 /** request */
 export interface ShopFilterValueUnifiedShop {
+  Id: number;
   FilterOasisId: number;
   FilterOasisName: string;
   ShopCategory: number;
@@ -13003,6 +14541,8 @@ export interface ShopFilterValueUnifiedShop {
 
 /** request */
 export interface ShopGlanceViewTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   ItemCount: number;
   ItemId: number;
   ItemType: number;
@@ -13062,6 +14602,11 @@ export interface ShopNewItemsCountRefreshedEventArgs {
 
 /** request */
 export interface ShopPackOpenningModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   AreCraftingMaterialsAddedToBuyBack: boolean;
   MaterialCount: number;
   Materials: unknown;
@@ -13069,6 +14614,11 @@ export interface ShopPackOpenningModel {
 
 /** request */
 export interface ShopPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   BuildingId: number;
   BuildingMaxRank: number;
   BuildingRank: number;
@@ -13242,11 +14792,19 @@ export interface ShortcutCodeCollection {
 
 /** request */
 export interface ShortcutKeyCode {
+  CanStillBeTriggeredWithShiftPressedA: boolean;
+  IgnoredModifiers: number;
+  IsGrabbable: boolean;
+  RequiredModifiers: number;
   Key: number;
 }
 
 /** request */
 export interface ShortcutMouseButtonCode {
+  CanStillBeTriggeredWithShiftPressedA: boolean;
+  IgnoredModifiers: number;
+  IsGrabbable: boolean;
+  RequiredModifiers: number;
   MouseButton: number;
 }
 
@@ -13262,8 +14820,6 @@ export interface ShowBuildingHoverTooltipEventArgs {
   BuildingRank: number;
   MaxBuildingRank: number;
   SpecialMessage: string;
-  SpecialMessage: number;
-  SpecialMessage: number;
 }
 
 /** both */
@@ -13272,12 +14828,13 @@ export interface ShowCreatureHoverTooltipEventArgs {
   CreatureName: string;
   IsCreatureSleeping: boolean;
   ToolTipModel: unknown;
-  ToolTipModel: number;
-  ToolTipModel: number;
 }
 
 /** request */
 export interface ShowLotteryTicketPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
   PanelName: number;
   PlayScratchAnimation: boolean;
@@ -13285,6 +14842,8 @@ export interface ShowLotteryTicketPanelNavigationModel {
 
 /** request */
 export interface ShowMoreCastleNotification {
+  Index: number;
+  NotificationType: number;
   AttackSelectionResult: AttackSelectionResult;
   RegionId: number;
 }
@@ -13302,8 +14861,6 @@ export interface ShowPopupMenuEventArgs {
   itemLabels: unknown;
   rightAligned: boolean;
   selectedItem: number;
-  width: number;
-  width: number;
   width: number;
 }
 
@@ -13326,15 +14883,11 @@ export interface ShowTrapHoverTooltipEventArgs {
   IsPowered: number;
   PowerConsumption: number;
   TrapName: string;
-  TrapName: number;
-  TrapName: number;
 }
 
 /** both */
 export interface ShowTrapPowerSupplyHoverTooltipEventArgs {
   Name: string;
-  Name: number;
-  Name: number;
 }
 
 /** both */
@@ -13377,10 +14930,13 @@ export interface SimulationLoadedAssignmentTriggerSpec {
 
 /** request */
 export interface SkillTreePanelNavigationModel {
-  EquippedSpells: unknown;
+  Attachment: number;
+  DataNavigationInfo: unknown;
   ExcludeModalPopupOpening: boolean;
-  FamilyId: number;
   IsOpalPanel: boolean;
+  PanelName: number;
+  EquippedSpells: unknown;
+  FamilyId: number;
   SpellTrees: unknown;
 }
 
@@ -13392,11 +14948,44 @@ export interface SkuCommunityEvent {
 
 /** request */
 export interface SkusModifiersUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   ShopSkuModifiers: ShopSkuModifier[];
 }
 
 /** request */
 export interface SleepyGiantAccountInformation {
+  AccountId: number;
+  ActiveConsumables: ActiveConsumable[];
+  AvatarId: number;
+  BuildInfo: BuildInfo;
+  BuyBack: unknown;
+  CastleRenovationLevel: number;
+  CompletedAssignments: number;
+  DisplayName: string;
+  DisplayNameValidationDate: string;  // datetime
+  Friends: unknown;
+  FriendshipInvitations: FriendshipInvitation[];
+  GamerScore: number;
+  Heroes: unknown;
+  HeroFreeTrialInfoPeriod: HeroFreeTrialInfoPeriod;
+  Inbox: unknown;
+  Inventory: unknown;
+  LastViewedDates: unknown;
+  LeagueId: number;
+  Objectives: Objective[];
+  Privileges: number;
+  ProfanityFiltering: boolean;
+  RecommendedFriends: unknown;
+  SelectedHeroId: number;
+  SpecialPacks: number;
+  Stats: unknown;
+  SubLeagueId: number;
+  TrophyScore: number;
+  UnlockedAvatars: number;
+  UnlockedEmotes: number;
+  UnlockedSpells: unknown;
+  Wallet: Wallet;
   Achievements: Achievement[];
 }
 
@@ -13587,6 +15176,35 @@ export interface SpellShortcutKeyModel {
 
 /** request */
 export interface SpellTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   Cooldown: number;
   DescriptionFormulas: unknown;
   HeroDamagePerSecond: number;
@@ -13597,7 +15215,6 @@ export interface SpellTooltipModel {
   ManaCost: number;
   ManaCostPerSecond: number;
   SpellLevel: number;
-  Type: number;
 }
 
 /** both */
@@ -13613,6 +15230,8 @@ export interface SpellUnlockedChangedEventArgs {
 
 /** request */
 export interface SpellUnlockedNotification {
+  Index: number;
+  NotificationType: number;
   Spell: Spell;
 }
 
@@ -13636,9 +15255,9 @@ export interface SphereShapeSpec {
   Radius: unknown;
 }
 
-/** request */
+/** unknown */
 export interface StartAssignmentCommand {
-  AssignmentId: number;
+  AssignmentId: unknown;
 }
 
 /** both */
@@ -13705,6 +15324,8 @@ export interface StatValueSpec {
 
 /** request */
 export interface StateMachineTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   States: unknown;
 }
 
@@ -13794,6 +15415,14 @@ export interface SteamResult {
 
 /** request */
 export interface StorageBuildingInfoDataModel {
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
   CurrentCapacity: number;
   MaxCapacity: number;
 }
@@ -13811,6 +15440,18 @@ export interface StorageBuildingSpec {
 
 /** request */
 export interface StorageBuildingUpgradePopupDataModel {
+  BuildingInfoModel: BuildingInfoModel;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  CanAfford: boolean;
+  HeroLevelRequirement: number;
+  IsActive: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsHeroLevelRequirementMet: number;
+  NextBuildingRank: number;
+  ShopSkus: ShopSku[];
+  UnlockedItems: unknown;
+  UpgradeDurationInSeconds: number;
   NewCapacity: number;
 }
 
@@ -13948,19 +15589,26 @@ export interface TargetedAttackEventArgs {
   TargetedAttackAvailableCount: number;
 }
 
-/** request */
+/** unknown */
 export interface TargetedAttackExpirable {
-  ExpirableType: number;
+  ExpirableType: unknown;
 }
 
 /** request */
 export interface TargetedAttackPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ShouldShowTargetedAttackNotification: boolean;
   TargetedAttackAvailableCount: number;
 }
 
 /** request */
 export interface TargetedAttackReloadedNotification {
+  Index: number;
+  NotificationType: number;
   TargetedAttackAvailableCount: number;
 }
 
@@ -13983,6 +15631,7 @@ export interface TextUpdatedEventArgs {
 
 /** request */
 export interface TextValidatedEventArgs {
+  Text: string;
   IsEnterPressed: boolean;
 }
 
@@ -14007,18 +15656,22 @@ export interface Theme {
   ThemeId: number;
 }
 
-/** request */
+/** unknown */
 export interface ThemeRemovedNotification {
-  ThemeId: number;
+  ThemeId: unknown;
 }
 
 /** request */
 export interface ThemeRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   ThemeId: number;
 }
 
 /** request */
 export interface ThemeSelectedNotification {
+  Index: number;
+  NotificationType: number;
   ThemeId: number;
 }
 
@@ -14027,9 +15680,9 @@ export interface ThemeSettings {
   CastleThemes: unknown;
 }
 
-/** request */
+/** unknown */
 export interface ThemeUnlockedNotification {
-  ThemeId: number;
+  ThemeId: unknown;
 }
 
 /** both */
@@ -14127,16 +15780,35 @@ export interface TooltipManagerSettings {
 
 /** both */
 export interface TooltipModel {
-  CurrencyType: number;
-  DeathTime: number;
-  FreeSlotsRequirement: number;
-  HasItemsToCollect: boolean;
-  HeroDisplayName: string;
-  HeroLevel: number;
-  IconUrl: string;
-  IsHeroInventoryLargeEnough: boolean;
-  IsStorageFull: boolean;
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
   Type: number;
+  UpdateLocked: boolean;
 }
 
 /** unknown */
@@ -14169,10 +15841,38 @@ export interface TotemSpec {
 
 /** request */
 export interface TotemTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
   CPCapacity: number;
   HealtPoints: number;
   Level: number;
-  Type: number;
 }
 
 /** both */
@@ -14183,13 +15883,16 @@ export interface TraceRouteHop {
 
 /** request */
 export interface TraceRouteTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   HostName: string;
   TraceRoute: unknown;
 }
 
 /** both */
 export interface TrackingBase {
-  GameUrl: string;
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
 }
 
 /** request */
@@ -14220,10 +15923,10 @@ export interface TrapSpec {
   XpRewardShape: unknown;
 }
 
-/** unknown */
+/** response */
 export interface TrapSpecContainer {
-  Type: unknown;
-  SpecContainerReferenceId: unknown;
+  Name: string;
+  Specs: Spec[];
 }
 
 /** unknown */
@@ -14253,6 +15956,51 @@ export interface TrapTiersSpec {
 
 /** request */
 export interface TrapTooltipModel {
+  AnchorPosition: number;
+  ArrowPosition: number;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  BuyBackId: string;
+  BuyPrice: unknown;
+  CanBeSold: boolean;
+  Description: string;
+  IsAffordable: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsEntityTooltip: boolean;
+  IsLevelRequirementMet: boolean;
+  IsOwned: boolean;
+  IsSteamMarketable: boolean;
+  IsUpgrading: boolean;
+  LevelRequirement: number;
+  LimitedTimeInSeconds: number;
+  MaxAffordableCount: number;
+  MaxOwningCount: number;
+  OffsetPositionX: number;
+  OffsetPositionY: number;
+  SellPrice: unknown;
+  ShouldHidePriceSection: boolean;
+  TemporaryShopItemDescription: string;
+  Title: string;
+  TooltipContext: number;
+  TooltipOpeningDelay: number;
+  Type: number;
+  UpdateLocked: boolean;
+  Abilities: unknown;
+  AttackSpeed: string;
+  AutoLevelUp: boolean;
+  BehaviorCategory: string;
+  DamageFormula: string;
+  DefensePoints: number;
+  Health: number;
+  IsOldIngredient: boolean;
+  Level: number;
+  MaxLevel: number;
+  MovementSpeed: string;
+  RequiredCraftingMaterials: unknown;
+  ShopContext: number;
+  ShowSpecializations: boolean;
+  Specializations: unknown;
+  Tier: number;
   IsPowerNeeded: boolean;
   PowerConsumption: number;
   PowerSupplied: number;
@@ -14337,6 +16085,8 @@ export interface TrophyScoreChangedEventArgs {
 
 /** request */
 export interface TrophyScoreChangedNotification {
+  Index: number;
+  NotificationType: number;
   TrophyScore: number;
 }
 
@@ -14519,7 +16269,7 @@ export interface UIOasisSettings {
   ValidateCastleSettings: unknown;
 }
 
-/** both */
+/** response */
 export interface UIOptionInformation {
   Text: string;
 }
@@ -14641,6 +16391,16 @@ export interface UIValidateCaslteOasisSettings {
 
 /** both */
 export interface UbisoftCastle {
+  AccountDisplayName: string;
+  AccountId: number;
+  CreationDate: string;  // datetime
+  CreatureTiers: unknown;
+  LayoutId: number;
+  ModificationDate: string;  // datetime
+  OasisNameId: number;
+  Rooms: unknown;
+  ThemeId: number;
+  TrapTiers: unknown;
   ActivationDate: string;  // datetime
   CastleIconUrl: string;
   CastleValidationDuration: number;
@@ -14654,6 +16414,8 @@ export interface UbisoftCastle {
   Level: number;
   OasisDescription: number;
   OasisName: number;
+  PublishedCastleId: string;
+  Signature: string;
 }
 
 /** response */
@@ -14665,6 +16427,11 @@ export interface UbisoftCompetitionAttackerRewardTier {
 
 /** request */
 export interface UbisoftCompetitionDetailPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   UbisoftCompetitionId: number;
 }
 
@@ -14753,7 +16520,7 @@ export interface UiBuildingInfoSpec {
   ShopIconUrl: unknown;
 }
 
-/** both */
+/** response */
 export interface UiBuildingRank {
   InvIconUrl: string;
   LayerName: string;
@@ -14889,13 +16656,18 @@ export interface UnlockAttackRegionAssignmentActionSpec {
   AttackRegionIds: unknown;
 }
 
-/** both */
+/** response */
 export interface UnlockButtonEventArgs {
-  Button: number;
+  Button: string;
 }
 
 /** request */
 export interface UnlockCastleThemePopupPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   CanAfford: boolean;
   CurrencyAmount: CurrencyAmount;
   InvIconUrl: string;
@@ -14966,6 +16738,12 @@ export interface UpdatePanelScreenPositionEventArgs {
 
 /** request */
 export interface UpgradeBuildingCommand {
+  Id: number;
+  Orientation: number;
+  RoomId: number;
+  RoomZoneId: number;
+  SpecContainerId: number;
+  IsCastlePublishable: boolean;
   BuildingUpgradeRank: number;
   ConsumedHeroInventory: unknown;
   SkuCode: string;
@@ -15073,14 +16851,14 @@ export interface UserInterfaceSounds {
   UiSoundsById: unknown;
 }
 
-/** request */
+/** unknown */
 export interface UserMessageData {
-  Body: string;
+  Body: unknown;
 }
 
-/** request */
+/** unknown */
 export interface UserMessagePreviewData {
-  Summary: string;
+  Summary: unknown;
 }
 
 /** both */
@@ -15135,12 +16913,22 @@ export interface VictoryConditionLevelChangedEventArgs {
 
 /** request */
 export interface VictoryConditionStarAnimationPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   PosX: number;
   PosY: number;
 }
 
 /** request */
 export interface VictoryPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   posX: number;
   posY: number;
   RewardModel: RewardModel;
@@ -15154,14 +16942,19 @@ export interface VideoCaptureChangedEventArgs {
 
 /** request */
 export interface VideoCapturePanelNavigationModel {
-  Capturing: boolean;
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
   IsOpalPanel: boolean;
-  NbFilesInFolder: number;
   PanelName: number;
+  Capturing: boolean;
+  NbFilesInFolder: number;
 }
 
 /** request */
 export interface VideoCaptureTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   GameStateType: number;
   IsEnable: boolean;
 }
@@ -16123,6 +17916,8 @@ export interface Wallet {
 
 /** request */
 export interface WalletCapacityUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   Amount: number;
   CurrencyType: number;
 }
@@ -16154,12 +17949,16 @@ export interface WalletSummaryModel {
 
 /** request */
 export interface WalletUpdatedNotification {
+  Index: number;
+  NotificationType: number;
   Amounts: unknown;
   UpdateTag: number;
 }
 
 /** request */
 export interface WatchedReplayTracking {
+  CreationDate: string;  // datetime
+  TrackingTagId: number;
   AttackId: string;
   EndFrame: number;
   FrameCount: number;
@@ -16170,6 +17969,9 @@ export interface WatchedReplayTracking {
 
 /** request */
 export interface WeaponArchetype {
+  Id: number;
+  Name: unknown;
+  Probability: number;
   Damage: number;
   GearScoreMultiplier: number;
   HeroId: number;
@@ -16225,6 +18027,11 @@ export interface WheelButtonSettings {
 
 /** request */
 export interface WheelPanelNavigationModel {
+  Attachment: number;
+  DataNavigationInfo: unknown;
+  ExcludeModalPopupOpening: boolean;
+  IsOpalPanel: boolean;
+  PanelName: number;
   ActiveWheel: number;
   IsCastleValidated: boolean;
   LeftWheelButtonsAreDisabled: number;
@@ -16253,22 +18060,45 @@ export interface WinUbisoftCompetitionObjective {
 
 /** request */
 export interface WorkerCabinBuildingInfoDataModel {
+  Boost: number;
+  BoostText: string;
+  BuildingName: string;
+  BuildingType: number;
+  CurrentBuildingRank: number;
+  Description: string;
+  IconUrl: string;
+  MaxBuildingRank: number;
   CurrentWorkerCount: number;
   MaxWorkerCount: number;
 }
 
 /** request */
 export interface WorkerCabinBuildingUpgradePopupDataModel {
+  BuildingInfoModel: BuildingInfoModel;
+  BuildingRequirementName: string;
+  BuildingRequirementRank: number;
+  CanAfford: boolean;
+  HeroLevelRequirement: number;
+  IsActive: boolean;
+  IsBuildingRequirementMet: boolean;
+  IsHeroLevelRequirementMet: number;
+  NextBuildingRank: number;
+  ShopSkus: ShopSku[];
+  UnlockedItems: unknown;
+  UpgradeDurationInSeconds: number;
   NewWorkerCount: number;
 }
 
-/** request */
+/** unknown */
 export interface WorkerCabinRewardItem {
-  Count: number;
+  Count: unknown;
+  iner: unknown;
 }
 
 /** request */
 export interface WorldRankReachedNewsData {
+  RequiresUserAction: boolean;
+  Type: number;
   WorldRank: number;
 }
 
@@ -16297,11 +18127,39 @@ export interface XmppInfo {
 
 /** request */
 export interface XpBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
   IncreasedXp: number;
 }
 
 /** request */
 export interface XpLeashBoostConsumableTemplate {
+  BuildingRequirementRank: number;
+  BuildingRequirementSpecContainerId: number;
+  IsLootable: boolean;
+  MaxInventoryStackCount: number;
+  Name: unknown;
+  Price: unknown;
+  Quality: number;
+  Rarity: number;
+  SteamAssetSpec: SteamAssetSpec;
+  SteamAssetUiSpec: SteamAssetUiSpec;
+  TemplateId: number;
+  Ui: unknown;
+  BuffSpecContainerId: number;
+  Duration: number;
   IncreasedXp: number;
   LevelDiffFrom: number;
   LevelDiffTo: number;
@@ -16316,13 +18174,15 @@ export interface XpLootBaseCpMultiplierTableEntry {
 
 /** request */
 export interface XpRewardItem {
+  LargeIconUrl: string;
+  SmallIconUrl: string;
   Xp: number;
 }
 
-/** request */
+/** unknown */
 export interface YoutubePanelNavigationModel {
-  IsOpalPanel: boolean;
-  PanelName: number;
+  IsOpalPanel: unknown;
+  PanelName: unknown;
 }
 
 /** both */

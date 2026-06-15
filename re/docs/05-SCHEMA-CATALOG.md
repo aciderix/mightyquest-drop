@@ -63,6 +63,21 @@ non-obvious ones are listed in `re/catalog/network/special_fields.txt`:
 Numeric width (int/uint/byte/short/long/ulong/double) is captured per field for
 value-range validity, though all share the bare-number wire form.
 
+### Structural completeness (inheritance recovery + game-data merge)
+The codec walker now **follows base-class delegation**: a serialize/deserialize
+method that calls another contract's serialize/deserialize (base class) has those
+inherited fields merged in (base first, deduped). This recovered **~1,800 fields**
+the per-method walk previously missed (e.g. `DefeatCastleAchievement` now carries
+its base `Id`/`Points`/`DescriptionId`/`SteamId`/… — 5,461 → **7,286 typed
+fields**). The game-data observed fields are then merged on top.
+
+Cross-checking the result against the real game data: **286 observed fields
+confirmed and 0 types with any field missing** (was 32 types with gaps). So for
+every contract that also appears in the game data, our schema now has the
+complete field set. Structure + types + wire shape + enum values are complete;
+only the **runtime values** (which id, which fields populated when) still require
+live traffic to pin down.
+
 ### Ground truth from the game's own data (`gamedata/`)
 The game's `GameplaySettings` JSON (8,726 files, supplied separately — raw assets
 not committed) was mined by `analyze_gamedata.py` into derived catalogs under

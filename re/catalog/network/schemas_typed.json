@@ -97,20 +97,45 @@
    ]
   ]
  },
+ "AbilitySpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "AbstractFriendNewsData": {
   "direction": "request",
   "fields": [
    [
-    "RequiredLevel",
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
     "int"
    ],
    [
-    "RequiredReferralFriends",
+    "FriendAccountId",
     "int"
    ],
    [
-    "Reward",
-    "object"
+    "FriendAvatarId",
+    "int"
+   ],
+   [
+    "FriendDisplayName",
+    "string"
+   ],
+   [
+    "FriendSpecialPacks",
+    "ushort"
    ]
   ]
  },
@@ -170,7 +195,19 @@
   "direction": "both",
   "fields": [
    [
-    "Item",
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "Price",
     "object"
    ]
   ]
@@ -271,6 +308,130 @@
   "direction": "request",
   "fields": [
    [
+    "AccountId",
+    "int"
+   ],
+   [
+    "ActiveConsumables",
+    "object"
+   ],
+   [
+    "AvatarId",
+    "int"
+   ],
+   [
+    "BuildInfo",
+    "object"
+   ],
+   [
+    "BuyBack",
+    "object"
+   ],
+   [
+    "CastleRenovationLevel",
+    "int"
+   ],
+   [
+    "CompletedAssignments",
+    "ushort"
+   ],
+   [
+    "DisplayName",
+    "string"
+   ],
+   [
+    "DisplayNameValidationDate",
+    "datetime"
+   ],
+   [
+    "Friends",
+    "object"
+   ],
+   [
+    "FriendshipInvitations",
+    "object"
+   ],
+   [
+    "GamerScore",
+    "int"
+   ],
+   [
+    "Heroes",
+    "object"
+   ],
+   [
+    "HeroFreeTrialInfoPeriod",
+    "object"
+   ],
+   [
+    "Inbox",
+    "object"
+   ],
+   [
+    "Inventory",
+    "object"
+   ],
+   [
+    "LastViewedDates",
+    "object"
+   ],
+   [
+    "LeagueId",
+    "int"
+   ],
+   [
+    "Objectives",
+    "object"
+   ],
+   [
+    "Privileges",
+    "int"
+   ],
+   [
+    "ProfanityFiltering",
+    "bool"
+   ],
+   [
+    "RecommendedFriends",
+    "object"
+   ],
+   [
+    "SelectedHeroId",
+    "int"
+   ],
+   [
+    "SpecialPacks",
+    "ushort"
+   ],
+   [
+    "Stats",
+    "object"
+   ],
+   [
+    "SubLeagueId",
+    "int"
+   ],
+   [
+    "TrophyScore",
+    "int"
+   ],
+   [
+    "UnlockedAvatars",
+    "ushort"
+   ],
+   [
+    "UnlockedEmotes",
+    "ushort"
+   ],
+   [
+    "UnlockedSpells",
+    "object"
+   ],
+   [
+    "Wallet",
+    "object"
+   ],
+   [
     "ClientSettings",
     "object"
    ],
@@ -328,56 +489,128 @@
   "direction": "both",
   "fields": [
    [
-    "ClientSettings",
-    "object"
-   ],
-   [
-    "CommunityEventTimeShift",
+    "AccountId",
     "int"
    ],
    [
-    "CompletedAchievements",
+    "ActiveConsumables",
+    "object"
+   ],
+   [
+    "AvatarId",
+    "int"
+   ],
+   [
+    "BuildInfo",
+    "object"
+   ],
+   [
+    "BuyBack",
+    "object"
+   ],
+   [
+    "CastleRenovationLevel",
+    "int"
+   ],
+   [
+    "CompletedAssignments",
     "ushort"
    ],
    [
-    "CountryCode",
+    "DisplayName",
     "string"
    ],
    [
-    "DefendLog",
-    "object"
-   ],
-   [
-    "Expirables",
-    "object"
-   ],
-   [
-    "Guild",
-    "object"
-   ],
-   [
-    "GuildInvitations",
-    "object"
-   ],
-   [
-    "IsCastleAttackable",
-    "bool"
-   ],
-   [
-    "LastViewedFreeTrialInfoDate",
+    "DisplayNameValidationDate",
     "datetime"
    ],
    [
-    "News",
+    "Friends",
     "object"
    ],
    [
-    "ShopSkuModifiers",
+    "FriendshipInvitations",
     "object"
    ],
    [
-    "TargetedAttackAvailableCount",
+    "GamerScore",
     "int"
+   ],
+   [
+    "Heroes",
+    "object"
+   ],
+   [
+    "HeroFreeTrialInfoPeriod",
+    "object"
+   ],
+   [
+    "Inbox",
+    "object"
+   ],
+   [
+    "Inventory",
+    "object"
+   ],
+   [
+    "LastViewedDates",
+    "object"
+   ],
+   [
+    "LeagueId",
+    "int"
+   ],
+   [
+    "Objectives",
+    "object"
+   ],
+   [
+    "Privileges",
+    "int"
+   ],
+   [
+    "ProfanityFiltering",
+    "bool"
+   ],
+   [
+    "RecommendedFriends",
+    "object"
+   ],
+   [
+    "SelectedHeroId",
+    "int"
+   ],
+   [
+    "SpecialPacks",
+    "ushort"
+   ],
+   [
+    "Stats",
+    "object"
+   ],
+   [
+    "SubLeagueId",
+    "int"
+   ],
+   [
+    "TrophyScore",
+    "int"
+   ],
+   [
+    "UnlockedAvatars",
+    "ushort"
+   ],
+   [
+    "UnlockedEmotes",
+    "ushort"
+   ],
+   [
+    "UnlockedSpells",
+    "object"
+   ],
+   [
+    "Wallet",
+    "object"
    ]
   ]
  },
@@ -870,7 +1103,43 @@
   "direction": "both",
   "fields": [
    [
-    "Count",
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
     "int"
    ]
   ]
@@ -1069,6 +1338,14 @@
   "direction": "request",
   "fields": [
    [
+    "ConsumedHeroInventory",
+    "object"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
     "AggroPropagationOffsetX",
     "double"
    ],
@@ -1099,6 +1376,14 @@
   "direction": "request",
   "fields": [
    [
+    "ConsumedHeroInventory",
+    "object"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
     "BeatIndex",
     "int"
    ],
@@ -1111,6 +1396,14 @@
  "AddCastleTriggerCommand": {
   "direction": "request",
   "fields": [
+   [
+    "ConsumedHeroInventory",
+    "object"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
    [
     "SizeX",
     "byte"
@@ -1273,6 +1566,38 @@
   "direction": "request",
   "fields": [
    [
+    "Boost",
+    "int"
+   ],
+   [
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
+    "int"
+   ],
+   [
+    "CurrentBuildingRank",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "MaxBuildingRank",
+    "int"
+   ],
+   [
     "CurrentMaxRooms",
     "int"
    ],
@@ -1285,6 +1610,54 @@
  "ArchitectOfficeBuildingUpgradePopupDataModel": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingInfoModel",
+    "object"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "HeroLevelRequirement",
+    "int"
+   ],
+   [
+    "IsActive",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsHeroLevelRequirementMet",
+    "int"
+   ],
+   [
+    "NextBuildingRank",
+    "int"
+   ],
+   [
+    "ShopSkus",
+    "object"
+   ],
+   [
+    "UnlockedItems",
+    "object"
+   ],
+   [
+    "UpgradeDurationInSeconds",
+    "int"
+   ],
    [
     "NewMaxRooms",
     "int"
@@ -1324,6 +1697,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AssignmentId",
     "int"
    ]
@@ -1339,6 +1720,19 @@
    [
     "Name",
     "string"
+   ]
+  ]
+ },
+ "AssignmentSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
    ]
   ]
  },
@@ -1758,6 +2152,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "CompletedAttackRegionId",
     "int"
    ],
@@ -1834,11 +2236,11 @@
   ]
  },
  "AttackRegionsChangedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "UpdatedAttackRegions",
-    "object"
+    "array"
    ]
   ]
  },
@@ -1867,6 +2269,26 @@
  "AttackReportPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "RewardModel",
     "object"
@@ -1907,6 +2329,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "AttackRegionModel",
     "object"
    ],
@@ -1917,10 +2359,6 @@
    [
     "CastleObjectiveStatusModel",
     "object"
-   ],
-   [
-    "PanelName",
-    "int"
    ],
    [
     "SpecialPackModel",
@@ -1945,7 +2383,15 @@
   "direction": "request",
   "fields": [
    [
-    "AreRequiredMaterialsInHeroInventory",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
     "bool"
    ],
    [
@@ -1955,6 +2401,10 @@
    [
     "PanelName",
     "int"
+   ],
+   [
+    "AreRequiredMaterialsInHeroInventory",
+    "bool"
    ]
   ]
  },
@@ -2474,6 +2924,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "CountdownStep",
     "int"
    ]
@@ -2495,6 +2965,14 @@
  "AttackerAvatarUpdatedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "AttackerAccountId",
     "int"
@@ -2591,6 +3069,19 @@
    ]
   ]
  },
+ "AuraSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "Avatar": {
   "direction": "both",
   "fields": [
@@ -2624,8 +3115,16 @@
   "direction": "request",
   "fields": [
    [
-    "AvatarCategory",
+    "Attachment",
     "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
@@ -2634,12 +3133,24 @@
    [
     "PanelName",
     "int"
+   ],
+   [
+    "AvatarCategory",
+    "int"
    ]
   ]
  },
  "AvatarRewardItem": {
   "direction": "request",
   "fields": [
+   [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
    [
     "AvatarId",
     "int"
@@ -2677,23 +3188,6 @@
    [
     "IconUrl",
     "string"
-   ]
-  ]
- },
- "AvatarUpdatedNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "AvatarId",
-    "int"
-   ],
-   [
-    "Index",
-    "int"
-   ],
-   [
-    "NotificationType",
-    "int"
    ]
   ]
  },
@@ -2878,6 +3372,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Entry",
     "object"
    ],
@@ -2890,6 +3392,14 @@
  "BattleLogEntryDeletedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "LastValidEntry",
     "string"
@@ -2993,6 +3503,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AttackId",
     "string"
    ],
@@ -3015,6 +3533,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "FriendsOnly",
     "bool"
    ],
@@ -3029,7 +3567,7 @@
   ]
  },
  "BehaviorCategory": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -3048,6 +3586,10 @@
  "BoostCastleInventoryItemCommand": {
   "direction": "request",
   "fields": [
+   [
+    "IsCastlePublishable",
+    "bool"
+   ],
    [
     "ConsumedHeroInventory",
     "object"
@@ -3074,8 +3616,60 @@
   "direction": "request",
   "fields": [
    [
-    "IncreasedXp",
-    "double"
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
    ]
   ]
  },
@@ -3083,16 +3677,28 @@
   "direction": "request",
   "fields": [
    [
-    "IsOpalPanel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
     "bool"
    ],
    [
-    "IsTotem",
+    "IsOpalPanel",
     "bool"
    ],
    [
     "PanelName",
     "int"
+   ],
+   [
+    "IsTotem",
+    "bool"
    ]
   ]
  },
@@ -3246,6 +3852,30 @@
   "direction": "request",
   "fields": [
    [
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "FriendAccountId",
+    "int"
+   ],
+   [
+    "FriendAvatarId",
+    "int"
+   ],
+   [
+    "FriendDisplayName",
+    "string"
+   ],
+   [
+    "FriendSpecialPacks",
+    "ushort"
+   ],
+   [
     "AttackRegionId",
     "int"
    ],
@@ -3323,6 +3953,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "HeroBuffs",
     "object"
    ],
@@ -3385,6 +4035,19 @@
    ]
   ]
  },
+ "BuffSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "BuffStopTriggers": {
   "direction": "both",
   "fields": [
@@ -3414,6 +4077,122 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "Duration",
     "int"
    ],
@@ -3424,10 +4203,6 @@
    [
     "ShouldDisplayTimeInformation",
     "bool"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
@@ -3435,17 +4210,28 @@
   "direction": "request",
   "fields": [
    [
-    "LocalizedMessage",
-    "string"
-   ]
-  ]
- },
- "BuildBuildingPanelNavigationModel": {
-  "direction": "request",
-  "fields": [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
    [
     "PanelName",
     "int"
+   ],
+   [
+    "LocalizedMessage",
+    "string"
    ]
   ]
  },
@@ -3462,12 +4248,28 @@
   "direction": "request",
   "fields": [
    [
-    "CraftingMaterialMineInformationModel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
    ],
    [
     "PanelName",
     "int"
+   ],
+   [
+    "CraftingMaterialMineInformationModel",
+    "object"
    ]
   ]
  },
@@ -3475,14 +4277,21 @@
   "direction": "request",
   "fields": [
    [
-    "PanelName",
+    "Attachment",
     "int"
-   ]
-  ]
- },
- "BuildDecorationPanelNavigationModel": {
-  "direction": "request",
-  "fields": [
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
    [
     "PanelName",
     "int"
@@ -3492,6 +4301,46 @@
  "BuildEntitiesAchievement": {
   "direction": "request",
   "fields": [
+   [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
    [
     "EntityType",
     "int"
@@ -3558,15 +4407,6 @@
    [
     "TooltipDisplayDelay",
     "double"
-   ]
-  ]
- },
- "BuildHarvestingPanelNavigationModel": {
-  "direction": "request",
-  "fields": [
-   [
-    "PanelName",
-    "int"
    ]
   ]
  },
@@ -3717,6 +4557,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "BuildInfo",
     "object"
    ]
@@ -3788,24 +4636,6 @@
    ]
   ]
  },
- "BuildTotemPanelNavigationModel": {
-  "direction": "request",
-  "fields": [
-   [
-    "PanelName",
-    "int"
-   ]
-  ]
- },
- "BuildTrapPanelNavigationModel": {
-  "direction": "request",
-  "fields": [
-   [
-    "PanelName",
-    "int"
-   ]
-  ]
- },
  "BuildUIFeedbackInfos": {
   "direction": "request",
   "fields": [
@@ -3869,11 +4699,27 @@
   "direction": "request",
   "fields": [
    [
-    "BuildingId",
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
     "int"
    ],
    [
     "ExpirableType",
+    "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
+   ],
+   [
+    "BuildingId",
     "int"
    ],
    [
@@ -3885,6 +4731,26 @@
  "BuildingFinishNowModel": {
   "direction": "request",
   "fields": [
+   [
+    "BuyUrl",
+    "string"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "CurrencyAmount",
+    "object"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "ShopCategory",
+    "int"
+   ],
    [
     "BuildingName",
     "string"
@@ -3899,31 +4765,35 @@
   "direction": "request",
   "fields": [
    [
-    "CurrentAttackTicketsInBossRoom",
+    "Boost",
     "int"
    ],
    [
-    "CurrentAttackTicketsInCastle",
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
     "int"
    ],
    [
-    "CurrentConstructionPoints",
+    "CurrentBuildingRank",
     "int"
    ],
    [
-    "CurrentHardCapBonusCastle",
-    "int"
+    "Description",
+    "string"
    ],
    [
-    "MaxAttackTicketsInBossRoom",
-    "int"
+    "IconUrl",
+    "string"
    ],
    [
-    "MaxAttackTicketsInCastle",
-    "int"
-   ],
-   [
-    "MaxConstructionPoints",
+    "MaxBuildingRank",
     "int"
    ]
   ]
@@ -3934,15 +4804,6 @@
    [
     "BuildingInfoDataModel",
     "object"
-   ]
-  ]
- },
- "BuildingInfoPanelNavigationModel": {
-  "direction": "request",
-  "fields": [
-   [
-    "BuildingId",
-    "int"
    ]
   ]
  },
@@ -3963,11 +4824,47 @@
   "direction": "request",
   "fields": [
    [
-    "HeroModel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
    ],
    [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
     "PanelName",
+    "int"
+   ],
+   [
+    "CurrencyAmount",
+    "object"
+   ],
+   [
+    "InFreeTrial",
+    "bool"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "Level",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
     "int"
    ]
   ]
@@ -4030,6 +4927,26 @@
  "BuildingNavBarPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "BuildingType",
     "int"
@@ -4154,6 +5071,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "BuildingId",
     "int"
    ]
@@ -4181,6 +5118,14 @@
   "direction": "request",
   "fields": [
    [
+    "DebugName",
+    "string"
+   ],
+   [
+    "OasisId",
+    "int"
+   ],
+   [
     "Count",
     "int"
    ],
@@ -4194,9 +5139,138 @@
    ]
   ]
  },
+ "BuildingSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "BuildingTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "CreationDuration",
     "int"
@@ -4216,15 +5290,11 @@
    [
     "Rank",
     "int"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
  "BuildingUpgradeCompletedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "BuildingUpgradeInfosModel",
@@ -4235,6 +5305,14 @@
  "BuildingUpgradeCompletedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "BuildingId",
     "int"
@@ -4248,6 +5326,54 @@
  "BuildingUpgradeConfirmationPopupPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "DyeInfoModel",
+    "object"
+   ],
+   [
+    "InitialCurrencyType",
+    "int"
+   ],
+   [
+    "ItemCount",
+    "int"
+   ],
+   [
+    "ItemId",
+    "int"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "ShopConfirmationPopupModel",
+    "object"
+   ],
+   [
+    "WalletAmount",
+    "int"
+   ],
    [
     "BuildingId",
     "int"
@@ -4301,7 +5427,7 @@
   ]
  },
  "BuildingUpgradeModel": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "BuildingPopupPositionModel",
@@ -4316,6 +5442,26 @@
  "BuildingUpgradePanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "BuildingId",
     "int"
@@ -4345,10 +5491,6 @@
     "bool"
    ],
    [
-    "IsOpalPanel",
-    "bool"
-   ],
-   [
     "LayerName",
     "string"
    ],
@@ -4359,10 +5501,6 @@
    [
     "OptionalUpgradeText",
     "string"
-   ],
-   [
-    "PanelName",
-    "int"
    ],
    [
     "Rank",
@@ -4390,7 +5528,51 @@
   "direction": "both",
   "fields": [
    [
-    "NewMaxRooms",
+    "BuildingInfoModel",
+    "object"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "HeroLevelRequirement",
+    "int"
+   ],
+   [
+    "IsActive",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsHeroLevelRequirementMet",
+    "int"
+   ],
+   [
+    "NextBuildingRank",
+    "int"
+   ],
+   [
+    "ShopSkus",
+    "object"
+   ],
+   [
+    "UnlockedItems",
+    "object"
+   ],
+   [
+    "UpgradeDurationInSeconds",
     "int"
    ]
   ]
@@ -4421,6 +5603,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "BuildingId",
     "int"
    ],
@@ -4440,11 +5630,11 @@
   ]
  },
  "BuildingUpgradeViewModel": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "BuildingUpgradeModels",
-    "object"
+    "array"
    ]
   ]
  },
@@ -4473,15 +5663,6 @@
    ]
   ]
  },
- "BuyBackAddedNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "AccountBuyBackSlot",
-    "object"
-   ]
-  ]
- },
  "BuyBackCommand": {
   "direction": "request",
   "fields": [
@@ -4499,14 +5680,38 @@
   "direction": "request",
   "fields": [
    [
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
+    "int"
+   ],
+   [
     "ExpirableType",
     "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
    ]
   ]
  },
  "BuyBackUpdatedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "AccountBuyBackSlot",
     "object"
@@ -4517,14 +5722,50 @@
   "direction": "request",
   "fields": [
    [
-    "SlotIndex",
-    "int"
+    "ClientCraftingMaterials",
+    "object"
+   ],
+   [
+    "ClientPrice",
+    "object"
+   ],
+   [
+    "ConsumedHeroInventory",
+    "object"
+   ],
+   [
+    "DiscountApplied",
+    "bool"
+   ],
+   [
+    "SkuCode",
+    "string"
    ]
   ]
  },
  "BuyConsumableCommand": {
   "direction": "request",
   "fields": [
+   [
+    "ClientCraftingMaterials",
+    "object"
+   ],
+   [
+    "ClientPrice",
+    "object"
+   ],
+   [
+    "ConsumedHeroInventory",
+    "object"
+   ],
+   [
+    "DiscountApplied",
+    "bool"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
    [
     "SlotIndexes",
     "object"
@@ -4535,6 +5776,26 @@
   "direction": "request",
   "fields": [
    [
+    "ClientCraftingMaterials",
+    "object"
+   ],
+   [
+    "ClientPrice",
+    "object"
+   ],
+   [
+    "ConsumedHeroInventory",
+    "object"
+   ],
+   [
+    "DiscountApplied",
+    "bool"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
     "SlotIndex",
     "int"
    ]
@@ -4543,6 +5804,122 @@
  "BuyNewTabTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "PriceDescription",
     "string"
@@ -4571,6 +5948,19 @@
    [
     "Name",
     "string"
+   ]
+  ]
+ },
+ "CameraSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
    ]
   ]
  },
@@ -4709,6 +6099,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AttackCount",
     "int"
    ],
@@ -4751,6 +6149,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "BuildInfo",
     "object"
    ],
@@ -4764,11 +6170,19 @@
   "direction": "both",
   "fields": [
    [
-    "BoostId",
+    "Id",
     "int"
    ],
    [
-    "RoomZoneId",
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
     "int"
    ]
   ]
@@ -4797,14 +6211,6 @@
     "int"
    ],
    [
-    "SpecContainerId",
-    "byte"
-   ],
-   [
-    "SpecContainerId",
-    "byte"
-   ],
-   [
     "IsCastlePublishable",
     "bool"
    ]
@@ -4813,6 +6219,30 @@
  "CastleBuilding": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "BoostId",
+    "int"
+   ],
+   [
+    "RoomZoneId",
+    "int"
+   ],
    [
     "ExpirableId",
     "string"
@@ -4829,20 +6259,32 @@
    [
     "Type",
     "int"
-   ],
-   [
-    "Type",
-    "byte"
-   ],
-   [
-    "Type",
-    "byte"
    ]
   ]
  },
  "CastleCompetitionPopupPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "AttackSource",
     "int"
@@ -4865,6 +6307,30 @@
   "direction": "request",
   "fields": [
    [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "BoostId",
+    "int"
+   ],
+   [
+    "RoomZoneId",
+    "int"
+   ],
+   [
     "AggroPropagationOffsetX",
     "double"
    ],
@@ -4886,6 +6352,62 @@
   "direction": "request",
   "fields": [
    [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
+   [
     "IncreasedDPS",
     "double"
    ]
@@ -4894,6 +6416,26 @@
  "CastleDetailsPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CastleInfoModel",
     "object"
@@ -4921,6 +6463,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "BuildInfo",
     "object"
    ],
@@ -4936,14 +6486,6 @@
    [
     "SpecialGroundIds",
     "ushort"
-   ],
-   [
-    "SpecialGroundIds",
-    "byte"
-   ],
-   [
-    "SpecialGroundIds",
-    "byte"
    ]
   ]
  },
@@ -5096,14 +6638,6 @@
    [
     "SpecContainerId",
     "int"
-   ],
-   [
-    "SpecContainerId",
-    "byte"
-   ],
-   [
-    "SpecContainerId",
-    "byte"
    ]
   ]
  },
@@ -5169,6 +6703,38 @@
   "direction": "request",
   "fields": [
    [
+    "Boost",
+    "int"
+   ],
+   [
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
+    "int"
+   ],
+   [
+    "CurrentBuildingRank",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "MaxBuildingRank",
+    "int"
+   ],
+   [
     "CurrentAttackTicketsInBossRoom",
     "int"
    ],
@@ -5201,6 +6767,54 @@
  "CastleHeartBuildingUpgradePopupDataModel": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingInfoModel",
+    "object"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "HeroLevelRequirement",
+    "int"
+   ],
+   [
+    "IsActive",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsHeroLevelRequirementMet",
+    "int"
+   ],
+   [
+    "NextBuildingRank",
+    "int"
+   ],
+   [
+    "ShopSkus",
+    "object"
+   ],
+   [
+    "UnlockedItems",
+    "object"
+   ],
+   [
+    "UpgradeDurationInSeconds",
+    "int"
+   ],
    [
     "NewAttackTicketsInBossRoom",
     "int"
@@ -5639,6 +7253,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Actions",
     "object"
    ]
@@ -5733,12 +7355,28 @@
   "direction": "request",
   "fields": [
    [
-    "CastleInventoryViewModel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
     "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "CastleInventoryViewModel",
+    "object"
    ],
    [
     "MenuNavigationButtons",
@@ -5770,6 +7408,10 @@
  "CastleInventoryRemovedAction": {
   "direction": "request",
   "fields": [
+   [
+    "Type",
+    "int"
+   ],
    [
     "Count",
     "int"
@@ -5844,19 +7486,11 @@
   ]
  },
  "CastleLayoutCell": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Type",
-    "int"
-   ],
-   [
-    "Type",
-    "byte"
-   ],
-   [
-    "Type",
-    "byte"
+    "string"
    ]
   ]
  },
@@ -5904,7 +7538,7 @@
   ]
  },
  "CastleLevelUpEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Level",
@@ -5932,6 +7566,14 @@
  "CastleLevelUpNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "AccountId",
     "int"
@@ -6002,6 +7644,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "AttackRegionId",
     "int"
    ],
@@ -6026,14 +7688,6 @@
     "bool"
    ],
    [
-    "IsOpalPanel",
-    "bool"
-   ],
-   [
-    "PanelName",
-    "int"
-   ],
-   [
     "PosX",
     "int"
    ],
@@ -6050,6 +7704,122 @@
  "CastlePopupRewardsTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "BuffGold",
     "int"
@@ -6109,10 +7879,6 @@
    [
     "TotalMinesCount",
     "int"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
@@ -6120,12 +7886,124 @@
   "direction": "request",
   "fields": [
    [
-    "CrownBonuses",
-    "ushort"
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
    ],
    [
     "Type",
     "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
+    "CrownBonuses",
+    "ushort"
    ]
   ]
  },
@@ -6224,6 +8102,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AttackId",
     "string"
    ],
@@ -6305,12 +8191,28 @@
   "direction": "request",
   "fields": [
    [
-    "Description",
-    "string"
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
     "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
    ],
    [
     "IsRenovationCompleted",
@@ -6326,10 +8228,6 @@
    ],
    [
     "LevelNameOasisId",
-    "int"
-   ],
-   [
-    "PanelName",
     "int"
    ],
    [
@@ -6402,12 +8300,16 @@
   "direction": "request",
   "fields": [
    [
-    "CastleRenovationLevelModels",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
    ],
    [
-    "CurrentRenovationLevel",
-    "int"
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
@@ -6415,6 +8317,14 @@
    ],
    [
     "PanelName",
+    "int"
+   ],
+   [
+    "CastleRenovationLevelModels",
+    "object"
+   ],
+   [
+    "CurrentRenovationLevel",
     "int"
    ]
   ]
@@ -6458,6 +8368,22 @@
   "direction": "request",
   "fields": [
    [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
     "Buildings",
     "object"
    ],
@@ -6486,6 +8412,22 @@
  "CastleRoomBuildable": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
    [
     "BoostId",
     "int"
@@ -6633,6 +8575,30 @@
   "direction": "request",
   "fields": [
    [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "BoostId",
+    "int"
+   ],
+   [
+    "RoomZoneId",
+    "int"
+   ],
+   [
     "BeatIndex",
     "int"
    ],
@@ -6645,6 +8611,30 @@
  "CastleTrigger": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "BoostId",
+    "int"
+   ],
+   [
+    "RoomZoneId",
+    "int"
+   ],
    [
     "SizeX",
     "byte"
@@ -6659,8 +8649,24 @@
   "direction": "request",
   "fields": [
    [
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
+    "int"
+   ],
+   [
     "ExpirableType",
     "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
    ],
    [
     "RefundableIGC",
@@ -6684,8 +8690,16 @@
   "direction": "request",
   "fields": [
    [
-    "CastleLevel",
+    "Attachment",
     "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
@@ -6694,12 +8708,36 @@
    [
     "PanelName",
     "int"
+   ],
+   [
+    "CastleLevel",
+    "int"
    ]
   ]
  },
  "CastleValidationOutroPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CastleLevel",
     "int"
@@ -6709,6 +8747,14 @@
  "CastleValidationRequestedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "RequestorAccountId",
     "int"
@@ -6756,6 +8802,26 @@
  "CastleVisitPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CanBePurchased",
     "bool"
@@ -6854,6 +8920,14 @@
  "ChapterTicketRewardItem": {
   "direction": "request",
   "fields": [
+   [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
    [
     "TicketCount",
     "int"
@@ -6973,6 +9047,26 @@
  "ChatPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "ChatRoomConfigModel",
     "object"
@@ -7095,6 +9189,14 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
+   [
     "MessageSentCount",
     "int"
    ],
@@ -7107,6 +9209,14 @@
  "ChatRoomTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "RoomId",
     "int"
@@ -7138,6 +9248,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "AreAllHeroesOwned",
     "bool"
    ],
@@ -7163,6 +9293,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "ExplanationText",
     "string"
    ]
@@ -7171,6 +9321,14 @@
  "ClientCallProfilingTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "Duration",
     "double"
@@ -7299,6 +9457,18 @@
    [
     "TargetEntitySearch",
     "object"
+   ],
+   [
+    "Conditions",
+    "array"
+   ],
+   [
+    "StartDelay",
+    "double"
+   ],
+   [
+    "StartType",
+    "string"
    ]
   ]
  },
@@ -7308,11 +9478,19 @@
    [
     "Id",
     "string"
+   ],
+   [
+    "Conditions",
+    "array"
+   ],
+   [
+    "StartType",
+    "string"
    ]
   ]
  },
  "ClosePopupEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -7354,6 +9532,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "TimeShift",
     "int"
    ]
@@ -7369,7 +9555,7 @@
   ]
  },
  "CommunityEventEndedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "CommunityEvent",
@@ -7380,6 +9566,14 @@
  "CommunityEventGlobalTimeShiftChangedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "TimeShift",
     "int"
@@ -7417,26 +9611,13 @@
   "direction": "request",
   "fields": [
    [
-    "CastleAccountSummary",
-    "object"
+    "RequiresUserAction",
+    "bool"
    ],
    [
-    "DisplayNameOasisId",
+    "Type",
     "int"
    ],
-   [
-    "Rank",
-    "int"
-   ],
-   [
-    "UbisoftCompetitionId",
-    "int"
-   ]
-  ]
- },
- "CompetitionEndedRewardsWonNewsData": {
-  "direction": "request",
-  "fields": [
    [
     "CastleAccountSummary",
     "object"
@@ -7506,6 +9687,14 @@
   "direction": "request",
   "fields": [
    [
+    "DebugName",
+    "string"
+   ],
+   [
+    "OasisId",
+    "int"
+   ],
+   [
     "Count",
     "int"
    ]
@@ -7515,6 +9704,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "ActiveConsumable",
     "object"
    ]
@@ -7523,6 +9720,26 @@
  "ConsumableActivationConfirmationPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "IconSynergyName",
     "string"
@@ -7553,6 +9770,22 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
     "Item",
     "object"
    ]
@@ -7562,15 +9795,31 @@
   "direction": "request",
   "fields": [
    [
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
+    "int"
+   ],
+   [
+    "ExpirableType",
+    "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
+   ],
+   [
     "CommunityEventId",
     "int"
    ],
    [
     "ConsumableType",
-    "int"
-   ],
-   [
-    "ExpirableType",
     "int"
    ],
    [
@@ -7657,6 +9906,122 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "ConsumableType",
     "int"
    ],
@@ -7686,10 +10051,6 @@
    ],
    [
     "RemainingTime",
-    "int"
-   ],
-   [
-    "Type",
     "int"
    ]
   ]
@@ -7737,7 +10098,47 @@
   "direction": "request",
   "fields": [
    [
-    "CurrencyType",
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
+    "Count",
     "int"
    ]
   ]
@@ -7745,6 +10146,26 @@
  "CountdownTimerPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "IsTestAttack",
     "bool"
@@ -7827,6 +10248,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "LayerName",
     "string"
    ]
@@ -7835,6 +10276,26 @@
  "CraftingMaterialConsumptionModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "Cost",
     "object"
@@ -7892,12 +10353,124 @@
   "direction": "request",
   "fields": [
    [
-    "CraftingMaterialMineInformationModel",
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
     "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
    ],
    [
     "Type",
     "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
+    "CraftingMaterialMineInformationModel",
+    "object"
    ]
   ]
  },
@@ -8004,15 +10577,127 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "LayerName",
     "string"
    ],
    [
     "SpecContainerId",
-    "int"
-   ],
-   [
-    "Type",
     "int"
    ]
   ]
@@ -8020,6 +10705,14 @@
  "CraftingMaterialsPackPurchasedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "CraftingMaterialsGained",
     "object"
@@ -8039,6 +10732,14 @@
   "direction": "request",
   "fields": [
    [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
+   [
     "CraftingMaterials",
     "object"
    ]
@@ -8048,6 +10749,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "UIGridItemModel",
     "object"
    ]
@@ -8056,6 +10777,26 @@
  "CreatureBoostPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "ActiveBoostDurationLeft",
     "int"
@@ -8127,6 +10868,19 @@
    ]
   ]
  },
+ "CreatureSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "CreatureTrapAbilityModel": {
   "direction": "both",
   "fields": [
@@ -8169,6 +10923,38 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "CreatureTrapUpgradeModel",
+    "object"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "Tier",
+    "int"
+   ],
+   [
     "ShopCategory",
     "int"
    ]
@@ -8177,6 +10963,26 @@
  "CreatureTrapPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CreatureTrapUpgradeModel",
     "object"
@@ -8220,6 +11026,38 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "CreatureTrapUpgradeModel",
+    "object"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "Tier",
+    "int"
+   ],
+   [
     "GameEntityType",
     "int"
    ],
@@ -8261,6 +11099,122 @@
  "CreatureTrapTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "Abilities",
     "object"
@@ -8323,10 +11277,6 @@
    ],
    [
     "Tier",
-    "int"
-   ],
-   [
-    "Type",
     "int"
    ]
   ]
@@ -8557,6 +11507,50 @@
   "direction": "request",
   "fields": [
    [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
+    "Count",
+    "int"
+   ],
+   [
     "CurrencyType",
     "int"
    ]
@@ -8726,20 +11720,32 @@
    [
     "RoomId",
     "int"
-   ],
-   [
-    "RoomId",
-    "byte"
-   ],
-   [
-    "RoomId",
-    "byte"
    ]
   ]
  },
  "DebugPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "DebugPanelName",
     "string"
@@ -8787,9 +11793,138 @@
    ]
   ]
  },
+ "DecorationSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "DecorationTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "DecorationPointsCost",
     "int"
@@ -8805,16 +11940,56 @@
    [
     "HitPoints",
     "int"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
  "DefeatCastleAchievement": {
   "direction": "request",
   "fields": [
+   [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
+    "Count",
+    "int"
+   ],
    [
     "CastleDifficulties",
     "object"
@@ -8824,6 +11999,50 @@
  "DefeatCastleStrikeAchievement": {
   "direction": "request",
   "fields": [
+   [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
+    "Count",
+    "int"
+   ],
    [
     "IsFriend",
     "bool"
@@ -8952,6 +12171,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "LastValidEntryDate",
     "datetime"
    ]
@@ -9079,6 +12306,26 @@
   "direction": "request",
   "fields": [
    [
+    "GameEntityId",
+    "int"
+   ],
+   [
+    "ItemTypeOasisId",
+    "int"
+   ],
+   [
+    "Level",
+    "int"
+   ],
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "TooltipDisplayDelay",
+    "double"
+   ],
+   [
     "CPCost",
     "int"
    ],
@@ -9099,6 +12346,26 @@
  "DefenseHudPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "BuildViewModel",
     "object"
@@ -9130,6 +12397,26 @@
   "direction": "request",
   "fields": [
    [
+    "AutoLevelUp",
+    "bool"
+   ],
+   [
+    "AvailableCount",
+    "int"
+   ],
+   [
+    "BlueprintUnlocked",
+    "bool"
+   ],
+   [
+    "NewlyAdded",
+    "bool"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
     "Specialization",
     "int"
    ],
@@ -9143,6 +12430,26 @@
   "direction": "request",
   "fields": [
    [
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
+    "int"
+   ],
+   [
+    "ExpirableType",
+    "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
+   ],
+   [
     "BoostId",
     "int"
    ],
@@ -9153,10 +12460,19 @@
    [
     "DefenseItemType",
     "int"
+   ]
+  ]
+ },
+ "DefenseIngredientBoostSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
    ],
    [
-    "ExpirableType",
-    "int"
+    "Specs",
+    "array"
    ]
   ]
  },
@@ -9164,22 +12480,13 @@
   "direction": "request",
   "fields": [
    [
-    "Count",
-    "int"
+    "DebugName",
+    "string"
    ],
    [
-    "ItemType",
+    "OasisId",
     "int"
    ],
-   [
-    "SpecContainerId",
-    "int"
-   ]
-  ]
- },
- "DefenseIngredientDestroyedCondition": {
-  "direction": "request",
-  "fields": [
    [
     "Count",
     "int"
@@ -9231,6 +12538,14 @@
   "direction": "request",
   "fields": [
    [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
+   [
     "Count",
     "int"
    ],
@@ -9247,6 +12562,14 @@
  "DefenseIngredientSparedCondition": {
   "direction": "request",
   "fields": [
+   [
+    "DebugName",
+    "string"
+   ],
+   [
+    "OasisId",
+    "int"
+   ],
    [
     "ItemType",
     "int"
@@ -9414,6 +12737,10 @@
    [
     "DisplayPlayerCastle",
     "bool"
+   ],
+   [
+    "Conditions",
+    "array"
    ]
   ]
  },
@@ -9532,43 +12859,17 @@
    ]
   ]
  },
- "DownloadCompletedTaskTracking": {
-  "direction": "request",
-  "fields": [
-   [
-    "Duration",
-    "int"
-   ],
-   [
-    "IsFirstInstall",
-    "bool"
-   ]
-  ]
- },
- "DownloadPackageCompletedTracking": {
-  "direction": "request",
-  "fields": [
-   [
-    "DownloadSize",
-    "long"
-   ],
-   [
-    "Duration",
-    "int"
-   ],
-   [
-    "IsSuccessful",
-    "bool"
-   ],
-   [
-    "PackageVersionId",
-    "object"
-   ]
-  ]
- },
  "DownloadPackageStartedTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "PackageVersionId",
     "object"
@@ -9587,6 +12888,14 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
+   [
     "DownloadSize",
     "long"
    ],
@@ -9604,26 +12913,17 @@
    ]
   ]
  },
- "DownloadPatcherStartedTracking": {
-  "direction": "request",
-  "fields": [
-   [
-    "PackageVersionId",
-    "object"
-   ],
-   [
-    "Url",
-    "string"
-   ],
-   [
-    "VersionName",
-    "string"
-   ]
-  ]
- },
  "DownloadStartedTaskTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "IsFirstInstall",
     "bool"
@@ -9633,6 +12933,14 @@
  "DraftValidatedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "BoostedCreatures",
     "object"
@@ -9740,9 +13048,30 @@
    ]
   ]
  },
+ "EffectSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "EmoteRewardItem": {
   "direction": "request",
   "fields": [
+   [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
    [
     "EmoteId",
     "int"
@@ -9762,8 +13091,24 @@
   "direction": "request",
   "fields": [
    [
+    "SoundEvent",
+    "object"
+   ],
+   [
     "EnableHeroVoiceOver",
     "bool"
+   ],
+   [
+    "Conditions",
+    "array"
+   ],
+   [
+    "Disabled",
+    "bool"
+   ],
+   [
+    "Tag",
+    "string"
    ]
   ]
  },
@@ -10187,6 +13532,50 @@
   "direction": "request",
   "fields": [
    [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
+    "Count",
+    "int"
+   ],
+   [
     "EquippedParts",
     "object"
    ]
@@ -10312,6 +13701,122 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "ArchetypeStats",
     "object"
    ],
@@ -10392,10 +13897,6 @@
     "bool"
    ],
    [
-    "Type",
-    "int"
-   ],
-   [
     "WeaponDescription",
     "string"
    ],
@@ -10410,11 +13911,11 @@
   ]
  },
  "EquippedConsumablesViewModelEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "EquippedItems",
-    "object"
+    "array"
    ]
   ]
  },
@@ -10571,6 +14072,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "AdvancedMessage",
     "string"
    ],
@@ -10589,10 +14110,6 @@
    [
     "Message",
     "string"
-   ],
-   [
-    "PanelName",
-    "int"
    ],
    [
     "Title",
@@ -10660,14 +14177,38 @@
   "direction": "both",
   "fields": [
    [
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
+    "int"
+   ],
+   [
     "ExpirableType",
     "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
    ]
   ]
  },
  "ExpirableAddedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "Expirable",
     "object"
@@ -10678,6 +14219,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "ExpirableId",
     "string"
    ]
@@ -10686,6 +14235,14 @@
  "ExpirableUpdatedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "DueDate",
     "datetime"
@@ -10707,6 +14264,10 @@
  "ExpireExpirableCommand": {
   "direction": "request",
   "fields": [
+   [
+    "IsCastlePublishable",
+    "bool"
+   ],
    [
     "ExpirableId",
     "string"
@@ -10966,6 +14527,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "FinishNowModel",
     "object"
    ]
@@ -11094,22 +14675,57 @@
    ]
   ]
  },
- "ForgeCollectCommand": {
-  "direction": "request",
-  "fields": [
-   [
-    "HeroItemSlot",
-    "int"
-   ],
-   [
-    "InventorySlotIndex",
-    "int"
-   ]
-  ]
- },
  "ForgeConfirmationPopupPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "DyeInfoModel",
+    "object"
+   ],
+   [
+    "InitialCurrencyType",
+    "int"
+   ],
+   [
+    "ItemCount",
+    "int"
+   ],
+   [
+    "ItemId",
+    "int"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "ShopConfirmationPopupModel",
+    "object"
+   ],
+   [
+    "WalletAmount",
+    "int"
+   ],
    [
     "AverageItemLevel",
     "int"
@@ -11162,8 +14778,24 @@
   "direction": "request",
   "fields": [
    [
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
+    "int"
+   ],
+   [
     "ExpirableType",
     "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
    ],
    [
     "ForgeMode",
@@ -11174,6 +14806,26 @@
  "ForgeFinishNowPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CurrencyAmount",
     "object"
@@ -11222,6 +14874,14 @@
   "direction": "request",
   "fields": [
    [
+    "CraftingSlotQuality",
+    "int"
+   ],
+   [
+    "ItemQuality",
+    "int"
+   ],
+   [
     "IconUrl",
     "string"
    ],
@@ -11246,6 +14906,14 @@
  "ForgeItemCookingModel": {
   "direction": "request",
   "fields": [
+   [
+    "CraftingSlotQuality",
+    "int"
+   ],
+   [
+    "ItemQuality",
+    "int"
+   ],
    [
     "CurrencyAmount",
     "object"
@@ -11280,6 +14948,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AccountForgedItem",
     "object"
    ],
@@ -11309,6 +14985,14 @@
  "ForgeItemSelectionModel": {
   "direction": "request",
   "fields": [
+   [
+    "CraftingSlotQuality",
+    "int"
+   ],
+   [
+    "ItemQuality",
+    "int"
+   ],
    [
     "Duration",
     "int"
@@ -11340,24 +15024,12 @@
   "direction": "both",
   "fields": [
    [
-    "IconUrl",
-    "string"
-   ],
-   [
-    "Level",
+    "CraftingSlotQuality",
     "int"
    ],
    [
-    "OasisName",
-    "string"
-   ],
-   [
-    "OasisNameId",
+    "ItemQuality",
     "int"
-   ],
-   [
-    "TooltipModel",
-    "object"
    ]
   ]
  },
@@ -11448,6 +15120,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "ForgeMode",
     "int"
    ],
@@ -11476,6 +15168,14 @@
  "ForgeQualitySelectionModel": {
   "direction": "request",
   "fields": [
+   [
+    "CraftingSlotQuality",
+    "int"
+   ],
+   [
+    "ItemQuality",
+    "int"
+   ],
    [
     "ForgeMode",
     "int"
@@ -11606,6 +15306,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AccountForgedItem",
     "object"
    ]
@@ -11682,6 +15390,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "FreeTrialType",
     "int"
    ],
@@ -11694,6 +15410,14 @@
  "FreeTrialConditionCompletedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "HeroSpecContainerId",
     "int"
@@ -11708,6 +15432,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "IconUrl",
     "string"
    ],
@@ -11720,6 +15464,26 @@
  "FreeWorkerPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "BuyUrl",
     "string"
@@ -11734,6 +15498,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "FriendAccountId",
     "int"
    ],
@@ -11746,6 +15518,14 @@
  "FriendInviteNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "Invitation",
     "object"
@@ -11785,6 +15565,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "FriendAccountId",
     "int"
    ],
@@ -11801,6 +15589,26 @@
  "FriendNotificationsPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "DebounceSearchValue",
     "int"
@@ -11849,6 +15657,30 @@
   "direction": "request",
   "fields": [
    [
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "FriendAccountId",
+    "int"
+   ],
+   [
+    "FriendAvatarId",
+    "int"
+   ],
+   [
+    "FriendDisplayName",
+    "string"
+   ],
+   [
+    "FriendSpecialPacks",
+    "ushort"
+   ],
+   [
     "RequiredLevel",
     "int"
    ],
@@ -11865,6 +15697,14 @@
  "FriendTrophyScoreChangedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "FriendAccountId",
     "int"
@@ -11925,6 +15765,14 @@
  "FriendshipAddedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "FriendAccountSummary",
     "object"
@@ -11993,6 +15841,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "FriendAccountId",
     "int"
    ]
@@ -12040,25 +15896,29 @@
   "direction": "request",
   "fields": [
    [
-    "FriendshipInvitation",
-    "object"
-   ]
-  ]
- },
- "FriendshipRemovedNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "FriendAccountId",
-    "int"
-   ],
-   [
     "Index",
     "int"
    ],
    [
     "NotificationType",
     "int"
+   ],
+   [
+    "FriendshipInvitation",
+    "object"
+   ]
+  ]
+ },
+ "FxSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
    ]
   ]
  },
@@ -12072,11 +15932,11 @@
   ]
  },
  "GameButtonEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Button",
-    "int"
+    "string"
    ]
   ]
  },
@@ -12180,6 +16040,14 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
+   [
     "GameClientVersion",
     "string"
    ],
@@ -12227,6 +16095,14 @@
  "GameStateTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "GameStateId",
     "int"
@@ -12323,18 +16199,26 @@
   "direction": "request",
   "fields": [
    [
-    "Buttons",
-    "ushort"
+    "ActionType",
+    "int"
    ],
    [
     "ContextualActionDataInputType",
     "int"
+   ],
+   [
+    "Buttons",
+    "ushort"
    ]
   ]
  },
  "GamepadStickContextualActionData": {
   "direction": "request",
   "fields": [
+   [
+    "ActionType",
+    "int"
+   ],
    [
     "ContextualActionDataInputType",
     "int"
@@ -12484,7 +16368,7 @@
   ]
  },
  "GetHeroInventoryEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "GetHeroInventoryViewModel",
@@ -12635,14 +16519,74 @@
   "direction": "both",
   "fields": [
    [
-    "StartDate",
-    "datetime"
+    "Id",
+    "string"
+   ],
+   [
+    "NotificationType",
+    "int"
    ]
   ]
  },
  "GoldBoostConsumableTemplate": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
    [
     "AttackIncreasedGold",
     "double"
@@ -12835,8 +16779,16 @@
   "direction": "request",
   "fields": [
    [
-    "GuildId",
+    "Attachment",
     "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
@@ -12844,6 +16796,10 @@
    ],
    [
     "PanelName",
+    "int"
+   ],
+   [
+    "GuildId",
     "int"
    ],
    [
@@ -12869,6 +16825,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "GuildInvitation",
     "object"
    ]
@@ -12877,6 +16841,14 @@
  "GuildInvitationRemovedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "AccountId",
     "int"
@@ -12891,6 +16863,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "GuildId",
     "int"
    ]
@@ -12900,21 +16880,16 @@
   "direction": "request",
   "fields": [
    [
-    "Requestor",
-    "object"
-   ]
-  ]
- },
- "GuildJoinRequestRemovedNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "AccountId",
+    "Index",
     "int"
    ],
    [
-    "GuildId",
+    "NotificationType",
     "int"
+   ],
+   [
+    "Requestor",
+    "object"
    ]
   ]
  },
@@ -12989,6 +16964,14 @@
  "GuildLeftNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "GuildId",
     "int"
@@ -13066,16 +17049,28 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
     "IsOpalPanel",
     "bool"
    ],
    [
-    "Model",
-    "object"
-   ],
-   [
     "PanelName",
     "int"
+   ],
+   [
+    "Model",
+    "object"
    ]
   ]
  },
@@ -13099,6 +17094,14 @@
  "GuildMemberJoinedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "Guild",
     "object"
@@ -13167,6 +17170,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AccountId",
     "int"
    ],
@@ -13183,6 +17194,14 @@
  "GuildMemberTrophyScoreChangedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "GuildRank",
     "int"
@@ -13320,27 +17339,6 @@
    ]
   ]
  },
- "GuildProfilePanelNavigationModel": {
-  "direction": "request",
-  "fields": [
-   [
-    "GuildId",
-    "int"
-   ],
-   [
-    "IsOpalPanel",
-    "bool"
-   ],
-   [
-    "PanelName",
-    "int"
-   ],
-   [
-    "SelectedTab",
-    "int"
-   ]
-  ]
- },
  "GuildSearchResult": {
   "direction": "both",
   "fields": [
@@ -13411,6 +17409,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Description",
     "object"
    ],
@@ -13473,12 +17479,16 @@
   "direction": "request",
   "fields": [
    [
-    "ExcludeModalPopupOpening",
-    "bool"
+    "Attachment",
+    "int"
    ],
    [
-    "GuildProfileModel",
+    "DataNavigationInfo",
     "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
@@ -13487,6 +17497,10 @@
    [
     "PanelName",
     "int"
+   ],
+   [
+    "GuildProfileModel",
+    "object"
    ]
   ]
  },
@@ -13582,6 +17596,10 @@
   "direction": "request",
   "fields": [
    [
+    "IsCastlePublishable",
+    "bool"
+   ],
+   [
     "HeroCorpseId",
     "int"
    ],
@@ -13637,6 +17655,10 @@
   "direction": "request",
   "fields": [
    [
+    "IsCastlePublishable",
+    "bool"
+   ],
+   [
     "CurrencyType",
     "int"
    ],
@@ -13647,11 +17669,11 @@
   ]
  },
  "HarvestMineStatusAddedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "CurrencyType",
-    "int"
+    "string"
    ],
    [
     "EntityHarvestId",
@@ -13659,7 +17681,7 @@
    ],
    [
     "EntityHarvestType",
-    "int"
+    "object"
    ]
   ]
  },
@@ -13693,14 +17715,6 @@
    ],
    [
     "MinIconSize",
-    "int"
-   ],
-   [
-    "MinZoom",
-    "int"
-   ],
-   [
-    "MinZoom",
     "int"
    ],
    [
@@ -13753,7 +17767,7 @@
   ]
  },
  "HarvestRemovedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "EntityHarvestId",
@@ -13761,7 +17775,7 @@
    ],
    [
     "EntityHarvestType",
-    "int"
+    "string"
    ],
    [
     "IsCookingReady",
@@ -13832,6 +17846,62 @@
   "direction": "request",
   "fields": [
    [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "AbilityId",
+    "int"
+   ],
+   [
+    "MinLevelRequirement",
+    "int"
+   ],
+   [
     "RestorePoints",
     "int"
    ]
@@ -13894,16 +17964,32 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "HeroTooltipModel",
     "object"
    ],
    [
     "IsLocked",
     "bool"
-   ],
-   [
-    "PanelName",
-    "int"
    ],
    [
     "SpecContainerId",
@@ -13932,6 +18018,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "ConsumableItem",
     "object"
    ],
@@ -13953,6 +18047,10 @@
  "HeroConsumableItem": {
   "direction": "request",
   "fields": [
+   [
+    "TemplateId",
+    "int"
+   ],
    [
     "StackCount",
     "int"
@@ -13979,6 +18077,14 @@
  "HeroConsumableUnequipNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "HeroSpecContainerId",
     "int"
@@ -14010,6 +18116,34 @@
  "HeroCorpseHarvestHoverModel": {
   "direction": "request",
   "fields": [
+   [
+    "AmountToCollect",
+    "object"
+   ],
+   [
+    "EntityHarvestId",
+    "int"
+   ],
+   [
+    "EntityHarvestType",
+    "int"
+   ],
+   [
+    "IsCookingReady",
+    "bool"
+   ],
+   [
+    "Position",
+    "object"
+   ],
+   [
+    "RemainingTime",
+    "int"
+   ],
+   [
+    "Xp",
+    "int"
+   ],
    [
     "ElapsedTimeSinceDeath",
     "double"
@@ -14052,6 +18186,122 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "CurrencyType",
     "int"
    ],
@@ -14086,10 +18336,6 @@
    [
     "IsStorageFull",
     "bool"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
@@ -14111,7 +18357,7 @@
   ]
  },
  "HeroCreatedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "ErrorMessage",
@@ -14218,6 +18464,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "HeroDeathInfo",
     "object"
    ]
@@ -14226,6 +18492,14 @@
  "HeroDyeAppliedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "DyeTemplateId",
     "int"
@@ -14327,6 +18601,22 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
     "Item",
     "object"
    ]
@@ -14352,6 +18642,14 @@
  "HeroEquipmentEquipNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "EquipmentItem",
     "object"
@@ -14454,6 +18752,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "HeroItemSlot",
     "int"
    ],
@@ -14539,6 +18845,14 @@
  "HeroInventoryAddedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "InventorySlot",
     "object"
@@ -14682,7 +18996,7 @@
   ]
  },
  "HeroInventoryNewItemCountChangedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "NewItemCount",
@@ -14694,6 +19008,30 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "IsInventoryOpenedChangingTab",
+    "bool"
+   ],
+   [
     "GetEquippedItemsViewModel",
     "object"
    ],
@@ -14704,15 +19042,11 @@
    [
     "GetHeroStatsModel",
     "object"
-   ],
-   [
-    "PanelName",
-    "int"
    ]
   ]
  },
  "HeroInventoryRefreshedEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "GetHeroInventoryViewModel",
@@ -14723,6 +19057,14 @@
  "HeroInventoryRemovedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "SlotIndex",
     "int"
@@ -14754,7 +19096,19 @@
   "direction": "both",
   "fields": [
    [
+    "Count",
+    "int"
+   ],
+   [
     "ItemType",
+    "int"
+   ],
+   [
+    "SlotIndex",
+    "int"
+   ],
+   [
+    "TemplateId",
     "int"
    ]
   ]
@@ -14763,7 +19117,19 @@
   "direction": "request",
   "fields": [
    [
+    "Count",
+    "int"
+   ],
+   [
     "ItemType",
+    "int"
+   ],
+   [
+    "SlotIndex",
+    "int"
+   ],
+   [
+    "TemplateId",
     "int"
    ]
   ]
@@ -14772,18 +19138,38 @@
   "direction": "request",
   "fields": [
    [
-    "HeroItem",
-    "object"
+    "Count",
+    "int"
    ],
    [
     "ItemType",
     "int"
+   ],
+   [
+    "SlotIndex",
+    "int"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "HeroItem",
+    "object"
    ]
   ]
  },
  "HeroInventoryUpdatedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "SlotIndex",
     "int"
@@ -14811,23 +19197,15 @@
   "direction": "both",
   "fields": [
    [
-    "Damage",
-    "double"
-   ],
-   [
-    "GearScoreMultiplier",
-    "double"
-   ],
-   [
-    "HeroId",
+    "Id",
     "int"
    ],
    [
-    "Range",
-    "double"
+    "Name",
+    "object"
    ],
    [
-    "Speed",
+    "Probability",
     "double"
    ]
   ]
@@ -14973,6 +19351,19 @@
    ]
   ]
  },
+ "HeroItemSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "HeroItemTextParams": {
   "direction": "response",
   "fields": [
@@ -15044,35 +19435,33 @@
    ]
   ]
  },
- "HeroLevelReachedObjectiveRequirement": {
-  "direction": "request",
-  "fields": [
-   [
-    "Level",
-    "int"
-   ]
-  ]
- },
- "HeroLevelUpFriendNewsData": {
-  "direction": "request",
-  "fields": [
-   [
-    "HeroLevel",
-    "int"
-   ],
-   [
-    "HeroName",
-    "string"
-   ],
-   [
-    "HeroSpecContainerId",
-    "int"
-   ]
-  ]
- },
  "HeroLevelUpOwnNewsData": {
   "direction": "request",
   "fields": [
+   [
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "FriendAccountId",
+    "int"
+   ],
+   [
+    "FriendAvatarId",
+    "int"
+   ],
+   [
+    "FriendDisplayName",
+    "string"
+   ],
+   [
+    "FriendSpecialPacks",
+    "ushort"
+   ],
    [
     "HeroLevel",
     "int"
@@ -15091,12 +19480,16 @@
   "direction": "request",
   "fields": [
    [
-    "ExcludeModalPopupOpening",
-    "bool"
+    "Attachment",
+    "int"
    ],
    [
-    "HeroUpgradeModel",
+    "DataNavigationInfo",
     "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
    ],
    [
     "IsOpalPanel",
@@ -15105,12 +19498,36 @@
    [
     "PanelName",
     "int"
+   ],
+   [
+    "HeroUpgradeModel",
+    "object"
    ]
   ]
  },
  "HeroLevelUpReadyPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "HeroSpecContainerId",
     "int"
@@ -15281,6 +19698,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "HeroSpecContainerId",
     "int"
    ]
@@ -15339,6 +19764,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "CurrentHeroSpecContainerId",
     "int"
    ],
@@ -15349,6 +19794,19 @@
    [
     "LayerName",
     "string"
+   ]
+  ]
+ },
+ "HeroSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
    ]
   ]
  },
@@ -15451,6 +19909,122 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "Biography",
     "string"
    ],
@@ -15485,16 +20059,44 @@
    [
     "TooltipIconUrl",
     "string"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
  "HeroTrainerBuildingInfoDataModel": {
   "direction": "request",
   "fields": [
+   [
+    "Boost",
+    "int"
+   ],
+   [
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
+    "int"
+   ],
+   [
+    "CurrentBuildingRank",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "MaxBuildingRank",
+    "int"
+   ],
    [
     "CurrentMaxHeroLevel",
     "int"
@@ -15508,6 +20110,10 @@
  "HeroTrainerBuildingUpgradePopupModel": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingUpgradePopupDataModel",
+    "object"
+   ],
    [
     "NewMaxHeroLevel",
     "int"
@@ -15531,6 +20137,14 @@
   "direction": "request",
   "fields": [
    [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
+   [
     "ExpirationDate",
     "datetime"
    ],
@@ -15543,6 +20157,14 @@
  "HeroUnlockedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "Hero",
     "object"
@@ -15670,18 +20292,174 @@
   "direction": "request",
   "fields": [
    [
-    "HeroModel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
    ],
    [
     "PanelName",
     "int"
+   ],
+   [
+    "CurrencyAmount",
+    "object"
+   ],
+   [
+    "InFreeTrial",
+    "bool"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "Level",
+    "int"
+   ],
+   [
+    "SkuCode",
+    "string"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "HeroModel",
+    "object"
    ]
   ]
  },
  "HeroUpgradeTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "DPSIncrease",
     "double"
@@ -15708,10 +20486,6 @@
    ],
    [
     "SpecContainerId",
-    "int"
-   ],
-   [
-    "Type",
     "int"
    ],
    [
@@ -15749,6 +20523,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "HeroSpecContainerId",
     "int"
    ],
@@ -15780,7 +20562,7 @@
   ]
  },
  "HideTooltipEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -16153,6 +20935,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "CurrentArmor",
     "int"
    ],
@@ -16301,8 +21103,8 @@
   "direction": "request",
   "fields": [
    [
-    "SlotIndexes",
-    "object"
+    "ObjectId",
+    "string"
    ]
   ]
  },
@@ -16323,6 +21125,10 @@
   "direction": "request",
   "fields": [
    [
+    "ObjectId",
+    "string"
+   ],
+   [
     "HeroId",
     "int"
    ],
@@ -16336,6 +21142,10 @@
   "direction": "request",
   "fields": [
    [
+    "ObjectId",
+    "string"
+   ],
+   [
     "SlotIndexes",
     "object"
    ]
@@ -16345,12 +21155,16 @@
   "direction": "request",
   "fields": [
    [
-    "HeroItem",
-    "object"
-   ],
-   [
     "ItemType",
     "int"
+   ],
+   [
+    "ObjectId",
+    "string"
+   ],
+   [
+    "HeroItem",
+    "object"
    ]
   ]
  },
@@ -16366,10 +21180,6 @@
     "int"
    ],
    [
-    "ItemType",
-    "int"
-   ],
-   [
     "ObjectId",
     "string"
    ]
@@ -16378,14 +21188,6 @@
  "InboxItem": {
   "direction": "both",
   "fields": [
-   [
-    "HeroItem",
-    "object"
-   ],
-   [
-    "ItemType",
-    "int"
-   ],
    [
     "ItemType",
     "int"
@@ -16400,6 +21202,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "InboxItems",
     "object"
    ]
@@ -16408,6 +21218,14 @@
  "InstallCompletedTaskTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "Duration",
     "int"
@@ -16421,6 +21239,14 @@
  "InstallPackageCompletedTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "Duration",
     "int"
@@ -16438,6 +21264,14 @@
  "InstallPackageStartedTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "PackageVersionId",
     "object"
@@ -16501,6 +21335,14 @@
  "InvalidActionFeedback": {
   "direction": "request",
   "fields": [
+   [
+    "DebugMsg",
+    "string"
+   ],
+   [
+    "OasisId",
+    "int"
+   ],
    [
     "Priority",
     "int"
@@ -16674,6 +21516,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "CanAfford",
     "bool"
    ],
@@ -16700,59 +21562,9 @@
    ]
   ]
  },
- "InventoryDecoration": {
-  "direction": "request",
-  "fields": [
-   [
-    "Level",
-    "int"
-   ]
-  ]
- },
- "InventoryDefenseIngredientBoost": {
-  "direction": "request",
-  "fields": [
-   [
-    "Level",
-    "int"
-   ]
-  ]
- },
  "InventoryItem": {
   "direction": "both",
   "fields": [
-   [
-    "ArchetypeId",
-    "int"
-   ],
-   [
-    "DyeTemplateId",
-    "int"
-   ],
-   [
-    "Effects",
-    "object"
-   ],
-   [
-    "IsBranded",
-    "bool"
-   ],
-   [
-    "IsSellable",
-    "bool"
-   ],
-   [
-    "ItemLevel",
-    "int"
-   ],
-   [
-    "PowerUp",
-    "object"
-   ],
-   [
-    "PrimaryStatsModifiers",
-    "short"
-   ],
    [
     "TemplateId",
     "int"
@@ -16762,6 +21574,14 @@
  "InventoryItemRewardItem": {
   "direction": "request",
   "fields": [
+   [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
    [
     "Item",
     "object"
@@ -16810,6 +21630,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "IsInventoryOpenedChangingTab",
     "bool"
    ]
@@ -16818,6 +21658,26 @@
  "InventoryRoom": {
   "direction": "request",
   "fields": [
+   [
+    "AutoLevelUp",
+    "bool"
+   ],
+   [
+    "AvailableCount",
+    "int"
+   ],
+   [
+    "BlueprintUnlocked",
+    "bool"
+   ],
+   [
+    "NewlyAdded",
+    "bool"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
    [
     "Level",
     "int"
@@ -16849,6 +21709,14 @@
  "InventoryTabAddedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "InventoryTabCount",
     "int"
@@ -16883,6 +21751,14 @@
  "InventoryTabRewardItem": {
   "direction": "request",
   "fields": [
+   [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
    [
     "Count",
     "int"
@@ -17073,6 +21949,50 @@
  "KillEntitiesAchievement": {
   "direction": "request",
   "fields": [
+   [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
+    "Count",
+    "int"
+   ],
    [
     "BossCreaturesOnly",
     "bool"
@@ -17465,22 +22385,54 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
     "IsOpalPanel",
     "bool"
    ],
    [
-    "LeaguePopupModel",
-    "object"
-   ],
-   [
     "PanelName",
     "int"
+   ],
+   [
+    "LeaguePopupModel",
+    "object"
    ]
   ]
  },
  "LeagueProgressionPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CurrentLeagueId",
     "int"
@@ -17514,6 +22466,14 @@
  "LeagueRankReachedNewsData": {
   "direction": "request",
   "fields": [
+   [
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
+    "int"
+   ],
    [
     "IsMaintained",
     "bool"
@@ -17551,6 +22511,14 @@
  "LeagueUpdatedNewsData": {
   "direction": "request",
   "fields": [
+   [
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
+    "int"
+   ],
    [
     "CurrentLeagueId",
     "int"
@@ -17605,6 +22573,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "LeagueId",
     "int"
    ],
@@ -17617,6 +22593,26 @@
  "LeaveCastlePanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CastleType",
     "int"
@@ -17766,6 +22762,62 @@
   "direction": "request",
   "fields": [
    [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
+   [
     "AttackIncreasedLifeForce",
     "double"
    ],
@@ -17806,15 +22858,15 @@
   ]
  },
  "LinkedAccountResult": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "FacebookFriendsLinked",
-    "object"
+    "array"
    ],
    [
     "FacebookFriendsNotLinked",
-    "object"
+    "array"
    ],
    [
     "ReconnectUrl",
@@ -18066,6 +23118,62 @@
   "direction": "request",
   "fields": [
    [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
+   [
     "IncreasedChance",
     "double"
    ]
@@ -18160,6 +23268,14 @@
  "MaintenanceGlobalNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "MaintenanceScheduledDate",
     "datetime"
@@ -18406,22 +23522,42 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
     "IsOpalPanel",
     "bool"
    ],
    [
-    "MessageBoxOption",
-    "object"
-   ],
-   [
     "PanelName",
     "int"
+   ],
+   [
+    "MessageBoxOption",
+    "object"
    ]
   ]
  },
  "MessageNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "Sender",
     "int"
@@ -18471,6 +23607,38 @@
   "direction": "request",
   "fields": [
    [
+    "Boost",
+    "int"
+   ],
+   [
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
+    "int"
+   ],
+   [
+    "CurrentBuildingRank",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "MaxBuildingRank",
+    "int"
+   ],
+   [
     "CurrentCapacity",
     "int"
    ],
@@ -18515,6 +23683,54 @@
  "MineBuildingUpgradePopupDataModel": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingInfoModel",
+    "object"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "HeroLevelRequirement",
+    "int"
+   ],
+   [
+    "IsActive",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsHeroLevelRequirementMet",
+    "int"
+   ],
+   [
+    "NextBuildingRank",
+    "int"
+   ],
+   [
+    "ShopSkus",
+    "object"
+   ],
+   [
+    "UnlockedItems",
+    "object"
+   ],
+   [
+    "UpgradeDurationInSeconds",
+    "int"
+   ],
    [
     "NewCapacity",
     "int"
@@ -18576,6 +23792,34 @@
   "direction": "request",
   "fields": [
    [
+    "AmountToCollect",
+    "object"
+   ],
+   [
+    "EntityHarvestId",
+    "int"
+   ],
+   [
+    "EntityHarvestType",
+    "int"
+   ],
+   [
+    "IsCookingReady",
+    "bool"
+   ],
+   [
+    "Position",
+    "object"
+   ],
+   [
+    "RemainingTime",
+    "int"
+   ],
+   [
+    "Xp",
+    "int"
+   ],
+   [
     "IsStorageFull",
     "bool"
    ],
@@ -18600,6 +23844,14 @@
  "MinePillagedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "CastleBuildingId",
     "int"
@@ -18648,6 +23900,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "BuildingId",
     "int"
    ],
@@ -18673,11 +23933,27 @@
   "direction": "request",
   "fields": [
    [
-    "BuildingId",
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
     "int"
    ],
    [
     "ExpirableType",
+    "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
+   ],
+   [
+    "BuildingId",
     "int"
    ],
    [
@@ -18715,6 +23991,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "BuildingId",
     "int"
    ],
@@ -18745,11 +24029,27 @@
   "direction": "request",
   "fields": [
    [
-    "BuildingId",
+    "DueDate",
+    "datetime"
+   ],
+   [
+    "DurationSeconds",
     "int"
    ],
    [
     "ExpirableType",
+    "int"
+   ],
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "IsPaused",
+    "bool"
+   ],
+   [
+    "BuildingId",
     "int"
    ]
   ]
@@ -18757,6 +24057,14 @@
  "MineShieldExpiredNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "CastleBuildingId",
     "int"
@@ -18804,13 +24112,67 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "TimeBonus",
     "double"
    ]
   ]
  },
+ "MissileSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
+ "ModifiedLootCommunityEvent": {
+  "direction": "response",
+  "fields": [
+   [
+    "DebugName",
+    "string"
+   ],
+   [
+    "EventEndTime",
+    "datetime"
+   ],
+   [
+    "EventStartTime",
+    "datetime"
+   ],
+   [
+    "Id",
+    "int"
+   ]
+  ]
+ },
  "MovementSpeed": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -18822,11 +24184,11 @@
    ],
    [
     "SpeedFrom",
-    "double"
+    "number"
    ],
    [
     "SpeedTo",
-    "double"
+    "number"
    ]
   ]
  },
@@ -18928,6 +24290,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "CrownsCount",
     "int"
    ],
@@ -18953,10 +24335,6 @@
    ],
    [
     "NextLevelXp",
-    "int"
-   ],
-   [
-    "PanelName",
     "int"
    ],
    [
@@ -19010,6 +24388,14 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
+   [
     "GameUrl",
     "string"
    ]
@@ -19057,6 +24443,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "NewsItem",
     "object"
    ]
@@ -19092,36 +24486,12 @@
   "direction": "both",
   "fields": [
    [
-    "IsMaintained",
+    "RequiresUserAction",
     "bool"
    ],
    [
-    "IsPromoted",
-    "bool"
-   ],
-   [
-    "LeagueId",
+    "Type",
     "int"
-   ],
-   [
-    "LeagueRank",
-    "int"
-   ],
-   [
-    "SubLeagueId",
-    "int"
-   ],
-   [
-    "SubLeagueName",
-    "string"
-   ],
-   [
-    "SubLeaguePrefixName",
-    "string"
-   ],
-   [
-    "SubLeagueSmallIconUrl",
-    "string"
    ]
   ]
  },
@@ -19176,16 +24546,12 @@
   "direction": "both",
   "fields": [
    [
-    "AttackId",
-    "string"
-   ],
-   [
-    "CastleRating",
+    "Index",
     "int"
    ],
    [
-    "Message",
-    "object"
+    "NotificationType",
+    "int"
    ]
   ]
  },
@@ -19317,6 +24683,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "ObjectiveId",
     "int"
    ]
@@ -19335,16 +24709,16 @@
   "direction": "request",
   "fields": [
    [
-    "Description",
-    "string"
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
    ],
    [
     "ExcludeModalPopupOpening",
     "bool"
-   ],
-   [
-    "Id",
-    "int"
    ],
    [
     "IsOpalPanel",
@@ -19352,6 +24726,14 @@
    ],
    [
     "PanelName",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "Id",
     "int"
    ],
    [
@@ -19369,7 +24751,7 @@
   ]
  },
  "ObjectiveCondition": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "DebugName",
@@ -19484,6 +24866,18 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
     "IsOpalPanel",
     "bool"
    ],
@@ -19515,6 +24909,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "ActionButtonModel",
     "object"
    ],
@@ -19525,10 +24939,6 @@
    [
     "Description",
     "string"
-   ],
-   [
-    "ExcludeModalPopupOpening",
-    "bool"
    ],
    [
     "IconLayerName",
@@ -19547,15 +24957,7 @@
     "bool"
    ],
    [
-    "IsOpalPanel",
-    "bool"
-   ],
-   [
     "ObjectiveId",
-    "int"
-   ],
-   [
-    "PanelName",
     "int"
    ],
    [
@@ -19598,20 +25000,19 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "NewCount",
     "int"
    ],
    [
     "ObjectiveId",
-    "int"
-   ]
-  ]
- },
- "ObjectiveRequirement": {
-  "direction": "request",
-  "fields": [
-   [
-    "AttackRegionId",
     "int"
    ]
   ]
@@ -19653,15 +25054,6 @@
    ]
   ]
  },
- "ObjectiveUnlockCommand": {
-  "direction": "request",
-  "fields": [
-   [
-    "ObjectiveId",
-    "int"
-   ]
-  ]
- },
  "ObjectiveUnlockedEventArgs": {
   "direction": "both",
   "fields": [
@@ -19678,6 +25070,14 @@
  "ObjectiveUnlockedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "AccountObjective",
     "object"
@@ -19707,6 +25107,10 @@
    [
     "TargetEntitySearch",
     "object"
+   ],
+   [
+    "Conditions",
+    "array"
    ]
   ]
  },
@@ -19738,6 +25142,26 @@
  "OptionControlSchemePanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "GameStateType",
     "int"
@@ -19803,8 +25227,24 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
     "IsOpalPanel",
     "bool"
+   ],
+   [
+    "PanelName",
+    "int"
    ],
    [
     "OptionViewModel",
@@ -19820,27 +25260,19 @@
   "direction": "both",
   "fields": [
    [
-    "Interval",
-    "double"
+    "DisplayName",
+    "string"
    ],
    [
-    "MaxValue",
-    "double"
+    "IsEnabled",
+    "bool"
    ],
    [
-    "MinValue",
-    "double"
+    "ParameterName",
+    "string"
    ],
    [
     "Type",
-    "int"
-   ],
-   [
-    "Value",
-    "double"
-   ],
-   [
-    "ValueToRoundDisplayValue",
     "int"
    ]
   ]
@@ -19849,12 +25281,24 @@
   "direction": "request",
   "fields": [
    [
-    "IsChecked",
+    "DisplayName",
+    "string"
+   ],
+   [
+    "IsEnabled",
     "bool"
+   ],
+   [
+    "ParameterName",
+    "string"
    ],
    [
     "Type",
     "int"
+   ],
+   [
+    "IsChecked",
+    "bool"
    ]
   ]
  },
@@ -19862,11 +25306,23 @@
   "direction": "request",
   "fields": [
    [
-    "SelectedKey",
-    "int"
+    "DisplayName",
+    "string"
+   ],
+   [
+    "IsEnabled",
+    "bool"
+   ],
+   [
+    "ParameterName",
+    "string"
    ],
    [
     "Type",
+    "int"
+   ],
+   [
+    "SelectedKey",
     "int"
    ],
    [
@@ -19879,6 +25335,22 @@
   "direction": "request",
   "fields": [
    [
+    "DisplayName",
+    "string"
+   ],
+   [
+    "IsEnabled",
+    "bool"
+   ],
+   [
+    "ParameterName",
+    "string"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
     "Interval",
     "double"
    ],
@@ -19889,10 +25361,6 @@
    [
     "MinValue",
     "double"
-   ],
-   [
-    "Type",
-    "int"
    ],
    [
     "Value",
@@ -19963,7 +25431,15 @@
   "direction": "request",
   "fields": [
    [
-    "IsClosingOptionPanel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
     "bool"
    ],
    [
@@ -19973,6 +25449,10 @@
    [
     "PanelName",
     "int"
+   ],
+   [
+    "IsClosingOptionPanel",
+    "bool"
    ]
   ]
  },
@@ -20153,14 +25633,6 @@
    [
     "Orientation",
     "int"
-   ],
-   [
-    "Orientation",
-    "double"
-   ],
-   [
-    "Orientation",
-    "double"
    ]
   ]
  },
@@ -20246,8 +25718,24 @@
   "direction": "both",
   "fields": [
    [
-    "RewardModel",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
    ]
   ]
  },
@@ -20293,15 +25781,15 @@
   ]
  },
  "PanelSoundPresets": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "ActivationPresets",
-    "object"
+    "array"
    ],
    [
     "DeactivationPresets",
-    "object"
+    "array"
    ]
   ]
  },
@@ -20317,6 +25805,14 @@
  "PanelTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "OpenCloseDurationInseconds",
     "int"
@@ -20343,6 +25839,26 @@
  "PausePanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "DisableLeaveCastle",
     "bool"
@@ -20481,6 +25997,10 @@
    [
     "MovieFile",
     "string"
+   ],
+   [
+    "EndTriggers",
+    "array"
    ]
   ]
  },
@@ -20587,6 +26107,10 @@
  "PopUpNarrativeVoTextPagesSpec": {
   "direction": "request",
   "fields": [
+   [
+    "Tag",
+    "enum"
+   ],
    [
     "NarrativeVoTextPages",
     "object"
@@ -20731,6 +26255,34 @@
    [
     "Type",
     "int"
+   ],
+   [
+    "Conditions",
+    "array"
+   ],
+   [
+    "Disabled",
+    "bool"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
+   [
+    "EndTriggers",
+    "array"
+   ],
+   [
+    "EndType",
+    "string"
+   ],
+   [
+    "StartDelay",
+    "double"
+   ],
+   [
+    "StartType",
+    "string"
    ]
   ]
  },
@@ -20789,6 +26341,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "ArrowDirection",
     "int"
    ],
@@ -20821,10 +26393,6 @@
     "bool"
    ],
    [
-    "IsOpalPanel",
-    "bool"
-   ],
-   [
     "Left",
     "int"
    ],
@@ -20843,10 +26411,6 @@
    [
     "OverlayAlpha",
     "double"
-   ],
-   [
-    "PanelName",
-    "int"
    ],
    [
     "ParentContainer",
@@ -20915,7 +26479,7 @@
   ]
  },
  "PopupShowMoreTextEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -21000,7 +26564,59 @@
   "direction": "request",
   "fields": [
    [
-    "RestorePoints",
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "AbilityId",
+    "int"
+   ],
+   [
+    "MinLevelRequirement",
     "int"
    ]
   ]
@@ -21072,6 +26688,54 @@
  "PremiumCashBoostConsumableTemplate": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
    [
     "MineIncreasedPremiumCash",
     "double"
@@ -21179,6 +26843,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Message",
     "string"
    ]
@@ -21279,7 +26951,7 @@
   ]
  },
  "ProfanityFilteredDescription": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Language",
@@ -21292,7 +26964,7 @@
   ]
  },
  "ProfanityFilteredString": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Language",
@@ -21363,6 +27035,26 @@
  "ProfilePanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "AccountId",
     "int"
@@ -21754,6 +27446,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "IsCastleShareable",
     "bool"
    ],
@@ -21928,6 +27640,46 @@
   "direction": "request",
   "fields": [
    [
+    "DebugName",
+    "string"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "DescriptionId",
+    "int"
+   ],
+   [
+    "Icon",
+    "string"
+   ],
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Points",
+    "int"
+   ],
+   [
+    "SteamId",
+    "string"
+   ],
+   [
+    "SteamStatId",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TitleId",
+    "int"
+   ],
+   [
     "Heroes",
     "object"
    ]
@@ -21976,15 +27728,31 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "AttackRegionsViewModel",
     "object"
    ],
    [
     "CurrentRegion",
-    "int"
-   ],
-   [
-    "PanelName",
     "int"
    ],
    [
@@ -22034,6 +27802,26 @@
  "RenovateBuildingPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "BuildingDescriptionOasisId",
     "int"
@@ -22175,6 +27963,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "CastleType",
     "int"
    ],
@@ -22287,10 +28095,6 @@
  "RewardItemBase": {
   "direction": "both",
   "fields": [
-   [
-    "CurrencyAmount",
-    "object"
-   ],
    [
     "LargeIconUrl",
     "string"
@@ -22414,6 +28218,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "DecorationPoints",
     "int"
    ],
@@ -22478,18 +28302,6 @@
    [
     "SpecContainerType",
     "int"
-   ],
-   [
-    "SpecContainerType",
-    "double"
-   ],
-   [
-    "SpecContainerType",
-    "double"
-   ],
-   [
-    "SpecContainerType",
-    "double"
    ]
   ]
  },
@@ -22502,14 +28314,6 @@
    ],
    [
     "Thickness",
-    "double"
-   ],
-   [
-    "Width",
-    "double"
-   ],
-   [
-    "Width",
     "double"
    ],
    [
@@ -22541,14 +28345,19 @@
    [
     "Passages",
     "object"
+   ]
+  ]
+ },
+ "RoomSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
    ],
    [
-    "Passages",
-    "int"
-   ],
-   [
-    "Passages",
-    "int"
+    "Specs",
+    "array"
    ]
   ]
  },
@@ -22556,15 +28365,127 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "DecorationSlotCount",
     "int"
    ],
    [
     "RoomModelCategory",
-    "int"
-   ],
-   [
-    "Type",
     "int"
    ]
   ]
@@ -22588,14 +28509,6 @@
    [
     "CellTypeMask",
     "uint"
-   ],
-   [
-    "CellTypeMask",
-    "byte"
-   ],
-   [
-    "CellTypeMask",
-    "byte"
    ]
   ]
  },
@@ -22724,6 +28637,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "FilterCode",
     "string"
    ],
@@ -22786,6 +28719,14 @@
  "SeasonalCompetitionStartedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "string"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "StartDate",
     "datetime"
@@ -22852,13 +28793,17 @@
   "direction": "request",
   "fields": [
    [
+    "Id",
+    "string"
+   ],
+   [
     "PackageType",
     "int"
    ]
   ]
  },
  "SecurityContext": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -22870,6 +28815,10 @@
   "direction": "request",
   "fields": [
    [
+    "Id",
+    "string"
+   ],
+   [
     "BranchName",
     "string"
    ]
@@ -22878,6 +28827,10 @@
  "SecurityContextBranchEnvironment": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "string"
+   ],
    [
     "BranchName",
     "string"
@@ -22895,6 +28848,14 @@
  "SecurityGroup": {
   "direction": "request",
   "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Permissions",
+    "object"
+   ],
    [
     "Members",
     "object"
@@ -22927,7 +28888,7 @@
   ]
  },
  "SecurityPrincipal": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Name",
@@ -22935,7 +28896,7 @@
    ],
    [
     "Permissions",
-    "object"
+    "array"
    ]
   ]
  },
@@ -23033,24 +28994,19 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "AssignmentActionIndex",
     "int"
    ],
    [
     "AssignmentId",
-    "int"
-   ]
-  ]
- },
- "ServerCommand": {
-  "direction": "request",
-  "fields": [
-   [
-    "HeroItemSlot",
-    "int"
-   ],
-   [
-    "InventorySlotIndex",
     "int"
    ]
   ]
@@ -23097,6 +29053,14 @@
  "SessionTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "AttackTotalTime",
     "int"
@@ -23203,33 +29167,6 @@
    ]
   ]
  },
- "ShieldAddedNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "ExpirableId",
-    "string"
-   ]
-  ]
- },
- "ShieldEndExpirable": {
-  "direction": "request",
-  "fields": [
-   [
-    "ExpirableType",
-    "int"
-   ]
-  ]
- },
- "ShieldExpiredNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "ExpirableId",
-    "string"
-   ]
-  ]
- },
  "ShieldInfo": {
   "direction": "both",
   "fields": [
@@ -23312,7 +29249,51 @@
   "direction": "request",
   "fields": [
    [
-    "BuildingId",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
+    "DyeInfoModel",
+    "object"
+   ],
+   [
+    "InitialCurrencyType",
+    "int"
+   ],
+   [
+    "ItemCount",
+    "int"
+   ],
+   [
+    "ItemId",
+    "int"
+   ],
+   [
+    "ItemType",
+    "int"
+   ],
+   [
+    "ShopConfirmationPopupModel",
+    "object"
+   ],
+   [
+    "WalletAmount",
     "int"
    ]
   ]
@@ -23394,7 +29375,7 @@
   ]
  },
  "ShopFilterValue": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Id",
@@ -23405,6 +29386,10 @@
  "ShopFilterValueDecorationCategory": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "int"
+   ],
    [
     "DecorationCategoryMask",
     "int"
@@ -23470,6 +29455,10 @@
   "direction": "request",
   "fields": [
    [
+    "Id",
+    "int"
+   ],
+   [
     "FilterOasisId",
     "int"
    ],
@@ -23486,6 +29475,14 @@
  "ShopGlanceViewTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "ItemCount",
     "int"
@@ -23646,6 +29643,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "AreCraftingMaterialsAddedToBuyBack",
     "bool"
    ],
@@ -23662,6 +29679,26 @@
  "ShopPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "BuildingId",
     "int"
@@ -24212,6 +30249,22 @@
   "direction": "request",
   "fields": [
    [
+    "CanStillBeTriggeredWithShiftPressedA",
+    "bool"
+   ],
+   [
+    "IgnoredModifiers",
+    "int"
+   ],
+   [
+    "IsGrabbable",
+    "bool"
+   ],
+   [
+    "RequiredModifiers",
+    "int"
+   ],
+   [
     "Key",
     "int"
    ]
@@ -24220,6 +30273,22 @@
  "ShortcutMouseButtonCode": {
   "direction": "request",
   "fields": [
+   [
+    "CanStillBeTriggeredWithShiftPressedA",
+    "bool"
+   ],
+   [
+    "IgnoredModifiers",
+    "int"
+   ],
+   [
+    "IsGrabbable",
+    "bool"
+   ],
+   [
+    "RequiredModifiers",
+    "int"
+   ],
    [
     "MouseButton",
     "int"
@@ -24257,14 +30326,6 @@
    [
     "SpecialMessage",
     "string"
-   ],
-   [
-    "SpecialMessage",
-    "int"
-   ],
-   [
-    "SpecialMessage",
-    "int"
    ]
   ]
  },
@@ -24286,20 +30347,24 @@
    [
     "ToolTipModel",
     "object"
-   ],
-   [
-    "ToolTipModel",
-    "int"
-   ],
-   [
-    "ToolTipModel",
-    "int"
    ]
   ]
  },
  "ShowLotteryTicketPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
    [
     "IsOpalPanel",
     "bool"
@@ -24317,6 +30382,14 @@
  "ShowMoreCastleNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "AttackSelectionResult",
     "object"
@@ -24348,14 +30421,6 @@
    ],
    [
     "selectedItem",
-    "int"
-   ],
-   [
-    "width",
-    "int"
-   ],
-   [
-    "width",
     "int"
    ],
    [
@@ -24399,14 +30464,6 @@
    [
     "TrapName",
     "string"
-   ],
-   [
-    "TrapName",
-    "int"
-   ],
-   [
-    "TrapName",
-    "int"
    ]
   ]
  },
@@ -24416,14 +30473,6 @@
    [
     "Name",
     "string"
-   ],
-   [
-    "Name",
-    "int"
-   ],
-   [
-    "Name",
-    "int"
    ]
   ]
  },
@@ -24521,7 +30570,11 @@
   "direction": "request",
   "fields": [
    [
-    "EquippedSpells",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
     "object"
    ],
    [
@@ -24529,12 +30582,20 @@
     "bool"
    ],
    [
-    "FamilyId",
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
     "int"
    ],
    [
-    "IsOpalPanel",
-    "bool"
+    "EquippedSpells",
+    "object"
+   ],
+   [
+    "FamilyId",
+    "int"
    ],
    [
     "SpellTrees",
@@ -24546,6 +30607,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "ShopSkuModifiers",
     "object"
    ]
@@ -24554,6 +30623,130 @@
  "SleepyGiantAccountInformation": {
   "direction": "request",
   "fields": [
+   [
+    "AccountId",
+    "int"
+   ],
+   [
+    "ActiveConsumables",
+    "object"
+   ],
+   [
+    "AvatarId",
+    "int"
+   ],
+   [
+    "BuildInfo",
+    "object"
+   ],
+   [
+    "BuyBack",
+    "object"
+   ],
+   [
+    "CastleRenovationLevel",
+    "int"
+   ],
+   [
+    "CompletedAssignments",
+    "ushort"
+   ],
+   [
+    "DisplayName",
+    "string"
+   ],
+   [
+    "DisplayNameValidationDate",
+    "datetime"
+   ],
+   [
+    "Friends",
+    "object"
+   ],
+   [
+    "FriendshipInvitations",
+    "object"
+   ],
+   [
+    "GamerScore",
+    "int"
+   ],
+   [
+    "Heroes",
+    "object"
+   ],
+   [
+    "HeroFreeTrialInfoPeriod",
+    "object"
+   ],
+   [
+    "Inbox",
+    "object"
+   ],
+   [
+    "Inventory",
+    "object"
+   ],
+   [
+    "LastViewedDates",
+    "object"
+   ],
+   [
+    "LeagueId",
+    "int"
+   ],
+   [
+    "Objectives",
+    "object"
+   ],
+   [
+    "Privileges",
+    "int"
+   ],
+   [
+    "ProfanityFiltering",
+    "bool"
+   ],
+   [
+    "RecommendedFriends",
+    "object"
+   ],
+   [
+    "SelectedHeroId",
+    "int"
+   ],
+   [
+    "SpecialPacks",
+    "ushort"
+   ],
+   [
+    "Stats",
+    "object"
+   ],
+   [
+    "SubLeagueId",
+    "int"
+   ],
+   [
+    "TrophyScore",
+    "int"
+   ],
+   [
+    "UnlockedAvatars",
+    "ushort"
+   ],
+   [
+    "UnlockedEmotes",
+    "ushort"
+   ],
+   [
+    "UnlockedSpells",
+    "object"
+   ],
+   [
+    "Wallet",
+    "object"
+   ],
    [
     "Achievements",
     "object"
@@ -24862,6 +31055,122 @@
   "direction": "request",
   "fields": [
    [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
     "Cooldown",
     "double"
    ],
@@ -24900,10 +31209,6 @@
    [
     "SpellLevel",
     "int"
-   ],
-   [
-    "Type",
-    "int"
    ]
   ]
  },
@@ -24933,6 +31238,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Spell",
     "object"
    ]
@@ -24944,15 +31257,6 @@
    [
     "Spell",
     "object"
-   ]
-  ]
- },
- "StartAssignmentCommand": {
-  "direction": "request",
-  "fields": [
-   [
-    "AssignmentId",
-    "int"
    ]
   ]
  },
@@ -25039,6 +31343,14 @@
  "StateMachineTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "States",
     "object"
@@ -25197,6 +31509,38 @@
   "direction": "request",
   "fields": [
    [
+    "Boost",
+    "int"
+   ],
+   [
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
+    "int"
+   ],
+   [
+    "CurrentBuildingRank",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "MaxBuildingRank",
+    "int"
+   ],
+   [
     "CurrentCapacity",
     "int"
    ],
@@ -25209,6 +31553,54 @@
  "StorageBuildingUpgradePopupDataModel": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingInfoModel",
+    "object"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "HeroLevelRequirement",
+    "int"
+   ],
+   [
+    "IsActive",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsHeroLevelRequirementMet",
+    "int"
+   ],
+   [
+    "NextBuildingRank",
+    "int"
+   ],
+   [
+    "ShopSkus",
+    "object"
+   ],
+   [
+    "UnlockedItems",
+    "object"
+   ],
+   [
+    "UpgradeDurationInSeconds",
+    "int"
+   ],
    [
     "NewCapacity",
     "int"
@@ -25362,18 +31754,29 @@
    ]
   ]
  },
- "TargetedAttackExpirable": {
-  "direction": "request",
-  "fields": [
-   [
-    "ExpirableType",
-    "int"
-   ]
-  ]
- },
  "TargetedAttackPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "ShouldShowTargetedAttackNotification",
     "bool"
@@ -25387,6 +31790,14 @@
  "TargetedAttackReloadedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "TargetedAttackAvailableCount",
     "int"
@@ -25418,6 +31829,10 @@
  "TextValidatedEventArgs": {
   "direction": "request",
   "fields": [
+   [
+    "Text",
+    "string"
+   ],
    [
     "IsEnterPressed",
     "bool"
@@ -25486,18 +31901,17 @@
    ]
   ]
  },
- "ThemeRemovedNotification": {
-  "direction": "request",
-  "fields": [
-   [
-    "ThemeId",
-    "int"
-   ]
-  ]
- },
  "ThemeRewardItem": {
   "direction": "request",
   "fields": [
+   [
+    "LargeIconUrl",
+    "string"
+   ],
+   [
+    "SmallIconUrl",
+    "string"
+   ],
    [
     "ThemeId",
     "int"
@@ -25508,14 +31922,13 @@
   "direction": "request",
   "fields": [
    [
-    "ThemeId",
+    "Index",
     "int"
-   ]
-  ]
- },
- "ThemeUnlockedNotification": {
-  "direction": "request",
-  "fields": [
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "ThemeId",
     "int"
@@ -25674,50 +32087,242 @@
   "direction": "both",
   "fields": [
    [
-    "CurrencyType",
+    "AnchorPosition",
     "int"
    ],
    [
-    "DeathTime",
+    "ArrowPosition",
     "int"
    ],
    [
-    "FreeSlotsRequirement",
-    "int"
-   ],
-   [
-    "HasItemsToCollect",
-    "bool"
-   ],
-   [
-    "HeroDisplayName",
+    "BuildingRequirementName",
     "string"
    ],
    [
-    "HeroLevel",
+    "BuildingRequirementRank",
     "int"
    ],
    [
-    "IconUrl",
+    "BuyBackId",
     "string"
    ],
    [
-    "IsHeroInventoryLargeEnough",
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
     "bool"
    ],
    [
-    "IsStorageFull",
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
     "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
    ],
    [
     "Type",
     "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
    ]
   ]
  },
  "TotemTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
    [
     "CPCapacity",
     "int"
@@ -25728,10 +32333,6 @@
    ],
    [
     "Level",
-    "int"
-   ],
-   [
-    "Type",
     "int"
    ]
   ]
@@ -25753,6 +32354,14 @@
   "direction": "request",
   "fields": [
    [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
+   [
     "HostName",
     "string"
    ],
@@ -25766,8 +32375,12 @@
   "direction": "both",
   "fields": [
    [
-    "GameUrl",
-    "string"
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
    ]
   ]
  },
@@ -25780,9 +32393,202 @@
    ]
   ]
  },
+ "TrapSpecContainer": {
+  "direction": "response",
+  "fields": [
+   [
+    "Name",
+    "string"
+   ],
+   [
+    "Specs",
+    "array"
+   ]
+  ]
+ },
  "TrapTooltipModel": {
   "direction": "request",
   "fields": [
+   [
+    "AnchorPosition",
+    "int"
+   ],
+   [
+    "ArrowPosition",
+    "int"
+   ],
+   [
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuyBackId",
+    "string"
+   ],
+   [
+    "BuyPrice",
+    "object"
+   ],
+   [
+    "CanBeSold",
+    "bool"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IsAffordable",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsEntityTooltip",
+    "bool"
+   ],
+   [
+    "IsLevelRequirementMet",
+    "bool"
+   ],
+   [
+    "IsOwned",
+    "bool"
+   ],
+   [
+    "IsSteamMarketable",
+    "bool"
+   ],
+   [
+    "IsUpgrading",
+    "bool"
+   ],
+   [
+    "LevelRequirement",
+    "int"
+   ],
+   [
+    "LimitedTimeInSeconds",
+    "int"
+   ],
+   [
+    "MaxAffordableCount",
+    "int"
+   ],
+   [
+    "MaxOwningCount",
+    "int"
+   ],
+   [
+    "OffsetPositionX",
+    "double"
+   ],
+   [
+    "OffsetPositionY",
+    "double"
+   ],
+   [
+    "SellPrice",
+    "object"
+   ],
+   [
+    "ShouldHidePriceSection",
+    "bool"
+   ],
+   [
+    "TemporaryShopItemDescription",
+    "string"
+   ],
+   [
+    "Title",
+    "string"
+   ],
+   [
+    "TooltipContext",
+    "int"
+   ],
+   [
+    "TooltipOpeningDelay",
+    "double"
+   ],
+   [
+    "Type",
+    "int"
+   ],
+   [
+    "UpdateLocked",
+    "bool"
+   ],
+   [
+    "Abilities",
+    "object"
+   ],
+   [
+    "AttackSpeed",
+    "string"
+   ],
+   [
+    "AutoLevelUp",
+    "bool"
+   ],
+   [
+    "BehaviorCategory",
+    "string"
+   ],
+   [
+    "DamageFormula",
+    "string"
+   ],
+   [
+    "DefensePoints",
+    "int"
+   ],
+   [
+    "Health",
+    "int"
+   ],
+   [
+    "IsOldIngredient",
+    "bool"
+   ],
+   [
+    "Level",
+    "int"
+   ],
+   [
+    "MaxLevel",
+    "int"
+   ],
+   [
+    "MovementSpeed",
+    "string"
+   ],
+   [
+    "RequiredCraftingMaterials",
+    "object"
+   ],
+   [
+    "ShopContext",
+    "int"
+   ],
+   [
+    "ShowSpecializations",
+    "bool"
+   ],
+   [
+    "Specializations",
+    "object"
+   ],
+   [
+    "Tier",
+    "int"
+   ],
    [
     "IsPowerNeeded",
     "bool"
@@ -25933,6 +32739,14 @@
  "TrophyScoreChangedNotification": {
   "direction": "request",
   "fields": [
+   [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
    [
     "TrophyScore",
     "int"
@@ -26304,7 +33118,7 @@
   ]
  },
  "UIOptionInformation": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Text",
@@ -26610,6 +33424,46 @@
   "direction": "both",
   "fields": [
    [
+    "AccountDisplayName",
+    "string"
+   ],
+   [
+    "AccountId",
+    "int"
+   ],
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "CreatureTiers",
+    "object"
+   ],
+   [
+    "LayoutId",
+    "int"
+   ],
+   [
+    "ModificationDate",
+    "datetime"
+   ],
+   [
+    "OasisNameId",
+    "int"
+   ],
+   [
+    "Rooms",
+    "object"
+   ],
+   [
+    "ThemeId",
+    "int"
+   ],
+   [
+    "TrapTiers",
+    "object"
+   ],
+   [
     "ActivationDate",
     "datetime"
    ],
@@ -26660,6 +33514,14 @@
    [
     "OasisName",
     "int"
+   ],
+   [
+    "PublishedCastleId",
+    "string"
+   ],
+   [
+    "Signature",
+    "string"
    ]
   ]
  },
@@ -26683,6 +33545,26 @@
  "UbisoftCompetitionDetailPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "UbisoftCompetitionId",
     "int"
@@ -26872,7 +33754,7 @@
   ]
  },
  "UiBuildingRank": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "InvIconUrl",
@@ -26990,17 +33872,37 @@
   ]
  },
  "UnlockButtonEventArgs": {
-  "direction": "both",
+  "direction": "response",
   "fields": [
    [
     "Button",
-    "int"
+    "string"
    ]
   ]
  },
  "UnlockCastleThemePopupPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "CanAfford",
     "bool"
@@ -27151,6 +34053,30 @@
  "UpgradeBuildingCommand": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Orientation",
+    "int"
+   ],
+   [
+    "RoomId",
+    "int"
+   ],
+   [
+    "RoomZoneId",
+    "int"
+   ],
+   [
+    "SpecContainerId",
+    "int"
+   ],
+   [
+    "IsCastlePublishable",
+    "bool"
+   ],
    [
     "BuildingUpgradeRank",
     "int"
@@ -27430,24 +34356,6 @@
    ]
   ]
  },
- "UserMessageData": {
-  "direction": "request",
-  "fields": [
-   [
-    "Body",
-    "string"
-   ]
-  ]
- },
- "UserMessagePreviewData": {
-  "direction": "request",
-  "fields": [
-   [
-    "Summary",
-    "string"
-   ]
-  ]
- },
  "UserSettingEmote": {
   "direction": "both",
   "fields": [
@@ -27564,6 +34472,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "PosX",
     "int"
    ],
@@ -27576,6 +34504,26 @@
  "VictoryPanelNavigationModel": {
   "direction": "request",
   "fields": [
+   [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
    [
     "posX",
     "int"
@@ -27607,7 +34555,15 @@
   "direction": "request",
   "fields": [
    [
-    "Capturing",
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
     "bool"
    ],
    [
@@ -27615,11 +34571,15 @@
     "bool"
    ],
    [
-    "NbFilesInFolder",
+    "PanelName",
     "int"
    ],
    [
-    "PanelName",
+    "Capturing",
+    "bool"
+   ],
+   [
+    "NbFilesInFolder",
     "int"
    ]
   ]
@@ -27627,6 +34587,14 @@
  "VideoCaptureTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "GameStateType",
     "int"
@@ -27950,6 +34918,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Amount",
     "int"
    ],
@@ -28021,6 +34997,14 @@
   "direction": "request",
   "fields": [
    [
+    "Index",
+    "int"
+   ],
+   [
+    "NotificationType",
+    "int"
+   ],
+   [
     "Amounts",
     "object"
    ],
@@ -28033,6 +35017,14 @@
  "WatchedReplayTracking": {
   "direction": "request",
   "fields": [
+   [
+    "CreationDate",
+    "datetime"
+   ],
+   [
+    "TrackingTagId",
+    "int"
+   ],
    [
     "AttackId",
     "string"
@@ -28062,6 +35054,18 @@
  "WeaponArchetype": {
   "direction": "request",
   "fields": [
+   [
+    "Id",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Probability",
+    "double"
+   ],
    [
     "Damage",
     "double"
@@ -28215,6 +35219,26 @@
   "direction": "request",
   "fields": [
    [
+    "Attachment",
+    "int"
+   ],
+   [
+    "DataNavigationInfo",
+    "object"
+   ],
+   [
+    "ExcludeModalPopupOpening",
+    "bool"
+   ],
+   [
+    "IsOpalPanel",
+    "bool"
+   ],
+   [
+    "PanelName",
+    "int"
+   ],
+   [
     "ActiveWheel",
     "int"
    ],
@@ -28257,6 +35281,38 @@
   "direction": "request",
   "fields": [
    [
+    "Boost",
+    "int"
+   ],
+   [
+    "BoostText",
+    "string"
+   ],
+   [
+    "BuildingName",
+    "string"
+   ],
+   [
+    "BuildingType",
+    "int"
+   ],
+   [
+    "CurrentBuildingRank",
+    "int"
+   ],
+   [
+    "Description",
+    "string"
+   ],
+   [
+    "IconUrl",
+    "string"
+   ],
+   [
+    "MaxBuildingRank",
+    "int"
+   ],
+   [
     "CurrentWorkerCount",
     "int"
    ],
@@ -28270,16 +35326,55 @@
   "direction": "request",
   "fields": [
    [
-    "NewWorkerCount",
-    "int"
-   ]
-  ]
- },
- "WorkerCabinRewardItem": {
-  "direction": "request",
-  "fields": [
+    "BuildingInfoModel",
+    "object"
+   ],
    [
-    "Count",
+    "BuildingRequirementName",
+    "string"
+   ],
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "CanAfford",
+    "bool"
+   ],
+   [
+    "HeroLevelRequirement",
+    "int"
+   ],
+   [
+    "IsActive",
+    "bool"
+   ],
+   [
+    "IsBuildingRequirementMet",
+    "bool"
+   ],
+   [
+    "IsHeroLevelRequirementMet",
+    "int"
+   ],
+   [
+    "NextBuildingRank",
+    "int"
+   ],
+   [
+    "ShopSkus",
+    "object"
+   ],
+   [
+    "UnlockedItems",
+    "object"
+   ],
+   [
+    "UpgradeDurationInSeconds",
+    "int"
+   ],
+   [
+    "NewWorkerCount",
     "int"
    ]
   ]
@@ -28287,6 +35382,14 @@
  "WorldRankReachedNewsData": {
   "direction": "request",
   "fields": [
+   [
+    "RequiresUserAction",
+    "bool"
+   ],
+   [
+    "Type",
+    "int"
+   ],
    [
     "WorldRank",
     "int"
@@ -28347,6 +35450,62 @@
   "direction": "request",
   "fields": [
    [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
+   [
     "IncreasedXp",
     "double"
    ]
@@ -28355,6 +35514,62 @@
  "XpLeashBoostConsumableTemplate": {
   "direction": "request",
   "fields": [
+   [
+    "BuildingRequirementRank",
+    "int"
+   ],
+   [
+    "BuildingRequirementSpecContainerId",
+    "int"
+   ],
+   [
+    "IsLootable",
+    "bool"
+   ],
+   [
+    "MaxInventoryStackCount",
+    "int"
+   ],
+   [
+    "Name",
+    "object"
+   ],
+   [
+    "Price",
+    "object"
+   ],
+   [
+    "Quality",
+    "int"
+   ],
+   [
+    "Rarity",
+    "int"
+   ],
+   [
+    "SteamAssetSpec",
+    "object"
+   ],
+   [
+    "SteamAssetUiSpec",
+    "object"
+   ],
+   [
+    "TemplateId",
+    "int"
+   ],
+   [
+    "Ui",
+    "object"
+   ],
+   [
+    "BuffSpecContainerId",
+    "int"
+   ],
+   [
+    "Duration",
+    "int"
+   ],
    [
     "IncreasedXp",
     "double"
@@ -28390,20 +35605,15 @@
   "direction": "request",
   "fields": [
    [
-    "Xp",
-    "int"
-   ]
-  ]
- },
- "YoutubePanelNavigationModel": {
-  "direction": "request",
-  "fields": [
-   [
-    "IsOpalPanel",
-    "bool"
+    "LargeIconUrl",
+    "string"
    ],
    [
-    "PanelName",
+    "SmallIconUrl",
+    "string"
+   ],
+   [
+    "Xp",
     "int"
    ]
   ]
