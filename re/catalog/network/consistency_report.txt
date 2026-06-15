@@ -1,0 +1,23 @@
+# serialize<->deserialize consistency for two-way contracts
+# 780/790 fully consistent; 10 with diffs
+
+ContextualActionData:
+    written but not read : ['ContextualActionDataInputType']
+ShowBuildingHoverTooltipEventArgs:
+    type differs [SpecialMessage] : write=int read=string
+BuildToolbarModel:
+    written but not read : ['BuildToolMode']
+DoorStateTriggers:
+    written but not read : ['OnAfterAggroActivityEndedAndTestAttackCondition']
+ShowTrapPowerSupplyHoverTooltipEventArgs:
+    type differs [Name] : write=int read=string
+ForgeModel:
+    written but not read : ['ItemQuality']
+PanelVisibilityInformation:
+    written but not read : ['PanelName']
+ShowTrapHoverTooltipEventArgs:
+    type differs [TrapName] : write=int read=string
+MessageBoxClosedEventArgs:
+    written but not read : ['Id']
+TooltipModel:
+    written but not read : ['ArrowPosition']

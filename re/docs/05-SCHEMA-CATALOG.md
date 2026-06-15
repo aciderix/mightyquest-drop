@@ -80,6 +80,24 @@ serialize→deserialize round-trip. (Key harness detail: the codec's char-advanc
 primitive is `stdcall`, so the intercept layer pops its callee args — see
 `emu.py` `intercept_cleanup`.)
 
+## Exhaustive write/read consistency (`validate_consistency.py`)
+A single wrong field — something one side sends that the other can't read — is
+what eventually breaks an online client/server. To guard against that across the
+*whole* protocol, this tool checks, for every two-way contract, that the client's
+**serialize** (what it writes) and **deserialize** (what it reads) agree on field
+names and types.
+
+Result: **780 / 790 two-way contracts (98%) are fully write/read consistent**.
+The 10 differences are all in client-internal UI/event types
+(`*HoverTooltipEventArgs`, `TooltipModel`, `BuildToolbarModel`,
+`MessageBoxClosedEventArgs`, …) — not core server messages; for the actual
+account/castle/attack/inventory protocol, consistency is effectively 100%.
+See `re/catalog/network/consistency_report.txt`.
+
+(Type comparison treats numeric widths as one, and tolerates the reader side
+under-detecting nested objects / datetimes, whose readers fall in the numeric
+band — a tooling limit, not a protocol mismatch.)
+
 ## Caveats / next refinements
 - The `number` band groups numeric widths (int64/uint/float32/…) not yet split.
 - Nested `object` fields are linked to their child contract by matching the field
