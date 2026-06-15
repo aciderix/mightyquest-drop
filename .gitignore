@@ -3,7 +3,5 @@
 __pycache__/
 roundtrip_report.txt
 
-# raw Ubisoft game data (analysis only, never redistribute)
-gamedata/
 *.zip
 *.zip.part*
