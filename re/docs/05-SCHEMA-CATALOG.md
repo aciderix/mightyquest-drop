@@ -63,6 +63,21 @@ non-obvious ones are listed in `re/catalog/network/special_fields.txt`:
 Numeric width (int/uint/byte/short/long/ulong/double) is captured per field for
 value-range validity, though all share the bare-number wire form.
 
+### Enum values & required/optional (investigated — no codec table exists)
+- **Enum value = a 64-bit name hash.** The reader (`009a8670`) accepts either
+  `"0x"+16 hex` (parsed as the raw value, `FUN_00401670`) or a **name string**
+  which it **hashes** (`FUN_009ce4b0`, a CRC-style 64-bit hash over tables
+  `DAT_01061250`/`DAT_01060a50`). So the wire accepts `"0x...."` or the member
+  name (e.g. `"AttackType_Normal"`); the parse never range-checks, so any value is
+  *well-formed*. The set of *valid* members is game-design data (names, one-way
+  hashed) — it is **not** in the generic codec, so there is no value table to
+  extract here. Safe default: `"0x0000000000000000"`.
+- **Required vs optional is not marked.** Deserialization is key-driven: a missing
+  key leaves the constructor default (0 / "" / false). There is no "missing
+  required field" check in the codec. The robust rule for the server is therefore
+  **emit every field** (the generated examples already do), so nothing is ever
+  missing; when reading client requests, tolerate absent fields (use defaults).
+
 **Authority:** the *serialize* side is the reliable source of a field's shape
 (its object/array writers are unambiguous), so the generator prefers it. The
 *deserialize* walker is noisier — its dispatch loop reads the incoming JSON *key*
