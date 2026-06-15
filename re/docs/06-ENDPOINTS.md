@@ -39,7 +39,15 @@ services; each method maps to one request contract (`request`/`both` in
 
 ## Remaining unknown
 The exact on-the-wire method selector (numeric id vs name, and any URL suffix) is
-inside the `Argo` request builder reached via the controller vtable slot. Pin it
-down by decompiling one controller's `+0x34` target down to the curl POST. Not
-required to stand up a stub if the community server mirrors the same
-controller/method dispatch the generated proxies expect.
+inside the `Argo` request builder reached via the controller vtable slot
+(`this->vtable[+0x34]`). Static extraction is costly: the controller public
+methods are non-virtual (not found in any vtable), so resolving the send method
+means recovering each controller's vtable via its constructor — no RTTI exists
+for the `GameServerProxies` classes. The callback object
+(`vtable DAT_00f84820`, handler `FUN_00614cf0`) is just request/response
+lifecycle, not the route.
+
+**Pragmatic resolution:** the stub server (`server/stub_server.py`) logs every
+request, so pointing the real client at it yields the exact URLs/verbs/bodies
+empirically — higher ROI than deep static dispatch analysis. Capture first, then
+formalise routes from the log.

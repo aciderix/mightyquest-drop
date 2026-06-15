@@ -13,9 +13,13 @@ Python 3 standard library only — runs on the same machine as the game, or on a
 VPS for online hosting.
 
 ## What it does now
+- **Stateful** account / session / profile model, persisted to
+  `server/state.json`: login finds-or-creates an account for a Steam ticket,
+  issues a `ConnectionToken`, and the profile/account handlers resolve the
+  session by token (`Authorization: Bearer <token>`).
 - Answers the **boot / login** sequence with correctly-shaped JSON
   (`BootConfig`, `ServerDefinitions`/`ServerInfo`, `GameServerConnectionConfig`,
-  `LoginResult`), values chosen so the client can progress.
+  `LoginResult`, `AccountLite`).
 - For any other request, serves the matching contract's example payload
   (from `re/catalog/network/generated/examples.json`, 1,325 contracts) or `{}`.
 - **Logs every request** (method, path, content-type, body) to stdout and
