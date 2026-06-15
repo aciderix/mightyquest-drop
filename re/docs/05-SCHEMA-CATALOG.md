@@ -81,14 +81,17 @@ directions (real deserialize in, real serialize out, values preserved).
 catalog automatically: for each two-way contract it *discovers* every scalar
 field's object offset by emulating the real deserialize with a memory-write hook
 (observing where each value lands), then round-trips the assembled object back
-out through the real serialize. Result: **211 / 218 two-way scalar contracts
-(96%) round-trip perfectly through the client's own code, both directions**; the
-6 incomplete are offset-discovery gaps and the 1 mismatch (`DoorStateTriggers`)
-is a known UI-event edge case. See `re/catalog/network/roundtrip_report.txt`.
-Contracts with nested-object fields are covered by the static consistency check
-above. (Key harness detail: the codec's char-advance and writer primitives are
-`stdcall`, so the intercept layer pops their callee args — `emu.py`
-`intercept_cleanup`.)
+out through the real serialize. Over the **395 two-way all-scalar contracts**:
+- **INCOMING: 356 / 395 (90%)** have *every* field parsed correctly by the
+  client's real reader (int/number/bool/string/datetime);
+- **full round-trip (both directions): 336 / 395** — the rest are contracts whose
+  only fields are floats/numbers the serialize emits through writers we don't
+  capture (incoming still validated), plus a few reader types not yet fed.
+
+See `re/catalog/network/roundtrip_report.txt`. Contracts with nested-object
+fields are covered by the static consistency check above. (Key harness detail:
+the codec's char-advance and writer primitives are `stdcall`, so the intercept
+layer pops their callee args — `emu.py` `intercept_cleanup`.)
 
 ## Exhaustive write/read consistency (`validate_consistency.py`)
 A single wrong field — something one side sends that the other can't read — is

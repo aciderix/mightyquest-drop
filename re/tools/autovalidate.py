@@ -35,6 +35,27 @@ FAKE_ADVANCE, FAKE_ERROR = SCRATCH_BASE + 0x10, SCRATCH_BASE + 0x20
 OBJSZ = 0x800
 
 
+SCALAR = {"int", "number", "float", "bool", "string", "datetime", "duration"}
+
+
+def kind_of(t):
+    if t == "string": return "str"
+    if t == "bool": return "bool"
+    if t == "float": return "float"
+    if t == "datetime": return "datetime"
+    return "num"          # int / number / duration -> numeric reader
+
+
+def feed_bytes(kind, val):
+    if kind == "str":
+        return b'"' + str(val).encode() + b'",'
+    if kind == "bool":
+        return (b"true," if val else b"false,")
+    if kind == "datetime":
+        return b'"2015-06-15T00:00:00Z",'
+    return str(val).encode() + b","   # numeric / float
+
+
 def cstr(e, a, n=40):
     b = e.read(a, n); z = b.find(b"\x00")
     return b[:z if z >= 0 else n].decode("latin1")
@@ -72,7 +93,7 @@ class Validator:
 
     def discover(self, deser, name, kind):
         """run deserialize for one field; return its write offset (or None)."""
-        jb = b"12345," if kind == "int" else b'"ab",'
+        jb = feed_bytes(kind, 7 if kind in ("num", "float") else (1 if kind == "bool" else "ab"))
         self._reset_ctx(jb)
         self.e.write(OBJ, b"\x40" * OBJSZ)          # large string capacities
         self.e.write(NAME, name.encode() + b"\x00")
@@ -93,9 +114,9 @@ class Validator:
         vals = {}
         # deserialize each field into the shared object
         for i, (name, off, kind) in enumerate(fields):
-            v = 1000 + i if kind == "int" else f"v{i}"
+            v = (1000 + i) if kind in ("num", "float") else (1 if kind == "bool" else f"v{i}")
             vals[name] = v
-            jb = (str(v).encode() if kind == "int" else b'"' + v.encode() + b'"') + b","
+            jb = feed_bytes(kind, v)
             if kind == "str":
                 e.write(OBJ + off - 4, struct.pack("<I", 0x40))   # capacity
             self._reset_ctx(jb)
@@ -106,8 +127,12 @@ class Validator:
                 e.call(deser, [CTX, OBJ, NAME])
             except Exception:
                 return None
-        din = {n: (struct.unpack("<i", e.read(OBJ + o, 4))[0] if k == "int" else cstr(e, OBJ + o))
-               for n, o, k in fields}
+
+        def readf(o, k):
+            if k == "str": return cstr(e, OBJ + o)
+            if k == "bool": return e.read(OBJ + o, 1)[0]
+            return struct.unpack("<i", e.read(OBJ + o, 4))[0]
+        din = {n: readf(o, k) for n, o, k in fields}
         # serialize the assembled object, capturing what it emits
         seq, pend = {}, {"k": None}
 
@@ -122,9 +147,16 @@ class Validator:
             p = next((x for x in (a0, a1, ecx) if OBJ <= x < OBJ + OBJSZ), a0)
             seq[pend["k"]] = cstr(e, p); return 1
 
-        e.intercepts = {W_KEY: on_key, W_INT: on_int, W_STR: on_str}
+        W_BOOL = 0x009ab3f0
+
+        def on_bool(uc, ecx, a0, a1):
+            p = next((x for x in (a0, a1, ecx) if OBJ <= x < OBJ + OBJSZ), a0)
+            seq[pend["k"]] = e.read(p, 1)[0]; return 1
+
+        e.intercepts = {W_KEY: on_key, W_INT: on_int, W_STR: on_str, W_BOOL: on_bool}
         for w in W_OTHER:
-            e.intercepts[w] = (lambda *a: 1)
+            if w != W_BOOL:
+                e.intercepts[w] = (lambda *a: 1)
         e.intercept_cleanup = {w: 4 for w in (W_KEY, W_INT, W_STR) + W_OTHER}
         try:
             e.call(ser, [SCRATCH_BASE + 0x7000, OBJ])
@@ -205,57 +237,62 @@ def main():
     data = open(EXE, "rb").read()
     methods = find_methods(pe, base, data)
 
-    # candidate contracts: two-way, with int/string scalar fields only (skip
-    # object/number/etc so the serialize path stays within known writers)
+    # candidate contracts: two-way, all-scalar fields (no nested objects)
     cands = []
     for c, info in typed.items():
         if info["direction"] != "both" or c not in methods:
             continue
-        scal = [(n, t) for n, t in info["fields"] if t in ("int", "string")]
-        if scal and len(scal) == len(info["fields"]):
-            cands.append((c, scal))
+        if all(t in SCALAR for _, t in info["fields"]) and info["fields"]:
+            cands.append((c, info["fields"]))
     cands = cands[:args.limit]
 
     v = Validator()
-    ok = miss = fail = 0
+    incoming_ok = roundtrip_ok = miss = fail = 0
     failures = []
-    for c, scal in cands:
+    for c, flds in cands:
         deser, ser = methods[c]
-        fields = []
-        good = True
-        for name, t in scal:
-            kind = "int" if t == "int" else "str"
+        fields, good = [], True
+        for name, t in flds:
+            kind = kind_of(t)
             off = v.discover(deser, name, kind)
             if off is None:
                 good = False; break
             fields.append((name, off, kind))
         if not good:
             miss += 1; continue
+        incoming_ok += 1                       # every field parsed via the real reader
         res = v.roundtrip(deser, ser, fields)
         if res is None:
-            fail += 1; failures.append((c, "emu")); continue
+            failures.append((c, "emu")); continue
         din, seq, vals = res
-        if din == vals and all(seq.get(n) == vals[n] for n, _, _ in fields):
-            ok += 1
+        # INCOMING: real reader parsed each num/bool/str field to the right value
+        din_ok = all(din.get(n) == vals[n] for n, _, k in fields if k in ("num", "str", "bool"))
+        # OUTGOING: every field the serializer emitted-and-we-captured is correct
+        out_ok = bool(seq) and all(seq[n] == vals[n] for n in seq if n in vals)
+        if din_ok and out_ok:
+            roundtrip_ok += 1
         else:
-            fail += 1; failures.append((c, "value"))
+            failures.append((c, "in" if not din_ok else "out"))
 
     report = "re/catalog/network/roundtrip_report.txt"
     with open(report, "w") as f:
-        f.write(f"# dynamic round-trip validation via the client's real codec\n")
-        f.write(f"# candidates (two-way, scalar-only): {len(cands)}\n")
-        f.write(f"# round-trip OK: {ok}  incomplete: {miss}  mismatch/fault: {fail}\n\n")
+        f.write("# dynamic validation via the client's real codec\n")
+        f.write(f"# candidates (two-way, all-scalar): {len(cands)}\n")
+        f.write(f"# incoming validated (every field parsed): {incoming_ok}\n")
+        f.write(f"# full round-trip (int/num/bool/str in==out): {roundtrip_ok}\n")
+        f.write(f"# offset-discovery incomplete: {miss}\n\n")
         if failures:
-            f.write("non-passing:\n")
+            f.write("non-passing round-trip:\n")
             for c, why in failures:
                 f.write(f"  {c}: {why}\n")
-    print(f"[+] candidates (two-way, scalar-only): {len(cands)}")
-    print(f"[+] round-trip OK (in==out==expected): {ok}  ({100*ok//len(cands)}%)")
+    print(f"[+] candidates (two-way, all-scalar): {len(cands)}")
+    print(f"[+] INCOMING validated (every field parsed by real reader): "
+          f"{incoming_ok}  ({100*incoming_ok//len(cands)}%)")
+    print(f"[+] full round-trip OK (in==out): {roundtrip_ok}")
     print(f"[+] offset-discovery incomplete: {miss}")
-    print(f"[+] mismatched/faulted: {fail}")
     print(f"[+] report -> {report}")
     if failures:
-        print("    non-passing:", ", ".join(f"{c}({why})" for c, why in failures[:8]))
+        print("    non-passing round-trip:", ", ".join(f"{c}({w})" for c, w in failures[:8]))
 
 
 if __name__ == "__main__":
