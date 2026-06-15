@@ -36,17 +36,26 @@ OBJSZ = 0x800
 
 
 SCALAR = {"num", "str", "bool"}      # wire shapes that are simple scalars
+# map a precise field type (from schemas_typed) to its wire shape
+NUMERIC = {"int", "uint", "byte", "short", "ushort", "long", "ulong", "number", "double"}
+STRINGY = {"string", "datetime", "enum", "guid"}
+
+
+def type_shape(t):
+    if t in NUMERIC: return "num"
+    if t in STRINGY: return "str"
+    if t == "bool": return "bool"
+    if t == "array": return "arr"
+    return "obj"
 
 
 def kind_of(t):
-    return t          # shapes are already num / str / bool
+    return type_shape(t)          # 'num' / 'str' / 'bool' for scalars
 
 
 def feed_bytes(kind, val):
     if kind == "str":
-        # an ISO string satisfies plain-string AND datetime readers; enum readers
-        # (string lookup) may reject it -> that field just won't discover (safe).
-        return b'"2015-06-15T00:00:00Z",' if val == "_dt_" else b'"' + str(val).encode() + b'",'
+        return b'"' + str(val).encode() + b'",'
     if kind == "bool":
         return (b"true," if val else b"false,")
     return str(val).encode() + b","   # numeric
@@ -238,7 +247,7 @@ def main():
     for c, info in typed.items():
         if info["direction"] != "both" or c not in methods:
             continue
-        if all(t in SCALAR for _, t in info["fields"]) and info["fields"]:
+        if info["fields"] and all(type_shape(t) in SCALAR for _, t in info["fields"]):
             cands.append((c, info["fields"]))
     cands = cands[:args.limit]
 

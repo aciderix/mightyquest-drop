@@ -42,18 +42,26 @@ the wire:
 
 | shape | on the wire | covers |
 |-------|-------------|--------|
-| `num` | bare number `42` | int/uint/byte/short/long/ulong/double/duration/int-enum (buffer widths 4/11/12/22/20 → byte/uint/int/int64/double) |
-| `str` | quoted `"..."` | string, **datetime** (ISO-8601), **enum** (quoted name), guid |
+| `num` | bare number `42` | int/uint/byte/short/long/ulong/double (buffer widths 4/11/12/22/20 → byte/uint/int/int64/double) |
+| `str` | quoted `"..."` | string, **datetime** (ISO-8601), **enum** (`"0x"+16 hex`), guid |
 | `bool`| `true`/`false` | bool |
 | `arr` | `[ ... ]` | array readers (a `]` branch) + plural field names of a known contract |
 | `obj` | `{ ... }` | nested contract |
 
-Two corrections that matter for a community server (each is a classic
-silent-break source): **enums are quoted strings, not numbers** (the writer/reader
-emit/parse the enum name — `009aaf00`/`009a8670`), and **datetimes are quoted
-ISO strings** (writer `009aae70`, reader `009a8f90`). Both were previously lumped
-into "number". Arrays (`ServerInfos: ServerInfo[]`) are now distinguished from
-single objects.
+Corrections that matter for a community server (each a classic silent-break
+source) — the precise per-field types live in `schemas_typed.json` and the
+non-obvious ones are listed in `re/catalog/network/special_fields.txt`:
+- **Enums are a quoted 16-hex-digit string**, e.g. `"0x0000000000000003"` — not a
+  bare number and not a readable name. The writer (`009aaf00`) calls
+  `FUN_00426f30`, which emits `"0x"` then 16 hex digits of the 64-bit value; the
+  reader (`009a8670`) parses that back. A safe default is `"0x0000000000000000"`.
+  (56 enum fields.)
+- **Datetimes are quoted ISO-8601 strings** (`"2015-06-15T00:00:00Z"`; writer
+  `009aae70`, reader `009a8f90`). (76 datetime fields.)
+- **Arrays** (`ServerInfos: ServerInfo[]`) are distinguished from single objects.
+
+Numeric width (int/uint/byte/short/long/ulong/double) is captured per field for
+value-range validity, though all share the bare-number wire form.
 
 **Authority:** the *serialize* side is the reliable source of a field's shape
 (its object/array writers are unambiguous), so the generator prefers it. The

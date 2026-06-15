@@ -1,43 +1,48 @@
 #!/usr/bin/env python3
 """
 gen_examples.py — emit an example JSON message for every contract, from the typed
-schema catalog. Ready-to-serve sample payloads / fixtures for the server stub and
-inputs for codec validation.
+schema catalog, with CONTENT that the client will actually accept:
+  number types -> 0 (double -> 0.0); bool -> false; string -> "string";
+  datetime -> ISO-8601 string; enum -> "0x0000000000000000" (the client encodes
+  enums as a quoted 16-hex-digit value, not a name or a bare number);
+  array -> [ <element> ]; object -> nested example.
 
-Input:  re/catalog/network/schemas_typed.json   (wire shapes + direction)
-Output: re/catalog/network/generated/examples.json   { contract: <example obj> }
+Input:  re/catalog/network/schemas_typed.json   (precise types + direction)
+Output: re/catalog/network/generated/examples.json
 """
 from __future__ import annotations
 import json, os
 
 ND = "re/catalog/network"
 OUT = os.path.join(ND, "generated")
-SCALAR = {"num": 0, "str": "string", "bool": False, "unknown": None}
+NUMERIC = {"int", "uint", "byte", "short", "ushort", "long", "ulong", "number"}
+SCALAR_VALUE = {"double": 0.0, "bool": False, "string": "string",
+                "datetime": "2015-06-15T00:00:00Z", "enum": "0x0000000000000000",
+                "unknown": None}
+
+
+def scalar_value(t):
+    if t in NUMERIC:
+        return 0
+    return SCALAR_VALUE.get(t, None)
 
 
 def main():
     typed = json.load(open(os.path.join(ND, "schemas_typed.json")))
     known = set(typed)
 
-    def link(field):
-        if field in known:
-            return field
-        if field.endswith("s") and field[:-1] in known:
-            return field[:-1]
-        return None
-
     def resolve(direction, fname, ftype):
-        """(kind, child) — kind is 'scalar'|'object'|'array'. Plural names that
-        match a singular contract are arrays; response-side num matching a
-        contract is treated as an object (deserialize under-detects objects)."""
+        """(kind, child): 'scalar'|'object'|'array'. Plural names matching a
+        singular contract are arrays; response-side numeric matching a contract is
+        treated as an object (the deserialize side under-detects nested objects)."""
         plural = fname.endswith("s") and fname[:-1] in known
         child = fname if fname in known else (fname[:-1] if plural else None)
-        s = ftype
-        if s == "num" and direction == "response" and child:
-            s = "obj"
-        if s == "arr":
+        t = ftype
+        if t in NUMERIC and direction == "response" and child:
+            t = "object"
+        if t == "array":
             return "array", child
-        if s == "obj":
+        if t == "object":
             return ("array" if plural else "object"), child
         return "scalar", None
 
@@ -53,7 +58,7 @@ def main():
             elif kind == "array":
                 obj[fname] = [example(child, depth + 1, stack | {contract})] if child else []
             else:
-                obj[fname] = SCALAR.get(ftype, None)
+                obj[fname] = scalar_value(ftype)
         return obj
 
     examples = {c: example(c, 0, frozenset()) for c in typed}

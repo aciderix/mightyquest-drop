@@ -1,6 +1,7 @@
 // Generated from the reversed schema catalog (re/tools/gen_types.py).
 // direction: request = client->server, response = server->client.
-// wire shapes: num->number, str->string, bool->boolean, arr->T[], obj->T.
+// enum fields are wire-encoded as a quoted 16-hex-digit string, e.g.
+//   "0x0000000000000003"  (not a bare number or a name).
 
 /** both */
 export interface AbilityFamily {
@@ -274,7 +275,7 @@ export interface AccountInformation {
   Guild: Guild;
   GuildInvitations: GuildInvitation[];
   IsCastleAttackable: boolean;
-  LastViewedFreeTrialInfoDate: string;
+  LastViewedFreeTrialInfoDate: string;  // datetime
   News: News;
   ShopSkuModifiers: ShopSkuModifier[];
   TargetedAttackAvailableCount: number;
@@ -291,7 +292,7 @@ export interface AccountInformationBase {
   Guild: Guild;
   GuildInvitations: GuildInvitation[];
   IsCastleAttackable: boolean;
-  LastViewedFreeTrialInfoDate: string;
+  LastViewedFreeTrialInfoDate: string;  // datetime
   News: News;
   ShopSkuModifiers: ShopSkuModifier[];
   TargetedAttackAvailableCount: number;
@@ -332,7 +333,7 @@ export interface AccountNameCreatedEventArgs {
 /** both */
 export interface AccountObjective {
   HasViewed: boolean;
-  LastStatusDate: string;
+  LastStatusDate: string;  // datetime
   ObjectiveId: number;
   ProgressionCount: number;
   Status: number;
@@ -443,7 +444,7 @@ export interface AccountSummaryForTools {
   Email: string;
   Id: number;
   IsCastleAttackable: boolean;
-  LastShownWelcomePageDate: string;
+  LastShownWelcomePageDate: string;  // datetime
   LeagueId: number;
   PlatformId: string;
   Privileges: number;
@@ -494,7 +495,7 @@ export interface AchievementContainer {
 /** request */
 export interface AchievementProgression {
   Achievement: Achievement;
-  CompletionDate: string;
+  CompletionDate: string;  // datetime
   CompletionDateFriendly: string;
   CompletionPercentage: number;
 }
@@ -976,7 +977,7 @@ export interface AttackInfo {
   IsTargetedAttack: boolean;
   IsTutorial: boolean;
   Level: number;
-  LoseTrophyCooldownTimer: string;
+  LoseTrophyCooldownTimer: string;  // datetime
   StealableMines: StealableMine[];
   TargetedAttackAvailableCount: number;
   TrapLoot: unknown;
@@ -1167,7 +1168,7 @@ export interface AttackSettings {
   CreatureBasicAttackBuffId: number;
   CreatureCatchUpBuffId: number;
   CreatureRoomBuildablesCreationInterval: number;
-  CriticalHitCameraShakeAnimation: string;
+  CriticalHitCameraShakeAnimation: string;  // enum
   DefaultAttackRange: number;
   DefaultCreatureCreationPriorityCoefficient: number;
   DefaultFacingDamping: number;
@@ -1630,7 +1631,7 @@ export interface BattleLogEntry {
   AttackerAccountSummary: unknown;
   AttackerTrophyScoreVariation: number;
   AttackId: string;
-  AttackStartDateTime: string;
+  AttackStartDateTime: string;  // datetime
   AttackType: number;
   CastleLevel: number;
   CastleRating: number;
@@ -1659,7 +1660,7 @@ export interface BattleLogEntry {
 /** request */
 export interface BattleLogEntryAddedNotification {
   Entry: unknown;
-  LastValidEntryDate: string;
+  LastValidEntryDate: string;  // datetime
 }
 
 /** request */
@@ -1671,7 +1672,7 @@ export interface BattleLogEntryDeletedNotification {
 export interface BattleLogEntryModel {
   AttackDurationInMilliseconds: number;
   AttackId: string;
-  AttackStartDateTime: string;
+  AttackStartDateTime: string;  // datetime
   AttackType: number;
   CastleLevel: number;
   CastleRating: number;
@@ -2087,7 +2088,7 @@ export interface BuildHarvestingPanelNavigationModel {
 
 /** both */
 export interface BuildHistory {
-  BuildDateTime: string;
+  BuildDateTime: string;  // datetime
   Duration: number;
   Id: unknown;
 }
@@ -2728,10 +2729,10 @@ export interface CasteInventoryItemModel {
 export interface Castle {
   AccountDisplayName: string;
   AccountId: number;
-  CreationDate: string;
+  CreationDate: string;  // datetime
   CreatureTiers: unknown;
   LayoutId: number;
-  ModificationDate: string;
+  ModificationDate: string;  // datetime
   OasisNameId: number;
   Rooms: unknown;
   ThemeId: number;
@@ -3016,13 +3017,13 @@ export interface CastleInfo {
   IsShielded: boolean;
   IsTargetedAttack: boolean;
   LastCastleRating: number;
-  LastPublishedDate: string;
-  LastSeenOnline: string;
+  LastPublishedDate: string;  // datetime
+  LastSeenOnline: string;  // datetime
   Level: number;
   PotentialLoot: PotentialLoot;
   RevengeAttackId: string;
   RoomCount: number;
-  ShieldExpirationDate: string;
+  ShieldExpirationDate: string;  // datetime
   Stats: unknown;
   SuccessfulAttackCount: number;
   TrophyScore: number;
@@ -3056,14 +3057,14 @@ export interface CastleInfoModel {
 
 /** both */
 export interface CastleInfoSummary {
-  ActivationDate: string;
+  ActivationDate: string;  // datetime
   AttackerStatus: number;
   AttackType: number;
   CastleHeartRank: number;
   CastleIconUrl: string;
   CastleThemeId: number;
   CastleType: number;
-  DeActivationDate: string;
+  DeActivationDate: string;  // datetime
   DefenderAccountSummary: unknown;
   FromMachineLearning: boolean;
   IsBranded: boolean;
@@ -3071,9 +3072,9 @@ export interface CastleInfoSummary {
   IsNew: boolean;
   IsShielded: boolean;
   LastComment: unknown;
-  LastPublishedDate: string;
+  LastPublishedDate: string;  // datetime
   Level: number;
-  TrophyCooldownTimer: string;
+  TrophyCooldownTimer: string;  // datetime
   TrophyScore: number;
   UbisoftCompetitionId: number;
   VictoryConditionLevel: number;
@@ -3520,7 +3521,7 @@ export interface CastleSummary {
   AccountId: number;
   AvatarId: number;
   IsPublished: boolean;
-  LastPublishedDate: string;
+  LastPublishedDate: string;  // datetime
   Level: number;
 }
 
@@ -3726,7 +3727,7 @@ export interface ChatLanguageModel {
 export interface ChatMessage {
   ChatMessageType: number;
   Message: string;
-  MessageDateTime: string;
+  MessageDateTime: string;  // datetime
   PresenceStatus: number;
   ProfileSummaryModel: ProfileSummaryModel;
 }
@@ -3940,8 +3941,8 @@ export interface CloseWebBrowserEventArgs {
 /** response */
 export interface CommunityEvent {
   DebugName: string;
-  EventEndTime: number;
-  EventStartTime: number;
+  EventEndTime: string;  // datetime
+  EventStartTime: string;  // datetime
   Id: number;
 }
 
@@ -4577,8 +4578,8 @@ export interface CreatureBoostSpec {
 /** response */
 export interface CreatureRankColorTableEntry {
   CreatureRank: string;
-  DarkColor: string;
-  LightColor: string;
+  DarkColor: string;  // datetime
+  LightColor: string;  // datetime
 }
 
 /** unknown */
@@ -5094,7 +5095,7 @@ export interface DefendLogEntry {
   AttackDurationInMilliseconds: number;
   AttackerAccountSummary: unknown;
   AttackId: string;
-  AttackStartDateTime: string;
+  AttackStartDateTime: string;  // datetime
   AttackType: number;
   CastleRating: number;
   CompletionType: number;
@@ -5120,7 +5121,7 @@ export interface DefendLogEntry {
 
 /** request */
 export interface DefendLogEntryDeletedNotification {
-  LastValidEntryDate: string;
+  LastValidEntryDate: string;  // datetime
 }
 
 /** both */
@@ -5812,7 +5813,7 @@ export interface EngineTracking {
 export interface EntitiesUIContainerParameter {
   IconOffset3D: unknown;
   SpecificZoomSettings: unknown;
-  UIContainer: string;
+  UIContainer: string;  // enum
   UseHeadNode: boolean;
   ZBias: number;
 }
@@ -5869,23 +5870,23 @@ export interface EntitySpawnOperationSpec {
 
 /** response */
 export interface EnvironmentSettings {
-  EastColor: string;
-  EnvironmentName: string;
+  EastColor: string;  // datetime
+  EnvironmentName: string;  // enum
   FogCenterDensity: number;
-  FogColor: string;
+  FogColor: string;  // datetime
   FogIntensity: number;
   FogRampTexture: string;
   FogThreshold: number;
-  GroundColor: string;
+  GroundColor: string;  // datetime
   LightingMaterialFileName: string;
-  NorthColor: string;
+  NorthColor: string;  // datetime
   SkyBoxFileName: string;
-  SkyColor: string;
-  SouthColor: string;
+  SkyColor: string;  // datetime
+  SouthColor: string;  // datetime
   SunMaterialFileName: string;
   SunPitch: number;
   SunYaw: number;
-  WestColor: string;
+  WestColor: string;  // datetime
 }
 
 /** unknown */
@@ -6100,7 +6101,7 @@ export interface ExpirableRemovedNotification {
 
 /** request */
 export interface ExpirableUpdatedNotification {
-  DueDate: string;
+  DueDate: string;  // datetime
   DurationSeconds: number;
   ExpirableId: string;
   IsPaused: boolean;
@@ -6282,7 +6283,7 @@ export interface FloatingTextByMinRatio {
 /** response */
 export interface FloatingTextSettings {
   AlphaEaseOutFactor: number;
-  Color: string;
+  Color: string;  // datetime
   Duration: number;
   EmitAngle: number;
   EmiterHeight: number;
@@ -6303,7 +6304,7 @@ export interface FloatingTextSettings {
   ScaleEaseOutFactor: number;
   StartAlpha: number;
   StartScale: number;
-  SynergyMaterialFileName: string;
+  SynergyMaterialFileName: string;  // enum
 }
 
 /** unknown */
@@ -6433,7 +6434,7 @@ export interface ForgeModel {
 
 /** both */
 export interface ForgeMysteryBoxItemModel {
-  AddedItemForgeSoundId: string;
+  AddedItemForgeSoundId: string;  // enum
   ForgeSlotId: number;
   HeroInventoryItemModel: HeroInventoryItemModel;
   InventorySlotId: number;
@@ -6676,7 +6677,7 @@ export interface FriendshipAddedNotification {
 
 /** both */
 export interface FriendshipInvitation {
-  CreationDate: string;
+  CreationDate: string;  // datetime
   FriendAccountId: number;
   FriendAvatarId: number;
   FriendDisplayName: string;
@@ -7171,7 +7172,7 @@ export interface GiveGiftResult {
 
 /** both */
 export interface GlobalNotification {
-  StartDate: string;
+  StartDate: string;  // datetime
 }
 
 /** unknown */
@@ -7278,7 +7279,7 @@ export interface GuildBattleLog {
 /** both */
 export interface GuildBattleLogModel {
   BattleLogEntries: unknown;
-  LastConnectionTime: string;
+  LastConnectionTime: string;  // datetime
 }
 
 /** both */
@@ -7314,7 +7315,7 @@ export interface GuildInfoPopupPanelNavigationModel {
 
 /** both */
 export interface GuildInvitation {
-  CreationDate: string;
+  CreationDate: string;  // datetime
   GuildSummary: GuildSummary;
 }
 
@@ -7413,7 +7414,7 @@ export interface GuildManagementPanelNavigationModel {
 /** both */
 export interface GuildMember {
   AccountSummary: AccountSummary;
-  JoinDate: string;
+  JoinDate: string;  // datetime
   Title: number;
 }
 
@@ -7522,7 +7523,7 @@ export interface GuildSettings {
   MaxEntriesPerRequest: number;
   MaxMembers: number;
   Period: Period;
-  ReferenceDate: number;
+  ReferenceDate: string;  // datetime
 }
 
 /** request */
@@ -7713,7 +7714,7 @@ export interface Hero {
   Equipment: unknown;
   EquippedConsumables: unknown;
   EquippedSpells: unknown;
-  ExpirationDate: string;
+  ExpirationDate: string;  // datetime
   HeroSpecContainerId: number;
   HeroStatModifier: HeroStatModifier;
   Level: number;
@@ -7992,8 +7993,8 @@ export interface HeroFreeTrialCommunityEvent {
 /** both */
 export interface HeroFreeTrialInfoPeriod {
   Id: number;
-  UnlockEndTime: string;
-  UnlockStartTime: string;
+  UnlockEndTime: string;  // datetime
+  UnlockStartTime: string;  // datetime
 }
 
 /** request */
@@ -8119,7 +8120,7 @@ export interface HeroInventoryUpdatedNotification {
 
 /** both */
 export interface HeroItem {
-  AcquisitionDate: string;
+  AcquisitionDate: string;  // datetime
   SellPrice: number;
 }
 
@@ -8259,7 +8260,7 @@ export interface HeroItemTemplates {
 
 /** response */
 export interface HeroItemTextParams {
-  BackgroundColor: string;
+  BackgroundColor: string;  // datetime
   BackgroundMarginX: number;
   BackgroundMarginY: number;
   Colors: unknown;
@@ -8269,12 +8270,12 @@ export interface HeroItemTextParams {
 
 /** response */
 export interface HeroItemType {
-  EquipUserInterfaceSoundId: string;
+  EquipUserInterfaceSoundId: string;  // enum
   HeroItemCategoryType: string;
   Id: number;
   InternalDescription: string;
   OasisID: number;
-  VisualType: string;
+  VisualType: string;  // enum
 }
 
 /** both */
@@ -8594,7 +8595,7 @@ export interface HeroUnequipSpellCommand {
 
 /** request */
 export interface HeroUnlockRewardItem {
-  ExpirationDate: string;
+  ExpirationDate: string;  // datetime
   HeroSpecContainerId: number;
 }
 
@@ -9012,7 +9013,7 @@ export interface InstallPackageStartedTracking {
 /** request */
 export interface InstallStartedTaskTracking {
   IsFirstInstall: boolean;
-  CreationDate: string;
+  CreationDate: string;  // datetime
   TrackingTagId: number;
 }
 
@@ -9324,7 +9325,7 @@ export interface JobStrategy {
 
 /** both */
 export interface JobSummary {
-  DueDate: string;
+  DueDate: string;  // datetime
   Id: string;
   ProcessingServer: string;
   RetryCount: number;
@@ -9445,7 +9446,7 @@ export interface LeaderboardPage {
   Entries: unknown;
   FirstEntryRank: number;
   Leaders: unknown;
-  NextSeasonStartingDate: string;
+  NextSeasonStartingDate: string;  // datetime
   PreviousLeagueInfo: PreviousLeagueInfo;
   RemainingTime: number;
   SeasonalReward: unknown;
@@ -9502,7 +9503,7 @@ export interface LeaguePopupModel {
   IsPromoted: boolean;
   IsUnranked: boolean;
   IsWorldRanked: boolean;
-  NextSeasonStartingDate: string;
+  NextSeasonStartingDate: string;  // datetime
   PreviousLeagueRank: number;
   PreviousSubLeagueReward: unknown;
   PreviousWorldRank: number;
@@ -9917,7 +9918,7 @@ export interface MagicalPropertyModel {
 
 /** request */
 export interface MaintenanceGlobalNotification {
-  MaintenanceScheduledDate: string;
+  MaintenanceScheduledDate: string;  // datetime
   MaintenanceScheduledInSeconds: number;
 }
 
@@ -9978,7 +9979,7 @@ export interface MemoryInfoTracking {
 /** both */
 export interface Message {
   Data: unknown;
-  DateSent: string;
+  DateSent: string;  // datetime
   SenderId: number;
   Type: number;
 }
@@ -10478,7 +10479,7 @@ export interface News {
   Id: string;
   IsUnread: boolean;
   Priority: number;
-  PublishDate: string;
+  PublishDate: string;  // datetime
 }
 
 /** request */
@@ -11130,7 +11131,7 @@ export interface OverrideCameraOcclusionFlagsAssignmentActionSpec {
 
 /** response */
 export interface PackageAsset {
-  ResourcePath: string;
+  ResourcePath: string;  // enum
 }
 
 /** response */
@@ -11188,7 +11189,7 @@ export interface PanelNotShownAssignmentConditionSpec {
 /** both */
 export interface PanelSettings {
   ContainerControls: unknown;
-  ContainerFilename: string;
+  ContainerFilename: string;  // enum
   IconOffset3D: unknown;
   PanelLayer: number;
   SpecificZoomSettings: unknown;
@@ -11261,7 +11262,7 @@ export interface PcConfigurationTracking {
   GraphicsInfo: unknown;
   MemoryInfo: unknown;
   OSInfo: unknown;
-  CreationDate: string;
+  CreationDate: string;  // datetime
   TrackingTagId: number;
 }
 
@@ -11272,8 +11273,8 @@ export interface PendingRegionsChangedViewModel {
 
 /** both */
 export interface Period {
-  EndDateTime: string;
-  StartDateTime: string;
+  EndDateTime: string;  // datetime
+  StartDateTime: string;  // datetime
 }
 
 /** both */
@@ -11344,7 +11345,7 @@ export interface PivotRotationMoveSpec {
 /** request */
 export interface PlayGameClickedTracking {
   Platform: number;
-  CreationDate: string;
+  CreationDate: string;  // datetime
   TrackingTagId: number;
 }
 
@@ -11884,8 +11885,8 @@ export interface PushableSpec {
 
 /** response */
 export interface QualityColorTableEntry {
-  DarkColor: string;
-  LightColor: string;
+  DarkColor: string;  // datetime
+  LightColor: string;  // datetime
   Quality: unknown;
 }
 
@@ -12298,9 +12299,9 @@ export interface RoomDecorationPointsUpdatedEventArgs {
 
 /** request */
 export interface RoomObject {
-  AttachmentNode: string;
+  AttachmentNode: string;  // enum
   Children: unknown;
-  EffectName: string;
+  EffectName: string;  // enum
   IgnoreForRoomOrientations: number;
   Orientation: unknown;
   Probability: number;
@@ -12524,7 +12525,7 @@ export interface SeasonalCompetitionSchedule {
   EntryTimeToLive: number;
   GiveRewardJobDelayMinutes: number;
   GlobalLockTimeout: number;
-  ReferenceDate: string;
+  ReferenceDate: string;  // datetime
   SeasonalRewardConfig: SeasonalRewardConfig;
 }
 
@@ -12540,7 +12541,7 @@ export interface SeasonalCompetitionSettings {
 
 /** request */
 export interface SeasonalCompetitionStartedNotification {
-  StartDate: string;
+  StartDate: string;  // datetime
 }
 
 /** both */
@@ -12552,7 +12553,7 @@ export interface SeasonalEntitiesOverrides {
 
 /** both */
 export interface SeasonalEventInfo {
-  Id: string;
+  Id: string;  // enum
   Name: string;
 }
 
@@ -12813,12 +12814,12 @@ export interface SetImmunityOperationSpec {
 /** request */
 export interface SetLastViewedDateCommand {
   Type: number;
-  ViewedDate: string;
+  ViewedDate: string;  // datetime
 }
 
 /** request */
 export interface SetLastViewedDefendLogCommand {
-  ViewedDate: string;
+  ViewedDate: string;  // datetime
 }
 
 /** request */
@@ -12888,7 +12889,7 @@ export interface ShieldExpiredNotification {
 /** both */
 export interface ShieldInfo {
   IsShielded: boolean;
-  ShieldExpirableDueDate: string;
+  ShieldExpirableDueDate: string;  // datetime
 }
 
 /** both */
@@ -12936,9 +12937,9 @@ export interface ShopConfirmationPopupSettings {
 /** both */
 export interface ShopDiscount {
   DiscountType: number;
-  ExpirationDate: string;
+  ExpirationDate: string;  // datetime
   PercentOff: number;
-  StartDate: string;
+  StartDate: string;  // datetime
 }
 
 /** both */
@@ -13091,7 +13092,7 @@ export interface ShopProductModel {
   BuildingRequirementRank: number;
   BuildingRequiremntName: string;
   BuyableCount: number;
-  BuyBackCreationDate: string;
+  BuyBackCreationDate: string;  // datetime
   BuyBackId: string;
   BuyButtonOasisId: number;
   BuyButtonOasisName: string;
@@ -13178,7 +13179,7 @@ export interface ShopShownAssignmentTriggerSpec {
 export interface ShopSku {
   Code: string;
   CraftingMaterials: CraftingMaterial[];
-  CreationDate: string;
+  CreationDate: string;  // datetime
   DescriptionOasisId: number;
   Discounts: unknown;
   IconUrl: string;
@@ -13411,7 +13412,7 @@ export interface SliderSettings {
 export interface SoundEventWrapper {
   FireAndForget: boolean;
   Probability: number;
-  SoundEventResource: string;
+  SoundEventResource: string;  // enum
   SoundEventResourceSeasonalOverrides: unknown;
 }
 
@@ -13474,7 +13475,7 @@ export interface SpawnerSpec {
 
 /** both */
 export interface Spec {
-  Tag: string;
+  Tag: string;  // enum
 }
 
 /** response */
@@ -13972,7 +13973,7 @@ export interface TeleportOperationSpec {
 /** response */
 export interface TextFontParams {
   FontSettings: unknown;
-  SynergyMaterialFileName: string;
+  SynergyMaterialFileName: string;  // enum
 }
 
 /** both */
@@ -14050,8 +14051,8 @@ export interface ThreadCollectionPage {
 
 /** both */
 export interface ThreadHeader {
-  FirstMessageSentDate: string;
-  LastMessageSentDate: string;
+  FirstMessageSentDate: string;  // datetime
+  LastMessageSentDate: string;  // datetime
   MessageCount: number;
   Subject: string;
   ThreadType: number;
@@ -14279,7 +14280,7 @@ export interface TreasureChestSpec {
 
 /** both */
 export interface TreasureRoomChestLockInfo {
-  Animation: string;
+  Animation: string;  // enum
 }
 
 /** both */
@@ -14640,10 +14641,10 @@ export interface UIValidateCaslteOasisSettings {
 
 /** both */
 export interface UbisoftCastle {
-  ActivationDate: string;
+  ActivationDate: string;  // datetime
   CastleIconUrl: string;
   CastleValidationDuration: number;
-  DeActivationDate: string;
+  DeActivationDate: string;  // datetime
   ForceCastleLevelOnBuildables: boolean;
   IsBranded: boolean;
   IsDisabled: boolean;
@@ -15172,7 +15173,7 @@ export interface ViewFinishResizeEventArgs {
 
 /** both */
 export interface ViewableItem {
-  LastViewedDate: string;
+  LastViewedDate: string;  // datetime
   Type: number;
 }
 
@@ -15185,7 +15186,7 @@ export interface VirtualTransaction {
   ProductId: number;
   ServerName: string;
   State: number;
-  TransactionDateTime: string;
+  TransactionDateTime: string;  // datetime
 }
 
 /** unknown */
@@ -15209,52 +15210,52 @@ export interface VisualActivateAnimationCollectionFx {
 
 /** response */
 export interface VisualAnimatedEntitySettings {
-  AggroIdle: string;
+  AggroIdle: string;  // enum
   AggroIdleDurationAfterAbility: number;
   AggroIdleDurationDefault: number;
-  BallisticKnockBack: string;
-  BuilderDrag: string;
-  BuilderDrop: string;
-  Celebration: string;
-  CelebrationLoose: string;
-  ClosedDoor: string;
-  CloseDoor: string;
-  CreateObstacle: string;
-  CriticalFlinch: string;
-  DamageObstacle: string;
-  Deactivated: string;
-  Death: string;
+  BallisticKnockBack: string;  // enum
+  BuilderDrag: string;  // enum
+  BuilderDrop: string;  // enum
+  Celebration: string;  // enum
+  CelebrationLoose: string;  // enum
+  ClosedDoor: string;  // enum
+  CloseDoor: string;  // enum
+  CreateObstacle: string;  // enum
+  CriticalFlinch: string;  // enum
+  DamageObstacle: string;  // enum
+  Deactivated: string;  // enum
+  Death: string;  // enum
   DeathAnimationMaxDuration: number;
-  DefaultAbility: string;
-  DefaultAttachmentBone: string;
-  DefaultLeftFootBone: string;
-  DefaultRightFootBone: string;
-  DestroyObstacle: string;
+  DefaultAbility: string;  // enum
+  DefaultAttachmentBone: string;  // enum
+  DefaultLeftFootBone: string;  // enum
+  DefaultRightFootBone: string;  // enum
+  DestroyObstacle: string;  // enum
   EmoteAnimations: unknown[];
-  Flinch: string;
-  Harvest: string;
-  HeroAggroIdleToIdle: string;
+  Flinch: string;  // enum
+  Harvest: string;  // enum
+  HeroAggroIdleToIdle: string;  // enum
   HeroDiedRejoicing: unknown[];
-  HomePageAngry: string;
-  HomePageVictory: string;
-  HorizontalKnockBack: string;
-  Idle: string;
-  InteractionOpenChest: string;
-  InteractionOpenDoor: string;
+  HomePageAngry: string;  // enum
+  HomePageVictory: string;  // enum
+  HorizontalKnockBack: string;  // enum
+  Idle: string;  // enum
+  InteractionOpenChest: string;  // enum
+  InteractionOpenDoor: string;  // enum
   InteractionsByType: unknown;
   LoopDeactivatedAnimation: boolean;
-  LootAction: string;
-  MineBuildingCollected: string;
-  MineBuildingCollecting: string;
-  MineBuildingDamageReceived: string;
-  MineBuildingReadyToCollect: string;
-  MineBuildingReadyToCollectIdle: string;
-  Navigation: string;
-  OpenDoor: string;
-  OpenedDoor: string;
-  Spawn: string;
-  Stun: string;
-  Walk: string;
+  LootAction: string;  // enum
+  MineBuildingCollected: string;  // enum
+  MineBuildingCollecting: string;  // enum
+  MineBuildingDamageReceived: string;  // enum
+  MineBuildingReadyToCollect: string;  // enum
+  MineBuildingReadyToCollectIdle: string;  // enum
+  Navigation: string;  // enum
+  OpenDoor: string;  // enum
+  OpenedDoor: string;  // enum
+  Spawn: string;  // enum
+  Stun: string;  // enum
+  Walk: string;  // enum
 }
 
 /** unknown */
@@ -15910,7 +15911,7 @@ export interface VisualRandomAnimationSpec {
 
 /** both */
 export interface VisualRenderableInfo {
-  TextureFileName: string;
+  TextureFileName: string;  // enum
 }
 
 /** unknown */

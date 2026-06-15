@@ -1,0 +1,206 @@
+# Fields needing special wire content (beyond plain scalars)
+# enum     -> quoted 16-hex-digit value, e.g. "0x0000000000000003" (default "0x0000000000000000")
+# datetime -> quoted ISO-8601, e.g. "2015-06-15T00:00:00Z"
+
+AccountInformation [request]:
+    LastViewedFreeTrialInfoDate: datetime
+AccountInformationBase [both]:
+    LastViewedFreeTrialInfoDate: datetime
+AccountObjective [both]:
+    LastStatusDate: datetime
+AccountSummaryForTools [both]:
+    LastShownWelcomePageDate: datetime
+AchievementProgression [request]:
+    CompletionDate: datetime
+AttackInfo [both]:
+    LoseTrophyCooldownTimer: datetime
+AttackSettings [response]:
+    CriticalHitCameraShakeAnimation: enum
+BattleLogEntry [request]:
+    AttackStartDateTime: datetime
+BattleLogEntryAddedNotification [request]:
+    LastValidEntryDate: datetime
+BattleLogEntryModel [request]:
+    AttackStartDateTime: datetime
+BuildHistory [both]:
+    BuildDateTime: datetime
+Castle [both]:
+    CreationDate: datetime
+    ModificationDate: datetime
+CastleInfo [request]:
+    LastPublishedDate: datetime
+    LastSeenOnline: datetime
+    ShieldExpirationDate: datetime
+CastleInfoSummary [both]:
+    ActivationDate: datetime
+    DeActivationDate: datetime
+    LastPublishedDate: datetime
+    TrophyCooldownTimer: datetime
+CastleSummary [both]:
+    LastPublishedDate: datetime
+ChatMessage [both]:
+    MessageDateTime: datetime
+CommunityEvent [response]:
+    EventEndTime: datetime
+    EventStartTime: datetime
+CreatureRankColorTableEntry [response]:
+    DarkColor: datetime
+    LightColor: datetime
+DefendLogEntry [request]:
+    AttackStartDateTime: datetime
+DefendLogEntryDeletedNotification [request]:
+    LastValidEntryDate: datetime
+EntitiesUIContainerParameter [both]:
+    UIContainer: enum
+EnvironmentSettings [response]:
+    EastColor: datetime
+    EnvironmentName: enum
+    FogColor: datetime
+    GroundColor: datetime
+    NorthColor: datetime
+    SkyColor: datetime
+    SouthColor: datetime
+    WestColor: datetime
+ExpirableUpdatedNotification [request]:
+    DueDate: datetime
+FloatingTextSettings [response]:
+    Color: datetime
+    SynergyMaterialFileName: enum
+ForgeMysteryBoxItemModel [both]:
+    AddedItemForgeSoundId: enum
+FriendshipInvitation [both]:
+    CreationDate: datetime
+GlobalNotification [both]:
+    StartDate: datetime
+GuildBattleLogModel [both]:
+    LastConnectionTime: datetime
+GuildInvitation [both]:
+    CreationDate: datetime
+GuildMember [both]:
+    JoinDate: datetime
+GuildSettings [response]:
+    ReferenceDate: datetime
+Hero [both]:
+    ExpirationDate: datetime
+HeroFreeTrialInfoPeriod [both]:
+    UnlockEndTime: datetime
+    UnlockStartTime: datetime
+HeroItem [both]:
+    AcquisitionDate: datetime
+HeroItemTextParams [response]:
+    BackgroundColor: datetime
+HeroItemType [response]:
+    EquipUserInterfaceSoundId: enum
+    VisualType: enum
+HeroUnlockRewardItem [request]:
+    ExpirationDate: datetime
+InstallStartedTaskTracking [request]:
+    CreationDate: datetime
+JobSummary [both]:
+    DueDate: datetime
+LeaderboardPage [both]:
+    NextSeasonStartingDate: datetime
+LeaguePopupModel [request]:
+    NextSeasonStartingDate: datetime
+MaintenanceGlobalNotification [request]:
+    MaintenanceScheduledDate: datetime
+Message [both]:
+    DateSent: datetime
+News [request]:
+    PublishDate: datetime
+PackageAsset [response]:
+    ResourcePath: enum
+PanelSettings [both]:
+    ContainerFilename: enum
+PcConfigurationTracking [request]:
+    CreationDate: datetime
+Period [both]:
+    EndDateTime: datetime
+    StartDateTime: datetime
+PlayGameClickedTracking [request]:
+    CreationDate: datetime
+QualityColorTableEntry [response]:
+    DarkColor: datetime
+    LightColor: datetime
+RoomObject [request]:
+    AttachmentNode: enum
+    EffectName: enum
+SeasonalCompetitionSchedule [both]:
+    ReferenceDate: datetime
+SeasonalCompetitionStartedNotification [request]:
+    StartDate: datetime
+SeasonalEventInfo [both]:
+    Id: enum
+SetLastViewedDateCommand [request]:
+    ViewedDate: datetime
+SetLastViewedDefendLogCommand [request]:
+    ViewedDate: datetime
+ShieldInfo [both]:
+    ShieldExpirableDueDate: datetime
+ShopDiscount [both]:
+    ExpirationDate: datetime
+    StartDate: datetime
+ShopProductModel [both]:
+    BuyBackCreationDate: datetime
+ShopSku [both]:
+    CreationDate: datetime
+SoundEventWrapper [response]:
+    SoundEventResource: enum
+Spec [both]:
+    Tag: enum
+TextFontParams [response]:
+    SynergyMaterialFileName: enum
+ThreadHeader [both]:
+    FirstMessageSentDate: datetime
+    LastMessageSentDate: datetime
+TreasureRoomChestLockInfo [both]:
+    Animation: enum
+UbisoftCastle [both]:
+    ActivationDate: datetime
+    DeActivationDate: datetime
+ViewableItem [both]:
+    LastViewedDate: datetime
+VirtualTransaction [both]:
+    TransactionDateTime: datetime
+VisualAnimatedEntitySettings [response]:
+    AggroIdle: enum
+    BallisticKnockBack: enum
+    BuilderDrag: enum
+    BuilderDrop: enum
+    Celebration: enum
+    CelebrationLoose: enum
+    ClosedDoor: enum
+    CloseDoor: enum
+    CreateObstacle: enum
+    CriticalFlinch: enum
+    DamageObstacle: enum
+    Deactivated: enum
+    Death: enum
+    DefaultAbility: enum
+    DefaultAttachmentBone: enum
+    DefaultLeftFootBone: enum
+    DefaultRightFootBone: enum
+    DestroyObstacle: enum
+    Flinch: enum
+    Harvest: enum
+    HeroAggroIdleToIdle: enum
+    HomePageAngry: enum
+    HomePageVictory: enum
+    HorizontalKnockBack: enum
+    Idle: enum
+    InteractionOpenChest: enum
+    InteractionOpenDoor: enum
+    LootAction: enum
+    MineBuildingCollected: enum
+    MineBuildingCollecting: enum
+    MineBuildingDamageReceived: enum
+    MineBuildingReadyToCollect: enum
+    MineBuildingReadyToCollectIdle: enum
+    Navigation: enum
+    OpenDoor: enum
+    OpenedDoor: enum
+    Spawn: enum
+    Stun: enum
+    Walk: enum
+VisualRenderableInfo [both]:
+    TextureFileName: enum
