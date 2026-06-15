@@ -63,7 +63,24 @@ non-obvious ones are listed in `re/catalog/network/special_fields.txt`:
 Numeric width (int/uint/byte/short/long/ulong/double) is captured per field for
 value-range validity, though all share the bare-number wire form.
 
-### Enum values & required/optional (investigated — no codec table exists)
+### Ground truth from the game's own data (`gamedata/`)
+The game's `GameplaySettings` JSON (8,726 files, supplied separately — raw assets
+not committed) was mined by `analyze_gamedata.py` into derived catalogs under
+`re/catalog/network/gamedata/`:
+- **`enum_values.json`** — 271 fields with their **real valid values**
+  (`BuildingType` = ArchitectOffice/BlackSmith/CastleHeart/…, `CurrencyType` =
+  IGC/LifeForce/PremiumCash, `ItemType`, …). `gen_examples.py` now uses these, so
+  **264 contracts get a real enum value** in their example instead of a placeholder.
+- **`observed_types.txt`** — 564 polymorphic `$type` discriminators. Objects carry
+  `"$type":"HyperQuest.GameServer.Contracts.X, HyperQuest.GameServer.Contracts"`;
+  the client selects the subtype from it, so nested/contract objects in a message
+  **must** include `$type` — the example generator now emits it.
+- **`validation_report.txt`** — cross-check vs the reversed schemas: field names
+  confirmed, and it surfaces **inherited base-class fields the codec walk misses**
+  (serialize delegates common fields like `Id`/`Points`/`DescriptionId` to a base
+  method), so the game data is the more complete source for those types.
+
+### Enum values & required/optional (codec investigation — see above for the data)
 - **Enum value = a 64-bit name hash.** The reader (`009a8670`) accepts either
   `"0x"+16 hex` (parsed as the raw value, `FUN_00401670`) or a **name string**
   which it **hashes** (`FUN_009ce4b0`, a CRC-style 64-bit hash over tables

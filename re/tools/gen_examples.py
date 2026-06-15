@@ -15,16 +15,28 @@ import json, os
 
 ND = "re/catalog/network"
 OUT = os.path.join(ND, "generated")
+GD = os.path.join(ND, "gamedata")
 NUMERIC = {"int", "uint", "byte", "short", "ushort", "long", "ulong", "number"}
 SCALAR_VALUE = {"double": 0.0, "bool": False, "string": "string",
                 "datetime": "2015-06-15T00:00:00Z", "enum": "0x0000000000000000",
                 "unknown": None}
 
+# real enum values + polymorphic $type names, mined from the game's own data
+ENUMS = json.load(open(os.path.join(GD, "enum_values.json"))) \
+    if os.path.exists(os.path.join(GD, "enum_values.json")) else {}
+OBSERVED = set()
+_ot = os.path.join(GD, "observed_types.txt")
+if os.path.exists(_ot):
+    OBSERVED = {ln.split()[-1] for ln in open(_ot) if ln.strip()}
+TYPE_NS = "HyperQuest.GameServer.Contracts"   # namespace seen in the game data
 
-def scalar_value(t):
-    if t in NUMERIC:
+
+def scalar_value(ftype, fname):
+    if fname in ENUMS:                 # a real, valid enum member from the data
+        return ENUMS[fname][0]
+    if ftype in NUMERIC:
         return 0
-    return SCALAR_VALUE.get(t, None)
+    return SCALAR_VALUE.get(ftype, None)
 
 
 def main():
@@ -51,6 +63,10 @@ def main():
             return {}
         v = typed[contract]
         obj = {}
+        # polymorphic discriminator: the client picks the subtype from $type, so
+        # nested/contract objects must carry it (every object in the game data does)
+        if contract in OBSERVED:
+            obj["$type"] = f"{TYPE_NS}.{contract}, {TYPE_NS}"
         for fname, ftype in v["fields"]:
             kind, child = resolve(v["direction"], fname, ftype)
             if kind == "object":
@@ -58,7 +74,7 @@ def main():
             elif kind == "array":
                 obj[fname] = [example(child, depth + 1, stack | {contract})] if child else []
             else:
-                obj[fname] = scalar_value(ftype)
+                obj[fname] = scalar_value(ftype, fname)
         return obj
 
     examples = {c: example(c, 0, frozenset()) for c in typed}
