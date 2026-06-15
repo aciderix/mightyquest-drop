@@ -73,12 +73,22 @@ catalog covers the subset whose serialize/deserialize shape was recognised.
 ## Offline validation against the real codec
 The recovered format is not just read statically — it is **executed**: 
 `re/tools/validate_codec.py` runs the client's own serializer/deserializer under
-Unicorn and round-trips values through them (no game, no Windows). Both
-directions pass 12/12: int/bool/string readers, the whole-object `LoginResult`
-deserialize via its real field dispatcher, the `LoginResult` serialize, and a
-serialize→deserialize round-trip. (Key harness detail: the codec's char-advance
-primitive is `stdcall`, so the intercept layer pops its callee args — see
-`emu.py` `intercept_cleanup`.)
+Unicorn and round-trips values through them (no game, no Windows). The
+`LoginResult` and `AccountLite` boot/login messages round-trip cleanly in both
+directions (real deserialize in, real serialize out, values preserved).
+
+**Mass validation** — `re/tools/autovalidate.py` scales this to the whole
+catalog automatically: for each two-way contract it *discovers* every scalar
+field's object offset by emulating the real deserialize with a memory-write hook
+(observing where each value lands), then round-trips the assembled object back
+out through the real serialize. Result: **211 / 218 two-way scalar contracts
+(96%) round-trip perfectly through the client's own code, both directions**; the
+6 incomplete are offset-discovery gaps and the 1 mismatch (`DoorStateTriggers`)
+is a known UI-event edge case. See `re/catalog/network/roundtrip_report.txt`.
+Contracts with nested-object fields are covered by the static consistency check
+above. (Key harness detail: the codec's char-advance and writer primitives are
+`stdcall`, so the intercept layer pops their callee args — `emu.py`
+`intercept_cleanup`.)
 
 ## Exhaustive write/read consistency (`validate_consistency.py`)
 A single wrong field — something one side sends that the other can't read — is
