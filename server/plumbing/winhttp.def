@@ -1,0 +1,35 @@
+; Module definition for MQEL WinHTTP proxy DLL
+; Exports match Windows XP/7 winhttp.dll (31 functions)
+LIBRARY "winhttp"
+EXPORTS
+    DllCanUnloadNow
+    DllGetClassObject
+    DllRegisterServer
+    DllUnregisterServer
+    WinHttpAddRequestHeaders
+    WinHttpCheckPlatform
+    WinHttpCloseHandle
+    WinHttpConnect
+    WinHttpCrackUrl
+    WinHttpCreateUrl
+    WinHttpDetectAutoProxyConfigUrl
+    WinHttpGetDefaultProxyConfiguration
+    WinHttpGetIEProxyConfigForCurrentUser
+    WinHttpGetProxyForUrl
+    WinHttpOpen
+    WinHttpOpenRequest
+    WinHttpQueryAuthSchemes
+    WinHttpQueryDataAvailable
+    WinHttpQueryHeaders
+    WinHttpQueryOption
+    WinHttpReadData
+    WinHttpReceiveResponse
+    WinHttpSendRequest
+    WinHttpSetCredentials
+    WinHttpSetDefaultProxyConfiguration
+    WinHttpSetOption
+    WinHttpSetStatusCallback
+    WinHttpSetTimeouts
+    WinHttpTimeFromSystemTime
+    WinHttpTimeToSystemTime
+    WinHttpWriteData

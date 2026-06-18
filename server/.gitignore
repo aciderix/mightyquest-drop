@@ -3,3 +3,6 @@ state.json
 state.json.tmp
 __pycache__/
 *.pyc
+.mqel_certs/
+mqel_requests.log
+MightyQuest*.exe
