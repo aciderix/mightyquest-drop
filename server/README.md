@@ -13,21 +13,20 @@ Python 3 standard library only — runs on the same machine as the game, or on a
 VPS for online hosting.
 
 ## What it does now
-- **Stateful** account / session / profile model, persisted to
-  `server/state.json`: login finds-or-creates an account for a Steam ticket,
-  issues a `ConnectionToken`, and the profile/account handlers resolve the
-  session by token (`Authorization: Bearer <token>`).
-- Answers the **boot / login** sequence with correctly-shaped JSON
-  (`BootConfig`, `ServerDefinitions`/`ServerInfo`, `GameServerConnectionConfig`,
-  `LoginResult`, `AccountLite`).
-- For any other request, serves the matching contract's example payload
-  (from `re/catalog/network/generated/examples.json`, 1,325 contracts) or `{}`.
-- **Logs every request** (method, path, content-type, body) to stdout and
-  `server/requests.log`.
-
-That last point is the important one: point the real client here and the log
-captures the **exact URLs, verbs and bodies** it sends — that is how we pin down
-the real `Argo` routing that static analysis can't fully resolve yet.
+- **Routes on the real endpoint pattern** seen in live traffic:
+  `/<Service>Service.hqs/<Method>` (GET reads, POST commands; full list in
+  `../re/catalog/network/endpoints_observed.txt`).
+- **Complete, correctly-typed responses** generated from the reversed catalog
+  (`../re/catalog/network/generated/examples.json`): full field sets including
+  inherited fields, real enum values, `$type` discriminators. e.g.
+  `GetAccountInformation` returns 44 fields with `Privileges: 9` and
+  `BuildInfo`/`Wallet`/`ActiveConsumables` present — exactly the fields a prior
+  attempt *omitted* (its documented cause of subtle in-game breakage).
+- **Stateful** account/session model, persisted to `server/state.json`.
+- `/distribution` echoes the client package versions (`package_versions.json`)
+  so the patch-check passes.
+- **Logs every request** to `server/requests.log` — point the real client here
+  and the log captures any method not yet handled, to fill in next.
 
 ## Pointing the client here
 The client reads its entry config from `BootConfig` /

@@ -2,220 +2,195 @@
 """
 stub_server.py — community-server stub for The Mighty Quest for Epic Loot.
 
-Iteration 2: a *stateful* backend. It answers the boot/login sequence, keeps
-accounts / sessions / profiles (persisted to server/state.json), and logs every
-request so pointing the real client here reveals the exact Argo routing.
+Iteration 3: routes on the REAL endpoint pattern observed in live traffic
+(`/<Service>Service.hqs/<Method>`, see re/catalog/network/endpoints_observed.txt)
+and answers with COMPLETE, correctly-typed responses generated from the reversed
+catalog (re/catalog/network/generated/examples.json — full field sets, real enum
+values, `$type` discriminators). Stateful accounts/sessions, persisted. Logs
+every request so unknown calls are easy to fill in.
 
-Zero dependencies (Python 3 stdlib). Run it on the game machine or a VPS:
+Zero dependencies (Python 3 stdlib). Run on the game machine or a VPS:
     python3 server/stub_server.py --host 0.0.0.0 --port 8080
-
-Responses are shaped from the reversed schema catalog
-(re/catalog/network/generated/examples.json, 1,325 contracts). Boot/login/profile
-get real stateful values; everything else returns its example payload + a log
-line so we can fill it in from observed traffic.
 """
 from __future__ import annotations
-import argparse, datetime, json, os, threading
+import argparse, copy, datetime, json, os, re, threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
-EXAMPLES_PATH = os.path.join(ROOT, "re/catalog/network/generated/examples.json")
+NET = os.path.join(ROOT, "re/catalog/network")
+EXAMPLES = json.load(open(os.path.join(NET, "generated/examples.json"))) \
+    if os.path.exists(os.path.join(NET, "generated/examples.json")) else {}
+PKG_VERSIONS = json.load(open(os.path.join(NET, "package_versions.json"))) \
+    if os.path.exists(os.path.join(NET, "package_versions.json")) else {}
 STATE_PATH = os.path.join(HERE, "state.json")
 LOG_PATH = os.path.join(HERE, "requests.log")
-
-EXAMPLES = json.load(open(EXAMPLES_PATH)) if os.path.exists(EXAMPLES_PATH) else {}
 
 
 def now():
     return datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def example(contract, **overrides):
-    obj = dict(EXAMPLES.get(contract, {}))
+def contract(name, **overrides):
+    """a COMPLETE example of `name` (full fields / real enums / $type), overridden."""
+    obj = copy.deepcopy(EXAMPLES.get(name, {}))
     obj.update(overrides)
     return obj
 
 
-# --- persistent state -------------------------------------------------------
+# ---- persistent state ------------------------------------------------------
 class State:
     def __init__(self, path):
-        self.path = path
-        self.lock = threading.Lock()
-        self.data = {"accounts": {}, "sessions": {}, "profiles": {}, "next_id": 1}
+        self.path = path; self.lock = threading.Lock()
+        self.data = {"accounts": {}, "sessions": {}, "next_id": 1}
         if os.path.exists(path):
-            try:
-                self.data.update(json.load(open(path)))
-            except Exception:
-                pass
+            try: self.data.update(json.load(open(path)))
+            except Exception: pass
 
     def save(self):
-        tmp = self.path + ".tmp"
-        json.dump(self.data, open(tmp, "w"), indent=1)
-        os.replace(tmp, self.path)
+        json.dump(self.data, open(self.path + ".tmp", "w"), indent=1)
+        os.replace(self.path + ".tmp", self.path)
 
     def login(self, identity):
-        """find-or-create an account for `identity` (e.g. a Steam ticket); return
-        (account_id, profile_id, token)."""
         with self.lock:
             acc = self.data["accounts"].get(identity)
             if not acc:
                 aid = self.data["next_id"]; self.data["next_id"] += 1
-                acc = {"AccountId": aid, "ProfileId": str(aid),
-                       "DisplayName": f"Player{aid}", "Email": "", "Privileges": 0}
+                acc = {"AccountId": aid, "DisplayName": "", "Privileges": 9}
                 self.data["accounts"][identity] = acc
-                self.data["profiles"][str(aid)] = example(
-                    "ProfileInfo", AccountId=aid, DisplayName=acc["DisplayName"]) \
-                    if "ProfileInfo" in EXAMPLES else {"AccountId": aid}
             token = f"tok-{acc['AccountId']}-{os.urandom(4).hex()}"
             self.data["sessions"][token] = acc["AccountId"]
-            self.save()
-            return acc, token
+            self.save(); return acc, token
 
-    def account_by_token(self, token):
-        with self.lock:
-            aid = self.data["sessions"].get(token)
-            if aid is None:
-                return None
-            for acc in self.data["accounts"].values():
-                if acc["AccountId"] == aid:
-                    return acc
-        return None
+    def account(self, token):
+        aid = self.data["sessions"].get(token)
+        return next((a for a in self.data["accounts"].values() if a["AccountId"] == aid), None)
 
 
 STATE = State(STATE_PATH)
 
 
-# --- request handlers (keyword-routed until exact routes are observed) -------
-def h_boot(req):
-    return example("BootConfig", DistributionServiceUrl=req.base, GameWebsiteUrl=req.base,
-                   EnvironmentName="community", WorldName="community")
+# ---- game endpoints (/<Service>Service.hqs/<Method>) ------------------------
+def ep_account_information(req, acc):
+    # Privileges must be 9 for a new account or hero-selection never shows.
+    return contract("AccountInformation", AccountId=(acc or {}).get("AccountId", 1),
+                    DisplayName=(acc or {}).get("DisplayName", ""), Privileges=9)
 
 
-def h_serverdefs(req):
-    return example("ServerDefinitions",
-                   ServerInfos=[example("ServerInfo", ApplicationID="hyperquest",
-                                        DeploymentServiceID="community",
-                                        RelativePathToApplication="/", ServerName="community")])
+def ep_choose_display_name(req, acc):
+    name = (req.json.get("displayName") or req.json.get("DisplayName") or "Player")
+    if acc:
+        acc["DisplayName"] = name; STATE.save()
+    return contract("AccountSummary", AccountId=(acc or {}).get("AccountId", 1), DisplayName=name)
 
 
-def h_connection(req):
-    return example("GameServerConnectionConfig", GameServerUrl=req.base,
-                   AccountName="player", AccountPassword="", HttpCompression=False)
+# method name -> handler(req, acc) ; default below serves a matching example
+ENDPOINTS = {
+    "GetAccountInformation": ep_account_information,
+    "ChooseDisplayName":     ep_choose_display_name,
+    "GetAttackSelectionList": lambda r, a: contract("AttackSelectionResult"),
+    "GetCastleInfo":          lambda r, a: contract("CastleInfo"),
+    "StartAttack":            lambda r, a: contract("AttackInfo"),
+    "EndAttack":              lambda r, a: {},
+    "GetCastlesForSale":      lambda r, a: contract("CastlesForSaleSelectionResult"),
+    "ChooseFirstHero":        lambda r, a: {},          # response contract TBD
+    "SendCommands":           lambda r, a: {},          # command bus -> notifications
+    "CheckSeasonalCompetitionRewards": lambda r, a: {},
+}
+
+# boot / launcher-side endpoints (the local proxy / distribution layer)
+def boot_config(req):
+    return contract("BootConfig", DistributionServiceUrl=req.base, GameWebsiteUrl=req.base,
+                    EnvironmentName="community", WorldName="community")
 
 
-def h_login(req):
-    identity = (req.json.get("steamticket") or req.json.get("Ticket")
-                or req.headers.get("X-Steam-Ticket") or "anonymous")
-    acc, token = STATE.login(identity)
-    return example("LoginResult", AccountId=acc["AccountId"],
-                   ConnectionToken=token, ProfileId=acc["ProfileId"])
-
-
-def h_account(req):
-    token = req.token()
-    acc = STATE.account_by_token(token) if token else None
-    if not acc:
-        acc, token = STATE.login(req.json.get("steamticket", "anonymous"))
-    return example("AccountLite", AccountId=acc["AccountId"], DisplayName=acc["DisplayName"],
-                   Email=acc.get("Email", ""), Privileges=acc.get("Privileges", 0),
-                   ActivationStatus=1, Password="")
-
-
-def h_profile(req):
-    acc = STATE.account_by_token(req.token())
-    pid = acc["ProfileId"] if acc else "1"
-    return STATE.data["profiles"].get(pid, example("ProfileInfo"))
-
-
-ROUTES = [
-    ("bootconfig", h_boot),
-    ("serverdefinitions", h_serverdefs), ("serverinfo", h_serverdefs),
-    ("gameserverconnectionconfig", h_connection),
-    ("accountcreation", h_account), ("login", h_login), ("account", h_account),
-    ("profile", h_profile),
-]
+def distribution(req):
+    # echo the client package versions so the patch-check passes
+    return PKG_VERSIONS or {}
 
 
 class Handler(BaseHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
 
-    # convenience accessors used by handlers
     @property
     def base(self):
-        host = self.headers.get("Host") or \
-            f"{self.server.server_address[0]}:{self.server.server_address[1]}"
-        return f"http://{host}"
+        h = self.headers.get("Host") or f"{self.server.server_address[0]}:{self.server.server_address[1]}"
+        return f"http://{h}"
 
     def token(self):
-        auth = self.headers.get("Authorization", "")
-        if auth.lower().startswith("bearer "):
-            return auth[7:]
-        return self.headers.get("X-Connection-Token") or self._json.get("ConnectionToken")
-
-    @property
-    def json(self):
-        return self._json
+        a = self.headers.get("Authorization", "")
+        return a[7:] if a.lower().startswith("bearer ") else self.headers.get("X-Connection-Token")
 
     def _read(self):
         n = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(n) if n else b""
-        try:
-            self._json = json.loads(body) if body else {}
-        except Exception:
-            self._json = {}
+        try: self._json = json.loads(body) if body else {}
+        except Exception: self._json = {}
         return body
 
+    @property
+    def json(self): return self._json
+
     def _log(self, body):
-        line = f"{now()} {self.command} {self.path} ct={self.headers.get('Content-Type','')} len={len(body)}"
+        line = f"{now()} {self.command} {self.path} len={len(body)}"
         print(line)
         with open(LOG_PATH, "a") as f:
-            f.write(line + "\n")
-            if body:
-                f.write("    " + body[:2000].decode("latin1", "replace") + "\n")
+            f.write(line + ("\n    " + body[:1500].decode("latin1", "replace") if body else "") + "\n")
 
-    def _respond(self, obj, code=200):
-        payload = json.dumps(obj).encode()
+    def _send(self, obj, code=200):
+        p = json.dumps(obj).encode()
         self.send_response(code)
         self.send_header("Content-Type", "application/json")
-        self.send_header("Content-Length", str(len(payload)))
-        self.end_headers()
-        self.wfile.write(payload)
+        self.send_header("Content-Length", str(len(p)))
+        self.end_headers(); self.wfile.write(p)
 
     def _handle(self):
-        body = self._read()
-        self._log(body)
-        path = self.path.lower()
-        for key, fn in ROUTES:
-            if key in path:
-                return self._respond(fn(self))
-        seg = os.path.splitext(self.path.rstrip("/").split("/")[-1].split("?")[0])[0]
-        for name, ex in EXAMPLES.items():
-            if name.lower() == seg.lower():
-                return self._respond(ex)
-        self._respond({})
+        body = self._read(); self._log(body)
+        path = self.path.split("?")[0]
+        # game RPC: /<Service>Service.hqs/<Method>
+        m = re.match(r"/([A-Za-z]+)Service\.hqs/([A-Za-z]+)", path)
+        if m:
+            service, method = m.group(1), m.group(2)
+            acc = STATE.account(self.token())
+            if acc is None:
+                acc, _ = STATE.login(self.headers.get("X-Steam-Ticket", "anonymous"))
+            h = ENDPOINTS.get(method)
+            return self._send(h(self, acc) if h else self._guess(method))
+        low = path.lower()
+        if "login" in low or "account" in low and "creation" in low:
+            acc, token = STATE.login(self.json.get("steamticket", "anonymous"))
+            return self._send(contract("LoginResult", AccountId=acc["AccountId"],
+                                        ConnectionToken=token, ProfileId=str(acc["AccountId"])))
+        if "bootconfig" in low:
+            return self._send(boot_config(self))
+        if "package" in low or "distribution" in low or "version" in low:
+            return self._send(distribution(self))
+        # fall back: serve an example matching the last path segment
+        seg = os.path.splitext(path.rstrip("/").split("/")[-1])[0]
+        return self._send(EXAMPLES.get(seg, {}))
 
-    do_GET = _handle
-    do_POST = _handle
-    do_PUT = _handle
+    def _guess(self, method):
+        """no handler: serve an example whose contract name appears in the method."""
+        for c in EXAMPLES:
+            if c.lower() in method.lower():
+                return EXAMPLES[c]
+        return {}
 
-    def log_message(self, *a):
-        pass
+    do_GET = do_POST = do_PUT = _handle
+
+    def log_message(self, *a): pass
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8080)
-    args = ap.parse_args()
-    srv = ThreadingHTTPServer((args.host, args.port), Handler)
-    print(f"[+] Mighty Quest stub server on http://{args.host}:{args.port}")
-    print(f"[+] {len(EXAMPLES)} contract examples; state -> {STATE_PATH}; log -> {LOG_PATH}")
-    print("[+] stateful: accounts / sessions / profiles persist across restarts")
-    try:
-        srv.serve_forever()
-    except KeyboardInterrupt:
-        print("\n[+] stopped")
+    a = ap.parse_args()
+    srv = ThreadingHTTPServer((a.host, a.port), Handler)
+    print(f"[+] MQEL stub on http://{a.host}:{a.port}  ({len(EXAMPLES)} contract examples)")
+    print(f"[+] routing /<Service>Service.hqs/<Method>; state {STATE_PATH}; log {LOG_PATH}")
+    try: srv.serve_forever()
+    except KeyboardInterrupt: print("\n[+] stopped")
 
 
 if __name__ == "__main__":
