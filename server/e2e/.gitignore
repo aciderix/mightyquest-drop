@@ -9,3 +9,7 @@ real_*.log
 sections.bin
 *.pyc
 __pycache__/
+aret_deser/
+aret_deser_static/
+aret_out/
+*.snap
