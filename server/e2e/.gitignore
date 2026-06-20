@@ -1,0 +1,7 @@
+certs/
+trace.jsonl
+capture.pcap
+server_stdout.log
+wine_*.log
+*.pyc
+__pycache__/
