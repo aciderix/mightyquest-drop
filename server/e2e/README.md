@@ -70,11 +70,47 @@ HttpSessionCurl`), not WinHTTP. Three things make an unmodified client talk to u
 3. **WinHTTP** — a few components use WinHTTP; the `plumbing/winhttp.dll` shim is
    loaded (`WINEDLLOVERRIDES=winhttp=n,b`) and forces `IGNORE_*` cert flags.
 
-## Next step to finish e2e
+## Why the live GUI client won't finish booting headless (and what does work)
 
-Get past `LoadGameSettings`: reverse how `[manager+0x1c50]` (the GameplaySettings
-object) is populated from `settings.bin`, or feed settings the game accepts.
-Once the boot proceeds, the very next thing the client does is
-`GET /AccountInformationService.hqs/GetAccountInformation` — which the backend
-already answers correctly (44 fields, `Privileges:9`), and `validate_trace.py`
-will then light up with the live exchanges.
+- **Packed `MightyQuest.exe`**: boots + renders under Wine, but crashes
+  deterministically at `LoadGameSettings` (`0x00908690`, read of `null+0x60`;
+  `FUN_00908440` derefs a null GameplaySettings object at `this+0x1c50`) — the
+  protector/`settings.bin` decrypt path is Wine-specific. On real Windows this
+  step works (the prior community setup reached the hero screen there).
+- **Unpacked `MightyQuest_mqel.exe`** (the SSL-patched build): does **not** start
+  under Wine — `0x004026CE`, `this=null` in global init: the unpack dump's CRT
+  init/IAT is broken, independent of the SSL patch.
+
+So a full headless GUI run is blocked. Two paths *do* validate the server e2e:
+
+### 1. Real-traffic replay  (`replay_real_traffic.py`) — DONE, 79/79
+Replays the **recorded real client↔server traffic** (`server/mqel_network*.log`
+from branch `rebuild-online-server`, captured when the setup worked) against this
+backend. Result: **79 exchanges, 79 ok, 0 schema-incomplete, 0 errors** —
+`GetAccountInformation` 44 fields, `GetCastleInfo` 35, `StartAttack` 47,
+`GetAttackSelectionList` 2, all `SendCommands` served. Ground-truth proof the
+server answers every call the real client makes.
+(The logs hold another deployment's tokens → not committed; point the script at
+your local copies.)
+
+### 2. ARET "save-state" — run the REAL client code headless (foundation working)
+Instead of the GUI, execute the client's own functions (serializers, the boot/
+login logic) headless, seeded with a live memory snapshot — no GUI, no Direct3D.
+Proven in this environment:
+- **A — snapshot** (`snapshot_game.sh` → `dump_snapshot.py`): the packed client
+  self-unpacks + resolves its protector IAT under Wine, hangs at a stable point
+  (`OpenBF PACKAGE_PRELOAD`); we `SIGSTOP` + dump `0x400000..0x1e00000` →
+  `game.snap` (ARETSNP1, 27 MB, IAT resolved). ✅
+- **B — ARET lift+run**: `aret … --mode transpile --entry <va> --snapshot
+  game.snap --run --iat-symbols iat_symbols_full.json` lifts the game to
+  compilable C and builds/runs it natively. ARET's transpile→compile(`-m32`)→run
+  pipe is green here (**17/17 M1 tests**, incl. real SHA-256, Win32 layer);
+  ARET lifts this game's functions to C that compiles. ✅
+- **Remaining**: a small per-function driver that calls a chosen network function
+  (e.g. a `*Result` deserializer) with `--snapshot`, to drive the real client
+  protocol from the CLI. (The Unicorn-based `re/tools/validate_codec.py` already
+  proves 2/2 contracts round-trip through the client's real codec — same idea,
+  narrower engine.)
+
+Requires `gcc-multilib`/`libc6-dev-i386` (for `-m32`) and the ARET binary
+(`cargo build --release` in the toolkit repo).
