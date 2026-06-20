@@ -25,38 +25,46 @@ won't finish booting under headless Wine (see ../README.md).
    LoginResult deserializer `sub_493440(CTX, OBJ, NAME)`** with our server-shaped
    JSON. Build + run with `build_driver.sh`.
 
-## Result — pipe works; one ARET lifting gap blocks the clean pass
+## Result — pipe works; one ARET bug fixed, one diagnosed
 
-Running it, the chain executes on real lifted client code:
+The chain executes on real lifted client code:
 `main → sub_493440 (deserializer) → sub_9a8d30 (thunk) → sub_9a8840 (token/number
-reader)`, and **our `advance()` callback streams the JSON in correctly** — the
-reader parses the value (`eax = 1000` for `AccountId`). 
+reader)`, and **our `advance()` callback streams the JSON in correctly**.
 
-It then segfaults at `mov [ecx], eax` with `ecx = 0` (null store) **inside
-`sub_9a8840`**. Root cause is an **ARET IR-lifting gap on that one primitive**,
-not the driver or the approach:
-- `aret --function 0x9a8840 --mode decompile` shows `__asm__` fallbacks for the
-  `shld ecx,eax,2` / `adc [ebp-4],ecx` chain (the 64-bit `*10` atoi accumulator,
-  notably `adc` with a **memory destination**).
-- `--mode transpile` (the IR pipeline) emits 0 `__asm__` but still computes a
-  null pointer for the result store → a semantic mis-lift of that idiom.
-- The same `CTX`/`OBJ`/`NAME` inputs deserialize correctly under the Unicorn
-  engine (`re/tools/validate_codec.py`, 2/2 both directions) — so the inputs and
-  ABI are right; only ARET's native lift of `sub_9a8840` diverges.
-- The deserializer routes **every** field (int and string) through this reader,
-  so field selection can't dodge it; `sub_9a8840`'s siblings that *are* clean:
-  `READ_STRING 0x9a9450`, serializer `0x49de80`, writers `0x9aad80/0x9ab060/
-  0x9ab550` — all 0 asm.
+### Bug 1 — tail-call esp (FIXED, see `aret-tailcall-esp-fix.patch`)
+First run segfaulted at `mov [ecx],eax`, `ecx=0`. Root cause: ARET gave **every**
+internal call `args[0] = esp-4` (modelling the return address a `call` pushes),
+**including tail calls** lowered from `jmp`. A `jmp` pushes nothing, so the
+`push ebp;mov ebp,esp;pop ebp;jmp f` thunk handed `f` a frame off by 4 → the
+reader stored its result through a null pointer. Fix in
+`src/ir/build.rs` (`internal_tailcall_args`, applied to the `Call` inside a
+`Stmt::Return`). After it, **integer fields deserialize correctly headless**:
+```
+AccountId  in=1000 -> got=1000  OK      (LoginResult)
+AccountId  in=2000 -> got=2000  OK      (AccountLite)
+```
+ARET's M1 transpile suite stays 17/17. (Pushed to the toolkit repo.)
 
-## Exact next step
+### Bug 2 — strcmp mismatch structured as a bare `break` (diagnosed)
+With bug 1 fixed, every field still lands at the first contract field's offset:
+the deserializer's inline field-name `strcmp` chain always reports "match" on the
+first entry. In the transpiled `sub_493440`, the `cmp dl,[ecx]; jne mismatch`
+that should jump to the `sbb eax,eax; or eax,1` (non-zero = mismatch) block is
+structured as `if (v24==0) break;` — the `break` exits the loop **without
+computing the mismatch result**, leaving the result var at its initial `0`
+(= "match"). So `NAME` never selects a non-first field. This is a CFG
+structuring / loop-exit value bug in ARET (deeper than bug 1).
 
-Fix ARET's lift of the `shld`+`adc [mem],reg` accumulator (model `adc` with a
-memory destination into the typed IR so the modeled registers stay connected),
-then re-run `build_driver.sh` — the deserializer should write `OBJ+off`
-correctly and the driver prints a clean PASS. Alternatively, drive the
-**serializer** path (`0x49de80`, all-clean) by overriding the writer symbols
-(`objcopy --weaken-symbol` on their chunk `.o` + strong shims) to capture the
-emitted key/value wire format.
+## Bottom line for validation
+
+The deserializer/serializer protocol is **already validated end-to-end through
+the client's own code** by `re/tools/validate_codec.py` (Unicorn): **2/2
+contracts, all 8 fields, both directions** — `deserialize` and `serialize`. The
+ARET save-state channel reproduces that on natively-recompiled client code and
+now works for integer fields after bug 1; full multi-field coverage needs bug 2
+(ARET CFG structuring) fixed. That is ARET development, not a server gap — the
+server is independently validated three ways (codec 2/2, real-traffic replay
+79/79, schema completeness).
 
 (Big/generated artifacts — `game.snap`, the multi-GB `aret_*` build trees — are
 gitignored; regenerate with the scripts above.)

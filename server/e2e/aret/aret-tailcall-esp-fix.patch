@@ -1,0 +1,81 @@
+From 761852835649259ddf39901c4e6fe526b63611dd Mon Sep 17 00:00:00 2001
+From: aciderix <fromthenext77@gmail.com>
+Date: Sat, 20 Jun 2026 21:05:36 +0000
+Subject: [PATCH] ir: tail-call (jmp) must pass esp unchanged, not esp-4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+thread_internal_call_esp gave every internal call args[0] = esp-4, modelling the
+return address a `call` pushes. A tail call lowered from `jmp f` pushes nothing —
+the callee reuses the current frame — so it must receive esp as-is. Passing esp-4
+shifted every stack argument the callee read by one slot.
+
+Concretely this broke a `push ebp; mov ebp,esp; pop ebp; jmp f` thunk: the
+transpiled thunk handed `f` a frame off by 4, so a downstream reader stored its
+result through the wrong (null) pointer and faulted. With the fix, the real game's
+LoginResult/AccountLite integer fields deserialize correctly when driven headless
+from a snapshot.
+
+Add internal_tailcall_args() (esp unchanged) and use it for the Call inside a
+Stmt::Return (the tail-call form) for both direct and indirect targets; nested
+calls in its arguments keep the esp-4 model. M1 transpile suite stays 17/17.
+---
+ src/ir/build.rs | 34 +++++++++++++++++++++++++++++++++-
+ 1 file changed, 33 insertions(+), 1 deletion(-)
+
+diff --git a/src/ir/build.rs b/src/ir/build.rs
+index 335a167..31bfe57 100644
+--- a/src/ir/build.rs
++++ b/src/ir/build.rs
+@@ -672,6 +672,21 @@ fn internal_call_args() -> Vec<Expr> {
+     ]
+ }
+ 
++/// Arguments for an internal *tail* call (a `jmp` to a function entry). Unlike a
++/// `call`, a `jmp` pushes no return address: the callee reuses the current frame,
++/// so it must receive the stack pointer **as-is** (not `esp - 4`). Passing
++/// `esp - 4` would shift every stack argument the callee reads by one slot — the
++/// bug that made a `push ebp;mov ebp,esp;pop ebp;jmp f` thunk hand `f` the wrong
++/// frame.
++fn internal_tailcall_args() -> Vec<Expr> {
++    vec![
++        Expr::Read(Location::Reg(RegId(4))), // esp unchanged (no pushed return addr)
++        Expr::Read(Location::Reg(RegId(0))), // eax
++        Expr::Read(Location::Reg(RegId(1))), // ecx
++        Expr::Read(Location::Reg(RegId(2))), // edx
++    ]
++}
++
+ fn thread_calls_in_expr(e: &mut Expr) {
+     match e {
+         Expr::Call { target, args, .. } => {
+@@ -713,7 +728,24 @@ fn thread_calls_in_stmt(s: &mut Stmt) {
+             thread_calls_in_expr(value);
+         }
+         Stmt::Branch { cond, .. } => thread_calls_in_expr(cond),
+-        Stmt::Return(Some(e)) => thread_calls_in_expr(e),
++        // A `Return(Call)` is a tail call (`jmp f`): the outermost call must get
++        // the stack pointer as-is (no pushed return slot). Nested calls inside its
++        // arguments are ordinary calls and keep the `esp - 4` model.
++        Stmt::Return(Some(e)) => {
++            if let Expr::Call { target, args, .. } = e {
++                if matches!(target, CallTarget::Direct(_) | CallTarget::Indirect(_)) {
++                    if let CallTarget::Indirect(x) = target {
++                        thread_calls_in_expr(x);
++                    }
++                    *args = internal_tailcall_args();
++                    for a in args.iter_mut() {
++                        thread_calls_in_expr(a);
++                    }
++                    return;
++                }
++            }
++            thread_calls_in_expr(e)
++        }
+         _ => {}
+     }
+ }
+-- 
+2.43.0
+
