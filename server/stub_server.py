@@ -35,6 +35,19 @@ def now():
     return datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def envelope(payload):
+    """Wrap a contract in the game's real response envelope. Confirmed against our
+    captured real traffic (real_traffic.log): reads -> {"Result": <contract>};
+    things that emit notifications -> {"Notifications": [...]} (and EndAttack uses
+    both). Already-enveloped or empty payloads pass through untouched."""
+    if not payload:
+        return {}
+    if isinstance(payload, dict) and (
+            payload.keys() & {"Result", "Notifications", "GlobalNotifications"}):
+        return payload
+    return {"Result": payload}
+
+
 def contract(name, **overrides):
     """A SCHEMA-COMPLETE `name`: starts from the catalog example, applies overrides,
     then runs the completeness gate so every field the client expects is present and
@@ -164,7 +177,7 @@ class Handler(BaseHTTPRequestHandler):
             if acc is None:
                 acc, _ = STATE.login(self.headers.get("X-Steam-Ticket", "anonymous"))
             h = ENDPOINTS.get(method)
-            return self._send(h(self, acc) if h else self._guess(method))
+            return self._send(envelope(h(self, acc) if h else self._guess(method)))
         low = path.lower()
         if "login" in low or "account" in low and "creation" in low:
             acc, token = STATE.login(self.json.get("steamticket", "anonymous"))

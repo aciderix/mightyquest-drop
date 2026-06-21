@@ -153,8 +153,9 @@ class CommandBus:
                 idx += 1
         if warn is not None and unknown:
             warn(unknown)
-        # the client accepts {} (no notifications) or a list of notifications
-        return notifications if notifications else {}
+        # Real-traffic shape (our real_traffic.log ground truth): SendCommands
+        # replies {} when nothing happened, else {"Notifications": [...]}.
+        return {"Notifications": notifications} if notifications else {}
 
     def _command_name(self, cmd):
         t = (cmd or {}).get("$type", "")

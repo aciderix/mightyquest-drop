@@ -19,6 +19,16 @@ The contract the game expects is already reversed from the client's own
 **Never hand-write a response — generate it from the catalog and prove it
 complete.**
 
+## Response envelope (confirmed against our captured real traffic)
+
+Every game-server reply is wrapped — it is NOT the bare contract:
+- reads (e.g. `GetAccountInformation`, `GetCastleInfo`) -> `{"Result": <contract>}`
+- things that emit notifications (e.g. `EndAttack`) -> `{"Notifications": [...], "Result": <contract>}`
+- `SendCommands` -> `{}` when nothing happened, else `{"Notifications": [...]}`
+
+This is verified from our own `real_traffic.log` ground truth (not the old
+project). `stub_server.envelope()` applies it; sending a bare contract is wrong.
+
 ## The two guards (host-agnostic, pure Python — run anywhere)
 
 ### 1. `completeness_gate.py` — every response is schema-complete
