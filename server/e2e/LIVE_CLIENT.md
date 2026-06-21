@@ -231,3 +231,67 @@ Wine; it crashes (unguarded) or stalls (guarded). A real-GPU host or Windows is
 required to validate the live UI; everything else (boot recipe, bink-skip, DXVK,
 VEH, minidump backtrace, the entire server-correctness toolchain) is done and
 committed.
+
+---
+
+## BREAKTHROUGH 2 — the client boots, connects to our server, and runs (no GPU)
+
+The earlier "net" conclusion was too pessimistic. The glyph wall is **not** the
+end: the engine's text rendering is a single class and the network/SSL stack is
+fully tractable in-container. The live client now boots to a stable running
+state, talks to our local server over TLS, and exchanges real game API calls —
+all headless under software Wine. Repro: `start_gameserver.sh` then `launch_lobby.sh`.
+
+### 1. The text-render crash *cluster* — one class, patched wholesale
+All boot crashes (27+) were one C++ class: a **shader-based text element**
+(vtable `0xF4F1E4`, identifiable by the `"ERROR - Shader <"` string right after
+it). Its GPU shader resource lives at `this+0x2f0`, set NULL by the ctor
+(`0xA06076`) and only filled when the native shader is created — which never
+happens under software rendering. Well-behaved vtable methods guard
+`if(this+0x2f0==NULL) return;`; the **draw / build / glyph-lookup** methods don't
+and deref NULL (or do a glyph lookup with index −1 → `edi=0xFFFFFFC0`).
+
+Fix (runtime, in the bink stub, applied at movie time after `.text` unpacks):
+force each crash-prone method to early-return with the correct stdcall cleanup:
+- `0xA060E0` text-DRAW → `xor eax,eax; ret 4`
+- `0xA06550`, `0xA065C0` glyph-index lookups → `ret 8` / `ret 4`
+- `0xA061D0` Draw, `0xA06250` SetVisible/fade, `0xA06CD0` Build geometry → `ret`
+- plus the original `0x991A8A` `je→jmp` (loading-screen text skip)
+
+This skips only **engine-side** text; the real UI is CEF/HTML and renders
+independently. Result: boot is **stable, zero crashes**, all the way to the
+lobby/controller-init stage.
+
+### 2. Networking — DNS, TLS, and the empty-trust-store
+- The game's hard-coded host is `gs.themightyquest.com`. Wine's curl resolver is
+  flaky ("timeout on name lookup is not supported"), and the container resets
+  `/etc/hosts`. **Fix: launch with `-server_url https://127.0.0.1`** — our server
+  cert has `SAN IP:127.0.0.1`, so hostname checks pass and DNS is bypassed.
+- Run the catalog server over **TLS on :443** (`gameserver.py`, from
+  `mqel_launcher`), CA at `/tmp/ca.pem`.
+- **SSL trust:** the game's static **libcurl 7.38** was built with *no* CA bundle.
+  With `verifypeer` on (default) and no `CAINFO`, its trust store is **empty** and
+  *every* cert is rejected — it never even opens a CA file (confirmed by
+  `WINEDEBUG=+file`). No CA path (`SSL_CERT_FILE`, `ca.pem`, patched OPENSSLDIR
+  string) can fix this, because curl 7.38 predates `CURL_CA_FALLBACK` and never
+  calls `set_default_verify_paths`. **Two runtime patches disable verification**
+  (the curl equivalent of the winhttp shim's `IGNORE_ALL_CERT_ERRORS`):
+  - `ssl3_get_server_certificate` in-handshake gate `0xAC1803`: `je 0xAC18A0`
+    (taken when `verify_mode==NONE`) → unconditional `jmp 0xAC18A0`, so the
+    chain-verify result is ignored and `SSL_connect` succeeds.
+  - `SSL_get_verify_result` (`0xABE0E0`, `return ssl->verify_result@+0xEC`) →
+    `xor eax,eax; ret`, so curl's post-handshake re-check sees `X509_V_OK`.
+
+  Result: `SSL connection using ECDHE-RSA-AES128-GCM-SHA256` → `SSL certificate
+  verify ok.` → `HTTP/1.1 200 OK`.
+
+### 3. Confirmed live client↔server traffic
+With both in place the client reaches the server and the log shows real calls:
+`POST /AccountService.hqs/GetAccountInformation` (→ our 4614-byte
+`AccountInformation`), `POST /ServerCommandService.hqs/SendCommands` (len 330),
+and a time-sync line `Server … Client … tardiness 0 sec`. **No `ErrorPanel`.**
+The game proceeds into `StartInitializeControllerTask` / `Waiting for
+AccountServerController` — i.e. the blocker is now pure **server-response
+correctness** (drive the lobby flow with complete responses), exactly what
+`completeness_gate.py` + `command_notifications.py` + `SERVER_CORRECTNESS.md`
+exist for. The crash/SSL/boot walls are gone.
