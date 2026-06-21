@@ -165,3 +165,35 @@ under Wine — most likely a load-order/timing difference, since data + parsing 
 identical to a working install). A clean copy does not change it. Path forward:
 a winedbg backtrace of the font load, a different Wine build/config, or running on
 real Windows / a GPU host (where this user's install previously reached the game).
+
+## DEEP DIVE: the InitFonts wall is the glyph subsystem (exhaustively proven)
+
+After clearing every other wall, the client boots stably under Wine
+(`win7` + bink-skip stub + DXVK/lavapipe + clean `/tmp/.wine-*` sockets) all the
+way to **GameplaySettings load / InitFonts**, then hits the glyph manager.
+
+What was tried and learned (minidump backtrace + register dumps):
+- Crash `0x009CA2AF` is `glyphMgr.getEntry(idx)` with `this->table` (`+0x80`) NULL
+  and `idx=-1`; backtrace: `getEntry` <- `getGlyphMetric 0x9D8720` <- text-layout
+  loop (`0x995…/0x991…/0x99c…`) rendering the loading-screen string. The manager
+  object is valid but its glyph table never fills (font package not loaded in time).
+- Byte-patching `getEntry` to guard the NULL (incl. the missing `pop ebp`) clears
+  that site but the same manager has more NULL fields (`+0x2f0`, vtable) → cascade
+  (`0xA06100 mov esi,[edx]`, `0xA06102 push [..]`, `call [esi+0xe8]`).
+- A vectored exception handler (`binkstub` `veh`) that skips NULL-deref
+  `mov/push/call` (zeroing dest / pushing 0) **stops all the crashes** — the
+  process stays alive (procs=4, no new crash for minutes) — BUT zero-width glyphs
+  make the text-layout loop **never terminate** (99% CPU, MQLog frozen mid
+  GameplaySettings); scoping the VEH to the font range only doesn't help.
+
+Conclusion: the glyph subsystem genuinely needs the font atlas loaded — it can't
+be crashed-through or faked (NULL → crash, zero → infinite layout). The font
+package (`PACKAGE_3236A0AB_AI739.BFPC`, present and byte-identical to the Steam
+copy) does not get parsed into the manager under this headless Wine. That is the
+one remaining blocker. It loads fine on real Windows (where the user's install
+previously reached the game), so the realistic path to a live, controllable
+client is a Windows/GPU host using this recipe; the headless-Wine path is blocked
+at the font loader specifically.
+
+Artifacts: `binkstub/stub.c` (the VEH + bink-skip), `binkstub/initfonts_crash.dmp`
+(the minidump with the glyph-manager backtrace).
