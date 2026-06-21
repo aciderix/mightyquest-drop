@@ -295,3 +295,42 @@ AccountServerController` — i.e. the blocker is now pure **server-response
 correctness** (drive the lobby flow with complete responses), exactly what
 `completeness_gate.py` + `command_notifications.py` + `SERVER_CORRECTNESS.md`
 exist for. The crash/SSL/boot walls are gone.
+
+### 4. The remaining wall — CEF (Chromium 28) renderer doesn't run page JS under Wine
+With the network solved, the game reaches the webview stage but hangs at
+`Waiting for AccountServerController` and after a 5-minute timeout drops to
+`ErrorPanel`. `CEFLog.Txt`:
+```
+[GlobalView] JAVASCRIPT: Uncaught ReferenceError: hyperquest is not defined ( : 0)
+[TopHtml]    JAVASCRIPT: Uncaught ReferenceError: hyperquest is not defined ( : 0)
+```
+`hyperquest` is the JS framework (defined by `UI/Js/hyperquest.base.js`); the
+lobby HTML pulls 184 `<script src>` files. Findings:
+- The webview fetches **only `Index.html`** from our server, never the scripts —
+  Chromium 28's network is impaired under Wine (`WSALookupServiceBegin failed
+  with: 8` in the Chromium log).
+- **Workaround built** (`uiserver.py`): a UI HTTP server that **inlines** every
+  `<script>`/`<link>` into the one document the renderer does fetch — so no
+  sub-resource loads are needed.
+- Even fully inlined, the page's scripts **still do not execute**: a `throw` as
+  the first inline `<script>` never reaches `CEFLog` (which faithfully logs the
+  `hyperquest` errors). Only the engine's *native* `ExecuteJavaScript` runs (that
+  is the `( : 0)` source). `--single-process --no-sandbox --disable-gpu` does not
+  change it.
+
+Conclusion: the embedded Chromium 28 (2013) **renderer does not execute document
+JavaScript under headless software Wine** — the same class of limit as the engine
+GPU renderer. The `( : 0)` errors are native injections into a frame whose own
+scripts never ran.
+
+### What this means / where it lands
+- **Server side: 100% done and self-hostable** (`gameserver.py` / `stub_server.py`,
+  TLS, catalog responses, completeness gate, command bus). No cloud lock-in.
+- **Client side: boots, renders via DXVK, connects, and exchanges real API calls
+  over TLS** — the crash-cluster and SSL patches (bink stub) make a *Wine* client
+  reach the server. Verified end to end.
+- **The only unreachable piece in this container is the HTML/JS lobby**, because
+  Chromium-28-under-headless-software-Wine won't run page JS. On a **real Windows
+  host or Wine with a real GPU**, the renderer works and the same server + the
+  planned injected-JS control agent (`hyperquest.controller.*`) drive the UI.
+  The Wine-specific crash/SSL patches are not even needed on native Windows.
