@@ -207,12 +207,15 @@ def prepare_exe(exe, ca):
 
 def launch(exe):
     gdir = os.path.dirname(exe); env = dict(os.environ)
+    # extra client args, e.g. MQEL_EXTRA_ARGS="--remote-debugging-port=9222"
+    # to expose the CEF UI over the Chrome DevTools Protocol for automation.
+    extra = os.environ.get("MQEL_EXTRA_ARGS", "").split()
     if os.name != "nt":                               # Linux/macOS via Wine
-        env["WINEDLLOVERRIDES"] = "winhttp=n"         # load our local winhttp shim
-        cmd = ["wine", exe]
+        env.setdefault("WINEDLLOVERRIDES", "winhttp=n")  # load our local winhttp shim
+        cmd = ["wine", exe, *extra]
     else:
-        cmd = [exe]
-    print(f"[+] launching {os.path.basename(exe)} …")
+        cmd = [exe, *extra]
+    print(f"[+] launching {os.path.basename(exe)} {' '.join(extra)}…")
     return subprocess.Popen(cmd, cwd=gdir, env=env)
 
 
