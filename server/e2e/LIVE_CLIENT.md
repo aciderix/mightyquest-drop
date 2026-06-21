@@ -46,7 +46,58 @@ RegisterView → gameplay settings load (~969 log lines, benign `IsVisible` JSON
 warnings) → loading screen → **plays the intro Bink movie** (`Data/Movie/
 Ubisoft_Logo.bk2` via `bink2w32.dll`) → `WaitPlayingMovieEnd`, then exits.
 
-## Remaining blockers (in boot order)
+## Rendering: DXVK + lavapipe (works)
+
+No GPU in the container, but software Vulkan (Mesa lavapipe, `libvulkan_lvp.so` +
+`lvp_icd.json`) is present. DXVK 1.10.3 `d3d9.dll` (32-bit) dropped into the prefix
+runs the game's D3D9 on Vulkan/lavapipe:
+```sh
+# install DXVK d3d9 into the 32-bit prefix
+cp dxvk-1.10.3/x32/d3d9.dll  $WINEPREFIX/drive_c/windows/system32/d3d9.dll
+# launch with:
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/lvp_icd.json
+export WINEDLLOVERRIDES="winhttp=n,b;bink2w32=n;d3d9=n"
+```
+Confirmed working: DXVK creates its device/state cache, the D3D9 cap checks pass,
+CEF registers views. Rendering is NOT the boot blocker.
+
+## Fonts
+
+The prefix shipped with zero fonts. Installed system TTFs + `winetricks -q
+corefonts` (Arial/Times/Verdana/…). Does NOT change the InitFonts crash below.
+
+## Remaining blocker: deterministic crash 0x009CA2AF in InitFonts
+
+After winver=win7 (settings) + bink stub (movie) + DXVK (render) + corefonts, the
+client reliably reaches font/UI init (`OpenOpalPanel: LoadingPanel`,
+`Source DB:>Scripts>InitFonts.tsc`) and then crashes — **deterministically, same
+address every run**: `0x009CA2AF reading 0xFFFFFFF4`.
+
+Disassembly (unpacked image):
+```
+0x9CA2A0  getEntry(index): mov eax,[ebp+8]      ; index
+          lea edx,[eax+eax*4]                    ; index*5
+          mov eax,[ecx+0x80]                      ; this->table  == NULL
+          mov eax,[eax+edx*8+0x1c]                ; table[index*40+0x1c]  -> FAULT
+```
+The fault address 0xFFFFFFF4 decodes to `index = -1`, `table = NULL`: an earlier
+**lookup returned "not found" (-1)** and the manager's table at `this+0x80` was
+never allocated, then this getter indexes it unchecked. It is NOT rendering (same
+under DXVK and WineD3D), NOT data (all 51 bigfiles present, 893 MB), NOT the movie
+(passed), NOT font-presence (corefonts installed). It is an engine resource/tag
+lookup that fails under Wine during UI/font init. Fixing it needs either deep RE
+of the failing lookup (what name/tag isn't found) or a runtime null-guard patch
+(hard: the shipping exe is packed, so patches must target the in-memory image).
+
+## Steam re-download: blocked in this container
+
+`steamcmd +login` fails with `CreateBoundSocket: failed to create socket,
+EAFNOSUPPORT` even with the sandbox disabled — the container network policy allows
+HTTP(S) (curl works) but not Steam's socket protocol. A clean copy would have to be
+fetched on a normal machine. (It likely would not fix 0x009CA2AF anyway: same
+binary + the present data already reproduces it.)
+
+## Original blockers (now resolved)
 
 1. **Intro Bink movie** (`WaitPlayingMovieEnd`). Disabling `bink2w32` or truncating
    the `.bk2` both **crash** (the engine requires a valid movie). Need a real
