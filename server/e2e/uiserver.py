@@ -14,6 +14,7 @@ def resolve(base_url_dir, ref):
 
 def inline_html(disk_path, url_path):
     html=open(disk_path,encoding="utf-8",errors="replace").read()
+    html=html.replace("<head>","<head><script>throw new Error('PROBE_INLINE_RAN')</script>",1)
     base_dir=posixpath.dirname(url_path)  # e.g. /gamedata/UI/Html/en
     base_dir=base_dir[len("/gamedata"):] if base_dir.startswith("/gamedata") else base_dir
     def script_sub(m):
@@ -35,7 +36,7 @@ def inline_html(disk_path, url_path):
     html=re.sub(r'<script[^>]*\bsrc="([^"]+)"[^>]*>\s*</script>', script_sub, html)
     html=re.sub(r'<link[^>]*\bhref="([^"]+)"[^>]*rel="stylesheet"[^>]*/?>', link_sub, html)
     html=re.sub(r'<link[^>]*rel="stylesheet"[^>]*\bhref="([^"]+)"[^>]*/?>', link_sub, html)
-    return html.encode("utf-8")
+    return b"\xef\xbb\xbf"+html.encode("utf-8")
 
 class H(BaseHTTPRequestHandler):
     protocol_version="HTTP/1.1"

@@ -20,5 +20,5 @@ export CURL_CA_BUNDLE='Z:\usr\local\ssl\cert.pem' SSL_CERT_FILE='Z:\usr\local\ss
 # also drop CA where Wine resolves the compiled default "/usr/local/ssl/cert.pem" (C: drive root)
 mkdir -p "$WINEPREFIX/drive_c/usr/local/ssl/certs"
 cp /usr/local/ssl/cert.pem "$WINEPREFIX/drive_c/usr/local/ssl/cert.pem" 2>/dev/null || true
-nohup wine MightyQuest.exe --single-process --no-sandbox --disable-gpu --disable-gpu-compositing -server_url https://127.0.0.1 -environmentName mqel-live -branchName mqel -steamid 76561201696194782 -steamticket "" -token "" >/tmp/wine_lobby.log 2>&1 & disown
+nohup wine MightyQuest.exe --no-sandbox --disable-gpu --disable-software-rasterizer --disable-3d-apis --disable-web-security --ignore-certificate-errors --allow-file-access-from-files --remote-debugging-port=9222 --remote-allow-origins=* -server_url https://127.0.0.1 -environmentName mqel-live -branchName mqel -steamid 76561201696194782 -steamticket "" -token "" >/tmp/wine_lobby.log 2>&1 & disown
 echo "launched lobby test pid $!; baseline crash=$(ls /home/user/port/CrashReport/*.breport 2>/dev/null|wc -l)"
