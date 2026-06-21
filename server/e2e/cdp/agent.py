@@ -1,40 +1,31 @@
 #!/usr/bin/env python3
 """
 cdp/agent.py — drive The Mighty Quest's CEF (Chromium-28) webview from Python
-over the Chrome DevTools Protocol.
+over the Chrome DevTools Protocol, and script full client↔server flows.
 
-Why this exists
----------------
-The game's lobby is an HTML/JS app (the `hyperquest` framework) rendered in an
-embedded CEF browser. Launch the client with `--remote-debugging-port=9222`
-(see ../launch_lobby.sh) and this agent attaches to the webview's V8 context and
-becomes the bot-control layer the project set out to build: read UI state, call
-`hyperquest.controller.*`, drive flows — all from Python over a WebSocket.
+Launch the client with `--remote-debugging-port=9222` (see ../launch_lobby.sh)
+and run this agent. It attaches to the webview's V8 context and becomes the
+bot-control layer: inject + run the `hyperquest` JS framework, then drive the
+real client↔server protocol (account creation → hero pick → lobby → attack)
+through the framework's own transport, with Python relaying every call to the
+local game server.
 
-Two modes
----------
-* attach()         — attach to the live game webview (real Windows / Wine+GPU host
-                     where the page actually loads and the native `manager._proxy`
-                     bridge is bound). This is the "control the real game" mode.
-* bootstrap_local()— in a headless container the CEF renderer does NOT load pages
-                     and the native bridge is never bound (about:blank, no
-                     `manager`). This mode injects a mock DOM, the full hyperquest
-                     framework, and a *Python-transported* `manager._proxy`: JS
-                     calls are captured here, forwarded to our local game server,
-                     and the responses fed back via `hyperquest.client.invokeResponse`.
-                     It turns the injected framework into a headless client whose
-                     transport is Python — useful to exercise the server and script
-                     flows even where Chromium's own networking is broken under Wine.
+Modes
+-----
+* real host (Windows / Wine+GPU): the page loads and the native `manager._proxy`
+  bridge is bound — `has_native_bridge()` is True; drive the live game UI.
+* headless container: the CEF renderer never loads a page (about:blank) and the
+  native bridge is absent, so we inject a mock DOM + the framework + a
+  Python-transported `manager._proxy`. JS calls are captured, routed to the game
+  server over HTTP, and the answers fed back via `hyperquest.client.invokeResponse`.
 
-Robustness (per the CDP-under-Wine gotchas we measured)
-* hit the HTTP `/json` endpoint EXACTLY once, then keep the WebSocket open for the
-  whole session (the old debug HTTP server wedges after heavy use);
-* one long-lived process — never re-discover targets mid-session.
+Robustness (CDP-under-Wine): hit `/json` exactly once, keep the WebSocket for the
+whole process; one long-lived agent, never re-discover targets mid-session.
 
-Deps: websocket-client, requests  (pip install websocket-client requests)
+Deps: websocket-client, requests
 """
 from __future__ import annotations
-import json, os, posixpath, re, sys, time
+import json, os, posixpath, re, ssl, sys, time, urllib.request
 import requests, websocket
 
 GAME_DATA = os.environ.get("MQ_GAMEDATA", "/home/user/port/GameData/Data")
@@ -42,28 +33,57 @@ HTML_DIR  = "/UI/Html/en"
 SERVER    = os.environ.get("MQ_SERVER", "https://127.0.0.1")
 CDP_HOST  = os.environ.get("MQ_CDP", "http://localhost:9222")
 
+# method -> Service, from re/catalog/network/endpoints_observed.txt (real routing)
+SERVICE = {
+    "SendCommands": "ServerCommand",
+    "StartAttack": "Attack", "EndAttack": "Attack",
+    "GetCastleInfo": "AttackSelection", "GetAttackSelectionList": "AttackSelection",
+    "GetAccountInformation": "AccountInformation",
+    "GetCastlesForSale": "CastleForSale", "GetCastleForSaleBuildInfo": "CastleForSale",
+    "CheckSeasonalCompetitionRewards": "SeasonalCompetition",
+    "ChooseFirstHero": "Hero",
+    "ChooseDisplayName": "Account",
+}
+_SSL = ssl.create_default_context(); _SSL.check_hostname = False; _SSL.verify_mode = ssl.CERT_NONE
+
 
 def _resolve(ref: str) -> str:
     return os.path.join(GAME_DATA, posixpath.normpath(posixpath.join(HTML_DIR, ref)).lstrip("/"))
 
 
+def server_call(method, arg, services=None):
+    """POST a captured proxy call to /<Service>Service.hqs/<Method> on the game server."""
+    candidates = [SERVICE[method]] if method in SERVICE else (services or
+                 ["AccountInformation", "Account", "ServerCommand", "AttackSelection",
+                  "Attack", "Hero", "CastleForSale"])
+    body = json.dumps(arg or {}).encode()
+    last = {}
+    for svc in candidates:
+        try:
+            req = urllib.request.Request(f"{SERVER}/{svc}Service.hqs/{method}",
+                                         data=body, method="POST")
+            raw = urllib.request.urlopen(req, timeout=6, context=_SSL).read()
+            return json.loads(raw or b"{}")
+        except Exception as e:
+            last = {"__error": str(e)}
+    return last
+
+
 class Agent:
-    def __init__(self, target_index: int = 0):
-        # Step 1: ONE /json, then keep the socket forever.
-        pages = requests.get(f"{CDP_HOST}/json", timeout=8).json()
+    def __init__(self, target_index=0):
+        pages = requests.get(f"{CDP_HOST}/json", timeout=8).json()       # ONE /json
         self.targets = [p for p in pages if p.get("type") == "page"]
         if not self.targets:
             raise RuntimeError("no CEF page targets on the debug port")
         self.page = self.targets[target_index]
-        self.ws = websocket.create_connection(
-            self.page["webSocketDebuggerUrl"], timeout=30, suppress_origin=True)
+        self.ws = websocket.create_connection(self.page["webSocketDebuggerUrl"],
+                                              timeout=30, suppress_origin=True)
         self._id = 0
         self.cmd("Runtime.enable")
 
     # ── raw CDP ──────────────────────────────────────────────────────────────
     def cmd(self, method, params=None):
-        self._id += 1
-        mid = self._id
+        self._id += 1; mid = self._id
         self.ws.send(json.dumps({"id": mid, "method": method, "params": params or {}}))
         while True:
             m = json.loads(self.ws.recv())
@@ -74,16 +94,15 @@ class Agent:
         r = self.cmd("Runtime.evaluate",
                      {"expression": expr, "returnByValue": by_value}).get("result", {})
         if r.get("wasThrown") or "exceptionDetails" in r:
-            desc = r.get("result", {}).get("description") or r.get("exceptionDetails")
-            raise RuntimeError("JS threw: %s" % str(desc)[:300])
+            raise RuntimeError("JS threw: %s" %
+                               str(r.get("result", {}).get("description") or r.get("exceptionDetails"))[:300])
         return r.get("result", {}).get("value")
 
-    # ── high level ───────────────────────────────────────────────────────────
-    def has_native_bridge(self) -> bool:
-        return self.eval("typeof window.manager!=='undefined' && !!window.manager._proxy") is True
+    # ── bootstrap (headless container) ───────────────────────────────────────
+    def has_native_bridge(self):
+        return self.eval("typeof window.manager!=='undefined' && !!(window.manager&&window.manager._proxy)") is True
 
     def inject_dom(self):
-        """Step 2 — give the framework the DOM it expects (the real <body>)."""
         html = open(os.path.join(GAME_DATA, "UI/Html/en/Index.html"),
                     encoding="utf-8", errors="replace").read()
         m = re.search(r"<body[^>]*>(.*)</body>", html, re.S)
@@ -93,12 +112,10 @@ class Agent:
         return self.eval("!!document.getElementById('main-lobby-panel')")
 
     def inject_framework(self):
-        """Load every <script src> from Index.html, in order, into V8."""
         html = open(os.path.join(GAME_DATA, "UI/Html/en/Index.html"),
                     encoding="utf-8", errors="replace").read()
         srcs = re.findall(r'<script[^>]*\bsrc="([^"]+)"', html)
-        ok = fails = 0
-        failures = []
+        ok = fail = 0; failures = []
         for s in srcs:
             try:
                 code = open(_resolve(s), encoding="utf-8", errors="replace").read()
@@ -107,89 +124,101 @@ class Agent:
             r = self.cmd("Runtime.evaluate",
                          {"expression": code, "returnByValue": False}).get("result", {})
             if r.get("wasThrown"):
-                fails += 1
+                fail += 1
                 if len(failures) < 10:
                     failures.append((os.path.basename(s),
                                      str(r.get("result", {}).get("description"))[:160]))
             else:
                 ok += 1
-        return {"ok": ok, "fail": fails, "failures": failures,
+        return {"ok": ok, "fail": fail, "failures": failures,
                 "hyperquest": self.eval("typeof hyperquest")}
 
-    def install_python_bridge(self, methods):
-        """Mock `manager._proxy` (no native bridge under headless Wine, and
-        Chromium's own networking is broken there). Every JS->native call is
-        queued on window.__mq_calls; pump() drains it, forwards to the real game
-        server, and feeds the answer back through hyperquest.client.invokeResponse.
-        `methods` = iterable of API method names the proxy must expose."""
-        js_methods = ",".join(
-            "%s:function(a){window.__mq_calls.push({m:%s,a:a,rid:hyperquest.client._lastRequestId});}"
-            % (json.dumps(m)[1:-1] if False else m, json.dumps(m)) for m in methods)
-        # build proxy object with explicit methods (Chromium 28 has no ES6 Proxy)
-        body = ";".join(
-            "P[%s]=function(a){window.__mq_calls.push({m:%s,a:a,rid:hyperquest.client._lastRequestId});}"
-            % (json.dumps(m), json.dumps(m)) for m in methods)
-        self.eval("window.__mq_calls=[];var P={};%s;window.manager={_proxy:P};1" % body)
+    def install_bridge(self):
+        """Mock manager._proxy (no native bridge / Chromium net under Wine) +
+        a clean __invoke(method,args) that registers a callback and queues the call."""
+        self.eval("""
+            window.__mq_calls = [];
+            window.__resp = {};
+            var P = {};
+            window.__mkproxy = function(name){
+                P[name] = function(a){
+                    window.__mq_calls.push({m:name, a:a, rid:hyperquest.client._lastRequestId});
+                };
+            };
+            window.manager = {_proxy: P};
+            window.__invoke = function(method, args){
+                var rid = ++hyperquest.client._lastRequestId;
+                hyperquest.client._mapCallback[rid] =
+                    {functionToCall:function(r){ window.__resp[rid] = r; }};
+                if(!P[method]) window.__mkproxy(method);
+                P[method](args || {});
+                return rid;
+            };
+            1;""")
 
-    def pump(self, route):
-        """Drain queued JS->native calls; `route(method, arg)->response_obj`."""
-        calls = self.eval("var c=window.__mq_calls;window.__mq_calls=[];c") or []
+    def pump(self):
+        """Drain queued JS->native calls, route to the server, feed answers back."""
+        calls = self.eval("var c=window.__mq_calls; window.__mq_calls=[]; c") or []
         for c in calls:
-            resp = route(c.get("m"), c.get("a"))
+            resp = server_call(c.get("m"), c.get("a"))
             self.eval("hyperquest.client.invokeResponse(%d,%s);1"
                       % (int(c.get("rid", 0)), json.dumps(resp)))
         return len(calls)
 
+    def invoke(self, method, args=None, timeout=8):
+        """Drive one client->server call through the real hyperquest transport;
+        return the server response object that the JS framework received."""
+        rid = self.eval("__invoke(%s,%s)" % (json.dumps(method), json.dumps(args or {})))
+        deadline = time.time() + timeout
+        while time.time() < deadline:
+            self.pump()
+            got = self.eval("window.__resp[%d]||null" % int(rid))
+            if got is not None:
+                return got
+            time.sleep(0.1)
+        return None
 
-def _server_route(method, arg):
-    """Forward a captured proxy call to the local game server over HTTP."""
-    # the proxy method name maps onto /<Service>Service.hqs/<Method>; we don't
-    # know the service split here, so callers usually supply their own route().
-    import urllib.request, ssl
-    ctx = ssl.create_default_context(); ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    data = json.dumps(arg or {}).encode()
-    # best-effort: try AccountService then ServerCommandService
-    for svc in ("Account", "ServerCommand", "Castle", "Attack"):
-        try:
-            req = urllib.request.Request(f"{SERVER}/{svc}Service.hqs/{method}",
-                                         data=data, method="POST")
-            return json.loads(urllib.request.urlopen(req, timeout=5, context=ctx).read() or b"{}")
-        except Exception:
-            continue
-    return {}
+    def bootstrap_local(self):
+        assert self.inject_dom(), "mock DOM failed"
+        info = self.inject_framework()
+        assert info["hyperquest"] == "object", "framework inject failed: %s" % info
+        self.install_bridge()
+        return info
 
 
-def main():
+def run_flow():
     a = Agent()
-    print("attached:", a.page.get("url"))
-    native = a.has_native_bridge()
-    print("native manager._proxy bridge present:", native)
-    if native:
-        # real host: framework already running in the page; just drive it.
-        print("hyperquest:", a.eval("typeof hyperquest"))
-        print("controllers:", a.eval(
-            "typeof hyperquest!=='undefined'&&hyperquest.controller?Object.keys(hyperquest.controller):'n/a'"))
-        return
-    # headless/local mode
-    print("inject_dom main-lobby-panel:", a.inject_dom())
-    info = a.inject_framework()
-    print("inject_framework:", {k: info[k] for k in ("ok", "fail", "hyperquest")})
-    for n, d in info["failures"]:
-        print("   FAIL", n, "::", d)
-    # expose the server methods on the mock proxy and do one pump
-    methods = ["GetAccountInformation", "SendCommands", "GetCastleInfo",
-               "ChooseDisplayName", "GetAttackSelectionList"]
-    a.install_python_bridge(methods)
-    # drive one call end to end through Python transport
-    a.eval("hyperquest.client._lastRequestId++;hyperquest.client._mapCallback[hyperquest.client._lastRequestId]="
-           "{functionToCall:function(r){window.__last_account=r;}};"
-           "manager._proxy.GetAccountInformation({});1")
-    n = a.pump(_server_route)
-    print("pumped %d call(s)" % n)
-    print("account response seen in JS:",
-          a.eval("window.__last_account?Object.keys(window.__last_account).slice(0,8):'none'"))
+    print("attached page url:", a.page.get("url"))
+    if a.has_native_bridge():
+        print("native bridge present — real-host mode (driving live game UI).")
+    else:
+        print("headless container — bootstrapping framework + Python transport...")
+        info = a.bootstrap_local()
+        print("  framework: ok=%d fail=%d" % (info["ok"], info["fail"]))
+
+    def keys(o, n=10):
+        return list(o.keys())[:n] if isinstance(o, dict) else o
+
+    print("\n=== scripted flow: account creation -> hero -> lobby -> attack ===")
+    steps = [
+        ("GetAccountInformation", {}),
+        ("ChooseDisplayName", {"displayName": "ClaudeHero"}),
+        ("ChooseFirstHero", {"heroTemplateId": 1}),
+        ("GetCastleInfo", {}),
+        ("GetAttackSelectionList", {}),
+        ("GetCastlesForSale", {}),
+        ("StartAttack", {}),
+        ("SendCommands", {"commands": [{"$type": "ClientIdleCommand"}]}),
+        ("EndAttack", {}),
+    ]
+    for method, args in steps:
+        try:
+            resp = a.invoke(method, args)
+            print("  %-26s -> %s" % (method, keys(resp)))
+        except Exception as e:
+            print("  %-26s -> ERROR %s" % (method, e))
+    a.ws.close()
 
 
 if __name__ == "__main__":
-    main()
+    run_flow()

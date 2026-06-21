@@ -364,3 +364,12 @@ the live game webview where `manager` is bound and the page is loaded) and the
 layer; in this headless container it runs as a Python-transported headless client
 against our server, and on a real Windows/GPU host it attaches to and drives the
 actual game UI.
+
+**Full flow verified (in-container, against the local server):** a single
+`python3 cdp/agent.py` run drives the whole sequence through the real
+`hyperquest.client` transport — `GetAccountInformation` (→ full AccountInformation),
+`ChooseDisplayName` (→ AccountSummary), `ChooseFirstHero`, `GetCastleInfo`,
+`GetAttackSelectionList`, `GetCastlesForSale`, `StartAttack` (→ AttackInfo),
+`SendCommands`, `EndAttack` — each routed to the correct `/<Service>Service.hqs/<Method>`
+on the catalog server, every response received by the JS framework. That is the
+account-creation → hero → lobby → attack loop, scripted from Python.
