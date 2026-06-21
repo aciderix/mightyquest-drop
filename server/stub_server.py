@@ -15,12 +15,16 @@ Zero dependencies (Python 3 stdlib). Run on the game machine or a VPS:
 from __future__ import annotations
 import argparse, copy, datetime, json, os, re, threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from completeness_gate import Gate
+from command_notifications import CommandBus
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
 NET = os.path.join(ROOT, "re/catalog/network")
 EXAMPLES = json.load(open(os.path.join(NET, "generated/examples.json"))) \
     if os.path.exists(os.path.join(NET, "generated/examples.json")) else {}
+GATE = Gate()            # schema-completeness for every response we emit
+BUS = CommandBus(GATE)   # SendCommands -> correct notifications
 PKG_VERSIONS = json.load(open(os.path.join(NET, "package_versions.json"))) \
     if os.path.exists(os.path.join(NET, "package_versions.json")) else {}
 STATE_PATH = os.path.join(HERE, "state.json")
@@ -32,9 +36,14 @@ def now():
 
 
 def contract(name, **overrides):
-    """a COMPLETE example of `name` (full fields / real enums / $type), overridden."""
-    obj = copy.deepcopy(EXAMPLES.get(name, {}))
-    obj.update(overrides)
+    """A SCHEMA-COMPLETE `name`: starts from the catalog example, applies overrides,
+    then runs the completeness gate so every field the client expects is present and
+    nested contracts are filled (not left as {} -> silent client defaults)."""
+    seed = copy.deepcopy(EXAMPLES.get(name, {}))
+    seed.update(overrides)
+    if name in GATE.schemas:
+        return GATE.complete(name, seed)
+    obj = seed
     return obj
 
 
@@ -94,7 +103,7 @@ ENDPOINTS = {
     "EndAttack":              lambda r, a: {},
     "GetCastlesForSale":      lambda r, a: contract("CastlesForSaleSelectionResult"),
     "ChooseFirstHero":        lambda r, a: {},          # response contract TBD
-    "SendCommands":           lambda r, a: {},          # command bus -> notifications
+    "SendCommands":           lambda r, a: BUS.handle(r.json),  # command bus -> notifications
     "CheckSeasonalCompetitionRewards": lambda r, a: {},
 }
 
