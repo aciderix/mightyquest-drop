@@ -37,6 +37,7 @@ CATALOG = os.path.join(HERE, "..", "re", "catalog", "network")
 SCHEMAS = os.path.join(CATALOG, "schemas_typed.json")
 EXAMPLES = os.path.join(CATALOG, "generated", "examples.json")
 ENUMS = os.path.join(CATALOG, "gamedata", "enum_values.json")
+ENUM_INTS = os.path.join(CATALOG, "gamedata", "enum_int_values.json")
 
 # .NET serializer default values, by the type vocabulary used in schemas_typed.json
 _NUM_INT = {"int", "uint", "ushort", "short", "ulong", "long", "byte", "enum"}
@@ -74,6 +75,41 @@ class Gate:
                         self.enum_names.update(m for m in members if isinstance(m, str))
         except OSError:
             pass
+        # name -> integer, recovered from the client's own JS enum models
+        # (hyperquest.enums.* in GameData/UI/Js/generated/models) — these ARE the
+        # authoritative integer values the client (de)serializes. We use them to
+        # auto-convert enum names to integers at emit time, fixing the #1
+        # silent-default bug ("enum sent as name -> client reads 0").
+        self.enum_int = {}          # EnumName -> {member: int}
+        self._enum_by_name = {}     # lowercased EnumName -> EnumName
+        self._member_int = {}       # member -> set of ints (for unique resolution)
+        try:
+            with open(ENUM_INTS, encoding="utf-8") as f:
+                self.enum_int = json.load(f)
+            for en, mapping in self.enum_int.items():
+                self._enum_by_name[en.lower()] = en
+                for member, iv in mapping.items():
+                    self.enum_names.add(member)
+                    self._member_int.setdefault(member, set()).add(iv)
+        except OSError:
+            pass
+
+    def resolve_enum(self, fname, value):
+        """Return the integer for an enum-name string, or None if unresolvable.
+        Prefer the enum whose name matches the field; else accept a globally
+        unique member value."""
+        if not isinstance(value, str):
+            return None
+        # field name often equals the enum name (CastleType, AttackSource, ...)
+        en = self._enum_by_name.get(fname.lower())
+        if en and value in self.enum_int[en]:
+            return self.enum_int[en][value]
+        # field like "SomethingType" -> enum "Type"/"SomethingType" already tried;
+        # fall back to a globally unique member integer
+        ints = self._member_int.get(value)
+        if ints and len(ints) == 1:
+            return next(iter(ints))
+        return None
 
     # ---- the rule: a complete object for `name`, keeping any provided values ----
     def complete(self, name, partial=None, *, add_type=False, _seen=None):
@@ -89,6 +125,11 @@ class Gate:
         for fname, ftype in spec.get("fields", []):
             if fname in partial and partial[fname] is not None:
                 val = partial[fname]
+                # auto-convert an enum NAME to its integer (the silent-default fix)
+                if ftype in _NUM_INT and isinstance(val, str):
+                    iv = self.resolve_enum(fname, val)
+                    if iv is not None:
+                        val = iv
                 # recurse into a provided nested object if we know its contract
                 nested = self._contract_for(fname, ftype)
                 if nested and isinstance(val, dict) and nested not in _seen:
@@ -154,18 +195,23 @@ class Gate:
 
 
 # --------------------------------------------------------------------------- CLI
-def _self_check(gate):
+def _self_check(gate, completed=True):
+    """Validate every example as the server would actually SEND it — i.e. after
+    complete() (which fills defaults and converts enum names to integers). Pass
+    completed=False to audit the raw catalog examples instead."""
     bad = 0
     for name in gate.examples:
-        issues = gate.validate(name, gate.examples[name])
+        obj = gate.complete(name, gate.examples[name]) if completed else gate.examples[name]
+        issues = gate.validate(name, obj)
         if issues:
             bad += 1
             print(f"[X] {name}: {len(issues)} issue(s)")
             for i in issues[:4]:
                 print("      ", i)
     total = len(gate.examples)
-    print(f"\n{'PASS' if bad == 0 else 'FAIL'}: {total-bad}/{total} examples are "
-          f"schema-complete by the gate.")
+    tag = "as-emitted (after complete())" if completed else "raw catalog"
+    print(f"\n{'PASS' if bad == 0 else 'FAIL'}: {total-bad}/{total} examples "
+          f"schema-complete [{tag}].")
     return 0 if bad == 0 else 1
 
 

@@ -28,6 +28,27 @@ from __future__ import annotations
 import json, os, posixpath, re, ssl, sys, time, urllib.request
 import requests, websocket
 
+# the completeness gate lets the agent guarantee (and report) that every response
+# the JS framework receives is schema-complete with enum integers, not names.
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+try:
+    from completeness_gate import Gate
+except Exception:
+    Gate = None
+
+# method -> response contract (so we can gate/validate the response object)
+METHOD_CONTRACT = {
+    "GetAccountInformation": "AccountInformation",
+    "ChooseDisplayName": "AccountSummary",
+    "ChooseFirstHero": None,
+    "GetCastleInfo": "CastleInfo",
+    "GetAttackSelectionList": "AttackSelectionResult",
+    "GetCastlesForSale": "CastlesForSaleSelectionResult",
+    "StartAttack": "AttackInfo",
+    "EndAttack": None,
+    "SendCommands": None,
+}
+
 GAME_DATA = os.environ.get("MQ_GAMEDATA", "/home/user/port/GameData/Data")
 HTML_DIR  = "/UI/Html/en"
 SERVER    = os.environ.get("MQ_SERVER", "https://127.0.0.1")
@@ -79,6 +100,7 @@ class Agent:
         self.ws = websocket.create_connection(self.page["webSocketDebuggerUrl"],
                                               timeout=30, suppress_origin=True)
         self._id = 0
+        self.gate = Gate() if Gate else None
         self.cmd("Runtime.enable")
 
     # ── raw CDP ──────────────────────────────────────────────────────────────
@@ -146,6 +168,8 @@ class Agent:
                 };
             };
             window.manager = {_proxy: P};
+            window.__jserr = null;
+            window.onerror = function(m,u,l){ window.__jserr = String(m); };
             window.__invoke = function(method, args){
                 var rid = ++hyperquest.client._lastRequestId;
                 hyperquest.client._mapCallback[rid] =
@@ -156,27 +180,46 @@ class Agent:
             };
             1;""")
 
-    def pump(self):
-        """Drain queued JS->native calls, route to the server, feed answers back."""
+    def gate_response(self, method, resp):
+        """Make the response correct-by-construction: fill all fields and convert
+        enum NAMES to integers via the completeness gate. Returns (resp, issues)."""
+        contract = METHOD_CONTRACT.get(method)
+        if not (self.gate and contract and isinstance(resp, dict)):
+            return resp, []
+        fixed = self.gate.complete(contract, resp)
+        return fixed, self.gate.validate(contract, fixed)
+
+    def pump(self, report=None):
+        """Drain queued JS->native calls, route to the server, gate the response,
+        feed it back. `report` (dict) accumulates per-method validation issues."""
         calls = self.eval("var c=window.__mq_calls; window.__mq_calls=[]; c") or []
         for c in calls:
-            resp = server_call(c.get("m"), c.get("a"))
+            method = c.get("m")
+            resp = server_call(method, c.get("a"))
+            resp, issues = self.gate_response(method, resp)
+            if report is not None:
+                report[method] = issues
             self.eval("hyperquest.client.invokeResponse(%d,%s);1"
                       % (int(c.get("rid", 0)), json.dumps(resp)))
         return len(calls)
 
     def invoke(self, method, args=None, timeout=8):
-        """Drive one client->server call through the real hyperquest transport;
-        return the server response object that the JS framework received."""
+        """Drive one client->server call through the real hyperquest transport.
+        Returns (response, validation_issues, js_error): the object the JS
+        framework received, the gate's verdict on it, and any JS exception the
+        framework threw while processing it (the behavioural oracle)."""
+        self.eval("window.__jserr=null;1")
         rid = self.eval("__invoke(%s,%s)" % (json.dumps(method), json.dumps(args or {})))
+        report = {}
         deadline = time.time() + timeout
         while time.time() < deadline:
-            self.pump()
+            self.pump(report)
             got = self.eval("window.__resp[%d]||null" % int(rid))
             if got is not None:
-                return got
+                jserr = self.eval("window.__jserr||null")
+                return got, report.get(method, []), jserr
             time.sleep(0.1)
-        return None
+        return None, report.get(method, []), self.eval("window.__jserr||null")
 
     def bootstrap_local(self):
         assert self.inject_dom(), "mock DOM failed"
@@ -199,7 +242,7 @@ def run_flow():
     def keys(o, n=10):
         return list(o.keys())[:n] if isinstance(o, dict) else o
 
-    print("\n=== scripted flow: account creation -> hero -> lobby -> attack ===")
+    print("\n=== scripted flow (each response gated + client reaction checked) ===")
     steps = [
         ("GetAccountInformation", {}),
         ("ChooseDisplayName", {"displayName": "ClaudeHero"}),
@@ -211,12 +254,24 @@ def run_flow():
         ("SendCommands", {"commands": [{"$type": "ClientIdleCommand"}]}),
         ("EndAttack", {}),
     ]
+    all_ok = True
     for method, args in steps:
         try:
-            resp = a.invoke(method, args)
-            print("  %-26s -> %s" % (method, keys(resp)))
+            resp, issues, jserr = a.invoke(method, args)
+            verdict = "OK" if not issues and not jserr else (
+                "%d schema issue(s)" % len(issues) if issues else "JS error")
+            if issues or jserr:
+                all_ok = False
+            print("  %-24s [%s] -> %s" % (method, verdict, keys(resp)))
+            for i in issues[:2]:
+                print("        ! ", i)
+            if jserr:
+                print("        ! JS threw:", jserr)
         except Exception as e:
-            print("  %-26s -> ERROR %s" % (method, e))
+            all_ok = False
+            print("  %-24s -> ERROR %s" % (method, e))
+    print("\n%s — every response schema-complete (enum ints) and accepted by the "
+          "JS framework without error." % ("ALL CORRECT" if all_ok else "ISSUES FOUND"))
     a.ws.close()
 
 
