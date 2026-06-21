@@ -373,3 +373,30 @@ actual game UI.
 `SendCommands`, `EndAttack` — each routed to the correct `/<Service>Service.hqs/<Method>`
 on the catalog server, every response received by the JS framework. That is the
 account-creation → hero → lobby → attack loop, scripted from Python.
+
+### 6. Stateful server + the agent as a correctness oracle
+`stub_server.py --tls --port 443` (start_stateful_server.sh) is the single
+self-hostable backend for both the game client and the agent: stateful
+(`ChooseDisplayName` persists; `GetAccountInformation` reflects it), wraps the
+real `{"Result":...}` envelope, and runs every response through the completeness
+gate (enum names -> integers). The CDP agent unwraps the envelope, gates each
+response, and watches the JS framework for exceptions, so correctness is
+*measured per call*. Verified: the scripted flow runs, and a fresh
+`GetAccountInformation` after `ChooseDisplayName('ClaudeHero')` returns
+`DisplayName='ClaudeHero'` (state round-trip), with 8/9 responses fully
+schema-clean and the gate naming the 2 server-only enums it cannot resolve.
+
+### How we know responses are correct (and the enum-integer boundary)
+- **Shape**: gate, derived from the client's own deserializer (exact).
+- **Codec**: validate_codec.py round-trips both directions (2/2).
+- **Routing/envelope**: matched against the captured session (trace.jsonl).
+- **Behaviour**: the agent observes the JS framework's reaction (the silent-default
+  oracle).
+- **Enum integers**: recovered exactly for the 65 UI/dialogue enums from the
+  client's own `hyperquest.enums.*` (extract_enum_ints.py); the gate auto-converts
+  them. ~34 values in server-only enums (e.g. CastleRenovationLevel,
+  Guild.Rank/CreatureRank, NotificationType) are NOT in the client JS, and the
+  binary stores no simple enum->string table (pointer-array scan: 0/65;
+  .rdata-offset order: only 22/65) — so we **flag** them precisely rather than
+  ship an unvalidated guess (a wrong integer would re-introduce the silent-default
+  bug). Closing these needs per-enum analysis of the binary's serializer code.

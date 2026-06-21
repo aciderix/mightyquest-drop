@@ -181,12 +181,15 @@ class Agent:
             1;""")
 
     def gate_response(self, method, resp):
-        """Make the response correct-by-construction: fill all fields and convert
-        enum NAMES to integers via the completeness gate. Returns (resp, issues)."""
+        """Make the response correct-by-construction: unwrap the {"Result":...}
+        envelope, fill all fields and convert enum NAMES to integers via the
+        completeness gate. Returns (object_for_js, issues)."""
+        # the real protocol wraps reads as {"Result": contract, "Notifications":[...]}
+        inner = resp.get("Result", resp) if isinstance(resp, dict) else resp
         contract = METHOD_CONTRACT.get(method)
-        if not (self.gate and contract and isinstance(resp, dict)):
-            return resp, []
-        fixed = self.gate.complete(contract, resp)
+        if not (self.gate and contract and isinstance(inner, dict)):
+            return inner, []
+        fixed = self.gate.complete(contract, inner)
         return fixed, self.gate.validate(contract, fixed)
 
     def pump(self, report=None):
@@ -195,12 +198,12 @@ class Agent:
         calls = self.eval("var c=window.__mq_calls; window.__mq_calls=[]; c") or []
         for c in calls:
             method = c.get("m")
-            resp = server_call(method, c.get("a"))
-            resp, issues = self.gate_response(method, resp)
+            raw = server_call(method, c.get("a"))
+            obj, issues = self.gate_response(method, raw)
             if report is not None:
                 report[method] = issues
             self.eval("hyperquest.client.invokeResponse(%d,%s);1"
-                      % (int(c.get("rid", 0)), json.dumps(resp)))
+                      % (int(c.get("rid", 0)), json.dumps(obj)))
         return len(calls)
 
     def invoke(self, method, args=None, timeout=8):
@@ -272,6 +275,13 @@ def run_flow():
             print("  %-24s -> ERROR %s" % (method, e))
     print("\n%s — every response schema-complete (enum ints) and accepted by the "
           "JS framework without error." % ("ALL CORRECT" if all_ok else "ISSUES FOUND"))
+
+    # statefulness: the name we just set must come back from a fresh read
+    print("\n=== stateful check: re-read account after ChooseDisplayName ===")
+    acc, _, _ = a.invoke("GetAccountInformation", {})
+    dn = acc.get("DisplayName") if isinstance(acc, dict) else None
+    print("  GetAccountInformation.DisplayName =", repr(dn),
+          "->", "PERSISTED ✓" if dn == "ClaudeHero" else "not reflected")
     a.ws.close()
 
 

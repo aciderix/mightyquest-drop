@@ -207,10 +207,28 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8080)
+    ap.add_argument("--tls", action="store_true",
+                    help="serve HTTPS using the MQEL CA/server cert (for the game's "
+                         "curl, which needs TLS on :443 to gs.themightyquest.com)")
+    ap.add_argument("--cert"); ap.add_argument("--key")
     a = ap.parse_args()
     srv = ThreadingHTTPServer((a.host, a.port), Handler)
-    print(f"[+] MQEL stub on http://{a.host}:{a.port}  ({len(EXAMPLES)} contract examples)")
-    print(f"[+] routing /<Service>Service.hqs/<Method>; state {STATE_PATH}; log {LOG_PATH}")
+    scheme = "http"
+    if a.tls:
+        import ssl
+        cert, key = a.cert, a.key
+        if not (cert and key):
+            # reuse the launcher's two-level PKI so the game (and ca.pem) trust us
+            import mqel_launcher as L
+            cert, key, _ = L.ensure_certs()
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        ctx.load_cert_chain(cert, key)
+        ctx.minimum_version = ssl.TLSVersion.TLSv1     # 2013 client
+        ctx.maximum_version = ssl.TLSVersion.TLSv1_2
+        srv.socket = ctx.wrap_socket(srv.socket, server_side=True)
+        scheme = "https"
+    print(f"[+] MQEL stub on {scheme}://{a.host}:{a.port}  ({len(EXAMPLES)} contract examples)")
+    print(f"[+] stateful routing /<Service>Service.hqs/<Method>; state {STATE_PATH}; log {LOG_PATH}")
     try: srv.serve_forever()
     except KeyboardInterrupt: print("\n[+] stopped")
 
