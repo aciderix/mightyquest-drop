@@ -334,3 +334,33 @@ scripts never ran.
   host or Wine with a real GPU**, the renderer works and the same server + the
   planned injected-JS control agent (`hyperquest.controller.*`) drive the UI.
   The Wine-specific crash/SSL patches are not even needed on native Windows.
+
+### 5. CDP control agent — Python drives the hyperquest framework (WORKING)
+Launching with `--remote-debugging-port=9222 --no-sandbox --disable-gpu
+--disable-3d-apis --disable-web-security` (multi-process; `--single-process`
+hurts under Wine) exposes a working Chrome DevTools Protocol endpoint. The
+renderer never navigates (pages stay `about:blank`, and `Page.navigate` *crashes*
+the GPU/Wine render path), and the native `manager._proxy` bridge is never bound
+in that blank context — but V8 itself works, so we drive it from Python.
+
+`cdp/agent.py` (deps: websocket-client, requests):
+- **Step 1 — stable session:** hit `/json` exactly once, keep the WebSocket open
+  for the whole process (the old debug HTTP server wedges after heavy use).
+- **Step 2 — mock DOM:** inject the real `<body>` markup so the framework finds
+  `#main-lobby-panel` &c. **This makes all scripts load: 211 ok, 0 fail** (the 4
+  earlier failures were missing-DOM).
+- **inject framework:** all `<script src>` from `Index.html` eval'd in order →
+  `hyperquest`, `Facade`, `hyperquest.client` defined.
+- **Step 3 — Python transport bridge:** since `manager` (native) is absent and
+  Chromium's own net is broken under Wine, install a mock `manager._proxy` whose
+  methods queue calls; `pump()` drains them, POSTs to the local game server, and
+  feeds answers back via `hyperquest.client.invokeResponse`. Verified end to end:
+  JS `manager._proxy.GetAccountInformation({})` → our server → the JS framework
+  receives the full `AccountInformation` object.
+
+Modes: `Agent.has_native_bridge()` picks between **real-host control** (attach to
+the live game webview where `manager` is bound and the page is loaded) and the
+**in-container Python-transport** mode above. The architecture is the bot-control
+layer; in this headless container it runs as a Python-transported headless client
+against our server, and on a real Windows/GPU host it attaches to and drives the
+actual game UI.
