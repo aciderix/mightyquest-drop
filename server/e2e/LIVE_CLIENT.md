@@ -134,3 +134,18 @@ sequence); **server RESPONSES = informational** (their server's, not authoritati
 for field completeness). The `{Result/Notifications}` envelope is reliable because
 the real client accepted it. The capture starts post-login (first entry is an
 in-game `SendCommands`), so it does NOT contain the boot/login sequence.
+
+## Update: crash registers + Steam via DepotDownloader
+
+Crash 0x009CA2AF register dump (WINEDEBUG=+seh): `ecx=06401e18` (the glyph
+manager — a VALID object), `[ecx+0x80]=NULL` (its glyph table was never
+populated), `edx=fffffffb` (index = -1). So the font manager is constructed but
+its glyph table is empty under Wine → text layout looks up a glyph, misses (-1),
+and indexes the null table. Root cause needs a runtime backtrace of the
+font-package load (the manager exists; its table just never fills).
+
+Steam: `steamcmd` is blocked (EAFNOSUPPORT), but **DepotDownloader connects**
+(self-contained linux-x64 build, no dotnet needed) — it reaches Steam over
+WebSocket/443 (Steam api/cdn are reachable here). Login gets to Steam Guard 2FA;
+provide the emailed code to fetch a clean copy (app 239220) and rule out / fix
+any missing bigfiles.
