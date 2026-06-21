@@ -197,3 +197,37 @@ at the font loader specifically.
 
 Artifacts: `binkstub/stub.c` (the VEH + bink-skip), `binkstub/initfonts_crash.dmp`
 (the minidump with the glyph-manager backtrace).
+
+## Evaluated external suggestions (ChatGPT/Gemini) — results
+
+1. **Dummy glyph with width>0 (not 0)** — tried: VEH special-cased the glyph
+   advance-getter `0x9CA2AF` to return 12 instead of 0. Did NOT unblock: the
+   stall is not the word-wrap advance loop; the game still freezes mid
+   GameplaySettings (the loading-screen render thread spins on the VEH-handled
+   faults and starves the boot/script thread).
+2. **WineD3D instead of DXVK** — NOT possible in this container: this Wine cannot
+   load a builtin `d3d9` (`import_dll d3d9.dll not found`, status c0000135), with
+   or without copying its `i386-windows/d3d9.dll` into the prefix. DXVK is the
+   only `d3d9` that loads, so WineD3D's GDI/texture path can't be tested here.
+3. **winetricks corefonts / tahoma / gdiplus** — corefonts installed, no effect.
+   The UI fonts are the game's own baked bitmap atlases (Opal objects in
+   `PACKAGE_3236A0AB_AI739.BFPC`, verified by unpacking) — NOT Windows GDI fonts —
+   so GDI/GDI+ font generation is not on this path.
+4. **WINEDEBUG=+d3d / DXVK info log** — done: DXVK initialises cleanly (v1.10.3,
+   BC compression + needed formats present) and reports NO texture-creation
+   failure through the font-load point (MQLog 979). So the atlas isn't failing a
+   format check; the glyph manager's table is null because the font isn't
+   registered/loaded when the loading panel renders text (a load-order/lookup
+   issue under Wine), not an obvious texture error.
+5. **Xvfb / Device Context** — already in use (all runs are under Xvfb).
+6. **Case sensitivity** — the font data is read from the BFPC bigfile by exact
+   internal name (other packages load fine), not from loose case-sensitive files.
+7. **Real GPU (virgl/passthrough/NVIDIA) or Windows VM** — the correct fallback,
+   but unavailable in this GPU-less container (software Vulkan/lavapipe only).
+
+Net: every in-container avenue is exhausted. The blocker is the engine's glyph
+manager being empty when the loading screen renders, under headless software
+Wine; it crashes (unguarded) or stalls (guarded). A real-GPU host or Windows is
+required to validate the live UI; everything else (boot recipe, bink-skip, DXVK,
+VEH, minidump backtrace, the entire server-correctness toolchain) is done and
+committed.
