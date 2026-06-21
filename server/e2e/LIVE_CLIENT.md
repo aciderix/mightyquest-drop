@@ -149,3 +149,19 @@ Steam: `steamcmd` is blocked (EAFNOSUPPORT), but **DepotDownloader connects**
 WebSocket/443 (Steam api/cdn are reachable here). Login gets to Steam Guard 2FA;
 provide the emailed code to fetch a clean copy (app 239220) and rule out / fix
 any missing bigfiles.
+
+## DEFINITIVE: GitHub copy is complete; crash is purely Wine
+
+Downloaded a pristine copy via **DepotDownloader** (app 239220, depots 239221 +
+239222, 1.4 GB) — it connects over WebSocket/443 where steamcmd fails
+(EAFNOSUPPORT). Comparison vs the repo's game copy:
+- 0 files present in the clean copy but missing from the repo copy.
+- 52/52 BFPC bigfiles match; `MightyQuest.exe`, `PACKAGE_3236A0AB_AI739.BFPC`
+  (UI fonts), `settings.bin`, `libcef.dll` are **byte-identical (SHA256)**.
+
+So the data is complete and correct. The 0x009CA2AF InitFonts crash is **purely a
+Wine compatibility issue** (the glyph manager exists but its table never fills
+under Wine — most likely a load-order/timing difference, since data + parsing are
+identical to a working install). A clean copy does not change it. Path forward:
+a winedbg backtrace of the font load, a different Wine build/config, or running on
+real Windows / a GPU host (where this user's install previously reached the game).
