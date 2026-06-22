@@ -270,7 +270,8 @@ class CommandBus:
                 "AggroPropagationOffsetX": cmd.get("AggroPropagationOffsetX", 0),
                 "AggroPropagationOffsetZ": cmd.get("AggroPropagationOffsetZ", 0),
                 "TotemCastleBuildableId": cmd.get("TotemCastleBuildableId", 0)})
-            c["construction_used"] = min(c["construction_max"], c["construction_used"] + 10)
+            cost = ECO.creature_cp(cmd.get("SkuCode"))   # real per-creature construction cost
+            c["construction_used"] = min(c["construction_max"], c["construction_used"] + cost)
             return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
 
         if name in ("RemoveCastleRoomCommand", "UpdateCastleCreatureCommand"):

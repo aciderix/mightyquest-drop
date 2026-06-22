@@ -394,6 +394,7 @@ def ep_end_attack(req, acc):
 
     # PvP: record the defend log on the rival + adjust trophies (server-authoritative)
     pvp = (acc or {}).get("current_pvp")
+    pvp_rooms = None
     if acc and pvp and won:
         rival = next((a for a in STATE.data["accounts"].values()
                       if a.get("AccountId") == pvp), None)
@@ -406,6 +407,7 @@ def ep_end_attack(req, acc):
             rival.setdefault("defend_log", []).insert(0, entry)
             acc["trophy"] = acc.get("trophy", 0) + 10        # winner gains trophies
             rival["trophy"] = max(0, rival.get("trophy", 0) - 5)
+            pvp_rooms = [{"Creatures": (rival.get("castle") or {}).get("creatures", [])}]
     if acc:
         acc["current_pvp"] = None
 
@@ -426,7 +428,14 @@ def ep_end_attack(req, acc):
         return {"Result": info}
 
     reward = cas.get("CustomAttackerReward") or {}
-    gold, lifeforce, xp = 50 * level, 10 * level, 25 * level
+    # REAL loot: sum each killed creature's catalog loot/xp over the actual castle
+    # (PvP -> rival's placed creatures, PvE -> the catalog castle). Server-summed,
+    # so the player can never loot more than the castle contains (anti-cheat).
+    rooms = pvp_rooms if pvp_rooms is not None else (cas.get("Rooms") if has_cas else [])
+    g_sum, xp_sum = ECO.castle_rewards(rooms)
+    gold = g_sum or 10 * max(1, level)        # fallback only if nothing summable
+    xp = xp_sum or 10 * max(1, level)
+    lifeforce = max(1, gold // 3)
     STATE.award(acc, gold=gold, lifeforce=lifeforce)
     notifs = [contract("WalletUpdatedNotification", Index=0, NotificationType=24, Amounts=[
         {"Amount": gold, "CurrencyType": 2},        # IGC (gold)

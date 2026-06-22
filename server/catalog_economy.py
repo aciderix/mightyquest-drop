@@ -160,6 +160,43 @@ def sku_price(code, default=0):
            int((s or {}).get("Price", {}).get("CurrencyType", 2))
 
 
+# ── per-creature values (SpecContainerId == Creatures catalog id, direct map) ─
+def _creature_field(spec_id, key, default=0):
+    if not CAT.has("Creatures", spec_id):
+        return default
+    g = CAT.get("Creatures", spec_id).get("GAMEPLAY", [])
+    for comp in (g if isinstance(g, list) else []):
+        if isinstance(comp, dict) and key in comp:
+            return comp[key]
+    return default
+
+
+def creature_loot(spec_id):
+    """Per-creature loot base (HealthOrbFragmentsLootBase) -- scales with strength."""
+    return max(0, _creature_field(spec_id, "HealthOrbFragmentsLootBase", 0))
+
+
+def creature_cp(spec_id):
+    """Real construction-point cost to place this creature."""
+    return max(1, _creature_field(spec_id, "ConstructionPoints", 1))
+
+
+def creature_xp(spec_id):
+    return max(0, _creature_field(spec_id, "BuildXp", 0))
+
+
+def castle_rewards(rooms):
+    """Sum the REAL per-creature loot/xp over a castle's placed creatures.
+    Server-authoritative (the player can never get more than the castle contains)."""
+    gold = xp = 0
+    for room in (rooms or []):
+        for cr in (room.get("Creatures") or []):
+            sid = cr.get("SpecContainerId")
+            gold += creature_loot(sid)
+            xp += creature_xp(sid)
+    return gold, xp
+
+
 # ── buildings (CastleHeart construction cap, mine production) — real per rank ─
 _BUILDINGS = {CAT.name("Buildings", i): _g("Buildings", i) for i in CAT.ids("Buildings")}
 
