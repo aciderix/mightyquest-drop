@@ -310,22 +310,39 @@ def ep_get_castles_for_sale(req, acc):
     return res
 
 
+# AttackCompletionType (client JS enum): TreasureRoom=0 Retry=1 Exit=2 Escape=3 Incomplete=4
+COMPLETION = {"TreasureRoom": 0, "Retry": 1, "Exit": 2, "Escape": 3, "Incomplete": 4}
+
+
 def ep_end_attack(req, acc):
-    """The loot loop: a won attack pays gold/life force scaled to the castle level
-    and drops the castle's real reward -- honoring the scripted CustomAttackerReward
-    (per-hero item, or DisableItemDrop) when the attacked castle defines one."""
+    """End of attack. ALWAYS returns a real EndAttackInfo (so the client navigates
+    correctly even on escape/defeat -- never the empty {} that broke the post-combat
+    state). On a clean win it also pays the loot and emits the reward notifications,
+    honoring the castle's scripted CustomAttackerReward."""
     body = req.json or {}
+    completion = body.get("completionType", body.get("CompletionType", "TreasureRoom"))
     won = body.get("victory", body.get("Victory", True)) and \
-          body.get("completionType", "TreasureRoom") != "Escape"
-    if not (acc and won):
-        return {}
-    cid = acc.get("current_attack")
+          completion not in ("Escape", "Exit", "Incomplete")
+    comp_int = COMPLETION.get(completion, 0 if won else COMPLETION["Escape"])
+
+    cid = (acc or {}).get("current_attack")
     has_cas = bool(cid and CAT.has("Castles", cid))
     cas = CAT.get("Castles", cid) if has_cas else {}
     level = _castle_level(CAT.name("Castles", cid)) if has_cas else 1
-    reward = cas.get("CustomAttackerReward") or {}
+    hero_level = (((acc or {}).get("heroes") or [{}])[0] or {}).get("Level", 1)
 
-    gold, lifeforce = 50 * level, 10 * level
+    if not (acc and won):
+        # defeat / escape: no reward, but a complete EndAttackInfo for clean nav
+        info = contract("EndAttackInfo", CompletionType=comp_int,
+                        IsCompletionRewardMissed=True, EnterTreasureRoom=False,
+                        TotalGold=0, TotalLifeForce=0, TotalXp=0,
+                        DefenderCastleId=cid or 0,
+                        DefenderCastleType=cas.get("CastleType", 1) if has_cas else 1,
+                        HeroLevel=hero_level, VictoryConditionType=0)
+        return {"Result": info}
+
+    reward = cas.get("CustomAttackerReward") or {}
+    gold, lifeforce, xp = 50 * level, 10 * level, 25 * level
     STATE.award(acc, gold=gold, lifeforce=lifeforce)
     notifs = [contract("WalletUpdatedNotification", Index=0, NotificationType=24, Amounts=[
         {"Amount": gold, "CurrencyType": 2},        # IGC (gold)
@@ -334,16 +351,22 @@ def ep_end_attack(req, acc):
     idx = 1
     if not reward.get("DisableItemDrop"):
         item = None
-        # scripted per-hero reward (tutorial castles give a specific equipment piece)
         hero_key = str(acc.get("selected_hero", 2))
         for loot in reward.get("CustomLoots", []):
             phi = loot.get("PerHeroItem") or {}
             if phi.get(hero_key):
                 item = _add_item(acc, phi[hero_key][0]); break
-        if item is None:                              # otherwise a normal drop
+        if item is None:
             item = STATE.award(acc, item_template=1001)
         notifs.append(contract("HeroInventoryAddedNotification", Index=idx, NewlyAdded=item))
-    return {"Notifications": notifs}
+
+    info = contract("EndAttackInfo", CompletionType=comp_int, IsCompletionRewardMissed=False,
+                    EnterTreasureRoom=True, DefenderCastleId=cid or 0,
+                    DefenderCastleType=cas.get("CastleType", 1) if has_cas else 1,
+                    HeroLevel=hero_level, VictoryConditionType=3, VictoryConditionLevel=1,
+                    TotalGold=gold, KillsGold=gold, TotalLifeForce=lifeforce,
+                    KillsLifeForce=lifeforce, TotalXp=xp, KillsXp=xp)
+    return {"Result": info, "Notifications": notifs}
 
 
 # method name -> handler(req, acc) ; default below serves a matching example
