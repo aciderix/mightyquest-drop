@@ -182,6 +182,30 @@ DEFAULT_ACCOUNT = CAT.get("AccountTemplates", CAT.find_one("AccountTemplates", "
 _LVL_RE = re.compile(r"PVE_(\d+)_")
 
 
+def _find_key(o, key):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k == key:
+                return v
+            r = _find_key(v, key)
+            if r is not None:
+                return r
+    elif isinstance(o, list):
+        for x in o:
+            r = _find_key(x, key)
+            if r is not None:
+                return r
+    return None
+
+
+# real hero XP curve (cumulative thresholds) from GeneralSettings/HEROSETTINGS
+XP_PER_LEVEL = _find_key(CAT.get("GeneralSettings", "HEROSETTINGS"), "XpPerLevel") or [0]
+
+
+def level_for_xp(total):
+    return max(1, sum(1 for th in XP_PER_LEVEL if total >= th))
+
+
 def build_hero(template_id):
     """Build a Hero from the real HeroTemplate. Real lists/objects (Equipment,
     EquippedSpells, EquippedConsumables) are set after the gate so they survive."""
@@ -361,7 +385,19 @@ def ep_end_attack(req, acc):
                 item = _add_item(acc, phi[hero_key][0]); break
         if item is None:
             item = STATE.award(acc, item_template=1001)
-        notifs.append(contract("HeroInventoryAddedNotification", Index=idx, NewlyAdded=item))
+        notifs.append(contract("HeroInventoryAddedNotification", Index=idx, NewlyAdded=item)); idx += 1
+
+    # hero progression: the win grants XP; crossing a threshold levels the hero up
+    hero = (acc.get("heroes") or [None])[0]
+    if hero is not None:
+        old_lvl = hero.get("Level", 1)
+        hero["XP"] = hero.get("XP", 0) + xp
+        hero["Level"] = level_for_xp(hero["XP"])
+        STATE.save()
+        notifs.append(contract("HeroXpChangedNotification", Index=idx,
+                               HeroSpecContainerId=hero.get("HeroSpecContainerId", 0),
+                               Level=hero["Level"], LevelChanged=(hero["Level"] > old_lvl),
+                               TotalXp=hero["XP"], XpAdded=xp))
 
     info = contract("EndAttackInfo", CompletionType=comp_int, IsCompletionRewardMissed=False,
                     EnterTreasureRoom=True, DefenderCastleId=cid or 0,
