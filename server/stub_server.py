@@ -92,7 +92,12 @@ class State:
             acc = self.data["accounts"].get(identity)
             if not acc:
                 aid = self.data["next_id"]; self.data["next_id"] += 1
-                acc = {"AccountId": aid, "DisplayName": "", "Privileges": 9}
+                acc = {"AccountId": aid, "DisplayName": "", "Privileges": 9,
+                       # the loot economy lives here, persisted across requests
+                       "wallet": {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
+                                  "InGameCoinStorageCapacity": 100000,
+                                  "LifeForceStorageCapacity": 100000},
+                       "items": [], "next_item": 1}
                 self.data["accounts"][identity] = acc
             token = f"tok-{acc['AccountId']}-{os.urandom(4).hex()}"
             self.data["sessions"][token] = acc["AccountId"]
@@ -102,6 +107,22 @@ class State:
         aid = self.data["sessions"].get(token)
         return next((a for a in self.data["accounts"].values() if a["AccountId"] == aid), None)
 
+    def award(self, acc, gold=0, lifeforce=0, item_template=None):
+        """Apply attack rewards to an account and persist them."""
+        with self.lock:
+            acc.setdefault("wallet", {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
+                                      "InGameCoinStorageCapacity": 100000,
+                                      "LifeForceStorageCapacity": 100000})
+            acc["wallet"]["InGameCoin"] += gold
+            acc["wallet"]["LifeForce"] += lifeforce
+            new_item = None
+            if item_template is not None:
+                iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+                new_item = {"ExpirableId": f"item-{iid}", "TemplateId": item_template,
+                            "AcquisitionDate": now(), "SellPrice": 50}
+                acc.setdefault("items", []).append(new_item)
+            self.save(); return new_item
+
 
 STATE = State(STATE_PATH)
 
@@ -109,8 +130,15 @@ STATE = State(STATE_PATH)
 # ---- game endpoints (/<Service>Service.hqs/<Method>) ------------------------
 def ep_account_information(req, acc):
     # Privileges must be 9 for a new account or hero-selection never shows.
-    return contract("AccountInformation", AccountId=(acc or {}).get("AccountId", 1),
-                    DisplayName=(acc or {}).get("DisplayName", ""), Privileges=9)
+    acc = acc or {}
+    wallet = acc.get("wallet", {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
+                                "InGameCoinStorageCapacity": 100000,
+                                "LifeForceStorageCapacity": 100000})
+    inv = contract("AccountInventory")
+    inv["HeroItems"] = acc.get("items", [])      # reflect looted items
+    return contract("AccountInformation", AccountId=acc.get("AccountId", 1),
+                    DisplayName=acc.get("DisplayName", ""), Privileges=9,
+                    Wallet=wallet, Inventory=inv)
 
 
 def ep_choose_display_name(req, acc):
@@ -120,6 +148,24 @@ def ep_choose_display_name(req, acc):
     return contract("AccountSummary", AccountId=(acc or {}).get("AccountId", 1), DisplayName=name)
 
 
+def ep_end_attack(req, acc):
+    """The loot loop: a won attack pays gold + life force and drops one item.
+    Returns the reward notifications the real server emits (Wallet + inventory)."""
+    body = req.json or {}
+    won = body.get("victory", body.get("Victory", True)) and \
+          body.get("completionType", "TreasureRoom") != "Escape"
+    if not (acc and won):
+        return {}
+    item = STATE.award(acc, gold=100, lifeforce=25, item_template=1001)
+    notifs = [
+        contract("WalletUpdatedNotification", Index=0, NotificationType=24, Amounts=[
+            {"Amount": 100, "CurrencyType": 2},    # IGC (gold)
+            {"Amount": 25,  "CurrencyType": 4}]),  # LifeForce
+        contract("HeroInventoryAddedNotification", Index=1, NewlyAdded=item),
+    ]
+    return {"Notifications": notifs}
+
+
 # method name -> handler(req, acc) ; default below serves a matching example
 ENDPOINTS = {
     "GetAccountInformation": ep_account_information,
@@ -127,7 +173,7 @@ ENDPOINTS = {
     "GetAttackSelectionList": lambda r, a: contract("AttackSelectionResult"),
     "GetCastleInfo":          lambda r, a: contract("CastleInfo"),
     "StartAttack":            lambda r, a: contract("AttackInfo"),
-    "EndAttack":              lambda r, a: {},
+    "EndAttack":              ep_end_attack,
     "GetCastlesForSale":      lambda r, a: contract("CastlesForSaleSelectionResult"),
     "ChooseFirstHero":        lambda r, a: {},          # response contract TBD
     "SendCommands":           lambda r, a: BUS.handle(r.json),  # command bus -> notifications
