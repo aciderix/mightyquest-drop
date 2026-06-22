@@ -14,26 +14,36 @@ Ce qui **n'est pas** « parfait » :
    le moteur natif (déclenché par l'UI rendue) ; sous Wine la CEF ne peint pas et
    n'exécute pas le JS de page, et il n'y a pas de GPU. Le *protocole* et le
    *contenu* de combat sont câblés/lisibles, mais faire tourner la sim demande un
-   hôte Windows/GPU. (Voir « Combat 3D » plus bas.)
-2. **Les CHIFFRES de balance ne sont pas bit-exacts à l'original.** Le serveur
-   Ubisoft est mort et n'a jamais été capturé → **aucun oracle**. Les valeurs que le
-   serveur calcule lui-même (or par mine = 200, coût de craft par défaut, coût de
-   construction = 10/créature, loot victoire = 50×niveau, etc.) sont **plausibles et
-   cohérentes**, pas garanties identiques au jeu d'origine. Les valeurs *dérivées du
-   client* (niveaux de créatures, stats, courbe d'XP) sont, elles, calculées par le
-   client à partir de la gamedata réelle → justes.
-3. **Routing commande→notification : forme exacte, edges parfois heuristiques.** La
+   hôte Windows/GPU. (Voir « Combat 3D » plus bas.) **→ seule limite majeure restante.**
+2. **Routing commande→notification : forme exacte, edges parfois heuristiques.** La
    *forme* de chaque notification est exacte (schémas) ; le fait que le vrai serveur
-   émettait *exactement* ces notifications-là n'est pas confirmé octet-par-octet pour
-   toutes les commandes.
-4. **Services lecture-seule au-delà de guilde/ami/news** (leaderboard, shop détaillé,
-   messaging…) : renvoient un **exemple schéma-complet** (sûr), pas une logique
-   stateful dédiée.
-5. **Sémantique d'équipement simplifiée** (slots par clé string), pas de validation
-   anti-triche de combat.
+   émettait *exactement* ces notifications-là (type/ordre/`NotificationType`) n'est
+   pas confirmé octet-par-octet. Impact : transitoire et **auto-réparé** par la
+   relecture de `GetAccountInformation` (autoritatif) ; seul l'entier
+   `NotificationType` est purement visuel (catégorie d'icône/son).
+3. **Quelques montants encore level-scalés faute de mapping.** L'or/force-vitale de
+   victoire (50/10 × niveau) et le coût de construction (10) restent des barèmes,
+   car le mapping `SpecContainerId → spec créature` n'est pas dans le catalogue
+   reversé (donc pas la valeur d'or exacte par créature). **Tout le reste de
+   l'économie est sourcé catalogue** (prix de vente, qualité/rareté de drop, stats
+   d'objets, courbe d'XP, prix shop).
 
-Autrement dit : **structurellement complet et vérifié, gameplay sain et cohérent,
-mais pas un clone bit-exact de l'économie d'origine** (impossible sans l'original).
+### Levé depuis la v1 de ce document (désormais réel + vérifié)
+- **Économie sourcée catalogue** (`catalog_economy.py`) : prix de vente
+  (HEROITEMSELLSETTINGS), qualité/rareté de drop (ATTACKERREWARDSETTINGS +
+  EQUIPMENTGENERATIONSETTINGS), **stats d'objets réelles** (MagicalProperties),
+  prix shop (ShopSettings). XP déjà sourcé (XpPerLevel).
+- **Stats d'équipement réelles** : équiper recalcule `HeroStatModifier` = somme des
+  propriétés magiques des objets équipés.
+- **Anti-triche loot** : le serveur calcule le butin lui-même (ne fait jamais
+  confiance aux montants client) → intrinsèquement plafonné.
+- **Services « vivants »** : shop (SKUs réels), classement (trophées), journal de
+  défense (PvP enregistré). Reste lecture-seule/exemple : messaging, profil détaillé,
+  replay (peu critiques).
+
+Autrement dit : **structurellement complet, économie/stats sourcées catalogue et
+vérifiées, services principaux vivants.** Restent : la sim 3D (hôte GPU) et quelques
+barèmes faute de mapping créature.
 
 ## Vérification (commandes reproductibles)
 
@@ -43,9 +53,9 @@ python3 gameplay_catalog.py          # catalogue: 2538 entrées, 0 erreur
 python3 command_notifications.py --table   # 43 stateful, 10 no-op, 0 unknown / 53
 # serveur + test complet:
 python3 stub_server.py --host 127.0.0.1 --port 443 --tls &
-python3 e2e/full_game_test.py        # 48/48 checks (réseau, TLS)
+python3 e2e/full_game_test.py        # 53/53 checks (réseau, TLS)
 ```
-État au dernier run : catalogue 2538/2538, commandes 0 unknown, jeu **48/48 verts**.
+État au dernier run : catalogue 2538/2538, commandes 0 unknown, jeu **53/53 verts**.
 
 Vérif côté client live (CEF via CDP, nécessite le client lancé, cf. LIVE_CLIENT.md) :
 ```bash
@@ -61,6 +71,7 @@ stub_server.py        serveur HTTP/TLS ; route /<Service>Service.hqs/<Method>
  ├─ gameplay_catalog.py   indexe le catalogue déchiffré (catalog/GameplaySettings)
  ├─ completeness_gate.py  remplit chaque réponse (schéma-complet, enums->entiers)
  ├─ command_notifications.py  bus SendCommands STATEFUL (mute l'état + notifs réelles)
+ ├─ catalog_economy.py    formules réelles (vente/drop/stats d'objets/shop) du catalogue
  └─ State (state.json)    comptes, héros, château, social — persistant
 ```
 
