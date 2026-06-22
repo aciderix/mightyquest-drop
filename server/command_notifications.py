@@ -296,15 +296,20 @@ class CommandBus:
             hero = self._hero(acc); items = acc.setdefault("items", [])
             slot = str(cmd.get("DestinationSlot", "MainHand"))
             src = cmd.get("SourceSlotId")
-            item = items.pop(src) if isinstance(src, int) and 0 <= src < len(items) else (
-                items.pop() if items else None)
-            if hero is not None and item is not None:
-                eq = hero.setdefault("Equipment", {})
-                prev = eq.get(slot)
-                eq[slot] = item
-                if prev:
-                    items.append(prev)          # swap the old piece back to the bag
-                hero["HeroStatModifier"] = ECO.hero_equipped_stats(hero)  # real stats
+            si = src if isinstance(src, int) and 0 <= src < len(items) else (len(items) - 1 if items else -1)
+            if hero is None or si < 0:
+                return [self.build("HeroEquipmentEquipNotification", idx)]
+            item = items[si]
+            ok, _reason = ECO.can_equip(slot, item.get("TemplateId"), hero.get("Level", 1))
+            if not ok:
+                return []                       # incompatible/level too low -> rejected, no mutation
+            items.pop(si)
+            eq = hero.setdefault("Equipment", {})
+            prev = eq.get(slot)
+            eq[slot] = item
+            if prev:
+                items.append(prev)              # swap the old piece back to the bag
+            hero["HeroStatModifier"] = ECO.hero_equipped_stats(hero)  # real stats
             return [self.build("HeroEquipmentEquipNotification", idx)]
 
         if name == "HeroEquipmentUnequipCommand":

@@ -153,10 +153,17 @@ def main():
     g, n = W(), N(); cmd("ForgeCraftCommand", ClientPrice=100, SkuCode=55)
     chk("forge: -100 or + objet produit", W() == g - 100 and N() == n + 1)
 
-    print("15. Equipement (gear)")
-    n = N(); cmd("HeroEquipmentEquipCommand", DestinationSlot="MainHand", SourceSlotId=0)
-    chk("equip: slot MainHand rempli + -1 sac",
+    print("15. Equipement (gear) + validation slot/niveau")
+    cmd("ForgeCraftCommand", ClientPrice=10, SkuCode=1, ItemLevel=1)  # arme (template 1 = Weapon)
+    wi = len(acc()["Inventory"]["HeroItems"]) - 1; n = N()
+    cmd("HeroEquipmentEquipCommand", DestinationSlot="MainHand", SourceSlotId=wi)
+    chk("equip arme -> MainHand (valide) + -1 sac",
         bool(acc()["Heroes"][0]["Equipment"].get("MainHand")) and N() == n - 1)
+    cmd("ForgeCraftCommand", ClientPrice=10, SkuCode=1, ItemLevel=1)
+    wi2 = len(acc()["Inventory"]["HeroItems"]) - 1; n2 = N()
+    cmd("HeroEquipmentEquipCommand", DestinationSlot="Head", SourceSlotId=wi2)  # arme dans casque
+    chk("equip arme -> Head (Helm) REJETE (slot vide, sac inchange)",
+        not acc()["Heroes"][0]["Equipment"].get("Head") and N() == n2)
     cmd("HeroEquipmentUnequipCommand", SourceSlotId="MainHand")
     chk("unequip: MainHand vide", not acc()["Heroes"][0]["Equipment"].get("MainHand"))
 

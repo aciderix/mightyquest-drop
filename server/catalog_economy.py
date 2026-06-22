@@ -59,6 +59,32 @@ def sell_price(template_id, quality="Basic", rarity="Common"):
     return max(1, round(base * qm * rm))
 
 
+# ── equip validation (slot<->category + level requirement) ──────────────────
+# Equipment slots (Hero.Equipment contract) -> the item category each accepts.
+SLOT_CATEGORY = {
+    "Head": "Helm", "Shoulders": "ShoulderArmor", "Body": "SuitOfArmor",
+    "Hands": "Gloves", "MainHand": "Weapon", "OffHand": "Weapon",
+    "Neck": "Necklace", "Finger1": "Ring", "Finger2": "Ring", "Back": "Capes",
+}
+
+
+def item_level_min(template_id):
+    return _TEMPLATES.get(template_id, {}).get("LevelMin", 1)
+
+
+def can_equip(slot, template_id, hero_level):
+    """Return (ok, reason): the item's category must fit the slot, and the hero
+    must meet the item's LevelMin. Both come from the catalog."""
+    cat = category_of(template_id)
+    want = SLOT_CATEGORY.get(slot)
+    if want and cat and cat != want:
+        return False, f"{cat} ne va pas dans le slot {slot} (attend {want})"
+    need = item_level_min(template_id)
+    if hero_level < need:
+        return False, f"niveau {need} requis (heros niveau {hero_level})"
+    return True, "ok"
+
+
 # ── quality roll (ATTACKERREWARDSETTINGS frequencies, level-gated) ───────────
 def _quality_freq(level):
     for band in _REWARD.get("ItemDropByType", {}).get("User", []):
