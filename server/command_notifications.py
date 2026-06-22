@@ -115,6 +115,26 @@ CURATED = {
 class CommandBus:
     TYPE_RE = re.compile(r"\.([A-Za-z0-9_]+),")   # "...Contracts.BuyCommand, ..." -> BuyCommand
 
+    # commands with a real stateful handler in _apply (mutate account + emit real values)
+    STATEFUL = {
+        "BuyCommand", "BuyHeroItemCommand", "BuyConsumableCommand", "SellHeroItemCommand",
+        "HeroEquipSpellCommand", "HeroUnequipSpellCommand", "HeroEquipmentEquipCommand",
+        "HeroEquipmentUnequipCommand", "HeroEquipConsumableCommand", "SelectHeroCommand",
+        "CompleteAssignmentCommand", "AddCastleCreatureCommand", "RemoveCastleRoomCommand",
+        "UpdateCastleCreatureCommand", "BuildCommand", "UpgradeBuildingCommand",
+        "ValidateCastleCommand", "InventoryMoveItemCommand", "InventorySwapItemCommand",
+        "ActivateConsumableCommand", "ActivateConsumableOnItemCommand", "ExpireExpirableCommand",
+        "BuyBackCommand", "ForgeCraftCommand", "ForgeUpgradeCommand", "ForgeReforgeCommand",
+        "HarvestMineBuildingCommand", "RestoreMinesBuildingCommand",
+        "UpgradeProductionMineBuildingCommand", "InboxCollectCommand",
+        "InboxCollectToHeroInventoryCommand", "InboxCollectToHeroEquipmentCommand",
+        "InboxCollectToBuyBackCommand", "AddCastleTrapCommand", "AddCastleTriggerCommand",
+        "UpdateCastleTrapCommand", "UpdateCastleTriggerCommand", "CastleBuildableCommand",
+        "ExecuteAssignmentActionCommand", "AddCastleInventoryItemCommand",
+        "BoostCastleInventoryItemCommand", "SellDefenseIngredientCommand", "SetAvatarCommand",
+        "HarvestHeroCorpseCommand",
+    }
+
     def __init__(self, gate=None):
         self.gate = gate or Gate()
         self.notif_types = {k for k in self.gate.schemas if k.endswith("Notification")}
@@ -482,6 +502,8 @@ class CommandBus:
         out = {}
         for c in cmds:
             notifs, conf = self.notifications_for(c)
+            if c in self.STATEFUL or "Publish" in c:
+                conf = "stateful"      # has a real mutating handler in _apply
             out[c] = {"notifications": notifs, "confidence": conf}
         return out
 
@@ -515,11 +537,14 @@ def main():
     if a.table:
         for c in sorted(tbl):
             v = tbl[c]
-            mark = {"exact": "  ", "heuristic": "~ ", "unknown": "? "}[v["confidence"]]
+            mark = {"stateful": "* ", "exact": "  ", "heuristic": "~ ",
+                    "unknown": "? "}.get(v["confidence"], "  ")
             print(f"{mark}{c:42s} -> {', '.join(v['notifications']) or '(none)'}")
-        print(f"\ncoverage: exact={len(by_conf.get('exact',[]))}  "
+        print(f"\ncoverage: stateful={len(by_conf.get('stateful',[]))}  "
+              f"exact={len(by_conf.get('exact',[]))}  "
               f"heuristic={len(by_conf.get('heuristic',[]))}  "
-              f"unknown={len(by_conf.get('unknown',[]))}  / {len(tbl)} commands")
+              f"unknown={len(by_conf.get('unknown',[]))}  / {len(tbl)} commands  "
+              f"(* = real mutating handler)")
         if by_conf.get("unknown"):
             print("unknown (returns {} — confirm against a real capture):")
             for c in sorted(by_conf["unknown"]):
