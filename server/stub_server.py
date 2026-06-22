@@ -94,11 +94,13 @@ class State:
             if not acc:
                 aid = self.data["next_id"]; self.data["next_id"] += 1
                 acc = {"AccountId": aid, "DisplayName": "", "Privileges": 9,
-                       # the loot economy lives here, persisted across requests
-                       "wallet": {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
+                       # the loot economy lives here, persisted across requests.
+                       # starting gold = DEFAULTACCOUNT.IGC (1000) from the catalog
+                       "wallet": {"InGameCoin": 1000, "LifeForce": 0, "PremiumCash": 0,
                                   "InGameCoinStorageCapacity": 100000,
                                   "LifeForceStorageCapacity": 100000},
-                       "items": [], "next_item": 1}
+                       "items": [], "next_item": 1,
+                       "heroes": [], "selected_hero": 0}
                 self.data["accounts"][identity] = acc
             token = f"tok-{acc['AccountId']}-{os.urandom(4).hex()}"
             self.data["sessions"][token] = acc["AccountId"]
@@ -132,14 +134,24 @@ STATE = State(STATE_PATH)
 def ep_account_information(req, acc):
     # Privileges must be 9 for a new account or hero-selection never shows.
     acc = acc or {}
-    wallet = acc.get("wallet", {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
+    wallet = acc.get("wallet", {"InGameCoin": 1000, "LifeForce": 0, "PremiumCash": 0,
                                 "InGameCoinStorageCapacity": 100000,
                                 "LifeForceStorageCapacity": 100000})
     inv = contract("AccountInventory")
     inv["HeroItems"] = acc.get("items", [])      # reflect looted items
-    return contract("AccountInformation", AccountId=acc.get("AccountId", 1),
-                    DisplayName=acc.get("DisplayName", ""), Privileges=9,
-                    Wallet=wallet, Inventory=inv)
+    inv["InventoryTabCount"] = DEFAULT_ACCOUNT.get("Inventory", {}).get("InventoryTabCount", 2)
+    ai = contract("AccountInformation", AccountId=acc.get("AccountId", 1),
+                  DisplayName=acc.get("DisplayName", ""), Privileges=9,
+                  # real new-player state from AccountTemplates/DEFAULTACCOUNT
+                  AvatarId=DEFAULT_ACCOUNT.get("AvatarId", 10),
+                  CountryCode=DEFAULT_ACCOUNT.get("CountryCode", "CA"),
+                  ProfanityFiltering=DEFAULT_ACCOUNT.get("ProfanityFiltering", True),
+                  CastleRenovationLevel=DEFAULT_ACCOUNT.get("CastleRenovationLevel",
+                                                            "RenovationLevel0"),
+                  Wallet=wallet, Inventory=inv,
+                  SelectedHeroId=acc.get("selected_hero", 0))
+    ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
+    return ai
 
 
 def ep_choose_display_name(req, acc):
@@ -149,8 +161,37 @@ def ep_choose_display_name(req, acc):
     return contract("AccountSummary", AccountId=(acc or {}).get("AccountId", 1), DisplayName=name)
 
 
+def ep_choose_first_hero(req, acc):
+    """Create the player's first hero from the real HeroTemplate (Knight=2,
+    Archer=3, Mage=4, Runaway=5) so the hero has a real loadout, not an empty one."""
+    body = req.json or {}
+    tid = body.get("heroTemplateId") or body.get("HeroTemplateId") or 2
+    hero = build_hero(tid)
+    if acc:
+        acc["heroes"] = [hero]
+        acc["selected_hero"] = hero.get("HeroSpecContainerId", tid)
+        STATE.save()
+    return {}
+
+
 CAT = catalog()
+DEFAULT_ACCOUNT = CAT.get("AccountTemplates", CAT.find_one("AccountTemplates", "DEFAULTACCOUNT"))
 _LVL_RE = re.compile(r"PVE_(\d+)_")
+
+
+def build_hero(template_id):
+    """Build a Hero from the real HeroTemplate. Real lists/objects (Equipment,
+    EquippedSpells, EquippedConsumables) are set after the gate so they survive."""
+    if not CAT.has("HeroTemplates", template_id):
+        template_id = 2  # default Knight
+    t = CAT.get("HeroTemplates", template_id)
+    h = contract("Hero",
+                 HeroSpecContainerId=t.get("HeroSpecContainerId", template_id),
+                 Level=t.get("Level", 1), XP=t.get("XP", 0))
+    h["Equipment"] = t.get("Equipment", {})
+    h["EquippedSpells"] = t.get("EquippedSpells", [])
+    h["EquippedConsumables"] = t.get("EquippedConsumables", [])
+    return h
 
 
 def _castle_level(name):
@@ -188,6 +229,9 @@ def ep_start_attack(req, acc):
                   AdjustedHeroLevel=level,
                   IsTutorial=bool(cas.get("IsTutorialCastle")))
     ai["Castle"] = castle
+    # the attacker's real hero loadout (skills/equipment), not an empty bar
+    hero = (acc.get("heroes") if acc else None) or []
+    ai["Hero"] = hero[0] if hero else build_hero(2)
     return ai
 
 
@@ -218,7 +262,7 @@ ENDPOINTS = {
     "StartAttack":            ep_start_attack,
     "EndAttack":              ep_end_attack,
     "GetCastlesForSale":      lambda r, a: contract("CastlesForSaleSelectionResult"),
-    "ChooseFirstHero":        lambda r, a: {},          # response contract TBD
+    "ChooseFirstHero":        ep_choose_first_hero,
     "SendCommands":           lambda r, a: BUS.handle(r.json),  # command bus -> notifications
     "CheckSeasonalCompetitionRewards": lambda r, a: {},
 }
