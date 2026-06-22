@@ -83,10 +83,11 @@ def main():
     a = acc()
     chk("achat: Or -300", a["Wallet"]["InGameCoin"] == g - 300)
     chk("achat: +1 objet", len(a["Inventory"]["HeroItems"]) == n + 1)
-    g2 = a["Wallet"]["InGameCoin"]; n2 = len(a["Inventory"]["HeroItems"])
-    cmd("SellHeroItemCommand", ClientPrice=50)
+    g2 = a["Wallet"]["InGameCoin"]; items = a["Inventory"]["HeroItems"]; n2 = len(items)
+    sp = items[-1]["SellPrice"]                     # real catalog sell price of the item sold
+    cmd("SellHeroItemCommand")
     a = acc()
-    chk("vente: Or +50", a["Wallet"]["InGameCoin"] == g2 + 50)
+    chk(f"vente: Or +{sp} (SellPrice catalogue)", a["Wallet"]["InGameCoin"] == g2 + sp)
     chk("vente: -1 objet", len(a["Inventory"]["HeroItems"]) == n2 - 1)
 
     print("7. Skills / equipement (slots)")
