@@ -33,27 +33,40 @@ def start_attack():
 
 
 def enumerate_combat(ai):
-    print("Niveau chateau (AttackInfo.Level) :", ai.get("Level"))
+    level = ai.get("Level")
+    print("Niveau chateau (AttackInfo.Level) :", level)
     print("CastleHeartRank                   :", ai.get("CastleHeartRank"))
     print("AdjustedHeroLevel                 :", ai.get("AdjustedHeroLevel"))
     castle = ai.get("Castle") or {}
     traw = castle.get("CreatureTiers")
+    # CreatureTiers is the set of creature specs defined for this castle. Entries
+    # may carry an explicit Tier, or none (tutorial: ForceCastleLevelOnBuildables
+    # -> the creature's level is the castle level). A placed creature whose spec
+    # is NOT in this set is unresolved -> the HUD's uint Level underflows.
     tiers = {t.get("SpecContainerId"): t.get("Tier") for t in traw} if isinstance(traw, list) else {}
     rooms = castle.get("Rooms") if isinstance(castle.get("Rooms"), list) else []
-    total = 0
+    total = unresolved = 0
     for room in rooms:
         creatures = room.get("Creatures") if isinstance(room.get("Creatures"), list) else []
         for c in creatures:
             total += 1
             spec = c.get("SpecContainerId")
-            tier = tiers.get(spec)
-            flag = "" if tier is not None else "  <-- TIER MANQUANT -> underflow uint (niveau 1 milliard)"
-            print("  salle %s | spec=%s zone=%s sleeping=%s | tier=%s%s"
-                  % (room.get("Id"), spec, c.get("RoomZoneId"), c.get("IsSleeping"), tier, flag))
-    print("Total creatures placees           :", total)
+            if spec in tiers:
+                tier = tiers[spec]
+                shown = tier if tier is not None else level   # forced to castle level
+                flag = "niveau=%s (defini)" % shown
+            else:
+                unresolved += 1
+                flag = "spec absent de CreatureTiers -> underflow uint (niveau 1 milliard)"
+            print("  salle %s | spec=%s zone=%s | %s"
+                  % (room.get("Id"), spec, c.get("RoomZoneId"), flag))
+    print("Total creatures placees           :", total,
+          "| non resolues:", unresolved)
     if total == 0:
-        print("(0 -> notre stub ne peuple pas encore le contenu de combat; "
-              "structure correcte, contenu vide.)")
+        print("(0 -> contenu de combat non peuple; structure correcte, contenu vide.)")
+    elif unresolved == 0:
+        print("OK: toutes les creatures sont resolues (specs presents dans "
+              "CreatureTiers) -> niveaux sains, pas d'underflow.")
 
 
 if __name__ == "__main__":

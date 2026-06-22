@@ -17,6 +17,7 @@ import argparse, copy, datetime, json, os, re, threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from completeness_gate import Gate
 from command_notifications import CommandBus
+from gameplay_catalog import catalog
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -148,6 +149,48 @@ def ep_choose_display_name(req, acc):
     return contract("AccountSummary", AccountId=(acc or {}).get("AccountId", 1), DisplayName=name)
 
 
+CAT = catalog()
+_LVL_RE = re.compile(r"PVE_(\d+)_")
+
+
+def _castle_level(name):
+    m = _LVL_RE.search(name or "")
+    return max(1, int(m.group(1))) if m else 1
+
+
+def ep_start_attack(req, acc):
+    """Serve a REAL castle from the decrypted catalog (default: first tutorial
+    castle) so combat gets real rooms, creature placement and tiers -- not an
+    empty skeleton. The real lists are set AFTER the gate so it cannot clobber
+    them back to []."""
+    body = req.json or {}
+    cid = body.get("CastleId") or body.get("castleId")
+    if not (cid and CAT.has("Castles", cid)):
+        cid = CAT.find_one("Castles", "PVE_00_TUTORIAL_01")
+    cas = CAT.get("Castles", cid)
+    name = CAT.name("Castles", cid)
+    level = _castle_level(name)
+
+    castle = contract("Castle",
+                      AccountId=cas.get("AccountId", 2),
+                      AccountDisplayName=name,
+                      LayoutId=cas.get("LayoutId", 1),
+                      ThemeId=cas.get("ThemeId", 0),
+                      OasisNameId=cas.get("OasisName", 0))
+    # real content, kept verbatim from the catalog (post-gate so it survives)
+    castle["Rooms"] = cas.get("Rooms", [])
+    castle["CreatureTiers"] = cas.get("CreatureTiers", [])
+    castle["TrapTiers"] = cas.get("TrapTiers", [])
+
+    ai = contract("AttackInfo",
+                  Level=level,
+                  CastleHeartRank=max(1, level // 5),
+                  AdjustedHeroLevel=level,
+                  IsTutorial=bool(cas.get("IsTutorialCastle")))
+    ai["Castle"] = castle
+    return ai
+
+
 def ep_end_attack(req, acc):
     """The loot loop: a won attack pays gold + life force and drops one item.
     Returns the reward notifications the real server emits (Wallet + inventory)."""
@@ -172,7 +215,7 @@ ENDPOINTS = {
     "ChooseDisplayName":     ep_choose_display_name,
     "GetAttackSelectionList": lambda r, a: contract("AttackSelectionResult"),
     "GetCastleInfo":          lambda r, a: contract("CastleInfo"),
-    "StartAttack":            lambda r, a: contract("AttackInfo"),
+    "StartAttack":            ep_start_attack,
     "EndAttack":              ep_end_attack,
     "GetCastlesForSale":      lambda r, a: contract("CastlesForSaleSelectionResult"),
     "ChooseFirstHero":        lambda r, a: {},          # response contract TBD
