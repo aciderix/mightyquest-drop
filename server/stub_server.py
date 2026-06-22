@@ -18,6 +18,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from completeness_gate import Gate
 from command_notifications import CommandBus
 from gameplay_catalog import catalog
+import catalog_economy as ECO
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -420,7 +421,11 @@ def ep_end_attack(req, acc):
             if phi.get(hero_key):
                 item = _add_item(acc, phi[hero_key][0]); break
         if item is None:
-            item = STATE.award(acc, item_template=1001)
+            # real generated drop: catalog quality roll + catalog stat bonuses
+            iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+            item = ECO.generate_item(ECO.random_equipment_template(), level,
+                                     f"item-{iid}", now=now())
+            acc.setdefault("items", []).append(item); STATE.save()
         notifs.append(contract("HeroInventoryAddedNotification", Index=idx, NewlyAdded=item)); idx += 1
 
     # hero progression: the win grants XP; crossing a threshold levels the hero up

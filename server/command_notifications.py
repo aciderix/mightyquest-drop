@@ -33,6 +33,7 @@ CLI:
 """
 import argparse, json, os, re, sys
 from completeness_gate import Gate
+import catalog_economy as ECO
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "re", "catalog", "network", "generated",
@@ -221,11 +222,11 @@ class CommandBus:
                                Amounts=[{"Amount": -price, "CurrencyType": 2}])]
 
         if name == "SellHeroItemCommand":
-            gain = int(cmd.get("ClientPrice") or 0) or 50
-            w["InGameCoin"] += gain
             items = acc.setdefault("items", [])
-            if items:
-                items.pop()
+            sold = items.pop() if items else {}
+            # real sell price from the item itself (catalog formula), else client hint
+            gain = int(sold.get("SellPrice") or cmd.get("ClientPrice") or 1)
+            w["InGameCoin"] += gain
             return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
                                Amounts=[{"Amount": gain, "CurrencyType": 2}]),
                     self.build("HeroInventoryRemovedNotification", idx + 1)]
@@ -298,6 +299,7 @@ class CommandBus:
                 eq[slot] = item
                 if prev:
                     items.append(prev)          # swap the old piece back to the bag
+                hero["HeroStatModifier"] = ECO.hero_equipped_stats(hero)  # real stats
             return [self.build("HeroEquipmentEquipNotification", idx)]
 
         if name == "HeroEquipmentUnequipCommand":
@@ -307,6 +309,7 @@ class CommandBus:
                 eq = hero.setdefault("Equipment", {})
                 if eq.get(slot):
                     acc.setdefault("items", []).append(eq[slot]); eq[slot] = None
+                hero["HeroStatModifier"] = ECO.hero_equipped_stats(hero)  # recompute
             return [self.build("HeroEquipmentUnequipNotification", idx)]
 
         if name == "HeroEquipConsumableCommand":
@@ -360,10 +363,9 @@ class CommandBus:
             cost = int(cmd.get("ClientPrice") or 100)
             w["InGameCoin"] = max(0, w["InGameCoin"] - cost)
             iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
-            crafted = {"ExpirableId": f"item-{iid}",
-                       "TemplateId": cmd.get("SkuCode") or cmd.get("TemplateId") or 0,
-                       "ItemLevel": cmd.get("ItemLevel", 1), "ArchetypeId": cmd.get("ArchetypeId", 0),
-                       "AcquisitionDate": now, "SellPrice": 50}
+            lvl = int(cmd.get("ItemLevel", 1) or 1)
+            tpl = cmd.get("SkuCode") or cmd.get("TemplateId") or ECO.random_equipment_template()
+            crafted = ECO.generate_item(tpl, lvl, f"item-{iid}", now=now)  # real stats + sell price
             acc.setdefault("items", []).append(crafted)           # forged item produced
             acc.setdefault("forge", {}).setdefault("crafted", []).append(crafted["ExpirableId"])
             return [self.build("ForgeStartedNotification", idx),
