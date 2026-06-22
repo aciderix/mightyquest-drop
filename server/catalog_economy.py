@@ -155,6 +155,8 @@ def castle_rating(rooms):
     for room in (rooms or []):
         for cr in (room.get("Creatures") or []):
             total += creature_cp(cr.get("SpecContainerId"))
+        for tr in (room.get("Traps") or []):
+            total += trap_cp(tr.get("SpecContainerId"))
     return total
 
 
@@ -228,6 +230,17 @@ def creature_cp(spec_id):
 
 def creature_xp(spec_id):
     return max(0, _creature_field(spec_id, "BuildXp", 0))
+
+
+def trap_cp(spec_id):
+    """Real construction-point cost of a trap (TrapTiers[].SpecContainerId -> Traps)."""
+    if not CAT.has("Traps", spec_id):
+        return 1
+    g = CAT.get("Traps", spec_id).get("GAMEPLAY", [])
+    for comp in (g if isinstance(g, list) else []):
+        if isinstance(comp, dict) and "ConstructionPoints" in comp:
+            return max(1, comp["ConstructionPoints"])
+    return 1
 
 
 def castle_rewards(rooms):

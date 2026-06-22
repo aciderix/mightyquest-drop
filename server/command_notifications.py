@@ -430,7 +430,8 @@ class CommandBus:
         if name == "AddCastleTrapCommand":
             c = self._castle(acc); tidx = c["next_index"]; c["next_index"] += 1
             c["traps"].append({"Id": tidx, "SpecContainerId": cmd.get("SkuCode")})
-            c["construction_used"] = min(c["construction_max"], c["construction_used"] + 10)
+            cost = ECO.trap_cp(cmd.get("SkuCode"))   # real per-trap construction cost
+            c["construction_used"] = min(c["construction_max"], c["construction_used"] + cost)
             return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
 
         if name == "AddCastleTriggerCommand":
