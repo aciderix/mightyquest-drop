@@ -47,3 +47,35 @@ ARET∩Ghidra identical. self-check as-emitted rose 1078 → **1182/1307**;
 field is the generic name `"Type"`, and the gate matches enums by field name, so
 auto-mapping `Type` risks collisions with other contracts' `Type` fields. It
 stays flagged in `uncertain.log` rather than risk a wrong conversion.
+
+## Why bulk auto-resolution of the remaining ~140 is NOT safe (measured)
+
+The tempting shortcut — extract every `FromString` cascade in the binary and
+auto-convert by value — was tested and **rejected**:
+
+- Full ARET lift (54925 funcs) parsed → catalog; an "all cascades agree on the
+  value" rule **contradicted the client-JS ground truth in 18 cases**.
+- Re-built from **Ghidra's flat output** (unambiguous name↔value pairing, not a
+  parsing artifact) → still **15 contradictions** vs client-JS, e.g.
+  `ControllerNames.attack` JS=9 / binary=10, `RewardItemType.CraftingMaterials`
+  JS=10 / binary=49, `AchievementType.DefeatCastle` JS=1 / binary=8.
+
+These are **genuine divergences**: the client has more than one enum value
+system (the JS-UI enums vs the native/wire enums), and member names are reused
+across enums with different integers. So no value-only or name-only rule can be
+trusted — auto-converting would re-introduce the silent-default bug it aims to fix.
+
+### The clean & safe procedure (what we actually do)
+1. **Scope by `Contract.Field`** in `confirmed_enums.json` (gate pillar 1) — no
+   field-name collisions, so even a generic `Type` field can be fixed per contract.
+2. **Per enum, confirm from the binary** by decompiling the *specific* parser/
+   deserializer with **both ARET and Ghidra**; accept the mapping **only if the two
+   tools agree** (and it matches any overlapping client-JS / self-labeling truth).
+3. **Convert only what is confirmed this way; never guess.** Everything else stays
+   in `uncertain.log` with the exact `Contract.field=value`, so an in-game glitch
+   is traced to the suspect field in seconds.
+
+Confirmed so far (dual-tool): the client-JS 65 + NotificationType, CreatureRank/
+Rank, CastleRenovationLevel family → as-emitted 1078→1182/1307. The remaining
+~140 are flagged, not guessed. They are closed the same way, one verified
+`Contract.Field` at a time, when a given flow needs them.
