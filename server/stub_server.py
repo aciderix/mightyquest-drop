@@ -100,7 +100,10 @@ class State:
                                   "InGameCoinStorageCapacity": 100000,
                                   "LifeForceStorageCapacity": 100000},
                        "items": [], "next_item": 1,
-                       "heroes": [], "selected_hero": 0}
+                       "heroes": [], "selected_hero": 0,
+                       # social / level-3 state
+                       "friends": [], "guild": None, "guild_invitations": [],
+                       "inbox": [], "messages": []}
                 self.data["accounts"][identity] = acc
             token = f"tok-{acc['AccountId']}-{os.urandom(4).hex()}"
             self.data["sessions"][token] = acc["AccountId"]
@@ -154,6 +157,11 @@ def ep_account_information(req, acc):
     ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
     if acc.get("castle"):                        # reflect the player's built castle
         ai["BuildInfo"] = BUS.build_info(acc)
+    # reflect the live social state (confirmed delivery channel for level-3 data)
+    ai["Friends"] = acc.get("friends", [])
+    ai["GuildInvitations"] = acc.get("guild_invitations", [])
+    ai["Inbox"] = acc.get("inbox", [])
+    ai["Guild"] = acc.get("guild") or {}        # cleared when the player has no guild
     return ai
 
 
@@ -436,6 +444,48 @@ def ep_end_attack(req, acc):
     return {"Result": info, "Notifications": notifs}
 
 
+def ep_social(service, method, req, acc):
+    """Stateful level-3 services (guild, friends, news, ...). Mutations are
+    reflected in AccountInformation (the confirmed channel). Returns a response
+    dict, or None to fall through to the schema-complete example fallback."""
+    if acc is None:
+        return None
+    s, m = service.lower(), method.lower()
+    body = req.json or {}
+
+    if "friend" in s:                                  # ---- FRIENDS ----
+        friends = acc.setdefault("friends", [])
+        if any(k in m for k in ("add", "invite", "request", "send", "accept")):
+            fid = body.get("FriendAccountId") or body.get("AccountId") or (200 + len(friends))
+            friends.append({"FriendAccountId": fid,
+                            "FriendDisplayName": body.get("DisplayName") or f"Friend{fid}",
+                            "HasAccepted": True, "IsCastleAttackable": True})
+            STATE.save(); return {}
+        if any(k in m for k in ("remove", "delete", "decline", "cancel")):
+            if friends:
+                friends.pop()
+            STATE.save(); return {}
+        return None                                    # reads: AccountInformation carries it
+
+    if "guild" in s:                                   # ---- GUILD ----
+        if "create" in m or "join" in m:
+            acc["guild"] = contract("Guild", Id=body.get("GuildId", 1), Rank=8,
+                                    DisplayName=body.get("DisplayName") or body.get("GuildName")
+                                    or "ClaudeGuild")
+            STATE.save(); return {"Result": acc["guild"]}
+        if "leave" in m or "quit" in m:
+            acc["guild"] = None; STATE.save(); return {}
+        if "search" in m:
+            return contract("GuildSearchResult")
+        if "get" in m and acc.get("guild"):
+            return {"Result": acc["guild"]}
+        return None
+
+    if "news" in s:                                    # ---- NEWS ----
+        return contract("NewsResult")
+    return None                                        # other reads -> example fallback
+
+
 # method name -> handler(req, acc) ; default below serves a matching example
 ENDPOINTS = {
     "GetAccountInformation": ep_account_information,
@@ -507,7 +557,12 @@ class Handler(BaseHTTPRequestHandler):
             if acc is None:
                 acc, _ = STATE.login(self.headers.get("X-Steam-Ticket", "anonymous"))
             h = ENDPOINTS.get(method)
-            return self._send(envelope(h(self, acc) if h else self._guess(method)))
+            if h:
+                return self._send(envelope(h(self, acc)))
+            social = ep_social(service, method, self, acc)   # stateful level-3 services
+            if social is not None:
+                return self._send(envelope(social))
+            return self._send(envelope(self._guess(method)))
         low = path.lower()
         if "login" in low or "account" in low and "creation" in low:
             acc, token = STATE.login(self.json.get("steamticket", "anonymous"))
