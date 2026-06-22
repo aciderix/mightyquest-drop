@@ -21,13 +21,17 @@ Ce qui **n'est pas** « parfait » :
    pas confirmé octet-par-octet. Impact : transitoire et **auto-réparé** par la
    relecture de `GetAccountInformation` (autoritatif) ; seul l'entier
    `NotificationType` est purement visuel (catégorie d'icône/son).
-3. **Un seul barème restant : le delta de trophées PvP** (`+10 / −5`).
-   `MATCHMAKINGSETTINGS` ne donne que des bandes de rating (ELO), pas un delta
-   constant → formule à reconstruire séparément. **Tout le reste de l'économie est
-   sourcé catalogue**, y compris désormais le **loot par créature** :
-   `SpecContainerId` est l'id de dossier `Creatures` (mapping direct, ex.
-   1081=Chicken, 1003=Cyclops) → l'or = Σ `HealthOrbFragmentsLootBase`, l'xp =
-   Σ `BuildXp`, le coût de construction = `ConstructionPoints` par créature.
+3. **Économie 100% sourcée catalogue (plus aucun barème inventé).** `SpecContainerId`
+   est l'id de dossier de la catégorie impliquée par le contexte (`CreatureTiers`→
+   `Creatures`, `TrapTiers`→`Traps`, `Room`→`Rooms`…) — mapping direct, ex.
+   1081=Chicken, 1003=Cyclops. D'où :
+   - loot victoire = Σ `HealthOrbFragmentsLootBase`, xp = Σ `BuildXp` (par créature)
+   - coût de construction = `ConstructionPoints` par créature
+   - cap de construction = `CastleHeart.Ranks[].MaxConstructionPoints`
+   - production de mine = `GoldMine.Ranks[].Capacity`
+   - prix de vente / drops / stats d'objets / prix shop / courbe d'XP = catalogue
+   - **trophées PvP** = difficulté `MATCHMAKINGSETTINGS` (Easy/Medium/Hard) ×
+     `ATTACKADVISORSETTINGS.TrophyGainBuckets` (8/20/42 couronnes)
 
 ### Levé depuis la v1 de ce document (désormais réel + vérifié)
 - **Économie sourcée catalogue** (`catalog_economy.py`) : prix de vente
