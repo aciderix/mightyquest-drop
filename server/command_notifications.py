@@ -205,7 +205,9 @@ class CommandBus:
                                       "LifeForceStorageCapacity": 100000})
 
         if name in ("BuyCommand", "BuyHeroItemCommand"):
-            price = int(cmd.get("ClientPrice") or 0)
+            # server-authoritative price: catalog SKU if known, else the client hint
+            sku_amt, _ = ECO.sku_price(cmd.get("SkuCode"), default=0)
+            price = sku_amt or int(cmd.get("ClientPrice") or 0)
             w["InGameCoin"] = max(0, w["InGameCoin"] - price)
             iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
             item = {"ExpirableId": f"item-{iid}", "TemplateId": cmd.get("SkuCode"),

@@ -104,7 +104,8 @@ class State:
                        "heroes": [], "selected_hero": 0,
                        # social / level-3 state
                        "friends": [], "guild": None, "guild_invitations": [],
-                       "inbox": [], "messages": []}
+                       "inbox": [], "messages": [],
+                       "defend_log": [], "trophy": 0}
                 self.data["accounts"][identity] = acc
             token = f"tok-{acc['AccountId']}-{os.urandom(4).hex()}"
             self.data["sessions"][token] = acc["AccountId"]
@@ -267,7 +268,9 @@ def ep_start_attack(req, acc):
             hero = (acc.get("heroes") if acc else None) or []
             ai["Hero"] = hero[0] if hero else build_hero(2)
             if acc is not None:
-                acc["current_attack"] = None; STATE.save()
+                acc["current_attack"] = None
+                acc["current_pvp"] = defid          # remember the PvP target
+                STATE.save()
             return ai
     cid = body.get("CastleId") or body.get("castleId")
     if not (cid and CAT.has("Castles", cid)):
@@ -389,6 +392,23 @@ def ep_end_attack(req, acc):
           completion not in ("Escape", "Exit", "Incomplete")
     comp_int = COMPLETION.get(completion, 0 if won else COMPLETION["Escape"])
 
+    # PvP: record the defend log on the rival + adjust trophies (server-authoritative)
+    pvp = (acc or {}).get("current_pvp")
+    if acc and pvp and won:
+        rival = next((a for a in STATE.data["accounts"].values()
+                      if a.get("AccountId") == pvp), None)
+        if rival:
+            entry = contract("DefendLogEntry", AttackId=f"atk-{pvp}-{len(rival.get('defend_log', []))}",
+                             CompletionType=COMPLETION.get(completion, 0),
+                             HeroSpecContainerId=acc.get("selected_hero", 0))
+            entry["AttackerAccountSummary"] = contract("AccountSummary",
+                AccountId=acc["AccountId"], AccountDisplayName=acc.get("DisplayName") or "Player", Level=1)
+            rival.setdefault("defend_log", []).insert(0, entry)
+            acc["trophy"] = acc.get("trophy", 0) + 10        # winner gains trophies
+            rival["trophy"] = max(0, rival.get("trophy", 0) - 5)
+    if acc:
+        acc["current_pvp"] = None
+
     cid = (acc or {}).get("current_attack")
     has_cas = bool(cid and CAT.has("Castles", cid))
     cas = CAT.get("Castles", cid) if has_cas else {}
@@ -488,6 +508,37 @@ def ep_social(service, method, req, acc):
 
     if "news" in s:                                    # ---- NEWS ----
         return contract("NewsResult")
+
+    if "shop" in s:                                    # ---- SHOP (real SKUs) ----
+        res = contract("ShopResult") if "ShopResult" in GATE.schemas else {}
+        skus = [contract("ShopSku", Code=str(k.get("Code")), ItemCount=k.get("ItemCount", 1),
+                         InternalDescription=k.get("InternalDescription", ""), IsActive=True)
+                for k in ECO.shop_skus()]
+        if isinstance(res, dict):
+            res["Skus"] = skus
+            return {"Result": res}
+        return {"Result": {"Skus": skus}}
+
+    if "leaderboard" in s or "league" in s:            # ---- LEADERBOARD ----
+        ranked = sorted(STATE.data["accounts"].values(),
+                        key=lambda x: x.get("trophy", 0), reverse=True)
+        entries = []
+        for r in ranked[:100]:
+            e = contract("LeaderboardEntry", Score=r.get("trophy", 0))
+            e["AccountSummary"] = contract("AccountSummary", AccountId=r.get("AccountId", 0),
+                                           AccountDisplayName=r.get("DisplayName") or "Player",
+                                           Level=1)
+            entries.append(e)
+        return {"Result": {"Entries": entries}}
+
+    if "battlelog" in s or "defendlog" in s or "defend" in s:   # ---- DEFEND LOG ----
+        dl = contract("DefendLog")
+        dl["DefendLogEntries"] = acc.get("defend_log", [])
+        return {"Result": dl}
+
+    if "inbox" in s:                                   # ---- INBOX (read) ----
+        return {"Result": {"Items": acc.get("inbox", [])}}
+
     return None                                        # other reads -> example fallback
 
 

@@ -137,6 +137,29 @@ def hero_equipped_stats(hero):
     return total
 
 
+# ── shop (real SKUs from ShopSettings) ──────────────────────────────────────
+try:
+    _shop_names = CAT.names("ShopSettings")
+    _SHOP = _g("ShopSettings", _shop_names[0]) if _shop_names else {}
+except Exception:
+    _SHOP = {}
+_SKUS = {str(s.get("Code")): s for s in (_SHOP.get("Skus", []) if isinstance(_SHOP, dict) else [])}
+
+
+def shop_skus():
+    return list(_SKUS.values())
+
+
+def sku(code):
+    return _SKUS.get(str(code))
+
+
+def sku_price(code, default=0):
+    s = _SKUS.get(str(code))
+    return int((s or {}).get("Price", {}).get("Amount", default)), \
+           int((s or {}).get("Price", {}).get("CurrencyType", 2))
+
+
 # ── reward type roll (UNIVERSALDROPSETTINGS) ────────────────────────────────
 def roll_reward_type(rng=random):
     table = _UNIVERSAL.get("RewardTypeTable", {"InventoryItem": 1})
