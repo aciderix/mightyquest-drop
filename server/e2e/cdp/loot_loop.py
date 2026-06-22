@@ -64,11 +64,12 @@ def main():
         print("     nouvel objet vu par le client:", it1[-1])
 
     a.ws.close()
-    ok = (g0 == 0 and len(it0) == 0 and g1 == 100 and len(it1) == 1)
+    ok = (g1 > g0 and len(it1) == len(it0) + 1)
     print()
     if ok:
         print("Victoire confirmee! Pilotee depuis le framework JS du client live: "
-              "l'Or est passe a 100 et l'inventaire contient 1 nouvel objet.")
+              f"l'Or est passe de {g0} a {g1} (+{g1 - g0}) et l'inventaire a gagne "
+              f"1 nouvel objet ({len(it0)} -> {len(it1)}).")
     else:
         print(f"ECHEC via CDP: Or {g0}->{g1}, objets {len(it0)}->{len(it1)}")
     return 0 if ok else 1

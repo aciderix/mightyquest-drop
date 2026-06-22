@@ -232,24 +232,117 @@ def ep_start_attack(req, acc):
     # the attacker's real hero loadout (skills/equipment), not an empty bar
     hero = (acc.get("heroes") if acc else None) or []
     ai["Hero"] = hero[0] if hero else build_hero(2)
+    if acc is not None:
+        acc["current_attack"] = cid          # remember target for EndAttack loot
+        STATE.save()
     return ai
 
 
+def _pve_castles():
+    """All real PvE castles from the catalog: (id, name, level)."""
+    out = []
+    for cid in CAT.ids("Castles"):
+        name = CAT.name("Castles", cid)
+        if name.startswith("PVE_"):
+            out.append((cid, name, _castle_level(name)))
+    return out
+
+
+def _castle_info(cid, name, level):
+    cas = CAT.get("Castles", cid)
+    rooms = cas.get("Rooms") if isinstance(cas.get("Rooms"), list) else []
+    info = contract("CastleInfo",
+                    Level=level, CastleType=1, Difficulty=max(1, level),
+                    AttackabilityStatus=1, IsCastleAttackable=True,
+                    RoomCount=len(rooms), VictoryConditionLevel=1)
+    info["DefenderAccountSummary"] = contract("CastleSummary",
+                                              AccountId=cas.get("AccountId", cid),
+                                              AccountDisplayName=name, Level=level,
+                                              IsPublished=True)
+    return info
+
+
+def ep_get_attack_selection_list(req, acc):
+    """The real PvE castle roster, grouped by level (CastlesByLevel)."""
+    by_level = {}
+    for cid, name, level in _pve_castles():
+        by_level.setdefault(level, []).append(_castle_info(cid, name, level))
+    levels = [contract("AttackSelectionByLevelResult", Level=lvl) for lvl in sorted(by_level)]
+    for entry, lvl in zip(levels, sorted(by_level)):
+        entry["Castles"] = by_level[lvl]
+    res = contract("AttackSelectionResult")
+    res["CastlesByLevel"] = levels
+    return res
+
+
+def ep_get_castle_info(req, acc):
+    body = req.json or {}
+    cid = body.get("CastleId") or body.get("castleId")
+    if not (cid and CAT.has("Castles", cid)):
+        cid = CAT.find_one("Castles", "PVE_00_TUTORIAL_01")
+    name = CAT.name("Castles", cid)
+    return _castle_info(cid, name, _castle_level(name))
+
+
+def _add_item(acc, src):
+    """Append a real catalog-described item (e.g. a scripted CustomLoot equipment)
+    to the account inventory and persist it."""
+    iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+    item = {"ExpirableId": f"item-{iid}", "TemplateId": src.get("TemplateId"),
+            "ArchetypeId": src.get("ArchetypeId"), "ItemLevel": src.get("ItemLevel", 1),
+            "PrimaryStatsModifiers": src.get("PrimaryStatsModifiers", []),
+            "AcquisitionDate": now(), "SellPrice": 50}
+    acc.setdefault("items", []).append(item); STATE.save()
+    return item
+
+
+def ep_get_castles_for_sale(req, acc):
+    """The real purchasable starter castles (BUY_* in the catalog)."""
+    sale = []
+    for cid in CAT.ids("Castles"):
+        name = CAT.name("Castles", cid)
+        if name.startswith("BUY_"):
+            sale.append(contract("CastleForSale", SaleId=cid, UbisoftCastleId=cid,
+                                 DebugName=name, CanBePurchased=True, IsInteractive=True,
+                                 IsStartupCastle=("BASIC_ROYAL_A" in name)))
+    res = contract("CastlesForSaleSelectionResult")
+    res["CastlesForSale"] = sale
+    return res
+
+
 def ep_end_attack(req, acc):
-    """The loot loop: a won attack pays gold + life force and drops one item.
-    Returns the reward notifications the real server emits (Wallet + inventory)."""
+    """The loot loop: a won attack pays gold/life force scaled to the castle level
+    and drops the castle's real reward -- honoring the scripted CustomAttackerReward
+    (per-hero item, or DisableItemDrop) when the attacked castle defines one."""
     body = req.json or {}
     won = body.get("victory", body.get("Victory", True)) and \
           body.get("completionType", "TreasureRoom") != "Escape"
     if not (acc and won):
         return {}
-    item = STATE.award(acc, gold=100, lifeforce=25, item_template=1001)
-    notifs = [
-        contract("WalletUpdatedNotification", Index=0, NotificationType=24, Amounts=[
-            {"Amount": 100, "CurrencyType": 2},    # IGC (gold)
-            {"Amount": 25,  "CurrencyType": 4}]),  # LifeForce
-        contract("HeroInventoryAddedNotification", Index=1, NewlyAdded=item),
-    ]
+    cid = acc.get("current_attack")
+    has_cas = bool(cid and CAT.has("Castles", cid))
+    cas = CAT.get("Castles", cid) if has_cas else {}
+    level = _castle_level(CAT.name("Castles", cid)) if has_cas else 1
+    reward = cas.get("CustomAttackerReward") or {}
+
+    gold, lifeforce = 50 * level, 10 * level
+    STATE.award(acc, gold=gold, lifeforce=lifeforce)
+    notifs = [contract("WalletUpdatedNotification", Index=0, NotificationType=24, Amounts=[
+        {"Amount": gold, "CurrencyType": 2},        # IGC (gold)
+        {"Amount": lifeforce, "CurrencyType": 4}])]  # LifeForce
+
+    idx = 1
+    if not reward.get("DisableItemDrop"):
+        item = None
+        # scripted per-hero reward (tutorial castles give a specific equipment piece)
+        hero_key = str(acc.get("selected_hero", 2))
+        for loot in reward.get("CustomLoots", []):
+            phi = loot.get("PerHeroItem") or {}
+            if phi.get(hero_key):
+                item = _add_item(acc, phi[hero_key][0]); break
+        if item is None:                              # otherwise a normal drop
+            item = STATE.award(acc, item_template=1001)
+        notifs.append(contract("HeroInventoryAddedNotification", Index=idx, NewlyAdded=item))
     return {"Notifications": notifs}
 
 
@@ -257,11 +350,11 @@ def ep_end_attack(req, acc):
 ENDPOINTS = {
     "GetAccountInformation": ep_account_information,
     "ChooseDisplayName":     ep_choose_display_name,
-    "GetAttackSelectionList": lambda r, a: contract("AttackSelectionResult"),
-    "GetCastleInfo":          lambda r, a: contract("CastleInfo"),
+    "GetAttackSelectionList": ep_get_attack_selection_list,
+    "GetCastleInfo":          ep_get_castle_info,
     "StartAttack":            ep_start_attack,
     "EndAttack":              ep_end_attack,
-    "GetCastlesForSale":      lambda r, a: contract("CastlesForSaleSelectionResult"),
+    "GetCastlesForSale":      lambda r, a: ep_get_castles_for_sale(r, a),
     "ChooseFirstHero":        ep_choose_first_hero,
     "SendCommands":           lambda r, a: BUS.handle(r.json),  # command bus -> notifications
     "CheckSeasonalCompetitionRewards": lambda r, a: {},

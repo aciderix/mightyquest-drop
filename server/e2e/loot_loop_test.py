@@ -66,14 +66,15 @@ def main():
     if items1:
         print(f"     nouvel objet: {json.dumps(items1[-1], ensure_ascii=False)}")
 
-    # verdict
-    ok = (gold0 == 0 and len(items0) == 0 and gold1 == 100 and len(items1) == 1)
+    # verdict (delta-based: real starting gold = DEFAULTACCOUNT.IGC 1000, loot scaled)
+    ok = (gold1 > gold0 and len(items1) == len(items0) + 1)
     print()
     if ok:
-        print("Victoire confirmee! L'Or du joueur est maintenant a 100, "
-              "et l'inventaire contient 1 nouvel objet.")
+        print(f"Victoire confirmee! L'Or est passe de {gold0} a {gold1} "
+              f"(+{gold1 - gold0}), et l'inventaire a gagne 1 nouvel objet "
+              f"({len(items0)} -> {len(items1)}).")
     else:
-        print(f"ECHEC: attendu Or 0->100 et 0->1 objet ; obtenu Or {gold0}->{gold1}, "
+        print(f"ECHEC: attendu Or en hausse et +1 objet ; obtenu Or {gold0}->{gold1}, "
               f"objets {len(items0)}->{len(items1)}")
     return 0 if ok else 1
 
