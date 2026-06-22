@@ -138,6 +138,46 @@ def main():
     chk("PvP: attaque le chateau du rival (ses 2 creatures)", placed_pvp == 2)
     chk("PvP: pas un tutoriel", pvp["IsTutorial"] is False)
 
+    W = lambda: acc()["Wallet"]["InGameCoin"]
+    N = lambda: len(acc()["Inventory"]["HeroItems"])
+
+    print("13. Mines (economie passive)")
+    g = W(); cmd("HarvestMineBuildingCommand"); chk("mine: or credite (+200)", W() == g + 200)
+    cmd("RestoreMinesBuildingCommand"); g = W(); cmd("HarvestMineBuildingCommand")
+    chk("mine: re-recolte apres restore", W() == g + 200)
+
+    print("14. Forge / crafting")
+    g, n = W(), N(); cmd("ForgeCraftCommand", ClientPrice=100, SkuCode=55)
+    chk("forge: -100 or + objet produit", W() == g - 100 and N() == n + 1)
+
+    print("15. Equipement (gear)")
+    n = N(); cmd("HeroEquipmentEquipCommand", DestinationSlot="MainHand", SourceSlotId=0)
+    chk("equip: slot MainHand rempli + -1 sac",
+        bool(acc()["Heroes"][0]["Equipment"].get("MainHand")) and N() == n - 1)
+    cmd("HeroEquipmentUnequipCommand", SourceSlotId="MainHand")
+    chk("unequip: MainHand vide", not acc()["Heroes"][0]["Equipment"].get("MainHand"))
+
+    print("16. Inbox / buyback / consommable / corpse")
+    n = N(); cmd("InboxCollectToHeroInventoryCommand"); chk("inbox: +1 objet", N() == n + 1)
+    g = W(); cmd("BuyBackCommand", ClientPrice=30, SkuCode=9); chk("buyback: -30 or", W() == g - 30)
+    cmd("ActivateConsumableCommand", ConsumableType=1, TemplateId=1); chk("consommable active (ack)", True)
+    n = N(); cmd("HarvestHeroCorpseCommand"); chk("harvest corpse: +1 objet", N() == n + 1)
+
+    print("17. Pieges chateau / ingredient / avatar")
+    cmd("AddCastleTrapCommand", SkuCode=5); chk("piege place", len(acc()["BuildInfo"]["TrapArchetypes"]) >= 1)
+    g = W(); cmd("SellDefenseIngredientCommand", ClientPrice=25); chk("vente ingredient: +25 or", W() == g + 25)
+    cmd("SetAvatarCommand", AvatarId=42); chk("avatar -> 42", acc()["AvatarId"] == 42)
+
+    print("18. Social (amis / guilde / news)")
+    call("Friendship", "AddFriend", {"FriendAccountId": 501, "DisplayName": "Bob"})
+    call("Friendship", "AddFriend", {"FriendAccountId": 502, "DisplayName": "Alice"})
+    chk("2 amis ajoutes", len(acc()["Friends"]) == 2)
+    call("Friendship", "RemoveFriend", {}); chk("1 ami retire", len(acc()["Friends"]) == 1)
+    call("Guild", "CreateGuild", {"DisplayName": "ClaudeGuild"})
+    chk("guilde creee + refletee", acc()["Guild"].get("DisplayName") == "ClaudeGuild")
+    call("Guild", "LeaveGuild", {}); chk("guilde quittee", not acc()["Guild"].get("DisplayName"))
+    chk("news -> NewsResult", "Result" in call("News", "GetNews", {}))
+
     ok = sum(1 for _, c in CHECKS if c); tot = len(CHECKS)
     print(f"\n=== {ok}/{tot} checks OK ===")
     print("TOUT VERT" if ok == tot else "DES CHECKS ONT ECHOUE")
