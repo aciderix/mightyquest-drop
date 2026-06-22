@@ -149,6 +149,7 @@ def ep_account_information(req, acc):
                   CastleRenovationLevel=DEFAULT_ACCOUNT.get("CastleRenovationLevel",
                                                             "RenovationLevel0"),
                   Wallet=wallet, Inventory=inv,
+                  CompletedAssignments=len(acc.get("completed_assignments", [])),
                   SelectedHeroId=acc.get("selected_hero", 0))
     ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
     return ai
@@ -379,7 +380,7 @@ ENDPOINTS = {
     "EndAttack":              ep_end_attack,
     "GetCastlesForSale":      lambda r, a: ep_get_castles_for_sale(r, a),
     "ChooseFirstHero":        ep_choose_first_hero,
-    "SendCommands":           lambda r, a: BUS.handle(r.json),  # command bus -> notifications
+    "SendCommands":           lambda r, a: BUS.handle(r.json, a, state=STATE),  # stateful bus
     "CheckSeasonalCompetitionRewards": lambda r, a: {},
 }
 

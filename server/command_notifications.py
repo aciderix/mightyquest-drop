@@ -133,28 +133,114 @@ class CommandBus:
         return ([], "unknown")     # safe default: emit nothing, but flag it
 
     # ---- build one schema-complete notification with its $type + Index --------
-    def build(self, notif_name, index):
+    def build(self, notif_name, index, **over):
         obj = self.gate.complete(notif_name, {"Index": index}, add_type=True)
+        for k, v in over.items():           # set after the gate so lists survive
+            obj[k] = v
         return obj
 
+    # ---- STATEFUL command handlers: mutate the account, emit REAL values -------
+    @staticmethod
+    def _hero(acc):
+        heroes = acc.get("heroes") or []
+        return heroes[0] if heroes else None
+
+    @staticmethod
+    def _set_slot(slots, index, key, value):
+        for s in slots:
+            if s.get("SlotIndex") == index:
+                s[key] = value
+                return
+        slots.append({"SlotIndex": index, key: value})
+
+    def _apply(self, name, cmd, acc, idx):
+        """Mutate `acc` for a known command and return real notifications, or None
+        if this command has no stateful handler (caller falls back to the shape)."""
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        w = acc.setdefault("wallet", {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
+                                      "InGameCoinStorageCapacity": 100000,
+                                      "LifeForceStorageCapacity": 100000})
+
+        if name in ("BuyCommand", "BuyHeroItemCommand"):
+            price = int(cmd.get("ClientPrice") or 0)
+            w["InGameCoin"] = max(0, w["InGameCoin"] - price)
+            iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+            item = {"ExpirableId": f"item-{iid}", "TemplateId": cmd.get("SkuCode"),
+                    "AcquisitionDate": now, "SellPrice": price // 2}
+            acc.setdefault("items", []).append(item)
+            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+                               Amounts=[{"Amount": -price, "CurrencyType": 2}]),
+                    self.build("HeroInventoryAddedNotification", idx + 1, NewlyAdded=item)]
+
+        if name == "BuyConsumableCommand":
+            price = int(cmd.get("ClientPrice") or 0)
+            w["InGameCoin"] = max(0, w["InGameCoin"] - price)
+            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+                               Amounts=[{"Amount": -price, "CurrencyType": 2}])]
+
+        if name == "SellHeroItemCommand":
+            gain = int(cmd.get("ClientPrice") or 0) or 50
+            w["InGameCoin"] += gain
+            items = acc.setdefault("items", [])
+            if items:
+                items.pop()
+            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+                               Amounts=[{"Amount": gain, "CurrencyType": 2}]),
+                    self.build("HeroInventoryRemovedNotification", idx + 1)]
+
+        if name in ("HeroEquipSpellCommand",):
+            hero = self._hero(acc)
+            if hero is not None:
+                self._set_slot(hero.setdefault("EquippedSpells", []),
+                               int(cmd.get("SlotIndex", 0)),
+                               "SpellSpecContainerId", cmd.get("SpellId"))
+            return [self.build("HeroConsumableEquipNotification", idx)]
+
+        if name == "HeroUnequipSpellCommand":
+            hero = self._hero(acc)
+            if hero is not None:
+                hero["EquippedSpells"] = [s for s in hero.get("EquippedSpells", [])
+                                          if s.get("SlotIndex") != int(cmd.get("SlotIndex", -1))]
+            return [self.build("HeroConsumableUnequipNotification", idx)]
+
+        if name == "SelectHeroCommand":
+            acc["selected_hero"] = cmd.get("HeroId", acc.get("selected_hero", 0))
+            return [self.build("HeroSelectedNotification", idx)]
+
+        if name == "CompleteAssignmentCommand":
+            done = acc.setdefault("completed_assignments", [])
+            aid = cmd.get("AssignmentId")
+            if aid is not None and aid not in done:
+                done.append(aid)
+            return [self.build("AssignmentCompletedNotification", idx)]
+
+        return None
+
     # ---- handle a full SendCommands request ----------------------------------
-    def handle(self, request_json, *, warn=None):
+    def handle(self, request_json, acc=None, *, state=None, warn=None):
         commands = (request_json or {}).get("commands", []) or []
         notifications, idx, unknown = [], 0, []
         for cmd in commands:
             name = self._command_name(cmd)
             if not name:
                 continue
+            # stateful path: real mutation + real-valued notifications
+            applied = self._apply(name, cmd, acc, idx) if acc is not None else None
+            if applied is not None:
+                notifications.extend(applied); idx += len(applied)
+                continue
+            # shape-only path (no stateful handler yet): emit the curated shapes
             notifs, conf = self.notifications_for(name)
             if conf == "unknown":
                 unknown.append(name)
             for nname in notifs:
-                notifications.append(self.build(nname, idx))
-                idx += 1
+                notifications.append(self.build(nname, idx)); idx += 1
+        if acc is not None and state is not None:
+            state.save()
         if warn is not None and unknown:
             warn(unknown)
-        # Real-traffic shape (our real_traffic.log ground truth): SendCommands
-        # replies {} when nothing happened, else {"Notifications": [...]}.
+        # Real-traffic shape: {} when nothing happened, else {"Notifications": [...]}.
         return {"Notifications": notifications} if notifications else {}
 
     def _command_name(self, cmd):
