@@ -40,6 +40,7 @@ ENUMS = os.path.join(CATALOG, "gamedata", "enum_values.json")
 ENUM_INTS = os.path.join(CATALOG, "gamedata", "enum_int_values.json")
 CONFIRMED_ENUMS = os.path.join(CATALOG, "gamedata", "confirmed_enums.json")
 BINARY_ENUMS = os.path.join(CATALOG, "gamedata", "binary_enum_values.json")
+ARRAY_FIELDS = os.path.join(CATALOG, "gamedata", "array_fields.json")
 
 # .NET serializer default values, by the type vocabulary used in schemas_typed.json
 _NUM_INT = {"int", "uint", "ushort", "short", "ulong", "long", "byte", "enum"}
@@ -118,6 +119,16 @@ class Gate:
             self.enum_names.update(self.binary_values)
         except OSError:
             pass
+        # field names that are LISTS on the wire but the catalog mistyped as
+        # 'object' (so they'd be emitted as {} and the client's JSON parser
+        # rejects them: "Expected character: '['"). Sourced from example values
+        # seen unanimously as arrays + schema arrays + game-confirmed.
+        self.array_fields = set()
+        try:
+            with open(ARRAY_FIELDS, encoding="utf-8") as f:
+                self.array_fields = set(json.load(f))
+        except OSError:
+            pass
 
     def resolve_enum(self, fname, value, contract=None):
         """Resolve an enum-name string to (integer, confidence).
@@ -193,6 +204,10 @@ class Gate:
             else:
                 out[fname] = self._fill_field(fname, ftype, add_type, _seen | {name},
                                               uncertain)
+            # list fields the catalog mistyped as object must be [], not {} (the
+            # client's JSON parser demands '[' and aborts otherwise)
+            if fname in self.array_fields and not isinstance(out[fname], list):
+                out[fname] = []
         return out
 
     def _fill_field(self, fname, ftype, add_type, seen, uncertain=None):
