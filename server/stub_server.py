@@ -226,12 +226,40 @@ def _castle_level(name):
     return max(1, int(m.group(1))) if m else 1
 
 
+def _castle_from_player(rival):
+    """Build an AttackInfo.Castle from another player's BUILT, published castle (PvP)."""
+    pc = rival.get("castle") or {}
+    creatures = pc.get("creatures", [])
+    specs = sorted({cr.get("SpecContainerId") for cr in creatures if cr.get("SpecContainerId")})
+    c = contract("Castle", AccountId=rival.get("AccountId", 0),
+                 AccountDisplayName=rival.get("DisplayName") or "Rival",
+                 LayoutId=1, ThemeId=0)
+    c["Rooms"] = [{"Id": 1, "Creatures": creatures}]
+    c["CreatureTiers"] = [{"SpecContainerId": s} for s in specs]
+    c["TrapTiers"] = []
+    return c, pc.get("Level", 1)
+
+
 def ep_start_attack(req, acc):
-    """Serve a REAL castle from the decrypted catalog (default: first tutorial
-    castle) so combat gets real rooms, creature placement and tiers -- not an
-    empty skeleton. The real lists are set AFTER the gate so it cannot clobber
-    them back to []."""
+    """Serve a REAL castle: PvP (another player's built+published castle) when a
+    DefenderAccountId targets one, else a real catalog PvE castle (default: first
+    tutorial castle). Real lists are set AFTER the gate so it cannot clobber them."""
     body = req.json or {}
+    # --- PvP: attack another player's published castle -----------------------
+    defid = body.get("DefenderAccountId") or body.get("defenderAccountId")
+    if defid and defid != (acc or {}).get("AccountId"):
+        rival = next((a for a in STATE.data["accounts"].values()
+                      if a.get("AccountId") == defid and (a.get("castle") or {}).get("published")), None)
+        if rival:
+            castle, level = _castle_from_player(rival)
+            ai = contract("AttackInfo", Level=level, CastleHeartRank=max(1, level // 5),
+                          AdjustedHeroLevel=level, IsTutorial=False, AttackType=1)
+            ai["Castle"] = castle
+            hero = (acc.get("heroes") if acc else None) or []
+            ai["Hero"] = hero[0] if hero else build_hero(2)
+            if acc is not None:
+                acc["current_attack"] = None; STATE.save()
+            return ai
     cid = body.get("CastleId") or body.get("castleId")
     if not (cid and CAT.has("Castles", cid)):
         cid = CAT.find_one("Castles", "PVE_00_TUTORIAL_01")

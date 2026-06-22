@@ -254,6 +254,10 @@ class CommandBus:
                 c["creatures"].pop(); c["construction_used"] = max(0, c["construction_used"] - 10)
             return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
 
+        if "Publish" in name or name == "ValidateCastleCommand":
+            self._castle(acc)["published"] = True
+            return [self.build("DraftValidatedNotification", idx)]
+
         if name in ("BuildCommand", "UpgradeBuildingCommand"):
             c = self._castle(acc)
             c["CastleHeartRank"] += 1
