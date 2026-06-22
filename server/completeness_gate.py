@@ -39,6 +39,7 @@ EXAMPLES = os.path.join(CATALOG, "generated", "examples.json")
 ENUMS = os.path.join(CATALOG, "gamedata", "enum_values.json")
 ENUM_INTS = os.path.join(CATALOG, "gamedata", "enum_int_values.json")
 CONFIRMED_ENUMS = os.path.join(CATALOG, "gamedata", "confirmed_enums.json")
+BINARY_ENUMS = os.path.join(CATALOG, "gamedata", "binary_enum_values.json")
 
 # .NET serializer default values, by the type vocabulary used in schemas_typed.json
 _NUM_INT = {"int", "uint", "ushort", "short", "ulong", "long", "byte", "enum"}
@@ -105,6 +106,18 @@ class Gate:
                 self.enum_names.update(mapping)
         except OSError:
             pass
+        # binary catalog (Ghidra flat decompile of every *_FromString): a value is
+        # included ONLY if it maps to a single integer everywhere in the binary AND
+        # never contradicts the client-JS truth. Value-keyed: safe because such a
+        # value resolves to the same int in any enum that contains it.
+        self.binary_values = {}
+        try:
+            with open(BINARY_ENUMS, encoding="utf-8") as f:
+                self.binary_values = {k: v for k, v in json.load(f).items()
+                                      if not k.startswith("_")}
+            self.enum_names.update(self.binary_values)
+        except OSError:
+            pass
 
     def resolve_enum(self, fname, value, contract=None):
         """Resolve an enum-name string to (integer, confidence).
@@ -130,7 +143,11 @@ class Gate:
         conf = self.confirmed.get(fname)
         if conf and value in conf:
             return conf[value], "confirmed"
-        # 3) globally-unique member across JS enums — a guess, flagged as heuristic
+        # 3) binary catalog — value is unanimous across the whole binary and does
+        #    not contradict client-JS (safe to convert regardless of field)
+        if value in self.binary_values:
+            return self.binary_values[value], "binary"
+        # 4) globally-unique member across JS enums — a guess, flagged as heuristic
         ints = self._member_int.get(value)
         if ints and len(ints) == 1:
             return next(iter(ints)), "heuristic"
@@ -159,8 +176,10 @@ class Gate:
                 if ftype in _NUM_INT and isinstance(val, str):
                     iv, conf = self.resolve_enum(fname, val, name)
                     if iv is not None:
-                        if conf != "authoritative" and uncertain is not None:
-                            uncertain.append(f"{conf.upper()} {name}.{fname}={val!r}->{iv}")
+                        # only the genuinely-uncertain conversions are logged;
+                        # authoritative/confirmed/binary are validated, not noise
+                        if conf == "heuristic" and uncertain is not None:
+                            uncertain.append(f"HEURISTIC {name}.{fname}={val!r}->{iv}")
                         val = iv
                     elif val in self.enum_names and uncertain is not None:
                         uncertain.append(f"UNRESOLVED-ENUM {name}.{fname}={val!r} "
