@@ -1,0 +1,29 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AD22.SOUND",
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00082CA6.SOUND",
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                },
+                "ChargeUpInterruptedSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AD25.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Spell"
+    }
+]

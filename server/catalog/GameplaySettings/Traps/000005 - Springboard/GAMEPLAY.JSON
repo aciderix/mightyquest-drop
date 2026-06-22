@@ -1,0 +1,135 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ConstructionPoints":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true,
+        "BuildXp":50
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts",
+        "OverrideAttackSettingsLootConfig":true,
+        "LootDropMinDistance":5,
+        "LootDropMaxDistance":6,
+        "LootRadius":0.25,
+        "LootDropSectorCircleArc":360,
+        "PVEDroppableLootTypeMask":0,
+        "PVPDroppableLootTypeMask":126
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":2,
+                "Height":0.25,
+                "Length":2,
+                "Y":0.125
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-0.5,
+        "FirstSectionCellOffsetY":-0.5,
+        "Width":2,
+        "Height":2,
+        "RoomBuildableType":"MineField",
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapSpec, HyperQuest.GameServer.Contracts",
+        "XpRewardShape":{
+            "$type":"HyperQuest.GameServer.Contracts.RectangularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Width":2,
+            "Height":2
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapStatsSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "TierModifiers":
+        [
+            {
+                "Tiers":
+                [
+                    1
+                ],
+                "AdditionalChildren":
+                [
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":92,
+                            "Name":"SpringBoard"
+                        },
+                        "Position":{
+                            "Y":0.05
+                        },
+                        "Orientation":{
+                            
+                        }
+                    }
+                ]
+            },
+            {
+                "Tiers":
+                [
+                    2
+                ],
+                "AdditionalChildren":
+                [
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":98,
+                            "Name":"SpringBoard2"
+                        },
+                        "Position":{
+                            "Y":0.05
+                        },
+                        "Orientation":{
+                            
+                        }
+                    }
+                ]
+            }
+        ],
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":10
+            },
+            {
+                "Tier":2,
+                "Level":22
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":6
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":2
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsOld":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":2,
+        "StartLength":2,
+        "EndLength":2,
+        "LocalStartOffsetX":-1,
+        "CollisionCheckInterval":-1
+    }
+]

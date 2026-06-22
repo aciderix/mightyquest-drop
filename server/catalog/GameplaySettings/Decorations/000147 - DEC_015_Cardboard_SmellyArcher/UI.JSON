@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_015_Cardboard_SmellyArcher",
+        "OasisName":15392,
+        "OasisDescription":15393
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_015_Cardboard_SmellyArcher.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_015_Cardboard_SmellyArcher.png",
+        "HeightOffset":2
+    }
+]

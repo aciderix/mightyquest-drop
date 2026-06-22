@@ -1,0 +1,27 @@
+{
+    "TemplateName": "Default Runaway",
+    "HeroSpecContainerId" : 5,
+    "Equipment" : {
+        "Back" : null,
+        "Body" : null,
+        "Finger1" : null,
+        "Hands" : null,
+        "Head" : null,
+        "MainHand" : null,
+        "Neck" : null,
+        "OffHand" : null,
+        "Shoulders" : null
+    },
+    "Level" : 1,
+    "EquippedSpells" :
+    [
+    ],
+    "EquippedConsumables":
+    [
+        {
+            "SlotIndex" : 0,
+            "TemplateId": 1
+        }
+    ],
+    "XP" : 0
+}

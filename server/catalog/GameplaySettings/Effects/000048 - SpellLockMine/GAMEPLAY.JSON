@@ -1,0 +1,64 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":83,
+                "Name":"SpellLockMineExplosion"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AiControllerSpec, HyperQuest.GameServer.Contracts",
+        "Behavior":{
+            "TargetDefinitions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.PresetTargetDefinitionSpec, HyperQuest.GameServer.Contracts",
+                    "PresetTargetDefinitionId":1,
+                    "Id":1,
+                    "_comment":"Target the hero"
+                }
+            ],
+            "Children":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DynamicSelectorBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "Children":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.TargetLabelSpec, HyperQuest.GameServer.Contracts",
+                                "TargetLabel":1
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionIdleBehaviorSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.5,
+                "Y":0.3,
+                "Yaw":90
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"FallenWarPriest_ImmolateBuff",
+        "OasisName":2237,
+        "OasisDescription":2238
+    }
+]

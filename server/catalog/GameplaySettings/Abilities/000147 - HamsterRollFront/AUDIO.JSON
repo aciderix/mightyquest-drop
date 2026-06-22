@@ -1,0 +1,25 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC05.SOUND",
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    
+                },
+                "RecoverSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002F73.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Fist"
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00003024.SOUND",
+            "FireAndForget":true
+        },
+        "BuffRemovedSound":{
+            
+        }
+    }
+]

@@ -1,0 +1,94 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Punching Cyclop",
+        "OasisName":15141,
+        "OasisDescription":15142
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Fists of Rage",
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11135,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":11136,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:A1",
+        "HeightOffset":3.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11136,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:offensiveBuff",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_OneEyeCyclop:A3"
+    }
+]

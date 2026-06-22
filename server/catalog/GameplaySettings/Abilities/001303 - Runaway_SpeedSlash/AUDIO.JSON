@@ -1,0 +1,37 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00087659.SOUND",
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Fist"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "LabelOperationSounds":
+        [
+            {
+                "OperationLabel":"PinballWoosh",
+                "Sound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00082658.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HeroMeleeAttack"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "SpecialWeaponEffectOasisId":14469,
+        "RemoveSpecialWeaponEffectOasisId":14470,
+        "TooltipWeaponDamageMultiplier":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "IconSynergyName":"UI_Inv_Icons_WeaponProperties:Hammer"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_LeagueReward_Boss_Gold",
+        "OasisName":16321,
+        "OasisDescription":16321
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/League_Reward_Boss.png",
+        "InvIconUrl":"icoShop\/deco\/League_Reward_Boss.png",
+        "HeightOffset":2
+    }
+]

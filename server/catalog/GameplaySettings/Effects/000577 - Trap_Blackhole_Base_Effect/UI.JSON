@@ -1,0 +1,6 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Trap_Blackhole_Base_Effect"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ChainSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DoorSpec, HyperQuest.GameServer.Contracts",
+        "DoorStateTriggers":{
+            
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.InteractiveSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TriggerSpec, HyperQuest.GameServer.Contracts"
+    }
+]

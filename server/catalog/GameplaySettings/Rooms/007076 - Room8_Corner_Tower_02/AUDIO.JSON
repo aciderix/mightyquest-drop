@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioRoomAmbienceSpec, HyperQuest.GameServer.Contracts",
+        "RoomAmbienceSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000875E5.SOUND"
+        }
+    }
+]

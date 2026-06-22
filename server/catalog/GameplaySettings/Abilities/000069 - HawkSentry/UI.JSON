@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HawkSentry",
+        "OasisName":203
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Sentry_Up.png",
+        "InvIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Sentry_Up.png",
+        "LayerName":"UI_Common_Hero002_SkillsIcons:Sentry"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":204,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"(6\/{0})*2",
+                        "FormulaParams":
+                        [
+                            "CollisionCheckInterval"
+                        ],
+                        "TaggedSpec":"Hawk Sentry number of missiles 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Hawk Sentry damage 1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":204,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"(6\/{0})*2",
+                        "FormulaParams":
+                        [
+                            "CollisionCheckInterval"
+                        ],
+                        "TaggedSpec":"Hawk Sentry number of missiles 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Hawk Sentry damage 2"
+                    }
+                ]
+            }
+        ]
+    }
+]

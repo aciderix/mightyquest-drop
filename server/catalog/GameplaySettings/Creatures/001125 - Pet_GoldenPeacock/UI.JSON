@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Pet_GoldenPeacock",
+        "OasisName":16153,
+        "OasisDescription":16154
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoInv\/pets\/PET_010_Peacock_M002.png",
+        "InvIconUrl":"icoShop\/pets\/PET_010_Peacock_M002.png"
+    }
+]

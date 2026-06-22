@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Fiery Weapon Dot 2",
+        "OasisName":2007,
+        "OasisDescription":2008
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/CREATUREDEBUFFS_FIREDAMAGE.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureDebuffs_fireDamage",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

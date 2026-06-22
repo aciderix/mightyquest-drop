@@ -1,0 +1,108 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":12,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":695,
+                                "Name":"Runaway_Pyrotechnics_BUF_1"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "ActiveTime":2.5,
+                "RecoverTime":0.8,
+                "RecoverInterruptWindow":0.8,
+                "CastCost":35,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":7
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":696,
+                                "Name":"Runaway_Pyrotechnics_BUF_2"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "ActiveTime":2.5,
+                "RecoverTime":0.8,
+                "RecoverInterruptWindow":0.8,
+                "CastCost":35,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":18
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":697,
+                                "Name":"Runaway_Pyrotechnics_BUF_3"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "ActiveTime":2.5,
+                "RecoverTime":0.8,
+                "RecoverInterruptWindow":0.8,
+                "CastCost":35,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":29
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

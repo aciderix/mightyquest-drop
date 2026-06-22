@@ -1,0 +1,85 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Hungerbot_Captain_Push",
+        "Scale":0.7,
+        "FxAttachmentScale":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualGameplayEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "Death":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B0E06DD5_AI933>FX_B0E06DD5_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":3,
+        "HitImpactHeight":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_699E13B3_AI145>ENTITY_699E13B3_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    }
+                ],
+                "_comment":"Specialization 2"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_699E13B3_AI145>ENTITY_699E13B3_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_699E13B3_AI145>ENTITY_699E13B3_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_699E13B3_AI145>ENTITY_699E13B3_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4248B624_AI145>ENTITY_4248B624_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4248B624_AI145>ENTITY_4248B624_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4248B624_AI145>ENTITY_4248B624_AI145.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    }
+                ],
+                "_comment":"Specialization 2"
+            }
+        ],
+        "BoostedVisual":{
+            "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4248B624_AI145>ENTITY_4248B624_AI145.ENTITY",
+            "BoostedEntityScaleIncrease":0.05
+        }
+    }
+]

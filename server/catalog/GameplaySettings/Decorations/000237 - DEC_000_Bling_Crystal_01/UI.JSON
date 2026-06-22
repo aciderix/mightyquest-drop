@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Bling_Crystal_01",
+        "OasisName":16614,
+        "OasisDescription":16263
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/League_Reward_Minion.png",
+        "InvIconUrl":"icoShop\/deco\/League_Reward_Minion.png",
+        "HeightOffset":2
+    }
+]

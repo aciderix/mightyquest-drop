@@ -1,0 +1,18 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_D1402F09_AI933>FX_D1402F09_AI933.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualVolumeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+            "VolumeName":"FX_WeaponVolume"
+        },
+        "Name":"VFX_WEAP_Double_O_Glow"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_28DB1D78.MATERIAL",
+        "NodeAttachment":{
+            
+        }
+    }
+]

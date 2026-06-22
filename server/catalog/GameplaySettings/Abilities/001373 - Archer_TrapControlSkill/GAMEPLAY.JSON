@@ -1,0 +1,147 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":4,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EntitySpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnableEntities":
+                            [
+                                {
+                                    "SpawnableEntitySpecContainerRefId":1089,
+                                    "Tier":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                        "ContextId":"SourceLevel"
+                                    },
+                                    "Position":{
+                                        "$type":"HyperQuest.GameServer.Contracts.TargetPositionVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.SpawnedTargetSpec, HyperQuest.GameServer.Contracts",
+                                            "SpecContainerReferenceId":44
+                                        }
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.TargetOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.SpawnedTargetSpec, HyperQuest.GameServer.Contracts",
+                                            "SpecContainerReferenceId":44
+                                        }
+                                    },
+                                    "IsDependentToSpawner":true,
+                                    "IsDestroyedWithSpawner":true,
+                                    "SaveSpawnedEntitySlot":"GhostHawk"
+                                }
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.UseAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+                            "AbilitySlotIndex":"Spell2",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.SavedTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Slot":"GhostHawk"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":203,
+                "OasisShortDescription":204,
+                "OasisLongDescription":384,
+                "Cooldown":0.5,
+                "PrepareTime":0.1,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.2,
+                "MaxDistance":17,
+                "EffectRadius":12,
+                "CastCost":40,
+                "AbilityCastType":"Area",
+                "IgnorePickedTarget":true,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":8
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EntitySpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnableEntities":
+                            [
+                                {
+                                    "SpawnableEntitySpecContainerRefId":1089,
+                                    "Tier":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                        "ContextId":"SourceLevel"
+                                    },
+                                    "Position":{
+                                        "$type":"HyperQuest.GameServer.Contracts.TargetPositionVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.SpawnedTargetSpec, HyperQuest.GameServer.Contracts",
+                                            "SpecContainerReferenceId":44
+                                        }
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.TargetOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.SpawnedTargetSpec, HyperQuest.GameServer.Contracts",
+                                            "SpecContainerReferenceId":44
+                                        }
+                                    },
+                                    "IsDependentToSpawner":true,
+                                    "IsDestroyedWithSpawner":true,
+                                    "SaveSpawnedEntitySlot":"GhostHawk"
+                                }
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.UseAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+                            "AbilitySlotIndex":"Spell2",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.SavedTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Slot":"GhostHawk"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":205,
+                "OasisShortDescription":206,
+                "OasisLongDescription":385,
+                "Cooldown":0.5,
+                "PrepareTime":0.1,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.2,
+                "MaxDistance":17,
+                "EffectRadius":12,
+                "CastCost":40,
+                "AbilityCastType":"Area",
+                "IgnorePickedTarget":true,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":20
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            }
+        ]
+    }
+]

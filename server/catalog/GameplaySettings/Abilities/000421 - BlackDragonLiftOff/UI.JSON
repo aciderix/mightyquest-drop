@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Charge",
+        "OasisName":25
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"ICONINV\/HEROES\/CHA001\/SKILLS\/SPELL_CHA_001_Charge_Up.png",
+        "InvIconUrl":"ICONINV\/HEROES\/CHA001\/SKILLS\/SPELL_CHA_001_Charge_Up.png",
+        "LayerName":"UI_Common_Hero001_SkillsIcons:Charge"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisManaBuilderDescription":8113,
+                "ManaBuilder":15,
+                "OasisDescription":26,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.05*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.45*herodps"
+                    }
+                ]
+            },
+            {
+                "OasisManaBuilderDescription":8113,
+                "ManaBuilder":15,
+                "OasisDescription":26,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.05*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.55*herodps"
+                    }
+                ]
+            },
+            {
+                "OasisManaBuilderDescription":8113,
+                "ManaBuilder":15,
+                "OasisDescription":26,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.05*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.65*herodps"
+                    }
+                ]
+            }
+        ]
+    }
+]

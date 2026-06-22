@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"GelatinousWall_BuildMode",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B2233DED_BC669>ENTITY_B2233DED_BC669.ENTITY",
+        "Scale":1.4,
+        "HideInModeMask":1
+    }
+]

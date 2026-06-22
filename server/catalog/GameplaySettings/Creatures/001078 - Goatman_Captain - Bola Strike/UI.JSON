@@ -1,0 +1,73 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Goatman_Captain_BolaStrike",
+        "OasisName":15402,
+        "OasisDescription":15403
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Goatman1.png",
+                        "NameOasisId":13312,
+                        "DescriptionOasisId":13313
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_Goatman:A3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Goatman\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Goatman\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Goatman:A1",
+        "HeightOffset":1.9
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DamageModifierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Modifier":{
+                    "$type":"HyperQuest.GameServer.Contracts.BasicDamageModifierSpec, HyperQuest.GameServer.Contracts",
+                    "DamageSourceTypeFilter":8,
+                    "Multiplier":{
+                        "$type":"HyperQuest.GameServer.Contracts.RescaleAndClampValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                            "ContextId":"SourceLifeRatio"
+                        },
+                        "Min":{
+                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                            "Value":0.25
+                        },
+                        "Max":{
+                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                            "Value":1
+                        },
+                        "NewMin":{
+                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                            "Value":-1
+                        },
+                        "NewMax":{
+                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                            "Value":-0.5
+                        }
+                    },
+                    "Priority":1
+                },
+                "UpdateModifierInterval":0.1
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "IsDispellable":false,
+        "Flags":10,
+        "IsLinkedToCreator":true,
+        "IsHidden":true
+    }
+]

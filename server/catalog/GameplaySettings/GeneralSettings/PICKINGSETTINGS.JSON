@@ -1,0 +1,12 @@
+{
+    "GameEntityTypePriorities":
+    { 
+      "Creature":10, 
+      "Trap":10, 
+      "Hero":10, 
+      "Missile":20, 
+      "Room":15, 
+      "Effect":15, 
+      "Decoration":15
+    }
+}

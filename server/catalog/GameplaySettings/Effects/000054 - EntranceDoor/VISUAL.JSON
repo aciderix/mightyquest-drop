@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ENTRANCEDOOR",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_E855A2D6>ENTITY_E855A2D6.ENTITY"
+    }
+]

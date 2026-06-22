@@ -1,0 +1,148 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":120
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/home"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetCastleRenovationLevelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "CastleRenovationLevel":"RenovationLevel1",
+                "StartDelay":1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ActivateDeactivatePickingAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "TargetEntitySearch":{
+                    "GameEntityTypeMask":128,
+                    "Selections":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainerType":"Effect",
+                            "SpecContainerIds":
+                            [
+                                571
+                            ]
+                        }
+                    ]
+                },
+                "Activate":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ActivateDeactivatePickingAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "TargetEntitySearch":{
+                    "TargetType": "Hero"
+                },
+                "Activate": false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"50031",
+                "Text":"Great! You're ready to start building! ",
+                "TextOasisId":16478,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"Great! You're ready to start building! ",
+                            "TextOasisId":16478,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5A2.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "StartDelay":1,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"50031"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    5
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"50033",
+                "Title":"Attack Arrow",
+                "Type":"Arrow",
+                "GameButtonId":"None",
+                "PositionElementId":"#lobby-index-attackButton",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-120
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ActivateDeactivatePickingAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "TargetEntitySearch":{
+                    "GameEntityTypeMask":128,
+                    "Selections":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainerType":"Effect",
+                            "SpecContainerIds":
+                            [
+                                571
+                            ]
+                        }
+                    ]
+                },
+                "Activate":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ActivateDeactivatePickingAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "TargetEntitySearch":{
+                    "TargetType": "Hero"
+                },
+                "Activate": true
+            }
+        ]
+    }
+]

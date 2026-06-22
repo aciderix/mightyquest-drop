@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blob_LimitedEdition_Fire_LavaWallBuff",
+        "OasisName":16390,
+        "OasisDescription":16390
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"UI\/Hud\/BuffDebuffIcons\/heroDebuffs_riskTaker.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_riskTaker",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

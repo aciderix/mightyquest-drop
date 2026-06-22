@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HellHoundBreathDebuff",
+        "OasisName":2171,
+        "OasisDescription":2172
+    }
+]

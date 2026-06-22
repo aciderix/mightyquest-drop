@@ -1,0 +1,41 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Worker's Cabin",
+        "OasisName":11258
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiBuildingInfoSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/buildings\/BUILDING_WORKERSCABIN_01.png",
+        "InvIconUrl":"icoInv\/buildings\/BUILDING_WORKERSCABIN_01.png",
+        "DescriptionOasisId":10961,
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUILDING_WORKERSCABIN_01.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUILDING_WORKERSCABIN_01.png",
+                "LayerName":"icoShop_buildings:WorkersCabin_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUILDING_WORKERSCABIN_02.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUILDING_WORKERSCABIN_02.png",
+                "LayerName":"icoShop_buildings:WorkersCabin_02"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUILDING_WORKERSCABIN_03.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUILDING_WORKERSCABIN_03.png",
+                "LayerName":"icoShop_buildings:WorkersCabin_03"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUILDING_WORKERSCABIN_04.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUILDING_WORKERSCABIN_04.png",
+                "LayerName":"icoShop_buildings:WorkersCabin_04"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUILDING_WORKERSCABIN_05.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUILDING_WORKERSCABIN_05.png",
+                "LayerName":"icoShop_buildings:WorkersCabin_05"
+            }
+        ]
+    }
+]

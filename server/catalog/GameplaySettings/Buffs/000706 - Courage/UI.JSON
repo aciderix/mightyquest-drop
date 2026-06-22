@@ -1,0 +1,18 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Courage",
+        "OasisName":13570,
+        "OasisDescription":13571
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/heroBuffs_courage.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_courage",
+        "TileAnimationType":"verticalTopToBottom",
+        "StackCountOverride":{
+            "$type":"HyperQuest.GameServer.Contracts.SavedValueSpec, HyperQuest.GameServer.Contracts",
+            "Slot":"CourageValue"
+        }
+    }
+]

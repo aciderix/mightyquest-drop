@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Epiphany4",
+        "OasisName":1993,
+        "OasisDescription":1994
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HEROBUFFS_FLAMECOAT.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_flameCoat",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

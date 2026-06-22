@@ -1,0 +1,194 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":8,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":401,
+                                "Name":"Mage_UmbralCharge_Immunity"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Movement":{
+                                "ForceNewMoveInsteadOfReEnteringSameOne":true,
+                                "MoveStyle":{
+                                    "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":6
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceCastOrientation"
+                                    },
+                                    "Speed":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":12
+                                    }
+                                },
+                                "IgnoreMovementReduction":true,
+                                "Collision":{
+                                    "CheckCollision":true,
+                                    "CollisionShape":{
+                                        "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                                        "Radius":0.8,
+                                        "X":0.8
+                                    },
+                                    "CollisionMask":8,
+                                    "CollisionAllianceFilter":4,
+                                    "OnEnteringCollisionOperations":{
+                                        "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Operations":
+                                        [
+                                            {
+                                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                                "Buff":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                    "SpecContainerReferenceId":663,
+                                                    "Name":"CHA_003_Shocked_Debuff"
+                                                },
+                                                "Target":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":9815,
+                "OasisShortDescription":9816,
+                "OasisLongDescription":9816,
+                "Cooldown":0.1,
+                "StartCooldownIfInterrupted":true,
+                "ActiveTime":0.37,
+                "RecoverTime":0.1,
+                "RecoverInterruptWindow":0.05,
+                "MaxDistance":5,
+                "CastCost":30,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":5
+                },
+                "NeedFacingTarget":false,
+                "MaximumPrepareRotationDuration":0.1,
+                "HoldAndCast":true,
+                "PickingStyle":"Ground"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":401,
+                                "Name":"Mage_UmbralCharge_Immunity"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Movement":{
+                                "ForceNewMoveInsteadOfReEnteringSameOne":true,
+                                "MoveStyle":{
+                                    "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":6
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceCastOrientation"
+                                    },
+                                    "Speed":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":12
+                                    }
+                                },
+                                "IgnoreMovementReduction":true,
+                                "Collision":{
+                                    "CheckCollision":true,
+                                    "CollisionShape":{
+                                        "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                                        "Radius":0.8
+                                    },
+                                    "CollisionMask":8,
+                                    "CollisionAllianceFilter":4,
+                                    "OnEnteringCollisionOperations":{
+                                        "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Operations":
+                                        [
+                                            {
+                                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                                "Buff":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                    "SpecContainerReferenceId":663,
+                                                    "Name":"CHA_003_Shocked_Debuff"
+                                                },
+                                                "Target":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":9817,
+                "OasisShortDescription":9816,
+                "OasisLongDescription":9816,
+                "Cooldown":0.1,
+                "StartCooldownIfInterrupted":true,
+                "ActiveTime":0.37,
+                "RecoverTime":0.1,
+                "RecoverInterruptWindow":0.05,
+                "MaxDistance":5,
+                "CastCost":30,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":19
+                },
+                "NeedFacingTarget":false,
+                "MaximumPrepareRotationDuration":0.1,
+                "HoldAndCast":true,
+                "PickingStyle":"Ground"
+            }
+        ]
+    }
+]

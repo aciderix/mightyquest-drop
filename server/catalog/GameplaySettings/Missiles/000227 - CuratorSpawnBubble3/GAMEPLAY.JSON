@@ -1,0 +1,52 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MissileSpec, HyperQuest.GameServer.Contracts",
+        "Movement":{
+            "MoveStyle":{
+                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                "Distance":{
+                    "$type":"HyperQuest.GameServer.Contracts.AddValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value1":{
+                        "$type":"HyperQuest.GameServer.Contracts.VectorNormValueSpec, HyperQuest.GameServer.Contracts",
+                        "Vector":{
+                            "$type":"HyperQuest.GameServer.Contracts.DiffVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Value1":{
+                                "$type":"HyperQuest.GameServer.Contracts.TargetPositionVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ControlledEffectTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "Value2":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            }
+                        }
+                    },
+                    "Value2":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":-1.62
+                    }
+                },
+                "Speed":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":25
+                }
+            },
+            "CanExitNavMesh":true,
+            "IgnoreMovementReduction":true,
+            "OnStopOperations":{
+                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                "Operations":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DestroyOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

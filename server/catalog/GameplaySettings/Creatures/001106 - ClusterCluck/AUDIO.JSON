@@ -1,0 +1,33 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Claw"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000820D8.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000820D8.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000820F0.SOUND"
+        },
+        "AttackImpactSoundLevelsProfileType":"Default"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_034_00_Death01":"Regular_Layer",
+            "CHA_034_00_Attack02":"Turkey_Layer",
+            "CHA_034_00_Attack01":"Turkey_Layer",
+            "CHA_034_00_Wait02":"Turkey_Layer",
+            "CHA_034_00_Wait03":"Turkey_Layer",
+            "CHA_034_IT_Drag01":"Turkey_Layer",
+            "CHA_034_IT_Drop01":"Turkey_Layer",
+            "CHA_034_IT_Purchase01":"Regular_Layer"
+        }
+    }
+]

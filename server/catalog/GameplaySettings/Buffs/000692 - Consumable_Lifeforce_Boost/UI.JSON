@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Life force boost",
+        "OasisName":11416,
+        "OasisDescription":11414
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/LLIFEFORCEBOOST.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:llifeForceBoost",
+        "TileAnimationType":"verticalTopToBottom",
+        "IsRatioFixedInAttack":true
+    }
+]

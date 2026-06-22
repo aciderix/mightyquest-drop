@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GoldPathSpec, HyperQuest.GameServer.Contracts",
+        "TotalAmount":{
+            "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+            "ContextId":"TreasureGold"
+        },
+        "MaximumDropValue":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":50
+        },
+        "Length":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":7
+        },
+        "Width":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.75
+        },
+        "DropLocationsAlongLengthCount":20,
+        "DropLocationsAlongWidthCount":5
+    }
+]

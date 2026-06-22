@@ -1,0 +1,35 @@
+{
+    "PredefinedComments":
+    [
+        {
+            "LayerName":"UI_Common_placeholderIcons:Layer 14",
+            "ShortDescriptionOasisID":15223,
+            "CommentTextOasisIDs":[]
+        },
+        {
+            "LayerName":"UI_Common_placeholderIcons:Layer 15",
+            "ShortDescriptionOasisID":15224,
+            "CommentTextOasisIDs":[15229]
+        },
+        {
+            "LayerName":"UI_Common_placeholderIcons:Layer 16",
+            "ShortDescriptionOasisID":15225,
+            "CommentTextOasisIDs":[15230]
+        },
+        {
+            "LayerName":"UI_Common_placeholderIcons:Layer 17",
+            "ShortDescriptionOasisID":15226,
+            "CommentTextOasisIDs":[15231]
+        },
+        {
+            "LayerName":"UI_Common_placeholderIcons:z copy 2",
+            "ShortDescriptionOasisID":15227,
+            "CommentTextOasisIDs":[15232]
+        },
+        {
+            "LayerName":"UI_Common_placeholderIcons:Layer 18",
+            "ShortDescriptionOasisID":15228,
+            "CommentTextOasisIDs":[15233]
+        }
+    ]
+}

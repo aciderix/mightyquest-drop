@@ -1,0 +1,358 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":5.6,
+        "StartLength":2.4,
+        "EndLength":2.4,
+        "LocalStartOffsetX":-1.2,
+        "GameEntityTypeMask":-981,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":8
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":888,
+                        "Name":"Trap_IceWall_SlowBuff"
+                    },
+                    "Label":"Label3",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                        "SpecContainersIds":
+                        [
+                            1144,
+                            1145,
+                            1146
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "_comment":"Is it a Ice blob? If yes, check for which buff to give. If not, do health drain buff."
+                    },
+                    "OperationsIfSuccess":{
+                        "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                        "ConditionOperation":{
+                            "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainersIds":
+                            [
+                                1144
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "_comment":"is this fire blob original? if yes, buff."
+                        },
+                        "OperationsIfSuccess":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":889,
+                                "Name":"Blob_LimitedEdition_Ice_IceWallBuff"
+                            },
+                            "BakedSpellInfo":{
+                                
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "OperationsIfFailure":{
+                            "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                            "ConditionOperation":{
+                                "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                                "SpecContainersIds":
+                                [
+                                    1145
+                                ],
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                },
+                                "_comment":"is it respawn 1? if yes use buff respawn 1"
+                            },
+                            "OperationsIfSuccess":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Buff":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":890,
+                                    "Name":"Blob_LimitedEdition_Ice_IceWallBuff_Smaller"
+                                },
+                                "BakedSpellInfo":{
+                                    
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "OperationsIfFailure":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Buff":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":891,
+                                    "Name":"Blob_LimitedEdition_Ice_IceWallBuff_Tiny"
+                                },
+                                "BakedSpellInfo":{
+                                    
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "_comment":"Then its respawn 2. use buff respawn 2"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Operations":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Buff":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":892,
+                                    "Name":"Trap_IceWall_VulnerabilityBuff"
+                                },
+                                "Label":"Label3",
+                                "BakedSpellInfo":{
+                                    
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Buff":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":895,
+                                    "Name":"Trap_IceWall_ManaDrainBuff"
+                                },
+                                "Label":"Label3",
+                                "BakedSpellInfo":{
+                                    
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "BuffSpecContainerId":896
+                    },
+                    "RemoveBuffFromAllCreators":true,
+                    "BakedSpellInfo":{
+                        
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "BuffSpecContainerId":897
+                    },
+                    "RemoveBuffFromAllCreators":true,
+                    "BakedSpellInfo":{
+                        
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+            "ConditionOperation":{
+                "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                "BuffReference":{
+                    "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                    "Label":"Label3"
+                },
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                }
+            },
+            "OperationsIfSuccess":{
+                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                "Operations":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                        "ConditionOperation":{
+                            "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainersIds":
+                            [
+                                1144,
+                                1145,
+                                1146
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "OperationsIfFailure":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":896,
+                                        "Name":"Trap_IceWall_VulnerabilityBuff_WithDuration"
+                                    },
+                                    "Label":"Label5",
+                                    "BakedSpellInfo":{
+                                        
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":897,
+                                        "Name":"Trap_IceWall_Weakness_WithDuration"
+                                    },
+                                    "Label":"Label5",
+                                    "BakedSpellInfo":{
+                                        
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "OnDeactivateOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableTrapPowerStateChangeSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourceOwner"
+                    }
+                }
+            ]
+        },
+        "OnUpdateDisableOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "Label":"Label3"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "BuffReference":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                            "Label":"Label3"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfSuccess":{
+                        "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Operations":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                                "ConditionOperation":{
+                                    "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "SpecContainersIds":
+                                    [
+                                        1144,
+                                        1145,
+                                        1146
+                                    ],
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                "OperationsIfFailure":{
+                                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Operations":
+                                    [
+                                        {
+                                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                            "Buff":{
+                                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                "SpecContainerReferenceId":896,
+                                                "Name":"Trap_IceWall_VulnerabilityBuff_WithDuration"
+                                            },
+                                            "Label":"Label5",
+                                            "BakedSpellInfo":{
+                                                
+                                            },
+                                            "Target":{
+                                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                            }
+                                        },
+                                        {
+                                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                            "Buff":{
+                                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                "SpecContainerReferenceId":897,
+                                                "Name":"Trap_IceWall_Weakness_WithDuration"
+                                            },
+                                            "Label":"Label5",
+                                            "BakedSpellInfo":{
+                                                
+                                            },
+                                            "Target":{
+                                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StateMachineSpec, HyperQuest.GameServer.Contracts"
+    }
+]

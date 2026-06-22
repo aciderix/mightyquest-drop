@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Culture_Fences_Corner_01",
+        "OasisName":16655,
+        "OasisDescription":15108
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Culture_Fences_Corner_01.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Culture_Fences_Corner_01.png",
+        "HeightOffset":2
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Corner_Garden_01",
+        "OasisName":14845,
+        "OasisDescription":15722
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Corner_Garden_01.png",
+        "InvIconUrl":"icoInv\/rooms\/Corner_Garden_01.png",
+        "LayerName":"icoShop_rooms:Corner_Garden_01"
+    }
+]

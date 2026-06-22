@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioPersistentEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "CreateSound":{
+            
+        },
+        "DestroySound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00083216.SOUND",
+            "FireAndForget":true
+        }
+    }
+]

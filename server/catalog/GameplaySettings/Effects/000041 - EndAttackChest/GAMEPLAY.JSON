@@ -1,0 +1,72 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":1.5,
+                "Height":0.2,
+                "Y":0.7
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.InteractiveSpec, HyperQuest.GameServer.Contracts",
+        "Distance":2.5,
+        "MustBeAsCloseAsPossible":true,
+        "InteractionPointOffset":{
+            "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+            "Front":1
+        },
+        "InteractorOrientation":{
+            "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+            "Context":"SourceToTargetOrientation"
+        },
+        "InteractiveDuration":1.2,
+        "InteractorDuration":1.2,
+        "InteractionActivationTrigger":"DoneByCode",
+        "StartOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "OperationLabel":"Chest_Opening"
+        },
+        "IsInteractorInvincibleDuringInteraction":true,
+        "ResetToPreviousInvincibilityStateAfterInteraction":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Thickness":1.5,
+        "Height":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts",
+        "OverrideAttackSettingsLootConfig":true,
+        "LootDropMinDistance":3,
+        "LootDropMaxDistance":3.5,
+        "LootRadius":0.25,
+        "LootDelayBetweenEachDrop":0.05,
+        "LootDropSectorCircleArc":120,
+        "LootDropSectorCircleArcStartAngle":-60
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TreasureChestSpec, HyperQuest.GameServer.Contracts",
+        "DelayBeforeDroppingLoot":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":6,
+        "EndRadius":6,
+        "TouchedEntitiesType":2,
+        "OnEnterMaxActivation":1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.SendEventOperationSpec, HyperQuest.GameServer.Contracts",
+                    "EventName":"EnteredTreasureChestZone"
+                }
+            ]
+        }
+    }
+]

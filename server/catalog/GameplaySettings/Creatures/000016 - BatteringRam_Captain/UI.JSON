@@ -1,0 +1,84 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Ram",
+        "OasisName":1265,
+        "OasisDescription":1266
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_012_Branded_01.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_012_Branded_01.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:Branded_01",
+        "HeightOffset":1.2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Charge",
+                    "OasisName":7593
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Fire Trail",
+                    "OasisName":7635
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "OnlyForTiers":
+                [
+                    4
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11224,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_012_BRANDED_01.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_012_BRANDED_01.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Branded_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_012_BRANDED_01.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_012_BRANDED_01.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Branded_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_012_BRANDED_01.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_012_BRANDED_01.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Branded_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_012_BRANDED_02.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_012_BRANDED_02.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Branded_02"
+            }
+        ]
+    }
+]

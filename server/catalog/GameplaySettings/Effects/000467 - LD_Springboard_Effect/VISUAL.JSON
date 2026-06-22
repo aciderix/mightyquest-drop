@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LD_Springboard_Effect",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_14194788_AH273>ENTITY_14194788_AH273.ENTITY"
+    }
+]

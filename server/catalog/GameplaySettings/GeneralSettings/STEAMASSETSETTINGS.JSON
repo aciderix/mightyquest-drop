@@ -1,0 +1,79 @@
+{
+    "SteamAssetContextSettings":
+    [
+        {
+            "ItemType":"HeroEquipmentItem",
+            "UserFacing":true,
+            "Name":{
+                "DebugName":"Equipment",
+                "OasisName":314,
+                "OasisDescription":314
+            }
+        },
+        {
+            "ItemType":"Consumable",
+            "UserFacing":true,
+            "Name":{
+                "DebugName":"Consumable",
+                "OasisName":8232,
+                "OasisDescription":8232
+            }
+        },
+        {
+            "ItemType":"Creature",
+            "UserFacing":true,
+            "Name":{
+                "DebugName":"Creature",
+                "OasisName":8234,
+                "OasisDescription":8234
+            }
+        },
+        {
+            "ItemType":"Trap",
+            "UserFacing":true,
+            "Name":{
+                "DebugName":"Trap",
+                "OasisName":8235,
+                "OasisDescription":8235
+            }
+        },
+        {
+            "ItemType":"CastleTheme",
+            "UserFacing":true,
+            "Name":{
+                "DebugName":"CastleTheme",
+                "OasisName":13202,
+                "OasisDescription":13202
+            }
+        },
+        {
+            "ItemType":"Decoration",
+            "UserFacing":true,
+            "Name":{
+                "DebugName":"Decoration",
+                "OasisName":8233,
+                "OasisDescription":8233
+            }
+        }
+    ],
+    
+    "TagCategorySettings":
+    [
+        {
+            "Id": 1,
+            "Name":
+            {
+                "DebugName": "Type",
+                "OasisName": 0
+            }
+        },
+        {
+            "Id": 2,
+            "Name":
+            {
+                "DebugName": "Behavior",
+                "OasisName": 0
+            }
+        }
+    ]
+}

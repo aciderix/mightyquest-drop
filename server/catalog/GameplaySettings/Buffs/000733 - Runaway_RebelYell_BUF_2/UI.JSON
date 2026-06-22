@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Rebel Yell BUF 2",
+        "OasisName":13728,
+        "OasisDescription":13729
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HEROBUFFS_REBELYELL.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_rebelYell",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

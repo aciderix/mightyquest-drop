@@ -1,0 +1,29 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Gelatinous Wall",
+        "OasisName":1639,
+        "OasisDescription":1640
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/TRA_011_GelatinousWall01.png",
+        "InvIconUrl":"icoInv\/traps\/TRA_011_GelatinousWall01.png",
+        "LayerName":"UI_Common_TrapsIcons:GelatinousWall_01"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"wall",
+                    "OasisName":7682
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/snareEffect.png"
+                }
+            }
+        ]
+    }
+]

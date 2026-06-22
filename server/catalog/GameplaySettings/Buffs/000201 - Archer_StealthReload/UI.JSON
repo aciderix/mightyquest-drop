@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Archer_StealthReload",
+        "OasisName":2269,
+        "OasisDescription":2270
+    }
+]

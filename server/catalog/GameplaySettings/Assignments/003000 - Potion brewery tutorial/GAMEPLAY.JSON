@@ -1,0 +1,511 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.BuildingUpgradeCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "BuildingSpecContainerIds":
+            [
+                8
+            ],
+            "MinRank":1,
+            "MaxRank":1
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/build"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ChangeBuildInteractionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DeleteInteractionState":{
+                    "GameEntityTypeMask":1023
+                },
+                "PickupInteractionState":{
+                    "GameEntityTypeMask":1023
+                },
+                "RotateInteractionState":{
+                    "GameEntityTypeMask":1023
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chat"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"shop"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"ShopPc"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OverrideCameraOcclusionFlagsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Enable":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisabledMouseButtonMask":2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    99
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    5,
+                    15,
+                    34,
+                    50,
+                    53,
+                    54,
+                    55,
+                    59,
+                    62,
+                    64,
+                    70,
+                    71,
+                    72,
+                    73,
+                    75,
+                    76,
+                    77,
+                    78,
+                    130,
+                    131,
+                    132,
+                    139,
+                    145,
+                    181,
+                    80,
+                    85
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    129
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":128,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveUnlockClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000001",
+                "Type":"Arrow",
+                "GameButtonId":"BuildingNavBarButtonPotionBrewery",
+                "PositionElementId":"#modules-building-nav-bar .shortcut-container .action.type-8.tooltip-base-container",
+                "OffsetTop":10,
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MinLevel":1,
+                        "MaxLevel":2
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UnlockCamera":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Movement":{
+                    "End":{
+                        "$type":"HyperQuest.GameServer.Contracts.SelectionsCameraPositionSpec, HyperQuest.GameServer.Contracts",
+                        "Selections":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                                "SpecContainerType":"Building",
+                                "SpecContainerIds":
+                                [
+                                    3
+                                ]
+                            }
+                        ],
+                        "Zoom":0.2,
+                        "IgnoreNearestZoomLevel":true
+                    },
+                    "Duration":2.5,
+                    "EaseInOut":-1
+                },
+                "Duration":2.5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    85
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    1
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000002",
+                "HideOverlay":true,
+                "Title":"Upgrade your castle heart",
+                "TitleOasisId":15680,
+                "Text":"Upgrade your Castle Heart to unlock the Potion Brewery.",
+                "TextOasisId":15681,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MinLevel":1,
+                        "MaxLevel":2
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"buildingUpgradePopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MinLevel":1,
+                        "MaxLevel":2
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleLevelUpAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Level":3
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    8
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"shop"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"ShopPc"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"RenovateBuildingPanel"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000003",
+                "Text":"A hearty congratulations my friend. An UPGRADED heart that is. You have just earned access to the Potion Brewery.",
+                "TextOasisId":15491,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15491,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008AB7E.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-150,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"300000003"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ShowShopItemsOnlyAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "IsDisabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetBuildToolModeAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000004",
+                "Title":"Brewing up a potion",
+                "TitleOasisId":11242,
+                "Text":"Click on the potion brewery. Lets get cooking",
+                "TextOasisId":11241,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"AttackConsumables"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000005",
+                "Type":"Arrow",
+                "GameButtonId":"BuildingNavBarButtonPotionBrewery",
+                "PositionElementId":"#modules-building-nav-bar .shortcut-container .action.type-8.tooltip-base-container",
+                "OffsetTop":10,
+                "ArrowDirection":"Up",
+                "StartType":"WithPrevious",
+                "StartDelay":1,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"AttackConsumables"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisabledMouseButtonMask":3
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000006",
+                "Title":"Buy potion",
+                "TitleOasisId":11242,
+                "Text":"Buy potion text",
+                "TextOasisId":11244,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"BottomCenter",
+                "OffsetTop":-165,
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"Consumable",
+                        "ItemId":1
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"300000007",
+                "Type":"Arrow",
+                "ShopItemDefinition":{
+                    "ItemType":"Consumable",
+                    "ItemId":1
+                },
+                "PositionElementId":"#module-shop-content-shopitem-4-1-5",
+                "OffsetTop":10,
+                "ArrowDirection":"Up",
+                "StartType":"WithPrevious",
+                "StartDelay":1,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"shopConfirmationPopup"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"Consumable",
+                        "ItemId":1
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CompleteObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":128,
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayObjectiveCompletedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":128,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"objectivePopup"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UnlockCamera":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    86,
+                    89
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ChangeBuildInteractionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DeleteInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                },
+                "PickupInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                },
+                "RotateInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OverrideCameraOcclusionFlagsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

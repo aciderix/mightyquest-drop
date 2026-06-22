@@ -1,0 +1,213 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts",
+        "DamageFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_0FAD2FDD_BD346>SPECIALFX_0FAD2FDD_BD346.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Duration":0.15
+            }
+        ],
+        "OwnerWeaponQualityDamageFxList":
+        {
+            "Legendary":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_E0CD47B1_BD346>SPECIALFX_E0CD47B1_BD346.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                        "NodeAttachment":{
+                            
+                        },
+                        "Duration":0.15
+                    }
+                ]
+            },
+            "Epic":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_8125772D_BD346>SPECIALFX_8125772D_BD346.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                        "NodeAttachment":{
+                            
+                        },
+                        "Duration":0.15
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_CB6552F7_AI933.MATERIAL",
+                "Length":10,
+                "SegmentLifeTime":0.25,
+                "FadeOutTime":0.1,
+                "FadeOutDistance":0.1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetY":0.02,
+                            "OffsetZ":0.1
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailTop",
+                            "OffsetY":0.02,
+                            "OffsetZ":-0.05
+                        }
+                    ]
+                },
+                "ForcePlayUntilFxFinished":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_A0E8D453_BA618>SPECIAL EFFECT_A0E8D453_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":0.35,
+                "ForcePlayUntilFxFinished":true
+            }
+        ],
+        "OwnerWeaponQualityPersistentFxList":
+        {
+            "Legendary":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_EDD44BAB_BD346.MATERIAL",
+                        "Length":20,
+                        "SegmentLifeTime":0.25,
+                        "FadeOutTime":0.1,
+                        "FadeOutDistance":0.1,
+                        "Attachment":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                            "Volumes":
+                            [
+                                {
+                                    "VolumeName":"FX_WeaponTrailMiddle",
+                                    "OffsetY":0.02,
+                                    "OffsetZ":0.22
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailTop",
+                                    "OffsetY":0.02,
+                                    "OffsetZ":-0.1
+                                }
+                            ]
+                        },
+                        "ForcePlayUntilFxFinished":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_A0E8D453_BA618>SPECIAL EFFECT_A0E8D453_BA618.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Scale":0.5,
+                        "ForcePlayUntilFxFinished":true
+                    }
+                ]
+            },
+            "Epic":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_CBAE24A8_BD346.MATERIAL",
+                        "Length":30,
+                        "SegmentLifeTime":0.25,
+                        "FadeOutTime":0.1,
+                        "FadeOutDistance":0.1,
+                        "Attachment":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                            "Volumes":
+                            [
+                                {
+                                    "VolumeName":"FX_WeaponTrailMiddle",
+                                    "OffsetY":0.02,
+                                    "OffsetZ":0.22
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailTop",
+                                    "OffsetY":0.02,
+                                    "OffsetZ":-0.1
+                                }
+                            ]
+                        },
+                        "ForcePlayUntilFxFinished":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_009F0A9E_BD346>SPECIALFX_009F0A9E_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "ForcePlayUntilFxFinished":true
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_73112573>SPECIALFX_73112573.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachFxOn":"Target"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_BAMIS_MachineBolt",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_4BD7BC07_AG596>MESH_4BD7BC07_AG596.MESH",
+        "Scale":0.65
+    }
+]

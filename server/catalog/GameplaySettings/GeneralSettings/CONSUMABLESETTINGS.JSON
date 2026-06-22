@@ -1,0 +1,1812 @@
+{
+    "TemplateList":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":2000,
+            "AbilityId":20,
+            "MinLevelRequirement":1,
+            "TemplateId":1,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/healthLevel1_up.png",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel1_up.png",
+                "LayerName":"icoShop_consumables:MinorPotion"
+            },
+            "Name":{
+                "DebugName":"Minor Health Potion",
+                "OasisName":8026,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":3000,
+            "AbilityId":20,
+            "MinLevelRequirement":3,
+            "TemplateId":2,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/healthLevel6_up.png",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel6_up.png",
+                "LayerName":"icoShop_consumables:Potion"
+            },
+            "Name":{
+                "DebugName":"Health Potion",
+                "OasisName":10873,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":8,
+            "BuildingRequirementRank":2,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":5200,
+            "AbilityId":20,
+            "MinLevelRequirement":9,
+            "TemplateId":3,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/healthLevel11_up.png",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel11_up.png",
+                "LayerName":"icoShop_consumables:PotentPotion"
+            },
+            "Name":{
+                "DebugName":"Potent Health Potion",
+                "OasisName":10874,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":8,
+            "BuildingRequirementRank":3,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":8000,
+            "AbilityId":20,
+            "MinLevelRequirement":15,
+            "TemplateId":4,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/healthLevel16_up.png",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel16_up.png",
+                "LayerName":"icoShop_consumables:GreaterPotion"
+            },
+            "Name":{
+                "DebugName":"Greater Health Potion",
+                "OasisName":9692,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":8,
+            "BuildingRequirementRank":4,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":12000,
+            "AbilityId":20,
+            "MinLevelRequirement":21,
+            "TemplateId":5,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/healthLevel21_up.png",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel21_up.png",
+                "LayerName":"icoShop_consumables:SuperiorPotion"
+            },
+            "Name":{
+                "DebugName":"Superior Health Potion",
+                "OasisName":10875,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":8,
+            "BuildingRequirementRank":5,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":18000,
+            "AbilityId":20,
+            "MinLevelRequirement":27,
+            "TemplateId":6,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/healthLevel26_up.png",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel26_up.png",
+                "LayerName":"icoShop_consumables:MightyPotion"
+            },
+            "Name":{
+                "DebugName":"Mighty Health Potion",
+                "OasisName":9693,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":8,
+            "BuildingRequirementRank":6,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.MagicFindBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedChance":1,
+            "BuffSpecContainerId":690,
+            "Duration":"1h",
+            "TemplateId":7,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/chanceLoot.png",
+                "InvIconUrl":"icoInv\/consumables\/chanceLoot.png",
+                "LayerName":"icoShop_consumables:chanceLoot"
+            },
+            "Name":{
+                "DebugName":"Loot chance",
+                "OasisName":9874,
+                "OasisDescription":9875
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.LifeForceBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "AttackIncreasedLifeForce":1,
+            "MineIncreasedLifeForce":1,
+            "BuffSpecContainerId":692,
+            "Duration":"1h",
+            "TemplateId":8,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/iconShop_lifeForceBoost.png",
+                "InvIconUrl":"icoInv\/consumables\/LifeForceBoost.png",
+                "LayerName":"icoShop_consumables:LifeForceBoost"
+            },
+            "Name":{
+                "DebugName":"Life force boost",
+                "OasisName":11416,
+                "OasisDescription":11414
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.GoldBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "AttackIncreasedGold":1,
+            "MineIncreasedGold":1,
+            "BuffSpecContainerId":691,
+            "Duration":"1h",
+            "TemplateId":9,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/iconShop_goldBoost.png",
+                "InvIconUrl":"icoInv\/consumables\/goldBoost.png",
+                "LayerName":"icoShop_consumables:goldBoost"
+            },
+            "Name":{
+                "DebugName":"Gold boost",
+                "OasisName":11415,
+                "OasisDescription":11413
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":1,
+            "BuffSpecContainerId":693,
+            "Duration":"1h",
+            "TemplateId":10,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/xpBoost_1h.png",
+                "InvIconUrl":"icoInv\/consumables\/xpBoost_1h.png",
+                "LayerName":"icoShop_consumables:xpBoost_1h",
+                "InvLayerName":"icoInv_consumables:xpBoost_1h"
+            },
+            "Name":{
+                "DebugName":"XP boost",
+                "OasisName":11576,
+                "OasisDescription":11577
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CastleDPSBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedDPS":0.25,
+            "BuffSpecContainerId":694,
+            "Duration":"1d",
+            "TemplateId":11,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/BOOSTCASTLECREATURE.png",
+                "InvIconUrl":"icoInv\/consumables\/boostCastleCreature.png",
+                "LayerName":"icoShop_consumables:CastleBoostCreature",
+                "InvLayerName":"icoInv_consumables:boostCastleCreature"
+            },
+            "Name":{
+                "DebugName":"Castle DPS boost",
+                "OasisName":12169,
+                "OasisDescription":12170
+            },
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,43,75,0",
+            "AnimationName":"Dark_Green_Dye",
+            "TemplateId":100,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Dark_Green_Dye",
+                "OasisName":13581
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,76,47,13",
+            "AnimationName":"Brown_Dye",
+            "TemplateId":101,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Brown_Dye",
+                "OasisName":13582
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,65,93,132",
+            "AnimationName":"Blue_Gray_Dye",
+            "TemplateId":102,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Blue_Gray_Dye",
+                "OasisName":13587
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,141,61,2",
+            "AnimationName":"Rust_Dye",
+            "TemplateId":103,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Rust_Dye",
+                "OasisName":13588
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,104,130,59",
+            "AnimationName":"Leaf_Green_Dye",
+            "TemplateId":104,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Leaf_Green_Dye",
+                "OasisName":13589
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,114,114,114",
+            "AnimationName":"Gray_Dye",
+            "TemplateId":105,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Gray_Dye",
+                "OasisName":13590
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,157,124,81",
+            "AnimationName":"Sable_Dye",
+            "TemplateId":106,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Sable_Dye",
+                "OasisName":14169
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,165,213,75",
+            "AnimationName":"Acid_Green_Dye",
+            "TemplateId":200,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Acid_Green_Dye",
+                "OasisName":13591
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,44,111,93",
+            "AnimationName":"Sea_Green_Dye",
+            "TemplateId":201,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Sea_Green_Dye",
+                "OasisName":13592
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,176,0,83",
+            "AnimationName":"Magenta_Dye",
+            "TemplateId":202,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Magenta_Dye",
+                "OasisName":13593
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,21,166,193",
+            "AnimationName":"Cerulean_Dye",
+            "TemplateId":203,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Cerulean_Dye",
+                "OasisName":13594
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,221,137,49",
+            "AnimationName":"Orange_Dye",
+            "TemplateId":204,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Orange_Dye",
+                "OasisName":13595
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,84,0,0",
+            "AnimationName":"Dark_Red_Dye",
+            "TemplateId":205,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Dark_Red_Dye",
+                "OasisName":13596
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,23,16,109",
+            "AnimationName":"Indigo_Dye",
+            "TemplateId":206,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Indigo_Dye",
+                "OasisName":13597
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,255,199,54",
+            "AnimationName":"Golden_Rod_Dye",
+            "TemplateId":207,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Golden_Rod_Dye",
+                "OasisName":13598
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,34,34,34",
+            "AnimationName":"Black_Dye",
+            "TemplateId":300,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Black_Dye",
+                "OasisName":13599
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,174,0,0",
+            "AnimationName":"True_Red_Dye",
+            "TemplateId":301,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"True_Red_Dye",
+                "OasisName":13600
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,65,0,32",
+            "AnimationName":"Burgundy_Dye",
+            "TemplateId":302,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Burgundy_Dye",
+                "OasisName":13601
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,103,18,122",
+            "AnimationName":"Purple_Dye",
+            "TemplateId":303,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Purple_Dye",
+                "OasisName":13602
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,255,255,255",
+            "AnimationName":"White_Dye",
+            "TemplateId":304,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"White_Dye",
+                "OasisName":13603
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,255,255,79",
+            "AnimationName":"Event_Yellow",
+            "TemplateId":305,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Event_Yellow",
+                "OasisName":15283
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,67,231,67",
+            "AnimationName":"Event_Green",
+            "TemplateId":306,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Event_Green",
+                "OasisName":15284
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,44,128,168",
+            "AnimationName":"Event_Blue",
+            "TemplateId":307,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Event_Blue",
+                "OasisName":15285
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,165,80,156",
+            "AnimationName":"Event_Purple",
+            "TemplateId":308,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Event_Purple",
+                "OasisName":15286
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DyeConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "Color":"0,255,29,78",
+            "AnimationName":"Event_Red",
+            "TemplateId":309,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/dyes\/DYESBOTTLE.png",
+                "InvIconUrl":"icoInv\/dyes\/DYESBOTTLE.png"
+            },
+            "Name":{
+                "DebugName":"Event_Red",
+                "OasisName":15287
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.MagicFindBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedChance":1,
+            "BuffSpecContainerId":690,
+            "TemplateId":310,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/chanceLoot.png",
+                "InvIconUrl":"icoInv\/consumables\/chanceLoot.png",
+                "LayerName":"icoShop_consumables:chanceLoot"
+            },
+            "Name":{
+                "DebugName":"Loot chance",
+                "OasisName":9874,
+                "OasisDescription":9875
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.LifeForceBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":692,
+            "TemplateId":311,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/iconShop_lifeForceBoost.png",
+                "InvIconUrl":"icoInv\/consumables\/LifeForceBoost.png",
+                "LayerName":"icoShop_consumables:LifeForceBoost"
+            },
+            "Name":{
+                "DebugName":"Life force boost",
+                "OasisName":11416,
+                "OasisDescription":11414
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.GoldBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":691,
+            "TemplateId":312,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/iconShop_goldBoost.png",
+                "InvIconUrl":"icoInv\/consumables\/goldBoost.png",
+                "LayerName":"icoShop_consumables:goldBoost"
+            },
+            "Name":{
+                "DebugName":"Gold boost",
+                "OasisName":11415,
+                "OasisDescription":11413
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":693,
+            "TemplateId":313,
+            "Ui":{
+                "ShopIconUrl":"icoInv\/consumables\/xpBoost.png",
+                "InvIconUrl":"icoInv\/consumables\/xpBoost.png",
+                "LayerName":"icoInv_consumables:xpBoost"
+            },
+            "Name":{
+                "DebugName":"XP boost",
+                "OasisName":11576,
+                "OasisDescription":11577
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":0.2,
+            "LevelDiffFrom":-999,
+            "BuffSpecContainerId":752,
+            "TemplateId":400,
+            "Name":{
+                "DebugName":"Castle level is  at least equal to hero?s"
+            },
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":0.1,
+            "LevelDiffFrom":1,
+            "LevelDiffTo":1,
+            "BuffSpecContainerId":753,
+            "TemplateId":401,
+            "Name":{
+                "DebugName":"Castle is 1 level below hero"
+            },
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":-0.15,
+            "LevelDiffFrom":3,
+            "LevelDiffTo":3,
+            "BuffSpecContainerId":755,
+            "TemplateId":402,
+            "Name":{
+                "DebugName":"Castle is 3 levels below hero"
+            },
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":-0.3,
+            "LevelDiffFrom":4,
+            "LevelDiffTo":4,
+            "BuffSpecContainerId":755,
+            "TemplateId":403,
+            "Name":{
+                "DebugName":"Castle is 4 levels below hero"
+            },
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":-0.6,
+            "LevelDiffFrom":5,
+            "LevelDiffTo":5,
+            "BuffSpecContainerId":755,
+            "TemplateId":404,
+            "Name":{
+                "DebugName":"Castle is 5 levels below hero"
+            },
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpLeashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":-1,
+            "LevelDiffFrom":6,
+            "LevelDiffTo":999,
+            "BuffSpecContainerId":761,
+            "TemplateId":405,
+            "Name":{
+                "DebugName":"Castle is 6 or more levels below hero"
+            },
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1000,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/GiantSweat.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/GiantSweat.png",
+                "LayerName":"icoShop_materials:GiantSweat",
+                "InvLayerName":"UI_IcoInv_materials:GiantSweat"
+            },
+            "Name":{
+                "DebugName":"Giant Sweat",
+                "OasisName":15234,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1001,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/EagleSouls.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/EagleSouls.png",
+                "LayerName":"icoShop_materials:EagleSouls",
+                "InvLayerName":"UI_IcoInv_materials:EagleSouls"
+            },
+            "Name":{
+                "DebugName":"Eagle Souls",
+                "OasisName":15235,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1002,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/Defenderidium.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/Defenderidium.png",
+                "LayerName":"icoShop_materials:Defenderidium",
+                "InvLayerName":"UI_IcoInv_materials:Defenderidium"
+            },
+            "Name":{
+                "DebugName":"Defenderium",
+                "OasisName":15236,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1003,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/DinoScales.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/DinoScales.png",
+                "LayerName":"icoShop_materials:DinoScales",
+                "InvLayerName":"UI_IcoInv_materials:DinoScales"
+            },
+            "Name":{
+                "DebugName":"Dino Scales",
+                "OasisName":15237,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1004,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/SmolderingEye.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/SmolderingEye.png",
+                "LayerName":"icoShop_materials:SmolderingEye",
+                "InvLayerName":"UI_IcoInv_materials:SmolderingEye"
+            },
+            "Name":{
+                "DebugName":"Smoldering Eye",
+                "OasisName":15238,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1005,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/EauDeTrappe.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/EauDeTrappe.png",
+                "LayerName":"icoShop_materials:EauDeTrappe",
+                "InvLayerName":"UI_IcoInv_materials:EauDeTrappe"
+            },
+            "Name":{
+                "DebugName":"Eau de Trappe",
+                "OasisName":15239,
+                "OasisDescription":15400
+            },
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1006,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/Explodium.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/Explodium.png",
+                "LayerName":"icoShop_materials:Explodium",
+                "InvLayerName":"UI_IcoInv_materials:Explodium"
+            },
+            "Name":{
+                "DebugName":"Explodium",
+                "OasisName":15240,
+                "OasisDescription":15400
+            },
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1007,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/DamageOverTime.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/DamageOverTime.png",
+                "LayerName":"icoShop_materials:DamageOverTime",
+                "InvLayerName":"UI_IcoInv_materials:DamageOverTime"
+            },
+            "Name":{
+                "DebugName":"Cursed Cog",
+                "OasisName":15241,
+                "OasisDescription":15400
+            },
+            "MaxInventoryStackCount":999,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1008,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/general_06.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/general_06.png",
+                "LayerName":"icoShop_materials:general_06",
+                "InvLayerName":"UI_IcoInv_materials:general_06"
+            },
+            "Name":{
+                "DebugName":"Smart Brain",
+                "OasisName":15242,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1009,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/general_05.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/general_05.png",
+                "LayerName":"icoShop_materials:general_05",
+                "InvLayerName":"UI_IcoInv_materials:general_05"
+            },
+            "Name":{
+                "DebugName":"Long Horn",
+                "OasisName":15243,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1010,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/General_04.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/general_04.png",
+                "LayerName":"icoShop_materials:general_04",
+                "InvLayerName":"UI_IcoInv_materials:general_04"
+            },
+            "Name":{
+                "DebugName":"Forgotten Stone",
+                "OasisName":15244,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1011,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/Weirdwood.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/Weirdwood.png",
+                "LayerName":"icoShop_materials:Weirdwood",
+                "InvLayerName":"UI_IcoInv_materials:Weirdwood"
+            },
+            "Name":{
+                "DebugName":"Sacred Branch",
+                "OasisName":15245,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1012,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/General_02.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/general_02.png",
+                "LayerName":"icoShop_materials:general_02",
+                "InvLayerName":"UI_IcoInv_materials:general_02"
+            },
+            "Name":{
+                "DebugName":"Limbo Dust",
+                "OasisName":15246,
+                "OasisDescription":15400
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1013,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/general_03.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/general_03.png",
+                "LayerName":"icoShop_materials:general_03",
+                "InvLayerName":"UI_IcoInv_materials:general_03"
+            },
+            "Name":{
+                "DebugName":"Essence of Awesomeness",
+                "OasisName":15247,
+                "OasisDescription":15400
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1014,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/general_01.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/general_01.png",
+                "LayerName":"icoShop_materials:general_01",
+                "InvLayerName":"UI_IcoInv_materials:general_01"
+            },
+            "Name":{
+                "DebugName":"Hard Shell",
+                "OasisName":15248,
+                "OasisDescription":15400
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Exceptional",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1015,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/NoobTears.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/NoobTears.png",
+                "LayerName":"icoShop_materials:NoobTears",
+                "InvLayerName":"UI_IcoInv_materials:NoobTears"
+            },
+            "Name":{
+                "DebugName":"Noob Tears",
+                "OasisName":15249,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1016,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/EssenceOfSomething.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/EssenceOfSomething.png",
+                "LayerName":"icoShop_materials:EssenceOfSomething",
+                "InvLayerName":"UI_IcoInv_materials:EssenceOfSomething"
+            },
+            "Name":{
+                "DebugName":"Essence of Something",
+                "OasisName":15250,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1017,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/Dangeroxide.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/Dangeroxide.png",
+                "LayerName":"icoShop_materials:Dangeroxide",
+                "InvLayerName":"UI_IcoInv_materials:Dangeroxide"
+            },
+            "Name":{
+                "DebugName":"Dangeroxite",
+                "OasisName":15251,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Legendary",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1018,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/Love.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/Love.png",
+                "LayerName":"icoShop_materials:Love",
+                "InvLayerName":"UI_IcoInv_materials:Love"
+            },
+            "Name":{
+                "DebugName":"Love",
+                "OasisName":15252,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Epic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1019,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/materials\/TheNumber42.png",
+                "InvIconUrl":"UI\/IcoInv\/materials\/TheNumber42.png",
+                "LayerName":"icoShop_materials:TheNumber42",
+                "InvLayerName":"UI_IcoInv_materials:TheNumber42"
+            },
+            "Name":{
+                "DebugName":"Number 42",
+                "OasisName":15253,
+                "OasisDescription":15400
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":999,
+            "Quality":"Epic",
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialPackConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "MaterialPackId":5,
+            "TemplateId":1100,
+            "Ui":{
+                "ShopIconUrl":"ui\/icoShop\/ingredientspacks\/small.png",
+                "InvIconUrl":"ui\/icoShop\/ingredientspacks\/small.png",
+                "LayerName":"icoshop_IngredientsPacks:small"
+            },
+            "Name":{
+                "DebugName":"Small Material Pack",
+                "OasisName":15280,
+                "OasisDescription":15382
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialPackConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "MaterialPackId":6,
+            "TemplateId":1101,
+            "Ui":{
+                "ShopIconUrl":"ui\/icoShop\/ingredientspacks\/medium.png",
+                "InvIconUrl":"ui\/icoShop\/ingredientspacks\/medium.png",
+                "LayerName":"icoshop_IngredientsPacks:medium"
+            },
+            "Name":{
+                "DebugName":"Medium Material Pack",
+                "OasisName":15281,
+                "OasisDescription":15383
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialPackConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "MaterialPackId":7,
+            "TemplateId":1102,
+            "Ui":{
+                "ShopIconUrl":"ui\/icoShop\/ingredientspacks\/great.png",
+                "InvIconUrl":"ui\/icoShop\/ingredientspacks\/great.png",
+                "LayerName":"icoshop_IngredientsPacks:great"
+            },
+            "Name":{
+                "DebugName":"Big Material Pack",
+                "OasisName":15282,
+                "OasisDescription":15384
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialPackConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "MaterialPackId":8,
+            "TemplateId":1103,
+            "Ui":{
+                "ShopIconUrl":"UI\/IcoShop\/IngredientsPacks\/boss.png",
+                "InvIconUrl":"UI\/IcoShop\/IngredientsPacks\/boss.png",
+                "LayerName":"icoshop_IngredientsPacks:boss"
+            },
+            "Name":{
+                "DebugName":"Huge Material Pack",
+                "OasisName":15341,
+                "OasisDescription":15385
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":1,
+            "BuffSpecContainerId":693,
+            "Duration":"20m",
+            "TemplateId":1104,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/xpBoost.png",
+                "InvIconUrl":"icoInv\/consumables\/xpBoost.png",
+                "LayerName":"icoShop_consumables:xpBoost",
+                "InvLayerName":"icoInv_consumables:xpBoost"
+            },
+            "Name":{
+                "DebugName":"XP boost 20 min",
+                "OasisName":16229,
+                "OasisDescription":11577
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":1,
+            "BuffSpecContainerId":693,
+            "Duration":"3d",
+            "TemplateId":1105,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/xpBoost_3days.png",
+                "InvIconUrl":"icoinv\/consumables\/xpboost_3days.png",
+                "LayerName":"icoShop_consumables:xpBoost_3days",
+                "InvLayerName":"icoInv_consumables:xpboost_3days"
+            },
+            "Name":{
+                "DebugName":"XP boost 3 days",
+                "OasisName":16230,
+                "OasisDescription":11577
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.PremiumCashBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1106,
+            "Name":{
+                "DebugName":"Premium Cash  boost"
+            },
+            "MaxInventoryStackCount":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1107,
+            "Ui":{
+                "ShopIconUrl":"icoshop\/materials\/egg_yoshi.png",
+                "InvIconUrl":"ui\/icoinv\/materials\/egg_yoshi.png",
+                "LayerName":"icoShop_materials:egg_yoshi",
+                "InvLayerName":"UI_IcoInv_materials:egg_yoshi"
+            },
+            "Name":{
+                "DebugName":"EasterEgg1",
+                "OasisName":16342
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                "Tradable":true
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1108,
+            "Ui":{
+                "ShopIconUrl":"icoshop\/materials\/egg_square.png",
+                "InvIconUrl":"ui\/icoinv\/materials\/egg_square.png",
+                "LayerName":"icoShop_materials:egg_square",
+                "InvLayerName":"UI_IcoInv_materials:egg_square"
+            },
+            "Name":{
+                "DebugName":"EasterEgg2",
+                "OasisName":16344
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                "Tradable":true
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1109,
+            "Ui":{
+                "ShopIconUrl":"icoshop\/materials\/egg_gold.png",
+                "InvIconUrl":"ui\/icoinv\/materials\/egg_gold.png",
+                "LayerName":"icoShop_materials:egg_gold",
+                "InvLayerName":"UI_IcoInv_materials:egg_gold"
+            },
+            "Name":{
+                "DebugName":"EasterEgg3",
+                "OasisName":16346
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                "Tradable":true
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "TemplateId":1110,
+            "Ui":{
+                "ShopIconUrl":"icoshop\/materials\/egg_test.png",
+                "InvIconUrl":"ui\/icoinv\/materials\/egg_test.png",
+                "LayerName":"icoShop_materials:egg_test",
+                "InvLayerName":"UI_IcoInv_materials:egg_test"
+            },
+            "Name":{
+                "DebugName":"EasterEgg_TEST",
+                "OasisName":16348,
+                "OasisDescription":16349
+            },
+            "MaxInventoryStackCount":999,
+            "Quality":"Magic",
+            "SteamAssetSpec":{
+                "Tradable":true
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XpBoostConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":1,
+            "BuffSpecContainerId":693,
+            "Duration":"3d",
+            "TemplateId":1116,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/xp_boostScroll.png",
+                "InvIconUrl":"icoInv\/consumables\/xpBoost.png",
+                "LayerName":"icoShop_consumables:xpBoost"
+            },
+            "Name":{
+                "DebugName":"XP Boost 3 days Easter Special",
+                "OasisName":16230,
+                "OasisDescription":11577
+            },
+            "IsLootable":true,
+            "MaxInventoryStackCount":20,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HealthPotionConsumableTemplate, HyperQuest.GameServer.Contracts",
+            "RestorePoints":2000,
+            "AbilityId":20,
+            "MinLevelRequirement":1,
+            "TemplateId":1117,
+            "Ui":{
+                "ShopIconUrl":"icoShop\/consumables\/MinorPotion",
+                "InvIconUrl":"icoInv\/consumables\/healthLevel1_up"
+            },
+            "Name":{
+                "DebugName":"Tutorial Health Potion - DO NOT USE",
+                "OasisName":8026,
+                "OasisDescription":14122
+            },
+            "MaxInventoryStackCount":20,
+            "BuildingRequirementSpecContainerId":1,
+            "SteamAssetSpec":{
+                
+            },
+            "SteamAssetUiSpec":{
+                
+            }
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Lava Wall Limited Edition",
+        "OasisName":15794,
+        "OasisDescription":15795
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/LavaWall.png",
+        "InvIconUrl":"UI\/Common\/TrapsIcons\/Rares\/LavaWall.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:LavaWall"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"wall",
+                    "OasisName":15795
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/snareEffect.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

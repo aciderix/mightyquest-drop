@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Haunted Gramophone",
+        "OasisName":1571,
+        "OasisDescription":1572
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/SpellLockMine_01.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/SpellLockMine_01.png",
+        "LayerName":"UI_Common_TrapsIcons:SpellLockMine_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"silence",
+                    "OasisName":7671
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/silence.png"
+                }
+            }
+        ]
+    }
+]

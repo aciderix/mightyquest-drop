@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Dog_LimitedEdition_Poison_Cloud_CreatureBuff",
+        "OasisName":1985,
+        "OasisDescription":1986
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"UI\/Hud\/BuffDebuffIcons\/heroBuffs_damageIncrease.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_damageIncrease",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

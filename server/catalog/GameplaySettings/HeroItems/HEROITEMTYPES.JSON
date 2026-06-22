@@ -1,0 +1,258 @@
+{
+    "ItemTypeList":
+    [
+        {
+            "Id":1,
+            "HeroItemCategoryType":"Weapon",
+            "InternalDescription":"Two-Handed Swords",
+            "OasisID":394,
+            "VisualType":"2H",
+            "EquipUserInterfaceSoundId":"EquipSwordSound"
+        },
+        {
+            "Id":2,
+            "HeroItemCategoryType":"Helm",
+            "InternalDescription":"Plate Helm",
+            "OasisID":395,
+            "VisualType":"HE",
+            "EquipUserInterfaceSoundId":"EquipArmorSound"
+        },
+        {
+            "Id":3,
+            "HeroItemCategoryType":"ShoulderArmor",
+            "InternalDescription":"Plate Shoulder",
+            "OasisID":396,
+            "VisualType":"SH",
+            "EquipUserInterfaceSoundId":"EquipArmorSound"
+        },
+        {
+            "Id":4,
+            "HeroItemCategoryType":"SuitOfArmor",
+            "InternalDescription":"Plate Armor",
+            "OasisID":397,
+            "VisualType":"BD",
+            "EquipUserInterfaceSoundId":"EquipArmorSound"
+        },
+        {
+            "Id":5,
+            "HeroItemCategoryType":"Gloves",
+            "InternalDescription":"Plate Gloves",
+            "OasisID":398,
+            "VisualType":"GT",
+            "EquipUserInterfaceSoundId":"EquipArmorSound"
+        },
+        {
+            "Id":6,
+            "HeroItemCategoryType":"Capes",
+            "InternalDescription":"Plate Capes",
+            "OasisID":399,
+            "VisualType":"CP",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":7,
+            "HeroItemCategoryType":"Necklace",
+            "InternalDescription":"Amulet",
+            "OasisID":400,
+            "EquipUserInterfaceSoundId":"EquipNecklaceSound"
+        },
+        {
+            "Id":8,
+            "InternalDescription":"Ring",
+            "OasisID":401,
+            "EquipUserInterfaceSoundId":"EquipRingSound"
+        },
+        {
+            "Id":9,
+            "HeroItemCategoryType":"Weapon",
+            "InternalDescription":"Wizard Staff",
+            "OasisID":402,
+            "VisualType":"WD",
+            "EquipUserInterfaceSoundId":"EquipStaffSound"
+        },
+        {
+            "Id":10,
+            "HeroItemCategoryType":"Helm",
+            "InternalDescription":"Mage Hat",
+            "OasisID":395,
+            "VisualType":"HE",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":11,
+            "HeroItemCategoryType":"ShoulderArmor",
+            "InternalDescription":"Mage Shawl",
+            "OasisID":396,
+            "VisualType":"SH",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":12,
+            "HeroItemCategoryType":"SuitOfArmor",
+            "InternalDescription":"Mage Robe",
+            "OasisID":397,
+            "VisualType":"BD",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":13,
+            "HeroItemCategoryType":"Gloves",
+            "InternalDescription":"Mage Gloves",
+            "OasisID":398,
+            "VisualType":"GT",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":14,
+            "HeroItemCategoryType":"Capes",
+            "InternalDescription":"Mage Capes",
+            "OasisID":399,
+            "VisualType":"CP",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":15,
+            "HeroItemCategoryType":"Weapon",
+            "InternalDescription":"Crossbow",
+            "OasisID":403,
+            "VisualType":"CB",
+            "EquipUserInterfaceSoundId":"EquipCrossbowSound"
+        },
+        {
+            "Id":16,
+            "HeroItemCategoryType":"Helm",
+            "InternalDescription":"Leather Hat",
+            "OasisID":395,
+            "VisualType":"HE",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":17,
+            "HeroItemCategoryType":"ShoulderArmor",
+            "InternalDescription":"Leather Hood",
+            "OasisID":396,
+            "VisualType":"SH",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":18,
+            "HeroItemCategoryType":"SuitOfArmor",
+            "InternalDescription":"Leather Armor",
+            "OasisID":397,
+            "VisualType":"BD",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":19,
+            "HeroItemCategoryType":"Gloves",
+            "InternalDescription":"Leather Gloves",
+            "OasisID":398,
+            "VisualType":"GT",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":20,
+            "HeroItemCategoryType":"Capes",
+            "InternalDescription":"Leather Capes",
+            "OasisID":399,
+            "VisualType":"CP",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":21,
+            "HeroItemCategoryType":"Weapon",
+            "InternalDescription":"Polearms",
+            "OasisID":13054,
+            "VisualType":"PA",
+            "EquipUserInterfaceSoundId":"EquipSwordSound"
+        },
+        {
+            "Id":22,
+            "HeroItemCategoryType":"Helm",
+            "InternalDescription":"Runaway Hat",
+            "OasisID":395,
+            "VisualType":"HE",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":23,
+            "HeroItemCategoryType":"ShoulderArmor",
+            "InternalDescription":"Runaway Shoulder",
+            "OasisID":396,
+            "VisualType":"SH",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":24,
+            "HeroItemCategoryType":"SuitOfArmor",
+            "InternalDescription":"Runaway Armor",
+            "OasisID":397,
+            "VisualType":"BD",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":25,
+            "HeroItemCategoryType":"Gloves",
+            "InternalDescription":"Runaway Gloves",
+            "OasisID":398,
+            "VisualType":"GT",
+            "EquipUserInterfaceSoundId":"EquipLeatherSound"
+        },
+        {
+            "Id":26,
+            "HeroItemCategoryType":"Capes",
+            "InternalDescription":"Runaway Capes",
+            "OasisID":399,
+            "VisualType":"CP",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":27,
+            "HeroItemCategoryType":"Costume",
+            "InternalDescription":"Knight Costume",
+            "OasisID":13327,
+            "VisualType":"CO",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":28,
+            "HeroItemCategoryType":"Costume",
+            "InternalDescription":"Archer Costume",
+            "OasisID":13327,
+            "VisualType":"CO",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":29,
+            "HeroItemCategoryType":"Costume",
+            "InternalDescription":"Mage Costume",
+            "OasisID":13327,
+            "VisualType":"CO",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":30,
+            "HeroItemCategoryType":"Costume",
+            "InternalDescription":"Runaway Costume",
+            "OasisID":13327,
+            "VisualType":"CO",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":31,
+            "HeroItemCategoryType":"Costume",
+            "InternalDescription":"Universal Costume",
+            "OasisID":13327,
+            "VisualType":"CO",
+            "EquipUserInterfaceSoundId":"EquipClothSound"
+        },
+        {
+            "Id":32,
+            "HeroItemCategoryType":"Pet",
+            "InternalDescription":"Pets",
+            "OasisID":13327,
+            "VisualType":"PT",
+            "EquipUserInterfaceSoundId":"EquipPetSound"
+        }
+    ]
+}

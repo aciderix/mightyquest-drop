@@ -1,0 +1,70 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingSpec, HyperQuest.GameServer.Contracts",
+        "BuildingInstanceRequirements":
+        [
+            {
+                
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "UpgradeDuration":"3s",
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":3
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":5
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":9
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":15
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":21
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":27
+            }
+        ],
+        "BuildingType":"PotionBrewery"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsEditable":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Thickness":2,
+        "Height":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":4,
+                "Height":3,
+                "Length":4
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"SocleBuilding",
+        "IsAvailableInBuildMode":true
+    }
+]

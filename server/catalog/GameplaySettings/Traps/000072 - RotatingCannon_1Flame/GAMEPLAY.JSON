@@ -1,0 +1,153 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ConstructionPoints":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "BuildXp":150
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts",
+        "OverrideAttackSettingsLootConfig":true,
+        "LootDropMinDistance":5,
+        "LootDropMaxDistance":6,
+        "LootRadius":0.25,
+        "LootDropSectorCircleArc":360,
+        "PVEDroppableLootTypeMask":0,
+        "PVPDroppableLootTypeMask":126
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NavigationGridMemberSpec, HyperQuest.GameServer.Contracts",
+        "ObstacleShape":{
+            "$type":"HyperQuest.GameServer.Contracts.NavigationGridObstacleCircleShapeSpec, HyperQuest.GameServer.Contracts",
+            "Radius":0.6
+        },
+        "ObstacleType":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":1.5,
+                "Height":0.2,
+                "Y":0.7
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"Cannon"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapSpec, HyperQuest.GameServer.Contracts",
+        "PowerConsumption":2,
+        "XpRewardShape":{
+            "$type":"HyperQuest.GameServer.Contracts.CircularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Radius":2
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapStatsSpec, HyperQuest.GameServer.Contracts",
+        "BasePhysicalDamage":60,
+        "BaseCriticalHitChance":0.05,
+        "PhysicalDamagePerLevel":10
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "TierModifiers":
+        [
+            {
+                "Tiers":
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "AdditionalChildren":
+                [
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":449,
+                            "Name":"RotatingCannonBaseShop_01"
+                        },
+                        "Position":{
+                            
+                        },
+                        "Orientation":{
+                            
+                        }
+                    }
+                ]
+            }
+        ],
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":2
+            },
+            {
+                "Tier":2,
+                "Level":6
+            },
+            {
+                "Tier":3,
+                "Level":10
+            },
+            {
+                "Tier":4,
+                "Level":14
+            },
+            {
+                "Tier":5,
+                "Level":18
+            },
+            {
+                "Tier":6,
+                "Level":22
+            },
+            {
+                "Tier":7,
+                "Level":26
+            },
+            {
+                "Tier":8,
+                "Level":30
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":2
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":2
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsOld":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":0.5,
+        "EndRadius":0.5,
+        "CollisionCheckInterval":-1
+    }
+]

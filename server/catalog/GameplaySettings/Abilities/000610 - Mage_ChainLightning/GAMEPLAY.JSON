@@ -1,0 +1,183 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":8,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":204,
+                                "Name":"Mage_ChainLightning1"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Y":0.8
+                                }
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":9,
+                "EffectRadius":5,
+                "CastCost":25,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":9,
+                            "EffectRadius":5
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":6
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":214,
+                                "Name":"Mage_ChainLightning2"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Y":0.8
+                                }
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":9,
+                "EffectRadius":5,
+                "CastCost":25,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":9,
+                            "EffectRadius":5
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":18
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":215,
+                                "Name":"Mage_ChainLightning3"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Y":0.8
+                                }
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":9,
+                "EffectRadius":5,
+                "CastCost":25,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":9,
+                            "EffectRadius":5
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":30
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

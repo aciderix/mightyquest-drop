@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":6,
+                "Height":10,
+                "Length":6,
+                "Y":5,
+                "Yaw":-45
+            }
+        ],
+        "ForceAttackPickingFlags":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":2.1,
+        "EndRadius":2.1,
+        "GameEntityTypeMask":8,
+        "OnEnterMaxActivation":1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.EndAttackOperationSpec, HyperQuest.GameServer.Contracts",
+            "Target":{
+                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+            }
+        }
+    }
+]

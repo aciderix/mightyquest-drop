@@ -1,0 +1,93 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":9,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":415,
+                                "Name":"CHA_003_Vortex_Field"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AbilityCastPosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "SpawnRestrictionType":"ValidThroughCorners",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.9,
+                "RecoverInterruptWindow":0.7,
+                "MaxDistance":12,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "CastCost":35,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":10
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":420,
+                                "Name":"Mage_Vortex_Field_2"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AbilityCastPosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "SpawnRestrictionType":"ValidThroughCorners",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.9,
+                "RecoverInterruptWindow":0.7,
+                "MaxDistance":12,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "CastCost":35,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":22
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            }
+        ]
+    }
+]

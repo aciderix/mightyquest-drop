@@ -1,0 +1,292 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "ObjectiveId":303
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAutoEquippableCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "HeroItemCategoryType":"Pet",
+                "IsAutoEquip":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-120
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection",
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxCastleRenovationLevel":"RenovationComplete",
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1,
+                "LockOnDisabledPickingType":"AllCastles"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    63,
+                    90,
+                    91,
+                    92,
+                    93,
+                    102,
+                    103,
+                    104,
+                    107,
+                    108,
+                    109,
+                    124,
+                    125,
+                    134,
+                    135,
+                    136,
+                    156,
+                    157,
+                    158,
+                    159,
+                    160,
+                    161,
+                    185,
+                    186
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroLevelUp"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroLevelUp"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Duration":0.2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"skillTree"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"skillTree"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Duration":0.2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"objectivePopup"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"objectivePopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Duration":0.2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationPanel"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationPanel"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationLevelCompletedPanel"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationLevelCompletedPanel"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAutoEquippableCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "HeroItemCategoryType":"Pet"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500901",
+                "Title":"[Nidegel is Free!]",
+                "TitleOasisId":16714,
+                "Text":"[You'll find your new partner in your inventory!]",
+                "TextOasisId":16715,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "IsCloseButtonVisible":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"500901"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500902",
+                "Type":"Arrow",
+                "GameButtonId":"None",
+                "PositionElementId":"#modules-hudBar-commonToolbar-inventory",
+                "ArrowDirection":"Down",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500903",
+                "Title":"[Equip Nigel!]",
+                "TitleOasisId":16716,
+                "Text":"[By the way, you can use Right-Click to equip stuff! Nigel will help you collect loot!]",
+                "TextOasisId":16717,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"BottomCenter",
+                "OffsetTop":-194,
+                "OffsetLeft":150,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AnyItemEquippedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    13,
+                    89
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MinCastleRenovationLevel":"RenovationComplete",
+                        "MaxCastleRenovationLevel":"RenovationComplete",
+                        "IsNot":true
+                    }
+                ]
+            }
+        ]
+    }
+]

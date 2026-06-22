@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "UseMeshAlignedBoxCapsule":true,
+        "MeshAlignedBoxCapsuleHeightMultiplier":0.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.InteractiveSpec, HyperQuest.GameServer.Contracts",
+        "Distance":999,
+        "ChangeInteractorOrientation":false,
+        "InteractorDuration":0.05,
+        "DeactivateAfterFirstInteraction":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AttackSelectionCastleSpec, HyperQuest.GameServer.Contracts"
+    }
+]

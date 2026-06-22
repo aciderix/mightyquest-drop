@@ -1,0 +1,50 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Limited Edition Acid Cannon",
+        "OasisName":1565,
+        "OasisDescription":1566
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"puddle {0}",
+                    "OasisName":7659
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.25*(270+(43*level))"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"ArmorDebuff",
+                    "OasisName":15653
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/balisticCorrosive.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/Rares\/balisticCorrosive.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:balisticCorrosive",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

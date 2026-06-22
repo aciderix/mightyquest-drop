@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientBoostSpec, HyperQuest.GameServer.Contracts",
+		"BoostTarget":2,
+		"Duration":"24h"
+    }
+]

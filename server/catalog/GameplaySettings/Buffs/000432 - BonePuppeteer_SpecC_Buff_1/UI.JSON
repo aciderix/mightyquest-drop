@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BonePuppeteer_SpecC_Buff_1",
+        "OasisName":13227,
+        "OasisDescription":13228
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/CREATUREBUFFS_RAGE.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_rage",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

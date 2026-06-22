@@ -1,0 +1,82 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_AttackVer01"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_77B9D9FE_AI598.MATERIAL",
+                "Length":30,
+                "SegmentLifeTime":0.2,
+                "FadeOutTime":0.5,
+                "FadeInDistance":0.1,
+                "FadeOutDistance":0.1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetY":-0.5
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailTop",
+                            "OffsetY":1
+                        }
+                    ]
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_D775AB50_AI598.MATERIAL",
+                "Length":30,
+                "SegmentLifeTime":0.2,
+                "FadeOutTime":0.5,
+                "FadeInDistance":0.1,
+                "FadeOutDistance":0.1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetY":-0.5
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailTop",
+                            "OffsetY":1.5
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Runaway_Halberd_3"
+    }
+]

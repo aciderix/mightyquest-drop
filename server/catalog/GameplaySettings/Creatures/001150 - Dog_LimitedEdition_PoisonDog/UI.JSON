@@ -1,0 +1,68 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Dog_LimitedEdition_PoisonDog",
+        "OasisName":16407,
+        "OasisDescription":16410
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"PoisonDog_Howl",
+                    "OasisName":16411
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"PoisonDog_OnDeathCloud",
+                    "OasisName":16412
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Howl",
+                    "OasisName":7749
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Diseased Bite",
+                    "OasisName":7751
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/Madfarter.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/Madfarter.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:Madfarter",
+        "HeightOffset":2.25
+    }
+]

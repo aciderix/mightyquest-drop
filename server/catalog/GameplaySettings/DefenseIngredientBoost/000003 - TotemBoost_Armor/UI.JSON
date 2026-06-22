@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"TotemBoost_Armor",
+        "OasisName":15674,
+        "OasisDescription":15675
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "LayerName":"UI_Common_CreaturesIcons_Totem:TotemArmor"
+    }
+]

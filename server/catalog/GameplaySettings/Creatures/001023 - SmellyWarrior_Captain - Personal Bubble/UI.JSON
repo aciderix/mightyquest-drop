@@ -1,0 +1,98 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SmellyWarrior_Captain - Personal Bubble",
+        "OasisName":15173,
+        "OasisDescription":15174
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A1",
+        "HeightOffset":1.9
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Personal Bubble",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyWarriors2.png",
+                        "NameOasisId":11195,
+                        "DescriptionOasisId":11196
+                    }
+                ],
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11197,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:A3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11197,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:defensiveBuff",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_FallenKnight:A3"
+    }
+]

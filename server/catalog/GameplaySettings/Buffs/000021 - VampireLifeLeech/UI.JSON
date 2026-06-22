@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"VampireLifeLeech",
+        "OasisName":2015,
+        "OasisDescription":2016
+    }
+]

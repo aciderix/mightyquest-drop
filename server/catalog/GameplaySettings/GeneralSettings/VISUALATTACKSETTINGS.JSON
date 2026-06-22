@@ -1,0 +1,201 @@
+{
+    "DefaultNodeHitImpactFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":2,
+        "Name":"DefaultNodeHitImpact"
+    },
+    "DefaultRegenerationFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":24,
+        "Name":"DefaultRegeneration"
+    },
+    "DefaultStunFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":27,
+        "Name":"DefaultStun"
+    },
+    "CelebrationFadeOutInFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":38,
+        "Name":"FadeInOutPostprocess"
+    },
+    "LowManaPostProcessFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":75,
+        "Name":"LowManaPostProcess"
+    },
+    "LifeShieldActiveFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":50,
+        "Name":"LifeShieldActiveFx"
+    },
+    "LifeShieldBreakingFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":51,
+        "Name":"LifeShieldBreakingFx"
+    },
+    "DefaultConfusionFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":52,
+        "Name":"DefaultConfusion"
+    },
+    "DefaultLevelUpFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":53,
+        "Name":"DefaultLevelUpFx"
+    },
+    "DefaultMouseMovementStartFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":54,
+        "Name":"DefaultMouseMovementStartFx"
+    },
+    "CombativeCreatureFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":58,
+        "Name":"DefaultTicketFx"
+    },
+    "OldCreatureFx":{
+        "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+        "SpecContainerReferenceId":74,
+        "Name":"OldCreatureFx"
+    },
+    "BoostedCreatureFxList":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_64AD5090_BD346>SPECIALFX_64AD5090_BD346.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                "LockRotation":true,
+                "InheritParentScale":true
+            }
+        }
+    ],
+    "TrapDeactivatedByAbilityFxList":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_81A8A61B_BA618>SPECIALFX_81A8A61B_BA618.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            },
+            "HideInModeMask":2
+        }
+    ],
+    "TrapAutoReconnectFeedbackFxList":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_76149893_BB579>SPECIALFX_76149893_BB579.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            },
+            "HideInModeMask":2
+        }
+    ],
+    "CreatureDeathMaterial1":"DB:>RAW>MATERIALS>MATERIAL_38026B93_AI933.MATERIAL",
+    "OldTrapMaterial":"DB:>RAW>MATERIALS>MATERIAL_873041AE_BC675.MATERIAL",
+    "InteractionHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_DFA03F47_AH149.MATERIAL",
+    "CreatureHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_67B44129_AI231.MATERIAL",
+    "TreasureRoomChestLockInfos":
+    {
+        "CastleShielded":{
+            "Animation":"DB:>RAW>XREFS>XREF_74384609_AI786>XREF_74384609_AI786.XREF"
+        },
+        "HeroDied":{
+            "Animation":"DB:>RAW>XREFS>XREF_80DFF557_AI650>XREF_80DFF557_AI650.XREF"
+        }
+    },
+    "StorageChestClosedStateAnimName":"Chest_Close",
+    "IGCLootVariationsMaxAmountMap":
+    [
+        20,
+        200,
+        999999
+    ],
+    "LifeForceLootVariationsMaxAmountMap":
+    [
+        20,
+        200,
+        999999
+    ],
+    "OldCreaturesMaterial":"DB:>RAW>MATERIALS>MATERIAL_7DDD438F_BC675.MATERIAL",
+    "TrapPowerSupplyDisabledMaterial":"DB:>RAW>MATERIALS>MATERIAL_010FF43B_BA602.MATERIAL",
+    "NearDeathPostProcessThreshold":0.25,
+    "NearDeathTimeScaleThreshold":-1.0,
+    "LowManaThreshold":-1,
+    "OutOfManaInvalidActionFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualPostProcessFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_CE19F37A_BC685.MATERIAL",
+            "Priority":4,
+            "ConcurentFxOnScreen":2,
+            "Name":"LowManaFlashPostProcess"
+        }
+    ],
+    "NavigationStartedWithBoostFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_5059453B_BB579>SPECIALFX_5059453B_BB579.SPECIALFX",
+            "PlayMode":"One",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            }
+        }
+    ],
+    "CriticalHitTriggeredByHeroFx":{
+        "FxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"CameraShakeTiny"
+            }
+        ]
+    },
+    "MultiKillByHeroFx":{
+        "FxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"CameraShakeTiny"
+            }
+        ]
+    },
+    "BossKilledByHeroFx":{
+        "FxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"CameraShakeBig"
+            }
+        ]
+    },
+    "EliteKilledByHeroFx":{
+        "FxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"CameraShakeMediumQuick"
+            }
+        ]
+    },
+    "NearDeathFxList":
+    [
+        {
+            "Threshold":0.25,
+            "Fx":
+            {
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualPostProcessFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_A032103A_AH625.MATERIAL",
+                        "Name":"NearDeathPostProcess"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Forgotten",
+        "OasisName":1257,
+        "OasisDescription":1258
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11219,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":12159,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Forgotten\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Forgotten\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Forgotten:A1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Forgotten\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Forgotten\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Forgotten:A1",
+        "HeightOffset":1.5
+    }
+]

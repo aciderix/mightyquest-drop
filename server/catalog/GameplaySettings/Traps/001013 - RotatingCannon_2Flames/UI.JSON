@@ -1,0 +1,55 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Rotating Cannon 2 Flames",
+        "OasisName":1631,
+        "OasisDescription":1632
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Section {0}",
+                    "OasisName":11532
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"2"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"flame {1}",
+                    "OasisName":7647
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOverTime.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"3*(55+(7*level))"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/RotatingCannon_02.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/RotatingCannon_02.png",
+        "LayerName":"UI_Common_TrapsIcons:RotatingCannon_02"
+    }
+]

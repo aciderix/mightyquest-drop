@@ -1,0 +1,292 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":20
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ActivateCastleForSalePicking?activate=false&castleForSaleId=4,"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/MoveToFloatingLand",
+                "StartDelay":4
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"3010",
+                "Text":"But hold on!",
+                "TextOasisId":16470,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"But hold on!",
+                            "TextOasisId":16470,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B61A.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"3010"
+                    }
+                ],
+                "Duration":9
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PlaySoundEventAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SoundEvent":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008B64D.SOUND",
+                    "FireAndForget":true
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"3011",
+                "Text":"Just look at that view!",
+                "TextOasisId":16471,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"Just look at that view!",
+                            "TextOasisId":16471,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B61D.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"3011"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"3012",
+                "Text":"Despair not my frugal friend.",
+                "TextOasisId":16472,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"Despair not my frugal friend.",
+                            "TextOasisId":16472,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5F9.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"3012"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"3013",
+                "Text":"Welcome to your ? land! ",
+                "TextOasisId":16474,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"Welcome to your ? land! ",
+                            "TextOasisId":16474,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B57B.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"3013"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"3014",
+                "Text":"Go on, give your castle a name...",
+                "TextOasisId":16473,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"Go on, give your castle a name...",
+                            "TextOasisId":16473,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B56C.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"3014"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OpenPanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chooseDisplayName",
+                "TargetEntitySearch":{
+                    "GameEntityTypeMask":128,
+                    "Selections":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainerType":"Effect",
+                            "SpecContainerIds":
+                            [
+                                571
+                            ]
+                        }
+                    ]
+                },
+                "IsOpalPanel":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleNamedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"3015",
+                "Title":"Your Username",
+                "TitleOasisId":16752,
+                "Text":"This will be your Username, choose wisely!",
+                "TextOasisId":16753,
+                "PopupBindingVariable":"TextInformation_node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleNamedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chooseDisplayName",
+                "TargetEntitySearch":{
+                    "GameEntityTypeMask":128,
+                    "Selections":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainerType":"Effect",
+                            "SpecContainerIds":
+                            [
+                                571
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/DisplayPlayerMiniCastleName"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InGameNameSelectedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/home",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AssignmentsCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Assignments":
+                        [
+                            1010
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

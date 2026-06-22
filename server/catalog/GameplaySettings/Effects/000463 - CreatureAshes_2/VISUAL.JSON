@@ -1,0 +1,13 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CreatureAshes_2",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_203B0F5A>MESH_203B0F5A.MESH",
+        "SynergyEntityFileNameVariations":
+        [
+            "DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_A0250EDC_BA618>SPECIAL EFFECT_A0250EDC_BA618.SPECIALFX"
+        ],
+        "ScaleVariance":0.1,
+        "RotationVariance":1
+    }
+]

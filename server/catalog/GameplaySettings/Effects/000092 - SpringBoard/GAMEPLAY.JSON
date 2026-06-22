@@ -1,0 +1,29 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":133,
+                "Name":"Springboard_Spring"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":2,
+        "StartLength":2,
+        "EndLength":2,
+        "LocalStartOffsetX":-1,
+        "GameEntityTypeMask":10,
+        "CollisionCheckInterval":0.1,
+        "OnTouchOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.UseAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+            "Target":{
+                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                "Type":"Source"
+            }
+        }
+    }
+]

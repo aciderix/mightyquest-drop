@@ -1,0 +1,6 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Dog_LimitedEdition_Poison_OnDeathCloud"
+    }
+]

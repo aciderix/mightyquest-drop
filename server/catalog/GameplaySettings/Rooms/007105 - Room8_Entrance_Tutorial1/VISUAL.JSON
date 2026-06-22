@@ -1,0 +1,20 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualRoomConnectionFxSpec, HyperQuest.GameServer.Contracts",
+        "ConnectionTypeUnconnectedFx":{
+            "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":21,
+            "Name":"DefaultRoomConnectionUnconnectedFx"
+        },
+        "ConnectionTypeConnectedFx":{
+            "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":22,
+            "Name":"DefaultRoomConnectionConnectedFx"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Room8_Entrance_02",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_76BEC766_BC696>XREF_76BEC766_BC696.XREF"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Teen Spirit Buff",
+        "OasisName":13726,
+        "OasisDescription":13727
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HEROBUFFS_TEENSPIRIT.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_teenSpirit",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

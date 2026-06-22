@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CULTISTMISSILE",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_7818127C>MESH_7818127C.MESH"
+    }
+]

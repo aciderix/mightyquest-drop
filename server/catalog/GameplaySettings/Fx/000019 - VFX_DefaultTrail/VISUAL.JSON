@@ -1,0 +1,25 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_E782CBC8_AI231.MATERIAL",
+        "Length":30,
+        "SpaceBetweenSegment":0.3,
+        "SegmentLifeTime":10,
+        "Attachment":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+            "Volumes":
+            [
+                {
+                    "VolumeName":"FX_WeaponTrailBase"
+                },
+                {
+                    "VolumeName":"FX_WeaponTrailMiddle"
+                },
+                {
+                    "VolumeName":"FX_WeaponTrailTop"
+                }
+            ]
+        },
+        "Name":""
+    }
+]

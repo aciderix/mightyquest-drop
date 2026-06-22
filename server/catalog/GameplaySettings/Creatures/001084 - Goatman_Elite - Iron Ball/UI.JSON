@@ -1,0 +1,58 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Goatman_Elite",
+        "OasisName":13311,
+        "OasisDescription":13310
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher1.png",
+                        "NameOasisId":13312,
+                        "DescriptionOasisId":13313
+                    }
+                ]
+            },
+            {
+                "SpecializationId":1,
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher2.png",
+                        "NameOasisId":13314,
+                        "DescriptionOasisId":13315
+                    }
+                ]
+            },
+            {
+                "SpecializationId":2,
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher3.png",
+                        "NameOasisId":13316,
+                        "DescriptionOasisId":13317
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_014_Skeleton_Archer_01.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_014_Skeleton_Archer_01.png",
+        "HeightOffset":1.9
+    }
+]

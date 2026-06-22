@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Totem",
+        "OasisName":15518
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Totem\/LeashTotem.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Totem\/LeashTotem.png",
+        "LayerName":"UI_Common_CreaturesIcons_Totem:LeashTotem",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Totem\/LeashTotem.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Totem\/LeashTotem.png",
+                "LayerName":"UI_Common_CreaturesIcons_Totem:LeashTotem"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Hidden",
+                    "OasisName":15519
+                },
+                "Ui":{
+                    "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Totem\/LeashTotem.png"
+                }
+            }
+        ]
+    }
+]

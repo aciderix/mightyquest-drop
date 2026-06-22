@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"SkillDamage",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.3
+                }
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "MaxInstances":1,
+        "Flags":2,
+        "IsLinkedToCreator":true,
+        "RemoveIfCreatorDied":true,
+        "BuffableGameEntityTypeMask":2
+    }
+]

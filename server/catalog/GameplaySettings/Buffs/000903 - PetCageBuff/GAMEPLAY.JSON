@@ -1,0 +1,61 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDeathBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EntitySpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnableEntities":
+                            [
+                                {
+                                    "SpawnableEntitySpecContainerRefId":1152,
+                                    "Position":{
+                                        "$type":"HyperQuest.GameServer.Contracts.TargetPositionVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.TargetSearchSpec, HyperQuest.GameServer.Contracts",
+                                            "GameEntityTypeMask":256,
+                                            "Selections":
+                                            [
+                                                {
+                                                    "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                                                    "SpecContainerType":"Decoration",
+                                                    "SpecContainerIds":
+                                                    [
+                                                        226
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceOrientation"
+                                    },
+                                    "IsDependentToSpawner":true,
+                                    "IsDestroyedWithSpawner":true
+                                }
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.TargetSearchSpec, HyperQuest.GameServer.Contracts",
+                                "TargetType":2
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "MaxInstances":1,
+        "IsHidden":true,
+        "BuffStopTriggers":{
+            
+        },
+        "BuffableGameEntityTypeMask":256
+    }
+]

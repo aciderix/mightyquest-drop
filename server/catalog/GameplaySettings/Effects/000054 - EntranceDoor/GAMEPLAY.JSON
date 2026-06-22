@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DoorSpec, HyperQuest.GameServer.Contracts",
+        "Width":3.5,
+        "Thickness":1.5,
+        "Height":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":0.5,
+                "Height":5,
+                "Length":3.5,
+                "Y":2
+            }
+        ],
+        "CollisionGroup":"World",
+        "PhysicRigidBodyType":"Static"
+    }
+]

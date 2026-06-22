@@ -1,0 +1,77 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ControlledEffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "DestroyAtControlStopped":false,
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":147,
+                                "Name":"CuratorBubble"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetPosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":1.5,
+                                "Up":0.6,
+                                "Right":0.3
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.TargetPositionVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ControlledEffectTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "BurstsCount":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":5
+                            },
+                            "BurstDelay":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":0.2
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.ControlledEffectTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":225,
+                                "Name":"CuratorSpawnBubble"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.ControlledEffectTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":4,
+                "PrepareTime":1,
+                "ActiveTime":1.5,
+                "RecoverTime":0.3,
+                "MaxDistance":12,
+                "EffectRadius":4,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1
+            }
+        ]
+    }
+]

@@ -1,0 +1,378 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1.5
+                            },
+                            "AllianceFilter":4,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5
+                                        },
+                                        "IsResistable":true,
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":8,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":1,
+                "CastCost":15,
+                "AbilityCastType":"Area",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":14,
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":12
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1.5
+                            },
+                            "AllianceFilter":4,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5
+                                        },
+                                        "IsResistable":true,
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":8,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":1,
+                "CastCost":15,
+                "AbilityCastType":"Area",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":14,
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":15
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1.5
+                            },
+                            "AllianceFilter":4,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5
+                                        },
+                                        "IsResistable":true,
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":8,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":1,
+                "CastCost":15,
+                "AbilityCastType":"Area",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":14,
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":18
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1.5
+                            },
+                            "AllianceFilter":4,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5
+                                        },
+                                        "IsResistable":true,
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":8,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":1,
+                "CastCost":15,
+                "AbilityCastType":"Area",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":14,
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":21
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1.5
+                            },
+                            "AllianceFilter":4,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5
+                                        },
+                                        "IsResistable":true,
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":8,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":1,
+                "CastCost":15,
+                "AbilityCastType":"Area",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Line",
+                            "MaxDistance":14,
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":24
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

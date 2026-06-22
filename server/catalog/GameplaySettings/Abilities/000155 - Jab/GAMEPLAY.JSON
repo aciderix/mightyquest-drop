@@ -1,0 +1,281 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":2,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":2.5,
+                        "ShiftAttackDistance":3.5,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.3,
+                                        "Tag":"Jab damage multiplier 1"
+                                    },
+                                    "ExtraDamageInfo":{
+                                        "ExtraCriticalChance":-1
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Duration":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":1.5
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    },
+                                    "IsDisabled":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                "OasisName":555,
+                "OasisShortDescription":556,
+                "Cooldown":0.2,
+                "PrepareTime":0.1,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":1,
+                "DirectedMaxDistance":2.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":15,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":4
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":2.5,
+                        "ShiftAttackDistance":3.5,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.6,
+                                        "Tag":"Jab damage multiplier 2"
+                                    },
+                                    "ExtraDamageInfo":{
+                                        "ExtraCriticalChance":-1
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Duration":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":1.5
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    },
+                                    "IsDisabled":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                "OasisName":558,
+                "OasisShortDescription":559,
+                "Cooldown":0.2,
+                "PrepareTime":0.1,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":1,
+                "DirectedMaxDistance":2.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":15,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":15
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":2.5,
+                        "ShiftAttackDistance":3.5,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.8,
+                                        "Tag":"Jab damage multiplier 3"
+                                    },
+                                    "ExtraDamageInfo":{
+                                        "ExtraCriticalChance":-1
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Duration":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":1.5
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    },
+                                    "IsDisabled":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                "OasisName":561,
+                "OasisShortDescription":562,
+                "Cooldown":0.1,
+                "PrepareTime":0.2,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":1,
+                "DirectedMaxDistance":2.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":15,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":27
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            }
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00003047.SOUND",
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    "StopAtEndOfState":true,
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00003046.SOUND"
+                },
+                "RecoverSound":{
+                    
+                },
+                "EndSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0000304A.SOUND"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Chainlightning"
+    }
+]

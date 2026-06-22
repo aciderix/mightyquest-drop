@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"CorrosionMineBuff",
+        "OasisName":1989,
+        "OasisDescription":1990
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HERODEBUFFS_PHYSICALARMORDOWN.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_physicalArmorDown",
+        "TileAnimationType":"verticalTopToBottom",
+        "MinimumElapsedTimeBeforeVisualUpdate":1
+    }
+]

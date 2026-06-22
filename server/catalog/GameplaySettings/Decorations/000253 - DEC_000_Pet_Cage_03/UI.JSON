@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Pet_Cage_03",
+        "OasisName":16629,
+        "OasisDescription":16263
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/Small_metal_door_pet_cage.png",
+        "InvIconUrl":"icoShop\/deco\/Small_metal_door_pet_cage.png",
+        "HeightOffset":2
+    }
+]

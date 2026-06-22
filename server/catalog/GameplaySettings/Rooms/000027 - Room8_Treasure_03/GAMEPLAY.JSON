@@ -1,0 +1,182 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomSpec, HyperQuest.GameServer.Contracts",
+        "RoomSections":
+        [
+            {
+                "Passages":
+                [
+                    "BorderWall",
+                    "BorderWall",
+                    "BorderWall",
+                    "Passage"
+                ]
+            }
+        ],
+        "Objects":
+        [
+            {
+                "X":12.5,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":39,
+                "EffectName":"TreasureRoomEntranceGrid"
+            },
+            {
+                "X":11.5,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":79,
+                "EffectName":"Door_TreasureRoom"
+            },
+            {
+                "X":-13,
+                "Z":-8,
+                "Orientation":{
+                    "Yaw":-45
+                },
+                "SpecContainerId":120,
+                "EffectName":"TreasureRoomExitDoor"
+            },
+            {
+                "X":-13,
+                "Z":-9,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":122,
+                "EffectName":"TreasureRoomStairRight"
+            },
+            {
+                "X":-13,
+                "Z":8,
+                "Orientation":{
+                    "Yaw":45
+                },
+                "SpecContainerId":120,
+                "EffectName":"TreasureRoomExitDoor"
+            },
+            {
+                "X":-13,
+                "Z":9,
+                "SpecContainerId":121,
+                "EffectName":"TreasureRoomStairLeft"
+            },
+            {
+                "X":10,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":125,
+                "EffectName":"TreasureRoomTrigger"
+            },
+            {
+                "X":-2.5,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":411,
+                "EffectName":"VictoryAnimationTrigger"
+            },
+            {
+                "X":-2.5,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":471,
+                "EffectName":"ChestsOpeningTrigger"
+            },
+            {
+                "X":-13,
+                "Z":-9,
+                "Orientation":{
+                    "Yaw":180
+                },
+                "SpecContainerId":418,
+                "EffectName":"Stairs_Fake_Exit_R"
+            },
+            {
+                "X":-13,
+                "Z":9,
+                "Orientation":{
+                    "Yaw":180
+                },
+                "SpecContainerId":417,
+                "EffectName":"Stairs_Fake_Exit_L"
+            },
+            {
+                "X":12.5,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":448,
+                "EffectName":"TestAttackConditionTrigger"
+            }
+        ],
+        "RoomModelCategory":"EmptyThrone",
+        "MaxConstructionPoints":100,
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingRequirementSpec, HyperQuest.GameServer.Contracts",
+        "BuildingRequirementSpecContainerId":13,
+        "BuildingRequirementRank":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "CreateShapesFromNodes":true,
+        "CollisionGroup":"World",
+        "PhysicRigidBodyType":"Static"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomConnectionSpec, HyperQuest.GameServer.Contracts",
+        "Priority":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomProceduralBuildablesSpec, HyperQuest.GameServer.Contracts",
+        "ProceduralRoomBuildables":
+        [
+            {
+                "Description":"Castle Hearth Building",
+                "SpecContainerId":1,
+                "RoomBuildableType":"SocleBuilding",
+                "RandomSpawnPositions":
+                [
+                    {
+                        "X":-12.4
+                    }
+                ]
+            },
+            {
+                "Description":"Gold storage building",
+                "SpecContainerId":3,
+                "RoomBuildableType":"SocleBuilding",
+                "RandomSpawnPositions":
+                [
+                    {
+                        "X":-4.6,
+                        "Z":2.5
+                    }
+                ]
+            },
+            {
+                "Description":"Life force storage Building",
+                "SpecContainerId":4,
+                "RoomBuildableType":"SocleBuilding",
+                "RandomSpawnPositions":
+                [
+                    {
+                        "X":-4.6,
+                        "Z":-3
+                    }
+                ]
+            }
+        ]
+    }
+]

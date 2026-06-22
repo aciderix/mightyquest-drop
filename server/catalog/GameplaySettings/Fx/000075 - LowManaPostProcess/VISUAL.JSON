@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualPostProcessFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_D525ADC3_BC685.MATERIAL",
+        "Name":"LowManaPostProcess",
+        "Priority":6
+    }
+]

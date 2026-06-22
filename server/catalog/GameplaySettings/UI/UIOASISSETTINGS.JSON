@@ -1,0 +1,156 @@
+{
+    "TimeFormatter":
+    {
+        "Second":9443,
+        "Seconds":9442,
+        "Minute":9441,
+        "Minutes":9440,
+        "Hour":9439,
+        "Hours":9438,
+        "Day":9437,
+        "Days":9436,
+        "Week":9435,
+        "Weeks":9434,
+        "Month":9433,
+        "Months":9432,
+        "XAgo":9445,
+        "AFewSecondsAgo":9444,
+        "XLeft": 9447
+    },
+    "Shop":
+    {
+        "RequirementBuilding":11573,
+        "RequirementHero":11575
+    },
+    "CastleInventory":
+    {
+        "OasisPanelTitle":8184
+    },
+    "PausePanel":
+    {
+        "ButtonContinue":9521,
+        "ButtonSettings":9517,
+        "ButtonCredits":11382,
+        "ButtonRestartCastle":9519,
+        "ButtonLeaveCastle":9518,
+        "ButtonControls":14980,
+        "ButtonExit":9520
+    },
+    "CastleValidation":
+    {
+        "CreaturesNumber":14236,
+        "MinesNumber":14356
+    },
+    "Attack":
+    {
+        "MineTimeBonus":15001,
+        "TimeToBeat":10990,
+        "YourTime":10991,
+        "TimerExpired":15104
+    },
+    "Building":
+    {
+        "UpgradePanel":
+        {
+            "Rank":10839,
+            "Capacity":10959,
+            "ProductionRate":10960,
+            "Health":14126
+        }
+    },
+    "Tooltip":
+    {
+        "BuildingRequirement": 11103,
+        "LevelRequirement": 11586,
+        "ItemRank":10839,
+        "LevelAbbreviation":8227,
+        "CreatureAttackSpeed":8239,
+        "CreatureMovementSpeed":8240,
+        "TrapPowerCost":14240
+    },
+    "HeroDeath":
+    {
+        "LostCrown":9856,
+        "HealCost":9418
+    },
+    "Common":
+    {
+        "HeroItemCategoryTypeQualifier":
+        {
+            "Ring": 9573,
+            "Necklace": 9574,
+            "Weapon": 9575,
+            "SuitOfArmor": 9579,
+            "ShoulderArmor": 9580,
+            "Gloves": 9581,
+            "Capes": 9582,
+            "Helm": 9583,
+            "Costume": 0,
+            "Pet": 0
+        } 
+    },
+    "ProfilePanelSettings":
+    {
+        "OasisIdCrowns":10489,
+        "OasisIdAchievementScore":8329,
+        "OasisIdHeroesDefeated":8331,
+        "OasisIdCastlesLooted":8332,
+        "OasisIdWinningStreak":8333,
+        "OasisIdCreaturesDefeated":8334,
+        "OasisIdGoldCollected":8335,
+        "OasisIdTimeAttacksCreated":8337,
+        "OasisIdTimeAttacksWon":8338,
+        "OasisIdTimeAttacksParticipated":8339
+    },
+    "ValidateCastleSettings":
+    {
+        "ValidateButtonText":15289,
+        "ValidateDescriptionText":15294,
+        "BuyValidateDescriptionText":15315,
+        "TicketButtonText":15293,
+        "TicketDescriptionText":15295
+    },
+    "Languages":
+    [
+        {
+            "Code":"EN",
+            "OasisId":13180
+        },
+        {
+            "Code":"FR",
+            "OasisId":13181
+        },
+        {
+            "Code":"DE",
+            "OasisId":13184
+        },
+        {
+            "Code":"IT",
+            "OasisId":13185
+        },
+        {
+            "Code":"ES",
+            "OasisId":13186
+        },
+        {
+            "Code":"PT",
+            "OasisId":13187
+        },
+        {
+            "Code":"RU",
+            "OasisId":13183
+        },
+        {
+            "Code":"PL",
+            "OasisId":13182
+        },
+        {
+            "Code":"HU",
+            "OasisId":13188
+        },
+        {
+            "Code":"YY",
+            "OasisId":15871
+        }
+    ]
+}

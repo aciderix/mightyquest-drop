@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Beholder_SpecA_ExplosionDamage_1",
+        "OasisName":2155,
+        "OasisDescription":2156
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Portal_01",
+        "OasisName":16633,
+        "OasisDescription":14859
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/Merely_a_portal.png",
+        "InvIconUrl":"icoShop\/deco\/Merely_a_portal.png",
+        "HeightOffset":2
+    }
+]

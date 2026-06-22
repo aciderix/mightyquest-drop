@@ -1,0 +1,54 @@
+{
+    "BoostCommunityEvents":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.GoldBoostCommunityEvent, HyperQuest.GameServer.Contracts",
+            "AttackIncreasedGold":1,
+            "MineIncreasedGold":1,
+            "ConsumableTemplateId":312,
+            "Id":21,
+            "EventStartTime":"2015-02-20T17:00:00Z",
+            "EventEndTime":"2015-02-23T05:00:00Z"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.LifeforceBoostCommunityEvent, HyperQuest.GameServer.Contracts",
+            "AttackIncreasedLifeForce":1,
+            "MineIncreasedLifeForce":1,
+            "ConsumableTemplateId":311,
+            "Id":22,
+            "EventStartTime":"2015-02-20T17:00:00Z",
+            "EventEndTime":"2015-02-23T05:00:00Z"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.XPBoostCommunityEvent, HyperQuest.GameServer.Contracts",
+            "IncreasedXp":1,
+            "ConsumableTemplateId":313,
+            "Id":23,
+            "EventStartTime":"2015-02-20T17:00:00Z",
+            "EventEndTime":"2015-02-23T05:00:00Z"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.MagicFindBoostCommunityEvent, HyperQuest.GameServer.Contracts",
+            "IncreasedChance":1,
+            "ConsumableTemplateId":310,
+            "Id":24,
+            "EventStartTime":"2013-07-26T10:00:00Z",
+            "EventEndTime":"2013-07-27T22:00:00Z"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.PremiumCashBoostCommunityEvent, HyperQuest.GameServer.Contracts",
+            "MineIncreasedPremiumCash":1,
+            "ConsumableTemplateId":1106,
+            "Id":25,
+            "EventStartTime":"2015-02-20T17:00:00Z",
+            "EventEndTime":"2015-02-23T05:00:00Z"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.MaterialMineBoostCommunityEvent, HyperQuest.GameServer.Contracts",
+            "MineProductionPeriodModifier":0.5,
+            "Id":26,
+            "EventStartTime":"2015-02-20T17:00:00Z",
+            "EventEndTime":"2015-02-23T05:00:00Z"
+        }
+    ]
+}

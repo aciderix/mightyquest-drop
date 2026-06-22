@@ -1,0 +1,49 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.9
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnTickBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Interval":0.7,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                    "SpawnPosition":{
+                        "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Front":-0.5,
+                        "Up":0.8
+                    },
+                    "TargetPosition":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"TargetOrAbilityCastPosition"
+                    },
+                    "MissilesCount":2,
+                    "ArcAngle":30,
+                    "MovementTarget":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "Missile":{
+                        "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":275,
+                        "Name":"SmellyArcher_SpecA_Splitshot_3B"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"AggroTarget"
+                    }
+                }
+            }
+        ],
+        "MaxInstances":1,
+        "IsDispellable":false,
+        "Flags":18,
+        "IsLinkedToCreator":true,
+        "BuffStopTriggers":{
+            
+        }
+    }
+]

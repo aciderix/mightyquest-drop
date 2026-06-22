@@ -1,0 +1,30 @@
+{
+    "MenuNavigationButtons":
+    [
+        {
+            "OasisId":8185,
+            "Url":"game:\/\/castleInventory\/show?tab=Creature",
+            "LayerName":"UI_Buildings_TabIcons:SummoningCreatures",
+            "ItemType":"Creature"
+        },
+        {
+            "OasisId":8186,
+            "Url":"game:\/\/castleInventory\/show?tab=Trap",
+            "LayerName":"UI_Buildings_TabIcons:SummoningTraps",
+            "ItemType":"Trap"
+        },
+        {
+            "OasisId":8187,
+            "Url":"game:\/\/castleInventory\/show?tab=Room",
+            "LayerName":"UI_Buildings_TabIcons:ArchitectRooms",
+            "ItemType":"Room"
+        },
+        {
+            "OasisId":8188,
+            "Url":"game:\/\/castleInventory\/show?tab=Decoration",
+            "LayerName":"UI_Buildings_TabIcons:ArchitectDeco",
+            "IsDisabledOnConsoleUI":true,
+            "ItemType":"Decoration"
+        }
+    ]
+}

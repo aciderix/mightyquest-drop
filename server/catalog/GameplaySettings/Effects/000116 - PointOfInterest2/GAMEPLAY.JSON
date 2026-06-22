@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ZoneRadius":7.25,
+        "ZoneCapacityBoost":4,
+        "CreateZoneOnSpawn":true
+    }
+]

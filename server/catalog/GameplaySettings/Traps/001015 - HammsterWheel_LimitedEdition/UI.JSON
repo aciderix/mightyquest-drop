@@ -1,0 +1,103 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HamsterWheel",
+        "OasisName":15414,
+        "OasisDescription":15415
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"wheel damage {0}",
+                    "OasisName":15416
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":1002,
+                        "TaggedSpec":"HamsterWheelDamage_LimitedEdition"
+                    }
+                ],
+                "OnlyForTiers":
+                [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"wheel damage {0}",
+                    "OasisName":15416
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":3,
+                        "TaggedSpec":"HamsterWheelDamage_LimitedEdition"
+                    }
+                ],
+                "OnlyForTiers":
+                [
+                    4,
+                    5,
+                    6
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"wheel damage {0}",
+                    "OasisName":15416
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":3,
+                        "TaggedSpec":"HamsterWheelDamage_LimitedEdition"
+                    }
+                ],
+                "OnlyForTiers":
+                [
+                    7
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/RedHotRoller.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/Rares\/RedHotRoller.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:RedHotRoller"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

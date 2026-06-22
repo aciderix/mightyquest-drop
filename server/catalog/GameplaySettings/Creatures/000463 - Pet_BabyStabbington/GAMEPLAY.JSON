@@ -1,0 +1,231 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PetSpec, HyperQuest.GameServer.Contracts",
+        "AttractableLootTypeMask":1614
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseMovementSpeed":8,
+        "BaseDodge":0.05,
+        "BaseTurningRate":700,
+        "BaseFacingConeAngle":40,
+        "BaseMovementReduction":1,
+        "BasePhysicalDamage":47,
+        "BaseHealth":450,
+        "BaseCriticalHitChance":0.05,
+        "BaseCriticalHitDamageBonus":1.5,
+        "PhysicalDamagePerLevel":6,
+        "HealthPerLevel":25
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.3,
+                "Height":1.2,
+                "Y":0.8
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NavigationSpec, HyperQuest.GameServer.Contracts",
+        "PenetrationRadius":0,
+        "NavigationAvoidanceMask":0,
+        "GroupsToAvoidMask":0,
+        "SimplifyPathEachFrame":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffableSpec, HyperQuest.GameServer.Contracts",
+        "PassiveBuffs":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":712,
+                "Name":"PetSpeedBuffTicker"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureAiSpec, HyperQuest.GameServer.Contracts",
+        "BehaviorType":"HeroPet",
+        "CheckPlayerDistanceToDoTasks":false,
+        "PrioritizeRecurringTasks":true,
+        "Behavior":{
+            
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AuraCarrierSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GameCommandProcessorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnSpec, HyperQuest.GameServer.Contracts",
+        "Duration":0.1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":1
+            },
+            {
+                "Tier":2,
+                "Level":2
+            },
+            {
+                "Tier":3,
+                "Level":3
+            },
+            {
+                "Tier":4,
+                "Level":4
+            },
+            {
+                "Tier":5,
+                "Level":5
+            },
+            {
+                "Tier":6,
+                "Level":6
+            },
+            {
+                "Tier":7,
+                "Level":7
+            },
+            {
+                "Tier":8,
+                "Level":8
+            },
+            {
+                "Tier":9,
+                "Level":9
+            },
+            {
+                "Tier":10,
+                "Level":10
+            },
+            {
+                "Tier":11,
+                "Level":11
+            },
+            {
+                "Tier":12,
+                "Level":12
+            },
+            {
+                "Tier":13,
+                "Level":13
+            },
+            {
+                "Tier":14,
+                "Level":14
+            },
+            {
+                "Tier":15,
+                "Level":15
+            },
+            {
+                "Tier":16,
+                "Level":16
+            },
+            {
+                "Tier":17,
+                "Level":17
+            },
+            {
+                "Tier":18,
+                "Level":18
+            },
+            {
+                "Tier":19,
+                "Level":19
+            },
+            {
+                "Tier":20,
+                "Level":20
+            },
+            {
+                "Tier":21,
+                "Level":21
+            },
+            {
+                "Tier":22,
+                "Level":22
+            },
+            {
+                "Tier":23,
+                "Level":23
+            },
+            {
+                "Tier":24,
+                "Level":24
+            },
+            {
+                "Tier":25,
+                "Level":25
+            },
+            {
+                "Tier":26,
+                "Level":26
+            },
+            {
+                "Tier":27,
+                "Level":27
+            },
+            {
+                "Tier":28,
+                "Level":28
+            },
+            {
+                "Tier":29,
+                "Level":29
+            },
+            {
+                "Tier":30,
+                "Level":30
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1
+        },
+        "CraftingBuildingRequirementSpec":{
+            
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":1328,
+                "Name":"PetTeleport"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TotemDefenderSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsNotInBuildInventory":true
+    },      
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FightDynamicsSpec, HyperQuest.GameServer.Contracts"
+    }
+]

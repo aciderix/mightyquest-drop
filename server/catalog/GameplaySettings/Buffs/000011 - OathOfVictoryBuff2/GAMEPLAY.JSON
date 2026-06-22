@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":15
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"DamageReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.15,
+                    "Tag":"Healing Strike protective buff 2"
+                },
+                "IsAdditive":true
+            }
+        ],
+        "InstancesRefreshType":"AllInstancesOfSameCreator",
+        "MaxInstancesPerCreator":5,
+        "Flags":2,
+        "Tag":"Healing Strike buff duration 2"
+    }
+]

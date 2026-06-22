@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":5
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierBonusBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"DamageReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.RescaleAndClampValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":{
+                        "$type":"HyperQuest.GameServer.Contracts.TargetSearchCountValueSpec, HyperQuest.GameServer.Contracts",
+                        "TargetSearchSpec":{
+                            "TargetType":9,
+                            "MaxDistance":3,
+                            "SearchMethod":"Default",
+                            "AllianceFilter":4,
+                            "GameEntityTypeMask":2
+                        }
+                    },
+                    "Min":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "Max":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":5
+                    },
+                    "NewMin":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "NewMax":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":0.25
+                    }
+                },
+                "IsAdditive":true
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "Flags":2
+    }
+]

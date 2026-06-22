@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Knight",
+        "OasisName":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/heroes\/2.png",
+        "InvIconUrl":"iconInv\/lobbyBar\/heroes\/2.png",
+        "HeightOffset":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroUiSpec, HyperQuest.GameServer.Contracts",
+        "NameOasisId":3,
+        "FullNameOasisId":14144,
+        "BiographyNoNameOasisId":14143,
+        "BiographyOasisId":8287,
+        "DescriptionOasisId":452,
+        "SampleAbilities":
+        [
+            11,
+            12,
+            32
+        ],
+        "IconUrl":"iconInv\/lobbyBar\/heroes\/2.png",
+        "PortraitUrl":"hud\/attackPortraits\/HUD_ATTACKPORTRAITSKNIGHT.png",
+        "RoundedIconUrl":"common\/heroIcons\/knightRegular.png",
+        "RoundedLargeIconUrl":"common\/heroIconsLrg\/knightRegular.png",
+        "HeaderIconUrl":"hud\/autoLevelUp\/heroes\/knight1.png",
+        "CreationIconUpUrl":"NUE\/heroSelection\/NUE_StraitKnightUp.png",
+        "CreationIconOverUrl":"NUE\/heroSelection\/NUE_StraitKnightOver.png",
+        "CreationIconSelectedUrl":"NUE\/heroSelection\/NUE_StraitKnightSelect.png",
+        "CreationIconLeftOffset":-10,
+        "IconLayerName":"UI_HUD_Common_portraits:Knight",
+        "HeroIconLrgBgLayerName":"common_heroIconsLrgBg:knightRegular"
+    }
+]

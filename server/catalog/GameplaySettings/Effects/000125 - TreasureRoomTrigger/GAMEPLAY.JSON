@@ -1,0 +1,35 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":2,
+        "StartLength":2,
+        "EndLength":2,
+        "LocalStartOffsetX":-1,
+        "TouchedEntitiesType":2,
+        "OnEnterMaxActivation":1,
+        "DestroyFieldTriggers":{
+            "OnMaxActivationReached":true
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ChangeDoorStateOperationSpec, HyperQuest.GameServer.Contracts",
+                    "DoorState":"Closed",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.TargetNameSpec, HyperQuest.GameServer.Contracts",
+                        "Name":"TreasureRoomEntranceGrid"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableAbilitiesOperationSpec, HyperQuest.GameServer.Contracts",
+                    "AbilityTypeFlags":15,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffedFootStepSpec, HyperQuest.GameServer.Contracts",
+        "BuffedFootStepSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002D3D.SOUND"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Acid"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Haste 3",
+        "OasisName":13564,
+        "OasisDescription":13565
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/heroBuffs_damageIncrease.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_damageIncrease",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

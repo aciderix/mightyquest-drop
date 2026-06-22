@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Barricade_Halloween_01_B",
+        "OasisName":15734,
+        "OasisDescription":15734
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Barricade_Halloween_01_B.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Barricade_Halloween_01_B.png",
+        "HeightOffset":2
+    }
+]

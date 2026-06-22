@@ -1,0 +1,104 @@
+{
+    "HeroFreeTrialCommunityEvents":
+    [
+        {
+            "HeroSpecContainerIds":
+            [
+                3
+            ],
+            "IconUrl":"freeTrial\/heroes\/Archer.png",
+            "PriceReductionConditionIds":
+            [
+                1,
+                2,
+                3,
+                4
+            ],
+            "Id":2,
+            "DebugName":"Archer free trial",
+            "EventStartTime":"2015-01-01T16:00:00Z",
+            "EventEndTime":"2015-01-10T03:59:59Z"
+        }
+    ],
+    "PriceReductionConditions":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HeroLevelUpPriceReductionContition, HyperQuest.GameServer.Contracts",
+            "Level":5,
+            "Id":1,
+            "DebugName":"Reach level 5",
+            "PriceReduction":
+            [
+                {
+                    "CurrencyType":"PremiumCash",
+                    "Amount":50
+                }
+            ]
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HeroLevelUpPriceReductionContition, HyperQuest.GameServer.Contracts",
+            "Level":10,
+            "Id":2,
+            "DebugName":"Reach level 10",
+            "PriceReduction":
+            [
+                {
+                    "CurrencyType":"PremiumCash",
+                    "Amount":100
+                }
+            ]
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HeroLevelUpPriceReductionContition, HyperQuest.GameServer.Contracts",
+            "Level":12,
+            "Id":3,
+            "DebugName":"Reach level 12",
+            "PriceReduction":
+            [
+                {
+                    "CurrencyType":"PremiumCash",
+                    "Amount":200
+                }
+            ]
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.HeroLevelUpPriceReductionContition, HyperQuest.GameServer.Contracts",
+            "Level":15,
+            "Id":4,
+            "DebugName":"Reach level 15",
+            "PriceReduction":
+            [
+                {
+                    "CurrencyType":"PremiumCash",
+                    "Amount":300
+                }
+            ]
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CastleLootedPriceReductionCondition, HyperQuest.GameServer.Contracts",
+            "Count":2,
+            "Id":5,
+            "DebugName":"Loot 2 castles",
+            "PriceReduction":
+            [
+                {
+                    "CurrencyType":"PremiumCash",
+                    "Amount":100
+                }
+            ]
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CreatureKilledCountPriceReductionCondition, HyperQuest.GameServer.Contracts",
+            "Count":20,
+            "Id":6,
+            "DebugName":"Kill 20 creatures",
+            "PriceReduction":
+            [
+                {
+                    "CurrencyType":"PremiumCash",
+                    "Amount":100
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapSpec, HyperQuest.GameServer.Contracts",
+        "XpRewardShape":{
+            "$type":"HyperQuest.GameServer.Contracts.CircularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Radius":2
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapStatsSpec, HyperQuest.GameServer.Contracts",
+        "BasePhysicalDamage":50,
+        "PhysicalDamagePerLevel":20
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "Width":1,
+        "Height":1,
+        "RoomBuildableType":"Cannon"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "BuildXp":150
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":1.4,
+                "Height":0.2,
+                "Y":0.7
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ParentingSpec, HyperQuest.GameServer.Contracts",
+        "Children":
+        [
+            {
+                "Entity":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                    "SpecContainerReferenceId":443,
+                    "Name":"LD_CorrosivePuddle"
+                },
+                "Position":{
+                    
+                },
+                "Orientation":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsNotInBuildInventory":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":4
+            },
+            {
+                "Tier":2,
+                "Level":8
+            },
+            {
+                "Tier":3,
+                "Level":12
+            },
+            {
+                "Tier":4,
+                "Level":16
+            },
+            {
+                "Tier":5,
+                "Level":20
+            },
+            {
+                "Tier":6,
+                "Level":24
+            },
+            {
+                "Tier":7,
+                "Level":28
+            },
+            {
+                "Tier":8,
+                "Level":30
+            },
+            {
+                "Tier":9,
+                "Level":34
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1
+        },
+        "CraftingBuildingRequirementSpec":{
+            
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts"
+    }
+]

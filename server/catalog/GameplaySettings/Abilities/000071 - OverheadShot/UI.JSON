@@ -1,0 +1,69 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Volley",
+        "OasisName":173
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Volley_Up.png",
+        "InvIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Volley_Up.png",
+        "LayerName":"UI_Common_Hero002_SkillsIcons:Volley"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":174,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}+({1}*herodps)",
+                        "FormulaParams":
+                        [
+                            "Base",
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Volley damage 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"(3.4\/{0})*2",
+                        "FormulaParams":
+                        [
+                            "CollisionCheckInterval"
+                        ],
+                        "TaggedSpec":"Volley number of arrows 1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":174,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}+({1}*herodps)",
+                        "FormulaParams":
+                        [
+                            "Base",
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Volley damage 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"(3.4\/{0})*3",
+                        "FormulaParams":
+                        [
+                            "CollisionCheckInterval"
+                        ],
+                        "TaggedSpec":"Volley number of arrows 2"
+                    }
+                ]
+            }
+        ]
+    }
+]

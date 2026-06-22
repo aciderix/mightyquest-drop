@@ -1,0 +1,197 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AuraCarrierSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GameCommandProcessorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroEquipmentDefinitionSpec, HyperQuest.GameServer.Contracts",
+        "HeroItemTypes":
+        [
+            {
+                "HeroItemTypeId":9,
+                "RandomChance":0.3
+            },
+            {
+                "HeroItemTypeId":10,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":11,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":12,
+                "RandomChance":0.13
+            },
+            {
+                "HeroItemTypeId":13,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":14,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":7,
+                "RandomChance":0.09
+            },
+            {
+                "HeroItemTypeId":8,
+                "RandomChance":0.08
+            },
+            {
+                "HeroItemTypeId":29
+            },
+            {
+                "HeroItemTypeId":31
+            },
+            {
+                "HeroItemTypeId":32
+            }
+        ],
+        "DefaultEquipmentTemplateIds":
+        {
+            "ShouldersTemplateId":134,
+            "WeaponTemplateId":128,
+            "HelmTemplateId":129,
+            "GlovesTemplateId":131,
+            "SuitOfArmorTemplateId":130
+        },
+        "ShowcaseEquipmentTemplateIds":
+        {
+            "ShouldersTemplateId":194,
+            "WeaponTemplateId":43,
+            "HelmTemplateId":190,
+            "GlovesTemplateId":202,
+            "SuitOfArmorTemplateId":198
+        },
+        "BaseWeaponDamage":25,
+        "WeaponDamagePerLevel":13.5,
+        "ArmorDamagePerLevel":6.8,
+        "BaseAttackSpeed":1,
+        "BaseRange":20,
+        "RangePerLevel":10,
+        "BaseHealth":555,
+        "HealthPerLevel":100
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroSpec, HyperQuest.GameServer.Contracts",
+        "HighPickingHeight":1.68,
+        "UseHighPickingStyle":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroSpellsSpec, HyperQuest.GameServer.Contracts",
+        "AllowedSpells":
+        [
+            611,
+            606,
+            613,
+            608,
+            610,
+            1371,
+            614,
+            601,
+            609,
+            602,
+            607,
+            605
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseCriticalHitChance":0.05,
+        "BaseCriticalDamage":1.5,
+        "BaseDodgeChance":0.05,
+        "BaseMovementSpeed":6,
+        "BaseManaRegeneration":5,
+        "BaseHealth":325,
+        "BaseMana":100,
+        "DamagePerLevel":6,
+        "HealthPerLevel":43,
+        "SlowMoveSpeed":5.5,
+        "NormalMoveSpeed":6,
+        "FastMoveSpeed":6.5,
+        "SlowManaFlow":0.5,
+        "NormalManaFlow":1,
+        "FastManaFlow":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.InteractorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts",
+        "DieMovementReduction":1,
+        "RenegerationDelayAfterDamage":6,
+        "MaxLifePercentageDelayedPerSecond":0.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NavigationSpec, HyperQuest.GameServer.Contracts",
+        "PenetrationRadius":0.6,
+        "StartSpeedBoost":{
+            "InitialSpeedBoostMultiplier":1.3333,
+            "AParameter":4.7,
+            "Cooldown":0.5
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.4,
+                "Height":1.6,
+                "Y":0.8
+            }
+        ],
+        "CollisionGroup":"Hero",
+        "Radius":0.4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.4,
+                "Height":1.6,
+                "Y":0.8
+            }
+        ],
+        "ManualActivationOnInit":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PushableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StunableSpec, HyperQuest.GameServer.Contracts",
+        "StunRecoverImmunityDuration":0.1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SurroundableSpec, HyperQuest.GameServer.Contracts",
+        "SurroundRadius":0.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ResistanceSpec, HyperQuest.GameServer.Contracts"
+    }
+]

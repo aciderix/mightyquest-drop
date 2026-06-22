@@ -1,0 +1,34 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PieSliceFieldSpec, HyperQuest.GameServer.Contracts",
+        "PieSliceStartAngle":45,
+        "PieSliceEndAngle":45,
+        "StartRadius":5,
+        "EndRadius":5,
+        "TouchedEntitiesType":0,
+        "AllianceFilter":4,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":2
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DeactivateTrapOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Duration":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":5,
+                        "Tag":"RunawayDeactivateTrap1"
+                    },
+                    "TrapEntityTypeMask":2,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "TestShapeOverlap":true
+    }
+]

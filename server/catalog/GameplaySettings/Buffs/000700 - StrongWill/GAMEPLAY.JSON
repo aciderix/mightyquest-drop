@@ -1,0 +1,55 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierBonusBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.ItemAbilityValueSpec, HyperQuest.GameServer.Contracts",
+                    "ItemAbilityId":1
+                },
+                "_comment":"All knockback effects move the hero by X% less distance"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatImmunityBonusBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.ItemAbilityValueSpec, HyperQuest.GameServer.Contracts",
+                    "ItemAbilityId":1
+                },
+                "_comment":"All movement speed slow effects have an effect that is X% less slow"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatImmunityBonusBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"IncreasedAttackSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.ItemAbilityValueSpec, HyperQuest.GameServer.Contracts",
+                    "ItemAbilityId":1
+                },
+                "_comment":"All attack speed slow effects have an effect that is X% less slow"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierBonusBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"StunDurationReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.ItemAbilityValueSpec, HyperQuest.GameServer.Contracts",
+                    "ItemAbilityId":1
+                },
+                "_comment":"All stun effects (including from knockback) last X% less time"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierBonusBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"TrapStunDurationReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.ItemAbilityValueSpec, HyperQuest.GameServer.Contracts",
+                    "ItemAbilityId":1
+                },
+                "_comment":"All stun effects (including from knockback) last X% less time"
+            }
+        ],
+        "MaxInstances":1
+    }
+]

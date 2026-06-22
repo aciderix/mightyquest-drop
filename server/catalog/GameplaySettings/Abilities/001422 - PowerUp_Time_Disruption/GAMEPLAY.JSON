@@ -1,0 +1,129 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":3,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Effect":{
+                        "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":527,
+                        "Name":"TimeDisruption1Bubble"
+                    },
+                    "Position":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourcePosition"
+                    },
+                    "Orientation":"SourceOrientation",
+                    "SpawnRestrictionType":"ValidOnNavMesh",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":20,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":1
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Effect":{
+                        "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":528,
+                        "Name":"TimeDisruption2Bubble"
+                    },
+                    "Position":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourcePosition"
+                    },
+                    "Orientation":"SourceOrientation",
+                    "SpawnRestrictionType":"ValidOnNavMesh",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "OasisName":37,
+                "OasisShortDescription":38,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":20,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":18
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Effect":{
+                        "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":529,
+                        "Name":"TimeDisruption3Bubble"
+                    },
+                    "Position":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourcePosition"
+                    },
+                    "Orientation":"SourceOrientation",
+                    "SpawnRestrictionType":"ValidOnNavMesh",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "OasisName":39,
+                "OasisShortDescription":40,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":20,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":30
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Effect":{
+                        "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":530,
+                        "Name":"TimeDisruption4Bubble"
+                    },
+                    "Position":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourcePosition"
+                    },
+                    "Orientation":"SourceOrientation",
+                    "SpawnRestrictionType":"ValidOnNavMesh",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":20,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":1
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

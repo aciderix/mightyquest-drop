@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_015_Cardboard_BagOfBones",
+        "OasisName":15386,
+        "OasisDescription":15389
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_015_Cardboard_BagOfBones.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_015_Cardboard_BagOfBones.png",
+        "HeightOffset":2
+    }
+]

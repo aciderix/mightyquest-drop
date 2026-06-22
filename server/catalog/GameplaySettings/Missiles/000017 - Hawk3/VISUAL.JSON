@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_CastHawk_03_MIS",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_494F1345>ENTITY_494F1345.ENTITY",
+        "Scale":1.25
+    }
+]

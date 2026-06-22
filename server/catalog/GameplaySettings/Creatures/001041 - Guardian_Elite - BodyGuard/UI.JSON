@@ -1,0 +1,68 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Guardian_Elite_Bodyguard",
+        "OasisName":15197,
+        "OasisDescription":15198
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_Guardian:A1e",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Guardian1.png",
+                        "NameOasisId":11171,
+                        "DescriptionOasisId":15198
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A2e"
+            }
+        ]
+    }
+]

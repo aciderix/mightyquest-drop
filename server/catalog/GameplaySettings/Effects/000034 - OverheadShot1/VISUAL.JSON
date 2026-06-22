@@ -1,0 +1,56 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "FieldShowFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMultiInstanceFxSpec, HyperQuest.GameServer.Contracts",
+                "InstanceCount":50,
+                "DelayBetweenInstance":0.05,
+                "Fx":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualRepeatingFxSpec, HyperQuest.GameServer.Contracts",
+                    "Shape":{
+                        
+                    },
+                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_1F57B169>SPECIALFX_1F57B169.SPECIALFX",
+                    "PlayMode":"One",
+                    "AttachmentStrategy":{
+                        "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "ForcePlayUntilFxFinished":true
+                },
+                "Shape":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualCircleShapeSpec, HyperQuest.GameServer.Contracts",
+                    "Center":{
+                        "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Value1":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"RandomDirection"
+                        },
+                        "Value2":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"RandomDirection"
+                        }
+                    },
+                    "Radius":4
+                },
+                "ForcePlayUntilFxFinished":true,
+                "Name":"CHA_002_OverHeadShot_01_EFF"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_39AC2F27_BA618>SPECIALFX_39AC2F27_BA618.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_OverHeadShot_01_EFF"
+    }
+]

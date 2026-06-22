@@ -1,0 +1,13 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cardboard_Grapnel",
+        "OasisName":14516
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Cartboard_Grapnel.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Cartboard_Grapnel.png",
+        "HeightOffset":2
+    }
+]

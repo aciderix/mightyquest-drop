@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_010_HamsterWheel_Wheel_01",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_8716D594_AH273>ENTITY_8716D594_AH273.ENTITY"
+    }
+]

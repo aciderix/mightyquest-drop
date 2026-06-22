@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOverlayOverrideSpec, HyperQuest.GameServer.Contracts",
+        "InteractionHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_E38A5279_AI231.MATERIAL",
+        "InspectedEntityHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_E38A5279_AI231.MATERIAL",
+        "SelectedEntityHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_E38A5279_AI231.MATERIAL"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_011_GelatinousWall_01",
+        "Scale":0,
+        "SizeCategory":"Large",
+        "HideInModeMask":1
+    }
+]

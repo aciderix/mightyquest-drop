@@ -1,0 +1,13 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Door_TreasureRoom",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_26270381_AI650>XREF_26270381_AI650.XREF",
+        "HideInModeMask":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualInteractiveSpec, HyperQuest.GameServer.Contracts",
+        "InteractionAnimationName":"Door_Opening",
+        "InteractionType":"OpenDoor"
+    }
+]

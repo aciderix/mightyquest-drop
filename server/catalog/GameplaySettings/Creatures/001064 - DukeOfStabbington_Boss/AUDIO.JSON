@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000826DE.SOUND",
+            "FireAndForget":true
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000826DE.SOUND",
+            "FireAndForget":true
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000826DD.SOUND",
+            "FireAndForget":true
+        },
+        "AttackImpactSoundLevelsProfileType":"Boss"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Claw"
+    }
+]

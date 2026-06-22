@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"UI\/Hud\/BuffDebuffIcons\/creatureDebuffs_weakness.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureDebuffs_weakness",
+        "TileAnimationType":"verticalTopToBottom"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blob_LimitedEdition_Ice_WeaknessBuff",
+        "OasisName":13318,
+        "OasisDescription":13319
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/heroDebuffs_acidDamage.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_acidDamage",
+        "TileAnimationType":"verticalTopToBottom"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"ElectricGargoyle_LimitedEdition_DoT",
+        "OasisName":15631,
+        "OasisDescription":15632
+    }
+]

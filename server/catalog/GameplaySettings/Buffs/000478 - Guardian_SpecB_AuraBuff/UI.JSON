@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Guardian_SpecB_AuraBuff_1",
+        "OasisName":13231,
+        "OasisDescription":13232
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/CREATUREBUFFS_INVINCIBILITY.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_invincibility",
+        "TileAnimationType":"verticalTopToBottom",
+        "MinimumElapsedTimeBeforeVisualUpdate":1
+    }
+]

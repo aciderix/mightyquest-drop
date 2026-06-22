@@ -1,0 +1,28 @@
+{
+    "IdleTimeThresholds": 
+    { 
+        "0": 30,
+        "1": 30,
+        "2": 30,
+        "3": 30,
+        "4": 30,
+        "5": 30,
+        "6": 600,
+        "7": 30,
+        "8": 30,
+        "9": 30,
+        "10": 30,
+        "11": 30
+    },
+    "EnableProfiling":false,
+    "GlanceViewDurationTriggerInSeconds":5,
+    "MaxPendingQueueSize": 1000,
+    "FlushPendingTagsJobInterval": "1m",
+    "ExcludedMongoTrackingTagIds": [],
+    "ClientIdleInterval":"1m",
+    "GameStateTrackingInterval":"5m",
+	"EnabledNavigationTrackings":
+	[
+		"game://forge/open"
+	]
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioFieldSpec, HyperQuest.GameServer.Contracts",
+        "FieldVanishSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089E3F.SOUND"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioTrapSpec, HyperQuest.GameServer.Contracts",
+        "TrapActivatedSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089E13.SOUND"
+        }
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_014_FallenMelee_Charge",
+        "Scale":0.01
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_FB9DEE3E_AI933>FX_FB9DEE3E_AI933.SPECIALFX",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"bip01 spine"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellCharge",
+                "AnimActive":"00_SpellCharge",
+                "AnimRecover":"00_SpellCharge"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_DBD8BD20_AI933.MATERIAL",
+                "Length":22,
+                "SpaceBetweenSegment":1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Body",
+                    "TrailPointOffsetOnY":0.5,
+                    "RotationZ":135
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_DBD8BD20_AI933.MATERIAL",
+                "Length":22,
+                "SpaceBetweenSegment":1,
+                "SegmentLifeTime":0.5,
+                "FadeInTime":2,
+                "FadeOutTime":1,
+                "FadeInDistance":3,
+                "FadeOutDistance":3,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Body",
+                    "TrailPointOffsetOnY":0.7,
+                    "RotationZ":90
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,63 @@
+{
+    "AggroIdleDurationAfterAbility":10,
+    "AggroIdleDurationDefault":5,
+    "DeathAnimationMaxDuration":5,
+    "DefaultAttachmentBone":"Bip01",
+    "DefaultLeftFootBone":"Bip01 L Foot",
+    "DefaultRightFootBone":"Bip01 R Foot",
+    "Idle":"00_Wait",
+    "AggroIdle":"00_AttackWait",
+    "HeroAggroIdleToIdle":"00_TransitionToWait",
+    "Death":"00_Death",
+    "Navigation":"00_Run",
+    "DefaultAbility":"00_Attack",
+    "HorizontalKnockBack":"00_Fall",
+    "BallisticKnockBack":"00_FallBallistic",
+    "Stun":"00_Stun",
+    "Walk":"00_Walk",
+    "Flinch":"00_Flinch",
+    "CriticalFlinch":"00_Flinch",
+    "Spawn":"00_Spawn",
+    "OpenDoor":"Door_Opening",
+    "CloseDoor":"Door_Closing",
+    "OpenedDoor":"Door_StateOpen",
+    "ClosedDoor":"Door_StateClosed",
+    "LootAction":"Action",
+    "BuilderDrag":"IT_Drag",
+    "BuilderDrop":"IT_Drop",	
+    "InteractionOpenDoor":"00_OpenDoor",
+    "InteractionOpenChest":"00_OpenChest",	
+    "Harvest":"IT_Purchase",
+    "HeroDiedRejoicing":
+    [
+        {
+            "AnimationName":"IT_Purchase",
+            "Probability":0.5
+        }
+    ],
+    "Celebration":"00_Celebration",
+    "CelebrationLoose":"00_Loose",
+    "CreateObstacle":"CreateObstacle",
+    "DamageObstacle":"DamageObstacle",
+    "DestroyObstacle":"DestroyObstacle",
+    "EmoteAnimations": 
+    [
+        { "AnimationName": "00_Dance" },
+        { "AnimationName": "00_Defy" },
+        { "AnimationName": "00_Victory" },        
+        { "AnimationName": "00_Taunt" },
+        { "AnimationName": "" },
+        { "AnimationName": "" },
+        { "AnimationName": "" },
+        { "AnimationName": "" }
+    ],
+    "HomePageVictory":"00_Victory",
+    "HomePageAngry":"00_Angry",
+    "Deactivated":"00_Desactivated",
+    "LoopDeactivatedAnimation":false,
+    "MineBuildingReadyToCollect":"00_Attack",
+    "MineBuildingReadyToCollectIdle":"00_AttackWait",
+    "MineBuildingCollecting":"",
+    "MineBuildingCollected":"00_Wait",
+    "MineBuildingDamageReceived":"00_Attack"
+}

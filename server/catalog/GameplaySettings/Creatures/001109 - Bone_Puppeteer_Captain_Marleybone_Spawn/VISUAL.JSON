@@ -1,0 +1,63 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Bone_Puppeteer_Captain_Marleybone_Spawn",
+        "Scale":0.9,
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D0C37372_AH273>ENTITY_D0C37372_AH273.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 2"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D0C37372_AH273>ENTITY_D0C37372_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D0C37372_AH273>ENTITY_D0C37372_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D0C37372_AH273>ENTITY_D0C37372_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B6340FD2_AH273>ENTITY_B6340FD2_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B6340FD2_AH273>ENTITY_B6340FD2_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B6340FD2_AH273>ENTITY_B6340FD2_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D396A039_AH273>ENTITY_D396A039_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D396A039_AH273>ENTITY_D396A039_AH273.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 2"
+            }
+        ],
+        "BoostedVisual":{
+            "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D396A039_AH273>ENTITY_D396A039_AH273.ENTITY"
+        }
+    }
+]

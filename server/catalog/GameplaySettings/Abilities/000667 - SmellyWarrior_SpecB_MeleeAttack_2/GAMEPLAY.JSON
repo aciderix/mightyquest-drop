@@ -1,0 +1,56 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "MaxDistance":3.5,
+                            "ShiftAttackDistance":2,
+                            "ShiftAttackRadius":0.5,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage",
+                                            "Multiplier":3,
+                                            "Tag":"Smelly B Heavy Attack 2"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ExtraCriticalChance":-1,
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":1,
+                "PrepareTime":1.5,
+                "RecoverTime":1,
+                "MaxDistance":1.5,
+                "UseEntitiesRadius":true,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1,
+                "MainDamageOperationStatValueSpecTag":"Smelly B Heavy Attack 2"
+            }
+        ]
+    }
+]

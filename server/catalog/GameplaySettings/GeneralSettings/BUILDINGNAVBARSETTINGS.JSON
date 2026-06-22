@@ -1,0 +1,27 @@
+{
+    "Links":
+    [
+        {
+            "BuildingType":"PotionBrewery",
+            "TooltipOasisId":12164,
+            "IconUrl":"HUD\/BTNS\/HUD_BTNPOTIONBREWERY.PNG"
+        },
+        {
+            "BuildingType":"BlackSmith",
+            "TooltipOasisId":12165,
+            "IconUrl":"HUD\/BTNS\/HUD_BTNBLACKSMITH.PNG"
+        },
+        {
+            "BuildingType":"CreatureHatchery",
+            "TooltipOasisId":12167,
+            "IconUrl":"HUD\/BTNS\/HUD_BTNRESEARCH.PNG",
+            "IsDefendLink":true
+        },
+        {
+            "BuildingType":"ArchitectOffice",
+            "TooltipOasisId":12166,
+            "IconUrl":"HUD\/BTNS\/HUD_BTNARCHITECT.PNG",
+            "IsDefendLink":true
+        }
+    ]
+}

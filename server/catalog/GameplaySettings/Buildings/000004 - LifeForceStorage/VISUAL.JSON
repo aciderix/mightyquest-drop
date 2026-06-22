@@ -1,0 +1,73 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"BUILDING_LifeForce_Storage_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_613F1B29_AI650>XREF_613F1B29_AI650.XREF",
+        "Scale":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildingProgressionSpec, HyperQuest.GameServer.Contracts",
+        "VisualProgression":
+        [
+            {
+                
+            },
+            {
+                "Groups":
+                [
+                    "Rank_1"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_2"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_3"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_4"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_5"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_6"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_7"
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEventSubscriberSpec, HyperQuest.GameServer.Contracts",
+        "EventName":"LifeForceStorageChestOpening",
+        "AnimationName":"Chest_Opening"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualResourceBuildingSpec, HyperQuest.GameServer.Contracts",
+        "VisualFillingLevelParts":
+        [
+            "Empty",
+            "Half",
+            "Full"
+        ]
+    }
+]

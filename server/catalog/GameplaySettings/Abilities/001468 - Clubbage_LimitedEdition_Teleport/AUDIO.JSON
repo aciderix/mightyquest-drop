@@ -1,0 +1,32 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartSound":{
+                    
+                },
+                "PrepareSound":{
+                    
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008B3D3.SOUND",
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                },
+                "EndSound":{
+                    
+                },
+                "InstantSound":{
+                    
+                },
+                "ChargeUpInterruptedSound":{
+                    
+                }
+            }
+        ]
+    }
+]

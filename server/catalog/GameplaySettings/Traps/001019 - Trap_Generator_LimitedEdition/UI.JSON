@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SuperTrapGenerator_LimitedEdition",
+        "OasisName":15655,
+        "OasisDescription":15656
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/SuperPowerSupply.png",
+                "InvIconUrl":"UI\/Common\/TrapsIconsInv\/Rares\/SuperPowerSupply.png",
+                "LayerName":"UI_Common_TrapsIcons_Rares:SuperPowerSupply"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Debug_AbilityDescription",
+                    "OasisName":15656
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/powerGenerator.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/SuperPowerSupply.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/Rares\/SuperPowerSupply.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:SuperPowerSupply"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

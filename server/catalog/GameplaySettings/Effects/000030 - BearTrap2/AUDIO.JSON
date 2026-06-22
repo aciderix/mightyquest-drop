@@ -1,0 +1,19 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Beartrap"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "LabelOperationSounds":
+        [
+            {
+                "OperationLabel":"TrapSnap",
+                "Sound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000890D6.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    }
+]

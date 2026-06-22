@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blob_LimitedEdition_Poison_Respawn2",
+        "OasisName":16389,
+        "OasisDescription":16380
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/Globuleye.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/Globuleye.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:Globuleye",
+        "HeightOffset":2
+    }
+]

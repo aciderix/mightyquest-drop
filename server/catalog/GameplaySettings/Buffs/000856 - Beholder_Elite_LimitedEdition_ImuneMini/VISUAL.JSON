@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuffFxSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualScaleFxSpec, HyperQuest.GameServer.Contracts",
+                "TargetScale":0.2,
+                "ScaleDuration":0.2
+            }
+        ],
+        "BuffRemovedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualScaleFxSpec, HyperQuest.GameServer.Contracts",
+                "TargetScale":1.8,
+                "ScaleDuration":0.2
+            }
+        ]
+    }
+]

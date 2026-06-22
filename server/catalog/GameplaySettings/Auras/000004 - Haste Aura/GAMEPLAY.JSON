@@ -1,0 +1,11 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AuraSpec, HyperQuest.GameServer.Contracts",
+        "Radius":4,
+        "AllianceFilter":3,
+        "Buff":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":6
+        }
+    }
+]

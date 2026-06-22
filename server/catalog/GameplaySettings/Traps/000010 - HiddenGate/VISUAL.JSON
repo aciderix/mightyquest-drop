@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_015_Falling_Gate_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_C2ECA4C7_AG596>XREF_C2ECA4C7_AG596.XREF",
+        "SizeCategory":"Large",
+        "HideInModeMask":1
+    }
+]

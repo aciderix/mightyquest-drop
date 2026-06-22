@@ -1,0 +1,58 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blob_LimitedEdition_Fire_Respawn1",
+        "OasisName":16393,
+        "OasisDescription":16395
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"FireBlob_Ability1",
+                    "OasisName":16396
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"FireBlob_Ability2",
+                    "OasisName":16397
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"FireBlob_Ability3",
+                    "OasisName":16398
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/Globuleye.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/Globuleye.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:Globuleye",
+        "HeightOffset":2
+    }
+]

@@ -1,0 +1,124 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Chicken_Bombs",
+        "ScaleVariance":0.1,
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualGameplayEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "Spawn":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_5F81C691_BA618>SPECIAL EFFECT_5F81C691_BA618.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            }
+        ],
+        "Death":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_E212EA52_AI933>FX_E212EA52_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                },
+                "Scale":0.6,
+                "ForcePlayUntilFxFinished":true,
+                "Name":"Chicken death"
+            }
+        ],
+        "NodeHitImpactFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_8702B0D4_AI933>FX_8702B0D4_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4E43A230_AH273>ENTITY_4E43A230_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4E43A230_AH273>ENTITY_4E43A230_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4E43A230_AH273>ENTITY_4E43A230_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4E43A230_AH273>ENTITY_4E43A230_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_2E7B3477_AH273>ENTITY_2E7B3477_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_2E7B3477_AH273>ENTITY_2E7B3477_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_2E7B3477_AH273>ENTITY_2E7B3477_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_32F8D041_AH273>ENTITY_32F8D041_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_32F8D041_AH273>ENTITY_32F8D041_AH273.ENTITY",
+                        "Scale":1.2,
+                        "ScaleVariance":0.1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

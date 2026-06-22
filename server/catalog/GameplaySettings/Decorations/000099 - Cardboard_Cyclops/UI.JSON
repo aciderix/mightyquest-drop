@@ -1,0 +1,13 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cardboard_Cyclops",
+        "OasisName":14514
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Cartboard_Cyclops.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Cartboard_Cyclops.png",
+        "HeightOffset":2
+    }
+]

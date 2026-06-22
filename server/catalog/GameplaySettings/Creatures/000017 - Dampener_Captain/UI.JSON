@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Curator",
+        "OasisName":1227,
+        "OasisDescription":1228
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_030_AntiMagicDude_01.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_030_AntiMagicDude_01.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:AntiMagicDude_01",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bubble",
+                    "OasisName":9477
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/silence.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/silence.png"
+                }
+            }
+        ]
+    }
+]

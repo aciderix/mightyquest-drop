@@ -1,0 +1,58 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blob_LimitedEdition_Ice",
+        "OasisName":16428,
+        "OasisDescription":16431
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"IceBlob_WeaknessDebuff",
+                    "OasisName":16432
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"IceBlob_Respawn",
+                    "OasisName":16433
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"IceBlob_Synergy",
+                    "OasisName":16434
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/IceBlob.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/IceBlob.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:IceBlob",
+        "HeightOffset":2
+    }
+]

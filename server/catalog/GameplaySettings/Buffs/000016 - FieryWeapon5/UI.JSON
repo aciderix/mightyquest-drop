@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"FieryWeapon5",
+        "OasisName":2005,
+        "OasisDescription":2006
+    }
+]

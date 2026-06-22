@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BadDogElite_AntiSnareBuff",
+        "OasisName":1977,
+        "OasisDescription":1978
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/creatureBuffs_antisnare.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_antisnare",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

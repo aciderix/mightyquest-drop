@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"BUIL_003_Emporium_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_1E7355DE_AH273>XREF_1E7355DE_AH273.XREF",
+        "Scale":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildingProgressionSpec, HyperQuest.GameServer.Contracts",
+        "VisualProgression":
+        [
+            {
+                "Groups":
+                [
+                    "Rank_0"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_1"
+                ]
+            }
+        ]
+    }
+]

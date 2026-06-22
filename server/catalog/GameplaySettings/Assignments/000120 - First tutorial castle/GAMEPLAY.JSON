@@ -1,0 +1,347 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":90
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ActivateCastleForSalePicking?activate=false&castleForSaleId=4,"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/MoveToFloatingLandWithSelectedHero",
+                "StartDelay":0.25
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ActivateFloatingLandPicking?activate=true"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"900004",
+                "Text":"That is a fine choice.",
+                "TextOasisId":16477,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"That is a fine choice.",
+                            "TextOasisId":16477,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B593.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PlayerMiniCastleSelectedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"900005",
+                "Type":"Arrow",
+                "TargetEntitySearch":{
+                    "GameEntityTypeMask":128,
+                    "Selections":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainerType":"Effect",
+                            "SpecContainerIds":
+                            [
+                                571
+                            ]
+                        }
+                    ]
+                },
+                "OffsetTop":150,
+                "ArrowDirection":"Down",
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PlayerMiniCastleSelectedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Duration":1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LaunchAttackAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UbisoftCastleId":2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OverrideCameraOcclusionFlagsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAfterAttackNavigationAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameStateType":"AttackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    112,
+                    113,
+                    143,
+                    146
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroLevelUpNotificationAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"120001",
+                "Title":"Movement",
+                "TitleOasisId":10997,
+                "Text":"Left click on the ground to move.",
+                "TextOasisId":10998,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "StartDelay":1,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":1,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"120002",
+                "Title":"Attacking",
+                "TitleOasisId":10999,
+                "Text":"Left click on a creature to auto-attack it.",
+                "TextOasisId":11000,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.EntityDiedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "GameEntityTypeMask":2
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":8,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":6,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"120010",
+                "Title":"[Hold the Ground]",
+                "TitleOasisId":16702,
+                "Text":"[Hold Spacebar then left click to Attack without moving]",
+                "TextOasisId":16703,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.EntityDiedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "GameEntityTypeMask":2
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":7,
+                        "GameEntityTypeMask":8
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShiftAttackLaunchedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroInsideTriggerAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":2,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":2,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"120003",
+                "Title":"Open Door",
+                "TitleOasisId":11001,
+                "TextOasisId":11002,
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":2,
+                        "GameEntityTypeMask":8,
+                        "TriggerState":"Leaving"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":5,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"120008",
+                "Title":"Take the stairs",
+                "TitleOasisId":11005,
+                "Text":"Take the stairs",
+                "TextOasisId":11006,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ServerAttackEndedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    112,
+                    113,
+                    143,
+                    146
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1200001"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1200000"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1200002"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1200003"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            }
+        ]
+    }
+]

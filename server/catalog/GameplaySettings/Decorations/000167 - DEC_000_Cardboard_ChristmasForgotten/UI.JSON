@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cardboard_ChristmasForgotten",
+        "OasisName":16077,
+        "OasisDescription":16077
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_015_Cardboard_ChristmasForgotten.png",
+        "InvIconUrl":"icoShop\/deco\/DEC_015_Cardboard_ChristmasForgotten.png",
+        "HeightOffset":2
+    }
+]

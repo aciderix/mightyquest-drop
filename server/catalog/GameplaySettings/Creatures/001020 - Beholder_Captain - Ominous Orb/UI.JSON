@@ -1,0 +1,78 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Beholder_Captain_OmniousOrb",
+        "OasisName":15167,
+        "OasisDescription":15168
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Beholder:A1",
+        "HeightOffset":1.9
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Ominous Orb",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Beholder1.png",
+                        "NameOasisId":11159,
+                        "DescriptionOasisId":11160
+                    }
+                ],
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11161,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:A2"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11161,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:damageOnGround",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_Beholder:A2"
+    }
+]

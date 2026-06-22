@@ -1,0 +1,36 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            
+        },
+        "CriticalHitSound":{
+            
+        },
+        "DeathSound":{
+            
+        },
+        "ArmorTag":"Stone",
+        "AttackImpactSoundLevelsProfileType":"Default"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "StateEnterSound":{
+                            "SoundEventResource":"DB:>RAW>SOUNDS>00089283.SOUND",
+                            "FireAndForget":true
+                        },
+                        "StateExitSound":{
+                            
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

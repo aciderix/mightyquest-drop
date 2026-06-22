@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_3F04F8C5_BC669>ENTITY_3F04F8C5_BC669.ENTITY",
+                        "Scale":1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Pet_BabyBeholder_1",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_3F04F8C5_BC669>ENTITY_3F04F8C5_BC669.ENTITY"
+    }
+]

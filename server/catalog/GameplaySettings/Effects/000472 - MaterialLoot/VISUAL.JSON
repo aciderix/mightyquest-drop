@@ -1,0 +1,93 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualLootFxSpec, HyperQuest.GameServer.Contracts",
+        "PickedUpFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_E882C7AE_BA618>SPECIALFX_E882C7AE_BA618.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                },
+                "AttachFxOn":"Target"
+            }
+        ],
+        "HeroItemQualityFxs":
+        {
+            "Basic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_7C87C197_AI933>FX_7C87C197_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Magic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_9AE0C55E>SPECIALEFFECTS_9AE0C55E.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Exceptional":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_E2CE8180_AI933>FX_E2CE8180_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Legendary":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_869593C1_AI933>FX_869593C1_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Epic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_2B7BC84B_AI933>FX_2B7BC84B_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"MaterialLoot",
+        "SynergyEntityFileNameVariations":
+        [
+            "DB:>RAW>ENTITIES>ENTITY_D8270F42_BC669>ENTITY_D8270F42_BC669.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_D8270F42_BC669>ENTITY_D8270F42_BC669.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_85A29791_BC669>ENTITY_85A29791_BC669.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_4307F2A4_BC669>ENTITY_4307F2A4_BC669.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_4307F2A4_BC669>ENTITY_4307F2A4_BC669.ENTITY"
+        ]
+    }
+]

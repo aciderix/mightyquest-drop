@@ -1,0 +1,25 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LOT_001_Gold",
+        "SynergyEntityFileNameVariations":
+        [
+            "DB:>RAW>ENTITIES>ENTITY_0FBB6F2E_BC669>ENTITY_0FBB6F2E_BC669.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_811436E9>ENTITY_811436E9.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_40BD9ABE_BC669>ENTITY_40BD9ABE_BC669.ENTITY"
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_9548F782_BA618>SPECIALFX_9548F782_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    }
+]

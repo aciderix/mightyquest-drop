@@ -1,0 +1,188 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ParentingSpec, HyperQuest.GameServer.Contracts",
+        "Children":
+        [
+            {
+                "Entity":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                    "SpecContainerReferenceId":552,
+                    "Name":"000552 - LavaWallDrips"
+                },
+                "Position":{
+                    
+                },
+                "Orientation":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":6,
+        "StartLength":3.7,
+        "EndLength":3.7,
+        "LocalStartOffsetX":-1.2,
+        "GameEntityTypeMask":-983,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":65536
+        },
+        "KeepEntityOnFieldRemoval":true,
+        "OnEnterMaxActivation":1,
+        "DestroyFieldTriggers":{
+            "OnMaxActivationReached":true
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableTrapPowerStateChangeSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourceOwner"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableTrapActivatedFxOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourceOwner"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Effect":{
+                        "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":525,
+                        "Name":"Trap_LavaWall_Effect"
+                    },
+                    "Position":{
+                        "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Front":-3,
+                        "Up":12
+                    },
+                    "Orientation":"SourceOrientation",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.TimedOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Time":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":0.6
+                    },
+                    "CreateOperationOnTarget":true,
+                    "Operation":{
+                        "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Effect":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":526,
+                            "Name":"Trap_LavaWall_GameplayEffects"
+                        },
+                        "Position":{
+                            "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Orientation":"SourceOrientation",
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourceOwner"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Movement":{
+                        "MoveStyle":{
+                            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                            "Distance":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":12
+                            },
+                            "Orientation":{
+                                "$type":"HyperQuest.GameServer.Contracts.DirectionOrientationSpec, HyperQuest.GameServer.Contracts",
+                                "Direction":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Y":-1
+                                }
+                            },
+                            "Speed":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":20
+                            },
+                            "EaseInOut":10
+                        },
+                        "KnockbackSpec":{
+                            
+                        },
+                        "OnStopOperations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DummyOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    },
+                                    "OperationLabel":"GelatinousWall_FallCompleted"
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableTrapPowerStateChangeSpec, HyperQuest.GameServer.Contracts",
+                                    "Enable":true,
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"SourceOwner"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.TimedOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Time":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":0.1
+                                    },
+                                    "CreateOperationOnTarget":true,
+                                    "Operation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.DeactivateFieldOperationsOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.SpawnedTargetSpec, HyperQuest.GameServer.Contracts",
+                                            "SpecContainerType":"Effect",
+                                            "SpecContainerReferenceId":523
+                                        }
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"SourceOwner"
+                                    }
+                                }
+                            ]
+                        },
+                        "Collision":{
+                            
+                        }
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.SpawnedTargetSpec, HyperQuest.GameServer.Contracts",
+                        "SpecContainerType":"Effect",
+                        "SpecContainerReferenceId":525
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StateMachineSpec, HyperQuest.GameServer.Contracts"
+    }
+]

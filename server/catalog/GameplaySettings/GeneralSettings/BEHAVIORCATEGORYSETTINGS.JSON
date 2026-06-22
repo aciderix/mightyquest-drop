@@ -1,0 +1,106 @@
+{
+    "Creatures":
+    [
+        {
+            "Id":1,
+            "Name":{
+                "DebugName":"Tank",
+                "OasisName":7731
+            }
+        },
+        {
+            "Id":2,
+            "Name":{
+                "DebugName":"Melee attacker",
+                "OasisName":7732
+            }
+        },
+		{
+            "Id":3,
+            "Name":{
+                "DebugName":"Ranged attacker",
+                "OasisName":7733
+            }
+        },
+		{
+            "Id":4,
+            "Name":{
+                "DebugName":"Support",
+                "OasisName":7734
+            }
+        },
+		{
+            "Id":5,
+            "Name":{
+                "DebugName":"Control",
+                "OasisName":7735
+            }
+        },
+		{
+            "Id":6,
+            "Name":{
+                "DebugName":"Elite tank",
+                "OasisName":7736
+            }
+        },
+		{
+            "Id":7,
+            "Name":{
+                "DebugName":"Elite melee attacker",
+                "OasisName":8177
+            }
+        },
+        {
+            "Id":8,
+            "Name":{
+                "DebugName":"Elite ranged attacker",
+                "OasisName":8178
+            }
+        },
+		{
+            "Id":9,
+            "Name":{
+                "DebugName":"Elite support",
+                "OasisName":8179
+            }
+        },
+		{
+            "Id":10,
+            "Name":{
+                "DebugName":"Elite control",
+                "OasisName":8180
+            }
+        },
+		{
+            "Id":11,
+            "Name":{
+                "DebugName":"Boss",
+                "OasisName":8181
+            }
+        },
+		{
+            "Id":12,
+            "Name":{
+                "DebugName":"Melee grunt",
+                "OasisName":8182
+            }
+        },
+		{
+            "Id":13,
+            "Name":{
+                "DebugName":"Ranged grunt",
+                "OasisName":8183
+            }
+        }
+	],
+    "Traps":
+    [
+        {
+            "Id":1,
+            "Name":{
+                "DebugName":"Not used",
+                "OasisName":0
+            }
+        }
+    ]
+}

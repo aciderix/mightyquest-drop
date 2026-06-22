@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartSound":{
+                    
+                },
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008217E.SOUND"
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008218A.SOUND"
+                },
+                "RecoverSound":{
+                    
+                }
+            }
+        ]
+    }
+]

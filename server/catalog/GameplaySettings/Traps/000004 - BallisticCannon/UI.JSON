@@ -1,0 +1,79 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Ballistic Cannon",
+        "OasisName":1553,
+        "OasisDescription":1554
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_01-2.png",
+        "InvIconUrl":"icoInv\/traps\/TRA_006_BalisticCannon_01-2.png",
+        "LayerName":"UI_Common_TrapsIcons:BalisticCannon_01-2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"damage {0}",
+                    "OasisName":7652
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":4,
+                        "TaggedSpec":"Ballistic Cannon damage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_01-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BalisticCannon_01-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_01-2"
+            },
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_02-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BALISTICCANNON_02-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_02-2"
+            },
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_02-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BALISTICCANNON_02-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_02-2"
+            },
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_02-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BALISTICCANNON_02-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_02-2"
+            },
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_02-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BALISTICCANNON_02-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_02-2"
+            },
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_02-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BALISTICCANNON_02-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_02-2"
+            },
+            {
+                "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_02-2.png",
+                "InvIconUrl":"icoInv\/traps\/TRA_006_BALISTICCANNON_02-2.png",
+                "LayerName":"UI_Common_TrapsIcons:BalisticCannon_02-2"
+            }
+        ]
+    }
+]

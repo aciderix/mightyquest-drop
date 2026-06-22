@@ -1,0 +1,70 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Chicken",
+        "OasisName":8653,
+        "OasisDescription":8652
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M001.png",
+        "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M001.png",
+        "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M001.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M001.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M001.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M002.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M002.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_02"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M002.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M002.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_02"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M002.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M002.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_02"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M003.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M003.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_03"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/034Chicken\/CHA_034_Chicken_M003.png",
+                "InvIconUrl":"icoInv\/creature\/034Chicken\/CHA_034_Chicken_M003.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:Chicken_03"
+            }
+        ]
+    }
+]

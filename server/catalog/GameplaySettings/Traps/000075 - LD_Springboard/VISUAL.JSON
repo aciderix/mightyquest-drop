@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LD_Springboard",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_C3F30BAC_AG596>MESH_C3F30BAC_AG596.MESH",
+        "SizeCategory":"Large",
+        "HideInModeMask":1
+    }
+]

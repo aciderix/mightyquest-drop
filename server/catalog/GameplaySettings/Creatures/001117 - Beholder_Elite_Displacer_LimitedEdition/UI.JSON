@@ -1,0 +1,111 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"MiniMAX",
+        "OasisName":16100,
+        "OasisDescription":16101
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Displacer"
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/MiniMax.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/MiniMax",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:MiniMax"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/MiniMax.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/MiniMax",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:MiniMax"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/MiniMax.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/MiniMax",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:MiniMax"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/MiniMax.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/MiniMax",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:MiniMax"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Improved crit",
+                    "OasisName":7791
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Rage {0}",
+                    "OasisName":7793
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"100"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"Flee",
+                    "OasisName":7792
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/movementAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Improved dodge",
+                    "OasisName":9571
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Very Large size",
+                    "OasisName":7794
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/resistanceToKnockBack.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/MiniMax.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/MiniMax.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:MiniMax",
+        "InvLayerName":"UI_Common_CreaturesIconsInv_Rares:MiniMax",
+        "HeightOffset":1.85,
+        "IsHeightOffsetRelativeToScale":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

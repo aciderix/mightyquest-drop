@@ -1,0 +1,86 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":3,
+        "HitImpactHeight":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    }
+                ],
+                "_comment":"Specialization 3"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+                        "BoostedEntityScaleIncrease":0.05
+                    }
+                ],
+                "_comment":"Specialization 3"
+            }
+        ],
+        "BoostedVisual":{
+            "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F62611D7_BC666>ENTITY_F62611D7_BC666.ENTITY",
+            "BoostedEntityScaleIncrease":0.05
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualGameplayEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "Spawn":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_3809FEB9_BB579>SPECIALFX_3809FEB9_BB579.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":2,
+                "Disabled":true
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Blob_LimitedEdition_Ice",
+        "Scale":1.8,
+        "FxAttachmentScale":1.5
+    }
+]

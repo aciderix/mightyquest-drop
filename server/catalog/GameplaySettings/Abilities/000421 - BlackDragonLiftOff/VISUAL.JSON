@@ -1,0 +1,18 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_038_BlackDragon_Flight",
+        "Scale":0.01
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellTakeOff",
+                "AnimActive":"00_SpellFlyWait",
+                "AnimRecover":"00_SpellLand"
+            }
+        ]
+    }
+]

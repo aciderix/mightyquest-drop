@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":6,
+        "StartLength":6,
+        "EndLength":6,
+        "LocalStartOffsetX":-3,
+        "TouchedEntitiesType":2,
+        "OnEnterMaxActivation":1,
+        "DestroyFieldTriggers":{
+            "OnMaxActivationReached":true
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.UseAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+            "UseAbilityOnChildren":true,
+            "Target":{
+                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                "Type":"Source"
+            }
+        }
+    }
+]

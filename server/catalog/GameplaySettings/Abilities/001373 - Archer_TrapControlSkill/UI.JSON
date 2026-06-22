@@ -1,0 +1,49 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Archer_Hawk_Shout",
+        "OasisName":203
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"iconInv\/heroes\/cha002\/skills\/SPELL_CHA_002_Shout_up.png",
+        "InvIconUrl":"iconInv\/heroes\/cha002\/skills\/SPELL_CHA_002_Shout_up.png",
+        "LayerName":"UI_Common_Hero002_SkillsIcons:SPELL_CHA_002_Shout"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":204,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"ArcherDeactivateTrap1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":204,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"ArcherDeactivateTrap1"
+                    }
+                ]
+            }
+        ]
+    }
+]

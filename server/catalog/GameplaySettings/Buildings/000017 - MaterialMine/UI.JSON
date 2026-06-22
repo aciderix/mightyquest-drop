@@ -1,0 +1,60 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Crafting material mine",
+        "OasisName":15745,
+        "OasisDescription":15746
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiBuildingInfoSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/buildings\/CRATEOFCREATION.PNG",
+        "InvIconUrl":"icoInv\/buildings\/CRATEOFCREATION.PNG",
+        "DescriptionOasisId":15746,
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/buildings\/CRATEOFCREATION.PNG",
+                "InvIconUrl":"icoInv\/buildings\/CRATEOFCREATION.PNG",
+                "LayerName":"icoShop_buildings:CrateOfCreation"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Hidden",
+                    "OasisName":7666
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/hidden.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Gate {0}",
+                    "OasisName":7693
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/destructible.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0+(35*level)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/buildings\/CRATEOFCREATION.PNG",
+        "InvIconUrl":"icoInv\/buildings\/CRATEOFCREATION.PNG",
+        "LayerName":"icoShop_buildings:CRATEOFCREATION",
+        "HeightOffset":2
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SirenStun Buff Timer 2",
+        "OasisName":14014,
+        "OasisDescription":14015
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/heroBuffs_sirenStun3.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_sirenStun3",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

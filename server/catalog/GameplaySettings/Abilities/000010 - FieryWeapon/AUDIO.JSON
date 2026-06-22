@@ -1,0 +1,28 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002593.SOUND",
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    
+                },
+                "RecoverSound":{
+                    
+                },
+                "InstantSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002593.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"TwoHandedSword"
+    }
+]

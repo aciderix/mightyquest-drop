@@ -1,0 +1,68 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Chicken_LimitedEdition_PheonixRespawn",
+        "OasisName":16325,
+        "OasisDescription":16326
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher1.png",
+                        "NameOasisId":11207,
+                        "DescriptionOasisId":11210
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A2e"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+        "LayerName":"UI_Common_CreaturesIconsInv_Rares:CHA_059_Phoenix_M001",
+        "HeightOffset":1.5
+    }
+]

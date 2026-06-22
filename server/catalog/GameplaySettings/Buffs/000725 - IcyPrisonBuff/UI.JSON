@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Icy Prison",
+        "OasisName":13568,
+        "OasisDescription":13569
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/creatureDebuffs_snare.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureDebuffs_snare",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

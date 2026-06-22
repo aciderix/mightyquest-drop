@@ -1,0 +1,39 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Runaway",
+        "OasisName":12183
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/heroes\/5.png",
+        "InvIconUrl":"iconInv\/lobbyBar\/heroes\/5.png",
+        "HeightOffset":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroUiSpec, HyperQuest.GameServer.Contracts",
+        "NameOasisId":12184,
+        "FullNameOasisId":14152,
+        "BiographyNoNameOasisId":14151,
+        "BiographyOasisId":12187,
+        "DescriptionOasisId":12185,
+        "SampleAbilities":
+        [
+            1302,
+            1306,
+            1315
+        ],
+        "IconUrl":"iconInv\/lobbyBar\/heroes\/5.png",
+        "PortraitUrl":"hud\/attackPortraits\/hud_attackPortraitsRunnaway.png",
+        "RoundedIconUrl":"common\/heroIcons\/runawayRegular.png",
+        "RoundedLargeIconUrl":"common\/heroIconsLrg\/runawayRegular.png",
+        "HeaderIconUrl":"hud\/autoLevelUp\/heroes\/runaway2.png",
+        "CreationIconUpUrl":"NUE\/heroSelection\/NUE_RunawayUp.png",
+        "CreationIconOverUrl":"NUE\/heroSelection\/NUE_RunawayOver.png",
+        "CreationIconSelectedUrl":"NUE\/heroSelection\/NUE_RunawaySelect.png",
+        "CreationIconLeftOffset":-60,
+        "CreationIconTopOffset":10,
+        "IconLayerName":"UI_HUD_Common_portraits:Runaway",
+        "HeroIconLrgBgLayerName":"common_heroIconsLrgBg:runawayRegular"
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "FieldShowFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_ED3D0026_BA618.MATERIAL",
+                "PriorityOffset":1,
+                "Type":"PartialOverride",
+                "NodeAttachment":{
+                    
+                }
+            }
+        ],
+        "FieldVanishFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"00_Death",
+                "UseEmoteStateToPlayAnimation":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_A787EE4D_BA618>SPECIALFX_A787EE4D_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_267DC413_BA618.MATERIAL",
+                "PriorityOffset":1,
+                "Type":"PartialOverride",
+                "NodeAttachment":{
+                    
+                }
+            }
+        ],
+        "EntityEnterFieldFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"00_Attack",
+                "IsLooping":true,
+                "UseEmoteStateToPlayAnimation":false
+            }
+        ],
+        "LastEntityLeaveFieldFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"00_Wait",
+                "IsLooping":true,
+                "UseEmoteStateToPlayAnimation":false
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"OldGenatinousWallVisual",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_FC71C361_AH273>ENTITY_FC71C361_AH273.ENTITY",
+        "Scale":1.4
+    }
+]

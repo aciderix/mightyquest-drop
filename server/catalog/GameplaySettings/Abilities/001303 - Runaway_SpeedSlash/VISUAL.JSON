@@ -1,0 +1,107 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Runaway_MeanPinball"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellPinball"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_280AFB1B_AI598.MATERIAL",
+                            "Length":20,
+                            "SpaceBetweenSegment":0.2,
+                            "SegmentLifeTime":1,
+                            "FadeInTime":0.1,
+                            "FadeOutTime":0.25,
+                            "FadeInDistance":0.5,
+                            "FadeOutDistance":0.5,
+                            "Attachment":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"FX_Feet",
+                                "OffsetX":0.5,
+                                "OffsetY":1,
+                                "TrailPointOffsetOnY":1.3
+                            }
+                        }
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_280AFB1B_AI598.MATERIAL",
+                            "SpaceBetweenSegment":0.2,
+                            "SegmentLifeTime":2,
+                            "FadeInTime":1,
+                            "FadeOutTime":0.5,
+                            "FadeInDistance":1,
+                            "FadeOutDistance":0.3,
+                            "Attachment":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"FX_Body",
+                                "OffsetX":0.5,
+                                "TrailPointOffsetOnY":1
+                            }
+                        },
+                        "PlayUntil":"ActiveEnd",
+                        "_comment":"Middle Trail Vertical"
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_280AFB1B_AI598.MATERIAL",
+                            "FadeInTime":1,
+                            "FadeOutTime":0.5,
+                            "FadeInDistance":1,
+                            "FadeOutDistance":0.3,
+                            "Attachment":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"FX_Feet",
+                                "TrailPointOffsetOnY":1,
+                                "RotationX":90
+                            }
+                        },
+                        "PlayUntil":"ActiveEnd"
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_71FBD17C_AI598>FX_71FBD17C_AI598.SPECIALFX",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "_comment":"Dust and Smoke FX"
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_2D7ECBF9_AI598.MATERIAL",
+                            "PriorityOffset":1,
+                            "Type":"PartialOverride",
+                            "CloneMaterial":true,
+                            "NodeAttachment":{
+                                
+                            },
+                            "OverrideGroupPriority":1
+                        },
+                        "PlayUntil":"ActiveEnd"
+                    }
+                ]
+            }
+        ]
+    }
+]

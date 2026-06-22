@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Christmas_Snogre_Iceclop_01",
+        "OasisName":16073,
+        "OasisDescription":16073
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/Christmas_Snogre_Iceclop_01.png",
+        "InvIconUrl":"icoShop\/deco\/Christmas_Snogre_Iceclop_01.png",
+        "HeightOffset":2
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TotemBoost_Damage",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_ABAFECB0_BC699>MESH_ABAFECB0_BC699.MESH"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":1.5,
+        "DisplayFootprint":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTotemBoostFxSpec, HyperQuest.GameServer.Contracts",
+        "BoostOverTotemFxList":{
+            "FxList":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_25C1F48B_BA602>SPECIALFX_25C1F48B_BA602.SPECIALFX",
+                    "AttachmentStrategy":{
+                        "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_463C3710_BD346>SPECIALFX_463C3710_BD346.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    }
+]

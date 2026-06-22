@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/heroDebuffs_physicalArmorUp.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_physicalArmorUp",
+        "MinimumElapsedTimeBeforeVisualUpdate":10
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Armor Aura Buff",
+        "OasisName":1981,
+        "OasisDescription":1982
+    }
+]

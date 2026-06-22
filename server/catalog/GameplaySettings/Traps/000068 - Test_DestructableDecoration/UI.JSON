@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Destructable Decoration"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"hud\/defendCastleIcon\/hud_defendCastleIcon.png",
+        "InvIconUrl":"hud\/defendCastleIcon\/hud_defendCastleIcon.png",
+        "LayerName":"UI_Common_TrapsIcons:hud_defendCastleIcon"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"hud\/defendCastleIcon\/hud_defendCastleIcon.png",
+                "InvIconUrl":"hud\/defendCastleIcon\/hud_defendCastleIcon.png",
+                "LayerName":"UI_Common_TrapsIcons:hud_defendCastleIcon"
+            }
+        ]
+    }
+]

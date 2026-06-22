@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ENV_Hero_Corpse_Harvest_Runaway_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_49CE2185_AG388>XREF_49CE2185_AG388.XREF"
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Mace"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082C8C.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082C8C.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002E72.SOUND",
+            "FireAndForget":true
+        },
+        "ArmorTag":"Metal",
+        "AttackImpactSoundLevelsProfileType":"Default"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_044_A_Wait03":"Small_Fallen_Shield",
+            "CHA_044_1h_Attack01":"Small_Fallen_Attack",
+            "CHA_044_1h_Attack02":"Small_Fallen_Attack",
+            "CHA_044_00_Run01":"Small_Fallen_Step",
+            "CHA_044_00_Walk01":"Small_Fallen_Step",
+            "CHA_044_IT_Drop01":"Boss_Fallen_Drop",
+            "CHA_044_IT_Drag01":"Boss_Fallen_Drag",
+            "CHA_044_00_Wait05":"Boss_Fallen_Wait05",
+            "CHA_044_00_Wait02":"Boss_Fallen_Wait02",
+            "CHA_044_C_Wait06":"Boss_Fallen_Wait06",
+            "CHA_044_00_Attack04":"Small_Fallen_Attack",
+            "CHA_044_1h_SpellTarget01":"Small_Fallen_Laugh"
+        }
+    }
+]

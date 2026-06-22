@@ -1,0 +1,50 @@
+{
+    "ChatLanguages": 
+    [
+        {"LanguageCode":"en", "DebugName":"English", "OasisNameId":16359 , "IconUrl":"common/flagsSml/us_UnitedStates.png"},
+        {"LanguageCode":"fr", "DebugName":"France", "OasisNameId":16360 , "IconUrl":"common/flagsSml/fr_France.png"},
+        {"LanguageCode":"de", "DebugName":"Deutsch", "OasisNameId":16361 , "IconUrl":"common/flagsSml/de_Germany.png"},
+        {"LanguageCode":"pt", "DebugName":"Portuguese", "OasisNameId":16362, "IconUrl":"common/flagsSml/pt_Portugal.png"},
+        {"LanguageCode":"pl", "DebugName":"Polish", "OasisNameId":16363, "IconUrl":"common/flagsSml/pl_Poland.png"},
+        {"LanguageCode":"ru", "DebugName":"Russian", "OasisNameId":16364, "IconUrl":"common/flagsSml/ru_Russia.png"}
+    ],
+    "ChatRooms":
+    [
+        {"CodeName": "en-general-1",    "ChatRoomType":0, "RoomId":1,  "DebugName":"General English 1", "OasisNameId":16337, "LanguageCode":"en"}, 
+        {"CodeName": "en-general-2",    "ChatRoomType":0, "RoomId":16, "DebugName":"General English 2", "OasisNameId":16338, "LanguageCode":"en"},
+        {"CodeName": "en-general-3",    "ChatRoomType":0, "RoomId":17, "DebugName":"General English 3", "OasisNameId":16339, "LanguageCode":"en"},
+        {"CodeName": "en-general-4",    "ChatRoomType":0, "RoomId":22, "DebugName":"General English 4", "OasisNameId":16340, "LanguageCode":"en"},
+		
+        {"CodeName": "fr-general-1",    "ChatRoomType":0, "RoomId":5,  "DebugName":"G?n?ral Fran?ais 1", "OasisNameId":16337, "LanguageCode":"fr"},
+        {"CodeName": "fr-general-2",    "ChatRoomType":0, "RoomId":18, "DebugName":"G?n?ral Fran?ais 2", "OasisNameId":16338, "LanguageCode":"fr"},
+        {"CodeName": "fr-general-3",    "ChatRoomType":0, "RoomId":19, "DebugName":"G?n?ral Fran?ais 3", "OasisNameId":16339, "LanguageCode":"fr"},
+        {"CodeName": "fr-general-4",    "ChatRoomType":0, "RoomId":23, "DebugName":"G?n?ral Fran?ais 4", "OasisNameId":16340, "LanguageCode":"fr"},
+        
+        {"CodeName": "de-general-1",    "ChatRoomType":0, "RoomId":11, "DebugName":"General Deutsch 1", "OasisNameId":16337, "LanguageCode":"de"},
+        {"CodeName": "de-general-2",    "ChatRoomType":0, "RoomId":20, "DebugName":"General Deutsch 2", "OasisNameId":16338, "LanguageCode":"de"},
+        {"CodeName": "de-general-3",    "ChatRoomType":0, "RoomId":21, "DebugName":"General Deutsch 3", "OasisNameId":16339, "LanguageCode":"de"},
+        {"CodeName": "de-general-4",    "ChatRoomType":0, "RoomId":24, "DebugName":"General Deutsch 4", "OasisNameId":16340, "LanguageCode":"de"},
+
+        {"CodeName": "pt-general-1",    "ChatRoomType":0, "RoomId":25, "DebugName":"General Portuguese 1", "OasisNameId":16337, "LanguageCode":"pt"},
+        {"CodeName": "pl-general-1",    "ChatRoomType":0, "RoomId":26, "DebugName":"General Polish 1", "OasisNameId":16337, "LanguageCode":"pl"},
+        {"CodeName": "ru-general-1",    "ChatRoomType":0, "RoomId":27, "DebugName":"General Russian 1", "OasisNameId":16337, "LanguageCode":"ru"}
+    ],                                                                
+    "ChatRoomFullMessageOasisId": 13149,
+    "ChatDisabledMessageOasisId": 13290,
+    "ChatRoomMaxMessagesCount": 99,
+    "ChatReconnectionDelay": "5s",
+    "ChatMaxReconnectionDelay": "40s",
+    "ChatKeepAliveDelay": "20s",
+    "ChatEnabledCountries":[],
+    "ChatEnabled": true,
+    "AssignmentsWithChatEnabled":
+    [
+        15
+    ],
+    "InhibitionRules":
+    [
+        {"Type": "EntryCount", "Timespan":10, "Threshold":5 },
+        {"Type": "EntryCount", "Timespan":60, "Threshold":10 },
+        {"Type": "CharCount", "Timespan":60, "Threshold":300 }
+    ]
+}

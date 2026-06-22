@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_001_Glue_MineField",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_3BE64719>MESH_3BE64719.MESH",
+        "Scale":0.75,
+        "SizeCategory":"Small",
+        "HideInModeMask":1
+    }
+]

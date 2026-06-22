@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Barricade_07_A_Abandonned_lot",
+        "OasisName":16698,
+        "OasisDescription":15126
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Barricade_07_A.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Barricade_07_A.png",
+        "HeightOffset":2
+    }
+]

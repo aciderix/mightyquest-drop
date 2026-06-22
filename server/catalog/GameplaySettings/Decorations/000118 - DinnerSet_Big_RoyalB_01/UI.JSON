@@ -1,0 +1,13 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DinnerSet_Big_RoyalB_01",
+        "OasisName":14516
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_001_Diner_04.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_001_Diner_04.png",
+        "HeightOffset":2
+    }
+]

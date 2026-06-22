@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00001578.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00001578.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000210E.SOUND"
+        },
+        "AttackImpactSoundLevelsProfileType":"Default"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_050_00_Death01":"Grunt_Snotter_Death",
+            "CHA_050_IT_Purchase01":"Grunt_Snotter_Purchase",
+            "CHA_050_IT_Drag01":"Grunt_Snotter_Drag",
+            "CHA_050_IT_Drop01":"Grunt_Snotter_Drop",
+            "CHA_050_00_Wait02":"Grunt_Snotter_Wait02",
+            "CHA_050_00_Wait03":"Grunt_Snotter_Wait03"
+        }
+    }
+]

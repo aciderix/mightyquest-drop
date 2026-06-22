@@ -1,0 +1,4 @@
+{
+    "AccountInactivityForArchive": "30d",
+    "InactiveAccountBatchSize": 10
+}

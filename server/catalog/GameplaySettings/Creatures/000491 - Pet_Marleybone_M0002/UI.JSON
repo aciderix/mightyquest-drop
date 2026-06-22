@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Pet_Marleybone_M0002",
+        "OasisName":15276,
+        "OasisDescription":15277
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoInv\/pets\/PET_009_MarelyBone_M002.png",
+        "InvIconUrl":"icoShop\/pets\/PET_009_MarelyBone_M002.png"
+    }
+]

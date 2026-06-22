@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Trap_BlackHole_LimitedEdition",
+        "OasisName":16779,
+        "OasisDescription":16780
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Attraction Field Ability",
+                    "OasisName":16781
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/snareEffect.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/Space_Slownado.png",
+        "InvIconUrl":"UI\/Common\/TrapsIcons\/Rares\/Space_Slownado.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:Space_Slownado",
+        "HeightOffset":1.5
+    }
+]

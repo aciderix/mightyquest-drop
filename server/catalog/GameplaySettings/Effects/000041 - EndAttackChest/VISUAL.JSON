@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ENDATTACKCHEST",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D6F15FEE_AH273>ENTITY_D6F15FEE_AH273.ENTITY"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualInteractiveSpec, HyperQuest.GameServer.Contracts",
+        "InteractionAnimationName":"Chest_Opening",
+        "InteractionType":"OpenChest"
+    }
+]

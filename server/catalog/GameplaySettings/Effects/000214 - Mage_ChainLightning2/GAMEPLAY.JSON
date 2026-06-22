@@ -1,0 +1,55 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ChainSpec, HyperQuest.GameServer.Contracts",
+        "PropagationsCount":5,
+        "PropagationRange":6,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.75
+        },
+        "Operations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Value":{
+                        "$type":"HyperQuest.GameServer.Contracts.MultValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value1":{
+                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                            "StatType":"SkillDamage",
+                            "Tag":"Chain Lightning damage 2"
+                        },
+                        "Value2":{
+                            "$type":"HyperQuest.GameServer.Contracts.DivValueSpec, HyperQuest.GameServer.Contracts",
+                            "Value1":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"ChainRemainingEntitiesCount"
+                            },
+                            "Value2":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"ChainMaxEntitiesCount"
+                            }
+                        }
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":663,
+                        "Name":"CHA_003_Shocked_Debuff"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "ObstacleCollisionMaskAny":4194306,
+        "Tag":"Chain Lightning targets 2"
+    }
+]

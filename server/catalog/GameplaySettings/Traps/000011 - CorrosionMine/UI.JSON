@@ -1,0 +1,55 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Corrosion MineField",
+        "OasisName":1561,
+        "OasisDescription":1562
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Hidden",
+                    "OasisName":7657
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/hidden.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Puddle {0}",
+                    "OasisName":7655
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"5+(5*level)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/TRA_004_CorrosionMine01.png",
+        "InvIconUrl":"icoInv\/traps\/TRA_004_CorrosionMine01.png",
+        "LayerName":"UI_Common_TrapsIcons:CorrosionMine_01",
+        "HeightOffset":1.5
+    }
+]

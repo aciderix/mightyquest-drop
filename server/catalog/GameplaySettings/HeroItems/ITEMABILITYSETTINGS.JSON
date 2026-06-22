@@ -1,0 +1,104 @@
+{
+    "ItemAbilities":
+    {
+        "1":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":700,
+            "DebugName":"Strong Will",
+            "TooltipDescriptionOasisId":14112,
+            "TooltipNoAbilityOasisId":13673,
+            "IsPercentage":true
+        },
+        "2":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":701,
+            "DebugName":"Risk Taker",
+            "TooltipDescriptionOasisId":14116,
+            "TooltipNoAbilityOasisId":13676,
+            "IsPercentage":true
+        },
+        "3":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":706,
+            "DebugName":"Courage",
+            "TooltipDescriptionOasisId":16080,
+            "TooltipNoAbilityOasisId":13675,
+            "IsPercentage":true
+        },
+        "4":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":714,
+            "DebugName":"Raise the dead",
+            "TooltipDescriptionOasisId":16081,
+            "TooltipNoAbilityOasisId":13678,
+            "UseAbsoluteValue":true,
+            "IsSpellTrigger":true
+        },
+        "5":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":715,
+            "DebugName":"Meteor Strike",
+            "TooltipDescriptionOasisId":16083,
+            "TooltipNoAbilityOasisId":13677,
+            "IsPercentage":true,
+            "IsSpellTrigger":true
+        },
+        "6":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":719,
+            "DebugName":"Haste",
+            "TooltipDescriptionOasisId":14120,
+            "TooltipNoAbilityOasisId":13680,
+            "UseAbsoluteValue":true,
+            "IsPercentage":true,
+            "IsSpellTrigger":true
+        },
+        "7":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":721,
+            "DebugName":"Shield",
+            "TooltipDescriptionOasisId":16082,
+            "TooltipNoAbilityOasisId":13679,
+            "IsPercentage":true,
+            "IsSpellTrigger":true
+        },
+        "8":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":724,
+            "DebugName":"Icy Prison",
+            "TooltipDescriptionOasisId":14121,
+            "TooltipNoAbilityOasisId":13681,
+            "UseAbsoluteValue":true,
+            "IsPercentage":true,
+            "IsSpellTrigger":true
+        },
+        "9":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":717,
+            "DebugName":"Confusion",
+            "TooltipDescriptionOasisId":14113,
+            "TooltipNoAbilityOasisId":13674,
+            "IsPercentage":true
+        },
+        "10":{
+            "$type":"HyperQuest.GameServer.Contracts.BuffItemAbilitySpec, HyperQuest.GameServer.Contracts",
+            "BuffSpecContainerId":698,
+            "DebugName":"Splash Damage",
+            "TooltipDescriptionOasisId":14114,
+            "TooltipNoAbilityOasisId":13716
+        }
+    },
+    "StatTypesItemAbilities":
+    {
+        "ControlResistance":1,
+        "RiskTaker":2,
+        "Courage":3,
+        "RaiseTheDead":4,
+        "MeteorStrike":5,
+        "Haste":6,
+        "Shield":7,
+        "IcyPrison":8,
+        "Confusion":9,
+        "SplashDamage":10
+    }
+}

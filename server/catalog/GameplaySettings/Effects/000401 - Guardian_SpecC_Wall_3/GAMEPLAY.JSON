@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":0.75,
+                "Height":3,
+                "Length":8,
+                "Y":1.5
+            }
+        ],
+        "CollisionGroup":"AttackerWall",
+        "Radius":0.5
+    }
+]

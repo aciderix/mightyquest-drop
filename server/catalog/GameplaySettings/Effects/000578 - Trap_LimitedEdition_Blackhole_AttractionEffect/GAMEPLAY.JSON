@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":4.5,
+        "EndRadius":4.5,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":5,
+            "Tag":"DirtDevil attraction duration"
+        },
+        "FieldBehaviorSpec":{
+            "$type":"HyperQuest.GameServer.Contracts.AttractionFieldBehaviorSpec, HyperQuest.GameServer.Contracts"
+        },
+        "OnTouchOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts"
+        }
+    }
+]

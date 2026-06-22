@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Bomber",
+        "OasisName":1439,
+        "OasisDescription":1440
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Misc\/bomber1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Misc\/bomber1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:bomber1",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bomb",
+                    "OasisName":8093
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bomb",
+                    "OasisName":8093
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png"
+                }
+            }
+        ]
+    }
+]

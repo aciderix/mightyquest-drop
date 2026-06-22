@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Archer",
+        "OasisName":440
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/heroes\/3.png",
+        "InvIconUrl":"iconInv\/lobbyBar\/heroes\/3.png",
+        "HeightOffset":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroUiSpec, HyperQuest.GameServer.Contracts",
+        "NameOasisId":442,
+        "FullNameOasisId":14148,
+        "BiographyNoNameOasisId":14147,
+        "BiographyOasisId":8293,
+        "DescriptionOasisId":453,
+        "SampleAbilities":
+        [
+            58,
+            1373,
+            70
+        ],
+        "IconUrl":"iconInv\/lobbyBar\/heroes\/3.png",
+        "PortraitUrl":"hud\/attackPortraits\/HUD_ATTACKPORTRAITSARCHER.png",
+        "RoundedIconUrl":"common\/heroIcons\/archerRegular.png",
+        "RoundedLargeIconUrl":"common\/heroIconsLrg\/archerRegular.png",
+        "HeaderIconUrl":"hud\/autoLevelUp\/heroes\/archer1.png",
+        "CreationIconUpUrl":"NUE\/heroSelection\/NUE_StraitArcherUp.png",
+        "CreationIconOverUrl":"NUE\/heroSelection\/NUE_StraitArcherOver.png",
+        "CreationIconSelectedUrl":"NUE\/heroSelection\/NUE_StraitArcherSelect.png",
+        "CreationIconLeftOffset":-40,
+        "IconLayerName":"UI_HUD_Common_portraits:Archer",
+        "HeroIconLrgBgLayerName":"common_heroIconsLrgBg:archerRegular"
+    }
+]

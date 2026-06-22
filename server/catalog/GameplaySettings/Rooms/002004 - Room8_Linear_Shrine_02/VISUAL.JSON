@@ -1,0 +1,18 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Room8_Linear_Shrine_02",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_C6CCFF0B_AI650>XREF_C6CCFF0B_AI650.XREF"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualRoomConnectionFxSpec, HyperQuest.GameServer.Contracts",
+        "ConnectionTypeUnconnectedFx":{
+            "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":21
+        },
+        "ConnectionTypeConnectedFx":{
+            "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":22
+        }
+    }
+]

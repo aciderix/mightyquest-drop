@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "TRA_011_Death01":"JellyWall",
+            "TRA_011_FallRecover01":"JellyWall"
+        }
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Killer Crab",
+        "OasisName":1267,
+        "OasisDescription":1268
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Misc\/crab1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Misc\/crab1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:crab1",
+        "HeightOffset":1.2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Shell mode",
+                    "OasisName":7600
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Shell mode",
+                    "OasisName":7600
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                }
+            }
+        ]
+    }
+]

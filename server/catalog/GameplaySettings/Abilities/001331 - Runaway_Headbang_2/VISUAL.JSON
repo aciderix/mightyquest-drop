@@ -1,0 +1,83 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Runaway_Headbang_2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellHeadbutt"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_280AFB1B_AI598.MATERIAL",
+                "Length":15,
+                "SegmentLifeTime":0.5,
+                "FadeOutTime":3,
+                "FadeInDistance":0.1,
+                "FadeOutDistance":0.5,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Feet",
+                    "OffsetX":0.5,
+                    "OffsetY":1,
+                    "TrailPointOffsetOnY":1.3
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_280AFB1B_AI598.MATERIAL",
+                            "Length":20,
+                            "SpaceBetweenSegment":0.2,
+                            "SegmentLifeTime":10,
+                            "FadeInTime":0.2,
+                            "FadeOutTime":0.2,
+                            "FadeInDistance":0.5,
+                            "FadeOutDistance":0.5,
+                            "Attachment":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"FX_Feet",
+                                "OffsetX":0.5,
+                                "OffsetY":1,
+                                "TrailPointOffsetOnY":1.5
+                            }
+                        },
+                        "PlayUntil":"ActiveEnd"
+                    }
+                ],
+                "RecoverFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B59A8A9F_AI598>FX_B59A8A9F_AI598.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "ForcePlayUntilFxFinished":true
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

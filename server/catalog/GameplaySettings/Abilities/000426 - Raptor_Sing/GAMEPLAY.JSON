@@ -1,0 +1,42 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Creature":{
+                        "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":1074,
+                        "Name":"Raptor_Spawn"
+                    },
+                    "CreatureCount":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":3
+                    },
+                    "DistanceToSpawn":3.2,
+                    "Level":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                        "ContextId":"SourceLevel"
+                    },
+                    "IsSpawnSpecApplied":true,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                },
+                "Cooldown":13.7,
+                "PrepareTime":1,
+                "ActiveTime":1.3,
+                "RecoverTime":0.5,
+                "MaxDistance":6,
+                "EffectRadius":4,
+                "AbilityCastType":"Direct",
+                "AttackSpeedFactor":1,
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

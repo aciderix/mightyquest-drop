@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"NightmareCage2",
+        "OasisName":13307,
+        "OasisDescription":13308
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HEROBUFFS_NIGHTMARECAGE.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_nightmareCage",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

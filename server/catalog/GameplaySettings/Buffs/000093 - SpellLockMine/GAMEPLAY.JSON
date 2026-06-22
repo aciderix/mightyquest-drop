@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SpellsCastingLockBuffEffectSpec, HyperQuest.GameServer.Contracts"
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "MaxInstances":1,
+        "Flags":65
+    }
+]

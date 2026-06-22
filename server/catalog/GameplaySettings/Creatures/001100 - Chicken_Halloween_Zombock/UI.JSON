@@ -1,0 +1,70 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Halloween Chicken Bombs",
+        "OasisName":8653,
+        "OasisDescription":8652
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Chicken:1",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Chicken\/3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Chicken\/3.png",
+                "LayerName":"UI_Common_CreaturesIcons_Chicken:3"
+            }
+        ]
+    }
+]

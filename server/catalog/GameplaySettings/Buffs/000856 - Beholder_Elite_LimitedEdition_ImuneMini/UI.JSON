@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"UI\/Hud\/BuffDebuffIcons\/creatureBuffs_invincibility.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_invincibility"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts"
+    }
+]

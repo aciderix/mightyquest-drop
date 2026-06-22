@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LifeStealBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "RatioOfAttackDamage":0.1
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "MaxInstances":1,
+        "Flags":2
+    }
+]

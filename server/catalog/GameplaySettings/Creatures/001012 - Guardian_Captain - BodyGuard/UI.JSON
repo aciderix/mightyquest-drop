@@ -1,0 +1,93 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Guardian_Captain - Bodyguard",
+        "OasisName":15155,
+        "OasisDescription":15156
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Guardian:A1",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"BodyGuard",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Guardian1.png",
+                        "NameOasisId":11171,
+                        "DescriptionOasisId":15156
+                    }
+                ],
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":15156,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":15156,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Guardian\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Guardian\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_Guardian:A3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11174,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:defensiveBuff",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_Guardian:A3"
+    }
+]

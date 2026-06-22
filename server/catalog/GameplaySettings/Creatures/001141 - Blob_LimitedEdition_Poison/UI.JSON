@@ -1,0 +1,57 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blob_LimitedEdition_Poison",
+        "OasisName":16379,
+        "OasisDescription":16380
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"PoisonBlob_Ability1",
+                    "OasisName":16381
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/damageOverTime",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOverTime"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"PoisonBlob_Ability2",
+                    "OasisName":16382
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures"
+                }
+            },
+            {
+                "Name":{
+                    "OasisName":16390
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/Globuleye.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/Globuleye.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:Globuleye",
+        "HeightOffset":2
+    }
+]

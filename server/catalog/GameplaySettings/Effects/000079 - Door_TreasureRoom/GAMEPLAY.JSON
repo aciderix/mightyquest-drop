@@ -1,0 +1,79 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DoorSpec, HyperQuest.GameServer.Contracts",
+        "DoorStateTriggers":{
+            "OnCreation":"Close"
+        },
+        "Width":3.5,
+        "Thickness":1.5,
+        "Height":1,
+        "ObstacleRemovalDelay":0.1,
+        "ObstacleOffset":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts"
+        },
+        "HasDoorTrigger":false,
+        "DoorTriggerDistance":2.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":0.5,
+                "Height":5,
+                "Length":3.5,
+                "Y":2
+            }
+        ],
+        "CollisionGroup":"World",
+        "PhysicRigidBodyType":"Static"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":1.5,
+                "Height":8,
+                "Length":4,
+                "X":0.25,
+                "Y":4
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.InteractiveSpec, HyperQuest.GameServer.Contracts",
+        "Distance":2.5,
+        "MustBeAsCloseAsPossible":true,
+        "InteractionPointOffset":{
+            "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+            "Front":1
+        },
+        "InteractorOrientation":{
+            "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+            "Context":"TargetOrientation",
+            "Reverse":true
+        },
+        "InteractorDuration":1.2,
+        "InteractionActivationTrigger":"OnNoAggroAndTestAttackCondition",
+        "Operations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ChangeDoorStateOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.SendEventOperationSpec, HyperQuest.GameServer.Contracts",
+                    "EventName":"EnteringCastleHeartBuildingZone"
+                }
+            ]
+        }
+    }
+]

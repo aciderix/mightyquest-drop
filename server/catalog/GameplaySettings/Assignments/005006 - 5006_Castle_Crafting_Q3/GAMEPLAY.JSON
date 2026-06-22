@@ -1,0 +1,484 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "ObjectiveId":300
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    6,
+                    90,
+                    91,
+                    92,
+                    93,
+                    102,
+                    103,
+                    104,
+                    124,
+                    125,
+                    134,
+                    135,
+                    136
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    2,
+                    3,
+                    50,
+                    54,
+                    55,
+                    59,
+                    70,
+                    72,
+                    79,
+                    139,
+                    189
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":100,
+                "LockOnDisabledPickingType":"AllCastles"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayObjectiveCompletedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":300,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxCastleRenovationLevel":"RenovationLevel1"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"objectivePopup",
+                        "Conditions":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                                "PanelName":"skillTree",
+                                "IsNot":true
+                            }
+                        ]
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"objectivePopup"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    15
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    194
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":100,
+                "LockOnDisabledPickingType":"AllCastles",
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500601",
+                "Title":"[Time to Build]",
+                "TitleOasisId":16722,
+                "Text":"[Select the Castle Crafting icon to start building your First floor!]",
+                "TextOasisId":16723,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxCastleRenovationLevel":"RenovationLevel1"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationPanel"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500601",
+                "Type":"Arrow",
+                "Position":"BottomLeft",
+                "GameButtonId":"None",
+                "OffsetLeft":580,
+                "ArrowDirection":"Left",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxCastleRenovationLevel":"RenovationLevel1"
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationPanel"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":100,
+                "LockOnDisabledPickingType":"AllCastles",
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AssignmentsCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Assignments":
+                        [
+                            5007
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "AssignmentId":5007
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Duration":1,
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxCastleRenovationLevel":"RenovationLevel1"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationLevelCompletedPanel"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    194
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    64,
+                    139,
+                    156
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopConsumables"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"50031",
+                "Title":"[Potions!]",
+                "TitleOasisId":16710,
+                "Text":"[Now you can purchase Health Potions in the Cornelius Emporium!]",
+                "TextOasisId":16711,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationLevelCompletedPanel",
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HealthPotionAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxValue":1
+                    }
+                ],
+                "StartDelay":0.8,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"UnifiedShopConsumables"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000004",
+                "Type":"Arrow",
+                "GameButtonId":"BuildingNavBarButtonCorneliusEmporium",
+                "Top":240,
+                "Left":70,
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HealthPotionAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxValue":1
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "StartDelay":0.8,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"UnifiedShopConsumables"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"10010",
+                "Type":"Arrow",
+                "GameButtonId":"None",
+                "Top":540,
+                "Left":120,
+                "ArrowPosition":"MiddleLeft",
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HealthPotionAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxValue":1
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"Consumable",
+                        "ItemId":-1
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500605",
+                "Text":"[Right-Click on the Potions in your inventory to equip.]",
+                "TextOasisId":16724,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "PopUpNarrativeVoTextPages":{
+                    
+                },
+                "Position":"MiddleCenter",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ],
+                "StartDelay":0.8,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AnyItemEquippedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"heroInventory",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"ShopPc",
+                "StartType":"WithPrevious"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500606",
+                "Text":"Look at all the materials you've collected.",
+                "TextOasisId":16576,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "Text":"Look at all the materials you've collected.",
+                            "TextOasisId":16576,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B584.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "StartDelay":1.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"castlePopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1,
+                "StartType":"WithPrevious"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PanAttackSelectionCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Yaw":-60,
+                "StartType":"WithPrevious",
+                "StartDelay":3
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GrantPrivilegesAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountPrivileges":256,
+                "StartType":"WithPrevious",
+                "StartDelay":5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GrantPrivilegesAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountPrivileges":128,
+                "StartType":"WithPrevious",
+                "StartDelay":5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1501",
+                "Title":"[Player Castles]",
+                "TitleOasisId":16708,
+                "Text":"[Find another player's castle at your taste. GREEN BANNER : Easy! - YELLOW BANNER : Medium. - RED BANNER : Hard.]",
+                "TextOasisId":16709,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "StartType":"WithPrevious",
+                "StartDelay":4,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AttackStartedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "CastleModeMask":-6,
+                        "CastleId":-1
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"castlePopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    13,
+                    89
+                ]
+            }
+        ]
+    }
+]

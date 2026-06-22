@@ -1,0 +1,24 @@
+{
+    "VisualHandAttachmentBonesSpec" : {
+        "ItemTypeBoneName": {
+            "HD" : "Bip01 R Weapon Align",
+            "1H" : "Bip01 R Weapon Align",
+            "2H" : "Bip01 R Weapon Align",
+            "WD" : "Bip01 R Weapon Align",
+            "ST" : "Bip01 R Weapon Align",
+            "BW" : "Bip01 R Weapon Align",
+            "CB" : "Bip01 L Weapon Align",
+            "GU" : "Bip01 R Weapon Align",
+            "BK" : "Bip01 R Weapon Align",
+            "TH" : "Bip01 R Weapon Align",
+            "PA" : "Bip01 L Weapon Align"
+        }
+    },
+    
+    "HeadPartName": "HE",
+    "ShouldersPartName": "SH",
+    "BodyPartName" :"BD",
+    "BackPartName": "CP",
+    "HandsPartName": "GT",    
+    "FacePartName": "FC"
+}

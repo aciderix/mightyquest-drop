@@ -1,0 +1,43 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Creature":{
+                        "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":1105,
+                        "Name":"Derp_LimitedEdition_DerplicatorSpawns"
+                    },
+                    "CreatureCount":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":2
+                    },
+                    "DistanceToSpawn":2,
+                    "Level":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                        "ContextId":"SourceLevel"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                },
+                "Interruptable":true,
+                "Cooldown":4,
+                "PrepareTime":0.5,
+                "RecoverTime":0.5,
+                "MaxDistance":9,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1,
+                "NeedFacingTarget":false,
+                "MainDamageOperationStatValueSpecTag":"DerplicatorSlowAttack"
+            }
+        ]
+    }
+]

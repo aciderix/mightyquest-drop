@@ -1,0 +1,205 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":2,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":3,
+                        "ShiftAttackDistance":3,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":0.5,
+                                        "Tag":"Healing strike damage multiplier 1"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.AddLifeShieldOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"Health",
+                                        "Multiplier":0.05,
+                                        "Tag":"Healing Strike healing percentage 1"
+                                    },
+                                    "Duration":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":3,
+                                        "Tag":"Healing strike duration 1"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.ClearCooldownsOperationSpec, HyperQuest.GameServer.Contracts",
+                        "AbilitySpecContainers":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":9,
+                                "Name":"OathOfVictory"
+                            }
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    }
+                },
+                "OasisName":75,
+                "OasisShortDescription":76,
+                "OasisLongDescription":334,
+                "Cooldown":0.5,
+                "PrepareTime":0.3,
+                "RecoverTime":0.7,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":1.5,
+                "DirectedMaxDistance":2.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":60,
+                "AbilityCastType":"Targetted",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":13
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":3,
+                        "ShiftAttackDistance":3,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":0.75,
+                                        "Tag":"Healing strike damage multiplier 2"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.AddLifeShieldOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"Health",
+                                        "Multiplier":0.25,
+                                        "Tag":"Healing Strike healing percentage 2"
+                                    },
+                                    "Duration":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":4,
+                                        "Tag":"Healing strike duration 2"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.ClearCooldownsOperationSpec, HyperQuest.GameServer.Contracts",
+                        "AbilitySpecContainers":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":9,
+                                "Name":"OathOfVictory"
+                            }
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    }
+                },
+                "OasisName":77,
+                "OasisShortDescription":78,
+                "OasisLongDescription":335,
+                "Cooldown":0.5,
+                "PrepareTime":0.3,
+                "RecoverTime":0.7,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":1.5,
+                "DirectedMaxDistance":2.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":50,
+                "AbilityCastType":"Targetted",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":25
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            }
+        ]
+    }
+]

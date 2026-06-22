@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Sprint4",
+        "OasisName":2050,
+        "OasisDescription":2049
+    }
+]

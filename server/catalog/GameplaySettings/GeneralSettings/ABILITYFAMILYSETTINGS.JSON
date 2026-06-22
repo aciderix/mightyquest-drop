@@ -1,0 +1,137 @@
+{
+    "Families":
+    [
+        {
+            "Id":1,
+            "Name":{
+                "DebugName":"Mana Builders",
+                "OasisName":7575
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/knight_manaMastery.png"
+            }
+        },
+        {
+            "Id":2,
+            "Name":{
+                "DebugName":"Physical Attacks",
+                "OasisName":7576
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/knight_combatTechniques.png"
+            }
+        },
+        {
+            "Id":3,
+            "Name":{
+                "DebugName":"Magical Attacks",
+                "OasisName":7577
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/knight_dragonFire.png"
+            }
+        },
+        {
+            "Id":4,
+            "Name":{
+                "DebugName":"Hawk Tricks",
+                "OasisName":7578
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/archer_hawkCompanion.png"
+            }
+        },
+        {
+            "Id":5,
+            "Name":{
+                "DebugName":"Direct attacks",
+                "OasisName":7579
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/archer_marksManShip.png"
+            }
+        },
+        {
+            "Id":6,
+            "Name":{
+                "DebugName":"Control Effects",
+                "OasisName":7580
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/archer_control.png"
+            }
+        },
+        {
+            "Id":7,
+            "Name":{
+                "DebugName":"Spontaneous Combustion",
+                "OasisName":9702
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/mage_spontaneousCombustion.png"
+            }
+        },
+        {
+            "Id":8,
+            "Name":{
+                "DebugName":"Electric Induction",
+                "OasisName":9703
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/mage_electricInduction.png"
+            }
+        },
+        {
+            "Id":9,
+            "Name":{
+                "DebugName":"Unholy Rendition",
+                "OasisName":9704
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/mage_unholyRendition.png"
+            }
+        },
+        {
+            "Id":10,
+            "Name":{
+                "DebugName":"Martial Strikes",
+                "OasisName":13087
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/runnaway_heavyMetal.png"
+            }
+        },
+        {
+            "Id":11,
+            "Name":{
+                "DebugName":"Buffing Songs",
+                "OasisName":13088
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/runnaway_armoringAnthems.png"
+            }
+        },
+        {
+            "Id":12,
+            "Name":{
+                "DebugName":"Power Chords",
+                "OasisName":13089
+            },
+            "Ui":{
+                "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+                "InvIconUrl": "skills/categoryIcons/runnaway_powerChords.png"
+            }
+        }
+    ]
+}

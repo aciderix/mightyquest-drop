@@ -1,0 +1,19 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_203B0F5A>MESH_203B0F5A.MESH",
+        "SynergyEntityFileNameVariations":
+        [
+            "DB:>RAW>SPECIALEFFECTS>SPECIALFX_F594207F_BA618>SPECIALFX_F594207F_BA618.SPECIALFX",
+            "DB:>RAW>SPECIALEFFECTS>SPECIALFX_7464404A_BA618>SPECIALFX_7464404A_BA618.SPECIALFX",
+            "DB:>RAW>SPECIALEFFECTS>SPECIALFX_DCF75E1D_BA618>SPECIALFX_DCF75E1D_BA618.SPECIALFX",
+            "DB:>RAW>SPECIALEFFECTS>SPECIALFX_912D9617_BA618>SPECIALFX_912D9617_BA618.SPECIALFX"
+        ],
+        "Scale":0.9,
+        "ScaleVariance":0.1,
+        "RotationVariance":1
+    }
+]

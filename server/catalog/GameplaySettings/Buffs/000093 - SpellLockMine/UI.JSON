@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SpellLockMine",
+        "OasisName":2159,
+        "OasisDescription":2160
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HERODEBUFFS_SILENCE.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_silence",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"RotatingCannon_01_New",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_277C5D79>ENTITY_277C5D79.ENTITY"
+    }
+]

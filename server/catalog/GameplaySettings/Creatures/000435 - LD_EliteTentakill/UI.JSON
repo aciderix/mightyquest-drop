@@ -1,0 +1,36 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Big Squid LD",
+        "OasisName":1399
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "InvIconUrl":"icoInv\/creatures\/beast\/CHA_020_Octopus_rank1.png",
+        "HeightOffset":1.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Extended melee range",
+                    "OasisName":7810
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Medium size",
+                    "OasisName":7811
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/resistanceToKnockBack.png"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"S. Archer - Trap",
+        "OasisName":15153,
+        "OasisDescription":15154
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Trapper Keeper",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher3.png",
+                        "NameOasisId":11215,
+                        "DescriptionOasisId":11216
+                    }
+                ],
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11217,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/snareEffect.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":11218,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/snareEffect.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B1.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B1.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B1.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B2.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B2.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B2.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B3.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B3.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B3.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/B1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/B1.png",
+        "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:B1",
+        "HeightOffset":1.9
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11218,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:snareEffect",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_SmellyArcher:B3"
+    }
+]

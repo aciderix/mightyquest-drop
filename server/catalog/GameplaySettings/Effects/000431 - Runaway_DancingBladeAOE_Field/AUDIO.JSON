@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"TwoHandedSword"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioPersistentEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "CreateSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008765E.SOUND"
+        },
+        "DestroySound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089299.SOUND",
+            "FireAndForget":true
+        }
+    }
+]

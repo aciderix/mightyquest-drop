@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"FreezingArrowMissileBuff1",
+        "OasisName":2063,
+        "OasisDescription":2064
+    }
+]

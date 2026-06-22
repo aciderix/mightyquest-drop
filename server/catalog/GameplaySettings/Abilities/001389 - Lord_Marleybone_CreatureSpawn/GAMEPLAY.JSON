@@ -1,0 +1,150 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ConditionOperationSpec, HyperQuest.GameServer.Contracts",
+                            "BooleanCondition":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompareValuesBooleanSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                    "ContextId":"SourceLifeRatio"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":0.5
+                                },
+                                "Operator":"GreaterOrEqual"
+                            },
+                            "OperationsIfTrue":{
+                                "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                                "ConditionOperation":{
+                                    "$type":"HyperQuest.GameServer.Contracts.DiceRollOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Probability":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":0.5
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                "OperationsIfSuccess":{
+                                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Creature":{
+                                        "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":1115,
+                                        "Name":"SmellyArcher_EliteSniper_MarleyboneSpawn"
+                                    },
+                                    "CreatureCount":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":3
+                                    },
+                                    "DistanceToSpawn":3,
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                "OperationsIfFailure":{
+                                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Creature":{
+                                        "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":1116,
+                                        "Name":"SmellyWarrior_Elite_HeavyHanded_MarleyboneSpawn"
+                                    },
+                                    "CreatureCount":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":2
+                                    },
+                                    "DistanceToSpawn":3,
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                }
+                            },
+                            "OperationsIfFalse":{
+                                "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                                "ConditionOperation":{
+                                    "$type":"HyperQuest.GameServer.Contracts.DiceRollOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Probability":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":0.9
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                "OperationsIfSuccess":{
+                                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Operations":
+                                    [
+                                        {
+                                            "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                                            "Creature":{
+                                                "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                "SpecContainerReferenceId":1109,
+                                                "Name":"Bone_Puppeteer_Captain_Marleybone_Spawn"
+                                            },
+                                            "CreatureCount":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":2
+                                            },
+                                            "Target":{
+                                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                            }
+                                        },
+                                        {
+                                            "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                                            "Creature":{
+                                                "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                "SpecContainerReferenceId":1108,
+                                                "Name":"Bone_Puppeteer_Elite_Marleybone_Spawn"
+                                            },
+                                            "CreatureCount":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":1
+                                            },
+                                            "Target":{
+                                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "OperationsIfFailure":{
+                                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Creature":{
+                                        "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":1085,
+                                        "Name":"Chicken_Elite"
+                                    },
+                                    "CreatureCount":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":1
+                                    },
+                                    "DistanceToSpawn":2,
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":16,
+                "PrepareTime":3.2,
+                "RecoverTime":1,
+                "MaxDistance":6,
+                "EffectRadius":5,
+                "AbilityCastType":"Direct",
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

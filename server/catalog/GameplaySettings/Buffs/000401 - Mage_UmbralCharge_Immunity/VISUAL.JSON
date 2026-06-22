@@ -1,0 +1,60 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_UmbralCharge_Immunity"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuffFxSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_B518F949_AI933.MATERIAL",
+                "Length":8,
+                "SegmentLifeTime":5,
+                "FadeInTime":0.2,
+                "FadeOutTime":1,
+                "FadeInDistance":1,
+                "FadeOutDistance":0.5,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 Pelvis",
+                    "OffsetX":-0.6,
+                    "TrailPointOffsetOnY":1
+                },
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_8B1A5B55_AI933.MATERIAL",
+                "Length":4,
+                "SegmentLifeTime":5,
+                "FadeInTime":0.1,
+                "FadeOutTime":1,
+                "FadeInDistance":1,
+                "FadeOutDistance":0.5,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 R ForeTwist",
+                    "TrailPointOffsetOnY":0.2
+                },
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_8B1A5B55_AI933.MATERIAL",
+                "Length":4,
+                "SegmentLifeTime":5,
+                "FadeInTime":0.1,
+                "FadeOutTime":1,
+                "FadeOutDistance":0.5,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 L ForeTwist",
+                    "TrailPointOffsetOnY":0.2
+                },
+                "AttachFxOn":"Target"
+            }
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuildSoundsOverrideSpec, HyperQuest.GameServer.Contracts",
+        "BuiltEntityDropSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089154.SOUND"
+        },
+        "BuiltEntityPickupSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089153.SOUND"
+        },
+        "BuiltEntityRotateSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089155.SOUND"
+        },
+        "BuiltEntitySelectionSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089156.SOUND"
+        }
+    }
+]

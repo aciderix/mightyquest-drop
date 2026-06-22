@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DancingBladeTimer",
+        "OasisName":2235,
+        "OasisDescription":2236
+    }
+]
