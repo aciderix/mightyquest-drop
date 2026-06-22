@@ -143,7 +143,7 @@ def ep_account_information(req, acc):
     ai = contract("AccountInformation", AccountId=acc.get("AccountId", 1),
                   DisplayName=acc.get("DisplayName", ""), Privileges=9,
                   # real new-player state from AccountTemplates/DEFAULTACCOUNT
-                  AvatarId=DEFAULT_ACCOUNT.get("AvatarId", 10),
+                  AvatarId=acc.get("AvatarId", DEFAULT_ACCOUNT.get("AvatarId", 10)),
                   CountryCode=DEFAULT_ACCOUNT.get("CountryCode", "CA"),
                   ProfanityFiltering=DEFAULT_ACCOUNT.get("ProfanityFiltering", True),
                   CastleRenovationLevel=DEFAULT_ACCOUNT.get("CastleRenovationLevel",

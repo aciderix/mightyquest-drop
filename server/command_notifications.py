@@ -265,6 +265,178 @@ class CommandBus:
             return [self.build("BuildingUpgradeStartedNotification", idx),
                     self.build("BuildInfoUpdatedNotification", idx + 1, BuildInfo=self.build_info(acc))]
 
+        # ---- hero equipment (gear) + equipped consumables --------------------
+        if name == "HeroEquipmentEquipCommand":
+            hero = self._hero(acc); items = acc.setdefault("items", [])
+            slot = str(cmd.get("DestinationSlot", "MainHand"))
+            src = cmd.get("SourceSlotId")
+            item = items.pop(src) if isinstance(src, int) and 0 <= src < len(items) else (
+                items.pop() if items else None)
+            if hero is not None and item is not None:
+                eq = hero.setdefault("Equipment", {})
+                prev = eq.get(slot)
+                eq[slot] = item
+                if prev:
+                    items.append(prev)          # swap the old piece back to the bag
+            return [self.build("HeroEquipmentEquipNotification", idx)]
+
+        if name == "HeroEquipmentUnequipCommand":
+            hero = self._hero(acc)
+            slot = str(cmd.get("SourceSlotId", cmd.get("DestinationSlot", "")))
+            if hero is not None:
+                eq = hero.setdefault("Equipment", {})
+                if eq.get(slot):
+                    acc.setdefault("items", []).append(eq[slot]); eq[slot] = None
+            return [self.build("HeroEquipmentUnequipNotification", idx)]
+
+        if name == "HeroEquipConsumableCommand":
+            hero = self._hero(acc)
+            if hero is not None:
+                self._set_slot(hero.setdefault("EquippedConsumables", []),
+                               int(cmd.get("SlotIndex", 0)), "TemplateId",
+                               cmd.get("TemplateId") or cmd.get("ConsumableTemplateId"))
+            return [self.build("HeroConsumableEquipNotification", idx)]
+
+        # ---- inventory move / swap -------------------------------------------
+        if name in ("InventoryMoveItemCommand", "InventorySwapItemCommand"):
+            items = acc.setdefault("items", [])
+            s, d = cmd.get("SourceSlotId"), cmd.get("DestinationSlotId")
+            if isinstance(s, int) and isinstance(d, int) and 0 <= s < len(items) and 0 <= d < len(items):
+                items[s], items[d] = items[d], items[s]
+            return [self.build("HeroInventoryUpdatedNotification", idx)]
+
+        # ---- consumables (activation) ----------------------------------------
+        if name in ("ActivateConsumableCommand", "ActivateConsumableOnItemCommand"):
+            active = acc.setdefault("active_consumables", [])
+            active.append({"ConsumableType": cmd.get("ConsumableType", 0),
+                           "TemplateId": cmd.get("TemplateId", 0),
+                           "ExpirableId": f"cons-{len(active) + 1}", "InitialDuration": 600})
+            outs = [self.build("ConsumableActivatedNotification", idx)]
+            if name == "ActivateConsumableOnItemCommand":
+                outs.append(self.build("HeroInventoryUpdatedNotification", idx + 1))
+            return outs
+
+        if name == "ExpireExpirableCommand":
+            active = acc.setdefault("active_consumables", [])
+            if active:
+                active.pop()
+            return [self.build("ExpirableRemovedNotification", idx)]
+
+        # ---- buy back --------------------------------------------------------
+        if name == "BuyBackCommand":
+            w["InGameCoin"] = max(0, w["InGameCoin"] - int(cmd.get("ClientPrice") or 0))
+            bb = acc.setdefault("buyback", [])
+            iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+            item = (bb.pop() if bb else {"ExpirableId": f"item-{iid}",
+                    "TemplateId": cmd.get("SkuCode"), "AcquisitionDate": now, "SellPrice": 50})
+            acc.setdefault("items", []).append(item)
+            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+                               Amounts=[{"Amount": -int(cmd.get("ClientPrice") or 0), "CurrencyType": 2}]),
+                    self.build("HeroInventoryAddedNotification", idx + 1, NewlyAdded=item),
+                    self.build("BuyBackUpdatedNotification", idx + 2)]
+
+        # ---- forge / crafting ------------------------------------------------
+        if name in ("ForgeCraftCommand", "ForgeUpgradeCommand"):
+            cost = int(cmd.get("ClientPrice") or 100)
+            w["InGameCoin"] = max(0, w["InGameCoin"] - cost)
+            iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+            crafted = {"ExpirableId": f"item-{iid}",
+                       "TemplateId": cmd.get("SkuCode") or cmd.get("TemplateId") or 0,
+                       "ItemLevel": cmd.get("ItemLevel", 1), "ArchetypeId": cmd.get("ArchetypeId", 0),
+                       "AcquisitionDate": now, "SellPrice": 50}
+            acc.setdefault("items", []).append(crafted)           # forged item produced
+            acc.setdefault("forge", {}).setdefault("crafted", []).append(crafted["ExpirableId"])
+            return [self.build("ForgeStartedNotification", idx),
+                    self.build("WalletUpdatedNotification", idx + 1, NotificationType=24,
+                               Amounts=[{"Amount": -cost, "CurrencyType": 2}])]
+
+        if name == "ForgeReforgeCommand":
+            cost = int(cmd.get("ClientPrice") or 50)
+            w["InGameCoin"] = max(0, w["InGameCoin"] - cost)
+            items = acc.get("items", [])
+            if items:                                              # reforge tweaks stats
+                items[-1]["PrimaryStatsModifiers"] = [2, 2, 2]
+            return [self.build("HeroInventoryUpdatedNotification", idx),
+                    self.build("WalletUpdatedNotification", idx + 1, NotificationType=24,
+                               Amounts=[{"Amount": -cost, "CurrencyType": 2}])]
+
+        # ---- mines (passive economy) -----------------------------------------
+        if name == "HarvestMineBuildingCommand":
+            mines = acc.setdefault("mines", {"produced": 200, "rank": 1})
+            amount = mines.get("produced", 200); mines["produced"] = 0
+            w["InGameCoin"] += amount
+            return [self.build("MineProductionCompletedNotification", idx),
+                    self.build("WalletUpdatedNotification", idx + 1, NotificationType=24,
+                               Amounts=[{"Amount": amount, "CurrencyType": 2}])]
+
+        if name == "RestoreMinesBuildingCommand":
+            acc.setdefault("mines", {"rank": 1})["produced"] = 200
+            return [self.build("MineEnabledNotification", idx)]
+
+        if name == "UpgradeProductionMineBuildingCommand":
+            m = acc.setdefault("mines", {"produced": 200, "rank": 1})
+            m["rank"] = m.get("rank", 1) + 1
+            return [self.build("BuildingUpgradeStartedNotification", idx)]
+
+        # ---- inbox -----------------------------------------------------------
+        if name in ("InboxCollectCommand", "InboxCollectToHeroInventoryCommand"):
+            inbox = acc.setdefault("inbox", [{"TemplateId": 1001}])
+            picked = inbox.pop() if inbox else {"TemplateId": 1001}
+            iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+            item = {"ExpirableId": f"item-{iid}", "TemplateId": picked.get("TemplateId"),
+                    "AcquisitionDate": now, "SellPrice": 50}
+            acc.setdefault("items", []).append(item)
+            if name == "InboxCollectCommand":
+                return [self.build("InboxItemsAddedNotification", idx)]
+            return [self.build("HeroInventoryAddedNotification", idx, NewlyAdded=item)]
+
+        if name == "InboxCollectToHeroEquipmentCommand":
+            return [self.build("HeroEquipmentEquipNotification", idx)]
+
+        if name == "InboxCollectToBuyBackCommand":
+            acc.setdefault("buyback", []).append({"TemplateId": 1001})
+            return [self.build("BuyBackUpdatedNotification", idx)]
+
+        # ---- castle traps / triggers / buildables ----------------------------
+        if name == "AddCastleTrapCommand":
+            c = self._castle(acc); tidx = c["next_index"]; c["next_index"] += 1
+            c["traps"].append({"Id": tidx, "SpecContainerId": cmd.get("SkuCode")})
+            c["construction_used"] = min(c["construction_max"], c["construction_used"] + 10)
+            return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
+
+        if name == "AddCastleTriggerCommand":
+            c = self._castle(acc)
+            c.setdefault("triggers", []).append({"SpecContainerId": cmd.get("SkuCode")})
+            return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
+
+        if name in ("UpdateCastleTrapCommand", "UpdateCastleTriggerCommand",
+                    "CastleBuildableCommand", "ExecuteAssignmentActionCommand"):
+            return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
+
+        # ---- castle inventory (decorations / defense ingredients) ------------
+        if name in ("AddCastleInventoryItemCommand", "BoostCastleInventoryItemCommand"):
+            acc.setdefault("castle_inventory", []).append({"SpecContainerId": cmd.get("SkuCode")})
+            return [self.build("CastleInventoryChangedNotification", idx)]
+
+        if name == "SellDefenseIngredientCommand":
+            gain = int(cmd.get("ClientPrice") or 25); w["InGameCoin"] += gain
+            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+                               Amounts=[{"Amount": gain, "CurrencyType": 2}]),
+                    self.build("CastleInventoryChangedNotification", idx + 1)]
+
+        # ---- misc ------------------------------------------------------------
+        if name == "SetAvatarCommand":
+            acc["AvatarId"] = cmd.get("AvatarId", acc.get("AvatarId", 10))
+            return [self.build("AttackerAvatarUpdatedNotification", idx)]
+
+        if name == "HarvestHeroCorpseCommand":
+            iid = acc.get("next_item", 1); acc["next_item"] = iid + 1
+            item = {"ExpirableId": f"item-{iid}", "TemplateId": 2001,
+                    "AcquisitionDate": now, "SellPrice": 50}
+            acc.setdefault("items", []).append(item)
+            return [self.build("HarvestingCompletedNotification", idx),
+                    self.build("HeroInventoryAddedNotification", idx + 1, NewlyAdded=item)]
+
         return None
 
     # ---- handle a full SendCommands request ----------------------------------
