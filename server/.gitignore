@@ -6,3 +6,4 @@ __pycache__/
 .mqel_certs/
 mqel_requests.log
 MightyQuest*.exe
+uncertain.log
