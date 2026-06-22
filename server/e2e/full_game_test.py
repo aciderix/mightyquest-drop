@@ -8,20 +8,20 @@ B = "https://127.0.0.1:443"
 CHECKS = []
 
 
-def call(svc, meth, body=None):
+def call(svc, meth, body=None, who="anonymous"):
     r = urllib.request.Request(f"{B}/{svc}Service.hqs/{meth}",
                                data=json.dumps(body or {}).encode(), method="POST",
-                               headers={"Content-Type": "application/json"})
+                               headers={"Content-Type": "application/json", "X-Steam-Ticket": who})
     return json.loads(urllib.request.urlopen(r, context=CTX, timeout=8).read())
 
 
-def cmd(name, **f):
+def cmd(name, who="anonymous", **f):
     return call("ServerCommand", "SendCommands", {"commands": [
-        dict({"$type": f"HyperQuest.GameServer.Contracts.{name}, HyperQuest.GameServer.Contracts"}, **f)]})
+        dict({"$type": f"HyperQuest.GameServer.Contracts.{name}, HyperQuest.GameServer.Contracts"}, **f)]}, who)
 
 
-def acc():
-    return call("Account", "GetAccountInformation")["Result"]
+def acc(who="anonymous"):
+    return call("Account", "GetAccountInformation", who=who)["Result"]
 
 
 def chk(label, cond):
@@ -107,6 +107,36 @@ def main():
     print("9. Achat de chateau (BUY_*)")
     fs = call("CastleForSale", "GetCastlesForSale")["Result"]["CastlesForSale"]
     chk("chateaux a vendre BUY_* presents", len(fs) >= 4)
+
+    print("10. Construction du chateau perso")
+    cmd("AddCastleCreatureCommand", SkuCode=1081)
+    cmd("AddCastleCreatureCommand", SkuCode=1029)
+    bi = acc()["BuildInfo"]
+    chk("2 creatures placees sur mon chateau", len(bi["CreatureArchetypes"]) == 2)
+    chk("points de construction consommes", bi["CastleStats"]["TotalConstructionPoints"] == 20)
+    rank0 = bi["CastleHeartRank"]
+    cmd("UpgradeBuildingCommand")
+    chk("upgrade CastleHeart -> rank +1", acc()["BuildInfo"]["CastleHeartRank"] == rank0 + 1)
+
+    print("11. Progression heros (XP -> level up)")
+    h0 = acc()["Heroes"][0]
+    lvl0, xp0 = h0["Level"], h0.get("XP", 0)
+    call("Attack", "StartAttack", {"CastleId": 11})  # PVE_04 (level 4, +100 xp)
+    call("Attack", "EndAttack", {"Victory": True})
+    h1 = acc()["Heroes"][0]
+    chk("heros gagne de l'XP", h1.get("XP", 0) > xp0)
+    chk("heros monte de niveau au seuil", h1["Level"] >= lvl0)
+
+    print("12. PvP (chateau publie d'un autre joueur)")
+    cmd("AddCastleCreatureCommand", "rival", SkuCode=1081)
+    cmd("AddCastleCreatureCommand", "rival", SkuCode=1003)
+    cmd("PublishDraftCommand", "rival")
+    rid = acc("rival")["AccountId"]
+    pvp = call("Attack", "StartAttack", {"DefenderAccountId": rid}, who="player")["Result"]
+    pc = pvp["Castle"]
+    placed_pvp = sum(len(r.get("Creatures", [])) for r in pc["Rooms"])
+    chk("PvP: attaque le chateau du rival (ses 2 creatures)", placed_pvp == 2)
+    chk("PvP: pas un tutoriel", pvp["IsTutorial"] is False)
 
     ok = sum(1 for _, c in CHECKS if c); tot = len(CHECKS)
     print(f"\n=== {ok}/{tot} checks OK ===")
