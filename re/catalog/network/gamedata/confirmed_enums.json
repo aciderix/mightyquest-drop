@@ -1,0 +1,8 @@
+{
+  "_comment": "Server-only enums NOT present in the client JS, confirmed individually from the binary's metadata table (explicit value byte) + cross-checked against self-labeling member names. High confidence. Keyed by the contract FIELD name the gate matches on.",
+  "CastleRenovationLevel":            {"RenovationLevel0":0,"RenovationLevel1":1,"RenovationLevel2":2,"RenovationLevel3":3,"RenovationLevel4":4,"RenovationComplete":5},
+  "CastleRenovationLevelRequirement": {"RenovationLevel0":0,"RenovationLevel1":1,"RenovationLevel2":2,"RenovationLevel3":3,"RenovationLevel4":4,"RenovationComplete":5},
+  "MaxCastleRenovationLevel":         {"RenovationLevel0":0,"RenovationLevel1":1,"RenovationLevel2":2,"RenovationLevel3":3,"RenovationLevel4":4,"RenovationComplete":5},
+  "MinCastleRenovationLevel":         {"RenovationLevel0":0,"RenovationLevel1":1,"RenovationLevel2":2,"RenovationLevel3":3,"RenovationLevel4":4,"RenovationComplete":5},
+  "NextCastleRenovationLevel":        {"RenovationLevel0":0,"RenovationLevel1":1,"RenovationLevel2":2,"RenovationLevel3":3,"RenovationLevel4":4,"RenovationComplete":5}
+}

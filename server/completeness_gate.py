@@ -38,6 +38,7 @@ SCHEMAS = os.path.join(CATALOG, "schemas_typed.json")
 EXAMPLES = os.path.join(CATALOG, "generated", "examples.json")
 ENUMS = os.path.join(CATALOG, "gamedata", "enum_values.json")
 ENUM_INTS = os.path.join(CATALOG, "gamedata", "enum_int_values.json")
+CONFIRMED_ENUMS = os.path.join(CATALOG, "gamedata", "confirmed_enums.json")
 
 # .NET serializer default values, by the type vocabulary used in schemas_typed.json
 _NUM_INT = {"int", "uint", "ushort", "short", "ulong", "long", "byte", "enum"}
@@ -93,26 +94,45 @@ class Gate:
                     self._member_int.setdefault(member, set()).add(iv)
         except OSError:
             pass
+        # server-only enums NOT in the client JS, confirmed individually from the
+        # binary metadata table (explicit value byte). Keyed by contract field name.
+        self.confirmed = {}
+        try:
+            with open(CONFIRMED_ENUMS, encoding="utf-8") as f:
+                self.confirmed = {k: v for k, v in json.load(f).items()
+                                  if not k.startswith("_")}
+            for mapping in self.confirmed.values():
+                self.enum_names.update(mapping)
+        except OSError:
+            pass
 
     def resolve_enum(self, fname, value):
-        """Return the integer for an enum-name string, or None if unresolvable.
-        Prefer the enum whose name matches the field; else accept a globally
-        unique member value."""
+        """Resolve an enum-name string to (integer, confidence).
+        confidence: 'authoritative' (client JS), 'confirmed' (binary-verified),
+        'heuristic' (globally-unique member guess), or (None, None) if unknown."""
         if not isinstance(value, str):
-            return None
-        # field name often equals the enum name (CastleType, AttackSource, ...)
+            return None, None
+        # 1) client JS enum models — authoritative
         en = self._enum_by_name.get(fname.lower())
         if en and value in self.enum_int[en]:
-            return self.enum_int[en][value]
-        # field like "SomethingType" -> enum "Type"/"SomethingType" already tried;
-        # fall back to a globally unique member integer
+            return self.enum_int[en][value], "authoritative"
+        # 2) binary-confirmed server-only enums, matched by field name
+        conf = self.confirmed.get(fname)
+        if conf and value in conf:
+            return conf[value], "confirmed"
+        # 3) globally-unique member across JS enums — a guess, flagged as heuristic
         ints = self._member_int.get(value)
         if ints and len(ints) == 1:
-            return next(iter(ints))
-        return None
+            return next(iter(ints)), "heuristic"
+        return None, None
 
     # ---- the rule: a complete object for `name`, keeping any provided values ----
-    def complete(self, name, partial=None, *, add_type=False, _seen=None):
+    def complete(self, name, partial=None, *, add_type=False, _seen=None, uncertain=None):
+        """Build a schema-complete object. If `uncertain` is a list, append a
+        record for every field whose emitted value is NOT certain — an enum
+        resolved only by heuristic, or an enum NAME we could not resolve at all.
+        This lets the server log exactly which suspect values it sent, so an
+        in-game bug can be traced back to the field that fed it."""
         spec = self.schemas.get(name)
         if spec is None:
             # unknown contract: cannot complete; return what we were given
@@ -127,23 +147,30 @@ class Gate:
                 val = partial[fname]
                 # auto-convert an enum NAME to its integer (the silent-default fix)
                 if ftype in _NUM_INT and isinstance(val, str):
-                    iv = self.resolve_enum(fname, val)
+                    iv, conf = self.resolve_enum(fname, val)
                     if iv is not None:
+                        if conf != "authoritative" and uncertain is not None:
+                            uncertain.append(f"{conf.upper()} {name}.{fname}={val!r}->{iv}")
                         val = iv
+                    elif val in self.enum_names and uncertain is not None:
+                        uncertain.append(f"UNRESOLVED-ENUM {name}.{fname}={val!r} "
+                                         f"(sent as name; client may read 0)")
                 # recurse into a provided nested object if we know its contract
                 nested = self._contract_for(fname, ftype)
                 if nested and isinstance(val, dict) and nested not in _seen:
                     val = self.complete(nested, val, add_type=add_type,
-                                        _seen=_seen | {name})
+                                        _seen=_seen | {name}, uncertain=uncertain)
                 out[fname] = copy.deepcopy(val)
             else:
-                out[fname] = self._fill_field(fname, ftype, add_type, _seen | {name})
+                out[fname] = self._fill_field(fname, ftype, add_type, _seen | {name},
+                                              uncertain)
         return out
 
-    def _fill_field(self, fname, ftype, add_type, seen):
+    def _fill_field(self, fname, ftype, add_type, seen, uncertain=None):
         nested = self._contract_for(fname, ftype)
         if nested and nested not in seen:
-            return self.complete(nested, {}, add_type=add_type, _seen=seen)
+            return self.complete(nested, {}, add_type=add_type, _seen=seen,
+                                 uncertain=uncertain)
         return _default_for(ftype)
 
     def _contract_for(self, fname, ftype):

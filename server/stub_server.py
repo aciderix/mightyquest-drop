@@ -48,15 +48,29 @@ def envelope(payload):
     return {"Result": payload}
 
 
+UNCERTAIN_PATH = os.path.join(HERE, "uncertain.log")
+
+
 def contract(name, **overrides):
     """A SCHEMA-COMPLETE `name`: starts from the catalog example, applies overrides,
     then runs the completeness gate so every field the client expects is present and
-    nested contracts are filled (not left as {} -> silent client defaults)."""
+    nested contracts are filled (not left as {} -> silent client defaults).
+
+    Any value we are NOT certain about (an enum resolved only by heuristic, or an
+    enum name we could not resolve) is appended to uncertain.log with the contract
+    and field — so if something misbehaves in game, you can grep this for the
+    suspect field instead of hunting blind."""
     seed = copy.deepcopy(EXAMPLES.get(name, {}))
     seed.update(overrides)
-    if name in GATE.schemas:
-        return GATE.complete(name, seed)
-    obj = seed
+    if name not in GATE.schemas:
+        return seed
+    uncertain = []
+    obj = GATE.complete(name, seed, uncertain=uncertain)
+    if uncertain:
+        ts = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        with open(UNCERTAIN_PATH, "a") as f:
+            for u in uncertain:
+                f.write(f"{ts} {name}: {u}\n")
     return obj
 
 
