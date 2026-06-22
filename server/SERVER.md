@@ -21,12 +21,13 @@ Ce qui **n'est pas** « parfait » :
    pas confirmé octet-par-octet. Impact : transitoire et **auto-réparé** par la
    relecture de `GetAccountInformation` (autoritatif) ; seul l'entier
    `NotificationType` est purement visuel (catégorie d'icône/son).
-3. **Quelques montants encore level-scalés faute de mapping.** L'or/force-vitale de
-   victoire (50/10 × niveau) et le coût de construction (10) restent des barèmes,
-   car le mapping `SpecContainerId → spec créature` n'est pas dans le catalogue
-   reversé (donc pas la valeur d'or exacte par créature). **Tout le reste de
-   l'économie est sourcé catalogue** (prix de vente, qualité/rareté de drop, stats
-   d'objets, courbe d'XP, prix shop).
+3. **Un seul barème restant : le delta de trophées PvP** (`+10 / −5`).
+   `MATCHMAKINGSETTINGS` ne donne que des bandes de rating (ELO), pas un delta
+   constant → formule à reconstruire séparément. **Tout le reste de l'économie est
+   sourcé catalogue**, y compris désormais le **loot par créature** :
+   `SpecContainerId` est l'id de dossier `Creatures` (mapping direct, ex.
+   1081=Chicken, 1003=Cyclops) → l'or = Σ `HealthOrbFragmentsLootBase`, l'xp =
+   Σ `BuildXp`, le coût de construction = `ConstructionPoints` par créature.
 
 ### Levé depuis la v1 de ce document (désormais réel + vérifié)
 - **Économie sourcée catalogue** (`catalog_economy.py`) : prix de vente
