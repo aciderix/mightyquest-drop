@@ -91,26 +91,66 @@ def server_call(method, arg, services=None):
 
 
 class Agent:
-    def __init__(self, target_index=0):
-        pages = requests.get(f"{CDP_HOST}/json", timeout=8).json()       # ONE /json
-        self.targets = [p for p in pages if p.get("type") == "page"]
+    def __init__(self, target_index=None):
+        pages = requests.get(f"{CDP_HOST}/json", timeout=8).json()       # ONE /json, ever
+        self.targets = [p for p in pages if p.get("type") == "page"
+                        and p.get("webSocketDebuggerUrl")]
         if not self.targets:
             raise RuntimeError("no CEF page targets on the debug port")
-        self.page = self.targets[target_index]
-        self.ws = websocket.create_connection(self.page["webSocketDebuggerUrl"],
-                                              timeout=30, suppress_origin=True)
         self._id = 0
         self.gate = Gate() if Gate else None
-        self.cmd("Runtime.enable")
+        # CEF-under-Wine exposes several blank page targets; only the live renderer
+        # answers Runtime.evaluate. Probe each over its OWN WebSocket (never re-hit
+        # /json — that wedges the DevTools HTTP server). Pick the first responsive one.
+        order = [self.targets[target_index]] if target_index is not None else self.targets
+        last = None
+        for p in order:
+            try:
+                self._connect(p)
+                if self._healthy():
+                    self.ws.settimeout(30)
+                    # NB: do NOT Runtime.enable — we don't need console/events, and
+                    # the event flood from 200+ injected scripts would clog cmd()'s
+                    # recv loop. Runtime.evaluate works without it.
+                    return
+                self.ws.close()
+            except Exception as e:
+                last = e
+                try: self.ws.close()
+                except Exception: pass
+        raise RuntimeError("no live renderer among %d page target(s); last=%s"
+                           % (len(self.targets), last))
+
+    def _connect(self, page):
+        self.page = page
+        self.ws = websocket.create_connection(page["webSocketDebuggerUrl"],
+                                              timeout=30, suppress_origin=True)
+
+    def _healthy(self, timeout=6):
+        """True if this page's V8 answers a trivial eval within `timeout` s."""
+        self.ws.settimeout(timeout)
+        self._id += 1; mid = self._id
+        self.ws.send(json.dumps({"id": mid, "method": "Runtime.evaluate",
+                                 "params": {"expression": "1+1", "returnByValue": True}}))
+        try:
+            while True:
+                m = json.loads(self.ws.recv())
+                if m.get("id") == mid:
+                    return m.get("result", {}).get("result", {}).get("value") == 2
+        except Exception:
+            return False
 
     # ── raw CDP ──────────────────────────────────────────────────────────────
-    def cmd(self, method, params=None):
+    def cmd(self, method, params=None, timeout=30):
         self._id += 1; mid = self._id
+        self.ws.settimeout(timeout)
         self.ws.send(json.dumps({"id": mid, "method": method, "params": params or {}}))
-        while True:
+        deadline = time.time() + timeout
+        while time.time() < deadline:
             m = json.loads(self.ws.recv())
             if m.get("id") == mid:
                 return m
+        raise TimeoutError("CDP %s timed out after %ss" % (method, timeout))
 
     def eval(self, expr, by_value=True):
         r = self.cmd("Runtime.evaluate",

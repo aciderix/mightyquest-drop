@@ -346,6 +346,17 @@ in that blank context — but V8 itself works, so we drive it from Python.
 `cdp/agent.py` (deps: websocket-client, requests):
 - **Step 1 — stable session:** hit `/json` exactly once, keep the WebSocket open
   for the whole process (the old debug HTTP server wedges after heavy use).
+  - **Operational rule (measured):** Chromium-28's DevTools HTTP endpoint is good
+    for **one WebSocket session per client boot**. After a session closes (even
+    cleanly), a second `/json` *hangs*. So: **one client boot = one agent run**;
+    relaunch the client for each fresh session. Never poll `/json` to wait for
+    boot — poll `/json/version` (separate, light) instead.
+  - **Pick the live renderer without a second `/json`:** CEF exposes several blank
+    `page` targets; only one answers `Runtime.evaluate`. The agent health-checks
+    each over its *own* WebSocket (short timeout) and keeps the first responsive
+    one. It does **not** `Runtime.enable` (no console/event flood to clog the recv
+    loop), and every `cmd()` has a wall-clock deadline so a dead renderer fails
+    fast instead of wedging the whole session.
 - **Step 2 — mock DOM:** inject the real `<body>` markup so the framework finds
   `#main-lobby-panel` &c. **This makes all scripts load: 211 ok, 0 fail** (the 4
   earlier failures were missing-DOM).
