@@ -40,6 +40,9 @@ Ce qui **n'est pas** « parfait » :
   prix shop (ShopSettings). XP déjà sourcé (XpPerLevel).
 - **Stats d'équipement réelles** : équiper recalcule `HeroStatModifier` = somme des
   propriétés magiques des objets équipés.
+- **Validation d'équipement** : `can_equip` vérifie la compatibilité slot↔catégorie
+  (HEROITEMTYPES) et le prérequis de niveau (LevelMin) ; un objet incompatible/
+  sous-niveau est refusé sans rien muter.
 - **Anti-triche loot** : le serveur calcule le butin lui-même (ne fait jamais
   confiance aux montants client) → intrinsèquement plafonné.
 - **Services « vivants »** : shop (SKUs réels), classement (trophées), journal de
@@ -58,9 +61,9 @@ python3 gameplay_catalog.py          # catalogue: 2538 entrées, 0 erreur
 python3 command_notifications.py --table   # 43 stateful, 10 no-op, 0 unknown / 53
 # serveur + test complet:
 python3 stub_server.py --host 127.0.0.1 --port 443 --tls &
-python3 e2e/full_game_test.py        # 53/53 checks (réseau, TLS)
+python3 e2e/full_game_test.py        # 54/54 checks (réseau, TLS)
 ```
-État au dernier run : catalogue 2538/2538, commandes 0 unknown, jeu **53/53 verts**.
+État au dernier run : catalogue 2538/2538, commandes 0 unknown, jeu **54/54 verts**.
 
 Vérif côté client live (CEF via CDP, nécessite le client lancé, cf. LIVE_CLIENT.md) :
 ```bash
