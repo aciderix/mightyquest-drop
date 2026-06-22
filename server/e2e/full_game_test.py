@@ -179,6 +179,23 @@ def main():
     call("Guild", "LeaveGuild", {}); chk("guilde quittee", not acc()["Guild"].get("DisplayName"))
     chk("news -> NewsResult", "Result" in call("News", "GetNews", {}))
 
+    print("19. Economie reelle + services vivants (catalogue)")
+    skus = call("Shop", "GetShop", who="player")["Result"]["Skus"]
+    chk("shop: SKUs catalogue reels", len(skus) > 0)
+    # PvP (section 12) a deja eu lieu cote 'player' contre 'rival': journal + trophees
+    call("Attack", "EndAttack", {"Victory": True}, who="player")  # cloture eventuelle
+    dl = call("BattleLog", "GetDefendLog", who="rival")["Result"]["DefendLogEntries"]
+    chk("journal de defense du rival enregistre (PvP)", len(dl) >= 1)
+    lb = call("Leaderboard", "GetLeaderboard", who="player")["Result"]["Entries"]
+    chk("classement: au moins un score > 0 (trophees PvP)", any(e["Score"] > 0 for e in lb))
+    # drop reel: gagner et verifier Quality + SellPrice catalogue
+    call("Attack", "StartAttack", {"CastleId": 21}, who="player")  # PVE niveau 5
+    call("Attack", "EndAttack", {"Victory": True}, who="player")
+    drop = acc("player")["Inventory"]["HeroItems"][-1]
+    chk("drop: Quality catalogue", drop.get("Quality") in
+        ("Basic", "Magic", "Exceptional", "Legendary", "Epic"))
+    chk("drop: SellPrice catalogue > 0", drop.get("SellPrice", 0) > 0)
+
     ok = sum(1 for _, c in CHECKS if c); tot = len(CHECKS)
     print(f"\n=== {ok}/{tot} checks OK ===")
     print("TOUT VERT" if ok == tot else "DES CHECKS ONT ECHOUE")
