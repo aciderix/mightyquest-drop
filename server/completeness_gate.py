@@ -106,17 +106,27 @@ class Gate:
         except OSError:
             pass
 
-    def resolve_enum(self, fname, value):
+    def resolve_enum(self, fname, value, contract=None):
         """Resolve an enum-name string to (integer, confidence).
-        confidence: 'authoritative' (client JS), 'confirmed' (binary-verified),
-        'heuristic' (globally-unique member guess), or (None, None) if unknown."""
+        confidence: 'authoritative' (client JS), 'confirmed' (binary-verified,
+        dual-tool), 'heuristic' (globally-unique member guess), or (None, None).
+
+        Resolution order is safest-first. `confirmed_enums.json` entries may be
+        keyed by the SCOPED name 'Contract.Field' (preferred — no collisions) or
+        by a bare 'Field'. The scoped form lets us safely confirm generically
+        named fields (e.g. 'Type') for one contract without affecting others."""
         if not isinstance(value, str):
             return None, None
         # 1) client JS enum models — authoritative
         en = self._enum_by_name.get(fname.lower())
         if en and value in self.enum_int[en]:
             return self.enum_int[en][value], "authoritative"
-        # 2) binary-confirmed server-only enums, matched by field name
+        # 2a) binary-confirmed, SCOPED to this exact Contract.Field (collision-free)
+        if contract:
+            conf = self.confirmed.get(f"{contract}.{fname}")
+            if conf and value in conf:
+                return conf[value], "confirmed"
+        # 2b) binary-confirmed by bare field name (only for fields safe globally)
         conf = self.confirmed.get(fname)
         if conf and value in conf:
             return conf[value], "confirmed"
@@ -147,7 +157,7 @@ class Gate:
                 val = partial[fname]
                 # auto-convert an enum NAME to its integer (the silent-default fix)
                 if ftype in _NUM_INT and isinstance(val, str):
-                    iv, conf = self.resolve_enum(fname, val)
+                    iv, conf = self.resolve_enum(fname, val, name)
                     if iv is not None:
                         if conf != "authoritative" and uncertain is not None:
                             uncertain.append(f"{conf.upper()} {name}.{fname}={val!r}->{iv}")
