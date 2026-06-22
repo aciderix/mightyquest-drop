@@ -142,10 +142,11 @@ def main():
     W = lambda: acc()["Wallet"]["InGameCoin"]
     N = lambda: len(acc()["Inventory"]["HeroItems"])
 
-    print("13. Mines (economie passive)")
-    g = W(); cmd("HarvestMineBuildingCommand"); chk("mine: or credite (+200)", W() == g + 200)
+    print("13. Mines (economie passive, capacite catalogue)")
+    g = W(); cmd("HarvestMineBuildingCommand"); cap = W() - g
+    chk("mine: or credite (capacite catalogue > 0)", cap > 0)
     cmd("RestoreMinesBuildingCommand"); g = W(); cmd("HarvestMineBuildingCommand")
-    chk("mine: re-recolte apres restore", W() == g + 200)
+    chk("mine: re-recolte = meme capacite apres restore", W() == g + cap)
 
     print("14. Forge / crafting")
     g, n = W(), N(); cmd("ForgeCraftCommand", ClientPrice=100, SkuCode=55)

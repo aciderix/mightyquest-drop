@@ -160,6 +160,35 @@ def sku_price(code, default=0):
            int((s or {}).get("Price", {}).get("CurrencyType", 2))
 
 
+# ── buildings (CastleHeart construction cap, mine production) — real per rank ─
+_BUILDINGS = {CAT.name("Buildings", i): _g("Buildings", i) for i in CAT.ids("Buildings")}
+
+
+def _ranks(name):
+    b = _BUILDINGS.get(name)
+    if isinstance(b, list) and b and isinstance(b[0], dict):
+        return b[0].get("Ranks", [])
+    if isinstance(b, dict):
+        return b.get("Ranks", [])
+    return []
+
+
+def castleheart_max(rank):
+    """Real MaxConstructionPoints for a CastleHeart rank (rank 1 -> Ranks[0])."""
+    r = _ranks("CastleHeart")
+    if not r:
+        return 20
+    return r[max(0, min(rank - 1, len(r) - 1))].get("MaxConstructionPoints", 20)
+
+
+def mine_capacity(mine, rank):
+    """Real accumulated capacity for a mine rank (GoldMine/LifeForceMine/...)."""
+    r = _ranks(mine)
+    if not r:
+        return 200
+    return r[max(0, min(rank - 1, len(r) - 1))].get("Capacity", 200)
+
+
 # ── reward type roll (UNIVERSALDROPSETTINGS) ────────────────────────────────
 def roll_reward_type(rng=random):
     table = _UNIVERSAL.get("RewardTypeTable", {"InventoryItem": 1})

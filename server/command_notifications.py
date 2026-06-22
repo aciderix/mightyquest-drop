@@ -179,7 +179,9 @@ class CommandBus:
     def _castle(acc):
         return acc.setdefault("castle", {
             "Level": 1, "CastleHeartRank": 1, "creatures": [], "traps": [], "rooms": [],
-            "construction_used": 0, "construction_max": 1000, "next_index": 1})
+            "construction_used": 0,
+            "construction_max": ECO.castleheart_max(1),   # real CastleHeart rank-1 cap
+            "next_index": 1})
 
     def build_info(self, acc):
         """A schema-complete BuildInfo reflecting the player's real castle state."""
@@ -284,7 +286,7 @@ class CommandBus:
         if name in ("BuildCommand", "UpgradeBuildingCommand"):
             c = self._castle(acc)
             c["CastleHeartRank"] += 1
-            c["construction_max"] += 500       # higher rank -> bigger build cap
+            c["construction_max"] = ECO.castleheart_max(c["CastleHeartRank"])  # real per-rank cap
             return [self.build("BuildingUpgradeStartedNotification", idx),
                     self.build("BuildInfoUpdatedNotification", idx + 1, BuildInfo=self.build_info(acc))]
 
@@ -386,20 +388,22 @@ class CommandBus:
 
         # ---- mines (passive economy) -----------------------------------------
         if name == "HarvestMineBuildingCommand":
-            mines = acc.setdefault("mines", {"produced": 200, "rank": 1})
-            amount = mines.get("produced", 200); mines["produced"] = 0
+            mines = acc.setdefault("mines", {"produced": ECO.mine_capacity("GoldMine", 1), "rank": 1})
+            amount = mines.get("produced", 0); mines["produced"] = 0
             w["InGameCoin"] += amount
             return [self.build("MineProductionCompletedNotification", idx),
                     self.build("WalletUpdatedNotification", idx + 1, NotificationType=24,
                                Amounts=[{"Amount": amount, "CurrencyType": 2}])]
 
         if name == "RestoreMinesBuildingCommand":
-            acc.setdefault("mines", {"rank": 1})["produced"] = 200
+            m = acc.setdefault("mines", {"rank": 1})
+            m["produced"] = ECO.mine_capacity("GoldMine", m.get("rank", 1))  # real capacity
             return [self.build("MineEnabledNotification", idx)]
 
         if name == "UpgradeProductionMineBuildingCommand":
-            m = acc.setdefault("mines", {"produced": 200, "rank": 1})
+            m = acc.setdefault("mines", {"produced": 0, "rank": 1})
             m["rank"] = m.get("rank", 1) + 1
+            m["produced"] = ECO.mine_capacity("GoldMine", m["rank"])
             return [self.build("BuildingUpgradeStartedNotification", idx)]
 
         # ---- inbox -----------------------------------------------------------
