@@ -137,6 +137,51 @@ def hero_equipped_stats(hero):
     return total
 
 
+# ── trophies (matchmaking difficulty -> crown gain from TrophyGainBuckets) ──
+_MM = _g("GeneralSettings", "MATCHMAKINGSETTINGS").get("MatchmakingTable", [])
+_TROPHY_BUCKETS = _g("GeneralSettings", "ATTACKADVISORSETTINGS").get("TrophyGainBuckets", [])
+
+
+def _mm_row(level):
+    for r in _MM:
+        if r.get("AttackerLevel") == level:
+            return r
+    return _MM[min(len(_MM) - 1, max(0, level - 1))] if _MM else {}
+
+
+def castle_rating(rooms):
+    """Defense rating ~= sum of the castle's creatures' construction points (strength)."""
+    total = 0
+    for room in (rooms or []):
+        for cr in (room.get("Creatures") or []):
+            total += creature_cp(cr.get("SpecContainerId"))
+    return total
+
+
+def difficulty(attacker_level, defender_rating):
+    r = _mm_row(attacker_level)
+    if defender_rating < r.get("MediumThreshold", 7):
+        return "Easy"
+    if defender_rating < r.get("HardThreshold", 12):
+        return "Medium"
+    return "Hard"
+
+
+def _bucket_mid(i):
+    b = _TROPHY_BUCKETS[max(0, min(i, len(_TROPHY_BUCKETS) - 1))] if _TROPHY_BUCKETS else {}
+    lo = b.get("MinCrownGain", b.get("MaxCrownGain", 10))
+    hi = b.get("MaxCrownGain", lo)
+    return round((lo + hi) / 2)
+
+
+def trophy_gain(attacker_level, defender_rating):
+    """Crowns won, from TrophyGainBuckets, by matchmaking difficulty
+    (Easy/Medium/Hard -> low/main/high bucket)."""
+    diff = difficulty(attacker_level, defender_rating)
+    return {"Easy": _bucket_mid(1), "Medium": _bucket_mid(2),
+            "Hard": _bucket_mid(len(_TROPHY_BUCKETS) - 1)}.get(diff, _bucket_mid(2))
+
+
 # ── shop (real SKUs from ShopSettings) ──────────────────────────────────────
 try:
     _shop_names = CAT.names("ShopSettings")

@@ -405,9 +405,13 @@ def ep_end_attack(req, acc):
             entry["AttackerAccountSummary"] = contract("AccountSummary",
                 AccountId=acc["AccountId"], AccountDisplayName=acc.get("DisplayName") or "Player", Level=1)
             rival.setdefault("defend_log", []).insert(0, entry)
-            acc["trophy"] = acc.get("trophy", 0) + 10        # winner gains trophies
-            rival["trophy"] = max(0, rival.get("trophy", 0) - 5)
             pvp_rooms = [{"Creatures": (rival.get("castle") or {}).get("creatures", [])}]
+            # real trophy gain: matchmaking difficulty -> TrophyGainBuckets
+            atk_level = (((acc.get("heroes") or [{}])[0]) or {}).get("Level", 1)
+            d_rating = ECO.castle_rating(pvp_rooms)
+            gain = ECO.trophy_gain(atk_level, d_rating)
+            acc["trophy"] = acc.get("trophy", 0) + gain
+            rival["trophy"] = max(0, rival.get("trophy", 0) - max(1, gain // 3))
     if acc:
         acc["current_pvp"] = None
 
