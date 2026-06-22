@@ -49,9 +49,10 @@ Ce qui **n'est pas** « parfait » :
   défense (PvP enregistré). Reste lecture-seule/exemple : messaging, profil détaillé,
   replay (peu critiques).
 
-Autrement dit : **structurellement complet, économie/stats sourcées catalogue et
-vérifiées, services principaux vivants.** Restent : la sim 3D (hôte GPU) et quelques
-barèmes faute de mapping créature.
+Autrement dit : **structurellement complet, économie/stats 100% sourcées catalogue
+et vérifiées, services principaux vivants, équipement validé.** Restent : la sim 3D
+(hôte GPU), les services temps-réel non-catalogue (chat/replay/événements live), et
+2 dérivations sans source catalogue (force-vitale par kill, perte de trophées).
 
 ## Vérification (commandes reproductibles)
 
