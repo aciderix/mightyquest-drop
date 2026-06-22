@@ -152,6 +152,8 @@ def ep_account_information(req, acc):
                   CompletedAssignments=len(acc.get("completed_assignments", [])),
                   SelectedHeroId=acc.get("selected_hero", 0))
     ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
+    if acc.get("castle"):                        # reflect the player's built castle
+        ai["BuildInfo"] = BUS.build_info(acc)
     return ai
 
 

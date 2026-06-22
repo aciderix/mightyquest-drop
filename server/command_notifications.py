@@ -153,6 +153,27 @@ class CommandBus:
                 return
         slots.append({"SlotIndex": index, key: value})
 
+    # ---- the player's own castle (construction) -------------------------------
+    @staticmethod
+    def _castle(acc):
+        return acc.setdefault("castle", {
+            "Level": 1, "CastleHeartRank": 1, "creatures": [], "traps": [], "rooms": [],
+            "construction_used": 0, "construction_max": 1000, "next_index": 1})
+
+    def build_info(self, acc):
+        """A schema-complete BuildInfo reflecting the player's real castle state."""
+        c = self._castle(acc)
+        bi = self.gate.complete("BuildInfo", {
+            "Level": c["Level"], "CastleHeartRank": c["CastleHeartRank"],
+            "CreatureNextIndex": c["next_index"], "WorkersAvailable": c.get("workers", 2)})
+        bi["CreatureArchetypes"] = c["creatures"]
+        bi["TrapArchetypes"] = c["traps"]
+        bi["InventoryRooms"] = c["rooms"]
+        bi["CastleStats"] = self.gate.complete("CastleStats", {
+            "MaxConstructionPoints": c["construction_max"],
+            "TotalConstructionPoints": c["construction_used"]})
+        return bi
+
     def _apply(self, name, cmd, acc, idx):
         """Mutate `acc` for a known command and return real notifications, or None
         if this command has no stateful handler (caller falls back to the shape)."""
@@ -214,6 +235,31 @@ class CommandBus:
             if aid is not None and aid not in done:
                 done.append(aid)
             return [self.build("AssignmentCompletedNotification", idx)]
+
+        # ---- castle construction: place / remove creatures on the player castle
+        if name == "AddCastleCreatureCommand":
+            c = self._castle(acc)
+            cidx = c["next_index"]; c["next_index"] += 1
+            c["creatures"].append({
+                "Id": cidx, "SpecContainerId": cmd.get("SkuCode"),
+                "AggroPropagationOffsetX": cmd.get("AggroPropagationOffsetX", 0),
+                "AggroPropagationOffsetZ": cmd.get("AggroPropagationOffsetZ", 0),
+                "TotemCastleBuildableId": cmd.get("TotemCastleBuildableId", 0)})
+            c["construction_used"] = min(c["construction_max"], c["construction_used"] + 10)
+            return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
+
+        if name in ("RemoveCastleRoomCommand", "UpdateCastleCreatureCommand"):
+            c = self._castle(acc)
+            if name == "RemoveCastleRoomCommand" and c["creatures"]:
+                c["creatures"].pop(); c["construction_used"] = max(0, c["construction_used"] - 10)
+            return [self.build("BuildInfoUpdatedNotification", idx, BuildInfo=self.build_info(acc))]
+
+        if name in ("BuildCommand", "UpgradeBuildingCommand"):
+            c = self._castle(acc)
+            c["CastleHeartRank"] += 1
+            c["construction_max"] += 500       # higher rank -> bigger build cap
+            return [self.build("BuildingUpgradeStartedNotification", idx),
+                    self.build("BuildInfoUpdatedNotification", idx + 1, BuildInfo=self.build_info(acc))]
 
         return None
 
