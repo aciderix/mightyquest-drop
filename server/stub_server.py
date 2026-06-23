@@ -19,6 +19,7 @@ from completeness_gate import Gate
 from command_notifications import CommandBus
 from gameplay_catalog import catalog
 import catalog_economy as ECO
+import debuglog
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -625,13 +626,40 @@ class Handler(BaseHTTPRequestHandler):
             acc = STATE.account(self.token())
             if acc is None:
                 acc, _ = STATE.login(self.headers.get("X-Steam-Ticket", "anonymous"))
-            h = ENDPOINTS.get(method)
-            if h:
-                return self._send(envelope(h(self, acc)))
-            social = ep_social(service, method, self, acc)   # stateful level-3 services
-            if social is not None:
-                return self._send(envelope(social))
-            return self._send(envelope(self._guess(method)))
+            flags = []
+            try:
+                h = ENDPOINTS.get(method)
+                if h:
+                    source = "handler:" + getattr(h, "__name__", "endpoint")
+                    resp = envelope(h(self, acc))
+                else:
+                    social = ep_social(service, method, self, acc)   # stateful level-3 services
+                    if social is not None:
+                        source = "ep_social"
+                        resp = envelope(social)
+                    else:
+                        # no real handler: schema-complete but STATIC example. If something
+                        # looks empty/inert in-game, this flag is the prime suspect.
+                        source = "fallback_example"
+                        flags.append("fallback_example")
+                        resp = envelope(self._guess(method))
+            except Exception as e:
+                import traceback
+                debuglog.trace({"kind": "error", "service": service, "method": method,
+                                "error": str(e), "traceback": traceback.format_exc()[-2500:]})
+                return self._send({}, 500)
+            audit = getattr(BUS, "last_audit", None) if method == "SendCommands" else None
+            for a in (audit or []):
+                if a.get("rejected"):
+                    flags.append("command_rejected:" + a["command"])
+                elif a.get("handled") in ("unknown", "heuristic"):
+                    flags.append("command_" + a["handled"] + ":" + a["command"])
+            debuglog.trace({"kind": "rpc", "service": service, "method": method,
+                            "source": source, "account": (acc or {}).get("AccountId"),
+                            "req": self.json if isinstance(self.json, dict) else None,
+                            "resp_keys": list(resp.keys()) if isinstance(resp, dict) else None,
+                            "commands": audit, "flags": flags})
+            return self._send(resp)
         low = path.lower()
         if "login" in low or "account" in low and "creation" in low:
             acc, token = STATE.login(self.json.get("steamticket", "anonymous"))
@@ -665,7 +693,11 @@ def main():
                     help="serve HTTPS using the MQEL CA/server cert (for the game's "
                          "curl, which needs TLS on :443 to gs.themightyquest.com)")
     ap.add_argument("--cert"); ap.add_argument("--key")
+    ap.add_argument("--debug", action="store_true",
+                    help="echo a one-line trace summary per request to stdout")
     a = ap.parse_args()
+    if a.debug:
+        os.environ["MQ_DEBUG"] = "1"; debuglog.DEBUG = True
     srv = ThreadingHTTPServer((a.host, a.port), Handler)
     scheme = "http"
     if a.tls:
@@ -683,6 +715,7 @@ def main():
         scheme = "https"
     print(f"[+] MQEL stub on {scheme}://{a.host}:{a.port}  ({len(EXAMPLES)} contract examples)")
     print(f"[+] stateful routing /<Service>Service.hqs/<Method>; state {STATE_PATH}; log {LOG_PATH}")
+    print("[+] " + debuglog.banner())
     try: srv.serve_forever()
     except KeyboardInterrupt: print("\n[+] stopped")
 

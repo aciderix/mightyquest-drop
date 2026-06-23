@@ -139,6 +139,7 @@ class CommandBus:
     def __init__(self, gate=None):
         self.gate = gate or Gate()
         self.notif_types = {k for k in self.gate.schemas if k.endswith("Notification")}
+        self.last_audit = []
 
     # ---- resolve a command's notifications, with a name-stem heuristic fallback
     def notifications_for(self, command_name):
@@ -478,6 +479,7 @@ class CommandBus:
     def handle(self, request_json, acc=None, *, state=None, warn=None):
         commands = (request_json or {}).get("commands", []) or []
         notifications, idx, unknown = [], 0, []
+        self.last_audit = []          # per-command trace for debuglog/diagnose
         for cmd in commands:
             name = self._command_name(cmd)
             if not name:
@@ -486,6 +488,9 @@ class CommandBus:
             applied = self._apply(name, cmd, acc, idx) if acc is not None else None
             if applied is not None:
                 notifications.extend(applied); idx += len(applied)
+                self.last_audit.append({"command": name, "handled": "stateful",
+                                        "notifs": len(applied),
+                                        "rejected": len(applied) == 0})
                 continue
             # shape-only path (no stateful handler yet): emit the curated shapes
             notifs, conf = self.notifications_for(name)
@@ -493,6 +498,8 @@ class CommandBus:
                 unknown.append(name)
             for nname in notifs:
                 notifications.append(self.build(nname, idx)); idx += 1
+            self.last_audit.append({"command": name, "handled": conf,
+                                    "notifs": len(notifs)})
         if acc is not None and state is not None:
             state.save()
         if warn is not None and unknown:

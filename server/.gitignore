@@ -1,9 +1,6 @@
-requests.log
+trace.jsonl
 state.json
-state.json.tmp
-__pycache__/
-*.pyc
-.mqel_certs/
-mqel_requests.log
-MightyQuest*.exe
+requests.log
 uncertain.log
+*.pyc
+__pycache__/
