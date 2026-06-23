@@ -143,25 +143,29 @@ STATE = State(STATE_PATH)
 
 # ---- game endpoints (/<Service>Service.hqs/<Method>) ------------------------
 def ep_account_information(req, acc):
-    # Privileges must be 9 for a new account or hero-selection never shows.
     acc = acc or {}
+    has_hero = bool(acc.get("heroes"))
+    # Privileges: 9 = new player (no hero yet), 401 = active player (has hero+castle)
+    privs = 401 if has_hero else 9
     wallet = acc.get("wallet", {"InGameCoin": 1000, "LifeForce": 0, "PremiumCash": 0,
-                                "InGameCoinStorageCapacity": 100000,
-                                "LifeForceStorageCapacity": 100000})
+                                "InGameCoinStorageCapacity": 5000,
+                                "LifeForceStorageCapacity": 5000})
     inv = contract("AccountInventory")
-    inv["HeroItems"] = acc.get("items", [])      # reflect looted items
-    inv["InventoryTabCount"] = DEFAULT_ACCOUNT.get("Inventory", {}).get("InventoryTabCount", 2)
+    inv["HeroItems"] = acc.get("items", [])
+    inv["InventoryTabCount"] = 8          # real value from captured session
+    inv["InventorySlotByTabCount"] = 21
     ai = contract("AccountInformation", AccountId=acc.get("AccountId", 1),
-                  DisplayName=acc.get("DisplayName", ""), Privileges=401,
-                  # real new-player state from AccountTemplates/DEFAULTACCOUNT
+                  DisplayName=acc.get("DisplayName", ""), Privileges=privs,
                   AvatarId=acc.get("AvatarId", DEFAULT_ACCOUNT.get("AvatarId", 10)),
                   CountryCode=DEFAULT_ACCOUNT.get("CountryCode", "CA"),
                   ProfanityFiltering=DEFAULT_ACCOUNT.get("ProfanityFiltering", True),
                   CastleRenovationLevel=DEFAULT_ACCOUNT.get("CastleRenovationLevel",
                                                             "RenovationLevel0"),
                   Wallet=wallet, Inventory=inv,
-                  CompletedAssignments=len(acc.get("completed_assignments", [])),
-                  SelectedHeroId=acc.get("selected_hero", 0))
+                  CompletedAssignments=acc.get("completed_assignments", []),
+                  SelectedHeroId=acc.get("selected_hero", 0),
+                  LeagueId=1, SubLeagueId=1,
+                  TargetedAttackAvailableCount=5, GamerScore=0)
     ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
     if acc.get("castle"):                        # reflect the player's built castle
         ai["BuildInfo"] = BUS.build_info(acc)
@@ -170,18 +174,30 @@ def ep_account_information(req, acc):
     ai["GuildInvitations"] = acc.get("guild_invitations", [])
     ai["Inbox"] = acc.get("inbox", [])
     ai["Guild"] = acc.get("guild") or {}        # cleared when the player has no guild
-    # ClientSettings: MaintenanceUrl must be "" (not "string") or the game shows
-    # the maintenance screen. Zero out all URL placeholders the gate fills with
-    # the "string" sentinel; disable XMPP (no real chat server).
-    cs = ai.setdefault("ClientSettings", {})
-    for f in ("MaintenanceUrl", "FriendReferalUrl", "PrimaryShopUrl",
-              "PrimaryShopBlingsUrl", "PrimaryShopNonBlingsUrl",
-              "PrimaryShopPremiumPurchaseUrl", "PrimaryShopProductPageUrl",
-              "WelcomePageUrl", "WelcomePageSmallUrl"):
-        cs[f] = ""
-    cs["ShowWelcomePage"] = False
-    cs["XmppInfo"] = {"Enabled": False, "Server": "", "Domain": "",
-                      "Username": "", "Password": "", "ConferenceServer": "", "Port": 0}
+    # ClientSettings: all URL fields empty (non-empty MaintenanceUrl triggers maintenance)
+    ai["ClientSettings"] = {
+        "MaintenanceUrl": "", "FriendReferalUrl": "", "PrimaryShopUrl": "",
+        "PrimaryShopBlingsUrl": "", "PrimaryShopNonBlingsUrl": "",
+        "PrimaryShopPremiumPurchaseUrl": "", "PrimaryShopProductPageUrl": "",
+        "WelcomePageUrl": "", "WelcomePageSmallUrl": "", "ShowWelcomePage": False,
+        "EnableDebugPanelController": False, "AccountCacheValidation": False,
+        "XmppInfo": {"Enabled": False, "Server": "chat.themightyquest.com",
+                     "Domain": "mqel-live", "ConferenceServer": "conference.mqel-live",
+                     "Username": "0", "Password": "", "Port": 80},
+        "ClientTrackingSettings": {
+            "ClientIdleInterval": 60, "GameStateTrackingInterval": 300,
+            "GlanceViewDurationTriggerInSeconds": 5,
+            "EnabledNavigationTrackings": ["game://forge/open"],
+            "IdleTimeThresholds": {"Home": 30, "None": 30, "Build": 30, "Attack": 30,
+                                   "Replay": 600, "Patcher": 30, "StartMenu": 30,
+                                   "CastleVisit": 30, "UplayLinking": 30,
+                                   "AccountCreation": 30, "AttackSelection": 30,
+                                   "StarterCastleSelection": 30}}}
+    # DefendLog.OfflinePeriod required (doc §6.1)
+    ai["DefendLog"] = {"OfflinePeriod": {"EndDateTime": "2026-12-31T23:59:59Z"},
+                       "DefendLogEntries": []}
+    # UnlockedEmotes from DEFAULTACCOUNT catalog
+    ai["UnlockedEmotes"] = DEFAULT_ACCOUNT.get("Inventory", {}).get("UnlockedEmotes", [1, 2, 3])
     return ai
 
 
