@@ -173,6 +173,9 @@ def ep_account_information(req, acc):
     ai["Friends"] = acc.get("friends", [])
     ai["GuildInvitations"] = acc.get("guild_invitations", [])
     ai["Inbox"] = acc.get("inbox", [])
+    # Objectives: the gate fills a sample that has all fields unknown to AccountObjective
+    # (generates warnings for every field + triggers ErrorPanel). Send [] for new players.
+    ai["Objectives"] = []
     ai["Guild"] = acc.get("guild") or {}        # cleared when the player has no guild
     # ClientSettings: all URL fields empty (non-empty MaintenanceUrl triggers maintenance)
     ai["ClientSettings"] = {
