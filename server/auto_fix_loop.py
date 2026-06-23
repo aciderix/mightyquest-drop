@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-auto_fix_loop.py — boucle autonome : lance le jeu, surveille via CDP,
-lit le MQLog, corrige array_fields.json, recommence jusqu'à succès.
+auto_fix_loop.py - boucle autonome : lance le jeu, surveille via CDP,
+lit le MQLog, corrige array_fields.json, recommence jusqu'a succes.
 
 Usage: python auto_fix_loop.py [--max-iterations N]
 """
@@ -24,7 +24,7 @@ try:
     HAS_WS = True
 except ImportError:
     HAS_WS = False
-    print("[WARN] websocket-client not installed — DOM monitoring disabled")
+    print("[WARN] websocket-client not installed - DOM monitoring disabled")
     print("       pip install websocket-client")
 
 
@@ -57,11 +57,11 @@ def start_server():
             urllib.request.urlopen(
                 urllib.request.Request("https://127.0.0.1:443/AccountService.hqs/GetAccountInformation",
                     data=b"{}", method="POST"), context=CTX, timeout=3)
-            print("[+] Serveur prêt")
+            print("[+] Serveur pret")
             return proc
         except:
             time.sleep(1)
-    raise RuntimeError("Serveur ne répond pas")
+    raise RuntimeError("Serveur ne repond pas")
 
 
 def get_session():
@@ -94,7 +94,7 @@ def launch_game(user_id):
            "-environmentName", "mqel-live", "-branchName", "mqel",
            "--remote-debugging-port=9222", "--remote-allow-origins=*"]
     proc = subprocess.Popen(cmd, cwd=GAME_DIR, env=env)
-    print(f"[+] Jeu lancé PID {proc.pid}")
+    print(f"[+] Jeu lance PID {proc.pid}")
 
     # SSL memory patch in background
     def _patch():
@@ -111,7 +111,7 @@ def wait_for_cdp(timeout=60):
     while time.time() < deadline:
         try:
             resp = urllib.request.urlopen("http://localhost:9222/json/version", timeout=2)
-            print("[+] CDP prêt")
+            print("[+] CDP pret")
             return True
         except:
             time.sleep(2)
@@ -154,6 +154,31 @@ def read_mqlog_errors():
     return None
 
 
+def read_mqlog_shutdown():
+    """Return the shutdown reason from MQLog, or None if still running."""
+    if not os.path.exists(MQLOG):
+        return None
+    lines = open(MQLOG, encoding="utf-8", errors="replace").readlines()
+    # Read all lines to get all shutdown reasons
+    reasons = []
+    for line in lines:
+        m = re.search(r"Application shutdown.*?Reason\s*:\s*(.+)", line)
+        if m:
+            reasons.append(m.group(1).strip())
+    return reasons[-1] if reasons else None
+
+
+def read_mqlog_last_error():
+    """Return last meaningful error/warning from MQLog."""
+    if not os.path.exists(MQLOG):
+        return None
+    lines = list(open(MQLOG, encoding="utf-8", errors="replace"))
+    for line in reversed(lines[-100:]):
+        if any(t in line for t in ["ERROR", "FAIL", "failed", "error"]) and "WARNING" not in line and "IsVisible" not in line:
+            return line.strip()
+    return None
+
+
 def get_field_at_pos(pos):
     """Find which field is at byte position `pos` in the AccountInformation response."""
     r = urllib.request.Request(
@@ -176,11 +201,11 @@ def fix_array_fields(field_name, expected_char):
     changed = False
     if expected_char == "[" and field_name not in fields:
         fields.append(field_name)
-        print(f"  [FIX] {field_name} → [] (ajoute a array_fields)")
+        print(f"  [FIX] {field_name} -> [] (ajoute a array_fields)")
         changed = True
     elif expected_char == "{" and field_name in fields:
         fields = [f for f in fields if f != field_name]
-        print(f"  [FIX] {field_name} → {{}} (retire de array_fields)")
+        print(f"  [FIX] {field_name} -> {{}} (retire de array_fields)")
         changed = True
     if changed:
         json.dump(sorted(fields), open(ARRAY_FIELDS_PATH, "w"), indent=1)
@@ -195,7 +220,7 @@ def main():
     args = ap.parse_args()
 
     print("=" * 60)
-    print("MQEL auto-fix loop — détecte et corrige les erreurs JSON")
+    print("MQEL auto-fix loop - detecte et corrige les erreurs JSON")
     print("=" * 60)
 
     for iteration in range(1, args.max_iterations + 1):
@@ -204,7 +229,7 @@ def main():
         print(f"{'='*50}")
 
         # 1. Start server
-        print("[1] Démarrage du serveur...")
+        print("[1] Demarrage du serveur...")
         srv_proc = start_server()
 
         # 2. Auth + launch game
@@ -226,22 +251,22 @@ def main():
 
             # Check if game still running
             if game_proc.poll() is not None:
-                print("[!] Jeu terminé")
+                print("[!] Jeu termine")
                 break
 
             # Check DOM for error/success text
             if cdp_ready and HAS_WS:
                 dom = cdp_get_dom_text()
                 if dom:
-                    if any(t in dom.lower() for t in ["network error", "erreur réseau",
+                    if any(t in dom.lower() for t in ["network error", "erreur reseau",
                                                        "serveur en maintenance", "maintenance"]):
-                        print(f"[DOM] Erreur détectée: {dom[:120]}")
+                        print(f"[DOM] Erreur detectee: {dom[:120]}")
                         error_found = True
                         break
                     if any(t in dom for t in ["Choose a display name", "Choisissez",
                                                "Select your hero", "Knight", "Archer",
                                                "Castle Level", "lobby"]):
-                        print(f"[DOM] Succès ! UI chargée: {dom[:120]}")
+                        print(f"[DOM] Succes ! UI chargee: {dom[:120]}")
                         success = True
                         break
 
@@ -249,54 +274,76 @@ def main():
             err = read_mqlog_errors()
             if err:
                 pos, exp = err
-                print(f"[MQLog] JSON ERROR à pos {pos}, Expected '{exp}'")
+                print(f"[MQLog] JSON ERROR a pos {pos}, Expected '{exp}'")
                 error_found = True
                 break
 
         # 5. Read MQLog for error details
         err = read_mqlog_errors()
 
-        # 6. Kill game
-        print("[4] Arrêt du jeu...")
-        game_proc.terminate()
-        kill_game()
-        time.sleep(2)
-
-        # 7. Kill server
-        srv_proc.terminate()
-        kill_server()
-
         if success:
+            # Kill game + server then report
+            game_proc.terminate(); kill_game()
+            srv_proc.terminate(); kill_server()
             print("\n" + "="*50)
-            print("SUCCÈS ! Le jeu charge l'interface correctement.")
+            print("SUCCeS ! Le jeu charge l'interface correctement.")
             print("="*50)
             return 0
 
         if not err:
-            # Check MQLog one more time after game exit
             err = read_mqlog_errors()
 
+        # Analyse the error BEFORE killing the server
+        field_name = None
+        if err:
+            pos, exp_char = err
+            print(f"\n[5] Analyse: pos={pos} expected='{exp_char}'")
+            try:
+                field_name, _ = get_field_at_pos(pos)
+                print(f"  Champ fautif: {field_name}")
+            except Exception as e:
+                print(f"  [!] get_field_at_pos failed: {e}")
+
+        # Now kill game + server
+        print("[4] Arret du jeu...")
+        game_proc.terminate(); kill_game(); time.sleep(2)
+        srv_proc.terminate(); kill_server()
+
         if not err:
-            print("[?] Pas de JSON ERROR dans le MQLog - autre type d'erreur?")
-            print("    Vérifie MQLog et trace.jsonl manuellement.")
+            # Check what actually happened
+            shutdown = read_mqlog_shutdown()
+            last_err = read_mqlog_last_error()
+            print(f"[?] Pas de JSON ERROR.")
+            print(f"    Shutdown reason: {shutdown}")
+            print(f"    Dernier log error: {last_err}")
+            # Check trace for what endpoints were called
+            trace_path = os.path.join(HERE, "trace.jsonl")
+            if os.path.exists(trace_path):
+                lines = open(trace_path).readlines()
+                print(f"    Requetes recues ({len(lines)}):")
+                for l in lines:
+                    try:
+                        j = json.loads(l)
+                        print(f"      #{j.get('seq')} {j.get('method')} flags={j.get('flags')}")
+                    except:
+                        pass
+            if shutdown and "AccountInformation" not in (shutdown or ""):
+                print("[+] AccountInformation OK! Nouveau probleme detecte.")
+                print("    Correction manuelle requise - voir shutdown + trace ci-dessus.")
             return 1
 
-        pos, exp_char = err
-        print(f"\n[5] Analyse: pos={pos} expected='{exp_char}'")
-        field_name, _ = get_field_at_pos(pos)
         if not field_name:
-            print("[!] Impossible de déterminer le champ. Arrêt.")
+            print("[!] Impossible de determiner le champ. Arret.")
             return 1
 
-        print(f"  Champ fautif: {field_name}")
         fixed = fix_array_fields(field_name, exp_char)
         if not fixed:
-            print(f"[!] Aucune correction appliquée pour {field_name}. Arrêt.")
+            print(f"[!] Aucune correction appliquee pour {field_name}. Arret.")
             return 1
 
-        print(f"[6] Correction appliquée — itération suivante")
+        print(f"[6] Correction appliquee - iteration suivante")
 
-    print("\n[!] Max itérations atteint sans succès.")
+    print("\n[!] Max iterations atteint sans succes.")
     return 1
 
 

@@ -173,9 +173,23 @@ def ep_account_information(req, acc):
     ai["Friends"] = acc.get("friends", [])
     ai["GuildInvitations"] = acc.get("guild_invitations", [])
     ai["Inbox"] = acc.get("inbox", [])
-    # Objectives: the gate fills a sample that has all fields unknown to AccountObjective
-    # (generates warnings for every field + triggers ErrorPanel). Send [] for new players.
+    # These gate-filled arrays contain sample objects with TemplateId/Id=0 that the game
+    # tries to look up in its internal data and fails silently -> OnAccountInformationTaskError.
+    # For a new player all these collections should be empty.
     ai["Objectives"] = []
+    ai["ActiveConsumables"] = []
+    ai["Expirables"] = []
+    ai["FriendshipInvitations"] = []
+    ai["GuildInvitations"] = []
+    ai["ShopSkuModifiers"] = []
+    # Also clean up AccountInventory: remove gate-added sample objects
+    inv["CastleRenovationItems"] = {}   # object, not list (schema says object)
+    inv["ForgedItem"] = {}
+    inv["PendingSharedItems"] = {}
+    inv["InventorySlotByTabCount"] = 21  # real value, but as int (game ignores it as warning)
+    # BuildInfo: InventoryRooms should be empty for a new player (no rooms unlocked yet)
+    if not acc.get("castle"):
+        ai.get("BuildInfo", {})["InventoryRooms"] = []
     ai["Guild"] = acc.get("guild") or {}        # cleared when the player has no guild
     # ClientSettings: all URL fields empty (non-empty MaintenanceUrl triggers maintenance)
     ai["ClientSettings"] = {
