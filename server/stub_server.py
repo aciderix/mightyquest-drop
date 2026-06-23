@@ -152,7 +152,7 @@ def ep_account_information(req, acc):
     inv["HeroItems"] = acc.get("items", [])      # reflect looted items
     inv["InventoryTabCount"] = DEFAULT_ACCOUNT.get("Inventory", {}).get("InventoryTabCount", 2)
     ai = contract("AccountInformation", AccountId=acc.get("AccountId", 1),
-                  DisplayName=acc.get("DisplayName", ""), Privileges=9,
+                  DisplayName=acc.get("DisplayName", ""), Privileges=401,
                   # real new-player state from AccountTemplates/DEFAULTACCOUNT
                   AvatarId=acc.get("AvatarId", DEFAULT_ACCOUNT.get("AvatarId", 10)),
                   CountryCode=DEFAULT_ACCOUNT.get("CountryCode", "CA"),
@@ -633,16 +633,49 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(p)))
         self.end_headers(); self.wfile.write(p)
 
+    def _identity(self):
+        """User identity: X-MQEL-User-Id (injected by launcher proxy) >
+        Authorization Bearer token > X-Steam-Ticket > 'anonymous'."""
+        uid = self.headers.get("X-MQEL-User-Id") or self.headers.get("X-Mqel-User-Id")
+        if uid:
+            return uid
+        return self.headers.get("X-Steam-Ticket", "anonymous")
+
     def _handle(self):
         body = self._read(); self._log(body)
         path = self.path.split("?")[0]
+
+        # /auth — launcher calls this before launching the game to get a session token
+        if path in ("/auth", "/functions/v1/auth"):
+            body_j = self.json or {}
+            # validate/refresh existing session
+            existing_token = body_j.get("access_token") or body_j.get("refresh_token")
+            if existing_token:
+                acc = STATE.account(existing_token)
+                if acc:
+                    return self._send({
+                        "access_token": existing_token,
+                        "refresh_token": existing_token + "-r",
+                        "user_id": acc.get("_identity", existing_token)
+                    })
+            # new anonymous session
+            identity = body_j.get("user_id") or os.urandom(8).hex()
+            acc, token = STATE.login(identity)
+            acc["_identity"] = identity
+            STATE.save()
+            return self._send({
+                "access_token": token,
+                "refresh_token": token + "-r",
+                "user_id": identity
+            })
+
         # game RPC: /<Service>Service.hqs/<Method>
         m = re.match(r"/([A-Za-z]+)Service\.hqs/([A-Za-z]+)", path)
         if m:
             service, method = m.group(1), m.group(2)
             acc = STATE.account(self.token())
             if acc is None:
-                acc, _ = STATE.login(self.headers.get("X-Steam-Ticket", "anonymous"))
+                acc, _ = STATE.login(self._identity())
             flags = []
             try:
                 h = ENDPOINTS.get(method)
