@@ -69,7 +69,7 @@ jobs:
           7z a -tzip mqel-server-windows.zip "$B" >/dev/null
           echo "bundle: $(ls -lh mqel-server-windows.zip | awk '{print $5}')"
 
-      - name: Smoke-test the exe (run from the real bundle: catalog+certs adjacent)
+      - name: Smoke-test the exe from the real bundle (catalog and certs adjacent)
         shell: pwsh
         working-directory: server
         run: |
