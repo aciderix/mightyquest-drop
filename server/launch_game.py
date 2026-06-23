@@ -142,7 +142,9 @@ def main():
            "-steamticket",     user_id,
            "-steamid",         numeric_id,
            "-environmentName", "mqel-live",
-           "-branchName",      "mqel"]
+           "-branchName",      "mqel",
+           "--remote-debugging-port=9222",
+           "--remote-allow-origins=*"]
 
     print(f"[+] Lancement de MightyQuest.exe...")
     proc = subprocess.Popen(cmd, cwd=GAME_DIR, env=env)
