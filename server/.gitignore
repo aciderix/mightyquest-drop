@@ -1,7 +1,6 @@
 trace.jsonl
+*.log
 state.json
-requests.log
-uncertain.log
 *.pyc
 __pycache__/
 .mqel_certs/
