@@ -32,8 +32,11 @@ GATE = Gate()            # schema-completeness for every response we emit
 BUS = CommandBus(GATE)   # SendCommands -> correct notifications
 PKG_VERSIONS = json.load(open(os.path.join(NET, "package_versions.json"))) \
     if os.path.exists(os.path.join(NET, "package_versions.json")) else {}
-STATE_PATH = os.path.join(HERE, "state.json")
-LOG_PATH = os.path.join(HERE, "requests.log")
+# writable dir for state/logs: next to the .exe when frozen (HERE is the ephemeral
+# PyInstaller temp dir then), else the source dir.
+DATA_DIR = os.path.dirname(_sys.executable) if getattr(_sys, "frozen", False) else HERE
+STATE_PATH = os.environ.get("MQ_STATE", os.path.join(DATA_DIR, "state.json"))
+LOG_PATH = os.path.join(DATA_DIR, "requests.log")
 
 
 def now():
@@ -53,7 +56,7 @@ def envelope(payload):
     return {"Result": payload}
 
 
-UNCERTAIN_PATH = os.path.join(HERE, "uncertain.log")
+UNCERTAIN_PATH = os.path.join(DATA_DIR, "uncertain.log")
 
 
 def contract(name, **overrides):
