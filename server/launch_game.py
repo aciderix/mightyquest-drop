@@ -4,8 +4,8 @@ MQEL local launcher — même mécanique que l'ancien launcher.py qui fonctionna
 
 Fonctionnement (doc §2-4) :
   1. POST /auth → session (access_token + user_id)
-  2. Déploie ca.pem dans C:\usr\local\ssl\cert.pem  (OpenSSL OPENSSLDIR compilé)
-     + à côté de l'exe (relatif 'ca.pem' pour le binaire patché)
+  2. Deploie ca.pem dans C:/usr/local/ssl/cert.pem  (OpenSSL OPENSSLDIR compile)
+     + a cote de l'exe (relatif 'ca.pem' pour le binaire patche)
   3. Lance MightyQuest.exe (original) avec args:
        -server_url https://gs.themightyquest.com  (le hosts redirige vers 127.0.0.1)
        -token ""  -steamticket <user_id>  -steamid <int64>

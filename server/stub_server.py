@@ -639,8 +639,14 @@ class Handler(BaseHTTPRequestHandler):
     def _log(self, body):
         line = f"{now()} {self.command} {self.path} len={len(body)}"
         print(line)
+        # log key auth headers to help debug session identity
+        auth_headers = {k: v for k, v in self.headers.items()
+                        if any(t in k.lower() for t in ("auth", "steam", "mqel", "token", "user", "connect"))}
         with open(LOG_PATH, "a") as f:
-            f.write(line + ("\n    " + body[:1500].decode("latin1", "replace") if body else "") + "\n")
+            f.write(line + ("\n    " + body[:1500].decode("latin1", "replace") if body else ""))
+            if auth_headers:
+                f.write("\n    HEADERS: " + str(auth_headers))
+            f.write("\n")
 
     def _send(self, obj, code=200):
         p = json.dumps(obj).encode()
