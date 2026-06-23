@@ -688,6 +688,12 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
+    # `mqel_server diagnose [...]` -> run the trace diagnoser (so the exe can do it
+    # without a separate Python install). Everything after "diagnose" is forwarded.
+    if len(_sys.argv) > 1 and _sys.argv[1] == "diagnose":
+        import diagnose as _diag
+        _sys.argv = [_sys.argv[0]] + _sys.argv[2:]
+        return _diag.main()
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8080)

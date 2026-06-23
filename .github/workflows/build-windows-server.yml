@@ -48,7 +48,7 @@ jobs:
             --add-data "../re/catalog/network/gamedata/array_fields.json;re/catalog/network/gamedata" \
             --hidden-import catalog_economy --hidden-import command_notifications \
             --hidden-import gameplay_catalog --hidden-import completeness_gate \
-            --hidden-import debuglog \
+            --hidden-import debuglog --hidden-import diagnose --hidden-import mqel_launcher \
             stub_server.py
 
       - name: Assemble release bundle
@@ -61,7 +61,7 @@ jobs:
           cp -r catalog "$B/catalog"
           cp -r ../re "$B/re"                     # for the Python fallback + reference
           cp .mqel_certs/ca.pem .mqel_certs/server.pem .mqel_certs/server.key "$B/certs/"
-          cp windows/setup.bat windows/run.bat windows/README.md "$B/"
+          cp windows/setup.bat windows/run.bat windows/diagnose.bat windows/README.md "$B/"
           cp diagnose.py stub_server.py debuglog.py catalog_economy.py \
              command_notifications.py gameplay_catalog.py completeness_gate.py "$B/"
           cp ../server/SERVER.md ../server/AI_GUIDE.md "$B/" 2>/dev/null || true
