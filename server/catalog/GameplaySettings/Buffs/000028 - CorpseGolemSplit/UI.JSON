@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"CorpseGolemSplit",
+        "OasisName":2029,
+        "OasisDescription":2030
+    }
+]

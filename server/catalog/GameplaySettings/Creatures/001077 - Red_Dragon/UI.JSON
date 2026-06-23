@@ -1,0 +1,42 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Flameo",
+        "OasisName":13205,
+        "OasisDescription":13204
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Flameo",
+                    "OasisName":7814
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Flameo",
+                    "OasisName":7814
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Bosses\/redDragon1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Bosses\/redDragon1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Bosses:redDragon1",
+        "HeightOffset":4.2
+    }
+]

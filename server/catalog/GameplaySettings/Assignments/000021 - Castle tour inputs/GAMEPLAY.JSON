@@ -1,0 +1,195 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.CastleLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "CastleId":1003
+        },
+        "ExitTrigger":{
+            "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "Buttons":
+            [
+                "BuyCastle",
+                "CastleVisitBack"
+            ]
+        },
+        "ForceCompletionOnExit":true,
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    164
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":64
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    164
+                ],
+                "StartType":"WithPrevious"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Movement":{
+                    "End":{
+                        "$type":"HyperQuest.GameServer.Contracts.SelectionsCameraPositionSpec, HyperQuest.GameServer.Contracts",
+                        "Selections":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                                "SpecContainerType":"Room",
+                                "SpecContainerIds":
+                                [
+                                    7085
+                                ]
+                            }
+                        ],
+                        "Zoom":0.4
+                    },
+                    "Duration":4,
+                    "EaseInOut":1
+                },
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.GameCameraInterpolationCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "GameCameraInterpolation":"MoveTo"
+                    }
+                ],
+                "Duration":4
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"250022",
+                "Text":"CastleTour mouse input: Mouse Pan",
+                "TextOasisId":15508,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15508
+                        }
+                    ]
+                },
+                "Position":"MiddleRight",
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleVisitPanel"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.MouseDragEndedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-96
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"250021",
+                "Text":"CastleTour mouse input: Scroll",
+                "TextOasisId":15507,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15507
+                        }
+                    ]
+                },
+                "Position":"MiddleRight",
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleVisitPanel"
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.MouseScrolledAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-96
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"250023",
+                "Type":"Arrow",
+                "GameButtonId":"CastleVisitBack",
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleVisitPanel"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-96
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Buttons":
+                        [
+                            "CastleVisitBack"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

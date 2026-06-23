@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_005_LineCannon_BasicAttack_2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_Attack"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_24440E6D_AI933>FX_24440E6D_AI933.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "HeightOffset":1.25,
+                                "FrontOffset":1.05
+                            },
+                            "ForcePlayUntilFxFinished":true
+                        },
+                        "PlayUntil":"ActiveEnd"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_024_BladeAssassin_MovingWhirlwind_Ability"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_Attack",
+                "AnimActive":"00_Attack",
+                "AnimRecover":"00_Attack"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_E1E6BC0A>SPECIALEFFECTS_E1E6BC0A.SPECIALFX",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_2A86F654_AI933.MATERIAL"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

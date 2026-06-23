@@ -1,0 +1,49 @@
+-steamticket
+.?AUConnection@ConnectionManager@Bloomberg@@
+.?AUFileConnection@ConnectionManager@Bloomberg@@
+.?AUSocketConnection@ConnectionManager@Bloomberg@@
+ArgoManager
+Argo\ArgoManager.cpp
+Argo\HttpConnectionCurl.cpp
+Argo\HttpSessionCurl.cpp
+Bloomberg::ConnectionManager::FileConnection
+Bloomberg::ConnectionManager::SocketConnection
+BootManager activates Attack game state
+BootManager activates Build game state
+BootManager activates Home game state
+BootManager activates UplayLinking game state
+BootManager activates replay game state
+BootManager::HandleSimulationLoadingCompleted()
+BootManager::StartInitializeControllerTask()
+BootManager::StartSetCurrentHeroTask() exiting, heroId : %d
+BootManager::UpdateActivateGameStateTask()
+BootManager::UpdateConnectionReadyTask()
+BootManager::UpdateConnectionReadyTask() exiting, Network is initialized and user signed-in
+BootManager::UpdateInitializeControllerTask() exiting
+BootManager::UpdateLoadHeroInventorySimulationTask()
+BootManager::UpdateLoadHeroInventorySimulationTask() - m_activateInitialGameState is TRUE
+BootManager::UpdateLoadHeroInventorySimulationTask() - m_waitingHeroInventorySimulation is FALSE, Loading...
+BootManager::UpdateLoadingReadyTask()
+BootManager::UpdateLoadingReadyTask() exiting, all dependend controllers initialized
+CONFIG:>Hyperquest>GameServerConnectionConfig.json
+ConnectionManager::AddDefaultConnection: Connection vector has no memory allocated. Allocating some for default connection (this is not normal since it's supposed to be done at initialization).
+ConnectionManager::AddDefaultConnection: No custom connection found, adding default connection from settings to connection manager
+ConnectionManager::AddDefaultConnection: No default connection found! Please add some.
+ConnectionManager::FileConnection::OpenConnection: Connected to %s for file %s
+ConnectionManager::FileConnection::OpenConnection: Could not connect to %s %s for file %s
+ConnectionManager::InternalAddConnection: Connection already added. Remove it first before reading it.
+ConnectionManager::RemoveConnection: Could not remove connection: can't find connection based on ip or port.
+ConnectionManager::SocketConnection::OpenConnection: Connected to %s at: %s:%d
+ConnectionManager::SocketConnection::OpenConnection: Could not connect to %s at: %s:%d
+ConnectionManager::SocketConnection::VerifyConnection: Connected to %s at: %s:%d
+ConnectionManager::SocketConnection::VerifyConnection: Could not connect to %s at: %s:%d
+Contracts.Common.GameLaunchConfig.GameServerConnectionConfig, Contracts.Common
+D:\HQ\AG_BA073_01\hyperquest\Branches\Update3\Opal\Zouna\Engine\Argo\ArgoManager.h
+D:\HQ\AG_BA073_01\hyperquest\Branches\Update3\Opal\Zouna\Engine\Argo\HttpSessionCurl.h
+GameServerConnectionConfig
+NetworkBootManager::UpdateErrorControllerReadyTask()
+NetworkBootManager::UpdateErrorControllerReadyTask() exiting, ErrorController is initialized
+Sources\BootManager.cpp
+Sources\NetworkBootManager.cpp
+d:\hq\ag_ba073_01\hyperquest\branches\update3\hyperquest\gameserverproxies\contracts\hw_pc_master\hyperquest\GameServerConnectionConfig.cpp
+d:\hq\ag_ba073_01\hyperquest\branches\update3\hyperquest\gameserverproxies\contracts\hw_pc_master\hyperquest\GameServerConnectionConfigSerializer.cpp

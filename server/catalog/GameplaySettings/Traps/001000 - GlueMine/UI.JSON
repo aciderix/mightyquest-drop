@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Glue MineField",
+        "OasisName":1569,
+        "OasisDescription":1570
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/GlueMine_01.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/GlueMine_01.png",
+        "LayerName":"UI_Common_TrapsIcons:GlueMine_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Hidden",
+                    "OasisName":7663
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/hidden.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Puddle :{0}",
+                    "OasisName":7664
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/snareEffect.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ]
+    }
+]

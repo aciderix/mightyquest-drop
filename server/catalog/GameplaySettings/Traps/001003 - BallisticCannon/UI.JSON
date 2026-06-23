@@ -1,0 +1,41 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Ballistic Cannon",
+        "OasisName":1553,
+        "OasisDescription":1554
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"damage {0}",
+                    "OasisName":7652
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":4,
+                        "TaggedSpec":"BallisticCannonDamage_New"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/BalisticCannon_01-2.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/BalisticCannon_01-2.png",
+        "LayerName":"UI_Common_TrapsIcons:BalisticCannon_01-2"
+    }
+]

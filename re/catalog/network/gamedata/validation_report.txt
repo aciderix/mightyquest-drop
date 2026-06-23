@@ -1,0 +1,4 @@
+# observed types also in reversed schema: 45
+# observed fields covered by reversed schema: 286
+
+# observed fields MISSING from our reversed schema (per type):

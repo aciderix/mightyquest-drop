@@ -1,0 +1,37 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"IcyPrisonBuff"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuffFxSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_EBA94422_AI598.MATERIAL",
+                "PriorityOffset":1,
+                "Type":"OverlayAndPartialOverride",
+                "CloneMaterial":true,
+                "NodeAttachment":{
+                    
+                },
+                "ForcePlayUntilFxFinished":true,
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_765BF34E_AI598>FX_765BF34E_AI598.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Body",
+                    "LockRotation":true
+                },
+                "Scale":0.5,
+                "ForcePlayUntilFxFinished":true,
+                "AttachFxOn":"Target"
+            }
+        ]
+    }
+]

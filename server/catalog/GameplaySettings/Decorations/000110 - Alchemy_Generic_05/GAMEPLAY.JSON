@@ -1,0 +1,90 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DecorationSpec, HyperQuest.GameServer.Contracts",
+        "DecorationType":"FreeStanding",
+        "DecorationCategory":"Furniture"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DestructibleStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseHitPoints":2,
+        "BaseHealth":50,
+        "HealthPerLevel":100
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Thickness":2.9,
+        "Height":4,
+        "Offset":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts"
+        },
+        "DestroyWhenRemovingObstacle":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":3.2,
+                "Height":3.5,
+                "Length":3.2
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"FreeStandingDecoration",
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":3.2,
+                "Height":3.5,
+                "Length":3.2
+            }
+        ],
+        "CollisionGroup":"Destructable",
+        "PhysicRigidBodyType":"Static",
+        "Radius":1.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetSpec, HyperQuest.GameServer.Contracts",
+        "IsVisible":true
+    }
+]

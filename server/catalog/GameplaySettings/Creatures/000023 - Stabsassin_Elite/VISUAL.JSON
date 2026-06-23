@@ -1,0 +1,63 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_024_BladeAssassin_Ltnt_01",
+        "Scale":2.3,
+        "SizeCategory":"Small",
+        "FxAttachmentScale":1.2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "HitImpactHeight":0.9
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_8B5C0815_BC675.MATERIAL",
+                "NodeAttachment":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6E9AA047>ENTITY_6E9AA047.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6E9AA047>ENTITY_6E9AA047.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6E9AA047>ENTITY_6E9AA047.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_3ADF8600>ENTITY_3ADF8600.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_3ADF8600>ENTITY_3ADF8600.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_3ADF8600>ENTITY_3ADF8600.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_F921B260>ENTITY_F921B260.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_AlienOutpost_Dashboard_04",
+        "OasisName":16697,
+        "OasisDescription":15397
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/Console_ation.png",
+        "InvIconUrl":"icoShop\/deco\/Console_ation.png",
+        "HeightOffset":2
+    }
+]

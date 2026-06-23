@@ -1,0 +1,227 @@
+{
+    "StatsSettings": {
+        "SkillDamage": {
+			"NameOasisId":16088,
+            "DescriptionOasisId": 16089,
+            "IsPercentage": false
+        },
+        "Mana": {
+            "NameOasisId": 8040,
+            "DescriptionOasisId": 8276
+        },
+        "Health": {
+            "NameOasisId": 8039,
+            "DescriptionOasisId": 8275
+        },
+        "HealthRegeneration": {
+            "IsPercentage": false
+        },
+        "ManaRegeneration": {
+            "NameOasisId": 9503,
+            "DescriptionOasisId": 16120
+        },
+        "MovementSpeed": {
+            "IsPercentage": false
+        },
+        "AttackRange": {
+            "IsPercentage": false
+        },
+        "CriticalHitChance": {
+            "NameOasisId": 8030,
+            "DescriptionOasisId": 8266,
+            "IsPercentage": true
+        },
+        "CriticalHitDamageMultiplier": {
+            "NameOasisId": 8031,
+            "DescriptionOasisId": 8267,
+            "IsPercentage": true
+        },
+        "Dodge": {
+            "NameOasisId": 8045,
+            "DescriptionOasisId": 8283,
+            "IsPercentage": true
+        },
+        "DamageReflection": {
+            "NameOasisId": 8046,
+            "DescriptionOasisId": 8284
+        },
+        "HealthStolen": {
+            "NameOasisId": 8034,
+            "DescriptionOasisId": 8270,
+            "IsPercentage": true
+        },
+        "ManaStolen": {
+            "NameOasisId": 8035,
+            "DescriptionOasisId": 8271,
+            "IsPercentage": true
+        },
+        "StunTarget": {
+            "NameOasisId": 8036,
+            "DescriptionOasisId": 8272,
+            "IsPercentage": true
+        },
+        "PoisonTarget": {
+            "NameOasisId": 8038,
+            "DescriptionOasisId": 8274,
+            "IsPercentage": true
+        },
+        "SnareTarget": {
+            "NameOasisId": 8037,
+            "DescriptionOasisId": 8273,
+            "IsPercentage": true
+        },
+        "XPGain": {
+            "NameOasisId": 8047,
+            "DescriptionOasisId": 8285,
+            "IsPercentage": true
+        },
+        "GoldFind": {
+            "NameOasisId": 8048,
+            "DescriptionOasisId": 8286,
+            "IsPercentage": true
+        },
+        "MagicFind": {
+            "NameOasisId": 8049,
+            "DescriptionOasisId": 8288,
+            "IsPercentage": true
+        },
+        "CriticalHitResilience": {
+        },
+        "TurningRate": {
+        },
+        "FacingConeAngle": {
+        },
+        "LifeForceGain": {
+            "NameOasisId": 15998,
+            "DescriptionOasisId": 15999,
+            "IsPercentage": true
+        },
+        "MovementReduction": {
+        },
+        "DamageRange": {
+            "NameOasisId": 8032,
+            "DescriptionOasisId": 8268
+        },
+        "SecondPerAttack": {
+            "NameOasisId": 8029,
+            "DescriptionOasisId": 8289,
+            "FloatPrecision": 2
+        },
+        "DamagePerSecond": {
+            "NameOasisId": 8028,
+            "DescriptionOasisId": 8254
+        },
+        "SplashDamage": {
+            "NameOasisId": 13200,
+            "DescriptionOasisId": 13201
+        },
+        "HealthOrbBonus": {
+            "NameOasisId": 13241,
+            "DescriptionOasisId": 13242
+        },
+        "ControlResistance": {
+            "NameOasisId": 13254,
+            "DescriptionOasisId": 13255,
+            "IsPercentage": true
+        },
+        "Confusion": {
+            "NameOasisId": 13525,
+            "DescriptionOasisId": 13526,
+            "IsPercentage": true
+        },
+        "RiskTaker": {
+            "NameOasisId": 13718,
+            "DescriptionOasisId": 13719,
+            "IsPercentage": true
+        },
+        "Courage": {
+            "NameOasisId": 13720,
+            "DescriptionOasisId": 13721,
+            "IsPercentage": true
+        },
+        "BonusBasicMaterialChance": {
+            "NameOasisId": 15990,
+            "DescriptionOasisId": 15991,
+            "IsPercentage": true
+        },
+        "BonusExceptionalMaterialChance": {
+            "NameOasisId": 15992,
+            "DescriptionOasisId": 15993,
+            "IsPercentage": true
+        },
+        "BonusLegendaryMaterialChance": {
+            "NameOasisId": 15994,
+            "DescriptionOasisId": 15995,
+            "IsPercentage": true
+        },
+        "BonusEpicMaterialChance": {
+            "NameOasisId": 15996,
+            "DescriptionOasisId": 15997,
+            "IsPercentage": true
+        },
+        "BonusRandomMaterialChance": {
+             "NameOasisId": 16186,
+            "DescriptionOasisId": 16187,
+            "IsPercentage": true
+        },
+        "DamageReduction": {
+            "NameOasisId": 15988,
+            "DescriptionOasisId": 15989,
+            "IsPercentage": true
+        },
+        "KnockBack": {
+            "NameOasisId": 16000,
+            "DescriptionOasisId": 16001,
+            "IsPercentage": false,
+            "FloatPrecision": 1
+        },
+        "WeaponDamage": {
+            "NameOasisId": 16013,
+            "DescriptionOasisId": 16014,
+            "IsPercentage": false
+        },
+        "ArmorDamage": {
+            "NameOasisId": 16015,
+            "DescriptionOasisId": 16016,
+            "IsPercentage": false
+        },
+        "Weight": {
+            "NameOasisId": 16004,
+            "DescriptionOasisId": 16005,
+            "IsPercentage": false
+        },
+        "ManaFlow": {
+            "NameOasisId": 16008,
+            "DescriptionOasisId": 16009,
+            "IsPercentage": true
+        },
+        "BasicAttackDamage": {
+            "NameOasisId": 16086,
+            "DescriptionOasisId": 16087,
+            "IsPercentage": false
+        },
+        "HeroDamage": {
+            "NameOasisId": 16090,
+            "DescriptionOasisId": 16091,
+            "IsPercentage": false
+        },
+        "IncreasedAttackSpeed": {
+            "NameOasisId": 8033,
+            "DescriptionOasisId": 8269,
+            "IsPercentage": true,
+            "FloatPrecision": 2
+        },
+        "AttackSpeed": {
+            "NameOasisId": 16020,
+            "DescriptionOasisId": 16021,
+            "IsPercentage": false,
+            "FloatPrecision": 2
+        },
+        "WeaponSpeed": {
+            "NameOasisId": 16084,
+            "DescriptionOasisId": 16085,
+            "IsPercentage": false,
+            "FloatPrecision": 2
+        }
+    }
+}

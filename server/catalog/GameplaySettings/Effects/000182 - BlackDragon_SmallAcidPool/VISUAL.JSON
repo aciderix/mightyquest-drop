@@ -1,0 +1,20 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_038_BlackDragon_SmallAcidPool_EFF"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_D545F7AB>SPECIALEFFECTS_D545F7AB.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    }
+]

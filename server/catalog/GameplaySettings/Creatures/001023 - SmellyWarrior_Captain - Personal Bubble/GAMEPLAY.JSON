@@ -1,0 +1,796 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":50,
+                "Name":"MediumMeleeAttack"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":669,
+                "Name":"SmellyWarrior_SpecA_RemoveShield"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":670,
+                "Name":"SmellyWarrior_SpecB_Shield_1"
+            }
+        ],
+        "BasicAttackSlotIndex":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AggroSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AuraCarrierSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureAiSpec, HyperQuest.GameServer.Contracts",
+        "Behavior":{
+            "Children":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"AggroTarget"
+                    },
+                    "AdjustFacingIfNeeded":true,
+                    "MoveIntoAbilityRangeIfNeeded":true
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureSpec, HyperQuest.GameServer.Contracts",
+        "Rank":"Captain",
+        "BehaviorCategoryId":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseMovementSpeed":4.5,
+        "BaseDodge":0.001,
+        "BaseTurningRate":720,
+        "BaseFacingConeAngle":90,
+        "BasePhysicalDamage":30,
+        "BaseCriticalHitChance":0.05,
+        "BaseCriticalHitDamageBonus":0.25,
+        "PhysicalDamagePerLevel":15,
+        "HealthPerLevel":35
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "TierModifiers":
+                [
+                    {
+                        "Tiers":
+                        [
+                            1,
+                            2
+                        ],
+                        "StatsModifier":{
+                            
+                        }
+                    },
+                    {
+                        "Tiers":
+                        [
+                            3,
+                            4
+                        ],
+                        "StatsModifier":{
+                            "PhysicalDamagePerLevel":2,
+                            "HealthPerLevel":25
+                        }
+                    },
+                    {
+                        "Tiers":
+                        [
+                            5,
+                            6
+                        ],
+                        "StatsModifier":{
+                            "PhysicalDamagePerLevel":4,
+                            "HealthPerLevel":50
+                        }
+                    },
+                    {
+                        "Tiers":
+                        [
+                            7
+                        ],
+                        "BasicAttackSlotIndex":0,
+                        "StatsModifier":{
+                            "PhysicalDamagePerLevel":8,
+                            "HealthPerLevel":63
+                        }
+                    }
+                ],
+                "Behavior":{
+                    "Children":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell1",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":8
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionMoveToBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "SpeedScaleMaxDistance":0.75,
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":8
+                                    },
+                                    "IsNot":true
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell2",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "AdjustFacingIfNeeded":true,
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":3
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell2",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "AdjustFacingIfNeeded":true,
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":4
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "IsNot":true
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell1",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":3
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell1",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":4
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "IsNot":true
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "AdjustFacingIfNeeded":true,
+                            "MoveIntoAbilityRangeIfNeeded":true
+                        }
+                    ]
+                },
+                "EffectToSpawnOnDeathId":458,
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporarySpecializationRanks":
+        [
+            {
+                "TierModifiers":
+                [
+                    {
+                        "Tiers":
+                        [
+                            1,
+                            2,
+                            3
+                        ],
+                        "Abilities":
+                        [
+                            50,
+                            669,
+                            670
+                        ],
+                        "PassiveBuffs":
+                        [
+                            773
+                        ]
+                    },
+                    {
+                        "Tiers":
+                        [
+                            4,
+                            5,
+                            6,
+                            7
+                        ],
+                        "Abilities":
+                        [
+                            50,
+                            669,
+                            670
+                        ],
+                        "PassiveBuffs":
+                        [
+                            773
+                        ],
+                        "StatsModifier":{
+                            "PhysicalDamagePerLevel":-10,
+                            "HealthPerLevel":30
+                        }
+                    }
+                ],
+                "Behavior":{
+                    "Children":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell1",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":8
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionMoveToBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "SpeedScaleMaxDistance":0.75,
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":8
+                                    },
+                                    "IsNot":true
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell2",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "AdjustFacingIfNeeded":true,
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":3
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell2",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "AdjustFacingIfNeeded":true,
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":4
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    },
+                                    "IsNot":true
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "IsNot":true
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell1",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":3
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "AbilityIndex":"Spell1",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Conditions":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"AggroTarget"
+                                    },
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":4
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionTargetIsBuffedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":471,
+                                        "Name":"SmellyWarrior_SpecA_Shield"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.ConditionIsBoostedBehaviorSpec, HyperQuest.GameServer.Contracts",
+                                    "IsNot":true
+                                }
+                            ]
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "AdjustFacingIfNeeded":true,
+                            "MoveIntoAbilityRangeIfNeeded":true
+                        }
+                    ]
+                },
+                "EffectToSpawnOnDeathId":458,
+                "_comment":"Specialization 1"
+            }
+        ],
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":4
+            },
+            {
+                "Tier":2,
+                "Level":8
+            },
+            {
+                "Tier":3,
+                "Level":12
+            },
+            {
+                "Tier":4,
+                "Level":16
+            },
+            {
+                "Tier":5,
+                "Level":22
+            },
+            {
+                "Tier":6,
+                "Level":26
+            },
+            {
+                "Tier":7,
+                "Level":30
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":1
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":9
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ConstructionPoints":4,
+        "ZoneRadius":5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GameCommandProcessorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true,
+        "BuildXp":60
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts",
+        "DestroyOnDeath":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts",
+        "HealthOrbFragmentsLootBase":16
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NavigationSpec, HyperQuest.GameServer.Contracts",
+        "NeedToFaceTargetBeforeMoving":true,
+        "SeparationDistance":1.1,
+        "PenetrationRadius":0.45
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.45,
+                "Height":1.2,
+                "Y":0.8
+            }
+        ],
+        "CollisionGroup":"Creature",
+        "Radius":0.45
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.55,
+                "Height":1.1,
+                "Y":1.1
+            }
+        ],
+        "OuterShapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.8,
+                "Height":1.2,
+                "Y":1.1
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PushableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-0.5,
+        "FirstSectionCellOffsetY":-0.5,
+        "Width":2,
+        "Height":2,
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnSpec, HyperQuest.GameServer.Contracts",
+        "Duration":1.3666,
+        "IsPickingActive":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StunableSpec, HyperQuest.GameServer.Contracts",
+        "StunResistanceMax":0.8,
+        "StunRecoverImmunityDuration":0.1,
+        "TrapStunRecoverImmunityDuration":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SurroundableSpec, HyperQuest.GameServer.Contracts",
+        "SurroundRadius":0.45
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TotemDefenderSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FightDynamicsSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "PassiveBuffs":
+        [
+            796
+        ],
+        "Price":{
+            "CraftingMaterials":
+            [
+                {
+                    "Id":1000,
+                    "Quantity":2
+                },
+                {
+                    "Id":1010,
+                    "Quantity":1
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetSpec, HyperQuest.GameServer.Contracts",
+        "IsVisible":true
+    }
+]

@@ -1,0 +1,81 @@
+{
+	"MaxMembers" : 30,
+	"TrophyScoreCalculationTable" :
+	[
+		{ "RankPercentile":  0.2, "WeightPercentage": 0.60 },
+		{ "RankPercentile": 0.5, "WeightPercentage": 0.30 },
+		{ "RankPercentile": 1, "WeightPercentage": 0.10 }
+	],
+    "Languages": 
+    [
+        "EN",
+        "FR",
+        "DE",
+        "IT",
+        "ES",
+        "PT",
+        "RU",
+        "PL",
+        "HU",
+        "YY"
+    ],
+	"MaxBattleLogEntries": 100,
+    "LeaderDisplayedCount": 3,
+    "MaxEntriesPerRequest":10,
+    "ReferenceDate": "2013-11-11T00:00:00Z",
+    "Period" : "1d",
+    "EntryTimeToLive": "7d",
+    "GlobalLockTimeout": "5m",
+    "GiveRewardJobDelay": "5m",
+    "GuildLeaderRewards":
+    [
+        {   
+		    "SmallIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",
+            "RewardItems": 
+			[
+				{
+					"$type": "HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+					"LargeIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",
+					"SmallIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",              
+					"CurrencyAmount": 
+					{
+						"CurrencyType":2,
+						"Amount":10000
+					}
+				}
+			]
+        },
+        {   
+		    "SmallIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",
+            "RewardItems":
+			[
+				{
+					"$type": "HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+					"LargeIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",
+					"SmallIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",              
+					"CurrencyAmount": 
+					{
+						"CurrencyType":2,
+						"Amount":5000
+					}
+				}
+			]
+        },
+        {  
+            "SmallIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",		
+            "RewardItems":
+			[
+				{
+					"$type": "HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+					"LargeIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",
+					"SmallIconUrl": "COMMON/CURRENCY/COMMON_CURRENCY_GOLD.PNG",              
+					"CurrencyAmount": 
+					{
+						"CurrencyType":2,
+						"Amount":2500
+					}
+				}
+			]
+        }
+    ]
+}

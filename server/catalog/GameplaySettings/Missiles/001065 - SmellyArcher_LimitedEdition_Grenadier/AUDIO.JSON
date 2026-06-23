@@ -1,0 +1,37 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Fire"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "LabelOperationSounds":
+        [
+            {
+                "OperationLabel":"Rambone_Bounce",
+                "Sound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC73.SOUND",
+                    "FireAndForget":true
+                }
+            },
+            {
+                "OperationLabel":"Rambone_Explosion",
+                "Sound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC74.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioPersistentEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "CreateSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC75.SOUND",
+            "FireAndForget":true
+        },
+        "DestroySound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC76.SOUND",
+            "FireAndForget":true
+        }
+    }
+]

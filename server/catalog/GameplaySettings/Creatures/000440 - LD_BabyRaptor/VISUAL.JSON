@@ -1,0 +1,34 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":5,
+        "HitImpactHeight":0.75
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_38240935_AH273>ENTITY_38240935_AH273.ENTITY",
+                        "Scale":1.3
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LD_BabyRaptor",
+        "Scale":1.3,
+        "ScaleVariance":0.05,
+        "SizeCategory":"Small"
+    }
+]

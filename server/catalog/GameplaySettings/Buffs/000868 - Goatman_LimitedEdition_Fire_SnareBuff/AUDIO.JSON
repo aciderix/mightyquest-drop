@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Mace"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffedFootStepSpec, HyperQuest.GameServer.Contracts",
+        "BuffedFootStepSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002C16.SOUND"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedSound":{
+            
+        },
+        "BuffRemovedSound":{
+            "FireAndForget":true
+        }
+    }
+]

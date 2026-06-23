@@ -1,0 +1,76 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":1.3,
+                                "Up":1.4
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":214,
+                                "Name":"Archer_MithrilBolt"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":1.3,
+                                "Up":1.4
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MissilesCount":2,
+                            "ArcAngle":27.5,
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":216,
+                                "Name":"Archer_MithrilBoltSide"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.8,
+                "PrepareTime":0.2,
+                "RecoverTime":1.8,
+                "RecoverInterruptWindow":1.7,
+                "MaxDistance":10,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1,
+                "NeedFacingTarget":false,
+                "MaximumPrepareRotationDuration":0.1
+            }
+        ]
+    }
+]

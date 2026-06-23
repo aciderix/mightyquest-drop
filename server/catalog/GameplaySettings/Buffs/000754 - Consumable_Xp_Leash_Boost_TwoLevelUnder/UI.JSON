@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"XP leash boost",
+        "OasisName":14256,
+        "OasisDescription":14257
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/heroBuffs_XP.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_XP",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

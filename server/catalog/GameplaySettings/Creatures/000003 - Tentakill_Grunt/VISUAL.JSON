@@ -1,0 +1,51 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_020_BarrelSquid_01",
+        "Scale":0.8,
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_98CA8C28>ENTITY_98CA8C28.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_98CA8C28>ENTITY_98CA8C28.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_98CA8C28>ENTITY_98CA8C28.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_613D9A4E>ENTITY_613D9A4E.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_613D9A4E>ENTITY_613D9A4E.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_613D9A4E>ENTITY_613D9A4E.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_9826BC67_AH273>ENTITY_9826BC67_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_9826BC67_AH273>ENTITY_9826BC67_AH273.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

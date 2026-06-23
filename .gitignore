@@ -1,0 +1,7 @@
+
+*.pyc
+__pycache__/
+roundtrip_report.txt
+
+*.zip
+*.zip.part*

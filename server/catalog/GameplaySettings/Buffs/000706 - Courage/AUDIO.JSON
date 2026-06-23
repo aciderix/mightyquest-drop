@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioMultiStatModifierFxSpec, HyperQuest.GameServer.Contracts",
+        "StatModifiersSounds":
+        [
+            {
+                "StatType":"DamageReduction",
+                "StartSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00088807.SOUND"
+                }
+            }
+        ]
+    }
+]

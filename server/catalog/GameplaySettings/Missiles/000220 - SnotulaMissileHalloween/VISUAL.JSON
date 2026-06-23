@@ -1,0 +1,60 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_009_Snotter_BasicAttack_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_65344264>MESH_65344264.MESH",
+        "Scale":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_AB2ADBC9_AI933>FX_AB2ADBC9_AI933.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "EntityHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B32EEFEC_AI933>FX_B32EEFEC_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Body"
+                },
+                "Scale":0.4,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B0582B79_AI933>FX_B0582B79_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":2,
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_91F6BF79_AF510>FX_91F6BF79_AF510.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":2,
+                "AttachFxOn":"Target"
+            }
+        ]
+    }
+]

@@ -1,0 +1,280 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.BuildingUpgradeCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "BuildingSpecContainerIds":
+            [
+                10
+            ],
+            "MinRank":1,
+            "MaxRank":1
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AssignmentsCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Assignments":
+                        [
+                            3000
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "AssignmentId":3000
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/build"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AddItemsToInventoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "InventoryItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroConsumableItem, HyperQuest.GameServer.Contracts",
+                        "StackCount":1,
+                        "TemplateId":1000
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroConsumableItem, HyperQuest.GameServer.Contracts",
+                        "StackCount":1,
+                        "TemplateId":1001
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroConsumableItem, HyperQuest.GameServer.Contracts",
+                        "StackCount":1,
+                        "TemplateId":1002
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ChangeBuildInteractionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DeleteInteractionState":{
+                    "GameEntityTypeMask":1023
+                },
+                "PickupInteractionState":{
+                    "GameEntityTypeMask":1023
+                },
+                "RotateInteractionState":{
+                    "GameEntityTypeMask":1023
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chat"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OverrideCameraOcclusionFlagsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Enable":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisabledMouseButtonMask":2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    5,
+                    34,
+                    53,
+                    54,
+                    128,
+                    129,
+                    130,
+                    131
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UnlockCamera":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Movement":{
+                    "End":{
+                        "$type":"HyperQuest.GameServer.Contracts.SelectionsCameraPositionSpec, HyperQuest.GameServer.Contracts",
+                        "Selections":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                                "SpecContainerType":"Building",
+                                "SpecContainerIds":
+                                [
+                                    10
+                                ]
+                            }
+                        ],
+                        "Zoom":0.1,
+                        "IgnoreNearestZoomLevel":true
+                    },
+                    "Duration":2.5,
+                    "EaseInOut":-1
+                },
+                "Duration":2.5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"4000011",
+                "Text":"Great! Creatures requires materials that you'll find in other's castles to be built.",
+                "TextOasisId":15494,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15494,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008AB96.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"MiddleCenter",
+                "OffsetTop":250,
+                "IsCloseButtonVisible":true,
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"4000011"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/shop\/show?tab=creatures&buildingSpecContainerId=10"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UnlockCamera":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    5,
+                    34,
+                    53,
+                    54,
+                    128,
+                    129,
+                    130,
+                    131
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ChangeBuildInteractionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DeleteInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                },
+                "PickupInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                },
+                "RotateInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OverrideCameraOcclusionFlagsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

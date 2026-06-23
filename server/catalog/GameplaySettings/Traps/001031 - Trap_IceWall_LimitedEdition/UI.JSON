@@ -1,0 +1,54 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Trap_IceWall_LimitedEdition",
+        "OasisName":16400,
+        "OasisDescription":16401
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"IceWall_Ability1",
+                    "OasisName":16402
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/snareEffect",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/snareEffect"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"IceWall_Ability2",
+                    "OasisName":16403
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"IceWall_Ability3",
+                    "OasisName":16404
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/debuffOnHero"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/IceWall.png",
+        "InvIconUrl":"UI\/Common\/TrapsIcons\/Rares\/IceWall.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:IceWall"
+    }
+]

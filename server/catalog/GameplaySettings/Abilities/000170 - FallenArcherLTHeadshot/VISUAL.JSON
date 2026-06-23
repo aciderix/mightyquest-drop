@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_014_FallenArcherLT_Headshot"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellHeadshot"
+            }
+        ]
+    }
+]

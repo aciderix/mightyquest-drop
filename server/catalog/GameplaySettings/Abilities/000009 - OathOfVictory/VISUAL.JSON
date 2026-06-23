@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_OathOfVictory"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_8724C64D>SPECIALEFFECTS_8724C64D.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualVolumeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "VolumeName":"FX_WeaponVolume"
+                            },
+                            "ForcePlayUntilFxFinished":true
+                        }
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_D9CC0327_AI933.MATERIAL",
+                            "SpaceBetweenSegment":0.3,
+                            "SegmentLifeTime":0.5,
+                            "FadeInTime":5,
+                            "FadeOutTime":4,
+                            "FadeInDistance":3,
+                            "FadeOutDistance":3,
+                            "Attachment":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                                "Volumes":
+                                [
+                                    {
+                                        "VolumeName":"FX_WeaponTrailBase"
+                                    },
+                                    {
+                                        "VolumeName":"FX_WeaponTrailMiddle"
+                                    },
+                                    {
+                                        "VolumeName":"FX_WeaponTrailTop"
+                                    }
+                                ]
+                            },
+                            "ForcePlayUntilFxFinished":true
+                        },
+                        "PlayUntil":"ActiveEnd"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_001_OathOfVictory"
+    }
+]

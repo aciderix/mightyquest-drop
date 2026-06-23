@@ -1,0 +1,41 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Tinn Tamm",
+        "OasisName":1377,
+        "OasisDescription":1378
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_010_Rabid_Elite.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_010_Rabid_Elite.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_01",
+        "HeightOffset":2.25
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Howl",
+                    "OasisName":7586
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Diseased Bite",
+                    "OasisName":7749
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png"
+                }
+            }
+        ]
+    }
+]

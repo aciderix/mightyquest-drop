@@ -1,0 +1,292 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":1514,
+                "Name":"Spider_LimitedEdition_Lightning_JumpAttack"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":1513,
+                "Name":"Spider_LimitedEdition_Lightning_RangedAttack"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":1515,
+                "Name":"Spider_LimitedEdition_Lightning_ResistanceBuff"
+            }
+        ],
+        "BasicAttackSlotIndex":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AggroSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AuraCarrierSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsRare":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureAiSpec, HyperQuest.GameServer.Contracts",
+        "Behavior":{
+            "Children":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "AbilityIndex":"Spell2",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"AggroTarget"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "AbilityIndex":"Spell1",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"AggroTarget"
+                    },
+                    "Conditions":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Distance":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":4
+                            },
+                            "IsNot":true
+                        }
+                    ]
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"AggroTarget"
+                    },
+                    "AdjustFacingIfNeeded":true,
+                    "MoveIntoAbilityRangeIfNeeded":true,
+                    "Conditions":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ConditionTargetWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "Distance":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":4
+                            },
+                            "IsNot":true
+                        }
+                    ]
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DecoratorDelayBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "MaxDelay":1,
+                    "Children":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ActionFearBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.TargetLabelSpec, HyperQuest.GameServer.Contracts",
+                                "TargetLabel":1
+                            },
+                            "Duration":1.5
+                        }
+                    ],
+                    "Conditions":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ConditionTargetAttackRangeWithinDistanceBehaviorSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTarget"
+                            },
+                            "HysteresisModifier":1,
+                            "UseEntitiesRadius":true,
+                            "RescaleTargetAttackRange":true,
+                            "RescaleTargetAttackRangeMin":0.5,
+                            "RescaleTargetAttackRangeMax":9.5,
+                            "RescaleTargetAttackRangeNewMin":3,
+                            "RescaleTargetAttackRangeNewMax":6
+                        }
+                    ]
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ActionMoveToBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.TargetLabelSpec, HyperQuest.GameServer.Contracts",
+                        "TargetLabel":2
+                    },
+                    "StopDistance":6,
+                    "SpeedScaleMaxDistance":0.75
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureSpec, HyperQuest.GameServer.Contracts",
+        "Rank":"Elite",
+        "BehaviorCategoryId":8
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseMovementSpeed":6,
+        "BaseDodge":0.001,
+        "BaseTurningRate":720,
+        "BaseFacingConeAngle":90,
+        "BasePhysicalDamage":45,
+        "BaseHealth":100,
+        "BaseCriticalHitChance":0.05,
+        "BaseCriticalHitDamageBonus":0.25,
+        "PhysicalDamagePerLevel":15,
+        "HealthPerLevel":180
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":4
+            },
+            {
+                "Tier":2,
+                "Level":30
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":2
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":11
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ConstructionPoints":8,
+        "ZoneRadius":5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FightDynamicsSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GameCommandProcessorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true,
+        "BuildXp":360
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts",
+        "DestroyOnDeath":true,
+        "EffectToSpawnOnDeathId":458
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts",
+        "HealthOrbFragmentsLootBase":32,
+        "SpecialLootChance":0.02,
+        "SpecialLootTable":
+        [
+            42110
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NavigationSpec, HyperQuest.GameServer.Contracts",
+        "NeedToFaceTargetBeforeMoving":true,
+        "SeparationDistance":1.8,
+        "PenetrationRadius":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":1,
+                "Height":1.2,
+                "Y":0.8
+            }
+        ],
+        "CollisionGroup":"Creature",
+        "Radius":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.5,
+                "Height":0.5,
+                "X":0.1,
+                "Y":0.7,
+                "Roll":90
+            }
+        ],
+        "OuterShapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":1,
+                "Height":0.5,
+                "Y":0.6,
+                "Roll":90
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PushableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1,
+        "FirstSectionCellOffsetY":-1,
+        "Width":3,
+        "Height":3,
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StunableSpec, HyperQuest.GameServer.Contracts",
+        "BaseStunResistance":0.3,
+        "StunResistanceMax":0.9,
+        "StunRecoverImmunityDuration":0.1,
+        "TrapStunRecoverImmunityDuration":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SurroundableSpec, HyperQuest.GameServer.Contracts",
+        "SurroundRadius":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TotemDefenderSpec, HyperQuest.GameServer.Contracts"
+    }
+]

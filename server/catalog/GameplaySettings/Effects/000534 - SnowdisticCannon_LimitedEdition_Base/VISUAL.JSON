@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"SnowdisticCannon_LimitedEdition_Base",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_203B0F5A>MESH_203B0F5A.MESH",
+        "Scale":1.4
+    }
+]

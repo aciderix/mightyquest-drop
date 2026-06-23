@@ -1,0 +1,36 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_001_BA_HalloweenHeavySwordStrike_Part2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_Attack02"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"HeroMeleeAttack2",
+                "ReceiverType":"Both",
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_81E08D44>SPECIALFX_81E08D44.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "BoneName":"FX_Head"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

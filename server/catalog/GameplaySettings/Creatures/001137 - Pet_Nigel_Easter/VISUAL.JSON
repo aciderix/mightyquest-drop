@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Pet_Nigel_Easter",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_01B1563E_BC666>ENTITY_01B1563E_BC666.ENTITY"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_01B1563E_BC666>ENTITY_01B1563E_BC666.ENTITY",
+                        "Scale":0.75
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

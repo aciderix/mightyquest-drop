@@ -1,0 +1,177 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AggroSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureSpec, HyperQuest.GameServer.Contracts",
+        "BehaviorCategoryId":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseMovementSpeed":4.5,
+        "BaseDodge":0.001,
+        "BaseTurningRate":720,
+        "BaseFacingConeAngle":90,
+        "BasePhysicalDamage":15,
+        "BaseHealth":50,
+        "BaseCriticalHitChance":0.05,
+        "BaseCriticalHitDamageBonus":0,
+        "PhysicalDamagePerLevel":1,
+        "HealthPerLevel":280
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":4
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":1
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":4
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ConstructionPoints":2,
+        "ZoneRadius":5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "KeepWorldOrientation":true,
+        "BuildXp":10
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts",
+        "CanMove":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Thickness":1.5,
+        "Height":4,
+        "Offset":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+            "Y":-0.35
+        },
+        "RemoveObstacleOnDied":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.5,
+                "Height":2,
+                "Y":1
+            }
+        ],
+        "CollisionGroup":"Destructable",
+        "PhysicRigidBodyType":"Static",
+        "Radius":0.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.5,
+                "Height":1.4,
+                "Y":1,
+                "Yaw":90
+            }
+        ],
+        "OuterShapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.8,
+                "Height":1.5,
+                "Y":1,
+                "Yaw":90
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-0.5,
+        "FirstSectionCellOffsetY":-0.5,
+        "Width":2,
+        "Height":2,
+        "RoomBuildableType":"Totem",
+        "ExclusionShape":{
+            "$type":"HyperQuest.GameServer.Contracts.CircularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Radius":10
+        },
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnSpec, HyperQuest.GameServer.Contracts",
+        "Duration":1.3666,
+        "IsPickingActive":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SurroundableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TotemSpec, HyperQuest.GameServer.Contracts",
+        "TotemZone":{
+            "Width":10,
+            "Height":10
+        },
+        "LeashingRadius":14
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetSpec, HyperQuest.GameServer.Contracts",
+        "IsVisible":true
+    }
+]

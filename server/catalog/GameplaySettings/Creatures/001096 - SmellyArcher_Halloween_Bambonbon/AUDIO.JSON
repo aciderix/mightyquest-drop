@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC8D.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC8D.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC86.SOUND",
+            "FireAndForget":true
+        },
+        "ArmorTag":"HardClothing",
+        "AttackImpactSoundLevelsProfileType":"Default"
+    }
+]

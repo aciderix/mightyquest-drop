@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":4,
+        "EndRadius":4,
+        "TouchedEntitiesType":2,
+        "OnEnterMaxActivation":1,
+        "DestroyFieldTriggers":{
+            "OnMaxActivationReached":true
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.SendEventOperationSpec, HyperQuest.GameServer.Contracts",
+                    "EventName":"VictoryAnimationTriggering"
+                }
+            ]
+        }
+    }
+]

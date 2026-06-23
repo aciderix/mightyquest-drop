@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_CEFC7A0D>SPECIALFX_CEFC7A0D.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+            "BoneName":"FX_Head",
+            "LockRotation":true
+        },
+        "Name":"VFX_IMP_StunningBlow_TB"
+    }
+]

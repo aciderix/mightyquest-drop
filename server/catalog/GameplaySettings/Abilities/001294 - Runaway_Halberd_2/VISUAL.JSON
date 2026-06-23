@@ -1,0 +1,96 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_AttackPok01"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_33EB6F93_BD346>SPECIALFX_33EB6F93_BD346.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts",
+        "DamageFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_B43A18BB_BD346>SPECIALFX_B43A18BB_BD346.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Duration":0.15
+            }
+        ],
+        "OwnerWeaponQualityDamageFxList":
+        {
+            "Legendary":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_8AECAA4D_BD346>SPECIALFX_8AECAA4D_BD346.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                        "NodeAttachment":{
+                            
+                        },
+                        "Duration":0.15
+                    }
+                ]
+            },
+            "Epic":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_2F1E7BA5_BD346>SPECIALFX_2F1E7BA5_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                        "NodeAttachment":{
+                            
+                        },
+                        "Duration":0.15
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Runaway_Halberd_2"
+    }
+]

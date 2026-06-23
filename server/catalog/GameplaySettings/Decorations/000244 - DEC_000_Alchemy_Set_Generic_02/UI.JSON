@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Alchemy_Set_Generic_02",
+        "OasisName":16621,
+        "OasisDescription":14859
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Culture_Corn_01.png",
+        "InvIconUrl":"icoShop\/deco\/DEC_000_Culture_Corn_01.png",
+        "HeightOffset":2
+    }
+]

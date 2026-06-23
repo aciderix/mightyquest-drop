@@ -1,0 +1,77 @@
+{
+    "Chests" :
+    {
+        "Exceptional":
+        {
+            "MaxItems" : 2,
+            "ChestContentChance" :
+            {
+                "IGC":0.1,
+                "NormalItem":0.15,
+                "MagicItem":0.2,
+                "ExceptionalItem":0.15,
+                "Potion":0.1,
+                "Dye":0.05,
+                "Creature":0.15,                
+                "Traps":0.1
+            }
+        },
+        "Legendary":
+        {
+            "MaxItems" : 3,
+            "ChestContentChance" :
+            {
+                "IGC":0.1,
+                "MagicItem":0.2,
+                "ExceptionalItem":0.25,
+                "LegendaryItem":0.17,
+                "Costume":0.03,                
+                "Dye":0.05,
+                "Elite":0.1,
+                "Room":0.1
+            }
+        },
+        "Epic":
+        {
+            "MaxItems" : 4,
+            "ChestContentChance" :
+            {
+                "IGC":0.1,
+                "Bling":0.1,               
+                "ExceptionalItem":0.19,
+                "LegendaryItem":0.25,
+                "EpicItem":0.12,
+                "Costume":0.03,
+                "Pet":0.01,               
+                "Boost":0.05,
+                "Dye":0.04,                
+                "Boss":0.1
+            }
+        }
+    },
+    "ItemLevelDifference" :
+    {
+        "-2" : 0.1,
+        "-1" : 0.2,
+		"0" : 0.4,
+		"1" : 0.2,
+		"2" : 0.1		
+    },
+    "CreatureRewardTypeTable" :
+    {
+        "NormalItem" :
+        {        
+            "RewardByQuality" :
+            {
+                "Exceptional" :
+                {
+                    "RewardChanceByIds" :
+                    {
+                        "000001":0,
+                        "000002":0
+                    }
+                }
+            }
+        }
+    }
+}

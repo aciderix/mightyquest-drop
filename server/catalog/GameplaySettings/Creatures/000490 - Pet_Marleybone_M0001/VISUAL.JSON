@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_A4FDA93F_BC666>ENTITY_A4FDA93F_BC666.ENTITY",
+                        "Scale":1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Pet_Marleybone_M0001",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_A4FDA93F_BC666>ENTITY_A4FDA93F_BC666.ENTITY"
+    }
+]

@@ -1,0 +1,14 @@
+# Game-only view (function granularity, via source-path xref)
+
+bucket            funcs       bytes
+UNKNOWN           51709     7757588
+GAME               5455      848325
+THIRD_PARTY         496      169439
+
+# GAME functions by module (labeled subset)
+
+     982 funcs      447449 bytes  Engine
+    4437 funcs      392632 bytes  GameServerProxies
+      28 funcs        6463 bytes  Gameplay
+       2 funcs         931 bytes  Simulation
+       6 funcs         850 bytes  Hyperquest

@@ -1,0 +1,58 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.7,
+                                "Up":1.2
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "BurstsCount":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":2
+                            },
+                            "BurstDelay":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":0.4
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":277
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":3,
+                "PrepareTime":2,
+                "RecoverTime":0.75,
+                "MaxDistance":12,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1,
+                "MainDamageOperationStatValueSpecTag":"Smelly Archer Snipe 2"
+            }
+        ]
+    }
+]

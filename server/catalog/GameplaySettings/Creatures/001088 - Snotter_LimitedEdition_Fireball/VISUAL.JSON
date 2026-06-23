@@ -1,0 +1,64 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_45074C43_BA618>ENTITY_45074C43_BA618.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ECCB73C7_AH273>ENTITY_ECCB73C7_AH273.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Snotter_LimitedEdition_Fireball",
+        "Scale":1.6,
+        "SizeCategory":"Small"
+    }
+]

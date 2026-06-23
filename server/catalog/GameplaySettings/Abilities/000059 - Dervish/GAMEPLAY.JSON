@@ -1,0 +1,277 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":6,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":3.6
+                            },
+                            "AllianceFilter":4,
+                            "TouchedEntitiesType":9,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage",
+                                            "Multiplier":0.7,
+                                            "Tag":"Spiral Shot damage 1"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Movement":{
+                                            "MoveStyle":{
+                                                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                                "Distance":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Value":1
+                                                },
+                                                "Orientation":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                    "Context":"SourceToTargetOrientation"
+                                                },
+                                                "Speed":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Value":1
+                                                },
+                                                "EaseInOut":-6
+                                            },
+                                            "KnockbackSpec":{
+                                                "KnockbackStandupDuration":0.5
+                                            }
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ],
+                                "StopCondition":"StopUponFailure"
+                            },
+                            "Position":"Source",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":141,
+                                "Name":"SprialShotMidairBuff"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Movement":{
+                                "MoveStyle":{
+                                    "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":7.5
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceCastOrientation",
+                                        "Reverse":true
+                                    },
+                                    "Speed":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":15
+                                    }
+                                },
+                                "IgnoreMovementReduction":true,
+                                "Collision":{
+                                    "CollisionShape":{
+                                        "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                                        "Radius":0.8
+                                    },
+                                    "CollisionMask":8,
+                                    "CollisionAllianceFilter":4
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":213,
+                "OasisShortDescription":214,
+                "OasisLongDescription":389,
+                "Cooldown":0.1,
+                "PrepareTime":0.1,
+                "ActiveTime":0.5,
+                "MaxDistance":7,
+                "DirectedMaxDistance":3.6,
+                "EffectRadius":2,
+                "CastCost":25,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":13
+                },
+                "NeedFacingTarget":false,
+                "MaximumPrepareRotationDuration":0.1,
+                "PickingStyle":"Ground"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":3.6
+                            },
+                            "AllianceFilter":4,
+                            "TouchedEntitiesType":9,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"SkillDamage",
+                                            "Multiplier":0.8,
+                                            "Tag":"Spiral Shot damage 2"
+                                        },
+                                        "ExtraDamageInfo":{
+                                            "ReduceDodgeChance":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Movement":{
+                                            "MoveStyle":{
+                                                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                                "Distance":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Value":1
+                                                },
+                                                "Orientation":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                    "Context":"SourceToTargetOrientation"
+                                                },
+                                                "Speed":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Value":1
+                                                },
+                                                "EaseInOut":-6
+                                            },
+                                            "KnockbackSpec":{
+                                                "KnockbackStandupDuration":0.5
+                                            }
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ],
+                                "StopCondition":"StopUponFailure"
+                            },
+                            "Position":"Source",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":141,
+                                "Name":"SprialShotMidairBuff"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Movement":{
+                                "MoveStyle":{
+                                    "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":7.5
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceCastOrientation",
+                                        "Reverse":true
+                                    },
+                                    "Speed":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":15
+                                    }
+                                },
+                                "IgnoreMovementReduction":true,
+                                "Collision":{
+                                    "CollisionShape":{
+                                        "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                                        "Radius":0.8
+                                    },
+                                    "CollisionMask":8,
+                                    "CollisionAllianceFilter":4
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":215,
+                "OasisShortDescription":216,
+                "OasisLongDescription":390,
+                "Cooldown":0.1,
+                "PrepareTime":0.1,
+                "ActiveTime":0.5,
+                "MaxDistance":7,
+                "DirectedMaxDistance":3.6,
+                "EffectRadius":2,
+                "CastCost":25,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":25
+                },
+                "NeedFacingTarget":false,
+                "MaximumPrepareRotationDuration":0.1,
+                "PickingStyle":"Ground"
+            }
+        ]
+    }
+]

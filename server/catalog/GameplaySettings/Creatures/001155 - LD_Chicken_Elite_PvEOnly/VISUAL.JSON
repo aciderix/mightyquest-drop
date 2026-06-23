@@ -1,0 +1,114 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7C333FEF_BC666>ENTITY_7C333FEF_BC666.ENTITY",
+                        "Scale":3.5
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_1FAEADF3_AG596.MATERIAL",
+                "NodeAttachment":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualGameplayEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "Death":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_E212EA52_AI933>FX_E212EA52_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":0.5,
+                    "StickToTheWorld":true
+                },
+                "Scale":1.2,
+                "ForcePlayUntilFxFinished":true,
+                "Name":"Chicken death"
+            }
+        ],
+        "NodeHitImpactFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_8702B0D4_AI933>FX_8702B0D4_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LD_Chicken_Elite_PvEOnly",
+        "Scale":3.5,
+        "ScaleVariance":0.1,
+        "SizeCategory":"Small",
+        "FxAttachmentScale":1.5
+    }
+]

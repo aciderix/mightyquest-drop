@@ -1,0 +1,1502 @@
+{
+ "10853": [
+  "Aceptar",
+  "OK",
+  "Ok",
+  "Xx"
+ ],
+ "10893": [
+  "Aceptar",
+  "OK",
+  "XX"
+ ],
+ "14178": [
+  "I",
+  "X"
+ ],
+ "14180": [
+  "I",
+  "X"
+ ],
+ "14182": [
+  "II",
+  "XX"
+ ],
+ "14184": [
+  "III",
+  "XXX"
+ ],
+ "14187": [
+  "I",
+  "X"
+ ],
+ "14189": [
+  "II",
+  "XX"
+ ],
+ "14191": [
+  "III",
+  "XXX"
+ ],
+ "14194": [
+  "I",
+  "X"
+ ],
+ "14196": [
+  "II",
+  "XX"
+ ],
+ "14198": [
+  "III",
+  "XXX"
+ ],
+ "14201": [
+  "I",
+  "X"
+ ],
+ "14203": [
+  "II",
+  "XX"
+ ],
+ "14205": [
+  "III",
+  "XXX"
+ ],
+ "14271": [
+  "I",
+  "X"
+ ],
+ "2275": [
+  "Aceptar",
+  "OK",
+  "Ok",
+  "Xx"
+ ],
+ "8737": [
+  "Aceptar",
+  "OK",
+  "Ok",
+  "Xx"
+ ],
+ "8756": [
+  "FXAA",
+  "XXXX"
+ ],
+ "AbilityCastType": [
+  "Area",
+  "Cone",
+  "Direct",
+  "Line",
+  "Targetted"
+ ],
+ "AbilityIndex": [
+  "Spell1",
+  "Spell10",
+  "Spell2",
+  "Spell3",
+  "Spell4",
+  "Spell5",
+  "Spell9"
+ ],
+ "AbilitySlotIndex": [
+  "Spell1",
+  "Spell2",
+  "Spell3",
+  "Spell5",
+  "Spell6",
+  "Spell7"
+ ],
+ "AbilityTag": [
+  "MineExploded",
+  "MineTriggered"
+ ],
+ "ActivateConsumableAnimationName": [
+  "IT_Purchase"
+ ],
+ "ArmorTag": [
+  "HardClothing",
+  "Metal",
+  "Stone",
+  "Wood"
+ ],
+ "ArrowDirection": [
+  "Down",
+  "Left",
+  "Right",
+  "Up"
+ ],
+ "ArrowPosition": [
+  "MiddleLeft",
+  "MiddleRight"
+ ],
+ "AttachFxOn": [
+  "Target"
+ ],
+ "AttackImpactSoundId": [
+  "Acid",
+  "Arrow",
+  "Chainlightning",
+  "Club",
+  "Fire",
+  "Flytrap",
+  "Mace",
+  "Spell",
+  "TwoHandedSword"
+ ],
+ "AttackImpactSoundLevelsProfileType": [
+  "Boss",
+  "Default",
+  "Hero"
+ ],
+ "AttackSource": [
+  "Chat",
+  "Friends",
+  "GuildMembersList",
+  "News",
+  "Revenge",
+  "SeasonalCompetition"
+ ],
+ "AttackableCastleStatus": [
+  "Shielded",
+  "Validable"
+ ],
+ "AutoAimType": [
+  "Area",
+  "Cone",
+  "Line"
+ ],
+ "BackPartName": [
+  "CP"
+ ],
+ "BackgroundImageUrlPrefix": [
+  "BackgroundSky"
+ ],
+ "BehaviorType": [
+  "Custom",
+  "DefendingSpawnCreature",
+  "HeroPet"
+ ],
+ "BodyPartName": [
+  "BD"
+ ],
+ "BoostTarget": [
+  "TrapBoost"
+ ],
+ "BuildCameraInitialTargetSpecContainerType": [
+  "Room"
+ ],
+ "BuildToolMode": [
+  "Move"
+ ],
+ "BuildableType": [
+  "AlongTheWallDecoration",
+  "Cannon",
+  "Creature",
+  "DefenseIngredientBoost",
+  "FloorDecoration",
+  "FreeStandingBuilding",
+  "FreeStandingDecoration",
+  "HighWallDecoration",
+  "MineField",
+  "SocleBuilding",
+  "Totem",
+  "Trigger",
+  "TrophyDecoration",
+  "WallDecoration"
+ ],
+ "BuilderDrag": [
+  "IT_Drag"
+ ],
+ "BuilderDrop": [
+  "IT_Drop"
+ ],
+ "BuildingType": [
+  "ArchitectOffice",
+  "BlackSmith",
+  "CastleHeart",
+  "CorneliusEmporium",
+  "CraftingMaterialMine",
+  "CreatureHatchery",
+  "CreatureMutator",
+  "GoldMine",
+  "GoldStorage",
+  "HeroTrainer",
+  "LifeForceMine",
+  "LifeForceStorage",
+  "PotionBrewery",
+  "PremiumCashMine",
+  "WorkerCabin"
+ ],
+ "ButtonContainer": [
+  "BlingButton",
+  "DefaultButton"
+ ],
+ "CHA_016_00_Run01": [
+  "Spider_Creature"
+ ],
+ "CHA_016_00_Wait02": [
+  "Spider_Creature"
+ ],
+ "CHA_016_00_Wait03": [
+  "Spider_Creature"
+ ],
+ "CHA_034_00_Attack01": [
+  "Regular_Layer",
+  "Turkey_Layer"
+ ],
+ "CHA_034_00_Attack02": [
+  "Regular_Layer",
+  "Turkey_Layer"
+ ],
+ "CHA_034_00_Death01": [
+  "Elite_Layer",
+  "Regular_Layer"
+ ],
+ "CHA_034_00_Fall01": [
+  "Elite_Layer",
+  "Regular_Layer"
+ ],
+ "CHA_034_00_Run01": [
+  "Elite_Layer",
+  "Regular_Layer"
+ ],
+ "CHA_034_00_Wait02": [
+  "Elite_Layer",
+  "Regular_Layer",
+  "Turkey_Layer"
+ ],
+ "CHA_034_00_Wait03": [
+  "Elite_Layer",
+  "Regular_Layer",
+  "Turkey_Layer"
+ ],
+ "CHA_034_IT_Drag01": [
+  "Elite_Layer",
+  "Regular_Layer",
+  "Turkey_Layer"
+ ],
+ "CHA_034_IT_Drop01": [
+  "Elite_Layer",
+  "Regular_Layer",
+  "Turkey_Layer"
+ ],
+ "CHA_034_IT_Purchase01": [
+  "Elite_Layer",
+  "Regular_Layer"
+ ],
+ "CHA_038_00_Attack01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Attack02": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Death01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Fall01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Run01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Spawn01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_SpelTail01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_SpellJump01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_SpellLand01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_SpellRain01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_SpellStomp01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_SpellTakeOff01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Wait02": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Wait03": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Wait04": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_00_Walk01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_IT_Drag01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_IT_Drop01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_038_IT_Purchase01": [
+  "Dragon_Layer",
+  "Raptor_Layer"
+ ],
+ "CHA_044_00_Attack04": [
+  "Boss_Fallen_Attack",
+  "Small_Fallen_Attack"
+ ],
+ "CHA_044_00_Run01": [
+  "Boss_Fallen_Step",
+  "Small_Fallen_Step"
+ ],
+ "CHA_044_00_Wait02": [
+  "Boss_Fallen_Wait02",
+  "Small_Fallen_Wait02"
+ ],
+ "CHA_044_00_Wait05": [
+  "Boss_Fallen_Wait05",
+  "Small_Fallen_Wait05"
+ ],
+ "CHA_044_00_Walk01": [
+  "Boss_Fallen_Step",
+  "Small_Fallen_Step"
+ ],
+ "CHA_044_1h_Attack01": [
+  "Boss_Fallen_Attack",
+  "Small_Fallen_Attack"
+ ],
+ "CHA_044_1h_Attack02": [
+  "Boss_Fallen_Attack",
+  "Small_Fallen_Attack"
+ ],
+ "CHA_044_1h_SpellTarget01": [
+  "Boss_Fallen_Laugh",
+  "Small_Fallen_Laugh"
+ ],
+ "CHA_044_A_Wait03": [
+  "Boss_Fallen_Shield",
+  "Small_Fallen_Shield"
+ ],
+ "CHA_044_C_Wait06": [
+  "Boss_Fallen_Wait06",
+  "Small_Fallen_Wait06"
+ ],
+ "CHA_044_IT_Drag01": [
+  "Boss_Fallen_Drag",
+  "Small_Fallen_Drag"
+ ],
+ "CHA_044_IT_Drop01": [
+  "Boss_Fallen_Drop",
+  "Small_Fallen_Drop"
+ ],
+ "CHA_045_00_SpellBodySlam01": [
+  "Derp_Slam",
+  "Derplicator_Slam"
+ ],
+ "CHA_050_00_Death01": [
+  "Boss_Snotter_Death",
+  "Grunt_Snotter_Death"
+ ],
+ "CHA_050_00_Enrage01": [
+  "Boss_Snotter_Enrage",
+  "Elite_Snotter_Enrage"
+ ],
+ "CHA_050_00_Run01": [
+  "Boss_Snotter_Run",
+  "Elite_Snotter_Run"
+ ],
+ "CHA_050_00_Wait02": [
+  "Boss_Snotter_Wait02",
+  "Grunt_Snotter_Wait02"
+ ],
+ "CHA_050_00_Wait03": [
+  "Boss_Snotter_Wait03",
+  "Grunt_Snotter_Wait03"
+ ],
+ "CHA_050_00_Walk01": [
+  "Boss_Snotter_Run",
+  "Elite_Snotter_Run"
+ ],
+ "CHA_050_IT_Drag01": [
+  "Boss_Snotter_Drag",
+  "Grunt_Snotter_Drag"
+ ],
+ "CHA_050_IT_Drop01": [
+  "Boss_Snotter_Drop",
+  "Grunt_Snotter_Drop"
+ ],
+ "CHA_050_IT_Purchase01": [
+  "Boss_Snotter_Purchase",
+  "Grunt_Snotter_Purchase"
+ ],
+ "CHA_051_00_Attack01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Attack02": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Death": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Death01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Fall01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_IT_Drop01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Resurect01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Run01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Spawn01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_00_Wait03": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CHA_051_Purchase01": [
+  "Elite_BagOfBones",
+  "Regular_BagOfBones"
+ ],
+ "CastleDefeatedAnimationName": [
+  "CastleDefeated"
+ ],
+ "CastleDifficulty": [
+  "Easy",
+  "Hard",
+  "Medium",
+  "TooHard"
+ ],
+ "CastleRenovationLevel": [
+  "RenovationComplete",
+  "RenovationLevel0",
+  "RenovationLevel1",
+  "RenovationLevel2",
+  "RenovationLevel3",
+  "RenovationLevel4"
+ ],
+ "CastleRenovationLevelRequirement": [
+  "RenovationComplete",
+  "RenovationLevel2",
+  "RenovationLevel3",
+  "RenovationLevel4"
+ ],
+ "CastleRootNodeName": [
+  "AttackSelectionCastleRootNode"
+ ],
+ "CastleSurviveAnimationName": [
+  "CastleSurvives"
+ ],
+ "CastleType": [
+  "Ubisoft"
+ ],
+ "Category": [
+  "Armor",
+  "Attack",
+  "AttackConsumables",
+  "BlacksmithHeroEquipment",
+  "Build",
+  "BuildConsumables",
+  "CastleTheme",
+  "Costume",
+  "Creatures",
+  "Decorations",
+  "Heroes",
+  "Jewels",
+  "Pets",
+  "Research",
+  "Rooms",
+  "Spells",
+  "Traps",
+  "UnifiedShopArchitect",
+  "UnifiedShopConsumables",
+  "UnifiedShopCosmetics",
+  "UnifiedShopDefend",
+  "UnifiedShopEquipment",
+  "Weapons"
+ ],
+ "CategoryType": [
+  "Capes",
+  "Costume",
+  "Gloves",
+  "Helm",
+  "Necklace",
+  "Pet",
+  "ShoulderArmor",
+  "SuitOfArmor",
+  "Weapon"
+ ],
+ "CloseDoor": [
+  "Door_Closing"
+ ],
+ "ClosedDoor": [
+  "Door_StateClosed"
+ ],
+ "CollisionGroup": [
+  "AttackerWall",
+  "Creature",
+  "Destructable",
+  "Hero",
+  "Missile",
+  "World"
+ ],
+ "Colour": [
+  "Common",
+  "Epic",
+  "Exceptional",
+  "Legendary",
+  "Magic"
+ ],
+ "CompletionTypeMask": [
+  "TreasureRoom"
+ ],
+ "Context": [
+  "SourceCastOrientation",
+  "SourceOrientation",
+  "SourceToTargetOrientation",
+  "SourceToTargetSideOrientation",
+  "TargetOrientation"
+ ],
+ "ContextId": [
+  "AffectedEntitiesCount",
+  "AreaDistance",
+  "AreaRadius",
+  "BoostConsumableValue",
+  "BuffElapsedTime",
+  "ChainMaxEntitiesCount",
+  "ChainRemainingEntitiesCount",
+  "CurrentConsumableValue",
+  "DieMovementOverallReduction",
+  "SourceHeight",
+  "SourceLevel",
+  "SourceLifeRatio",
+  "SourceLifeShieldsTotalValue",
+  "SourceRadius",
+  "SourceRemainingLife",
+  "SourceSpecialization",
+  "SourceTier",
+  "SourceTimeScale",
+  "SourceToTargetDistance",
+  "TargetAttackMaxDistance",
+  "TargetLifeRatio",
+  "TreasureGold"
+ ],
+ "CountryCode": [
+  "CA"
+ ],
+ "CreateObstacle": [
+  "CreateObstacle"
+ ],
+ "CreatureRank": [
+  "Boss",
+  "Captain",
+  "Elite"
+ ],
+ "CurrencyType": [
+  "IGC",
+  "LifeForce",
+  "PremiumCash"
+ ],
+ "DamageObstacle": [
+  "DamageObstacle"
+ ],
+ "DecorationCategory": [
+  "Cardboard",
+  "Carpet",
+  "Furniture"
+ ],
+ "DecorationCategoryMaskName": [
+  "All_Unlocalized",
+  "Cardboard_Unlocalized",
+  "Carpet_Unlocalized",
+  "Furniture_Unlocalized"
+ ],
+ "DecorationType": [
+  "Floor",
+  "FreeStanding"
+ ],
+ "DefaultAttachmentBone": [
+  "Bip01"
+ ],
+ "DestroyObstacle": [
+  "DestroyObstacle"
+ ],
+ "DoorState": [
+  "Closed"
+ ],
+ "EffectCategory": [
+  "BonusMaterial"
+ ],
+ "EffectFieldDistributionType": [
+  "Random"
+ ],
+ "EffectName": [
+  "ChestsOpeningTrigger",
+  "Door_TreasureRoom",
+  "Stairs_Fake_Exit_L",
+  "Stairs_Fake_Exit_R",
+  "TestAttackConditionTrigger",
+  "TreasureRoomEntranceGrid",
+  "TreasureRoomExitDoor",
+  "TreasureRoomStairLeft",
+  "TreasureRoomStairRight",
+  "TreasureRoomTrigger",
+  "VictoryAnimationTrigger"
+ ],
+ "EndType": [
+  "WithPrevious"
+ ],
+ "EntityType": [
+  "Creature",
+  "Room"
+ ],
+ "EnvironmentName": [
+  "Default",
+  "Region_1",
+  "Region_2",
+  "Region_3",
+  "Region_4",
+  "Region_5",
+  "Region_6",
+  "Region_7",
+  "Sky_BeforeDusk",
+  "Sky_Cathedral",
+  "Sky_Clubbage",
+  "Sky_Cryptic",
+  "Sky_Darkness",
+  "Sky_Dragonficus",
+  "Sky_Durr",
+  "Sky_Firesly",
+  "Sky_FogWhite",
+  "Sky_Forest",
+  "Sky_Halloween",
+  "Sky_Marleybone",
+  "Sky_Moonlight",
+  "Sky_Snotingham",
+  "Sky_SnowStone",
+  "Sky_Stabbington",
+  "Sky_VIP001",
+  "Sky_Watchdog"
+ ],
+ "EquipArmorAnimationName": [
+  "IT_Armor"
+ ],
+ "EquipUserInterfaceSoundId": [
+  "EquipArmorSound",
+  "EquipClothSound",
+  "EquipCrossbowSound",
+  "EquipLeatherSound",
+  "EquipNecklaceSound",
+  "EquipPetSound",
+  "EquipRingSound",
+  "EquipStaffSound",
+  "EquipSwordSound"
+ ],
+ "EquipWeaponAnimationName": [
+  "IT_Weapon"
+ ],
+ "EventName": [
+  "EnteredTreasureChestZone",
+  "EnteringCastleHeartBuildingZone",
+  "GoldStorageChestOpening",
+  "LifeForceStorageChestOpening",
+  "TestAttackDoorConditionTriggering",
+  "VictoryAnimationTriggering"
+ ],
+ "FacePartName": [
+  "FC"
+ ],
+ "GameButton": [
+  "ArchitectShopButton",
+  "BlacksmithHeroEquipmentButton",
+  "BuyBackShopButton",
+  "CreaturesShopButton",
+  "FeaturedShopButton",
+  "ForgeShopButton",
+  "PacksShopButton",
+  "PotionShopButton",
+  "ReforgeShopButton",
+  "TrapBoostShopButton",
+  "TrapsShopButton",
+  "UnifiedShopBuyBackTab",
+  "UnifiedShopConsumablesTab",
+  "UnifiedShopCosmeticsTab",
+  "UnifiedShopDefendTab",
+  "UnifiedShopEquipmentTab",
+  "UnifiedShopFeaturedTab",
+  "UnifiedShopPremiumPack"
+ ],
+ "GameButtonId": [
+  "AttackSelectionBossShortcutButton",
+  "AttackSpellButton4",
+  "BuildActionMoveButton",
+  "BuildDefenseRatingIcon",
+  "BuildTestAttackButton",
+  "BuildingNavBarButtonArchitectOffice",
+  "BuildingNavBarButtonBlacksmith",
+  "BuildingNavBarButtonCorneliusEmporium",
+  "BuildingNavBarButtonPotionBrewery",
+  "BuildingUpgradePopupUpgradeButton",
+  "CastleVisitBack",
+  "CraftingCollectButton",
+  "CraftingCraftGold",
+  "ForgeButtonMagic",
+  "HeroInventoryCloseButton",
+  "LobbyAttackSelectionWorldMapButton",
+  "LobbyBuildButton",
+  "LobbyHeroEquipmentTabButton",
+  "LobbyHeroSkillTreeButton",
+  "NavBarGuildsButton",
+  "None",
+  "ObjectiveListFirstEntryButton"
+ ],
+ "GameCameraInterpolation": [
+  "MoveTo",
+  "Orbit"
+ ],
+ "GameStateType": [
+  "AccountCreation",
+  "AttackSelection"
+ ],
+ "HandsPartName": [
+  "GT"
+ ],
+ "Harvest": [
+  "IT_Purchase"
+ ],
+ "HeadPartName": [
+  "HE"
+ ],
+ "HeroItemCategoryType": [
+  "Capes",
+  "Costume",
+  "Gloves",
+  "Helm",
+  "Necklace",
+  "Pet",
+  "ShoulderArmor",
+  "SuitOfArmor",
+  "Weapon"
+ ],
+ "Icon": [
+  "default"
+ ],
+ "ImpactSoundId": [
+  "Acid",
+  "Arrow",
+  "Beartrap",
+  "Chainlightning",
+  "Charge",
+  "Claw",
+  "Claws",
+  "Cleave",
+  "Club",
+  "Fire",
+  "Fist",
+  "Flytrap",
+  "Hamster",
+  "Ice",
+  "Mace",
+  "Spell",
+  "TwoHandedSword"
+ ],
+ "InstanceCreatorType": [
+  "AllInstancesCreators",
+  "LastInstanceCreator"
+ ],
+ "InstancesRefreshType": [
+  "AllInstances",
+  "AllInstancesOfSameCreator"
+ ],
+ "InteractionActivationTrigger": [
+  "DoneByCode",
+  "OnNoAggroAndTestAttackCondition"
+ ],
+ "InteractionAnimationName": [
+  "CastleHeart_Breaking",
+  "Chest_Opening",
+  "Door_Opening"
+ ],
+ "InteractionType": [
+  "OpenChest",
+  "OpenDoor"
+ ],
+ "InternalShapeType": [
+  "Square"
+ ],
+ "InventoryItemType": [
+  "HeroEquipmentItem"
+ ],
+ "ItemType": [
+  "Building",
+  "CastleForSale",
+  "CastleTheme",
+  "Consumable",
+  "Creature",
+  "Decoration",
+  "HeroEquipmentItem",
+  "Room",
+  "Trap"
+ ],
+ "JobType": [
+  "AccountExport",
+  "CreateChatRoom",
+  "DestroyChatRoom",
+  "Email",
+  "EndUbisoftCompetition",
+  "GiveGuildRewards",
+  "GiveLeagueAndWorldRewards",
+  "KeepAlivePublishedCastles",
+  "UpdateGuildChatRoom"
+ ],
+ "KnockbackStyle": [
+  "Ballistic"
+ ],
+ "Label": [
+  "Label2",
+  "Label3",
+  "Label4",
+  "Label5"
+ ],
+ "LanguageCode": [
+  "de",
+  "en",
+  "fr",
+  "pl",
+  "pt",
+  "ru"
+ ],
+ "Line Status": [
+  "Approved",
+  "Deprecated",
+  "Unused"
+ ],
+ "LockOnDisabledPickingType": [
+  "AllButLockedOnCastle",
+  "AllCastles",
+  "None"
+ ],
+ "LockType": [
+  "Hide",
+  "Lock"
+ ],
+ "LootAction": [
+  "Action"
+ ],
+ "MaxCastleRenovationLevel": [
+  "RenovationComplete",
+  "RenovationLevel1",
+  "RenovationLevel2",
+  "RenovationLevel3",
+  "RenovationLevel4"
+ ],
+ "MinCastleRenovationLevel": [
+  "RenovationComplete"
+ ],
+ "MinCraftQuality": [
+  "Magic"
+ ],
+ "MinHeroItemQualityToPickUp": [
+  "Epic",
+  "Exceptional",
+  "Legendary",
+  "Magic"
+ ],
+ "MinItemQuality": [
+  "Epic",
+  "Exceptional",
+  "Legendary",
+  "Magic"
+ ],
+ "MinReforgeQuality": [
+  "Magic"
+ ],
+ "MinimumQualityPowerUpUnlock": [
+  "Magic"
+ ],
+ "Necklace": [
+  "Magic"
+ ],
+ "NextCastleRenovationLevel": [
+  "RenovationComplete",
+  "RenovationLevel2",
+  "RenovationLevel3",
+  "RenovationLevel4"
+ ],
+ "NotificationType": [
+  "CastleBought"
+ ],
+ "OnAfterAggroActivityEndedAndTestAttackCondition": [
+  "Open"
+ ],
+ "OnAggroStarted": [
+  "Close"
+ ],
+ "OnAllTotemsDeactivated": [
+  "Open"
+ ],
+ "OnChestLocked": [
+  "Open"
+ ],
+ "OnChestOpened": [
+  "Close",
+  "Open"
+ ],
+ "OnCreation": [
+  "Close"
+ ],
+ "OnCreatureAlerted": [
+  "Close"
+ ],
+ "OnNoCreaturesAlerted": [
+  "Open"
+ ],
+ "OnTestAttackStarted": [
+  "Close"
+ ],
+ "OnTotemActivated": [
+  "Close"
+ ],
+ "OpenDoor": [
+  "Door_Opening"
+ ],
+ "OpenedDoor": [
+  "Door_StateOpen"
+ ],
+ "OperationLabel": [
+  "BadDog_OnDeathHowl",
+  "Chest_Opening",
+  "ClusterCluck_OnDeathAoE",
+  "Explosion_Warning",
+  "GelatinousWall_FallCompleted",
+  "HeroMeleeAttack2",
+  "IcyPrison",
+  "MeteorStrike",
+  "MineDestroyed",
+  "MineExplosion",
+  "PinballWoosh",
+  "Rambone_Bounce",
+  "Rambone_Explosion",
+  "TrapSnap",
+  "TriggerRotatingCannonsFire",
+  "Zap"
+ ],
+ "Operator": [
+  "Greater",
+  "GreaterOrEqual",
+  "Lesser",
+  "LesserOrEqual"
+ ],
+ "Orientation": [
+  "Back",
+  "Left",
+  "Right",
+  "SourceCastOrientation",
+  "SourceOrientation"
+ ],
+ "OverlayType": [
+  "Outline"
+ ],
+ "PET_007_00_AttackWait01": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PET_007_00_AttackWait02": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PET_007_00_AttackWait03": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PET_007_00_AttackWait04": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PET_007_00_Run01": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PET_007_00_Wait01": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PET_007_00_Wait02": [
+  "BabyBeholderPets_Layer"
+ ],
+ "PanelName": [
+  "AttackReportPanel",
+  "AttackSelectionPlayerMiniCastlePanel",
+  "CastleRenovationLevelCompletedPanel",
+  "CastleRenovationPanel",
+  "CastleVisitPanel",
+  "CraftingStampingCounterPanel",
+  "CreatureTrapSpecialization",
+  "ErrorPanel",
+  "GuildProfile",
+  "LotteryTicketPanel",
+  "RenovateBuildingPanel",
+  "Shop",
+  "ShopPc",
+  "SkillTree",
+  "VideoCapturePanel",
+  "battleLog",
+  "buildingPopUp",
+  "buildingPopup",
+  "buildingUpgradePopup",
+  "castleInventory",
+  "castlePopup",
+  "castleSelection",
+  "chat",
+  "chooseDisplayName",
+  "chooseFirstHero",
+  "forge",
+  "heroInventory",
+  "heroLevelUp",
+  "objectivePopup",
+  "objectivepopup",
+  "regionSelection",
+  "shop",
+  "shopConfirmationPopup",
+  "skillTree"
+ ],
+ "ParticleName": [
+  "PE_Agro_Radius_Kicker"
+ ],
+ "PercentScrollName": [
+  "UI_9_SLICE"
+ ],
+ "PercentTextName": [
+  "SLOADINGPROGRESS"
+ ],
+ "PhysicRigidBodyType": [
+  "Static"
+ ],
+ "PickingStyle": [
+  "Ground",
+  "High"
+ ],
+ "PlayMode": [
+  "One"
+ ],
+ "PlayUntil": [
+  "ActiveEnd",
+  "PrepareEnd",
+  "RecoverEnd"
+ ],
+ "PopupBindingVariable": [
+  "FloatingNarrativeBox_Node",
+  "FloatingText_Node",
+  "NarrativeBox_Node",
+  "TextInformationArrow_Node",
+  "TextInformation_Node",
+  "TextInformation_node"
+ ],
+ "Position": [
+  "BottomCenter",
+  "BottomLeft",
+  "MiddleCenter",
+  "MiddleRight",
+  "Source",
+  "Target",
+  "TopLeft"
+ ],
+ "PositionRestrictionType": [
+  "ValidThroughCornerAndNonWallCollision",
+  "ValidThroughCorners"
+ ],
+ "PurchaseAnimationName": [
+  "IT_Purchase"
+ ],
+ "Quality": [
+  "Epic",
+  "Exceptional",
+  "Legendary",
+  "Magic"
+ ],
+ "Rank": [
+  "Boss",
+  "Captain",
+  "Elite"
+ ],
+ "Rarity": [
+  "Named"
+ ],
+ "ReceiverType": [
+  "Both",
+  "Target"
+ ],
+ "RestrictionType": [
+  "InvalidThroughCollision"
+ ],
+ "ResultCombinationType": [
+  "And"
+ ],
+ "Ring": [
+  "Magic"
+ ],
+ "RoomBuildableType": [
+  "Cannon",
+  "DefenseIngredientBoost",
+  "FloorDecoration",
+  "FreeStandingBuilding",
+  "FreeStandingDecoration",
+  "MineField",
+  "SocleBuilding",
+  "Totem",
+  "Trigger"
+ ],
+ "RoomBuildable_Invalid": [
+  "ROOMBUILDABLE_INVALID"
+ ],
+ "RoomBuildable_OutsideGrid": [
+  "ROOMBUILDABLE_OUTSIDEGRID"
+ ],
+ "RoomBuildable_PickedUp": [
+  "ROOMBUILDABLE_PICKEDUP"
+ ],
+ "RoomBuildable_Valid": [
+  "ROOMBUILDABLE_VALID"
+ ],
+ "RoomModelCategory": [
+  "Corner",
+  "Corridor",
+  "CrossRoad",
+  "EmptyThrone",
+  "GameplayThrone",
+  "TJunction"
+ ],
+ "Room_Invalid": [
+  "ROOM_INVALID"
+ ],
+ "Room_PickedUp": [
+  "ROOM_PICKEDUP"
+ ],
+ "Room_Valid": [
+  "ROOM_VALID"
+ ],
+ "SaveSpawnedEntitySlot": [
+  "GhostHawk"
+ ],
+ "SaveTargetSlot": [
+  "TreasureRoomTarget"
+ ],
+ "SaveVectorSlot": [
+  "Durrrr_Missile_Position",
+  "EndingPosition",
+  "Mage_Fireball_Position"
+ ],
+ "SearchMethod": [
+  "Closest",
+  "Default",
+  "LeastLife",
+  "Random"
+ ],
+ "ShopCategory": [
+  "Armor",
+  "AttackConsumables",
+  "BlacksmithHeroEquipment",
+  "Boosts",
+  "Buildings",
+  "BuyBack",
+  "CastleTheme",
+  "Costume",
+  "CraftingMaterialsPacks",
+  "Creatures",
+  "CreaturesUpgrades",
+  "Decorations",
+  "Dyes",
+  "ForgeCrafted",
+  "ForgeReforged",
+  "ForgeUpgraded",
+  "Heroes",
+  "Jewels",
+  "Pets",
+  "PremiumCash",
+  "Rooms",
+  "TrapBoost",
+  "Traps",
+  "TrapsUpgrades",
+  "UnifiedShopConsumables",
+  "UnifiedShopCosmetics",
+  "UnifiedShopDefend",
+  "UnifiedShopEquipment",
+  "UnifiedShopFeatured",
+  "UnifiedShopPremiumPack",
+  "Weapons"
+ ],
+ "ShouldersPartName": [
+  "SH"
+ ],
+ "SizeCategory": [
+  "Large",
+  "Small"
+ ],
+ "Slot": [
+  "CourageValue",
+  "Durrrr_Missile_Position",
+  "EndingPosition",
+  "GhostHawk",
+  "Mage_Fireball_Position",
+  "SpeedSlashValue",
+  "TreasureRoomTarget",
+  "WheelMovementDirection"
+ ],
+ "SoundArmorTag": [
+  "Flesh",
+  "HardClothing",
+  "Metal"
+ ],
+ "SpawnRestrictionType": [
+  "InvalidThroughCollision",
+  "ValidOnNavMesh",
+  "ValidThroughCorners"
+ ],
+ "SpawnTrigger": [
+  "OnAggroed"
+ ],
+ "SpecContainerType": [
+  "Building",
+  "Decoration",
+  "Effect",
+  "Room",
+  "Trap"
+ ],
+ "SpecialPackGroup": [
+  "Diamond",
+  "DoubleO",
+  "DoubleOV2"
+ ],
+ "StartType": [
+  "WithPrevious"
+ ],
+ "StatType": [
+  "AttackSpeed",
+  "BasicAttackDamage",
+  "CriticalHitResilience",
+  "DamageReduction",
+  "DamageReflection",
+  "Dodge",
+  "GoldFind",
+  "Health",
+  "HealthOrbBonus",
+  "HealthRegeneration",
+  "HealthStolen",
+  "IncreasedAttackSpeed",
+  "KnockBack",
+  "LifeForceGain",
+  "MagicFind",
+  "Mana",
+  "ManaCostReduction",
+  "ManaRegeneration",
+  "ManaStolen",
+  "MovementReduction",
+  "MovementSpeed",
+  "NormalStatTypesCount",
+  "PoisonTarget",
+  "SkillDamage",
+  "SnareTarget",
+  "StunDurationReduction",
+  "StunTarget",
+  "TrapStunDurationReduction",
+  "XPGain"
+ ],
+ "StateName": [
+  "Death",
+  "DeathSpirit",
+  "Enraged",
+  "Reraise",
+  "Shield",
+  "Shielded",
+  "Sleeping"
+ ],
+ "StatsSpecContainerType": [
+  "Effect",
+  "Trap"
+ ],
+ "StatusTextName": [
+  "SSTATUSTEXT"
+ ],
+ "SteamStatId": [
+  "AmountOfGoldCollected",
+  "CreaturesPlacedInCastle",
+  "NumberOfBossesKilled",
+  "NumberOfCastleRooms",
+  "NumberOfCastlesDefeatedConsecutively",
+  "NumberOfCreaturesKilled",
+  "NumberOfFriendCastlesDefeated",
+  "NumberOfFriends",
+  "NumberOfHeroesDefeated",
+  "NumberOfHigherLevelCastlesDefeated",
+  "NumberOfItemsLooted",
+  "NumberOfLowerLevelCastlesDefeated",
+  "NumberOfPotionsUsed",
+  "NumberOfSameLevelCastlesDefeated",
+  "NumberOfSpidersKilled",
+  "NumberOfVampiresKilled"
+ ],
+ "StopCondition": [
+  "StopUponFailure"
+ ],
+ "StorageChestClosedStateAnimName": [
+  "Chest_Close"
+ ],
+ "TRA_011_Death01": [
+  "IceWall",
+  "JellyWall",
+  "LavaWall"
+ ],
+ "TRA_011_FallRecover01": [
+  "IceWall",
+  "JellyWall",
+  "LavaWall"
+ ],
+ "TargetType": [
+  "Hero"
+ ],
+ "TextAnimationEffect": [
+  "fadeIn"
+ ],
+ "TileAnimationType": [
+  "verticalTopToBottom"
+ ],
+ "TreasureRoomEntranceTriggerFieldName": [
+  "TreasureRoomTrigger"
+ ],
+ "TriggerState": [
+  "Leaving"
+ ],
+ "Type": [
+  "Ability",
+  "AbilityCastPosition",
+  "AbilityCastTarget",
+  "AggroTarget",
+  "AggroTargetPosition",
+  "Arrow",
+  "BlacksmithHeroEquipment",
+  "CastleLevel",
+  "CharCount",
+  "DecorationCategory",
+  "EntryCount",
+  "FloatingNarrativeBox",
+  "Hero",
+  "HeroLevel",
+  "Information",
+  "IsSourceLinkedToTotem",
+  "IsSourceStunned",
+  "IsTargetImmuneToTotemStun",
+  "NarrativeBox",
+  "OverlayAndPartialOverride",
+  "PartialOverride",
+  "RandomDirection",
+  "SimpleBox",
+  "Source",
+  "SourceDirection",
+  "SourceOwner",
+  "SourceOwnerPosition",
+  "SourcePosition",
+  "SourceToTargetDirection",
+  "StaticScreen",
+  "TargetOrAbilityCastPosition",
+  "TargetPosition",
+  "Trap",
+  "UnifiedShopArchitect",
+  "UnifiedShopConsumables",
+  "UnifiedShopCosmetics",
+  "UnifiedShopDefend",
+  "UnifiedShopEquipment"
+ ],
+ "UiContainerName": [
+  "UI_Common_RegionMap_Castle_BlingsLanding",
+  "UI_Common_RegionMap_Castle_GlimmeringValley",
+  "UI_Common_RegionMap_Castle_LittleSpitaly",
+  "UI_Common_RegionMap_Castle_NovaGloatia",
+  "UI_Common_RegionMap_Castle_ScentedGardens",
+  "UI_Common_RegionMap_Castle_StabbinShire",
+  "UI_Common_RegionMap_Castle_TheFriendzone",
+  "UI_Common_RegionMap_Castle_UpperBestmount"
+ ],
+ "VisualGroup": [
+  "CASTLE_EVO_1",
+  "CASTLE_EVO_2",
+  "CASTLE_EVO_3",
+  "CASTLE_EVO_4",
+  "CASTLE_EVO_5"
+ ],
+ "VisualNodeName": [
+  "DUM_BROKEN",
+  "DUM_CREATE",
+  "DUM_DAMAGE",
+  "Destructible_State_Destroyed",
+  "Destructible_State_Undamaged",
+  "R1_DestructibleState_Destroyed",
+  "R1_DestructibleState_Undamaged",
+  "R2_DestructibleState_Destroyed",
+  "R2_DestructibleState_Undamaged",
+  "R3_DestructibleState_Destroyed",
+  "R3_DestructibleState_Undamaged",
+  "R4_DestructibleState_Destroyed",
+  "R4_DestructibleState_Undamaged",
+  "R5_DestructibleState_Destroyed",
+  "R5_DestructibleState_Undamaged",
+  "R6_DestructibleState_Destroyed",
+  "R6_DestructibleState_Undamaged",
+  "R7_DestructibleState_Destroyed",
+  "R7_DestructibleState_Undamaged"
+ ],
+ "VisualShieldedMineNodeName": [
+  "MineShield"
+ ],
+ "VoiceOverSoundId": [
+  "Objective300_VO_NUE_005_01FEN_DRY16574",
+  "Objective301_VO_NUE_005_03COR_DRY16578",
+  "Objective302_VO_NUE_005_04TYB_DRY16580",
+  "Objective303_VO_NUE_005_05COR_DRY16582",
+  "Objective304_VO_NUE_005_06COR_DRY16584",
+  "Objective305_VO_NUE_005_10COR_DRY16593",
+  "Objective306_VO_NUE_005_11NIG_DRY16595"
+ ],
+ "VolumeName": [
+  "FX_Feet",
+  "FX_WeaponImpact",
+  "FX_WeaponTrail01",
+  "FX_WeaponTrail02",
+  "FX_WeaponTrailBase",
+  "FX_WeaponTrailMiddle",
+  "FX_WeaponTrailTop",
+  "FX_WeaponTrail_01",
+  "FX_WeaponTrail_02",
+  "FX_WeaponVolume"
+ ],
+ "ZoneCode": [
+  "NA"
+ ]
+}

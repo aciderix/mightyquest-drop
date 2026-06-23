@@ -1,0 +1,47 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":3,
+        "EndRadius":3,
+        "TouchedEntitiesType":2,
+        "AllianceFilter":4,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":4
+        },
+        "CollisionCheckInterval":0.1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":93
+                    },
+                    "Label":"Label3",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "Label":"Label3"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    }
+]

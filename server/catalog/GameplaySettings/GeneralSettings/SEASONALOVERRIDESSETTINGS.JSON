@@ -1,0 +1,52 @@
+{
+    "NodeFilterGroupsToSeasonalEvents":
+    {
+        "NORMAL":{
+            "Id":"NORMAL",
+            "Name":"Normal"
+        },
+        "ORDINARYDAY":{
+            "Id":"NORMAL",
+            "Name":"Normal"
+        },
+        "HALLOWEEN":{
+            "Id":"HALLOWEEN",
+            "Name":"Halloween"
+        },
+        "CHRISTMAS":{
+            "Id":"CHRISTMAS",
+            "Name":"Christmas"
+        },
+        "NEWYEAREVE":{
+            "Id":"NEWYEAREVE",
+            "Name":"NewYearEve"
+        },
+        "ANNIVERSARY":{
+            "Id":"ANNIVERSARY",
+            "Name":"Anniversary"
+        },
+        "VALENTINESDAY":{
+            "Id":"VALENTINESDAY",
+            "Name":"ValentinesDay"
+        },
+        "EASTER":{
+            "Id":"EASTER",
+            "Name":"Easter"
+        }
+    },
+    "SeasonalEntitiesOverridesCollection":
+    {
+        "HALLOWEEN":{
+            
+        },
+        "THANKSGIVING":{
+            "CreaturesOverrides":
+            {
+                "101":112
+            }
+        },
+        "CHRISTMAS":{
+            
+        }
+    }
+}

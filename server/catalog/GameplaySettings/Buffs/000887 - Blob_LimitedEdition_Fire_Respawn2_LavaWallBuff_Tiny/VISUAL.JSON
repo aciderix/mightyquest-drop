@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuffFxSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_2E26137A_BB579>SPECIALFX_2E26137A_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "LockRotation":true,
+                    "InheritParentScale":true
+                },
+                "Scale":0.5,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "BuffRemovedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualScaleFxSpec, HyperQuest.GameServer.Contracts",
+                "TargetScale":2.25,
+                "ScaleDuration":2
+            }
+        ]
+    }
+]

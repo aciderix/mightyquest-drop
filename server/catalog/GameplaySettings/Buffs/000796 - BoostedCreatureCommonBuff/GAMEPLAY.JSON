@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"Health",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.3
+                },
+                "IsAdditive":true
+            }
+        ],
+        "Flags":10,
+        "BuffStopTriggers":{
+            
+        }
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Clubbage_Spawn",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6ACBBCF1_AI145>ENTITY_6ACBBCF1_AI145.ENTITY",
+        "Scale":1.2,
+        "FxAttachmentScale":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "HitImpactHeight":1.8
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6ACBBCF1_AI145>ENTITY_6ACBBCF1_AI145.ENTITY",
+                        "Scale":1.2
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6ACBBCF1_AI145>ENTITY_6ACBBCF1_AI145.ENTITY",
+                        "Scale":1.2
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_7CFAE16F>SPECIALEFFECTS_7CFAE16F.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    }
+]

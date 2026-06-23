@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cardboard_Guardian",
+        "OasisName":15394,
+        "OasisDescription":15395
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_015_Cardboard_Guardian.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_015_Cardboard_Guardian.png",
+        "HeightOffset":2
+    }
+]

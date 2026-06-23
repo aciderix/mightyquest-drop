@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDeathBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Delay":1,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Creature":{
+                                "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":20
+                            },
+                            "CreatureCount":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":3
+                            },
+                            "DistanceToSpawn":1,
+                            "Level":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"SourceLevel"
+                            },
+                            "IsSpawnSpecApplied":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "Flags":2,
+        "IsLinkedToCreator":true
+    }
+]

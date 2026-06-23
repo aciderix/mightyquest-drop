@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Shield",
+        "OasisName":13566,
+        "OasisDescription":13567
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/creatureBuffs_defenseUp.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_defenseUp",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

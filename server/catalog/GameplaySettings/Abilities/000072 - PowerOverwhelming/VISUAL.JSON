@@ -1,0 +1,45 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"GEN_LifeForceSpell_PowerOverWhelming",
+        "Scale":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellLifeForce"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_6165980F>SPECIALFX_6165980F.SPECIALFX",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_1E0162DE.MATERIAL",
+                            "NodeAttachment":{
+                                
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

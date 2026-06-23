@@ -1,0 +1,64 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_FireBolt_03_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_3A022D8F_AI933>MESH_3A022D8F_AI933.MESH"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_9E1F8F83>FX_9E1F8F83.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "StopForcedPlayFx":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_C9AD8626_AI933.MATERIAL",
+                "Length":30,
+                "SpaceBetweenSegment":0.3,
+                "SegmentLifeTime":0.5,
+                "FadeInTime":5,
+                "FadeOutTime":4,
+                "FadeInDistance":3,
+                "FadeOutDistance":3,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.5
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.5
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "EntityHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "PlayMode":"One"
+            }
+        ],
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_1216A987>FX_1216A987.SPECIALFX",
+                "PlayMode":"One"
+            }
+        ]
+    }
+]

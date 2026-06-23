@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_002_Fire_MineField",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_FDAB269A>MESH_FDAB269A.MESH",
+        "Scale":0.75,
+        "SizeCategory":"Small",
+        "HideInModeMask":1
+    }
+]

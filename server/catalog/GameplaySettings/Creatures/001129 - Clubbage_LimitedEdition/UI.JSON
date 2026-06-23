@@ -1,0 +1,46 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Captain Clubbage",
+        "OasisName":16252,
+        "OasisDescription":16253
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/inspectredrubbage.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/inspectredrubbage.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:inspectredrubbage",
+        "HeightOffset":3.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7813
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7813
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

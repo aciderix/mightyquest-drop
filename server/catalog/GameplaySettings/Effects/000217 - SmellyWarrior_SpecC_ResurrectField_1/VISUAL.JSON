@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_044_Fallen_ResurrectField_1"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "FieldShowFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_966494A8_BA618>SPECIAL EFFECT_966494A8_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    }
+]

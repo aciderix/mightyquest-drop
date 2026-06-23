@@ -1,0 +1,45 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082B2C.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082B2C.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082B36.SOUND"
+        },
+        "ArmorTag":"HardClothing",
+        "AttackImpactSoundLevelsProfileType":"Default"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Claw"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_038_00_Attack01":"Raptor_Layer",
+            "CHA_038_00_Attack02":"Raptor_Layer",
+            "CHA_038_00_Death01":"Raptor_Layer",
+            "CHA_038_00_Run01":"Raptor_Layer",
+            "CHA_038_00_Spawn01":"Raptor_Layer",
+            "CHA_038_00_SpellJump01":"Raptor_Layer",
+            "CHA_038_00_SpellLand01":"Raptor_Layer",
+            "CHA_038_00_SpellRain01":"Raptor_Layer",
+            "CHA_038_00_SpellStomp01":"Raptor_Layer",
+            "CHA_038_00_SpellTakeOff01":"Raptor_Layer",
+            "CHA_038_00_SpelTail01":"Raptor_Layer",
+            "CHA_038_00_Wait02":"Raptor_Layer",
+            "CHA_038_00_Wait03":"Raptor_Layer",
+            "CHA_038_00_Wait04":"Raptor_Layer",
+            "CHA_038_00_Walk01":"Raptor_Layer",
+            "CHA_038_IT_Drag01":"Raptor_Layer",
+            "CHA_038_IT_Drop01":"Raptor_Layer",
+            "CHA_038_IT_Purchase01":"Raptor_Layer",
+            "CHA_038_00_Fall01":"Raptor_Layer"
+        }
+    }
+]

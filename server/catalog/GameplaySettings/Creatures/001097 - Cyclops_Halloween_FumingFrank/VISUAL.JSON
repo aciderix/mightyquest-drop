@@ -1,0 +1,84 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":4,
+        "HitImpactHeight":1.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_2E01724C_BC666>ENTITY_2E01724C_BC666.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_987BEECF_AI145>ENTITY_987BEECF_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_987BEECF_AI145>ENTITY_987BEECF_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_987BEECF_AI145>ENTITY_987BEECF_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_E96EC26E_AI145>ENTITY_E96EC26E_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_E96EC26E_AI145>ENTITY_E96EC26E_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_E96EC26E_AI145>ENTITY_E96EC26E_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_9209F67E_AI145>ENTITY_9209F67E_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_9209F67E_AI145>ENTITY_9209F67E_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_9209F67E_AI145>ENTITY_9209F67E_AI145.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Cyclops_Halloween_FumingFrank",
+        "Scale":0.85,
+        "FxAttachmentScale":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_42FB230C_BA618>SPECIALFX_42FB230C_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":2.5
+                },
+                "Scale":1.5,
+                "StopForcedPlayFx":false
+            }
+        ]
+    }
+]

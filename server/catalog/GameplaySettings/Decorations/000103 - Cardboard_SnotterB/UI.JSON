@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cardboard_SnotterB",
+        "OasisName":14849,
+        "OasisDescription":14853
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Cardboard_Snotter_A.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Cardboard_Snotter_A.png",
+        "HeightOffset":2
+    }
+]

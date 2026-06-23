@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SmellyWarrior_SpecB_Shield",
+        "OasisName":13237,
+        "OasisDescription":13238
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/CREATUREBUFFS_INVINCIBILITY.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_invincibility",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

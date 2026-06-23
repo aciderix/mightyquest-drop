@@ -1,0 +1,116 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BonePuppeteer_LimitedEdition_DamageReverser",
+        "OasisName":16680,
+        "OasisDescription":16683
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/NurseBone.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/NurseBone.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:NurseBone"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/NurseBone.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/NurseBone.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:NurseBone"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/NurseBone.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/NurseBone.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:NurseBone"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/NurseBone.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/NurseBone.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:NurseBone"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"DamageReverser_Ability",
+                    "OasisName":16684
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Improved crit",
+                    "OasisName":7791
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Rage {0}",
+                    "OasisName":7793
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"100"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"Flee",
+                    "OasisName":7792
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/movementAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Improved dodge",
+                    "OasisName":9571
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Very Large size",
+                    "OasisName":7794
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/resistanceToKnockBack.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/NurseBone.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/NurseBone.png",
+        "LayerName":"UI_Common_CreaturesIconsInv_Rares:NurseBone",
+        "HeightOffset":1.75
+    }
+]

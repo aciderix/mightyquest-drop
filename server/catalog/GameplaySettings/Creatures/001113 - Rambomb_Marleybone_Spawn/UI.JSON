@@ -1,0 +1,39 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SmellyArcher_LimitedEdition_Grenadier",
+        "OasisName":15643,
+        "OasisDescription":15644
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/goatman3.png",
+                        "NameOasisId":15643,
+                        "DescriptionOasisId":15644
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/rambone.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/rambone.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:rambone",
+        "HeightOffset":2.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

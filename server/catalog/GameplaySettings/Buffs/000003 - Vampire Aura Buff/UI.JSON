@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Vampire Aura Buff",
+        "OasisName":1979,
+        "OasisDescription":1980
+    }
+]

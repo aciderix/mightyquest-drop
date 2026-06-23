@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Fire"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioPersistentEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "CreateSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008B423.SOUND",
+            "FireAndForget":true
+        },
+        "DestroySound":{
+            
+        }
+    }
+]

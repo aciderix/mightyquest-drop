@@ -1,0 +1,217 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":5.6,
+        "StartLength":2.4,
+        "EndLength":2.4,
+        "LocalStartOffsetX":-1.2,
+        "GameEntityTypeMask":-981,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":8
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                        "SpecContainersIds":
+                        [
+                            1147,
+                            1148,
+                            1149
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfSuccess":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":894,
+                            "Name":"Trap_LavaWall_SlowBuff_NoBurnFX"
+                        },
+                        "Label":"Label3",
+                        "BakedSpellInfo":{
+                            
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "_comment":"Slow with no Black Burned FX for Fireblobs"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":803,
+                            "Name":"Trap_LavaWall_SlowBuff"
+                        },
+                        "Label":"Label3",
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                        "SpecContainersIds":
+                        [
+                            1147,
+                            1148,
+                            1149
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "_comment":"Is it a fire blob? If yes, check for which buff to give. If not, do health drain buff."
+                    },
+                    "OperationsIfSuccess":{
+                        "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                        "ConditionOperation":{
+                            "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainersIds":
+                            [
+                                1147
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "_comment":"is this fire blob original? if yes, buff."
+                        },
+                        "OperationsIfSuccess":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":884,
+                                "Name":"Blob_LimitedEdition_Fire_LavaWallBuff"
+                            },
+                            "BakedSpellInfo":{
+                                
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "OperationsIfFailure":{
+                            "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                            "ConditionOperation":{
+                                "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                                "SpecContainersIds":
+                                [
+                                    1148
+                                ],
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                },
+                                "_comment":"is it respawn 1? if yes use buff respawn 1"
+                            },
+                            "OperationsIfSuccess":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Buff":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":886,
+                                    "Name":"Blob_LimitedEdition_Fire_LavaWallBuff_Smaller"
+                                },
+                                "BakedSpellInfo":{
+                                    
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "OperationsIfFailure":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Buff":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":887,
+                                    "Name":"Blob_LimitedEdition_Fire_Respawn2_LavaWallBuff_Tiny"
+                                },
+                                "BakedSpellInfo":{
+                                    
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "_comment":"Then its respawn 2. use buff respawn 2"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":804,
+                            "Name":"Trap_LavaWall_HealthDrainBuff"
+                        },
+                        "Label":"Label3",
+                        "BakedSpellInfo":{
+                            
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "_comment":"regular effect for non poison blobs"
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "Label":"Label3"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "OnDeactivateOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableTrapPowerStateChangeSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"SourceOwner"
+                    }
+                }
+            ]
+        },
+        "OnUpdateDisableOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "Label":"Label3"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StateMachineSpec, HyperQuest.GameServer.Contracts"
+    }
+]

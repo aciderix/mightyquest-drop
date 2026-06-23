@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_015_Cardboard_FallenKnight",
+        "OasisName":15390,
+        "OasisDescription":15391
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_015_Cardboard_FallenKnight.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_015_Cardboard_FallenKnight.png",
+        "HeightOffset":2
+    }
+]

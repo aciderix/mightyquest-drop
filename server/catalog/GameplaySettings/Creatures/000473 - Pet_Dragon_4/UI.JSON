@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Pet_Dragon4",
+        "OasisName":14908,
+        "OasisDescription":14909
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/pets\/Dragon_M004.png",
+        "InvIconUrl":"icoInv\/pets\/Dragon_M004.png"
+    }
+]

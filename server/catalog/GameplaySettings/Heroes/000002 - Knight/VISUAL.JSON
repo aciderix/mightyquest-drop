@@ -1,0 +1,63 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_001_Knight",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_01810D2C>ENTITY_01810D2C.ENTITY"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":6,
+        "WalkNaturalAnimationSpeed":2,
+        "WalkSpeedThreshold":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualHeroFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentCostumeIncompatibleFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_76A2A457_BC685>SPECIALFX_76A2A457_BC685.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_head"
+                }
+            }
+        ],
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_AC9C2CC8_BC685>SPECIAL EFFECT_AC9C2CC8_BC685.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_head"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualPickingSpec, HyperQuest.GameServer.Contracts",
+        "OnMouseOverFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_597C0586_BA618.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"HomePageHeroMouseOver"
+            }
+        ],
+        "OnSelectedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_A0D0EE8B_BA618.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"HomePageHeroSelected"
+            }
+        ]
+    }
+]

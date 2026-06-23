@@ -1,0 +1,32 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.GameLaunchedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PlayMovieAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "MovieFile":"Intro.bk2",
+                "IsMovieSkippable":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.MovieStoppedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":true
+            }
+        ]
+    }
+]

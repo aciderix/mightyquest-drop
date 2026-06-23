@@ -1,0 +1,242 @@
+{
+    "MessageBoxes":
+    [
+        {
+            "Id": 0,
+            "TitleOasisId": 0,
+            "MessageOasisId": 2769,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 2,
+            "TitleOasisId": 0,
+            "MessageOasisId": 10834,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 3,
+            "TitleOasisId": 0,
+            "MessageOasisId": 434,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 4,
+            "TitleOasisId": 0,
+            "MessageOasisId": 10833,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 5,
+            "TitleOasisId": 0,
+            "MessageOasisId": 10868,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 7,
+            "TitleOasisId": 0,
+            "MessageOasisId": 11531,
+            "MessageBoxButtonConfig": 3,
+			"HasTimer": true,
+			"TimeBeforeClosing": 15,
+			"ButtonPressedAfterTimer": 4
+        },
+        {
+            "Id": 8,
+            "TitleOasisId": 0,
+            "MessageOasisId": 12138,
+            "MessageBoxButtonConfig": 0
+        },
+		{
+            "Id": 9,
+            "TitleOasisId": 0,
+            "MessageOasisId": 13323,
+            "MessageBoxButtonConfig": 1
+        },
+		{
+            "Id": 10,
+            "TitleOasisId": 0,
+            "MessageOasisId": 13326,
+            "MessageBoxButtonConfig": 3
+        },
+		{
+            "Id": 11,
+            "TitleOasisId": 0,
+            "MessageOasisId": 13515,
+            "MessageBoxButtonConfig": 1
+        },
+		{
+            "Id": 12,
+            "TitleOasisId": 0,
+            "MessageOasisId": 14455,
+            "MessageBoxButtonConfig": 3
+        },
+		{
+            "Id": 13,
+            "TitleOasisId": 0,
+            "MessageOasisId": 14456,
+            "MessageBoxButtonConfig": 3
+        },
+		{
+            "Id": 14,
+            "TitleOasisId": 14457,
+            "MessageOasisId": 14458,
+            "MessageBoxButtonConfig": 2
+        },
+		{
+            "Id": 15,
+            "TitleOasisId": 14502,
+            "MessageOasisId": 14501,
+            "MessageBoxButtonConfig": 1
+        },	    
+        {
+            "Id": 16,
+            "TitleOasisId": 0,
+            "MessageOasisId": 14490,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 17,
+            "TitleOasisId": 0,
+            "MessageOasisId": 14743,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 18,
+            "TitleOasisId": 0,
+            "MessageOasisId": 14757,
+            "MessageBoxButtonConfig": 3
+		},
+        {
+            "Id": 19,
+            "TitleOasisId": 0,
+            "MessageOasisId": 14831,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 20,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15130,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 21,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15319,
+            "MessageBoxButtonConfig": 1
+        },
+		{
+		    "Id": 22,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15406,
+            "MessageBoxButtonConfig": 3
+		},
+        {
+            "Id": 23,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15694,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 24,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15727,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 25,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15729,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 26,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15872,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 27,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15873,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 28,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15889,
+            "MessageBoxButtonConfig": 2
+        },
+        {
+            "Id": 29,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15895,
+            "MessageBoxButtonConfig": 2
+        },
+        {
+            "Id": 30,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15905,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 31,
+            "TitleOasisId": 15903,
+            "MessageOasisId": 15904,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 32,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15908,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 33,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15911,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 34,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15942,
+            "MessageBoxButtonConfig": 2
+        },
+        {
+            "Id": 35,
+            "TitleOasisId": 0,
+            "MessageOasisId": 15986,
+            "MessageBoxButtonConfig": 2
+        },
+        {
+            "Id": 36,
+            "TitleOasisId": 0,
+            "MessageOasisId": 16212,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 37,
+            "TitleOasisId": 0,
+            "MessageOasisId": 16231,
+            "MessageBoxButtonConfig": 1
+        },
+        {
+            "Id": 38,
+            "TitleOasisId": 0,
+            "MessageOasisId": 16250,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 39,
+            "TitleOasisId": 0,
+            "MessageOasisId": 16391,
+            "MessageBoxButtonConfig": 3
+        },
+        {
+            "Id": 40,
+            "TitleOasisId": 8300,
+            "MessageOasisId": 8301,
+            "MessageBoxButtonConfig": 1
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Junction_Chamber_01",
+        "OasisName":11373,
+        "OasisDescription":15723
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Junction_Chamber_01pvp.png",
+        "InvIconUrl":"icoInv\/rooms\/Junction_Chamber_01pvp.png",
+        "LayerName":"icoShop_rooms:Junction_Chamber_01pvp"
+    }
+]

@@ -1,0 +1,137 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Chicken_LimitedEdition_PheonixRespawn",
+        "Scale":1.5,
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualGameplayEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "Spawn":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_84577180_BB579>SPECIALFX_84577180_BB579.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "LockRotation":true,
+                    "StickToTheWorld":true
+                },
+                "Scale":3,
+                "ForcePlayUntilFxFinished":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"CameraShakeMedium"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_1FAEADF3_AG596.MATERIAL",
+                "NodeAttachment":{
+                    
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_10AF51C5_BB579>SPECIALFX_10AF51C5_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 Tail2"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_10AF51C5_BB579>SPECIALFX_10AF51C5_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Head"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_10AF51C5_BB579>SPECIALFX_10AF51C5_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 R Finger2"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_10AF51C5_BB579>SPECIALFX_10AF51C5_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_RightHand"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_10AF51C5_BB579>SPECIALFX_10AF51C5_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 L Finger2"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_10AF51C5_BB579>SPECIALFX_10AF51C5_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_LeftHand"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_447413D6_BC666>ENTITY_447413D6_BC666.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

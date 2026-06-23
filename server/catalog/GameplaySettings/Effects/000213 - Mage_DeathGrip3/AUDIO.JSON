@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Spell"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioPersistentEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "CreateSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008290C.SOUND",
+            "FireAndForget":true
+        },
+        "DestroySound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088F77.SOUND",
+            "FireAndForget":true
+        }
+    }
+]

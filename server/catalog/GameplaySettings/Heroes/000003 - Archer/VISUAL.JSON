@@ -1,0 +1,52 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_Archer",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_0D2D8FBE>ENTITY_0D2D8FBE.ENTITY"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_A0809AE7>SPECIALFX_A0809AE7.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Head"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":5,
+        "WalkNaturalAnimationSpeed":2,
+        "WalkSpeedThreshold":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualPickingSpec, HyperQuest.GameServer.Contracts",
+        "OnMouseOverFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_597C0586_BA618.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"HomePageHeroMouseOver"
+            }
+        ],
+        "OnSelectedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_A0D0EE8B_BA618.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"HomePageHeroSelected"
+            }
+        ]
+    }
+]

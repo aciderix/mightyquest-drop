@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_FreezingArrow_02_BUF"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuffFxSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_D9AB4C37>SPECIALFX_D9AB4C37.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Feet"
+                },
+                "AttachFxOn":"Target"
+            }
+        ]
+    }
+]

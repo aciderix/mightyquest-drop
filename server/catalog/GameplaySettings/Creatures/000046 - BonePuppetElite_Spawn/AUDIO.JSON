@@ -1,0 +1,35 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Club"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_051_00_Attack01":"Elite_BagOfBones",
+            "CHA_051_00_Attack02":"Elite_BagOfBones",
+            "CHA_051_00_Death01":"Elite_BagOfBones",
+            "CHA_051_00_Fall01":"Elite_BagOfBones",
+            "CHA_051_00_IT_Drop01":"Elite_BagOfBones",
+            "CHA_051_00_Resurect01":"Elite_BagOfBones",
+            "CHA_051_00_Run01":"Elite_BagOfBones",
+            "CHA_051_00_Spawn01":"Elite_BagOfBones",
+            "CHA_051_00_Wait03":"Elite_BagOfBones",
+            "CHA_051_Purchase01":"Elite_BagOfBones"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088FE9.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088FE9.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088FE4.SOUND"
+        },
+        "AttackImpactSoundLevelsProfileType":"Default"
+    }
+]

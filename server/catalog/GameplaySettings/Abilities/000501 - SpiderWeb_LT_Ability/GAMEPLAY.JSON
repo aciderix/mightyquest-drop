@@ -1,0 +1,58 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.2,
+                                "Up":1.4
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "BurstsCount":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":3
+                            },
+                            "BurstDelay":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":0.1
+                            },
+                            "BurstsAngle":60,
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":229
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":15,
+                "PrepareTime":0.7,
+                "RecoverTime":0.4,
+                "MaxDistance":1,
+                "EffectRadius":4,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":1
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

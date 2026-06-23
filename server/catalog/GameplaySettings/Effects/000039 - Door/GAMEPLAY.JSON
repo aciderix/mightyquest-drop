@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DoorSpec, HyperQuest.GameServer.Contracts",
+        "DoorStateTriggers":{
+            "OnAggroStarted":"Close",
+            "OnChestOpened":"Close",
+            "OnAfterAggroActivityEndedAndTestAttackCondition":"Open",
+            "OnTestAttackStarted":"Close",
+            "OnTotemActivated":"Close",
+            "OnAllTotemsDeactivated":"Open",
+            "OnCreatureAlerted":"Close",
+            "OnNoCreaturesAlerted":"Open"
+        },
+        "Width":3.5,
+        "Thickness":1.75,
+        "Height":1,
+        "ObstacleRemovalDelay":0.8,
+        "ObstacleOffset":{
+            "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+            "Value":{
+                "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                "X":-0.35
+            },
+            "Orientation":{
+                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                "Context":"SourceOrientation"
+            }
+        },
+        "HasDoorTrigger":false,
+        "DoorTriggerDistance":-2.7,
+        "IsOccludable":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":0.5,
+                "Height":5,
+                "Length":3.5,
+                "Y":2
+            }
+        ],
+        "CollisionGroup":"World",
+        "PhysicRigidBodyType":"Static"
+    }
+]

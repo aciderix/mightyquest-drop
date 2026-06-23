@@ -1,0 +1,254 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackselection",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1,
+                "LockOnDisabledPickingType":"AllCastles",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    13,
+                    15,
+                    50,
+                    54,
+                    55,
+                    59,
+                    63,
+                    58,
+                    70,
+                    71,
+                    72,
+                    73,
+                    86,
+                    89,
+                    106,
+                    107,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    137,
+                    138,
+                    139,
+                    142,
+                    135,
+                    136,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    62
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopEquipment",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopEquipment"
+                    }
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"105000002",
+                "Type":"Arrow",
+                "GameButtonId":"LobbyHeroEquipmentTabButton",
+                "PositionElementId":"#modules-hudBar-commonToolbar-inventory",
+                "OffsetTop":-10,
+                "ArrowDirection":"Down",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"105000001",
+                "Title":"Gear up",
+                "TitleOasisId":15658,
+                "Text":"Equip your hero with gear before attacking Snottingham.",
+                "TextOasisId":15659,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":150,
+                "OffsetLeft":150,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    13,
+                    15,
+                    50,
+                    54,
+                    55,
+                    59,
+                    63,
+                    58,
+                    70,
+                    71,
+                    72,
+                    73,
+                    86,
+                    89,
+                    106,
+                    107,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    137,
+                    138,
+                    139,
+                    142,
+                    135,
+                    136,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

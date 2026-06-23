@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000890BE.SOUND"
+                },
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00089146.SOUND"
+                },
+                "ActiveSound":{
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Spell"
+    }
+]

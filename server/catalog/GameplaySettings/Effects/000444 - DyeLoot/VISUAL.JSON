@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"DyeLoot",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_BE41B790_BC685>ENTITY_BE41B790_BC685.ENTITY"
+    }
+]

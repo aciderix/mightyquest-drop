@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"BadDog_OnDeathHowl"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"BadDog_OnDeathHowl",
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_95196CCB_BA618>SPECIALFX_95196CCB_BA618.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Trap_IceWall_Base"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTrapFxSpec, HyperQuest.GameServer.Contracts",
+        "TrapActivatedFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_F093B0E9_BB579>SPECIALFX_F093B0E9_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "FrontOffset":-2.7
+                },
+                "HideInModeMask":2
+            }
+        ],
+        "TrapDeactivatedFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_6A08B099_BB307>SPECIALFX_6A08B099_BB307.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "FrontOffset":-2.7
+                },
+                "Scale":0,
+                "HideInModeMask":2
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"GelatinousWall_FallCompleted",
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                        "AnimationName":"00_FallRecover",
+                        "UseEmoteStateToPlayAnimation":false
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_8A2D463E_BA618>SPECIAL EFFECT_8A2D463E_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                    "HeightOffset":0.1,
+                                    "SideOffset":-0.5
+                                }
+                            },
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_8A2D463E_BA618>SPECIAL EFFECT_8A2D463E_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                    "HeightOffset":0.1,
+                                    "SideOffset":0.45
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"Destructible_State_Undamaged"
+                    },
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_B7A3DEF9_BA618>SPECIAL EFFECT_B7A3DEF9_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                    "HeightOffset":0.2,
+                                    "SideOffset":-1.5
+                                }
+                            },
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_B7A3DEF9_BA618>SPECIAL EFFECT_B7A3DEF9_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                    "HeightOffset":0.1,
+                                    "SideOffset":1.45
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"Destructible_State_Destroyed"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"DinnerSet_Medium_RoyalA_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_11952C29_BC696>XREF_11952C29_BC696.XREF",
+        "Scale":0.7
+    }
+]

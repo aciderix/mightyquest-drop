@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_013_Thorny_03_BasicAttack_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_357129C9>MESH_357129C9.MESH"
+    }
+]

@@ -1,0 +1,45 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_029_Guardian_01_Block_BUF"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuffFxSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_9DFBB901_AI933.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_012BA58A>FX_012BA58A.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "LockRotation":true
+                },
+                "Scale":1.62,
+                "Duration":3,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "BuffRemovedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_D12F34CA_AI933>FX_D12F34CA_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "LockRotation":true
+                },
+                "Scale":1.62
+            }
+        ]
+    }
+]

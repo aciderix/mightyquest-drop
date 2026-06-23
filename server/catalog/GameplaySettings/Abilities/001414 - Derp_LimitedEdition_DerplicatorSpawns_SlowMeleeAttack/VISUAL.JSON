@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Derp_LimitedEdition_DerplicatorSpawns_SlowMeleeAttack"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_Attack"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_0E0C65E2_BB579>SPECIALFX_0E0C65E2_BB579.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"FX_Head",
+                                "LockRotation":true,
+                                "InheritParentScale":true
+                            },
+                            "AttachFxOn":"Target"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

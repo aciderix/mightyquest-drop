@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":5
+                            },
+                            "AllianceFilter":2,
+                            "TouchedEntitiesType":9,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "ConditionOperation":{
+                                            "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                                            "SpecContainersIds":
+                                            [
+                                                1150
+                                            ],
+                                            "Target":{
+                                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                                "_comment":"Does not buff itself. Only buff other creatures"
+                                            }
+                                        },
+                                        "OperationsIfFailure":{
+                                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                            "Buff":{
+                                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                                "SpecContainerReferenceId":899,
+                                                "Name":"Dog_LimitedEdition_Poison_HowlEffect_Buff"
+                                            },
+                                            "Target":{
+                                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":8,
+                "PrepareTime":0.5,
+                "RecoverTime":0.5,
+                "MaxDistance":10,
+                "EffectRadius":5,
+                "AbilityCastType":"Area",
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

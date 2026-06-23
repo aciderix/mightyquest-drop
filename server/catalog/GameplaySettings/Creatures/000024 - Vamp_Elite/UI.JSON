@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"The Hemophiliac Queen",
+        "OasisName":1381,
+        "OasisDescription":1382
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_005_Thirsty_01E.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_005_Thirsty_01E.png",
+        "LayerName":"UI_Common_CreaturesIcons_Thirsty:Thirsty_01_Elite",
+        "HeightOffset":2.75
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Sprint",
+                    "OasisName":7590
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7815
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    }
+]

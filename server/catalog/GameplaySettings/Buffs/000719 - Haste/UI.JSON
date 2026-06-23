@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HasteBuff",
+        "OasisName":13196,
+        "OasisDescription":13197,
+        "_comment":"Change oasis name and description"
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.1
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"ManaRegeneration",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":-1
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDamageReceivedBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "OperationTypeFilter":1046,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":120,
+                                "Name":"Knight-BattleStance"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ManaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":3
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                    "Type":"Source"
+                }
+            }
+        ],
+        "InstancesRefreshType":"AllInstancesOfSameCreator",
+        "MaxInstances":1,
+        "MaxInstancesPerCreator":1,
+        "Flags":2
+    }
+]

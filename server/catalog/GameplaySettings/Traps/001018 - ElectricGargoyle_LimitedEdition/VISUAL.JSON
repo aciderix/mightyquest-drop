@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ElectricGargoyle_LimitedEdition",
+        "Scale":0,
+        "HideInModeMask":1
+    }
+]

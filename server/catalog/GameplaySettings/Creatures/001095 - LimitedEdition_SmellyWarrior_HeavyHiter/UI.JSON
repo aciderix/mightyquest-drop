@@ -1,0 +1,39 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SmellyWarrior_LimitedEdition_Skelethor",
+        "OasisName":15685,
+        "OasisDescription":15686
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/CYCLOP2.PNG",
+                        "NameOasisId":15685,
+                        "DescriptionOasisId":15686
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/skelethor.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/skelethor.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:skelethor",
+        "HeightOffset":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

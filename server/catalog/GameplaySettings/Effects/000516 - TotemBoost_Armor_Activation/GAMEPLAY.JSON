@@ -1,0 +1,36 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":1,
+        "EndRadius":12,
+        "TouchedEntitiesType":0,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.5
+        },
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.ConditionOperationSpec, HyperQuest.GameServer.Contracts",
+            "BooleanCondition":{
+                "$type":"HyperQuest.GameServer.Contracts.ContextBooleanSpec, HyperQuest.GameServer.Contracts",
+                "Type":"IsTargetImmuneToTotemStun"
+            },
+            "OperationsIfFalse":{
+                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                "Operations":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":797,
+                            "Name":"Totem_Activation_DOT"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

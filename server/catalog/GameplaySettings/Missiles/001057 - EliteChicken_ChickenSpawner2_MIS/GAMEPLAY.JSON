@@ -1,0 +1,99 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MissileSpec, HyperQuest.GameServer.Contracts",
+        "Movement":{
+            "MoveStyle":{
+                "$type":"HyperQuest.GameServer.Contracts.LinearMoveToDestinationSpec, HyperQuest.GameServer.Contracts",
+                "Speed":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":12
+                }
+            },
+            "CanExitNavMesh":true,
+            "IgnoreMovementReduction":true,
+            "Collision":{
+                "CheckCollision":true,
+                "StopperCollisionShape":{
+                    "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":0.05
+                },
+                "StopperCollisionMask":9437186,
+                "OnStopperCollisionOperations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Creature":{
+                                "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":452
+                            },
+                            "CreatureCount":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1
+                            },
+                            "Level":{
+                                "$type":"HyperQuest.GameServer.Contracts.SourceValueSpec, HyperQuest.GameServer.Contracts",
+                                "Source":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourceOwner"
+                                },
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                    "ContextId":"SourceLevel"
+                                }
+                            },
+                            "Specialization":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "X":-5,
+                                    "Y":10
+                                }
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AggroTargetPosition"
+                            },
+                            "BurstsAngle":100,
+                            "ArcAngle":100,
+                            "ArcOffset":100,
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":1055
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DestroyOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "CanBeAfterAggroActivity":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    }
+]

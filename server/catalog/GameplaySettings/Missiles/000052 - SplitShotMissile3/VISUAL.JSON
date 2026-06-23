@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_093F5441>FX_093F5441.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_5ECDF83F_AI933.MATERIAL",
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.5
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.5
+                        }
+                    ]
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_SplitShot_01_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_D720FA7B>MESH_D720FA7B.MESH"
+    }
+]

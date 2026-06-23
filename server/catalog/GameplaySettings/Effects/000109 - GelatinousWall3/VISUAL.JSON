@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_011_GelatinousWall_03",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_FC71C361_AH273>ENTITY_FC71C361_AH273.ENTITY",
+        "Scale":1.4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "EntityEnterFieldFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"00_Attack",
+                "IsLooping":true
+            }
+        ],
+        "LastEntityLeaveFieldFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"00_Wait",
+                "IsLooping":true
+            }
+        ]
+    }
+]

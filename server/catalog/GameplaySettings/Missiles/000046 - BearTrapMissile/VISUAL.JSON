@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_BearTrap_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_2E9857FB>MESH_2E9857FB.MESH"
+    }
+]

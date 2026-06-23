@@ -1,0 +1,45 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088C95.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088C95.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088C94.SOUND"
+        },
+        "ArmorTag":"HardClothing",
+        "AttackImpactSoundLevelsProfileType":"Boss"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Claw"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_038_00_Attack01":"Dragon_Layer",
+            "CHA_038_00_Attack02":"Dragon_Layer",
+            "CHA_038_00_Death01":"Dragon_Layer",
+            "CHA_038_00_Run01":"Dragon_Layer",
+            "CHA_038_00_Spawn01":"Dragon_Layer",
+            "CHA_038_00_SpellJump01":"Dragon_Layer",
+            "CHA_038_00_SpellLand01":"Dragon_Layer",
+            "CHA_038_00_SpellRain01":"Dragon_Layer",
+            "CHA_038_00_SpellStomp01":"Dragon_Layer",
+            "CHA_038_00_SpellTakeOff01":"Dragon_Layer",
+            "CHA_038_00_SpelTail01":"Dragon_Layer",
+            "CHA_038_00_Wait02":"Dragon_Layer",
+            "CHA_038_00_Wait03":"Dragon_Layer",
+            "CHA_038_00_Wait04":"Dragon_Layer",
+            "CHA_038_00_Walk01":"Dragon_Layer",
+            "CHA_038_IT_Drag01":"Dragon_Layer",
+            "CHA_038_IT_Drop01":"Dragon_Layer",
+            "CHA_038_IT_Purchase01":"Dragon_Layer",
+            "CHA_038_00_Fall01":"Dragon_Layer"
+        }
+    }
+]

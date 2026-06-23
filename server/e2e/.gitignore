@@ -1,0 +1,15 @@
+certs/
+trace.jsonl
+capture.pcap
+server_stdout.log
+wine_*.log
+game.snap
+aret_out/
+real_*.log
+sections.bin
+*.pyc
+__pycache__/
+aret_deser/
+aret_deser_static/
+aret_out/
+*.snap

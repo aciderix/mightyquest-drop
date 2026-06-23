@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"ZombieWillpower",
+        "OasisName":2105,
+        "OasisDescription":2106
+    }
+]

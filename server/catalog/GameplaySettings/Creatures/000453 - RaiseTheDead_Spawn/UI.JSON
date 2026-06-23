@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Skeleton",
+        "OasisName":1269,
+        "OasisDescription":1270
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/iconInv\/creatures\/undead\/CHA_023_Skeleton_tutorial.png",
+        "InvIconUrl":"icoInv\/iconInv\/creatures\/undead\/CHA_023_Skeleton_tutorial.png",
+        "HeightOffset":2.3,
+        "DisableLifeChangedFloatingTexts":true
+    }
+]

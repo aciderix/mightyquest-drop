@@ -1,0 +1,19 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Room8_Boss_Treasure_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_88F44364_AI348>XREF_88F44364_AI348.XREF",
+        "Scale":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualRoomConnectionFxSpec, HyperQuest.GameServer.Contracts",
+        "ConnectionTypeUnconnectedFx":{
+            "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":21
+        },
+        "ConnectionTypeConnectedFx":{
+            "$type":"HyperQuest.GameServer.Contracts.FxSpecContainerRef, HyperQuest.GameServer.Contracts",
+            "SpecContainerReferenceId":22
+        }
+    }
+]

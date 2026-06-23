@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Christmas_Tree_01",
+        "OasisName":16074,
+        "OasisDescription":16074
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/Christmas_Tree_01.png",
+        "InvIconUrl":"icoShop\/deco\/Christmas_Tree_01.png",
+        "HeightOffset":2
+    }
+]

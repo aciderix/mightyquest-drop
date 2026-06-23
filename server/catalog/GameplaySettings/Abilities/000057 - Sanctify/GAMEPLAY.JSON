@@ -1,0 +1,183 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":11
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":85,
+                "OasisShortDescription":86,
+                "Cooldown":8,
+                "PrepareTime":0.5,
+                "EffectRadius":3,
+                "CastCost":10,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":16
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":11
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":87,
+                "OasisShortDescription":88,
+                "Cooldown":8,
+                "PrepareTime":0.5,
+                "EffectRadius":3,
+                "CastCost":10,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":19
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":11
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":89,
+                "OasisShortDescription":90,
+                "Cooldown":8,
+                "PrepareTime":0.5,
+                "EffectRadius":3,
+                "CastCost":10,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":22
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":11
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":91,
+                "OasisShortDescription":92,
+                "Cooldown":8,
+                "PrepareTime":0.5,
+                "EffectRadius":3,
+                "CastCost":10,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":25
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":11
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":93,
+                "OasisShortDescription":94,
+                "Cooldown":8,
+                "PrepareTime":0.5,
+                "EffectRadius":3,
+                "CastCost":10,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":28
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

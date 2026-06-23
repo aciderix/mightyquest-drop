@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "LabelOperationSounds":
+        [
+            {
+                "OperationLabel":"TriggerRotatingCannonsFire",
+                "Sound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000821AF.SOUND"
+                }
+            }
+        ]
+    }
+]

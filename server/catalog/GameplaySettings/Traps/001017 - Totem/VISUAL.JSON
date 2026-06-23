@@ -1,0 +1,170 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_4E44AF85_BA618>SPECIALFX_4E44AF85_BA618.SPECIALFX",
+                                "PlayMode":"One",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Undamaged"
+                    },
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_7AEAE810_BD346>SPECIALFX_7AEAE810_BD346.SPECIALFX",
+                                "PlayMode":"One",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Destroyed"
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_8A2D463E_BA618>SPECIAL EFFECT_8A2D463E_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Undamaged"
+                    },
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_B7A3DEF9_BA618>SPECIAL EFFECT_B7A3DEF9_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Destroyed"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"BUI_014_Totem_Basic"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTotemFxSpec, HyperQuest.GameServer.Contracts",
+        "TotemLeashingZoneFxListByBoostId":
+        {
+            "0":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_9CAC89F1_BA618>SPECIALFX_9CAC89F1_BA618.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Scale":7
+                    }
+                ]
+            },
+            "2":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_70D505B4_BD346>SPECIALFX_70D505B4_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Scale":7
+                    }
+                ]
+            },
+            "3":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_2B1E05A2_BD346>SPECIALFX_2B1E05A2_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Scale":7
+                    }
+                ]
+            }
+        },
+        "TotemBoostPickedUpFxListByBoostId":
+        {
+            "0":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_7ED523C9_BD346>SPECIALFX_7ED523C9_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "2":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_7ED523C9_BD346>SPECIALFX_7ED523C9_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "3":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_7ED523C9_BD346>SPECIALFX_7ED523C9_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            }
+        },
+        "ParticleName":"PE_Agro_Radius_Kicker"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTrapSpec, HyperQuest.GameServer.Contracts",
+        "BoostedVisuals":
+        {
+            "0":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF",
+            "2":"DB:>RAW>XREFS>XREF_D04CE6D8_BA602>XREF_D04CE6D8_BA602.XREF",
+            "3":"DB:>RAW>XREFS>XREF_D15D580D_BA602>XREF_D15D580D_BA602.XREF"
+        }
+    }
+]

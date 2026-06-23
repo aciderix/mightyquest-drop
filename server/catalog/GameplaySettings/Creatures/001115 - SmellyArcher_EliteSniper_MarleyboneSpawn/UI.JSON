@@ -1,0 +1,68 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SmellyArcher_Elite_Headshot",
+        "OasisName":15193,
+        "OasisDescription":15194
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C1e",
+        "HeightOffset":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher2.png",
+                        "NameOasisId":11211,
+                        "DescriptionOasisId":11214
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/C2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/C2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:C2e"
+            }
+        ]
+    }
+]

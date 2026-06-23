@@ -1,0 +1,37 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntityStampStatusAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "BuildEntityStampStatusFlag":1
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500001",
+                "HideOverlay":true,
+                "Title":"NOT ENOUGH CP SPACE",
+                "TitleOasisId":15597,
+                "Text":"Try adding a smaller...",
+                "TextOasisId":15596,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "IsCloseButtonVisible":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"500001"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500001"
+            }
+        ]
+    }
+]

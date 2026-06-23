@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HeavyWeight_KnockbackResistance",
+        "OasisName":2251,
+        "OasisDescription":2252
+    }
+]

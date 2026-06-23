@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_005_RotatingCannonBase_03",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_603E9A20>MESH_603E9A20.MESH",
+        "Scale":0.5
+    }
+]

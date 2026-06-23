@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"SpikeTrap_Attack_New"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_AttackPrepare",
+                "AnimActive":"00_Attack",
+                "AnimRecover":"00_AttackRecover"
+            }
+        ]
+    }
+]

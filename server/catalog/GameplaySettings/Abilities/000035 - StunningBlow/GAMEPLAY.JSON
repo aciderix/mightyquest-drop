@@ -1,0 +1,246 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":2,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":3.5,
+                        "ShiftAttackDistance":3.5,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Tag":"Stunning Blow damage multiplier 1"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Movement":{
+                                        "MoveStyle":{
+                                            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                            "Distance":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                            },
+                                            "Orientation":{
+                                                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                "Context":"SourceToTargetOrientation"
+                                            },
+                                            "Speed":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                            },
+                                            "EaseInOut":-6
+                                        },
+                                        "KnockbackSpec":{
+                                            "KnockbackStandupDuration":2,
+                                            "Tag":"Stunning Blow duration 1"
+                                        }
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.ClearCooldownsOperationSpec, HyperQuest.GameServer.Contracts",
+                        "AbilitySpecContainers":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":35,
+                                "Name":"StunningBlow"
+                            }
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    }
+                },
+                "OasisName":105,
+                "OasisShortDescription":106,
+                "Cooldown":0.5,
+                "PrepareTime":0.1,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":1,
+                "DirectedMaxDistance":3.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":20,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "AttackSpeedFactor":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":9
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.MeleeOperationSpec, HyperQuest.GameServer.Contracts",
+                        "MaxDistance":3.5,
+                        "ShiftAttackDistance":3.5,
+                        "ShiftAttackRadius":0.5,
+                        "ObstacleCollisionMaskAny":1048578,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.2,
+                                        "Tag":"Stunning Blow damage multiplier 2"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Movement":{
+                                        "MoveStyle":{
+                                            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                            "Distance":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                            },
+                                            "Orientation":{
+                                                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                "Context":"SourceToTargetOrientation"
+                                            },
+                                            "Speed":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                            },
+                                            "EaseInOut":-6
+                                        },
+                                        "KnockbackSpec":{
+                                            "KnockbackStandupDuration":2,
+                                            "Tag":"Stunning Blow duration 2"
+                                        }
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.ClearCooldownsOperationSpec, HyperQuest.GameServer.Contracts",
+                        "AbilitySpecContainers":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":35,
+                                "Name":"StunningBlow"
+                            }
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    }
+                },
+                "OasisName":107,
+                "OasisShortDescription":108,
+                "Cooldown":0.5,
+                "PrepareTime":0.1,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.3,
+                "MaxDistance":1,
+                "DirectedMaxDistance":3.5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":0.1,
+                "CastCost":20,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":8
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "AttackSpeedFactor":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":21
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            }
+        ]
+    }
+]

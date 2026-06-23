@@ -1,0 +1,56 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Clubbage_LimitedEdition_Teleport2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"BK_SpellImmolate"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_FD6ECA3F_BB579>SPECIALFX_FD6ECA3F_BB579.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "StickToTheWorld":true
+                            },
+                            "Scale":1.2,
+                            "Duration":2,
+                            "StopForcedPlayFx":false
+                        }
+                    }
+                ],
+                "RecoverFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_83F3E169_BB579>SPECIALFX_83F3E169_BB579.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "LockRotation":true
+                            },
+                            "Scale":1.2
+                        }
+                    }
+                ]
+            }
+        ],
+        "Tag":"AbilityActive"
+    }
+]

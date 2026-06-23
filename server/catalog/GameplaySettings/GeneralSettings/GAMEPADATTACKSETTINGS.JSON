@@ -1,0 +1,34 @@
+{
+    "AutoAimOverride":{
+        "ParamsList":
+        [
+            {
+                "AutoAimType":"Line",
+                "MaxDistance":15,
+                "EffectRadius":5
+            },
+            {
+                "AutoAimType":"Cone",
+                "MaxDistance":5,
+                "EffectRadius":360
+            }
+        ]
+    },
+    "SwitchLockedTargetAutoAim":{
+        "ParamsList":
+        [
+            {
+                "AutoAimType":"Cone",
+                "MaxDistance":100,
+                "EffectRadius":90
+            }
+        ]
+    },
+    "SwitchLockedTargetDelay":0.25,
+    "AutoAimRange":15,
+    "GamepadCursorSpeed":25,
+    "GamepadCursorInitialPosition":{
+        "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+        "Front":2
+    }
+}

@@ -1,0 +1,46 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Falling Gate",
+        "OasisName":7691,
+        "OasisDescription":7692
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/FallingGate_01.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/FallingGate_01.png",
+        "LayerName":"UI_Common_TrapsIcons:FallingGate_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Hidden",
+                    "OasisName":7666
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/hidden.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Gate {0}",
+                    "OasisName":7693
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/destructible.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0+(35*level)"
+                    }
+                ]
+            }
+        ]
+    }
+]

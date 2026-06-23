@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"GelatinousWall01_Debuff",
+        "OasisName":2229,
+        "OasisDescription":2074
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/heroDebuffs_snared.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_snared",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

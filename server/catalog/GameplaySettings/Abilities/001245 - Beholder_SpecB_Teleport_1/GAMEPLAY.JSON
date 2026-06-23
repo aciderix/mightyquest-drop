@@ -1,0 +1,60 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BlinkTeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.RestrictedPositionVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Position":{
+                                    "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Value1":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"TargetPosition"
+                                    },
+                                    "Value2":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                            "X":7
+                                        },
+                                        "Orientation":{
+                                            "$type":"HyperQuest.GameServer.Contracts.RandomOrientationSpec, HyperQuest.GameServer.Contracts",
+                                            "OriginOrientation":{
+                                                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                "Context":"TargetOrientation",
+                                                "Reverse":true
+                                            },
+                                            "AllowedAngle":320
+                                        }
+                                    }
+                                },
+                                "RestrictionType":"InvalidThroughCollision",
+                                "_comment":"Remove restriction when the collision of passage connector will be added"
+                            },
+                            "StopperCollisionMaskAny":4718594,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":6,
+                "PrepareTime":1.5,
+                "RecoverTime":0.5,
+                "MaxDistance":11,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1
+            }
+        ]
+    }
+]

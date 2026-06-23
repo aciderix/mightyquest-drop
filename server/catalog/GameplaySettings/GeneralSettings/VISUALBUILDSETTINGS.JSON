@@ -1,0 +1,301 @@
+{
+    "InspectedEntityHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_9258ACD1_AH149.MATERIAL",
+    "SelectedEntityHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_6471B8F2.MATERIAL",
+    "InvalidEntityHighlightMaterial":"DB:>RAW>MATERIALS>MATERIAL_CF1472C5_AI359.MATERIAL",
+    "InvalidEntityHiddenOverlayMaterial":"DB:>RAW>MATERIALS>MATERIAL_27A8DA7A_BC685.MATERIAL",
+    "RoomZoneMaterial":"DB:>RAW>MATERIALS>MATERIAL_1067B204_BC675.MATERIAL",
+    "GridMaterial":"DB:>RAW>MATERIALS>MATERIAL_B70726C3_BC675.MATERIAL",
+    "OutlineRoomMaterial":"DB:>RAW>MATERIALS>MATERIAL_58351FB9_BC675.MATERIAL",
+    "NormalBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_327BB8C1_BC748.MATERIAL",
+    "ValidBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_2A4CA167_BC748.MATERIAL",
+    "InvalidBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_2B22131D_BC748.MATERIAL",
+    "InspectedBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_2B9B9B85_BC748.MATERIAL",
+    "OverlappingBuildableFootprintMaterial":"DB:>RAW>MATERIALS>MATERIAL_6EE30791_BB700.MATERIAL",
+    "NormalRoomOutlineMaterial":"DB:>RAW>MATERIALS>MATERIAL_28B52D85_BC675.MATERIAL",
+    "ValidRoomOutlineMaterial":"DB:>RAW>MATERIALS>MATERIAL_7BF7C432_BC675.MATERIAL",
+    "InvalidRoomOutlineMaterial":"DB:>RAW>MATERIALS>MATERIAL_9F6A089F_BC675.MATERIAL",
+    "InspectedRoomOutlineMaterial":"DB:>RAW>MATERIALS>MATERIAL_9E8D889E_BC675.MATERIAL",
+    "BossRoomOutlineMaterial":"DB:>RAW>MATERIALS>MATERIAL_5149E40D_BC675.MATERIAL",
+    "OverlappingRoomFootprintMaterial":"DB:>RAW>MATERIALS>MATERIAL_2590E136_BB700.MATERIAL",
+    "BossNormalBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_33914638_BC675.MATERIAL",
+    "BossValidBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_74A0AD36_BC675.MATERIAL",
+    "BossInvalidBuildableMaterial":"DB:>RAW>MATERIALS>MATERIAL_2841F18C_BC675.MATERIAL",
+    "CreatureAggroShapeMaterial":"DB:>RAW>MATERIALS>MATERIAL_CE0C5F72_BC675.MATERIAL",
+    "CreatureAggroPropagationMaterial":"DB:>RAW>MATERIALS>MATERIAL_83EE1CEC_BC675.MATERIAL",
+    "TrapPowerSupplyMaterial":"DB:>RAW>MATERIALS>MATERIAL_3B204CDD_BC675.MATERIAL",
+    "CreatureAggroPropagationEditionMaterial":"DB:>RAW>MATERIALS>MATERIAL_ED7F350E_BB700.MATERIAL",
+    "TotemZoneMaterial":"DB:>RAW>MATERIALS>MATERIAL_C40C63FA_BA602.MATERIAL",
+    "TotemLeashingZoneMaterial":"DB:>RAW>MATERIALS>MATERIAL_375A91C8_BA602.MATERIAL",
+    "TotemLeashingZoneInvalidMaterial":"DB:>RAW>MATERIALS>MATERIAL_54611CE9_BA602.MATERIAL",
+    "DynamicCPZoneMaterial":"DB:>RAW>MATERIALS>DEFAULT.MATERIAL",
+    "ExclusionRadiusMaterial":"DB:>RAW>MATERIALS>DEFAULT.MATERIAL",
+    "ValidCPZoneColor":"180,0,255,0",
+    "InvalidCPZoneColor":"180,255,0,0",
+    "BoostCPZoneColor":"180,0,255,255",
+    "FullCPZoneColor":"180,255,255,255",
+    "FullBoostCPZoneColor":"180,255,255,255",
+    "NormalTrapRadiusColor":"150,255,255,255",
+    "ValidTrapRadiusColor":"150,255,255,255",
+    "InvalidTrapRadiusColor":"150,222,0,0",
+    "TrapDottedLength":0.75,
+    "GoldHarvestingFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_05CAB219_AI933>FX_05CAB219_AI933.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            },
+            "Scale":2
+        }
+    ],
+    "LifeForceHarvestingFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_37FC77EF_AI933>SPECIALFX_37FC77EF_AI933.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            },
+            "Scale":2
+        }
+    ],
+    "HeroCorpseHarvestingFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_56FFA9A8_BA618>SPECIALFX_56FFA9A8_BA618.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                "StickToTheWorld":true
+            },
+            "ForcePlayUntilFxFinished":true
+        }
+    ],
+    "PremiumCashHarvestingFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_E3304DD0_BC675>SPECIALFX_E3304DD0_BC675.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            },
+            "Scale":2
+        }
+    ],
+    "DefaultLevelUpFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_02AF9731_AI933>FX_02AF9731_AI933.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            },
+            "Scale":1.25
+        }
+    ],
+    "BuiltEntityReplacedFxByBuildEntityType":
+    {
+        "-1":{
+            "FxList":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B27C3FF1_AI598>FX_B27C3FF1_AI598.SPECIALFX",
+                    "AttachmentStrategy":{
+                        "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "Scale":1.25
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                    "AnimationName":"IT_Purchase"
+                }
+            ]
+        },
+        "2":{
+            "FxList":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B27C3FF1_AI598>FX_B27C3FF1_AI598.SPECIALFX",
+                    "AttachmentStrategy":{
+                        "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "Scale":1.25
+                }
+            ]
+        }
+    },
+    "BuiltEntityCraftingFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_16303F6E_BC675.MATERIAL",
+            "Type":1,
+            "CloneMaterial":true,
+            "NodeAttachment":{
+                
+            },
+            "Name":"BuiltEntityCrafting"
+        }
+    ],
+    "BuiltEntityCraftingCompletedFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_33362D33_BA618>SPECIALFX_33362D33_BA618.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                "InheritParentScale":true
+            }
+        }
+    ],
+    "HeroLevelUpMessage":{
+        "DebugMsg":"Hero level up!",
+        "OasisId":11253
+    },
+    "VisualRoomZoneFxPerBuildableType":
+    {
+        "SocleBuilding":{
+            "VisualRoomZoneFx":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B8E2ABCD_AI933>FX_B8E2ABCD_AI933.SPECIALFX",
+                    "AttachmentStrategy":{
+                        "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    },
+    "VisualCurrencyIconInfos":
+    {
+        "IGC":{
+            "TextureFileName":"DB:>RAW>TEXTURES>TEXTURE_3CE4C5A9_AI786>TEXTURE_3CE4C5A9_AI786.TEXTURE"
+        },
+        "LifeForce":{
+            "TextureFileName":"DB:>RAW>TEXTURES>TEXTURE_930D31AF_AI786>TEXTURE_930D31AF_AI786.TEXTURE"
+        }
+    },
+    "ZoomedInCameraLight":"DB:>RAW>XREFS>XREF_FDED7079_BC685>XREF_FDED7079_BC685.XREF",
+    "ZoomedInCameraLightGroundOffset":10,
+    "PoweredTrapFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_64BB6230_BC694.MATERIAL",
+            "NodeAttachment":{
+                
+            }
+        }
+    ],
+    "DefaultAggroableFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_74CE7DE7_BC694.MATERIAL",
+            "NodeAttachment":{
+                
+            }
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_16546962_BA618>SPECIAL EFFECT_16546962_BA618.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                "BoneName":"FX_Head",
+                "LockRotation":true
+            },
+            "AttachFxOn":1
+        }
+    ],
+    "DefaultOverlappingRoomBuildableFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_01982F67_BB700.MATERIAL",
+            "NodeAttachment":{
+                
+            }
+        }
+    ],
+    "PowerConnectionValidBeamFx":{
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_687DCA2D_BA618>SPECIAL EFFECT_687DCA2D_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "TargetAttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"PowerConnectionValidBeamFx"
+    },
+    "PowerConnectionInvalidBeamFx":{
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_9CC9283F_BA618>SPECIAL EFFECT_9CC9283F_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "TargetAttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"PowerConnectionInvalidBeamFx"
+    },
+    "PowerConnectionBeamFx":{
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_6F1C09D6_BA618>SPECIAL EFFECT_6F1C09D6_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "TargetAttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"PowerConnectionBeamFx"
+    },
+    "TotemConnectionValidBeamFx":{
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_687DCA2D_BA618>SPECIAL EFFECT_687DCA2D_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "TargetAttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"TotemConnectionValidBeamFx"
+    },
+    "TotemConnectionInvalidBeamFx":{
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_9CC9283F_BA618>SPECIAL EFFECT_9CC9283F_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "TargetAttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"TotemConnectionInvalidBeamFx"
+    },
+    "TotemLinkBeamFx":{
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_8E2B9C2D_BA618>SPECIALFX_8E2B9C2D_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "TargetAttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"TotemLinkBeamFx"
+    },
+    "TotemLeashingDistanceReachedFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_D11F6803_BA618>SPECIALFX_D11F6803_BA618.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                "BoneName":"FX_Head",
+                "LockRotation":true
+            },
+            "AttachFxOn":1,
+            "Name":"TotemLeashingDistanceReachedFx"
+        }
+    ],
+    "InvalidEntityOffsetY":0.5,
+    "RoomBuildableSelectionOutlinePickedUpOffsetY":0.18,
+    "RoomBuildableSelectionOutlineDroppedOffsetY":0.14
+}

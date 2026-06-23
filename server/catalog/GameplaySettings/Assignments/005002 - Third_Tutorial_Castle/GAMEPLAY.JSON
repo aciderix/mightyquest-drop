@@ -1,0 +1,495 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    15,
+                    34,
+                    50,
+                    54,
+                    55,
+                    59,
+                    60,
+                    64,
+                    66,
+                    70,
+                    71,
+                    72,
+                    73,
+                    74,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    97,
+                    101,
+                    106,
+                    108,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    139,
+                    142,
+                    156,
+                    158,
+                    159,
+                    160,
+                    176,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    5
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OverrideCameraOcclusionFlagsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    5
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    13,
+                    58,
+                    86,
+                    89
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"15000002",
+                "OverlayAlpha":0.01,
+                "Text":"[Try that new gear, but first have a look at the region]",
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"SimpleBox",
+                "Position":"BottomCenter",
+                "OffsetTop":-123,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"15000002"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionInputEnabledAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Enabled":true,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1501"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1501",
+                "Title":"[Pan the camera]",
+                "Text":"[Pan the camera]",
+                "Type":"SimpleBox",
+                "PopUpNarrativeVoTextPages":{
+                    
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1501"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":3,
+                "LockOnDisabledPickingType":"AllButLockedOnCastle"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1500000",
+                "Type":"Arrow",
+                "Position":"MiddleCenter",
+                "OffsetTop":100,
+                "OffsetLeft":175,
+                "ArrowDirection":"Left",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"castlePopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1502",
+                "Title":"[Select Tutorial Castle 2]",
+                "Text":"[Enough tourism, now go attack this castle]",
+                "Type":"SimpleBox",
+                "PopUpNarrativeVoTextPages":{
+                    
+                },
+                "Position":"BottomCenter",
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"castlePopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    112,
+                    113,
+                    143,
+                    146
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroLevelUpNotificationAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Enable":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AttackStartedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "CastleModeMask":-5,
+                        "CastleId":3
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.HideAttackSelectionCastlesAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "CastleIds":
+                [
+                    2,
+                    3,
+                    71
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    4,
+                    5,
+                    9,
+                    15,
+                    59,
+                    62,
+                    63,
+                    90,
+                    91,
+                    92,
+                    93,
+                    102,
+                    103,
+                    104,
+                    124,
+                    125,
+                    134,
+                    135,
+                    136,
+                    137,
+                    138
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    6,
+                    7,
+                    8,
+                    10,
+                    59,
+                    106,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    139,
+                    142
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":1,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"800004",
+                "Title":"Using Skills",
+                "TitleOasisId":11025,
+                "Text":"Press -1- to use Firebolt while aiming with the mouse.",
+                "TextOasisId":11026,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":4
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AbilityLaunchedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "AbilityId":611
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":4,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"800005",
+                "Title":"Using Skills",
+                "TitleOasisId":11025,
+                "Text":"Press -1- to use Runaway first skill.",
+                "TextOasisId":11026,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":5
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AbilityLaunchedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "AbilityId":1302
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":4,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroInsideTriggerAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":4,
+                        "IsNot":true
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":4,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"800007",
+                "Title":"Camera Rotation",
+                "TitleOasisId":13258,
+                "Text":"Learn how to rotate the camera",
+                "TextOasisId":13259,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.GameCameraInterpolationCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "GameCameraInterpolation":"Orbit"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AllCreaturesActivityEndedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":5,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    137,
+                    138
+                ],
+                "StartType":"WithPrevious",
+                "StartDelay":1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroInsideTriggerAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":5,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":5,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"800006",
+                "Title":"Emotes",
+                "TitleOasisId":13194,
+                "Text":"Learn how to use emotes",
+                "TextOasisId":13195,
+                "PopupBindingVariable":"FloatingText_Node",
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HeroInsideTriggerAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":8,
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.EmoteLaunchedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":8,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAfterAttackNavigationAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameStateType":"AttackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ServerAttackEndedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    112,
+                    113,
+                    143,
+                    146,
+                    176
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"800001"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            }
+        ]
+    }
+]

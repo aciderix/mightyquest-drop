@@ -1,0 +1,84 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuildSoundsOverrideSpec, HyperQuest.GameServer.Contracts",
+        "BuiltEntityDropSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002790.SOUND"
+        },
+        "BuiltEntityPickupSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002792.SOUND"
+        },
+        "BuiltEntityDeleteSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002791.SOUND"
+        },
+        "BuiltEntityRotateSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002793.SOUND"
+        },
+        "BuiltEntitySelectionSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008982F.SOUND"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_034_00_Death01":"Regular_Layer",
+            "CHA_034_00_Fall01":"Regular_Layer",
+            "CHA_034_00_Run01":"Regular_Layer",
+            "CHA_034_00_Wait02":"Regular_Layer",
+            "CHA_034_00_Wait03":"Regular_Layer",
+            "CHA_034_IT_Drag01":"Regular_Layer",
+            "CHA_034_IT_Drop01":"Regular_Layer",
+            "CHA_034_IT_Purchase01":"Regular_Layer"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            
+        },
+        "CriticalHitSound":{
+            
+        },
+        "DeathSound":{
+            
+        },
+        "ArmorTag":"Stone",
+        "AttackImpactSoundLevelsProfileType":"Default"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "StateEnterSound":{
+                            "SoundEventResource":"DB:>RAW>SOUNDS>000888DC.SOUND"
+                        }
+                    },
+                    {
+                        "StateEnterSound":{
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008928B.SOUND"
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "StateEnterSound":{
+                            "SoundEventResource":"DB:>RAW>SOUNDS>000888DC.SOUND"
+                        }
+                    },
+                    {
+                        "StateEnterSound":{
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008928B.SOUND"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

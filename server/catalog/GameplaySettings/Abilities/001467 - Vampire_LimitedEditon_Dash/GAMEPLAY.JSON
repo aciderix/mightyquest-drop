@@ -1,0 +1,87 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Movement":{
+                                "MoveStyle":{
+                                    "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                    "Distance":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":7
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceCastOrientation"
+                                    },
+                                    "Speed":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "Value":17.5
+                                    },
+                                    "EaseInOut":-0.2
+                                },
+                                "IgnoreMovementReduction":true,
+                                "Collision":{
+                                    "CollisionShape":{
+                                        "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                                        "Radius":0.8
+                                    },
+                                    "CollisionMask":8,
+                                    "CollisionAllianceFilter":4
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SetImmunityOperationSpec, HyperQuest.GameServer.Contracts",
+                            "ImmunityTypeMask":30,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TimedOperationSpec, HyperQuest.GameServer.Contracts",
+                            "CancelConditionTypeFlags":1,
+                            "Time":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":0.6
+                            },
+                            "CreateOperationOnTarget":true,
+                            "Operation":{
+                                "$type":"HyperQuest.GameServer.Contracts.SetImmunityOperationSpec, HyperQuest.GameServer.Contracts",
+                                "ImmunityTypeMask":30,
+                                "ResetImmunityToDefaultValue":true,
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"Source"
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":1,
+                "PrepareTime":0.2,
+                "ActiveTime":0.4,
+                "MaxDistance":12,
+                "EffectRadius":1,
+                "AbilityCastType":"Line"
+            }
+        ]
+    }
+]

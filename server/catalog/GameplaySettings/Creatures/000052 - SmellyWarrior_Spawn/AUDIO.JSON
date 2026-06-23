@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"TwoHandedSword"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "CHA_044_A_Wait03":"Small_Fallen_Shield",
+            "CHA_044_1h_Attack01":"Small_Fallen_Attack",
+            "CHA_044_1h_Attack02":"Small_Fallen_Attack",
+            "CHA_044_00_Run01":"Small_Fallen_Step",
+            "CHA_044_00_Walk01":"Small_Fallen_Step"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioDamageSpec, HyperQuest.GameServer.Contracts",
+        "NormalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00001581.SOUND"
+        },
+        "CriticalHitSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00001581.SOUND"
+        },
+        "DeathSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082CF6.SOUND"
+        },
+        "ArmorTag":"Metal",
+        "AttackImpactSoundLevelsProfileType":"Default"
+    }
+]

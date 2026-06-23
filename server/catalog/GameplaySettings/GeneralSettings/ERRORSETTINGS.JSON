@@ -1,0 +1,221 @@
+{
+    "Errors":
+    [
+        {
+            "Id": 0,
+            "OasisTitleId": 8705,
+            "OasisMessageId": 8706,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 1,
+            "OasisTitleId": 8707,
+            "OasisMessageId": 8708,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 2,
+            "OasisTitleId": 8709,
+            "OasisMessageId": 8710,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 3,
+            "OasisTitleId": 8731,
+            "OasisMessageId": 8732,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": false
+        },
+        {
+            "Id": 4,
+            "OasisTitleId": 8711,
+            "OasisMessageId": 8712,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 5,
+            "OasisTitleId": 8713,
+            "OasisMessageId": 8714,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 6,
+            "OasisTitleId": 8715,
+            "OasisMessageId": 8716,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 7,
+            "OasisTitleId": 8717,
+            "OasisMessageId": 8718,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": true,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 8,
+            "OasisTitleId": 8719,
+            "OasisMessageId": 8720,
+            "OasisButtonCaptionId" : 13206,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 9,
+            "OasisTitleId": 8721,
+            "OasisMessageId": 8722,
+            "OasisButtonCaptionId" : 13206,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": false
+        },
+        {
+            "Id": 10,
+            "OasisTitleId": 8723,
+            "OasisMessageId": 8724,
+            "OasisButtonCaptionId" : 13206,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 11,
+            "OasisTitleId": 8725,
+            "OasisMessageId": 14111,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": true,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 12,
+            "OasisTitleId": 8727,
+            "OasisMessageId": 8728,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": false
+        },
+        {
+            "Id": 13,
+            "OasisTitleId": 8729,
+            "OasisMessageId": 8730,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": true,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 14,
+            "OasisTitleId": 9664,
+            "OasisMessageId": 9665,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 15,
+            "OasisTitleId": 8300,
+            "OasisMessageId": 8301,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 16,
+            "OasisTitleId": 9962,
+            "OasisMessageId": 9964,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 17,
+            "OasisTitleId": 10879,
+            "OasisMessageId": 10880,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 18,
+            "OasisTitleId": 11254,
+            "OasisMessageId": 11255,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 19,
+            "OasisTitleId": 12140,
+            "OasisMessageId": 12139,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 20,
+            "OasisTitleId": 12143,
+            "OasisMessageId": 12144,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 21,
+            "OasisTitleId": 14025,
+            "OasisMessageId": 14026,
+            "OasisButtonCaptionId" : 13206,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 22,
+            "OasisTitleId": 15879,
+            "OasisMessageId": 15875,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 23,
+            "OasisTitleId": 15879,
+            "OasisMessageId": 15876,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 24,
+            "OasisTitleId": 15879,
+            "OasisMessageId": 16133,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 25,
+            "OasisTitleId": 15879,
+            "OasisMessageId": 16228,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        },
+        {
+            "Id": 26,
+            "OasisTitleId": 15879,
+            "OasisMessageId": 16322,
+            "OasisButtonCaptionId" : 8737,
+            "IsForumLinkEnabled": false,
+            "IsContinueButtonEnabled": true
+        }
+    ]
+}

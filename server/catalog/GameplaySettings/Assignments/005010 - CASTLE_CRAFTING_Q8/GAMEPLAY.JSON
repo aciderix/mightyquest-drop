@@ -1,0 +1,46 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AttackStartedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "CastleModeMask":-7,
+            "CastleId":100
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.TriggerEventAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "TriggerId":1,
+                        "GameEntityTypeMask":8
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"50031",
+                "Title":"[Use your Skill]",
+                "TitleOasisId":16706,
+                "Text":"[Press Right-Click to use your skill]",
+                "TextOasisId":16707,
+                "Type":"SimpleBox",
+                "Position":"MiddleRight",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AbilityLaunchedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.EntityDiedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "GameEntityTypeMask":2
+                    }
+                ]
+            }
+        ]
+    }
+]

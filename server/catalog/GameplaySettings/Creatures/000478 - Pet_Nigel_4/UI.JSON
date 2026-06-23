@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Pet_Nigel4",
+        "OasisName":14936,
+        "OasisDescription":14937
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/pets\/PET_006_Nigel_M004.png",
+        "InvIconUrl":"icoInv\/pets\/PET_006_Nigel_M004.png"
+    }
+]

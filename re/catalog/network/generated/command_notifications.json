@@ -1,0 +1,299 @@
+{
+ "ActivateConsumableCommand": {
+  "notifications": [
+   "ConsumableActivatedNotification"
+  ],
+  "confidence": "exact"
+ },
+ "ActivateConsumableOnItemCommand": {
+  "notifications": [
+   "ConsumableActivatedNotification",
+   "HeroInventoryUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "AddCastleCreatureCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "AddCastleInventoryItemCommand": {
+  "notifications": [
+   "CastleInventoryChangedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "AddCastleTrapCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "AddCastleTriggerCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "BoostCastleInventoryItemCommand": {
+  "notifications": [
+   "CastleInventoryChangedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "BuildCommand": {
+  "notifications": [
+   "BuildingUpgradeStartedNotification",
+   "BuildInfoUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "BuyBackCommand": {
+  "notifications": [
+   "WalletUpdatedNotification",
+   "HeroInventoryAddedNotification",
+   "BuyBackUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "BuyCommand": {
+  "notifications": [
+   "WalletUpdatedNotification",
+   "HeroInventoryAddedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "BuyConsumableCommand": {
+  "notifications": [
+   "WalletUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "BuyHeroItemCommand": {
+  "notifications": [
+   "WalletUpdatedNotification",
+   "HeroInventoryAddedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "CastleBuildableCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "ClientIdleCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "CompleteAssignmentCommand": {
+  "notifications": [
+   "AssignmentCompletedNotification",
+   "WalletUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "ExecuteAssignmentActionCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "ExpireExpirableCommand": {
+  "notifications": [
+   "ExpirableRemovedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "ForgeCraftCommand": {
+  "notifications": [
+   "ForgeStartedNotification",
+   "WalletUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "ForgeReforgeCommand": {
+  "notifications": [
+   "HeroInventoryUpdatedNotification",
+   "WalletUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "ForgeUpgradeCommand": {
+  "notifications": [
+   "ForgeStartedNotification",
+   "WalletUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "HarvestHeroCorpseCommand": {
+  "notifications": [
+   "HarvestingCompletedNotification",
+   "HeroInventoryAddedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "HarvestMineBuildingCommand": {
+  "notifications": [
+   "MineProductionCompletedNotification",
+   "WalletUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "HeroEquipConsumableCommand": {
+  "notifications": [
+   "HeroConsumableEquipNotification"
+  ],
+  "confidence": "exact"
+ },
+ "HeroEquipSpellCommand": {
+  "notifications": [
+   "HeroConsumableEquipNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "HeroEquipmentEquipCommand": {
+  "notifications": [
+   "HeroEquipmentEquipNotification"
+  ],
+  "confidence": "exact"
+ },
+ "HeroEquipmentUnequipCommand": {
+  "notifications": [
+   "HeroEquipmentUnequipNotification"
+  ],
+  "confidence": "exact"
+ },
+ "HeroFreeTrialInfoViewedCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "HeroUnequipSpellCommand": {
+  "notifications": [
+   "HeroConsumableUnequipNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "InboxCollectCommand": {
+  "notifications": [
+   "InboxItemsAddedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "InboxCollectToBuyBackCommand": {
+  "notifications": [
+   "BuyBackUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "InboxCollectToHeroEquipmentCommand": {
+  "notifications": [
+   "HeroEquipmentEquipNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "InboxCollectToHeroInventoryCommand": {
+  "notifications": [
+   "HeroInventoryAddedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "InventoryMoveItemCommand": {
+  "notifications": [
+   "HeroInventoryUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "InventorySwapItemCommand": {
+  "notifications": [
+   "HeroInventoryUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "ObjectiveViewedCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "RemoveCastleRoomCommand": {
+  "notifications": [
+   "BuildInfoUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "RestoreMinesBuildingCommand": {
+  "notifications": [
+   "MineEnabledNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "SelectHeroCommand": {
+  "notifications": [
+   "HeroSelectedNotification"
+  ],
+  "confidence": "exact"
+ },
+ "SellDefenseIngredientCommand": {
+  "notifications": [
+   "WalletUpdatedNotification",
+   "CastleInventoryChangedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "SellHeroItemCommand": {
+  "notifications": [
+   "WalletUpdatedNotification",
+   "HeroInventoryRemovedNotification",
+   "BuyBackUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "SetAvatarCommand": {
+  "notifications": [
+   "AttackerAvatarUpdatedNotification"
+  ],
+  "confidence": "heuristic"
+ },
+ "SetCastleInventoryItemViewedCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "SetLastViewedDateCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "SetLastViewedDefendLogCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "SetLastViewedNewsCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "SetProfanityFilteringCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "SpellViewedCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "TrackingCommand": {
+  "notifications": [],
+  "confidence": "exact"
+ },
+ "UpdateCastleCreatureCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "UpdateCastleTrapCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "UpdateCastleTriggerCommand": {
+  "notifications": [],
+  "confidence": "unknown"
+ },
+ "UpgradeBuildingCommand": {
+  "notifications": [
+   "BuildingUpgradeStartedNotification"
+  ],
+  "confidence": "exact"
+ },
+ "UpgradeProductionMineBuildingCommand": {
+  "notifications": [
+   "BuildingUpgradeStartedNotification"
+  ],
+  "confidence": "heuristic"
+ }
+}

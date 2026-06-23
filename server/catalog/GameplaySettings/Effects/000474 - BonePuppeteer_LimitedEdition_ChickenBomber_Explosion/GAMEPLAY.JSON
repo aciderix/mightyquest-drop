@@ -1,0 +1,32 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":2.5,
+        "EndRadius":2.5,
+        "TouchedEntitiesType":2,
+        "AllianceFilter":4,
+        "GameEntityTypeMask":8,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.1
+        },
+        "CollisionCheckInterval":0.1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Value":{
+                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                        "StatType":"SkillDamage",
+                        "Multiplier":12
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    }
+]

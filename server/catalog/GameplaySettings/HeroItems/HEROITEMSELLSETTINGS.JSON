@@ -1,0 +1,25 @@
+{
+  "SellBasePrices": {
+    "Ring": 2,
+    "Necklace": 3,
+    "Weapon": 5,
+    "SuitOfArmor": 4,
+    "ShoulderArmor": 2,
+    "Gloves": 1,
+    "Capes": 3,
+    "Helm": 2,
+    "Costume": 0,
+    "Pet": 0
+  },
+  "SellQualityModifiers": {
+    "Basic": 0.4,
+    "Magic": 1.2,
+    "Exceptional": 1.8,
+    "Legendary": 10.0,
+	"Epic": 25.0
+  },
+  "SellRarityModifiers": {
+    "Common": 1,
+    "Named": 2
+  }
+}

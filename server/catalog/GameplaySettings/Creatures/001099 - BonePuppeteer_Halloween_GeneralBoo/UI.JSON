@@ -1,0 +1,35 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Halloween_GeneralEccentric",
+        "OasisName":15738,
+        "OasisDescription":15739
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bomb",
+                    "OasisName":15739
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/generalBoo.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/generalBoo.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:generalBoo",
+        "HeightOffset":1.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

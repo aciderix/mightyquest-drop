@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_011_SlimeWall_base_01",
+        "HideInModeMask":2
+    }
+]

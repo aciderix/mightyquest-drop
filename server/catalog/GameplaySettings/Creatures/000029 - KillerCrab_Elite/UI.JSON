@@ -1,0 +1,52 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Maodun the Immovable",
+        "OasisName":1385,
+        "OasisDescription":1386
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_011_Shelled_02E.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_011_Shelled_02E.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:Shelled_02_Elite",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Shell mode {0} {0}",
+                    "OasisName":7762
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"25"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"65"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"Very Large size",
+                    "OasisName":7763
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/resistanceToKnockBack.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/resistanceToKnockBack.png"
+                }
+            }
+        ]
+    }
+]

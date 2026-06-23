@@ -1,0 +1,51 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_010_Rabid_01",
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":2.8,
+        "HitImpactHeight":0.75
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7127CF19>ENTITY_7127CF19.ENTITY",
+                        "Scale":0.97816
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7127CF19>ENTITY_7127CF19.ENTITY",
+                        "Scale":0.97816
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7127CF19>ENTITY_7127CF19.ENTITY",
+                        "Scale":0.97816
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7AC77500>ENTITY_7AC77500.ENTITY",
+                        "Scale":1.08
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7AC77500>ENTITY_7AC77500.ENTITY",
+                        "Scale":1.08
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7AC77500>ENTITY_7AC77500.ENTITY",
+                        "Scale":1.08
+                    }
+                ]
+            }
+        ]
+    }
+]

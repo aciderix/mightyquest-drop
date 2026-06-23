@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_025_Shocker_BEA",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_203B0F5A>MESH_203B0F5A.MESH",
+        "Scale":0.4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "FieldShowFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualBeamFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_4709E2D3>FX_4709E2D3.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":0.34
+                },
+                "TargetAttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":0.34
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    }
+]

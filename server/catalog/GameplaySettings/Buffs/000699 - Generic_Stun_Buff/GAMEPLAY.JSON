@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "BuffStopTriggers":{
+            
+        }
+    }
+]

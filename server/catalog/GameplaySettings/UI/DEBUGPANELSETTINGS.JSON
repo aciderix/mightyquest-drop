@@ -1,0 +1,50 @@
+{
+    "PanelNavigationModels":
+    {
+        "leaguePopup":
+        {
+            "$type":"HyperQuest.GameServer.Contracts.UI.LeaguePopupPanelNavigationModel, UIContracts",
+            "IsOpalPanel": true,
+            "LeaguePopupModel":
+            {
+                "PreviousLeagueRank": 55,
+                "PreviousWorldRank": 55,
+                "IsWorldRanked": false,
+                "IsLeagueRanked": true,
+                "IsUnranked": false,
+                "IsPromoted": false,
+                "IsDemoted": false,
+                "IsMaintained": true,
+                "IsPlaced": true,
+                "PreviousSubLeagueReward":
+                {
+                },
+                "CurrentSubLeagueReward":
+                {
+                },
+                "CurrentSubLeagueModel":
+                {
+                },
+                "SeasonalReward":
+                {
+                },
+                "SeasonalRewardTooltip":
+                {
+                }
+            }
+        },
+        "ErrorPanel":
+        {
+            "$type":"HyperQuest.GameServer.Contracts.UI.ErrorMessageModel, UIContracts",
+            "PanelName": "ErrorPanel",
+            "IsOpalPanel": true,
+            "Title": "Hello Dave."
+        },
+        "chooseFirstHero":
+        {
+            "$type":"HyperQuest.GameServer.Contracts.UI.ChooseFirstHeroPanelNavigationModel, UIContracts",
+            "PanelName":"chooseFirstHero",
+            "ExplanationText":"This is the explanation text!"
+        }
+    }
+}

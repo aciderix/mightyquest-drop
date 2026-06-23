@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DirectionalCannonSpec, HyperQuest.GameServer.Contracts",
+        "TravelingAngle":270,
+        "RotationSpeed":180,
+        "StopDuration":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":177
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AiControllerSpec, HyperQuest.GameServer.Contracts",
+        "Behavior":{
+            "TargetDefinitions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.PresetTargetDefinitionSpec, HyperQuest.GameServer.Contracts",
+                    "PresetTargetDefinitionId":1,
+                    "Id":1,
+                    "_comment":"Target the hero"
+                }
+            ],
+            "Children":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ActionUseAbilityBehaviorSpec, HyperQuest.GameServer.Contracts",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.TargetLabelSpec, HyperQuest.GameServer.Contracts",
+                        "TargetLabel":1
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MissileLauncherSpec, HyperQuest.GameServer.Contracts"
+    }
+]

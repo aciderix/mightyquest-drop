@@ -1,0 +1,53 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Acid Cannon",
+        "OasisName":1565,
+        "OasisDescription":1566
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/TRA_006_BalisticCannon_01-3.png",
+        "InvIconUrl":"icoInv\/traps\/TRA_006_BalisticCannon_01-3.png",
+        "LayerName":"UI_Common_TrapsIcons:BalisticCannon_01-3",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"damage {0}",
+                    "OasisName":7658
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.5*(225+(36*level))"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"puddle {0}",
+                    "OasisName":7659
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"0.5*(225+(36*level))"
+                    }
+                ]
+            }
+        ]
+    }
+]

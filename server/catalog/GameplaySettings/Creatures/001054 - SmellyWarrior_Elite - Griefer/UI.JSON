@@ -1,0 +1,87 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Doctor Venkman",
+        "OasisName":1391,
+        "OasisDescription":1392
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/C1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/C1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_FallenKnight:C1e",
+        "HeightOffset":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyWarriors2.png",
+                        "NameOasisId":11195,
+                        "DescriptionOasisId":11197
+                    }
+                ]
+            },
+            {
+                "SpecializationId":1,
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyWarriors1.png",
+                        "NameOasisId":11199,
+                        "DescriptionOasisId":11201
+                    }
+                ]
+            },
+            {
+                "SpecializationId":2,
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyWarriors3.png",
+                        "NameOasisId":11203,
+                        "DescriptionOasisId":11205
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/C1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/C1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:C1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/C1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/C1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:C1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/C1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/C1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:C1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/C2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/C2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:C2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/C2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/C2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:C2e"
+            }
+        ]
+    }
+]

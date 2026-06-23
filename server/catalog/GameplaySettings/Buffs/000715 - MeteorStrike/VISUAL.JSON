@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"MeteorStrike"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"MeteorStrike",
+                "ReceiverType":"Target",
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_7673B2AA_AI598>FX_7673B2AA_AI598.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "LockRotation":true,
+                            "StickToTheWorld":true
+                        },
+                        "ForcePlayUntilFxFinished":true,
+                        "AttachFxOn":"Target"
+                    }
+                ]
+            }
+        ]
+    }
+]

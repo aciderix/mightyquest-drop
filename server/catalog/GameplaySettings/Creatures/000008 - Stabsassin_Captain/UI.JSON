@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blade Assassin",
+        "OasisName":1343,
+        "OasisDescription":1344
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_024_BladeAssassin_M001.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_024_BladeAssassin_M001.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:BladeAssassin_01",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Whirlwind",
+                    "OasisName":8083
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/meleeAttack.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/meleeAttack.png"
+                }
+            }
+        ]
+    }
+]

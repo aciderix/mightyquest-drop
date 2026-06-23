@@ -1,0 +1,51 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_017_TailSmash"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellTail"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_E4D9DFC4>SPECIALFX_E4D9DFC4.SPECIALFX",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "BoneName":"FX_Feet"
+                            }
+                        }
+                    }
+                ],
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                            "AnimationName":"CameraShakeMedium"
+                        }
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualGamepadVibrateFxSpec, HyperQuest.GameServer.Contracts",
+                            "AnimationName":"GamepadVibrateMedium"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_EasterEggTrophy",
+        "OasisName":16377,
+        "OasisDescription":16377
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/League_Reward_Easter_Egg.png",
+        "InvIconUrl":"icoInv\/deco\/League_Reward_Easter_Egg.png",
+        "HeightOffset":2
+    }
+]

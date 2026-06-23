@@ -1,0 +1,235 @@
+# serialize<->deserialize consistency for two-way contracts
+# 677/790 fully consistent; 113 with diffs
+
+AbilityLevelAutoAimParam:
+    type differs [AutoAimType] : write=num read=str
+AccountForgedItem:
+    type differs [ForgeMode] : write=num read=str
+BakedSpellInfo:
+    type differs [Alliance] : write=num read=str
+BuildingNavBarLinkModel:
+    type differs [BuildingType] : write=num read=str
+CastleRenovationMaterialsCollectedEventArgs:
+    type differs [CastleRenovationLevel] : write=num read=str
+ContextualActionData:
+    written but not read : ['ContextualActionDataInputType']
+    type differs [ActionType] : write=num read=str
+CraftingMaterialMineInformationModel:
+    type differs [CraftingMaterialMineState] : write=num read=str
+CurrencyAmount:
+    type differs [CurrencyType] : write=num read=str
+ForgeItemSlotModel:
+    type differs [HeroItemSlot] : write=num read=str
+HarvestRefreshPosition:
+    type differs [CurrencyType] : write=num read=str
+HeroEquipmentUnequippedEventArgs:
+    type differs [ItemSlot] : write=num read=str
+InboxItem:
+    type differs [ItemType] : write=num read=str
+MessagePreview:
+    type differs [Type] : write=num read=str
+RewardItemModel:
+    type differs [CreatureRank] : write=num read=str
+ShopCategorySettings:
+    type differs [Category] : write=num read=str
+ShopDiscount:
+    type differs [DiscountType] : write=num read=str
+ShowBuildingHoverTooltipEventArgs:
+    type differs [SpecialMessage] : write=num read=str
+ActiveConsumableModel:
+    type differs [ConsumableType] : write=num read=str
+CastleCell:
+    type differs [Type] : write=num read=str
+CastleDifficultySettings:
+    type differs [CastleDifficulty] : write=num read=str
+CastleInventoryAction:
+    type differs [Type] : write=num read=str
+CastleLayoutCell:
+    type differs [Type] : write=num read=str
+CastleRenovationCollectedMaterialModel:
+    type differs [DestinationInventory] : write=num read=str
+CastleRenovationLevelChangedEventArgs:
+    type differs [CastleRenovationLevel] : write=num read=str
+ChatUserPresenceUpdatedEventArgs:
+    type differs [PresenceStatus] : write=num read=str
+ForgeMysteryBoxModel:
+    type differs [ForgeMode] : write=num read=str
+HeroInventoryItemModel:
+    type differs [ConsumableType] : write=num read=str
+JobStrategy:
+    type differs [JobType] : write=num read=str
+LaunchAttackParam:
+    type differs [CastleType] : write=num read=str
+MessageBoxInformation:
+    type differs [ButtonPressedAfterTimer] : write=num read=str
+SetCastleInventoryItemViewedCommand:
+    type differs [ItemType] : write=num read=str
+WalletCurrencyUpdatedEventArgs:
+    type differs [CurrencyType] : write=num read=str
+AbstractShortcutCode:
+    type differs [IgnoredModifiers] : write=num read=str
+AccountAttackRegion:
+    type differs [Status] : write=num read=str
+ActiveConsumable:
+    type differs [ConsumableType] : write=num read=str
+AvatarUpdatedEventArgs:
+    type differs [AvatarCategory] : write=num read=str
+BuildingNavBarLinkSettings:
+    type differs [BuildingType] : write=num read=str
+ChatMessage:
+    type differs [ChatMessageType] : write=num read=str
+HarvestCollectingStartedEventArgs:
+    type differs [CurrencyType] : write=num read=str
+HarvestMineStatusAddedEventArgs:
+    type differs [CurrencyType] : write=num read=str
+HeroInventorySlotUpdate:
+    type differs [ItemType] : write=num read=str
+HitInformation:
+    type differs [DamageSource] : write=num read=str
+HudAbilityCooldownModel:
+    type differs [AbilitySlotIndex] : write=num read=str
+PopupClosedEventArgs:
+    type differs [ButtonClicked] : write=num read=str
+SecurityPermission:
+    type differs [AccessType] : write=num read=str
+BuildToolbarModel:
+    written but not read : ['BuildToolMode']
+BuildingUpgradeInfosModel:
+    type differs [BuildingType] : write=num read=str
+CastleInfoSummary:
+    type differs [AttackerStatus] : write=num read=str
+DoorStateTriggers:
+    written but not read : ['OnAfterAggroActivityEndedAndTestAttackCondition']
+    type differs [OnAfterAggroActivityEnded] : write=num read=str
+GlobalNotification:
+    type differs [NotificationType] : write=num read=str
+HarvestOutEventArgs:
+    type differs [EntityHarvestType] : write=num read=str
+HeroInventoryItemRemovedEventArgs:
+    type differs [InventoryItemType] : write=num read=str
+LockButtonEventArgs:
+    type differs [Button] : write=num read=str
+ObjectiveSummaryEntryModel:
+    type differs [Category] : write=num read=str
+RMPackageId:
+    type differs [MachineType] : write=num read=str
+RoomBuildableIntersectionFlag:
+    type differs [Flags] : write=num read=str
+AccountQuickStats:
+    type differs [Privileges] : write=num read=str
+CastleRenovationUpgradeReadyEventArgs:
+    type differs [NextCastleRenovationLevel] : write=num read=str
+ChatRoom:
+    type differs [ChatRoomType] : write=num read=str
+CloseMessageBoxEventArgs:
+    type differs [Id] : write=num read=str
+DefenseIngredientSpecializedEventArgs:
+    type differs [GameEntityType] : write=num read=str
+ErrorMessageInformation:
+    type differs [Id] : write=num read=str
+GameButtonEventArgs:
+    type differs [Button] : write=num read=str
+NewsData:
+    type differs [Type] : write=num read=str
+PlayerInteractionParams:
+    type differs [AttackSource] : write=num read=str
+BootConfig:
+    type differs [AttackSource] : write=num read=str
+CastleInventoryMenuNavigationButtonModel:
+    type differs [ItemType] : write=num read=str
+MagicalPropertyModel:
+    type differs [Comparison] : write=num read=str
+NewsCategorySettings:
+    type differs [Type] : write=num read=str
+ObjectiveEntryModel:
+    type differs [Category] : write=num read=str
+OrientedSpawnPosition:
+    type differs [Orientation] : write=num read=str
+RoomObstacle:
+    type differs [Orientation] : write=num read=str
+ShopNewItemsCountRefreshedEventArgs:
+    type differs [ShopCategory] : write=num read=str
+ShowTrapPowerSupplyHoverTooltipEventArgs:
+    type differs [Name] : write=num read=str
+SimulationLaunchConfig:
+    type differs [AttackSource] : write=num read=str
+UserConfigurationGamePlayModel:
+    type differs [LootCollectorFilter] : write=num read=str
+ViewableItem:
+    type differs [Type] : write=num read=str
+ActivityBucket:
+    type differs [AttackableCastleStatus] : write=num read=str
+BuildInteractionState:
+    type differs [GameEntityTypeMask] : write=num read=str
+CastleId:
+    type differs [CastleType] : write=num read=str
+CsvProperty:
+    type differs [Type] : write=num read=str
+HeroItemCategory:
+    type differs [CategoryType] : write=num read=str
+HeroStatModifier:
+    type differs [StatType] : write=num read=str
+ItemGenerationInfo:
+    type differs [GenerationSystem] : write=num read=str
+PanelNavigationModel:
+    type differs [Attachment] : write=num read=str
+ShopCategoryModel:
+    type differs [ShopCategory] : write=num read=str
+ShopMenuNavigationButton:
+    type differs [GameButton] : write=num read=str
+SteamAssetContextSetting:
+    type differs [ItemType] : write=num read=str
+UnlockButtonEventArgs:
+    type differs [Button] : write=num read=str
+CastleBuildable:
+    type differs [Orientation] : write=num read=str
+CastleLoadConfig:
+    type differs [CastleMode] : write=num read=str
+CastleRenovationLevelModel:
+    type differs [CastleRenovationLevel] : write=num read=str
+ForgeModel:
+    written but not read : ['ItemQuality']
+    type differs [CraftingSlotQuality] : write=num read=str
+HarvestResult:
+    type differs [EntityHarvestType] : write=num read=str
+HeroStat:
+    type differs [StatType] : write=num read=str
+PanelVisibilityInformation:
+    written but not read : ['PanelName']
+    type differs [CastleRenovationLevel] : write=num read=str
+ProgressionLock:
+    type differs [CastleRenovationLevelRequirement] : write=num read=str
+ShopFilter:
+    type differs [Type] : write=num read=str
+ShowTrapHoverTooltipEventArgs:
+    type differs [TrapName] : write=num read=str
+CastleGround:
+    type differs [GroundType] : write=num read=str
+DeathDetail:
+    type differs [DamageSource] : write=num read=str
+HeroDeathModel:
+    type differs [CastleType] : write=num read=str
+HeroInventoryItemUpdatedEventArgs:
+    type differs [InventoryItemType] : write=num read=str
+HudAbilityCancelledEventArgs:
+    type differs [AbilitySlotIndex] : write=num read=str
+MessageBoxClosedEventArgs:
+    written but not read : ['Id']
+    type differs [ButtonClicked] : write=num read=str
+MineProductionRemainingTimeUpdatedEventArgs:
+    type differs [EntityHarvestType] : write=num read=str
+Notification:
+    type differs [NotificationType] : write=num read=str
+CastleRenovationProgressionLockModel:
+    type differs [CastleRenovationLevel] : write=num read=str
+HarvestRemovedEventArgs:
+    type differs [EntityHarvestType] : write=num read=str
+ShopFilterValueId:
+    type differs [Type] : write=num read=str
+SpellShortcutKeyModel:
+    type differs [AbilitySlotIndex] : write=num read=str
+TooltipModel:
+    written but not read : ['ArrowPosition']
+    type differs [AnchorPosition] : write=num read=str
+TrackingBase:
+    type differs [TrackingTagId] : write=num read=str

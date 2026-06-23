@@ -1,0 +1,5 @@
+{
+  "InventoryTabMaxCount": 8,
+  "InventorySlotByTabCount": 21,
+  "BuyBackTimeoutForInventoryFull": "90d"
+}

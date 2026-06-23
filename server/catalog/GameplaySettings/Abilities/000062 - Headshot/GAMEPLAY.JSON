@@ -1,0 +1,153 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":5,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":1.4,
+                                "Up":1.5
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":10,
+                                "Name":"HeadshotMissile1"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":133,
+                "OasisShortDescription":134,
+                "Interruptable":true,
+                "Cooldown":0.5,
+                "PrepareTime":0.9,
+                "RecoverTime":0.4,
+                "MaxDistance":15,
+                "CastCost":30,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":7
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true,
+                "HoldToPrepare":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":1.4,
+                                "Up":1.5
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":11,
+                                "Name":"HeadshotMissile2"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":135,
+                "OasisShortDescription":136,
+                "Interruptable":true,
+                "Cooldown":0.5,
+                "PrepareTime":0.9,
+                "RecoverTime":0.4,
+                "MaxDistance":15,
+                "CastCost":30,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":19
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true,
+                "HoldToPrepare":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":1.4,
+                                "Up":1.5
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":12,
+                                "Name":"HeadshotMissile3"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":137,
+                "OasisShortDescription":138,
+                "Interruptable":true,
+                "Cooldown":0.5,
+                "PrepareTime":0.9,
+                "RecoverTime":0.4,
+                "MaxDistance":15,
+                "CastCost":30,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":30
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true,
+                "HoldToPrepare":true
+            }
+        ]
+    }
+]

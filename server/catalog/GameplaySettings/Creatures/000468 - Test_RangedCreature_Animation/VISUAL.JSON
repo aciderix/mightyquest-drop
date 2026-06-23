@@ -1,0 +1,117 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Test_RangedCreature_Animation",
+        "ScaleVariance":0.1,
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualGameplayEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "Spawn":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_7CFAE16F>SPECIALEFFECTS_7CFAE16F.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7B33CB59_BC669>ENTITY_7B33CB59_BC669.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4CDCC934_AI145>ENTITY_4CDCC934_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_4CDCC934_AI145>ENTITY_4CDCC934_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_1EC563BB_AI145>ENTITY_1EC563BB_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_1EC563BB_AI145>ENTITY_1EC563BB_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_1EC563BB_AI145>ENTITY_1EC563BB_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_C4817CF3_AI145>ENTITY_C4817CF3_AI145.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            },
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B7C89243_AI145>ENTITY_B7C89243_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B7C89243_AI145>ENTITY_B7C89243_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_B7C89243_AI145>ENTITY_B7C89243_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_A78A9FBF_AI145>ENTITY_A78A9FBF_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_A78A9FBF_AI145>ENTITY_A78A9FBF_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_A78A9FBF_AI145>ENTITY_A78A9FBF_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_1C7B5944_AI145>ENTITY_1C7B5944_AI145.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 2"
+            },
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ED893842_AI145>ENTITY_ED893842_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ED893842_AI145>ENTITY_ED893842_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_ED893842_AI145>ENTITY_ED893842_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D1E5A1FD_AI145>ENTITY_D1E5A1FD_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D1E5A1FD_AI145>ENTITY_D1E5A1FD_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_D1E5A1FD_AI145>ENTITY_D1E5A1FD_AI145.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_9FB5412E_AI145>ENTITY_9FB5412E_AI145.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 3"
+            }
+        ]
+    }
+]

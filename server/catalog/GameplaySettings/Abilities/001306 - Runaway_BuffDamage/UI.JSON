@@ -1,0 +1,121 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":13080,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit buff duration 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit damage multiplier 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit buff bonus duration"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit damage multiplier 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*10",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit buff bonus duration"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":13080,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit buff duration 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit damage multiplier 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit buff bonus duration 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit damage multiplier 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*10",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Teen Spirit buff bonus duration 2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"TeenSpirit",
+        "OasisName":13079
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"iconInv\/heroes\/cha004\/skills\/SPELL_CHA_004_songAttack_up.png",
+        "InvIconUrl":"iconInv\/heroes\/cha004\/skills\/SPELL_CHA_004_songAttack_up.png",
+        "LayerName":"UI_Common_Hero004_SkillsIcons:songAttack"
+    }
+]

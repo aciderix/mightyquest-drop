@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_9E1F8F83>FX_9E1F8F83.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":2,
+                "StopForcedPlayFx":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_1A863E6F_AI933.MATERIAL",
+                "Length":3,
+                "SegmentLifeTime":66,
+                "FadeOutTime":0.8,
+                "FadeOutDistance":4,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.14
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.14
+                        }
+                    ]
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_C9AD8626_AI933.MATERIAL",
+                "Length":4,
+                "SegmentLifeTime":55,
+                "FadeOutTime":0.5,
+                "FadeOutDistance":4,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.14
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.14
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_MeteorSwarm_01_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_0433B896_AI933>MESH_0433B896_AI933.MESH",
+        "Scale":2
+    }
+]

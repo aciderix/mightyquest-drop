@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LOT_LifeForce_Pile_01",
+        "SynergyEntityFileNameVariations":
+        [
+            "DB:>RAW>ENTITIES>ENTITY_8C38A8B5_BC669>ENTITY_8C38A8B5_BC669.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_BAA055C5>ENTITY_BAA055C5.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_C67BDEE9_BC669>ENTITY_C67BDEE9_BC669.ENTITY"
+        ],
+        "Scale":0.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_FA4317C7>FX_FA4317C7.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    }
+]

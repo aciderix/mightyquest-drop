@@ -1,0 +1,33 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"SpikeFloor_New",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_2A77331C_AH273>ENTITY_2A77331C_AH273.ENTITY",
+        "Scale":0.83
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts",
+        "DamageFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_D409DF3E_BA618>SPECIALFX_D409DF3E_BA618.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                "PriorityOffset":10,
+                "NodeAttachment":{
+                    
+                },
+                "Duration":0.15,
+                "AttachFxOn":"Target"
+            }
+        ]
+    }
+]

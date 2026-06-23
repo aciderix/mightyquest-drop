@@ -1,0 +1,13 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Room8_Treasure_01",
+        "OasisDescription":15725
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/entrance.png",
+        "InvIconUrl":"icoInv\/rooms\/entrance.png",
+        "LayerName":"icoShop_rooms:entrance"
+    }
+]

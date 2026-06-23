@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Guard Dog",
+        "OasisName":1261,
+        "OasisDescription":1262
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_010_Rabid_01.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_010_Rabid_01.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_01",
+        "HeightOffset":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Howl",
+                    "OasisName":7586
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/supportAbility.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_010_Rabid_01.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_010_Rabid_01.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_010_Rabid_01.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_010_Rabid_01.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_010_Rabid_01.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_010_Rabid_01.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_010_RABID_04.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_010_RABID_04.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_04"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_010_RABID_04.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_010_RABID_04.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_04"
+            },
+            {
+                "ShopIconUrl":"icoShop\/creatures\/MISC\/CHA_010_RABID_04.png",
+                "InvIconUrl":"icoInv\/creatures\/MISC\/CHA_010_RABID_04.png",
+                "LayerName":"UI_Common_CreaturesIcons_Misc:Rabid_04"
+            }
+        ]
+    }
+]

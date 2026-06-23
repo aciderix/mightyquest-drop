@@ -1,0 +1,118 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Storm Armor",
+        "OasisName":9795
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"iconInv\/heroes\/cha003\/skills\/SPELL_CHA_003_StormArmor_up.png",
+        "InvIconUrl":"iconInv\/heroes\/cha003\/skills\/SPELL_CHA_003_StormArmor_up.png",
+        "LayerName":"UI_Common_Hero003_SkillsIcons:StormArmor"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":9796,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Storm Armor Damage Reduction 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Storm Armor reflect damage 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*-100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Shocked Damage Debuff "
+                    }
+                ]
+            },
+            {
+                "OasisDescription":9796,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Storm Armor Damage Reduction 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Storm Armor reflect damage 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*-100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Shocked Damage Debuff "
+                    }
+                ]
+            },
+            {
+                "OasisDescription":9796,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Storm Armor Damage Reduction 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Storm Armor reflect damage 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*-100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Shocked Damage Debuff "
+                    }
+                ]
+            }
+        ]
+    }
+]

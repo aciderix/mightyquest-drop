@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_HeadShot_04_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_D720FA7B>MESH_D720FA7B.MESH"
+    }
+]

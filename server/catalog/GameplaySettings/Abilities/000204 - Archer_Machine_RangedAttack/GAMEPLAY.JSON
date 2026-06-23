@@ -1,0 +1,50 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.6,
+                                "Up":1.1,
+                                "Right":-0.14
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":204,
+                                "Name":"Archer_MachineBolt"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "PrepareTime":1,
+                "RecoverTime":6,
+                "RecoverInterruptWindow":6,
+                "MaxDistance":12,
+                "AbilityCastType":"Targetted",
+                "AttackSpeedFactor":1,
+                "NeedFacingTarget":false,
+                "MaximumPrepareRotationDuration":0.1
+            }
+        ]
+    }
+]

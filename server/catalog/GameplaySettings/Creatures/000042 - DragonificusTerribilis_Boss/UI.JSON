@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Bilebelly Blanchard",
+        "OasisName":10454,
+        "OasisDescription":10453
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_038_BlackDragon_01.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_038_BlackDragon_01.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:BlackDragon_01",
+        "HeightOffset":4.2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7814
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    }
+]

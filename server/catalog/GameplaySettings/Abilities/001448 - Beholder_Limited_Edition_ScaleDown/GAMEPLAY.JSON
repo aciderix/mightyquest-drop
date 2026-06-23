@@ -1,0 +1,45 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":856,
+                                "Name":"Beholder_Elite_LimitedEdition_ImuneMini"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SetPickingBaseScaleOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Scale":0.3,
+                            "AffectOffset":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "ActiveTime":0.3,
+                "MaxDistance":1000,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "AbilityCastType":"Direct",
+                "AttackSpeedFactor":1,
+                "MainDamageOperationStatValueSpecTag":"Beholder lazer 2"
+            }
+        ]
+    }
+]

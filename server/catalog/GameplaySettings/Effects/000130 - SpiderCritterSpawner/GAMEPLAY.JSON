@@ -1,0 +1,78 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts",
+        "InitialSpawnedEntities":
+        [
+            {
+                "SpawnableEntitySpecContainerRefId":458,
+                "Tier":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":1
+                },
+                "Position":{
+                    "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                },
+                "Orientation":{
+                    "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                },
+                "IsSpawnSpecApplied":true
+            },
+            {
+                "SpawnableEntitySpecContainerRefId":458,
+                "Tier":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":1
+                },
+                "Position":{
+                    "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                },
+                "Orientation":{
+                    "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                },
+                "IsSpawnSpecApplied":true
+            },
+            {
+                "SpawnableEntitySpecContainerRefId":458,
+                "Tier":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":1
+                },
+                "Position":{
+                    "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                },
+                "Orientation":{
+                    "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                },
+                "IsSpawnSpecApplied":true
+            },
+            {
+                "SpawnableEntitySpecContainerRefId":458,
+                "Tier":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":1
+                },
+                "Position":{
+                    "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                },
+                "Orientation":{
+                    "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                },
+                "IsSpawnSpecApplied":true
+            },
+            {
+                "SpawnableEntitySpecContainerRefId":458,
+                "Tier":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":1
+                },
+                "Position":{
+                    "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                },
+                "Orientation":{
+                    "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                },
+                "IsSpawnSpecApplied":true
+            }
+        ]
+    }
+]

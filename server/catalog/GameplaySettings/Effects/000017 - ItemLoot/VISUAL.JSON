@@ -1,0 +1,74 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LOT_002_Weapon",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_84688CB8>ENTITY_84688CB8.ENTITY",
+        "Scale":0.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualLootFxSpec, HyperQuest.GameServer.Contracts",
+        "HeroItemQualityFxs":
+        {
+            "Basic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_7C87C197_AI933>FX_7C87C197_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Magic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_9AE0C55E>SPECIALEFFECTS_9AE0C55E.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Exceptional":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_E2CE8180_AI933>FX_E2CE8180_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Legendary":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_869593C1_AI933>FX_869593C1_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            },
+            "Epic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_2B7BC84B_AI933>FX_2B7BC84B_AI933.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

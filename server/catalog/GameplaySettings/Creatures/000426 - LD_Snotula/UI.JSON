@@ -1,0 +1,29 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Count Snotula LD",
+        "OasisName":1405
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/beast\/CHA_009_Snotter_Boss.png",
+        "InvIconUrl":"icoInv\/creatures\/beast\/CHA_009_Snotter_Boss.png",
+        "LayerName":"UI_Common_CreaturesIcons_Snotter:SnotterKing_01",
+        "HeightOffset":4.2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7812
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    }
+]

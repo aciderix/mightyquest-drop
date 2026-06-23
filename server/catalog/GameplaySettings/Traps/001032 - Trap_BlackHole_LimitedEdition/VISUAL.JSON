@@ -1,0 +1,34 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_3661B2A7_BB579>SPECIALFX_3661B2A7_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Disabled":true
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Trap_BlackHole_LimitedEdition",
+        "HideInModeMask":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTrapFxSpec, HyperQuest.GameServer.Contracts",
+        "TrapDeactivatedFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                "AnimationName":"Material_Scroll_Deactivation",
+                "IsSynergyAnimation":true,
+                "UseEmoteStateToPlayAnimation":false,
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    }
+]

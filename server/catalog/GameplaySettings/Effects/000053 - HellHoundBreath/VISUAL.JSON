@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_010_Cerberus_Flamebreath",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_203B0F5A>MESH_203B0F5A.MESH"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "FieldShowFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_CD6D6F2E>SPECIALFX_CD6D6F2E.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":0.08,
+                    "FrontOffset":-0.4
+                },
+                "Scale":0.8
+            }
+        ]
+    }
+]

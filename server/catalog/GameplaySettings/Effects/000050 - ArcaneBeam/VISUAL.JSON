@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_ArcaneBeam_01_BEA"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFieldFxSpec, HyperQuest.GameServer.Contracts",
+        "FieldShowFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualBeamFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_4709E2D3>FX_4709E2D3.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_LeftHand"
+                },
+                "TargetAttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachSourceOnMasterOwner":true
+            }
+        ],
+        "EntityLeaveFieldFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_27B5E539>SPECIALFX_27B5E539.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Body"
+                },
+                "ForcePlayUntilFxFinished":true,
+                "AttachFxOn":"Target"
+            }
+        ]
+    }
+]

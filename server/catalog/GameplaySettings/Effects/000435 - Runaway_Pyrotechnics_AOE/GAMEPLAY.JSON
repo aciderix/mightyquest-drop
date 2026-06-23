@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":3.5,
+        "EndRadius":3.5,
+        "AllianceFilter":4,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":5
+        }
+    }
+]

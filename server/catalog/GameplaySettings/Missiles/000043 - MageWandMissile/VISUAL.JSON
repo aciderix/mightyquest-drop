@@ -1,0 +1,147 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts",
+        "DamageFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_655A6D99_BD346>SPECIALFX_655A6D99_BD346.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Duration":0.15
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_281EE5D4_AI598>FX_281EE5D4_AI598.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualVolumeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":0.5
+            }
+        ],
+        "OwnerWeaponQualityPersistentFxList":
+        {
+            "Legendary":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_281EE5D4_AI598>FX_281EE5D4_AI598.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Scale":0.75
+                    }
+                ]
+            },
+            "Epic":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_281EE5D4_AI598>FX_281EE5D4_AI598.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "Scale":1.1
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxEquipmentQualitySpec, HyperQuest.GameServer.Contracts",
+        "ItemQualityLevels":
+        {
+            "Legendary":{
+                "EntityHitFx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_AA362FBA_BD346>SPECIALFX_AA362FBA_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        },
+                        "Duration":2,
+                        "AttachFxOn":"Target"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                        "AnimationName":"CameraShakeSmallQuick"
+                    }
+                ]
+            },
+            "Epic":{
+                "EntityHitFx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_65651FD6_BD346>SPECIALFX_65651FD6_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        },
+                        "Duration":2,
+                        "AttachFxOn":"Target"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualCameraShakeFxSpec, HyperQuest.GameServer.Contracts",
+                        "AnimationName":"CameraShakeSmallQuick"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "EntityHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_0A05CD02_AI933>FX_0A05CD02_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                },
+                "Duration":2,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "IgnoreMissileOrientationForEntityHitFx":true,
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_96EAB62B_AI933>FX_96EAB62B_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachFxOn":"Target"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_BasicAttack_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_3A022D8F_AI933>MESH_3A022D8F_AI933.MESH"
+    }
+]

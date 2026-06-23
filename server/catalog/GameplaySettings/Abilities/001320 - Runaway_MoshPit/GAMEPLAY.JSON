@@ -1,0 +1,306 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":11,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":4
+                            },
+                            "AllianceFilter":4,
+                            "TouchedEntitiesType":1,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Movement":{
+                                            "MoveStyle":{
+                                                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                                "Distance":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Min":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":0.5
+                                                    },
+                                                    "Max":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":3.5
+                                                    }
+                                                },
+                                                "Orientation":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                    "OriginOrientation":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                                                    },
+                                                    "AllowedAngle":360
+                                                },
+                                                "Speed":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Min":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":7
+                                                    },
+                                                    "Max":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":10
+                                                    }
+                                                }
+                                            },
+                                            "KnockbackSpec":{
+                                                "KnockbackStandupDuration":4
+                                            },
+                                            "Collision":{
+                                                
+                                            }
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":4,
+                                            "Tag":"Mosh Pit stun duration 1"
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        },
+                                        "IsDisabled":true
+                                    }
+                                ]
+                            },
+                            "Position":"Source",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":13081,
+                "OasisShortDescription":13082,
+                "OasisLongDescription":13082,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.5,
+                "RecoverInterruptWindow":0.5,
+                "CastCost":35,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":6
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":4
+                            },
+                            "AllianceFilter":4,
+                            "TouchedEntitiesType":1,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Movement":{
+                                            "MoveStyle":{
+                                                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                                "Distance":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Min":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":0.5
+                                                    },
+                                                    "Max":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":3.5
+                                                    }
+                                                },
+                                                "Orientation":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                    "OriginOrientation":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                                                    },
+                                                    "AllowedAngle":360
+                                                },
+                                                "Speed":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Min":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":7
+                                                    },
+                                                    "Max":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":10
+                                                    }
+                                                }
+                                            },
+                                            "KnockbackSpec":{
+                                                "KnockbackStandupDuration":5
+                                            },
+                                            "Collision":{
+                                                
+                                            }
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5,
+                                            "Tag":"Mosh Pit stun duration 2"
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        },
+                                        "IsDisabled":true
+                                    }
+                                ]
+                            },
+                            "Position":"Source",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":13081,
+                "OasisShortDescription":13082,
+                "OasisLongDescription":13082,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.5,
+                "RecoverInterruptWindow":0.5,
+                "CastCost":35,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":17
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":5
+                            },
+                            "AllianceFilter":4,
+                            "TouchedEntitiesType":1,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Movement":{
+                                            "MoveStyle":{
+                                                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                                "Distance":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Min":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":0.5
+                                                    },
+                                                    "Max":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":3.5
+                                                    }
+                                                },
+                                                "Orientation":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                    "OriginOrientation":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.IdentityOrientationSpec, HyperQuest.GameServer.Contracts"
+                                                    },
+                                                    "AllowedAngle":360
+                                                },
+                                                "Speed":{
+                                                    "$type":"HyperQuest.GameServer.Contracts.RandomValueSpec, HyperQuest.GameServer.Contracts",
+                                                    "Min":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":7
+                                                    },
+                                                    "Max":{
+                                                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                        "Value":10
+                                                    }
+                                                }
+                                            },
+                                            "KnockbackSpec":{
+                                                "KnockbackStandupDuration":5.5
+                                            },
+                                            "Collision":{
+                                                
+                                            }
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    },
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":5.5,
+                                            "Tag":"Mosh Pit stun duration 3"
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        },
+                                        "IsDisabled":true
+                                    }
+                                ]
+                            },
+                            "Position":"Source",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":13081,
+                "OasisShortDescription":13082,
+                "OasisLongDescription":13082,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.5,
+                "RecoverInterruptWindow":0.5,
+                "CastCost":35,
+                "AbilityCastType":"Direct",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":28
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

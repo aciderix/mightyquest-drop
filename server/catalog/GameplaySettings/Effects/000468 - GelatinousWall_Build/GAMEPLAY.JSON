@@ -1,0 +1,5 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StateMachineSpec, HyperQuest.GameServer.Contracts"
+    }
+]

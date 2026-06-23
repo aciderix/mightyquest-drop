@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualPickingSpec, HyperQuest.GameServer.Contracts",
+        "OnMouseOverFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_100AD3FD_AI786.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"AttackSelectionCastleMouseOver"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_786DB599_BC936.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"AttackSelectionCastleMouseOver",
+                "OverlayType":"Outline"
+            }
+        ],
+        "OnSelectedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_100AD3FD_AI786.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"AttackSelectionCastleMouseOver"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_786DB599_BC936.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Name":"AttackSelectionCastleSelected",
+                "OverlayType":"Outline"
+            }
+        ]
+    }
+]

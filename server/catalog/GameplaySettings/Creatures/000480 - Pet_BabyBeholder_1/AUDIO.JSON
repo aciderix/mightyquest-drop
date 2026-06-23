@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioExtraModifierCollectionsSpec, HyperQuest.GameServer.Contracts",
+        "CollectionsByAnimName":
+        {
+            "PET_007_00_AttackWait01":"BabyBeholderPets_Layer",
+            "PET_007_00_AttackWait02":"BabyBeholderPets_Layer",
+            "PET_007_00_AttackWait03":"BabyBeholderPets_Layer",
+            "PET_007_00_AttackWait04":"BabyBeholderPets_Layer",
+            "PET_007_00_Run01":"BabyBeholderPets_Layer",
+            "PET_007_00_Wait01":"BabyBeholderPets_Layer",
+            "PET_007_00_Wait02":"BabyBeholderPets_Layer"
+        }
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"BUILDING_Gold_Storage_MASTER",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_4F267AB6_AI348>XREF_4F267AB6_AI348.XREF",
+        "Scale":0
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildingProgressionSpec, HyperQuest.GameServer.Contracts",
+        "VisualProgression":
+        [
+            {
+                
+            },
+            {
+                "Groups":
+                [
+                    "Rank_1"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_2"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_3"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_4"
+                ]
+            },
+            {
+                "Groups":
+                [
+                    "Rank_5"
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEventSubscriberSpec, HyperQuest.GameServer.Contracts",
+        "EventName":"GoldStorageChestOpening",
+        "AnimationName":"Chest_Opening"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualResourceBuildingSpec, HyperQuest.GameServer.Contracts",
+        "VisualFillingLevelParts":
+        [
+            "Empty",
+            "Half",
+            "Full"
+        ]
+    }
+]

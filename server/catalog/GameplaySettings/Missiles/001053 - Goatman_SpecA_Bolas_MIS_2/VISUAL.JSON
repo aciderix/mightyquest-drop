@@ -1,0 +1,58 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_58D3803A_AI598>FX_58D3803A_AI598.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "EntityHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_DD3F0432_AI933>FX_DD3F0432_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualVolumeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "ForcePlayUntilFxFinished":true,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "IgnoreMissileOrientationForEntityHitFx":true,
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_B862D81D_AI933>FX_B862D81D_AI933.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "LockRotation":true,
+                    "StickToTheWorld":true
+                },
+                "Scale":0.6,
+                "ForcePlayUntilFxFinished":true,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "IgnoreMissileOrientationForObstacleHitFx":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Goatman_SpecA_Bolas_MIS_2",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_3A022D8F_AI933>MESH_3A022D8F_AI933.MESH",
+        "Scale":1.3
+    }
+]

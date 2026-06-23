@@ -1,0 +1,181 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MissileSpec, HyperQuest.GameServer.Contracts",
+        "Movement":{
+            "MoveStyle":{
+                "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                "Distance":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":22
+                },
+                "Orientation":{
+                    "$type":"HyperQuest.GameServer.Contracts.DirectionOrientationSpec, HyperQuest.GameServer.Contracts",
+                    "Direction":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                        "Y":-1
+                    }
+                },
+                "Speed":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":20
+                }
+            },
+            "CanExitNavMesh":true,
+            "IgnoreMovementReduction":true,
+            "OnStopOperations":{
+                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                "Operations":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Radius":{
+                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                            "Value":1.4
+                        },
+                        "AllianceFilter":4,
+                        "TouchedEntitiesType":1,
+                        "MaxTargetsCount":1,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.1
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Effect":{
+                                        "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":545,
+                                        "Name":"Durrrr_Limited_Edition_Snowball_Field"
+                                    },
+                                    "Position":{
+                                        "$type":"HyperQuest.GameServer.Contracts.MultVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "Value1":{
+                                            "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                            "Type":"SourcePosition"
+                                        },
+                                        "Value2":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                            "X":1,
+                                            "Z":1
+                                        }
+                                    },
+                                    "Orientation":"SourceCastOrientation",
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                }
+                            ]
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ConditionOperationSpec, HyperQuest.GameServer.Contracts",
+                        "BooleanCondition":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompareValuesBooleanSpec, HyperQuest.GameServer.Contracts",
+                            "Value1":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"SourceHeight"
+                            },
+                            "Value2":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1
+                            },
+                            "Operator":"LesserOrEqual"
+                        },
+                        "OperationsIfTrue":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":546,
+                                "Name":"Durrrr_Limited_Edition_Ice_Field"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.MultVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "X":1,
+                                    "Z":1
+                                }
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "_comment":"We spawn this ground effect only if the missile is near the ground"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DestroyOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ConditionOperationSpec, HyperQuest.GameServer.Contracts",
+                        "BooleanCondition":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompareValuesBooleanSpec, HyperQuest.GameServer.Contracts",
+                            "Value1":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"SourceHeight"
+                            },
+                            "Value2":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1
+                            },
+                            "Operator":"Greater"
+                        },
+                        "OperationsIfTrue":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":547,
+                                "Name":"Durrrr_Limited_Edition_Ice_Field_Obstacle"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourcePosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "_comment":"We spawn this effect only if the missile is above a height of 1"
+                    }
+                ]
+            },
+            "Collision":{
+                "CheckCollision":true,
+                "CollisionShape":{
+                    "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":0.1
+                },
+                "StopperCollisionShape":{
+                    "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":0.1
+                },
+                "StopperCollisionMask":9437186
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    }
+]

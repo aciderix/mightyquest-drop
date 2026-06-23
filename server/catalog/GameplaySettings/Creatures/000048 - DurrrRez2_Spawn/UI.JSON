@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Durrrr's Immortal Spirit?",
+        "OasisName":8651,
+        "OasisDescription":8650
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "HeightOffset":4.5
+    }
+]

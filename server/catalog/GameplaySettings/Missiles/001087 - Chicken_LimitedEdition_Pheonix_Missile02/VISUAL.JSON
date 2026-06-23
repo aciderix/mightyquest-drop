@@ -1,0 +1,73 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_01EF8A10_BB579>SPECIALFX_01EF8A10_BB579.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":-0.3
+                },
+                "Scale":1.8,
+                "StopForcedPlayFx":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_1A863E6F_AI933.MATERIAL",
+                "Length":2,
+                "SegmentLifeTime":66,
+                "FadeOutTime":0.8,
+                "FadeOutDistance":2,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.14
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.14
+                        }
+                    ]
+                },
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_C9AD8626_AI933.MATERIAL",
+                "Length":2,
+                "SegmentLifeTime":55,
+                "FadeOutTime":0.5,
+                "FadeOutDistance":2,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.14
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.14
+                        }
+                    ]
+                },
+                "Disabled":true
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Chicken_LimitedEdition_Pheonix_Missile02",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_3A022D8F_AI933>MESH_3A022D8F_AI933.MESH",
+        "Scale":2
+    }
+]

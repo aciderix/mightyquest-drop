@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_3D80AEBC_AI933>FX_3D80AEBC_AI933.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":"CastleSurvivesAttack"
+    }
+]

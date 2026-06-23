@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Vampire_LimitedEdition_ManaDrain",
+        "OasisName":2015,
+        "OasisDescription":2016
+    }
+]

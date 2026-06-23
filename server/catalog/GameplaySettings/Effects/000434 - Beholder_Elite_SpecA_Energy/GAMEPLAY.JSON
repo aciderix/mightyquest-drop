@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":2,
+        "EndRadius":2,
+        "AllianceFilter":4,
+        "GameEntityTypeMask":-213,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":2.8
+        },
+        "CollisionCheckInterval":0.1,
+        "OnTouchOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":688,
+                        "Name":"Beholder_Elite_SpecA_EnergyDamage_1"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,60 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_001_FieryWeapon",
+        "Scale":1.01
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellFiery"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_664CA774_AI933.MATERIAL",
+                "Length":30,
+                "SpaceBetweenSegment":0.3,
+                "SegmentLifeTime":0.5,
+                "FadeInTime":5,
+                "FadeOutTime":4,
+                "FadeInDistance":4,
+                "FadeOutDistance":4,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailBase"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailTop"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

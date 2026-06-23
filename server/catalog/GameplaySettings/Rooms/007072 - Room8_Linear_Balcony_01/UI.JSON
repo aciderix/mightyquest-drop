@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Linear_Balcony_01",
+        "OasisName":13635,
+        "OasisDescription":15720
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Linear_Balcony_01.png",
+        "InvIconUrl":"icoInv\/rooms\/Linear_Balcony_01.png",
+        "LayerName":"icoShop_rooms:Linear_Balcony_01"
+    }
+]

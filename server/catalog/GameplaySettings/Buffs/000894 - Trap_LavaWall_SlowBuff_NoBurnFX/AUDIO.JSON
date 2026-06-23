@@ -1,0 +1,23 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffedFootStepSpec, HyperQuest.GameServer.Contracts",
+        "BuffedFootStepSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002C16.SOUND"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AE5A.SOUND"
+        },
+        "BuffRemovedSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AE5C.SOUND"
+        },
+        "HeroBuffAddedSoundPreset":{
+            "FireAndForget":true
+        },
+        "HeroBuffRemovedSoundPreset":{
+            "FireAndForget":true
+        }
+    }
+]

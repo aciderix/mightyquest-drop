@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "StartSound":{
+                    "FireAndForget":true
+                },
+                "PrepareSound":{
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00082BF6.SOUND",
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Fire"
+    }
+]

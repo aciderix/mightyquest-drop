@@ -1,0 +1,111 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_009_Snotter_Boss_SpecialAttack",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_3A022D8F_AI933>MESH_3A022D8F_AI933.MESH",
+        "Scale":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_F42DA7EA_AI933>FX_F42DA7EA_AI933.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_1EE3E8C9_AI933.MATERIAL",
+                "SegmentLifeTime":0.5,
+                "FadeInTime":0.5,
+                "FadeOutTime":4,
+                "FadeOutDistance":1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetX":0.5,
+                            "OffsetZ":0.4
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetX":0.5,
+                            "OffsetZ":-0.4
+                        }
+                    ]
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_5F1ADCFA_AI933.MATERIAL",
+                "SegmentLifeTime":0.5,
+                "FadeInTime":0.5,
+                "FadeOutTime":4,
+                "FadeOutDistance":1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetX":0.5,
+                            "OffsetY":-0.05,
+                            "OffsetZ":0.4
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetX":0.5,
+                            "OffsetY":-0.05,
+                            "OffsetZ":-0.4
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "EntityHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_FBC334F6>SPECIALFX_FBC334F6.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_Body"
+                },
+                "Scale":0.5,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "IgnoreMissileOrientationForEntityHitFx":true,
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_0A037811>SPECIALEFFECTS_0A037811.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_AE80D49D>SPECIALEFFECTS_AE80D49D.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Scale":2,
+                "AttachFxOn":"Target"
+            }
+        ],
+        "IgnoreMissileOrientationForObstacleHitFx":true
+    }
+]

@@ -1,0 +1,89 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cyclop - Offensive Tackle",
+        "OasisName":15137,
+        "OasisDescription":15138
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Offensive Tackle",
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11141,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":11142,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C1.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C1.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C1.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C2.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C2.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C2.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C3.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C3.png",
+                "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/OneEyeCyclop\/C1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/OneEyeCyclop\/C1.png",
+        "LayerName":"UI_Common_CreaturesIcons_OneEyeCyclop:C1",
+        "HeightOffset":3.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11142,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:offensiveBuff",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_OneEyeCyclop:C3"
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":1,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":12,
+                                "Name":"FieryWeapon1"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":45,
+                "OasisShortDescription":46,
+                "OasisLongDescription":329,
+                "PrepareTime":0.3,
+                "RecoverTime":0.3,
+                "Cooldown":0.5,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":15,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":10
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":13,
+                                "Name":"FieryWeapon2"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":47,
+                "OasisShortDescription":48,
+                "OasisLongDescription":330,
+                "PrepareTime":0.3,
+                "RecoverTime":0.3,
+                "Cooldown":0.5,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":15,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":22
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

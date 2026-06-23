@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":1357,
+                "Name":"SpikeTrap_Attack"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapStatsSpec, HyperQuest.GameServer.Contracts",
+        "BasePhysicalDamage":20,
+        "PhysicalDamagePerLevel":20
+    }
+]

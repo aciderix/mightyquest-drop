@@ -1,0 +1,293 @@
+{
+    "DefaultIconOffset3D":{
+        "X":0,
+        "Y":1.5,
+        "Z":0
+    },
+    "DefaultZoomSettings":[
+        {
+            "Distance":6.8,
+            "Zoom":1
+        },
+        {
+            "Distance":17,
+            "Zoom":0.8
+        },
+        {
+            "Distance":40,
+            "Zoom":0.6
+        },
+        {
+            "Distance":120,
+            "IsHidingTexts":true,
+            "Zoom":0.3
+        }
+    ],
+    "BuildPowerSupplyUIContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_056078C8_BC681>UICONTAINER_056078C8_BC681.UICONTAINER",
+        "ZBias": 2.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":2.0,
+            "Z":0
+        },
+        "SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":0.95
+            },
+            {
+                "Distance":40,
+                "Zoom":0.9
+            },
+            {
+                "Distance":120,
+                "IsHidingTexts":true,
+                "Zoom":0.6
+            }
+        ]
+    },
+    "BuildTrapUIContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_A21316EB_BC681>UICONTAINER_A21316EB_BC681.UICONTAINER",
+        "ZBias": -2.0,
+		"SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":0.8
+            },
+            {
+                "Distance":40,
+                "Zoom":0.7
+            },
+            {
+                "Distance":120,
+                "Zoom":0.6
+            }
+        ]
+    },
+    "LobbyCastleUIContainer":{ 
+        "UIContainer": "DB:>RAW>UICONTAINERS>UICONTAINER_0010885F_BC681>UICONTAINER_0010885F_BC681.UICONTAINER",
+        "ZBias": 10.0,
+        "IconOffset3D":{
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        }
+    },
+    "LobbyHeroUIContainer":{ 
+        "UIContainer": "DB:>RAW>UICONTAINERS>UICONTAINER_D463FE22_BC681>UICONTAINER_D463FE22_BC681.UICONTAINER",
+        "ZBias": 10.0,
+        "IconOffset3D":{
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        }
+    },
+    "AttackSelectionCastleUIContainer":{ 
+        "UIContainer": "DB:>RAW>UICONTAINERS>UICONTAINER_FC196F12_BC761>UICONTAINER_FC196F12_BC761.UICONTAINER",
+        "ZBias": 10.0,
+        "IconOffset3D":{
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        }
+    },
+    "StarterCastleSelectionCastleUIContainer":{ 
+        "UIContainer": "DB:>RAW>UICONTAINERS>UICONTAINER_8F12E8E7_BB997>UICONTAINER_8F12E8E7_BB997.UICONTAINER",
+        "ZBias": 10.0,
+        "IconOffset3D":{
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+        }
+    },    
+    "BuildMineIGCUIContainer":{ 
+        "UIContainer": "DB:>RAW>UICONTAINERS>UICONTAINER_545A59A6_BC656>UICONTAINER_545A59A6_BC656.UICONTAINER",
+        "ZBias": 5.0
+    },
+    "BuildMineInactiveUIContainer":{ 
+        "UIContainer": "DB:>RAW>UICONTAINERS>UICONTAINER_8F1A33F4_BC656>UICONTAINER_8F1A33F4_BC656.UICONTAINER",
+        "ZBias": 2.0
+    },
+    "BuildMineRepairBuildingUIContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_865FD355_BC681>UICONTAINER_865FD355_BC681.UICONTAINER",
+        "ZBias": 2.0
+    },
+    "BuildUpgradeBuildingProgressBar":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_941A2775_BC681>UICONTAINER_941A2775_BC681.UICONTAINER",
+        "ZBias": 2.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":4.8,
+            "Z":0
+        },
+        "SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":1
+            },
+            {
+                "Distance":40,
+                "Zoom":0.8
+            },
+            {
+                "Distance":120,
+                "IsHidingTexts":true,
+                "Zoom":0.3
+            }
+        ]
+    },
+    "BuildCreatureAttackTicketsUIContainer": {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_001F6EDB_BC690>UICONTAINER_001F6EDB_BC690.UICONTAINER",
+        "ZBias": 2.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":0.5,
+            "Z":0
+        },
+        "UseHeadNode": true,
+        "SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":1
+            },
+            {
+                "Distance":40,
+                "Zoom":0.8
+            },
+            {
+                "Distance":120,
+                "IsHidingTexts":true,
+                "Zoom":0.3
+            }
+        ]
+    },
+    "BuildForgeProgressBarContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_3953E591_BC690>UICONTAINER_3953E591_BC690.UICONTAINER",
+        "ZBias": 2.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":4.8,
+            "Z":0
+        },
+        "SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":1
+            },
+            {
+                "Distance":40,
+                "Zoom":0.8
+            },
+            {
+                "Distance":120,
+                "IsHidingTexts":true,
+                "Zoom":0.4
+            }
+        ]
+    },
+    "BuildForgeNotificationContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_A65267DD_BC690>UICONTAINER_A65267DD_BC690.UICONTAINER",
+        "ZBias": 2.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":5,
+            "Z":0
+        },
+        "SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":1
+            },
+            {
+                "Distance":40,
+                "Zoom":0.8
+            },
+            {
+                "Distance":120,
+                "IsHidingTexts":true,
+                "Zoom":0.4
+            }
+        ]
+    },
+    "BuildTotemSupplyUIContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_212A6888_BD140>UICONTAINER_212A6888_BD140.UICONTAINER",
+        "ZBias": -2.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":3.5,
+            "Z":0
+        },
+        "SpecificZoomSettings":[
+            {
+                "Distance":6.8,
+                "Zoom":1
+            },
+            {
+                "Distance":17,
+                "Zoom":0.8
+            },
+            {
+                "Distance":40,
+                "Zoom":0.6
+            },
+            {
+                "Distance":120,
+                "IsHidingTexts":true,
+                "Zoom":0.5
+            }
+        ]
+    },
+    "BuildTotemDefenderUIContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_45B92B2B_BD140>UICONTAINER_45B92B2B_BD140.UICONTAINER",
+        "ZBias": -4.0,
+        "IconOffset3D":{
+            "X":0,
+            "Y":0.5,
+            "Z":0
+        },
+        "UseHeadNode": true
+    },
+    "PremiumHeroContainer":
+    {
+        "UIContainer":"DB:>RAW>UICONTAINERS>UICONTAINER_C1CE80B7_BC680>UICONTAINER_C1CE80B7_BC680.UICONTAINER",
+        "ZBias":-3,
+        "IconOffset3D":{
+            "X":0,
+            "Y":0,
+            "Z":0
+        }
+    }
+}

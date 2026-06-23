@@ -1,0 +1,6 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Guardian_SpecA_RegenCooldown_2"
+    }
+]

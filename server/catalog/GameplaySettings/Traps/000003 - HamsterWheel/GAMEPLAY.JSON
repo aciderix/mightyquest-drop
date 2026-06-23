@@ -1,0 +1,239 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapSpec, HyperQuest.GameServer.Contracts",
+        "XpRewardShape":{
+            "$type":"HyperQuest.GameServer.Contracts.RectangularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Width":10,
+            "Height":1
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapStatsSpec, HyperQuest.GameServer.Contracts",
+        "BasePhysicalDamage":12,
+        "PhysicalDamagePerLevel":15
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-5,
+        "Width":10,
+        "Height":1,
+        "RoomBuildableType":"Cannon",
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true,
+        "BuildXp":100
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootableSpec, HyperQuest.GameServer.Contracts",
+        "OverrideAttackSettingsLootConfig":true,
+        "LootDropMinDistance":5,
+        "LootDropMaxDistance":6,
+        "LootRadius":0.25,
+        "LootDropSectorCircleArc":360,
+        "PVEDroppableLootTypeMask":0,
+        "PVPDroppableLootTypeMask":126
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":10,
+                "Height":0.5,
+                "Length":1,
+                "X":-1,
+                "Y":0.25
+            }
+        ],
+        "OuterShapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":2,
+                "Height":2,
+                "Length":1,
+                "X":-5,
+                "Y":1
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "TierModifiers":
+        [
+            {
+                "Tiers":
+                [
+                    1,
+                    2
+                ],
+                "AdditionalChildren":
+                [
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":104,
+                            "Name":"HamsterRail"
+                        },
+                        "Position":{
+                            "X":-0.5
+                        },
+                        "Orientation":{
+                            
+                        }
+                    },
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":105,
+                            "Name":"HamsterWheel"
+                        },
+                        "Position":{
+                            "X":-4.9
+                        },
+                        "Orientation":{
+                            
+                        }
+                    }
+                ]
+            },
+            {
+                "Tiers":
+                [
+                    3,
+                    4
+                ],
+                "AdditionalChildren":
+                [
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":104,
+                            "Name":"HamsterRail"
+                        },
+                        "Position":{
+                            "X":-0.5
+                        },
+                        "Orientation":{
+                            
+                        }
+                    },
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":456,
+                            "Name":"Hamster_Wheel_2"
+                        },
+                        "Position":{
+                            "X":-4.9
+                        },
+                        "Orientation":{
+                            
+                        }
+                    }
+                ]
+            },
+            {
+                "Tiers":
+                [
+                    5,
+                    6,
+                    7
+                ],
+                "AdditionalChildren":
+                [
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":104,
+                            "Name":"HamsterRail"
+                        },
+                        "Position":{
+                            "X":-0.5
+                        },
+                        "Orientation":{
+                            
+                        }
+                    },
+                    {
+                        "Entity":{
+                            "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":457,
+                            "Name":"Hamster_Wheel_3"
+                        },
+                        "Position":{
+                            "X":-4.9
+                        },
+                        "Orientation":{
+                            
+                        }
+                    }
+                ]
+            }
+        ],
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":6
+            },
+            {
+                "Tier":2,
+                "Level":10
+            },
+            {
+                "Tier":3,
+                "Level":14
+            },
+            {
+                "Tier":4,
+                "Level":18
+            },
+            {
+                "Tier":5,
+                "Level":22
+            },
+            {
+                "Tier":6,
+                "Level":26
+            },
+            {
+                "Tier":7,
+                "Level":30
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":4
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":2
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts",
+        "ConstructionPoints":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsOld":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":1,
+        "StartLength":9.75,
+        "EndLength":9.75,
+        "LocalStartOffsetX":-5.5,
+        "CollisionCheckInterval":-1
+    }
+]

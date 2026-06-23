@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":8
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"DamageReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":-0.2,
+                    "Tag":"Rebel yell debuff multiplier 1"
+                },
+                "IsAdditive":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":-0.7,
+                    "Tag":"Rebel yell slow multiplier 1"
+                }
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "Flags":33,
+        "BuffStopTriggers":{
+            "OnBuffedEntityDied":true
+        }
+    }
+]

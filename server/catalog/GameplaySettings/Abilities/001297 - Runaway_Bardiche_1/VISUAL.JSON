@@ -1,0 +1,265 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_AttackLeft01"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_77B9D9FE_AI598.MATERIAL",
+                "Length":30,
+                "SegmentLifeTime":0.2,
+                "FadeOutTime":0.5,
+                "FadeInDistance":0.1,
+                "FadeOutDistance":0.1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetY":-0.5
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailTop",
+                            "OffsetY":1.2
+                        }
+                    ]
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_D775AB50_AI598.MATERIAL",
+                "Length":30,
+                "SegmentLifeTime":0.2,
+                "FadeOutTime":0.5,
+                "FadeInDistance":0.1,
+                "FadeOutDistance":0.1,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle"
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailTop",
+                            "OffsetY":0.5
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts",
+        "DamageFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_B43A18BB_BD346>SPECIALFX_B43A18BB_BD346.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "StickToTheWorld":true
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                "NodeAttachment":{
+                    
+                },
+                "Duration":0.15
+            }
+        ],
+        "OwnerWeaponQualityDamageFxList":
+        {
+            "Legendary":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_8AECAA4D_BD346>SPECIALFX_8AECAA4D_BD346.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                        "NodeAttachment":{
+                            
+                        },
+                        "Duration":0.15
+                    }
+                ]
+            },
+            "Epic":{
+                "FxList":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_2F1E7BA5_BD346>SPECIALFX_2F1E7BA5_BD346.SPECIALFX",
+                        "PlayMode":"One",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "StickToTheWorld":true
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                        "NodeAttachment":{
+                            
+                        },
+                        "Duration":0.15
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEquipmentQualityAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "ItemQualityLevels":
+        {
+            "Legendary":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_F28B4663_BD346.MATERIAL",
+                        "Length":6.5,
+                        "SpaceBetweenSegment":0.25,
+                        "FadeOutTime":0.25,
+                        "Attachment":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                            "Volumes":
+                            [
+                                {
+                                    "VolumeName":"FX_WeaponTrailBase"
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailMiddle"
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailTop"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_77B9D9FE_AI598.MATERIAL",
+                        "Length":30,
+                        "SegmentLifeTime":0.2,
+                        "FadeOutTime":0.5,
+                        "FadeInDistance":0.1,
+                        "FadeOutDistance":0.1,
+                        "Attachment":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                            "Volumes":
+                            [
+                                {
+                                    "VolumeName":"FX_WeaponTrailBase",
+                                    "OffsetY":-0.5
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailMiddle"
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailTop",
+                                    "OffsetY":1.2
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "Epic":{
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_AB7D1911_BD346.MATERIAL",
+                        "Length":8,
+                        "SpaceBetweenSegment":0.25,
+                        "FadeOutTime":0.15,
+                        "Attachment":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                            "Volumes":
+                            [
+                                {
+                                    "VolumeName":"FX_WeaponTrailBase",
+                                    "OffsetY":-0.2
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailMiddle"
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailTop",
+                                    "OffsetY":0.2
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_77B9D9FE_AI598.MATERIAL",
+                        "Length":30,
+                        "SegmentLifeTime":0.2,
+                        "FadeOutTime":0.5,
+                        "FadeInDistance":0.1,
+                        "FadeOutDistance":0.1,
+                        "Attachment":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                            "Volumes":
+                            [
+                                {
+                                    "VolumeName":"FX_WeaponTrailBase",
+                                    "OffsetY":-0.5
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailMiddle"
+                                },
+                                {
+                                    "VolumeName":"FX_WeaponTrailTop",
+                                    "OffsetY":1.2
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_42765CFD_BD346>SPECIALFX_42765CFD_BD346.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "BoneName":"FX_WeaponTrailMiddle"
+                        },
+                        "ForcePlayUntilFxFinished":true
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Runaway_Bardiche_1"
+    }
+]

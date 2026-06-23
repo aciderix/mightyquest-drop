@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualPostProcessFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_A032103A_AH625.MATERIAL",
+        "Name":"NearDeathPostProcess"
+    }
+]

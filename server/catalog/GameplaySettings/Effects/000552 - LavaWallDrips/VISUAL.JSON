@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Trap_LavaWall_Base_Trigger",
+        "HideInModeMask":2
+    }
+]

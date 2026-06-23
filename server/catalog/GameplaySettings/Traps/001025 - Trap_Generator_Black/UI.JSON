@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SuperTrapGenerator_LimitedEdition",
+        "OasisName":16198,
+        "OasisDescription":16197
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/TrapsIcons\/PowerSupplyBlack.png",
+                "InvIconUrl":"UI\/Common\/TrapsIconsInv\/PowerSupplyBlack.png",
+                "LayerName":"UI_Common_TrapsIcons:PowerSupplyBlack"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Debug_AbilityDescription",
+                    "OasisName":15656
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/powerGenerator.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/PowerSupplyBlack.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/PowerSupplyBlack.png",
+        "LayerName":"UI_Common_TrapsIcons:PowerSupplyBlack"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_000_Blocker_Rock_02",
+        "OasisName":16613,
+        "OasisDescription":14859
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Culture_Sunflower_02.png",
+        "InvIconUrl":"icoShop\/deco\/DEC_000_Culture_Sunflower_02.png",
+        "HeightOffset":2
+    }
+]

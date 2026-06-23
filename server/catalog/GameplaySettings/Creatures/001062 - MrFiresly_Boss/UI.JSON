@@ -1,0 +1,42 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Mr. Firesly",
+        "OasisName":1341,
+        "OasisDescription":1342
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Bosses\/blacksmith1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Bosses\/blacksmith1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Bosses:blacksmith1",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7816
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7816
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,125 @@
+{
+    "FriendRewards":
+    [
+        {
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 100 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 4000},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 75 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 3000},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 50 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 2000},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 25 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 1250},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 10 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 500},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 5 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 200},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 4 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 100},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+		{
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 1,
+            "Name" :{
+                "DebugName":"At least 3 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 50},
+			"RequiredLevel": 5,
+			"RefferedFriendsCount": 3
+        },
+        {
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 2,
+            "Name" :{
+                "DebugName":"At least 2 Friends, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 50},
+			"RequiredLevel": 10,
+			"RefferedFriendsCount": 2
+        },
+        {
+            "$type" : "HyperQuest.GameServer.Contracts.FriendReward, HyperQuest.GameServer.Contracts",
+            "Id": 3,
+            "Name" :{
+                "DebugName":"At least 1 Friend, At Level 10",
+                "OasisName": 0,
+                "OasisDescription": 0
+            },
+            "Reward" : {"CurrencyType": 1, "Amount": 50},
+			"RequiredLevel": 15,
+			"RefferedFriendsCount": 1
+        }
+    ]
+}

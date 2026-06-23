@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnNavigationStartedBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.ReplaceAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+                    "NewAbility":{
+                        "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":640
+                    },
+                    "AbilityToReplaceId":641,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                }
+            }
+        ],
+        "MaxInstances":1,
+        "IsDispellable":false,
+        "Flags":2
+    }
+]

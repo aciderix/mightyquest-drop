@@ -1,0 +1,259 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDamageBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "OperationTypeFilter":1078,
+                "MustBeBasicAttackDamage":true,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.IfNotNullOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"ManaStolen"
+                            },
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.ManaOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.MultValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value1":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"Mana"
+                                    },
+                                    "Value2":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"ManaStolen"
+                                    }
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"Source"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                    "Type":"Source"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDamageBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "OperationTypeFilter":1078,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.IfNotNullOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"PoisonTarget"
+                            },
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.DiceRollOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":{
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":103,
+                                        "Name":"BasicAttackPoison"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                "Probability":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":0.05
+                                }
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DiceRollOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.StunOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Duration":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":1
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Probability":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"StunTarget"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DiceRollOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Operations":
+                                [
+                                    {
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                        "Buff":{
+                                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                            "SpecContainerReferenceId":104,
+                                            "Name":"BasicAttackSnare"
+                                        },
+                                        "Target":{
+                                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                        }
+                                    }
+                                ]
+                            },
+                            "Probability":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"SnareTarget"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OperationsCountLimitation":3,
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                    "Type":"Source"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDamageBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "OperationTypeFilter":1078,
+                "MustBeBasicAttackDamage":true,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.IfNotNullOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"KnockBack"
+                            },
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Movement":{
+                                    "MoveStyle":{
+                                        "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                        "Distance":{
+                                            "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "StatType":"KnockBack"
+                                        },
+                                        "Orientation":{
+                                            "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                            "Context":"SourceToTargetOrientation"
+                                        },
+                                        "Speed":{
+                                            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                            "Value":10
+                                        },
+                                        "EaseInOut":-1
+                                    }
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "OperationsCooldown":3,
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                    "Type":"Source"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDamageBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "OperationTypeFilter":1078,
+                "TargetTypeFilter":-1021,
+                "MustBeBasicAttackDamage":true,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DiceRollOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.HealOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.MultValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value1":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts"
+                                    },
+                                    "Value2":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"HealthStolen"
+                                    }
+                                },
+                                "IsValueRandomized":false,
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"Source"
+                                }
+                            },
+                            "Probability":{
+                                "$type":"HyperQuest.GameServer.Contracts.RescaleAndClampValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                    "ContextId":"SourceLifeRatio"
+                                },
+                                "Min":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                },
+                                "Max":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":1
+                                },
+                                "NewMin":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":0.5
+                                },
+                                "NewMax":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OperationsCooldown":1,
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                    "Type":"Source"
+                }
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "IsDispellable":false,
+        "Flags":10,
+        "IsLinkedToCreator":true,
+        "IsHidden":true
+    }
+]

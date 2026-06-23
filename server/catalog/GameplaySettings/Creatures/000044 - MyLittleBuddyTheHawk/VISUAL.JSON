@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_018_Falcon"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_57888C7E>ENTITY_57888C7E.ENTITY",
+                        "Scale":1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                    "StatType":"MovementSpeed",
+                    "Multiplier":0.2
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DamageModifierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Modifier":{
+                    "$type":"HyperQuest.GameServer.Contracts.BasicDamageModifierSpec, HyperQuest.GameServer.Contracts",
+                    "Multiplier":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":-1
+                    }
+                }
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "MaxInstances":1,
+        "Flags":2
+    }
+]

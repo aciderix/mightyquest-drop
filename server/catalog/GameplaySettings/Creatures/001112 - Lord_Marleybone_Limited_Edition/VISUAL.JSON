@@ -1,0 +1,42 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Lord_Marleybone_Limited_Edition",
+        "Scale":1.3,
+        "SizeCategory":"Large",
+        "FxAttachmentScale":1.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7D88924C_BC666>ENTITY_7D88924C_BC666.ENTITY",
+                        "Scale":1.3
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7D88924C_BC666>ENTITY_7D88924C_BC666.ENTITY",
+                        "Scale":1.3
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

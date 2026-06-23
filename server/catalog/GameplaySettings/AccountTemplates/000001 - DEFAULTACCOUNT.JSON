@@ -1,0 +1,36 @@
+{
+    "Description":"Default account",
+	"ShouldResetDisplayName": true,
+    "LanguageCode":"en",
+    "Privileges":1,
+    "UnlockedAttackRegions":
+    [
+        3
+    ],
+    "CountryCode":"CA",
+    "AvatarId":10,
+    "ProfanityFiltering":true,
+    "IGC":1000,
+    "Inventory":{
+        "InventoryTabCount":2,
+        "UnlockedSpells":
+        [
+        ],
+        "UnlockedEmotes":
+        [
+            1,
+            2,
+            3
+        ],
+        "Creatures":
+        [
+        ],
+        "Rooms":
+        [
+        ]
+    },
+    "CastleBlueprint":{
+        
+    },
+    "CastleRenovationLevel" : "RenovationLevel0"
+}

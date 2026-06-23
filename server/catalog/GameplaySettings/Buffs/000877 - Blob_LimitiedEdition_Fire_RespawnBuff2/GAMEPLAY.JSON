@@ -1,0 +1,57 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDeathBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TimedOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Time":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1
+                            },
+                            "CreateOperationOnTarget":true,
+                            "Operation":{
+                                "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Creature":{
+                                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":1149,
+                                    "Name":"Blob_LimitiedEdition_Fire_Respawn2"
+                                },
+                                "CreatureCount":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":2
+                                },
+                                "DistanceToSpawn":2,
+                                "Level":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                    "ContextId":"SourceLevel"
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"Source"
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "MaxInstancesPerCreator":1,
+        "Flags":2,
+        "IsLinkedToCreator":true
+    }
+]

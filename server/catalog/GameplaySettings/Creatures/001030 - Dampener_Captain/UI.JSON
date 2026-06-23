@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Dampener",
+        "OasisName":1227,
+        "OasisDescription":1228
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Misc\/dampener1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Misc\/dampener1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:dampener1",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bubble",
+                    "OasisName":9477
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/silence.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/silence.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bubble",
+                    "OasisName":9477
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/silence.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/silence.png"
+                }
+            }
+        ]
+    }
+]

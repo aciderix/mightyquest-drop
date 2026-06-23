@@ -1,0 +1,22 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Pet_HamsterBubble_2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_252E2B3C_BC669>ENTITY_252E2B3C_BC669.ENTITY",
+                        "Scale":1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

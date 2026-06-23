@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Blade Whirlwind",
+        "OasisName":2219,
+        "OasisDescription":2220
+    }
+]

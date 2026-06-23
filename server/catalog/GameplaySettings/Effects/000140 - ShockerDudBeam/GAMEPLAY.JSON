@@ -1,0 +1,49 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BeamFieldSpec, HyperQuest.GameServer.Contracts",
+        "MaxLength":0.1,
+        "CollisionMaskAny":12,
+        "CollisionMaskAll":4096,
+        "StopperCollisionMask":8388610,
+        "Width":0.02,
+        "AllianceFilter":6,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":3
+        },
+        "OnEnterMaxActivation":1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":135
+                    },
+                    "Label":"Label2",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "Label":"Label2"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    }
+]

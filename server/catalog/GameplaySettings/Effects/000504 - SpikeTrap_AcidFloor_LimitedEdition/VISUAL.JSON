@@ -1,0 +1,37 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"SpikeTrap_AcidFloor_LimitedEdition",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_A0B95430_BC666>ENTITY_A0B95430_BC666.ENTITY",
+        "Scale":0.83
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDamageFxSpec, HyperQuest.GameServer.Contracts",
+        "DamageFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_F4C120A6_BA618>SPECIALFX_F4C120A6_BA618.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "Duration":0.2,
+                "AttachFxOn":"Target"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+                "PriorityOffset":10,
+                "NodeAttachment":{
+                    
+                },
+                "Duration":0.15,
+                "AttachFxOn":"Target"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTrapFxSpec, HyperQuest.GameServer.Contracts"
+    }
+]

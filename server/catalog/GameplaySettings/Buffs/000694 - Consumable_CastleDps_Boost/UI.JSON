@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Castle DPS boost",
+        "OasisName":12169,
+        "OasisDescription":12170
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/BOOSTCASTLECREATURE.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:boostCastleCreature",
+        "TileAnimationType":"verticalTopToBottom",
+        "IsRatioFixedInAttack":true
+    }
+]

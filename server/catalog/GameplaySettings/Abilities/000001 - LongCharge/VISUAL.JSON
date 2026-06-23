@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"DONOTUSE_LongCharge_Abilitiy"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

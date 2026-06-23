@@ -1,0 +1,18 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DebugCameraSpec, HyperQuest.GameServer.Contracts",
+        "Yaw":30,
+        "Pitch":-50,
+        "X":10,
+        "Y":20,
+        "Z":18,
+        "Fov":50,
+        "YawSpeed":10,
+        "PitchSpeed":10,
+        "RollSpeed":10,
+        "SlowMoveSpeed":2,
+        "FastMoveSpeed":50,
+        "NormalMoveSpeed":10,
+        "FarClip":2000
+    }
+]

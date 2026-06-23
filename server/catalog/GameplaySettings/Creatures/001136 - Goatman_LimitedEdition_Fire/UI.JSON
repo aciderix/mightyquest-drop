@@ -1,0 +1,36 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Goatman_LimitedEdition_Fire",
+        "OasisName":16350,
+        "OasisDescription":16351
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"FireGoatman_FireBolas",
+                    "OasisName":16352
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOverTime.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_055_GoatmanElite_M001.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_055_GoatmanElite_M001.png",
+        "HeightOffset":1.9
+    }
+]

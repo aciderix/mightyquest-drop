@@ -1,0 +1,423 @@
+Bloomberg INFO - 17h36m40s - -------------------- Log started at: 2026-06-20 17:36:40:647 --------------------
+Bloomberg INFO - 17h36m40s - Reporter::InternalInit: Bloomberg has been initialized.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\MightyQuest.exe, address(size): 0x400000:0.
+Bloomberg DEBUG - 17h36m40s - Socket::Connect: Trying to connect to 127.0.0.1:13432
+Bloomberg DEBUG - 17h36m40s - Socket::Connect: Successfully connected to 127.0.0.1:13432
+Bloomberg DEBUG - 17h36m40s - ConnectionManager::SocketConnection::VerifyConnection: Connected to reporter at: 127.0.0.1:13432
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\ntdll.dll, address(size): 0x7bd10000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\kernel32.dll, address(size): 0x7bb90000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\kernelbase.dll, address(size): 0x7b650000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\steam_api.dll, address(size): 0x77910000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\ADVAPI32.dll, address(size): 0x7b550000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\msvcrt.dll, address(size): 0x7b2a0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\sechost.dll, address(size): 0x7b200000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\ucrtbase.dll, address(size): 0x7aee0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\SHELL32.dll, address(size): 0x791b0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\gdi32.dll, address(size): 0x7a640000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\user32.dll, address(size): 0x7a160000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\zlib1.dll, address(size): 0x7a120000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\win32u.dll, address(size): 0x7a0d0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\shlwapi.dll, address(size): 0x790b0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\shcore.dll, address(size): 0x78ec0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\COMDLG32.dll, address(size): 0x776c0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\comctl32.dll, address(size): 0x77200000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\imm32.dll, address(size): 0x782f0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\winspool.drv, address(size): 0x77150000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\compstui.dll, address(size): 0x77110000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\ole32.dll, address(size): 0x7a9f0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\combase.dll, address(size): 0x7a890000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\rpcrt4.dll, address(size): 0x79ea0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\coml2.dll, address(size): 0x79e40000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\OLEAUT32.dll, address(size): 0x783f0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\d3dx9_43.dll, address(size): 0x76e30000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\d3dcompiler_47.dll, address(size): 0x76d50000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\wined3d.dll, address(size): 0x75a10000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\opengl32.dll, address(size): 0x75580000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\d3dxof.dll, address(size): 0x754f0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\WINHTTP.dll, address(size): 0x754c0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\d3d9.dll, address(size): 0x75350000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\DSOUND.dll, address(size): 0x75220000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\libcef.dll, address(size): 0x73090000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\USERENV.dll, address(size): 0x78e80000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\urlmon.dll, address(size): 0x72e10000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\wininet.dll, address(size): 0x72c50000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\mpr.dll, address(size): 0x72be0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\ws2_32.dll, address(size): 0x7ae40000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\dhcpcsvc.DLL, address(size): 0x72bb0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\WTSAPI32.dll, address(size): 0x72b70000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\USP10.dll, address(size): 0x10000000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\PSAPI.DLL, address(size): 0x72b50000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\WINMM.dll, address(size): 0x729c0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\msacm32.dll, address(size): 0x72940000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\OLEACC.dll, address(size): 0x72870000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\SETUPAPI.dll, address(size): 0x78f20000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\Secur32.dll, address(size): 0x727c0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\CRYPT32.dll, address(size): 0x724b0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\bcrypt.dll, address(size): 0x72450000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\IPHLPAPI.DLL, address(size): 0x779c0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\dnsapi.dll, address(size): 0x77970000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\nsi.dll, address(size): 0x77940000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\VERSION.dll, address(size): 0x72420000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\bink2w32.dll, address(size): 0x723b0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\MSVCR110.dll, address(size): 0x722c0000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\XINPUT9_1_0.dll, address(size): 0x72280000:0.
+Bloomberg DEBUG - 17h36m40s - ModulesCallback: Getting information about module: C:\windows\system32\hid.dll, address(size): 0x72240000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\DINPUT8.dll, address(size): 0x78d70000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\winex11.drv, address(size): 0x780f0000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\uxtheme.dll, address(size): 0x78030000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\winhttp.dll, address(size): 0x78c50000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\jsproxy.dll, address(size): 0x78bf0000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\Kerberos.dll, address(size): 0x78bb0000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\MSV1_0.dll, address(size): 0x78b60000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\netapi32.dll, address(size): 0x78ad0000:0.
+Bloomberg DEBUG - 17h36m41s - ModulesCallback: Getting information about module: C:\windows\system32\dbghelp.dll, address(size): 0x78860000:0.
+Bloomberg DEBUG - 17h36m43s - ThreadManager::SuspendAllThread: Suspending all threads
+Bloomberg DEBUG - 17h36m43s - BloombergThreadInterface::HandleCrash: Handling crash...
+Bloomberg DEBUG - 17h36m43s - BloombergThreadInterface::HandleCrash: Finished handling crash.
+Bloomberg DEBUG - 17h36m43s - BloombergThreadInterface::HandleWakeUp: Thread woke up and will handle exception report.
+Bloomberg DEBUG - 17h36m43s - CrashAnalyser::TriggerAnalysis: Beginning analysis for Exception:(null).
+Bloomberg DEBUG - 17h36m43s - CrashAnalyser::GetCallStack: Getting callstack.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\MightyQuest.exe, address(size): 0x400000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\ntdll.dll, address(size): 0x7bd10000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\kernel32.dll, address(size): 0x7bb90000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\kernelbase.dll, address(size): 0x7b650000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\steam_api.dll, address(size): 0x77910000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\ADVAPI32.dll, address(size): 0x7b550000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\msvcrt.dll, address(size): 0x7b2a0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\sechost.dll, address(size): 0x7b200000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\ucrtbase.dll, address(size): 0x7aee0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\SHELL32.dll, address(size): 0x791b0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\gdi32.dll, address(size): 0x7a640000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\user32.dll, address(size): 0x7a160000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\zlib1.dll, address(size): 0x7a120000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\win32u.dll, address(size): 0x7a0d0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\shlwapi.dll, address(size): 0x790b0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\shcore.dll, address(size): 0x78ec0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\COMDLG32.dll, address(size): 0x776c0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\comctl32.dll, address(size): 0x77200000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\imm32.dll, address(size): 0x782f0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\winspool.drv, address(size): 0x77150000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\compstui.dll, address(size): 0x77110000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\ole32.dll, address(size): 0x7a9f0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\combase.dll, address(size): 0x7a890000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\rpcrt4.dll, address(size): 0x79ea0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\coml2.dll, address(size): 0x79e40000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\OLEAUT32.dll, address(size): 0x783f0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\d3dx9_43.dll, address(size): 0x76e30000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\d3dcompiler_47.dll, address(size): 0x76d50000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\wined3d.dll, address(size): 0x75a10000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\opengl32.dll, address(size): 0x75580000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\d3dxof.dll, address(size): 0x754f0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\WINHTTP.dll, address(size): 0x754c0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\d3d9.dll, address(size): 0x75350000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\DSOUND.dll, address(size): 0x75220000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\libcef.dll, address(size): 0x73090000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\USERENV.dll, address(size): 0x78e80000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\urlmon.dll, address(size): 0x72e10000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\wininet.dll, address(size): 0x72c50000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\mpr.dll, address(size): 0x72be0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\ws2_32.dll, address(size): 0x7ae40000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\dhcpcsvc.DLL, address(size): 0x72bb0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\WTSAPI32.dll, address(size): 0x72b70000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\USP10.dll, address(size): 0x10000000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\PSAPI.DLL, address(size): 0x72b50000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\WINMM.dll, address(size): 0x729c0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\msacm32.dll, address(size): 0x72940000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\OLEACC.dll, address(size): 0x72870000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\SETUPAPI.dll, address(size): 0x78f20000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\Secur32.dll, address(size): 0x727c0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\CRYPT32.dll, address(size): 0x724b0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\bcrypt.dll, address(size): 0x72450000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\IPHLPAPI.DLL, address(size): 0x779c0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\dnsapi.dll, address(size): 0x77970000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\nsi.dll, address(size): 0x77940000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\VERSION.dll, address(size): 0x72420000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\bink2w32.dll, address(size): 0x723b0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\MSVCR110.dll, address(size): 0x722c0000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\XINPUT9_1_0.dll, address(size): 0x72280000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\hid.dll, address(size): 0x72240000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\DINPUT8.dll, address(size): 0x78d70000:0.
+Bloomberg DEBUG - 17h36m43s - ModulesCallback: Getting information about module: C:\windows\system32\winex11.drv, address(size): 0x780f0000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\uxtheme.dll, address(size): 0x78030000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\winhttp.dll, address(size): 0x78c50000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\jsproxy.dll, address(size): 0x78bf0000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\Kerberos.dll, address(size): 0x78bb0000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\MSV1_0.dll, address(size): 0x78b60000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\netapi32.dll, address(size): 0x78ad0000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\dbghelp.dll, address(size): 0x78860000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\mmdevapi.dll, address(size): 0x72160000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\winealsa.drv, address(size): 0x78820000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\wbem\wbemprox.dll, address(size): 0x72010000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: C:\windows\system32\dxgi.dll, address(size): 0x71ee0000:0.
+Bloomberg DEBUG - 17h36m44s - ModulesCallback: Getting information about module: Z:\home\user\port\GameData\Bin\icudt.dll, address(size): 0x4ad00000:0.
+Bloomberg DEBUG - 17h36m44s - CrashData::InvalidateModuleNotInCallstack: Module (Z:\home\user\port\GameData\Bin\steam_api.dll) not in callstack address range, ignoring.
+Bloomberg DEBUG - 17h36m44s - CrashData::InvalidateModuleNotInCallstack: Module (C:\windows\system32\user32.dll) not in callstack address range, ignoring.
+Bloomberg DEBUG - 17h36m44s - CrashData::InvalidateModuleNotInCallstack: Module (Z:\home\user\port\GameData\Bin\WINHTTP.dll) not in callstack address range, ignoring.
+Bloomberg DEBUG - 17h36m44s - CrashData::InvalidateModuleNotInCallstack: Module (Z:\home\user\port\GameData\Bin\libcef.dll) not in callstack address range, ignoring.
+Bloomberg DEBUG - 17h36m44s - CrashData::InvalidateModuleNotInCallstack: Module (Z:\home\user\port\GameData\Bin\bink2w32.dll) not in callstack address range, ignoring.
+Bloomberg DEBUG - 17h36m44s - CrashData::InvalidateModuleNotInCallstack: Module (Z:\home\user\port\GameData\Bin\MSVCR110.dll) not in callstack address range, ignoring.
+Bloomberg DEBUG - 17h36m44s - CrashAnalyser::GenerateMinidump: Generating minidump.
+Bloomberg DEBUG - 17h36m46s - ReportManager::Process: Beginning process for report of type Exception, for the reason of Exception Caught at 0x00908690 (Violation when reading address 0x00000060).
+Bloomberg DEBUG - 17h36m46s - Socket::Connect: Trying to connect to 127.0.0.1:13432
+Bloomberg DEBUG - 17h36m46s - Socket::Connect: Successfully connected to 127.0.0.1:13432
+Bloomberg DEBUG - 17h36m46s - ConnectionManager::SocketConnection::OpenConnection: Connected to reporter at: 127.0.0.1:13432
+Bloomberg DEBUG - 17h36m46s - ReportManager::WriteXML: Writing XML.
+Bloomberg DEBUG - 17h36m46s - ReportManager::WriteExecutableInfoXML: Writing ExecutableInfo tag XML.
+Bloomberg DEBUG - 17h36m46s - ReportManager::WriteXML: Writing binary global and private data list.
+Bloomberg INFO - 17h36m46s - ReportManager::SendBinReportContextInformationList: Writting binary data named: Exception_vm_2026_06_20_17h36m46s__ApplicationLog.Txt.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 4
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 12546
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 12546.
+Bloomberg INFO - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written binary data named: Exception_vm_2026_06_20_17h36m46s__ApplicationLog.Txt.
+Bloomberg ERROR - 17h36m46s - File::OpenFile: Invalid handle value (after CreateFileA)
+Bloomberg INFO - 17h36m46s - ReportManager::SendBinReportContextInformationList: Writting binary data named: Exception_vm_2026_06_20_17h36m46s__EngineSettings.json.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 3
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 1
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 55
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 4
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 1347
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 1347.
+Bloomberg INFO - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written binary data named: Exception_vm_2026_06_20_17h36m46s__EngineSettings.json.
+Bloomberg ERROR - 17h36m46s - File::OpenFile: Invalid handle value (after CreateFileA)
+Bloomberg INFO - 17h36m46s - ReportManager::SendBinReportContextInformationList: Writting binary data named: Exception_vm_2026_06_20_17h36m46s__Minidump.dmp.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 3
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 1
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 48
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 4
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 32768
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 32768.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 31556
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written buffer of size 31556.
+Bloomberg INFO - 17h36m46s - ReportManager::SendBinReportContextInformationList: Written binary data named: Exception_vm_2026_06_20_17h36m46s__Minidump.dmp.
+Bloomberg DEBUG - 17h36m46s - ReportManager::WriteXML: Writing global and private data list.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 697
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: ApplicationLog.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: ApplicationLog.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 121
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: NetworkLog.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: NetworkLog.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 113
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: CEFLog.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: CEFLog.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 105
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: CustomUserSettings.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: CustomUserSettings.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 130
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: EngineSettings.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: EngineSettings.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 122
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: PublicLauncherLog.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: PublicLauncherLog.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 127
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: General info.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 65
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 11
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: General info.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 12
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: Frame info.
+Bloomberg ERROR - 17h36m46s - Exception occurred while getting data for [Frame info].
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 55
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 49
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: Frame info.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 12
+
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Writting data named: Minidump.
+Bloomberg INFO - 17h36m46s - ReportManager::SendReportContextInformationList: Written data named: Minidump.
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 284
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 540
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 803
+
+Bloomberg ERROR - 17h36m46s - Socket::Send: Failed to send data to server. WSA error: 10054 (see winerror.h for details)
+Bloomberg ERROR - 17h36m46s - SocketDataSender::SendOnStream: Failed to write data of size 10
+
+Bloomberg DEBUG - 17h36m46s - ReportManager::Process: Ending processing for report.
+Bloomberg WARN - 17h36m46s - CrashAnalyzerInterface::AnalyzeEpilogue: Disabling crash reporting because Exception has been detected.
+Bloomberg DEBUG - 17h36m46s - CrashAnalyser::TriggerAnalysis: Ending analysis.

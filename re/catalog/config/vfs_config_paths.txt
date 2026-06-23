@@ -1,0 +1,10 @@
+CONFIG:>Game>CustomUserSettings.json
+CONFIG:>Game>DebugSettings.json
+CONFIG:>Game>EngineSettings.json
+CONFIG:>Game>UserSettings.json
+CONFIG:>Game>_HighEngineSettings.json
+CONFIG:>Game>_LowEngineSettings.json
+CONFIG:>Game>_MediumEngineSettings.json
+CONFIG:>Game>_UltraEngineSettings.json
+CONFIG:>Hyperquest>BootConfig.json
+CONFIG:>Hyperquest>GameServerConnectionConfig.json

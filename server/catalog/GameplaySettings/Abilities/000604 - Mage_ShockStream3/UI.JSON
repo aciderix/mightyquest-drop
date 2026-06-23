@@ -1,0 +1,55 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Shock Stream",
+        "OasisName":9765
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"iconInv\/heroes\/cha003\/skills\/SPELL_CHA_003_Shock_up.png",
+        "InvIconUrl":"iconInv\/heroes\/cha003\/skills\/SPELL_CHA_003_Shock_up.png",
+        "LayerName":"UI_Common_Hero003_SkillsIcons:Shock"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":9766,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"1.25*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"1.75*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"2.25*herodps"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":9766,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"1.25*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"1.75*herodps"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"2.25*herodps"
+                    }
+                ]
+            }
+        ]
+    }
+]

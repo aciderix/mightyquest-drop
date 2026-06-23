@@ -1,0 +1,456 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":10
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false,
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    190,
+                    191,
+                    192
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200001",
+                "Type":"StaticScreen",
+                "NarrativePictureUrl":"NUE\/screens\/Stan_Alone.jpg"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ActivateCastleForSalePicking?activate=false&castleForSaleId=4,"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/BuyRandomCastle",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ServerNotificationReceivedTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "NotificationType":"CastleBought"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PlayMusicOverrideAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SoundEvent":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008882A.SOUND"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PlayAmbienceSoundOverrideAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SoundEvent":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000876D1.SOUND"
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200002",
+                "Text":"Oh hello there! Welcome to Cornelius Richling's Real Estate Emporium!",
+                "TextOasisId":16463,
+                "PopupBindingVariable":"NarrativeBox_Node",
+                "Type":"NarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16463,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B590.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"200002"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ShowLotteryTicketPanel",
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200110",
+                "Type":"StaticScreen",
+                "NarrativePictureUrl":"NUE\/Screens\/cornOfficeTicketNoScratch",
+                "StartType":"WithPrevious",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"200010"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200010",
+                "Text":"Now buddy, I can see by your rakish good looks and winning lottery ticket",
+                "TextOasisId":16464,
+                "PopupBindingVariable":"NarrativeBox_Node",
+                "Type":"NarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16464,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B611.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"NUE\/Screens\/cornOfficeTicketNoScratch",
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"200010"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200001"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"LotteryTicketPanel"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StopMusicOverrideAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StopAmbienceSoundOverrideAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ActivateCastleForSalePicking?activate=true&castleForSaleId=4,"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200008",
+                "Text":"Take a look at... castle selection",
+                "TextOasisId":16465,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16465,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5DE.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Buttons":
+                        [
+                            "BuyCastle",
+                            "TakeATour"
+                        ]
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"200008"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleForSaleSelectedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200008"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200100",
+                "Text":"Take a look at this fine specimen.",
+                "TextOasisId":16466,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16466,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5F0.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Buttons":
+                        [
+                            "TakeATour"
+                        ]
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleForSaleSelectedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-64
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200101",
+                "Type":"Arrow",
+                "Position":"MiddleCenter",
+                "OffsetLeft":200,
+                "ArrowPosition":"MiddleRight",
+                "ArrowDirection":"Right",
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleForSaleSelectedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Buttons":
+                        [
+                            "TakeATour"
+                        ]
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-64
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    162,
+                    164
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Movement":{
+                    "End":{
+                        "$type":"HyperQuest.GameServer.Contracts.SelectionsCameraPositionSpec, HyperQuest.GameServer.Contracts",
+                        "Selections":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                                "SpecContainerType":"Room",
+                                "SpecContainerIds":
+                                [
+                                    7085
+                                ]
+                            }
+                        ],
+                        "Zoom":0.4
+                    },
+                    "Duration":4,
+                    "EaseInOut":1
+                },
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.GameCameraInterpolationCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "GameCameraInterpolation":"MoveTo"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Buttons":
+                        [
+                            "CastleVisitBack"
+                        ]
+                    }
+                ],
+                "Duration":4
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":32
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ActivateCastleForSalePicking?activate=false&castleForSaleId=4,"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200002"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200011",
+                "TextOasisId":16468,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16468,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5A5.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-97,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"200011"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/StarterCastleSelection\/ShowLotteryTicketPanel?playScratchAnimation=true",
+                "Duration":2.5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"200012",
+                "Text":"Oh buddy.",
+                "TextOasisId":16469,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16469,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B605.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-97,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"200012"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"LotteryTicketPanel"
+            }
+        ]
+    }
+]

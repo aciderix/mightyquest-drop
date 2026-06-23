@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"TotemBuff_Damage",
+        "OasisName":15672,
+        "OasisDescription":15673
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"hud\/buffDebuffIcons\/heroBuffs_damageIncrease.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_damageIncrease"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts"
+    }
+]

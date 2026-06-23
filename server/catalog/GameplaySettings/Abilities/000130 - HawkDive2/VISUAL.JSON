@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_018_Dive2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_Walk",
+                "AnimActive":"00_Walk",
+                "AnimRecover":"00_Walk"
+            }
+        ]
+    }
+]

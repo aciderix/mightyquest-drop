@@ -1,0 +1,64 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Peepi the Ultram",
+        "OasisName":1379,
+        "OasisDescription":1380
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Charge {0} damage",
+                    "OasisName":7754
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Fire trail {0}",
+                    "OasisName":7756
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Charge {0} damage",
+                    "OasisName":7754
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Fire trail {0}",
+                    "OasisName":7756
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Misc\/branded1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Misc\/branded1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:branded1e",
+        "HeightOffset":1.75
+    }
+]

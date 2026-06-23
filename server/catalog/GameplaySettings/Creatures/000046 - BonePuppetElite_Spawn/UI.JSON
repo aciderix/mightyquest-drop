@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"The Moldering One",
+        "OasisName":8619,
+        "OasisDescription":8618
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/iconInv\/creatures\/undead\/CHA_023_Skeleton_tutorial.png",
+        "InvIconUrl":"icoInv\/iconInv\/creatures\/undead\/CHA_023_Skeleton_tutorial.png",
+        "HeightOffset":2.5
+    }
+]

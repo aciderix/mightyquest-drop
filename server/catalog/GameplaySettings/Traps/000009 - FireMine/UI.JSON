@@ -1,0 +1,57 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Fire MineField",
+        "OasisName":1453,
+        "OasisDescription":1454
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/TRA_002_FireMine01.png",
+        "InvIconUrl":"icoInv\/traps\/TRA_002_FireMine01.png",
+        "LayerName":"UI_Common_TrapsIcons:FireMine_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Hidden",
+                    "OasisName":7642
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/hidden.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Explosion {0}",
+                    "OasisName":7643
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Effect",
+                        "StatsSpecContainerId":40,
+                        "TaggedSpec":"Fire Mine damage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ]
+    }
+]

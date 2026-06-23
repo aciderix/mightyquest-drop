@@ -1,0 +1,11 @@
+trace.jsonl
+*.log
+state.json
+*.pyc
+__pycache__/
+.mqel_certs/
+build/
+dist/
+*.spec
+mqel-server-windows/
+mqel-server-windows.zip

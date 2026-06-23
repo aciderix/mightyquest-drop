@@ -1,0 +1,42 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Creature":{
+                                "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":1073,
+                                "Name":"BombElite_Spawn"
+                            },
+                            "CreatureCount":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":1
+                            },
+                            "Level":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"SourceLevel"
+                            },
+                            "IsSpawnSpecApplied":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":2,
+                "PrepareTime":0.6,
+                "RecoverTime":0.6,
+                "AbilityCastType":"Direct",
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellChargePrepare",
+                "AnimActive":"00_SpellCharge",
+                "AnimRecover":"00_SpellChargeRecover"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAnimationTagFxSpec, HyperQuest.GameServer.Contracts",
+        "Fx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_7EEC8AA4_BD346.MATERIAL",
+                "Length":8,
+                "SegmentLifeTime":5,
+                "FadeInTime":0.2,
+                "FadeOutTime":1,
+                "FadeInDistance":1,
+                "FadeOutDistance":0.5,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxBoneAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"Bip01 Pelvis",
+                    "OffsetX":-0.6,
+                    "TrailPointOffsetOnY":1
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_C9383946_BA618>SPECIAL EFFECT_C9383946_BA618.SPECIALFX",
+                            "PlayMode":"One",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "HeightOffset":2
+                            }
+                        }
+                    },
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_7FDE649E_BC675.MATERIAL",
+                            "NodeAttachment":{
+                                
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Cyclops_LimitedEdition_Ram"
+    }
+]

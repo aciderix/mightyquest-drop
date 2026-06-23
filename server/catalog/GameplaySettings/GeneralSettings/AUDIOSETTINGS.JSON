@@ -1,0 +1,1274 @@
+{
+    "DefaultAmbienceCrossFadeDuration":1,
+    "RoomAmbienceCrossFadeDuration":1.3,
+    "MusicCrossFadeDuration":0.4,
+    "HeroCriticalHealthRatio":0.25,
+    "BusInfos":{
+        "Description":"The master bus and the other bus groups used to turn on or off fx, music, ambiences or voices",
+        "MasterBusId":"0x00000008",
+        "MusicBusIds":
+        [
+            "0x000015B9",
+            "0x00089843",
+            "0x000897CB",
+            "0x00002995"
+        ],
+        "SfxBusIds":
+        [
+            "0x00082AE0",
+            "0x0008ADD3",
+            "0x00082749",
+            "0x00089845",
+            "0x000015BB",
+            "0x000888D6",
+            "0x000015BD",
+            "0x000027C6",
+            "0x000015BC",
+            "0x000015BF",
+            "0x000029EC"
+        ],
+        "VoiceBusIds":
+        [
+            "0x000875BA",
+            "0x000832AD",
+            "0x00089844",
+            "0x000832AE",
+            "0x000888C9",
+            "0x0008879C"
+        ],
+        "AmbienceBusIds":
+        [
+            "0x000015BA"
+        ]
+    },
+    "GenericSounds":{
+        "Description":"Sounds that are not specific to a unique simulation.",
+        "DefaultCastleExteriorAmbienceSound":{
+            "Description":"Ambience switch applied when outside castle and also on open rooms",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000875E5.SOUND",
+            "FireAndForget":true
+        },
+        "DefaultRoomAmbienceSound":{
+            "Description":"Ambience switch applied when inside castle in closed rooms",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000875E2.SOUND",
+            "FireAndForget":true
+        },
+        "CreditsMusic":{
+            "Description":"Music played during credits",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082AEE.SOUND",
+            "FireAndForget":true
+        },
+        "BoostActivatedSound":{
+            "Description":"When a consumable boost is activated",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00083251.SOUND",
+            "FireAndForget":true
+        },
+        "CameraRotationSound":{
+            "Description":"When camera rotates",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000891A1.SOUND",
+            "FireAndForget":true
+        },
+        "SellInventoryItemSound":{
+            "Description":"When selling items while gold storage is not full",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000029AC.SOUND",
+            "FireAndForget":true
+        },
+        "TrashInventoryItemSound":{
+            "Description":"When selling items while gold storage is full",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000890B8.SOUND",
+            "FireAndForget":true
+        },
+        "DyeAppliedSound":{
+            "Description":"When dye is applied on a piece of equipment",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000892BE.SOUND",
+            "FireAndForget":true
+        }
+    },
+    "HeroVoicesSounds":{
+        "Description":"All the VO that a hero can trigger according to specific situations. A switch allows to change the content depending on the hero selected",
+        "CastleEntranceVo":{
+            "Description":"AI bark when drawbridge opens and hero enters castle",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087642.SOUND"
+        },
+        "ReceiveCriticalDamageVoConfig":{
+            "Vo":{
+                "Description":"AI bark when hero receives huge amount of damage on a single hit, calculated with the 'DamageHpThreshold' ",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00087640.SOUND"
+            },
+            "DamageHpThreshold":0.2
+        },
+        "DrinkPotionVo":{
+            "Description":"AI bark when hero drinks healing potion",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008763F.SOUND"
+        },
+        "PickUpLifeOrbVo":{
+            "Description":"AI bark when hero picks up life orb",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087643.SOUND",
+            "Probability":0.2
+        },
+        "InflictsCriticalDamageVo":{
+            "Description":"AI bark when hero inflicts huge amount of damage on a single hit",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087644.SOUND",
+            "Probability":0.02
+        },
+        "KillingCreaturesOverTimeVoConfig":{
+            "Vo":{
+                "SoundEventResource":"DB:>RAW>SOUNDS>00087641.SOUND",
+                "Probability":0.02
+            },
+            "CreaturesCount":10,
+            "TimePeriod":"1s"
+        },
+        "KilledVo":{
+            "Description":"AI bark when hero gets killed",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008772C.SOUND",
+            "Probability":0.5
+        },
+        "ResurrectedVo":{
+            "Description":"AI bark when hero is revived",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087736.SOUND",
+            "Probability":0.5
+        },
+        "LowHealthVo":{
+            "Description":"AI bark when hero reaches low health threshold",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087731.SOUND"
+        },
+        "BossAggroedVo":{
+            "Description":"AI bark when a Boss starts to move towards the hero",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087722.SOUND"
+        },
+        "BossKilledVo":{
+            "Description":"AI bark when a Boss is killed",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087726.SOUND",
+            "Probability":0.3
+        },
+        "TreasureRoomDoorOpeningVo":{
+            "Description":"AI bark when the treasure room door opens and the chests are available to loot",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087727.SOUND"
+        },
+        "InventoryIsFullVo":{
+            "Description":"AI bark when hero tries to pick up an item on the floor while inventory is full",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008772D.SOUND"
+        },
+        "AllMinesDestroyedVo":{
+            "Description":"AI bark when hero destroys the last mine of a castle during an attack",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000897B1.SOUND"
+        },
+        "CannotUseSkillWhileStunnedVo":{
+            "Description":"AI bark when hero tries to cast a skill while being stunned",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087749.SOUND"
+        },
+        "AllStorageChestsOpenedVo":{
+            "Description":"AI bark when chests are opened in the treasure room",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087729.SOUND"
+        },
+        "PlacingBossCreatureVo":{
+            "Description":"AI bark when placing a boss in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087728.SOUND",
+            "Probability":0.3
+        },
+        "PlacingRoomVo":{
+            "Description":"AI bark when placing a room in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087737.SOUND",
+            "Probability":0.1
+        },
+        "CreatureUpgradedVo":{
+            "Description":"AI bark when upgrading a creature in build mode, currently applied on specialization change though",
+            "Probability":0.2
+        },
+        "BuildingUpgradedVo":{
+            "Description":"AI bark when upgrading a building in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008773C.SOUND",
+            "Probability":0.2
+        },
+        "MaxDefensePointReachedVo":{
+            "Description":"AI bark when trying to add defence and DP maximum has been reached in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087734.SOUND"
+        },
+        "PurchasingGearVo":{
+            "Description":"AI bark when purchasing hero items",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008772E.SOUND",
+            "Probability":0.2
+        },
+        "SellingGearVo":{
+            "Description":"AI bark when selling any item",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087738.SOUND",
+            "Probability":0.05
+        },
+        "PurhasingPotionVo":{
+            "Description":"AI bark when purchasing potions",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087735.SOUND",
+            "Probability":0.1
+        },
+        "EquipsGearVo":{
+            "Description":"AI bark when equipping hero gear",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008772F.SOUND",
+            "Probability":0.1
+        },
+        "StorageChestsAreShieldedVo":{
+            "Description":"AI bark when the treasure room door opens and the chests are unavailable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088815.SOUND"
+        },
+        "LevelUpVo":{
+            "Description":"AI bark when hero levels up",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087733.SOUND"
+        },
+        "AttackTimerReachedZeroVo":{
+            "Description":"AI bark when the attack timer reached 0",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087739.SOUND"
+        }
+    },
+    "GeneralAttackSounds":{
+        "Description":"All sounds used during attack only.",
+        "AttackMusic":{
+            "Description":"Music switch played during standard attacks",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002590.SOUND"
+        },
+        "AttackReportAmbienceSound":{
+            "Description":"Ambience switch played during attack report\/victory screen",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000875E5.SOUND"
+        },
+        "BossPveCastleAttackMusic":{
+            "Description":"Music switch played only when attacking PVE Boss castles",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002590.SOUND"
+        },
+        "EpicFightAttackMusic":{
+            "Description":"Music played during a boss fight",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002566.SOUND"
+        },
+        "TreasureRoomMusicOutOfTime":{
+            "Description":"Music played in treasure room when chests are not available to loot",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082977.SOUND"
+        },
+        "TreasureRoomMusicInTime":{
+            "Description":"Music played in treasure room when chests are available to loot",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00081288.SOUND"
+        },
+        "AttackReportMusic":{
+            "Description":"Music played during attack report\/victory screen",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00080E85.SOUND"
+        },
+        "EpicWinJingleSound":{
+            "Description":"Music stinger played when a Boss is defeated",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000304F.SOUND"
+        },
+        "HeroDeathJingleSound":{
+            "Description":"Music stinger played when hero dies",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089EAD.SOUND"
+        },
+        "DodgeSound":{
+            "Description":"When an attack is blocked instead of damaging a target",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00081FA5.SOUND"
+        },
+        "AbsorbedSound":{
+            "Description":"When an attack is absorbed instead of damaging a target",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082D8E.SOUND"
+        },
+        "StunnedSound":{
+            "Description":"When an attack results in stunning a target",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000309D.SOUND"
+        },
+        "SpellResistSound":{
+            "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000015F2.SOUND"
+        },
+        "SnaredSound":{
+            "Description":"When an attack results in snaring a target",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AE68.SOUND"
+        },
+        "ConfusedSound":{
+            "Description":"When an attack results in confusing a target",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AE69.SOUND"
+        },
+        "LootCollectedSound":{
+            "Description":"When items are picked up after being dropped by creatures in attack mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00003060.SOUND"
+        },
+        "ChestLootCollectedSound":{
+            "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE"
+        },
+        "LootDroppedCoinsSound":{
+            "Description":"When gold coins are dropped from creatures in attack mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000016FE.SOUND"
+        },
+        "LootDroppedLifeForceSound":{
+            "Description":"When Life force is dropped from creatures in attack mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082D89.SOUND"
+        },
+        "LootDroppedPremiumCashSound":{
+            "Description":"When Blings are dropped from creatures in attack mode if ever enabled",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089822.SOUND"
+        },
+        "ChestLootDroppedSound":{
+            "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00081280.SOUND"
+        },
+        "HeroItemDroppedSound":{
+            "Description":"When hero items are dropped from creatures in attack mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082C5E.SOUND"
+        },
+        "ConsumableDroppedSound":{
+            "Description":"When dyes are dropped from creatures in attack mode until other consumables can drop we don't use a switch",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000892BA.SOUND"
+        },
+        "CraftingMaterialDroppedSound":{
+            "Description":"When crafting material are dropped from creatures in attack mode until other consumables can drop we don't use a switch",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082C5E.SOUND"
+        },
+        "LevelUpSound":{
+            "Description":"When the hero level up pop up appears",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089835.SOUND"
+        },
+        "EnableHeroCriticalHealthSoundPreset":{
+            "Description":"Set low health sound preset",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00081E23.SOUND"
+        },
+        "DisableHeroCriticalHealthSoundPreset":{
+            "Description":"Disable low health sound preset",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00081E24.SOUND"
+        },
+        "ChallengeCountDown3Sound":{
+            "Description":"When challenge HUD countdown displays the number 3",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002D7B.SOUND"
+        },
+        "ChallengeCountDown2Sound":{
+            "Description":"When challenge HUD countdown displays the number 2",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002D7B.SOUND"
+        },
+        "ChallengeCountDown1Sound":{
+            "Description":"When challenge HUD countdown displays the number 1",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002D7B.SOUND"
+        },
+        "ChallengeCountDownEndSound":{
+            "Description":"When challenge HUD countdown displays GO",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002D77.SOUND"
+        },
+        "HudHeroVsHeroAnimSound":{
+            "Description":"Castle VS Castle HUD displayed when the drawbridge opens",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002E13.SOUND"
+        },
+        "InvalidActionFeedbackSound":{
+            "Description":"When invalid actions are performed based on Switch_Type_Impossible_Actions",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00003092.SOUND"
+        },
+        "TimerEndingCountdownSound":{
+            "Description":"When the attack timer reach TimerEndingCountdownDurationInSeconds",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089327.SOUND"
+        },
+        "AttackTimerEndedFailSound":{
+            "Description":"When the attack timer reach 0",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089329.SOUND"
+        },
+        "AttackTimerBonusSound":{
+            "Description":"When a bonus is added to the attack timer",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089328.SOUND"
+        },
+        "AbilityActivatedSound":{
+            "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00087772.SOUND"
+        },
+        "AbilityCooldownEndedSound":{
+            "Description":"When an ability cool down ends",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008325D.SOUND"
+        },
+        "LifeShieldActivationSound":{
+            "Description":"When runaway hero life shield is activated",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088CE3.SOUND"
+        },
+        "LifeShieldDeactivationSound":{
+            "Description":"When runaway hero life shield is deactivated",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00088CE5.SOUND"
+        },
+        "CreatureAggroedWarningSound":{
+            "Description":"When a creature is aggroed",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008923D.SOUND"
+        },
+        "CreatureDefendingATotemAggroedWarningSound":{
+            "Description":"When a creature defending a totem is aggroed",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC36.SOUND"
+        },
+        "TotemLeashingActivatedSound":{
+            "Description":"When totem leashing is activated",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC28.SOUND"
+        }
+    },
+    "GeneralBuildSounds":{
+        "Description":"All sounds used for the build mode ONLY",
+        "BuildMusic":{
+            "Description":"Music applied during build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002583.SOUND"
+        },
+        "BuiltEntityDropSound":{
+            "Description":"Switch used when dropping an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000278D.SOUND"
+        },
+        "BuiltEntityPickupSound":{
+            "Description":"Switch used when picking up an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000278C.SOUND"
+        },
+        "BuiltEntityDeleteSound":{
+            "Description":"Switch used when deleting an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000278F.SOUND"
+        },
+        "BuiltEntityRotateSound":{
+            "Description":"Switch used when rotating an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000278E.SOUND"
+        },
+        "BuiltEntityInspectSound":{
+            "Description":"When inspecting an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002576.SOUND"
+        },
+        "BuiltEntitySelectionSound":{
+            "Description":"Switch used when selecting an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089850.SOUND"
+        },
+        "BuiltEntityHarvestStartedSound":{
+            "Description":"When harvesting mines on the progress bar",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002FA5.SOUND"
+        },
+        "BuiltEntitySnapSound":{
+            "Description":"Switch used when snapping an entity in build mode",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008ACC5.SOUND"
+        },
+        "HarvestDroppedGoldSound":{
+            "Description":"When gold drops after harvesting mines",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00083032.SOUND"
+        },
+        "HarvestDroppedLifeForceSound":{
+            "Description":"When Life Force drops after harvesting mines",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00083030.SOUND"
+        },
+        "HarvestDroppedPremiumCashSound":{
+            "Description":"When Premium Cash drops after harvesting mines",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AAD8.SOUND"
+        },
+        "HarvestCollectedGoldSound":{
+            "Description":"When gold is collected after harvesting mines",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00083031.SOUND"
+        },
+        "HarvestCollectedLifeForceSound":{
+            "Description":"When Life Force is collected after harvesting mines",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008302F.SOUND"
+        },
+        "HarvestCollectedCratingMaterialSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC7B.SOUND"
+        },
+        "HarvestCollectedPremiumCashSound":{
+            "Description":"When Premium Cash is collected after harvesting mines",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AAD9.SOUND"
+        },
+        "InvalidActionFeedbackSound":{
+            "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00002FAE.SOUND"
+        },
+        "BuildingUpgradeStartSound":{
+            "Description":"When a building upgrade starts",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082A9D.SOUND"
+        },
+        "BuildingUpgradeEndSound":{
+            "Description":"When a building upgrade ends",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00082A9B.SOUND"
+        },
+        "BuiltEntitiesGroupReplacedSound":{
+            "Description":"When a creature specialization is changed"
+        },
+        "TrapPoweringSound":{
+            "Description":"When a trap is plugged",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000897D6.SOUND"
+        },
+        "TrapUnpoweringSound":{
+            "Description":"When a trap is unplugged",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000897D7.SOUND"
+        },
+        "PowerValidConnectionBeamStartSound":{
+            "Description":"When the energy ray of the power generator is activated using ALT",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000897D8.SOUND"
+        },
+        "PowerValidConnectionBeamStopSound":{
+            "Description":"When the energy ray of the power generator is deactivated releasing ALT",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089821.SOUND"
+        },
+        "PowerInvalidConnectionBeamStartSound":{
+            "Description":"When the energy ray of the power generator becomes unstable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000890A0.SOUND"
+        },
+        "PowerInvalidConnectionBeamStopSound":{
+            "Description":"When the energy ray of the power generator goes from unstable to stable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000890A2.SOUND"
+        },
+        "TotemValidConnectionBeamStartSound":{
+            "Description":"When the energy ray of the totem is activated using ALT",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000897D8.SOUND"
+        },
+        "TotemValidConnectionBeamStopSound":{
+            "Description":"When the energy ray of the totem is deactivated releasing ALT",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089821.SOUND"
+        },
+        "TotemInvalidConnectionBeamStartSound":{
+            "Description":"When the energy ray of the totem becomes unstable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000890A0.SOUND"
+        },
+        "TotemInvalidConnectionBeamStopSound":{
+            "Description":"When the energy ray of the totem goes from unstable to stable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000890A2.SOUND"
+        },
+        "TotemDefenderLinkingSound":{
+            "Description":"When the energy ray of the power generator becomes unstable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC09.SOUND"
+        },
+        "TotemDefenderUnlinkingSound":{
+            "Description":"When the energy ray of the power generator goes from unstable to stable",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC0A.SOUND"
+        },
+        "BuildingRepairingStartedSound":{
+            "Description":"When a mine repair progress bar starts",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089166.SOUND"
+        },
+        "BuildingRepairingStoppedSound":{
+            "Description":"When a mine repair progress bar ends",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00089167.SOUND"
+        },
+        "AggroTweakingToolActivationSound":{
+            "Description":"When starting to set up creature aggro zone pressing ALT key",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000891BB.SOUND"
+        },
+        "AggroTweakingToolDeactivationSound":{
+            "Description":"When stopping to set up creature aggro zone releasing ALT key",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000891BC.SOUND"
+        },
+        "AggroTweakingToolConfirmationSound":{
+            "Description":"When setting up creature aggro zone with ALT key pressed and a mouse click to confirm",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000891BD.SOUND"
+        }
+    },
+    "GeneralLobbySounds":{
+        "Description":"All sounds used for the home attack selection and region selection ONLY",
+        "LobbyMusic":{
+            "Description":"Music applied to the lobby, attack selection and region map screens",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000255C.SOUND"
+        },
+        "HomeAttackSelectionAmbienceSound":{
+            "Description":"Ambience switch applied to the lobby and attack selection",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008A31A.SOUND"
+        },
+        "RegionSelectionAmbienceSound":{
+            "Description":"Ambience switch applied to the region map",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008767D.SOUND"
+        },
+        "AttackSelectionCastleHoveredSound":{
+            "Description":"When mouse hovering a region in the region map",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000257C.SOUND"
+        },
+        "AttackRegionUnlockAnimationSound":{
+            "Description":"When unlocking a new region in the region map",
+            "SoundEventResource":"DB:>RAW>SOUNDS>00083260.SOUND"
+        },
+        "WebBrowserActivationPresets":
+        [
+            {
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A307.SOUND"
+            }
+        ],
+        "WebBrowserDeactivationPresets":
+        [
+            {
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A308.SOUND"
+            }
+        ],
+        "CastleSelectionMusic":{
+            "Description":"Music applied during the castle selection",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0000255C.SOUND"
+        },
+        "CastleSelectionAmbienceSound":{
+            "Description":"Ambience applied during the castle selection",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008A31A.SOUND"
+        },
+        "CastleVisitSounds":
+        [
+            {
+                "CastleSaleId":1,
+                "Music":{
+                    "Description":"Music applied during castle visit mode - standard castle 1",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC13.SOUND"
+                },
+                "AmbienceSound":{
+                    "Description":"Ambience applied during castle visit mode - standard castle 1",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000875EE.SOUND"
+                }
+            },
+            {
+                "CastleSaleId":2,
+                "Music":{
+                    "Description":"Music applied during castle visit mode - standard castle 2",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC11.SOUND"
+                },
+                "AmbienceSound":{
+                    "Description":"Ambience applied during castle visit mode - standard castle 2",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00087619.SOUND"
+                }
+            },
+            {
+                "CastleSaleId":3,
+                "Music":{
+                    "Description":"Music applied during castle visit mode - standard castle 3",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC12.SOUND"
+                },
+                "AmbienceSound":{
+                    "Description":"Ambience applied during castle visit mode - standard castle 3",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000015D0.SOUND"
+                }
+            },
+            {
+                "CastleSaleId":4,
+                "Music":{
+                    "Description":"Music applied during castle visit mode - unaffordable",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008864F.SOUND"
+                },
+                "AmbienceSound":{
+                    "Description":"Ambience applied during castle visit mode - unaffordable",
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008774C.SOUND"
+                }
+            }
+        ],
+        "CastleSelectedSound":{
+            "Description":"Whoosh when zooming towards a castle",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC1F.SOUND"
+        },
+        "CastleUnSelectedSound":{
+            "Description":"Whoosh when zooming away from a castle",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AC1E.SOUND"
+        }
+    },
+    "UserInterfaceSounds":{
+        "Description":"All the UI sounds mapped to a string id that will be used from the UI code",
+        "UiSoundsById":
+        {
+            "EquipClothSound":{
+                "Description":"When a cloth item is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000029AE.SOUND"
+            },
+            "EquipStaffSound":{
+                "Description":"When a staff is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083492.SOUND"
+            },
+            "EquipRingSound":{
+                "Description":"When a ring is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083495.SOUND"
+            },
+            "EquipNecklaceSound":{
+                "Description":"When a necklace is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083493.SOUND"
+            },
+            "EquipPetSound":{
+                "Description":"When a pet is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083494.SOUND"
+            },
+            "EquipCrossbowSound":{
+                "Description":"When a crossbow is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000029AF.SOUND"
+            },
+            "EquipLeatherSound":{
+                "Description":"When a leather item is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002E2A.SOUND"
+            },
+            "EquipSwordSound":{
+                "Description":"When a metallic weapon is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002E28.SOUND"
+            },
+            "EquipArmorSound":{
+                "Description":"When a metallic piece of armour is equipped or dropped in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002E29.SOUND"
+            },
+            "InventoryPickupSound":{
+                "Description":"When any item is picked up from inventory, this sound is generic",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083481.SOUND"
+            },
+            "InventoryCancelPickupSound":{
+                "Description":"When an item pick up action is cancelled and also when removed from forge slots",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000886FF.SOUND"
+            },
+            "NotificationSound":{
+                "Description":"When a generic notification occur, numbers in red circles in the UI",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002F6F.SOUND"
+            },
+            "NotificationExclamationMarkSound":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000897CD.SOUND"
+            },
+            "DisablePopupDuckingPreset":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE"
+            },
+            "EnablePopupDuckingPreset":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE"
+            },
+            "CastleLevelUpPopupSound":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000029B5.SOUND"
+            },
+            "GenericButtonPressed":{
+                "Description":"When generic buttons are pressed",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002576.SOUND"
+            },
+            "DisabledButtonPressed":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000029B2.SOUND"
+            },
+            "TutorialPopUp":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000029E5.SOUND"
+            },
+            "GenericButtonRollOver":{
+                "Description":"When generic roll over is done in the UI, usually paired with a visual highlight",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0000257C.SOUND"
+            },
+            "VictoryAnimationJingleSound":{
+                "Description":"Music stinger that overrides general music when chests are opened within the treasure room",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A30D.SOUND"
+            },
+            "CastleValidationSuccessJingleSound":{
+                "Description":"Music stinger that overrides general music when chests are opened within the treasure room in case of a castle validation",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00089EC6.SOUND"
+            },
+            "InvalidInventoryActionSound":{
+                "Description":"May be used while trying to do an invalid action in the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002FAE.SOUND"
+            },
+            "InvalidCastleFeedbackPopupSound":{
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002FAE.SOUND"
+            },
+            "BuyShopItemSound":{
+                "Description":"When anything is bought in the game",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002E16.SOUND"
+            },
+            "AchievementCompletedSound":{
+                "Description":"Music and SFX stinger supporting the completion of any achievement",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00089853.SOUND"
+            },
+            "NewObjectiveSound":{
+                "Description":"When a new objective pop up appears",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083238.SOUND"
+            },
+            "PickupAbilitySound":{
+                "Description":"When picking up an ability from the skill tree and skill bar",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083243.SOUND"
+            },
+            "DropAbilitySound":{
+                "Description":"When dropping an ability anywhere else than on the the skill bar, cancelling the action",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083242.SOUND"
+            },
+            "EquipAbilitySound":{
+                "Description":"When dropping an ability in the skill bar, equipping it",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083244.SOUND"
+            },
+            "UnequipAbilitySound":{
+                "Description":"When unequipping an ability",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083246.SOUND"
+            },
+            "PickupPotionSound":{
+                "Description":"When picking up a potion from the inventory, but this string should be removed so it uses the generic pick up sound",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083481.SOUND"
+            },
+            "DropPotionSound":{
+                "Description":"When dropping a potion in the inventory, but this string name could be more consistent with other equip sounds",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00089817.SOUND"
+            },
+            "ClaimRewardSound":{
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083254.SOUND"
+            },
+            "FinishNowPopUpSound":{
+                "SoundEventResource":"DB:>RAW>SOUNDS>00081280.SOUND"
+            },
+            "WindowCloseButtonSound":{
+                "Description":"When a window is closed with the X or when using a BACK button",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083233.SOUND"
+            },
+            "AchievementDefenseWonSound":{
+                "Description":"When a pop up appears to tell that a hero was killed in your castle",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000891A4.SOUND"
+            },
+            "AchievementDefenseLostLootedSound":{
+                "Description":"When a pop up appears to tell that a hero has beaten your castle and your chests were looted",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008321E.SOUND"
+            },
+            "AchievementDefenseLostShieldedSound":{
+                "Description":"When a pop up appears to tell that a hero has beaten your castle but your chests were not looted",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008321F.SOUND"
+            },
+            "RankingUpdateDownPopupSound":{
+                "Description":"When a pop up appears to tell that your ranking status downgraded",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AF1F.SOUND"
+            },
+            "RankingUpdateSamePopupSound":{
+                "Description":"When a pop up appears to tell that your ranking status remained the same",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AF1E.SOUND"
+            },
+            "RankingUpdateUpPopupSound":{
+                "Description":"When a pop up appears to tell that your ranking status upgraded",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AF1D.SOUND"
+            },
+            "ClaimChallengeRewardSound":{
+                "Description":"TO BE REMOVED WITH ALL REFERENCES TO IT IF OBSOLETE",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002E16.SOUND"
+            },
+            "FirstHeroSelectionSound":{
+                "Description":"When a hero selection is highlighted as the player needs to choose his first hero in the NUE",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00087657.SOUND"
+            },
+            "ValidationStartSound":{
+                "Description":"When castle validation header appears as you start your castle's validation",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000897AD.SOUND"
+            },
+            "ValidationFailedSound":{
+                "Description":"When castle validation failed pop up appears after the hero died in his own castle",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000897AE.SOUND"
+            },
+            "CraftingDisplaySound":{
+                "Description":"When crafting button is highlighted to show it is available",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A2F1.SOUND"
+            },
+            "CraftingClickSound":{
+                "Description":"When crafting button is clicked to start crafting items",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A2F2.SOUND"
+            },
+            "CraftedItemReadySound":{
+                "Description":"When in or out of crafting menu and the crafted item cooking ends",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A2F3.SOUND"
+            },
+            "ClaimCraftedItemClickSound":{
+                "Description":"When a crafted item is reclaimed",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008A2F4.SOUND"
+            },
+            "UniversalDropAnimatedCoinSound":{
+                "Description":"When the universal drop coin animation starts",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008ABFF.SOUND"
+            },
+            "DropDyeSound":{
+                "Description":"When dyes are dropped in a slot of the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000892BF.SOUND"
+            },
+            "NUEHeroSelectionSound":{
+                "Description":"Hero selectionSound",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AB66.SOUND"
+            },
+            "RewardCollectSound":{
+                "Description":"collect a reward sound",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AAED.SOUND"
+            },
+            "OpenCorneliusEmporiumSound":{
+                "Description":"Open the Cornelius Emporium",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083206.SOUND"
+            },
+            "OpenBlacksmithSound":{
+                "Description":"Open the Blacksmith",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00082A90.SOUND"
+            },
+            "OpenPotionBrewerySound":{
+                "Description":"Open the potion brewery",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00082A99.SOUND"
+            },
+            "OpenArchitectOfficeSound":{
+                "Description":"Open the architect office",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00082A8F.SOUND"
+            },
+            "DropCraftingMaterialSound":{
+                "Description":"When crafting material are dropped in a slot of the inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AE73.SOUND"
+            },
+            "InventoryDropCreatureSound":{
+                "Description":"When creature are dropped in castle inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008AE94.SOUND"
+            },
+            "InventoryDropTrapSound":{
+                "Description":"When trap are dropped in castle inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>000027A3.SOUND"
+            },
+            "InventoryDropRoomSound":{
+                "Description":"When room are dropped in castle inventory",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00002790.SOUND"
+            },
+            "ObjectiveComplete":{
+                "Description":"When objective popup appear and objective is completed",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B338.SOUND"
+            },
+            "NewObjective":{
+                "Description":"When new objective unlocked",
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083238.SOUND"
+            },
+            "HeroLevelUpReadySound":{
+                "Description":"Hero level up ready sound",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B33B.SOUND"
+            },
+            "CastleSelectionSelectCastleSound":{
+                "Description":"When a castle is clicked in the attack selection screen",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B3B8.SOUND"
+            },
+            "CastleSelectionPanelPopupSound":{
+                "Description":"When the castle panel pops up in the attack selection screen",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B3B9.SOUND"
+            },
+            "CastleSelectionAttackConfirmationSound":{
+                "Description":"When the confirmation button is pressed to proceed to a castle attack in the attack selection",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B3B7.SOUND"
+            }
+        }
+    },
+    "VoiceOverSounds":{
+        "Description":"All the VO sounds used in game - need to migrate the NUE VO here in the future",
+        "SoundsById":
+        {
+            "Objective300_VO_NUE_005_01FEN_DRY16574":{
+                "Description":"Obj300_Chickenvasion_Fendrick",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5FC.SOUND"
+            },
+            "Objective301_VO_NUE_005_03COR_DRY16578":{
+                "Description":"Obj301_PVP Attack_Cornelius",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B53A.SOUND"
+            },
+            "Objective302_VO_NUE_005_04TYB_DRY16580":{
+                "Description":"Obj302_Revenge of the birds_Tybalt",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5BD.SOUND"
+            },
+            "Objective303_VO_NUE_005_05COR_DRY16582":{
+                "Description":"Obj303_The Heist Part1_Cornelius",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5B1.SOUND"
+            },
+            "Objective304_VO_NUE_005_06COR_DRY16584":{
+                "Description":"Obj304_The Heist Part2_Cornelius",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B59C.SOUND"
+            },
+            "Objective305_VO_NUE_005_10COR_DRY16593":{
+                "Description":"Obj305_Flipping the word_Cornelius",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B54D.SOUND"
+            },
+            "Objective306_VO_NUE_005_11NIG_DRY16595":{
+                "Description":"Obj306_Whos the Boss_Nigel",
+                "SoundEventResource":"DB:>RAW>SOUNDS>0008B5C9.SOUND"
+            }
+        }
+    },
+    "AttackImpactSoundsSettings":{
+        "Description":"All settings and sounds used to determine and play the appropriate attack impact sounds",
+        "AttackImpactSoundLevelsPerArmorType":3,
+        "ReflectedDamageImpactSound":{
+            "Description":"When an attack results in damage reflection to the source",
+            "SoundEventResource":"DB:>RAW>SOUNDS>000875EA.SOUND"
+        },
+        "CriticalHitImpactSound":{
+            "Description":"Additional impact sound played on critical hits",
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008ACCC.SOUND"
+        },
+        "AttackImpactSoundLevelsProfiles":
+        {
+            "Default":{
+                "LevelsMaxDamageRatios":
+                [
+                    0.04,
+                    0.14,
+                    1
+                ]
+            },
+            "Hero":{
+                "LevelsMaxDamageRatios":
+                [
+                    0.09,
+                    0.24,
+                    1
+                ]
+            },
+            "Boss":{
+                "LevelsMaxDamageRatios":
+                [
+                    0.02,
+                    0.05,
+                    1
+                ]
+            }
+        },
+        "AttackImpactSoundsById":
+        {
+            "Acid":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC56.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002DBB.SOUND"
+                }
+            },
+            "Arrow":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC62.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002712.SOUND"
+                }
+            },
+            "Beartrap":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC64.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002D32.SOUND"
+                }
+            },
+            "Chainlightning":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC5A.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002BFA.SOUND"
+                }
+            },
+            "Charge":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC66.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00081F8D.SOUND"
+                }
+            },
+            "Claw":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC65.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002714.SOUND"
+                }
+            },
+            "Cleave":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC60.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00081F8E.SOUND"
+                }
+            },
+            "Club":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC63.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000831CF.SOUND"
+                }
+            },
+            "Fire":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC5F.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002DEB.SOUND"
+                }
+            },
+            "Fist":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC58.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002713.SOUND"
+                }
+            },
+            "Flytrap":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC5E.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002A7B.SOUND"
+                }
+            },
+            "Hamster":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC57.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002F7F.SOUND"
+                }
+            },
+            "Ice":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC59.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00082F47.SOUND"
+                }
+            },
+            "Mace":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC5B.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008313C.SOUND"
+                }
+            },
+            "Spell":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC61.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002B95.SOUND"
+                }
+            },
+            "TwoHandedSword":{
+                "HeroImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AC5C.SOUND"
+                },
+                "OtherImpactSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0000261B.SOUND"
+                }
+            }
+        }
+    },
+    "FootstepsSoundSettings":{
+        "HeroFootStepSoundsTable":
+        [
+            {
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083438.SOUND"
+            },
+            {
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083446.SOUND"
+            },
+            {
+                "SoundEventResource":"DB:>RAW>SOUNDS>00083453.SOUND"
+            }
+        ],
+        "FloorMaterialIndexByMaterialType":
+        {
+            "WOOD":1,
+            "STONE":2,
+            "CARPET":3,
+            "GRASS":4,
+            "WATER":5,
+            "DIRT":6,
+            "METAL":7,
+            "MUD":8,
+            "SNOW":9,
+            "ICE":10,
+            "SAND":11,
+            "BONE":12
+        }
+    },
+    "GameStateSoundPresetsSettings":{
+        "GameStateSoundPresetsInfos":
+        {
+            "BUILD":{
+                "GlobalPresets":{
+                    "ActivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>00082E83.SOUND"
+                        }
+                    ],
+                    "DeactivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>00088834.SOUND"
+                        }
+                    ]
+                }
+            },
+            "ATTACK":{
+                "GlobalPresets":{
+                    "DeactivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>00081F2A.SOUND"
+                        },
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>00081E24.SOUND"
+                        }
+                    ]
+                }
+            },
+            "ACCOUNTCREATION":{
+                "GlobalPresets":{
+                    
+                }
+            },
+            "HOME":{
+                "GlobalPresets":{
+                    "ActivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008982D.SOUND"
+                        }
+                    ],
+                    "DeactivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008982E.SOUND"
+                        }
+                    ]
+                }
+            },
+            "STARTERCASTLESELECTION":{
+                "GlobalPresets":{
+                    "ActivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008982D.SOUND"
+                        }
+                    ],
+                    "DeactivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008982E.SOUND"
+                        }
+                    ]
+                }
+            },
+            "CASTLEVISIT":{
+                "GlobalPresets":{
+                    
+                }
+            },
+            "ATTACKSELECTION":{
+                "GlobalPresets":{
+                    "ActivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008982D.SOUND"
+                        }
+                    ],
+                    "DeactivationPresets":
+                    [
+                        {
+                            "SoundEventResource":"DB:>RAW>SOUNDS>0008982E.SOUND"
+                        }
+                    ]
+                }
+            },
+            "REPLAY":{
+                "GlobalPresets":{
+                    
+                }
+            },
+            "STARTMENU":{
+                "GlobalPresets":{
+                    
+                }
+            },
+            "PATCHER":{
+                "GlobalPresets":{
+                    
+                }
+            }
+        }
+    },
+    "PanelSoundPresetsSettings":{
+        "SoundPresetsByPanel":
+        {
+            "pause":{
+                "ActivationPresets":
+                [
+                    {
+                        "SoundEventResource":"DB:>RAW>SOUNDS>0008A3C7.SOUND"
+                    }
+                ],
+                "DeactivationPresets":
+                [
+                    {
+                        "SoundEventResource":"DB:>RAW>SOUNDS>0008A3C6.SOUND"
+                    }
+                ]
+            }
+        }
+    }
+}

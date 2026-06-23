@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Linear_Corridor_01",
+        "OasisName":11357,
+        "OasisDescription":15720
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Linear_Corridor_01pvp.png",
+        "InvIconUrl":"icoInv\/rooms\/Linear_Corridor_01pvp.png",
+        "LayerName":"icoShop_rooms:Linear_Corridor_01pvp"
+    }
+]

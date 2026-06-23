@@ -1,0 +1,136 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"BUI_014_Totem_Basic",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":4,
+        "ApplyInertia":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_40F2660D_BA602>XREF_40F2660D_BA602.XREF"
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualTotemFxSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualDestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_4E44AF85_BA618>SPECIALFX_4E44AF85_BA618.SPECIALFX",
+                                "PlayMode":"One",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Undamaged"
+                    },
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_CE1C7399_BA618>SPECIALFX_CE1C7399_BA618.SPECIALFX",
+                                "PlayMode":"One",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Destroyed"
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_8A2D463E_BA618>SPECIAL EFFECT_8A2D463E_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Undamaged"
+                    },
+                    {
+                        "StateEnterFx":
+                        [
+                            {
+                                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_B7A3DEF9_BA618>SPECIAL EFFECT_B7A3DEF9_BA618.SPECIALFX",
+                                "AttachmentStrategy":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                                }
+                            }
+                        ],
+                        "VisualNodeName":"R1_DestructibleState_Destroyed"
+                    }
+                ]
+            }
+        ]
+    }
+]

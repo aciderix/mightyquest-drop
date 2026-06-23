@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BasicAttackPoison",
+        "OasisName":2179,
+        "OasisDescription":2180
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HERODEBUFFS_POISONED.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_poisoned",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

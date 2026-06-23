@@ -1,0 +1,28 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000877A1.SOUND",
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000877A2.SOUND",
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                },
+                "EndSound":{
+                    "Probability":0
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Mace"
+    }
+]

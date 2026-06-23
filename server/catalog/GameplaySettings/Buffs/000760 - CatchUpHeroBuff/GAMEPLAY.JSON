@@ -1,0 +1,47 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":5
+                },
+                "_comment":"Boost the speed of the creature"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"TrapStunDurationReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":1
+                },
+                "_comment":"Give trap stun immunity"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DamageModifierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Modifier":{
+                    "$type":"HyperQuest.GameServer.Contracts.BasicDamageModifierSpec, HyperQuest.GameServer.Contracts",
+                    "DamageSourceTypeFilter":8,
+                    "Multiplier":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":-100
+                    },
+                    "Priority":1
+                },
+                "UpdateModifierInterval":0.1,
+                "_comment":"Give trap damage immunity"
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "MaxInstances":1,
+        "Flags":2,
+        "BuffStopTriggers":{
+            
+        }
+    }
+]

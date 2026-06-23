@@ -1,0 +1,42 @@
+{
+    "Description" : "Unit test account",
+    "LanguageCode" : "en",
+    "Privileges" : 104,
+    "UnlockedAttackRegions" : [3],
+    "CompletedAssignments" : [],
+    "PremiumCash" : 150,
+    "IGC" : 1000,
+    "TrophyScore": 1000,
+    "CountryCode":"CA",
+    "ZoneCode":"NA",
+    "AvatarId":10,
+    "ProfanityFiltering": true,
+    "Inventory" : {
+        "Heroes" : [{
+                "HeroSpecContainerId" : 2,
+                "Level" : 1,
+                "XP" : 0,
+                "Equipment" : {
+                    "Back" : null,
+                    "Body" : null,
+                    "Finger1" : null,
+                    "Hands" : null,
+                    "Head" : null,
+                    "MainHand" : null,
+                    "Neck" : null,
+                    "OffHand" : null,
+                    "Shoulders" : null
+                }
+            }
+        ],
+        "HeroItems" : [],
+        "InventoryTabCount" : 1,
+        "Creatures" : [],
+        "Traps" : [],
+        "Rooms" : [],
+        "Decorations" : []
+    },
+    "CastleBlueprint" : {
+        "Rooms" : []
+    }
+}

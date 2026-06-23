@@ -1,0 +1,132 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Up":0.5
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "X":0.5,
+                                        "Y":1
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceOrientation"
+                                    }
+                                }
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":80
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Up":0.5
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "X":0.5,
+                                        "Y":1
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceOrientation"
+                                    }
+                                }
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":81
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Up":0.5
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "X":0.5,
+                                        "Y":1
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceOrientation"
+                                    }
+                                }
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":82
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "Cooldown":0.25,
+                "PrepareTime":0.01,
+                "RecoverTime":0.1,
+                "MaxDistance":5,
+                "AbilityCastType":"Line",
+                "AttackSpeedFactor":1
+            }
+        ]
+    }
+]

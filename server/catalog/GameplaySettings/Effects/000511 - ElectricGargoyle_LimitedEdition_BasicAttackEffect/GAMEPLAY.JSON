@@ -1,0 +1,56 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BeamFieldSpec, HyperQuest.GameServer.Contracts",
+        "MaxLength":9,
+        "CollisionMaskAny":12,
+        "CollisionMaskAll":4096,
+        "StopperCollisionMask":8388610,
+        "Width":0.3,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":2
+        },
+        "CollisionCheckInterval":0.2,
+        "OnEnterMaxActivation":1,
+        "OnTouchOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":788,
+                        "Name":"ElectricGargoyle_LimitedEdition_DoTSnare"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":789,
+                        "Name":"ElectricGargoyle_LimitedEdition_DoT"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Buff":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":790,
+                        "Name":"ElectricGargoyle_LimitedEdition_ElectricDamage"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ],
+            "ResultCombinationType":"And"
+        }
+    }
+]

@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualActivateAnimationCollectionFx, HyperQuest.GameServer.Contracts",
+        "StateName":"Sleeping",
+        "Activate":false
+    }
+]

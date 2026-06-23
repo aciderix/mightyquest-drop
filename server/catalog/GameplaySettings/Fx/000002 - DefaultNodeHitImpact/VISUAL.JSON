@@ -1,0 +1,20 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>Raw>SPECIALEFFECTS>SPECIALFX_27B5E539>SPECIALFX_27B5E539.SPECIALFX",
+        "PlayMode":1,
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        },
+        "Name":""
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMaterialOverlayFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_BDD05C8B_AG596.MATERIAL",
+        "NodeAttachment":{
+            
+        },
+        "Duration":0.15,
+        "Name":""
+    }
+]

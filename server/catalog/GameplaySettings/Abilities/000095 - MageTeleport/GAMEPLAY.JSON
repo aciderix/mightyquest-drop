@@ -1,0 +1,189 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BlinkTeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ScaleVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "ScaleFactor":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":1
+                                }
+                            },
+                            "StopperCollisionMaskAny":4718594,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":4,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":2,
+                "CastCost":5,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":4
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ScaleVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "ScaleFactor":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":1
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":4,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":2,
+                "CastCost":5,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":7
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ScaleVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "ScaleFactor":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":1
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":4,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":2,
+                "CastCost":5,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":10
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ScaleVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "ScaleFactor":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":1
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":4,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":2,
+                "CastCost":5,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":13
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ScaleVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "ScaleFactor":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":1
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":4,
+                "PrepareTime":0.6,
+                "MaxDistance":14,
+                "EffectRadius":2,
+                "CastCost":5,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":16
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

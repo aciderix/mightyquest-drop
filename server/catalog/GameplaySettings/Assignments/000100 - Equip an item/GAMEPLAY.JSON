@@ -1,0 +1,802 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":5004
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    4,
+                    13,
+                    15,
+                    50,
+                    54,
+                    55,
+                    57,
+                    58,
+                    59,
+                    62,
+                    70,
+                    71,
+                    72,
+                    73,
+                    86,
+                    89,
+                    106,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    137,
+                    138,
+                    139,
+                    142,
+                    149,
+                    156,
+                    157,
+                    159,
+                    160,
+                    161,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    5,
+                    158
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":2,
+                "LockOnDisabledPickingType":"AllCastles"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ShowShopItemsOnlyAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ShopItems":
+                [
+                    {
+                        "ItemHtmlTag":"3-23101-1",
+                        "ItemType":"HeroEquipmentItem",
+                        "ItemId":23101
+                    },
+                    {
+                        "ItemHtmlTag":"3-22101-1",
+                        "ItemType":"HeroEquipmentItem",
+                        "ItemId":22101
+                    },
+                    {
+                        "ItemHtmlTag":"3-21101-1",
+                        "ItemType":"HeroEquipmentItem",
+                        "ItemId":21101
+                    },
+                    {
+                        "ItemHtmlTag":"3-24101-1",
+                        "ItemType":"HeroEquipmentItem",
+                        "ItemId":24101
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopEquipment",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopEquipment",
+                        "Id":1
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopEquipment"
+                    },
+                    {
+                        "Type":"UnifiedShopEquipment",
+                        "Id":4
+                    },
+                    {
+                        "Type":"UnifiedShopEquipment",
+                        "Id":5
+                    }
+                ],
+                "Lock":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopEquipment",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":1
+                    }
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":2
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopEquipment",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":2
+                    }
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":3
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopEquipment",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":3
+                    }
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":4
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopEquipment",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":4
+                    }
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":2
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":3
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":4
+                    }
+                ],
+                "Lock":true,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":2
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":1
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":3
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":4
+                    }
+                ],
+                "Lock":true,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":3
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":1
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":2
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":4
+                    }
+                ],
+                "Lock":true,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":4
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":1
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":2
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":3
+                    }
+                ],
+                "Lock":true,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    139
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            21101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            22101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            23101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            24101
+                        ],
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000009",
+                "Text":"And if you ever find yourself missing anything",
+                "TextOasisId":16481,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16481,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B596.SOUND",
+                                "FireAndForget":true
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-123,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            21101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            22101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            23101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            24101
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"UnifiedShopEquipment"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000004",
+                "Type":"Arrow",
+                "GameButtonId":"BuildingNavBarButtonCorneliusEmporium",
+                "Top":240,
+                "Left":70,
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            21101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            22101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            23101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            24101
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"UnifiedShopEquipment"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000005",
+                "Title":"Buy your first weapon",
+                "TitleOasisId":15544,
+                "Text":"Buy your first weapon",
+                "TextOasisId":15545,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":-194,
+                "OffsetLeft":150,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            21101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            22101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            23101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            24101
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"HeroEquipmentItem",
+                        "ItemId":-1
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"10010",
+                "Type":"Arrow",
+                "GameButtonId":"None",
+                "Top":540,
+                "Left":120,
+                "ArrowPosition":"MiddleLeft",
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            21101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            22101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            23101
+                        ],
+                        "IsNot":true
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemOwnedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "InventoryItemType":"HeroEquipmentItem",
+                        "TemplateIds":
+                        [
+                            24101
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"HeroEquipmentItem",
+                        "ItemId":-1
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    139
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"shop"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"ShopPc"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OpenPanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"heroInventory",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroInventory",
+                        "IsNot":true
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000006",
+                "Title":"Equip your hero",
+                "TitleOasisId":15546,
+                "Text":"To equip an item from the inventory, double click on it, or drag and drop it into the correct equipment slot.",
+                "TextOasisId":15547,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":-194,
+                "OffsetLeft":150,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AnyItemEquippedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000007",
+                "Type":"Arrow",
+                "InventoryItemDefinition":{
+                    "ItemType":"HeroEquipmentItem",
+                    "IsEquipable":true,
+                    "HasRequiredLevel":true
+                },
+                "PositionElementId":".grid-slot.inventory-slot[is-equippable='true'][has-required-level='true']:not(.consumable-slot, .not-available)",
+                "OffsetTop":10,
+                "ArrowDirection":"Up",
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AnyItemEquippedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000008",
+                "HideOverlay":true,
+                "OverlayAlpha":0.01,
+                "Title":"Dummy screen to remove black overlay",
+                "TitleOasisId":11083,
+                "Text":"Dummy screen to remove black overlay",
+                "TextOasisId":11084,
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":9999,
+                "OffsetLeft":9999
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopEquipment"
+                    },
+                    {
+                        "Type":"UnifiedShopEquipment",
+                        "Id":4
+                    },
+                    {
+                        "Type":"UnifiedShopEquipment",
+                        "Id":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"Hero",
+                        "Id":1
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":2
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":3
+                    },
+                    {
+                        "Type":"Hero",
+                        "Id":4
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"heroInventory"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000001"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000002"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000003"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000004"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000005"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000006"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000007"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1000008"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ShowShopItemsOnlyAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "IsDisabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

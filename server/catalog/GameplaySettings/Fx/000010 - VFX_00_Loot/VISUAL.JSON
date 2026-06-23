@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_13E23F68>SPECIALFX_13E23F68.SPECIALFX",
+        "PlayMode":1,
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+        }
+    }
+]

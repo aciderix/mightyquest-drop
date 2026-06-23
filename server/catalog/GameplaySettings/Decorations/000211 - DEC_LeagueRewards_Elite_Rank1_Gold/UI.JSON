@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_LeagueReward_Elite_Rank1_Gold",
+        "OasisName":16303,
+        "OasisDescription":16303
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/League_Reward_Elite.png",
+        "InvIconUrl":"icoShop\/deco\/League_Reward_Elite.png",
+        "HeightOffset":2
+    }
+]

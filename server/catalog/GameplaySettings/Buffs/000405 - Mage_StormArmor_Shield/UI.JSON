@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Storm Armor 1 Buff",
+        "OasisName":13217,
+        "OasisDescription":13218
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HEROBUFFS_STORMARMOR.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroBuffs_stormArmor",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

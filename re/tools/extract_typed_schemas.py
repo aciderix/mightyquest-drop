@@ -1,0 +1,339 @@
+#!/usr/bin/env python3
+"""
+extract_typed_schemas.py — add field TYPES to the contract schemas.
+
+In each contract's *serialize* method the pattern is, per field:
+    writeKey("FieldName"); write<Type>(&value)
+So by disassembling the serialize method and pairing each writeKey call with the
+*next* call (the value writer), we learn the type of every field. The writer
+function addresses are mapped to type names in WRITERS below (seeded from the
+hand-reversed login slice, extended by --discover).
+
+Usage:
+  python3 re/tools/extract_typed_schemas.py --discover   # rank writer prims
+  python3 re/tools/extract_typed_schemas.py              # emit typed schemas
+"""
+from __future__ import annotations
+import argparse, csv, json, os, struct, sys
+from bisect import bisect_right
+from collections import Counter
+
+try:
+    import pefile
+    from capstone import Cs, CS_ARCH_X86, CS_MODE_32
+    from capstone.x86 import X86_OP_IMM, X86_OP_MEM
+except ImportError:
+    sys.exit("pip install pefile capstone")
+
+EXE = "MightyQuest_unpacked_fixed (1).exe"
+OUTDIR = "re/catalog/network"
+WRITE_KEY = 0x009ab550
+UNKNOWN_FIELD = 0x009a9ce0       # called by every deserialize method (its marker)
+
+# Exact per-primitive TYPE, and the wire SHAPE derived from it. The shape (num/
+# str/bool/arr/obj) is what makes a message well-formed; the precise type also
+# fixes the *content* (e.g. an enum is a quoted 16-hex-digit string "0x...", not a
+# number or a name — writer 009aaf00 via FUN_00426f30; datetime is a quoted ISO
+# string). Numeric widths come from the formatter buffer sizes (4/11/12/22/20 ->
+# byte/uint/int/int64/double).
+W_TYPE = {
+    0x009aad80: "int", 0x009aadd0: "uint", 0x009aad30: "byte", 0x009aafc0: "long",
+    0x009ab010: "ulong", 0x009aae20: "double", 0x009aaf40: "ushort", 0x009aaf50: "short",
+    0x009aaf30: "number", 0x009aaf60: "number", 0x009aaf70: "int",
+    0x009ab060: "string", 0x009aae70: "datetime", 0x009aaf00: "enum", 0x009ab3f0: "bool",
+}
+R_TYPE = {
+    0x009a8d30: "int", 0x009a8d40: "number", 0x009a9390: "number", 0x009a9170: "number",
+    0x009a9440: "number", 0x009a8d20: "int", 0x009a93a0: "number", 0x009a9410: "number",
+    0x009a93b0: "number", 0x009a98a0: "array",
+    0x009a9450: "string", 0x009a9b10: "string", 0x009a8670: "enum",
+    0x009a8e70: "datetime", 0x009a8f90: "datetime",
+    0x009a8c90: "bool", 0x009a99d0: "array", 0x009a9680: "object",
+}
+W_BAND, R_BAND = (0x009aa000, 0x009ac000), (0x009a8000, 0x009aa000)
+SHAPE_OF = {
+    "int": "num", "uint": "num", "byte": "num", "short": "num", "ushort": "num",
+    "long": "num", "ulong": "num", "double": "num", "number": "num",
+    "bool": "bool", "string": "str", "datetime": "str", "enum": "str", "guid": "str",
+    "array": "arr", "object": "obj",
+}
+
+
+def writer_type(va):
+    if va in W_TYPE: return W_TYPE[va]
+    return "number" if W_BAND[0] <= va < W_BAND[1] else "object"
+
+
+def reader_type(va):
+    if va in R_TYPE: return R_TYPE[va]
+    return "number" if R_BAND[0] <= va < R_BAND[1] else "object"
+
+
+def shape_of(t):
+    return SHAPE_OF.get(t, "obj")
+
+
+def writer_shape(va):
+    return shape_of(writer_type(va))
+
+
+def reader_shape(va):
+    return shape_of(reader_type(va))
+
+# writer primitive VA -> field type. Identified by decompiling each primitive
+# (see 05-SCHEMA-CATALOG.md): bool writes "false", datetime uses an ISO-8601
+# format, float's formatter handles "toobig", etc. Scalar JSON primitives live
+# in the 0x009aa000-0x009ac000 band; writers outside it are per-contract
+# generated object/array writers (nested values).
+def load_pe():
+    pe = pefile.PE(EXE, fast_load=True)
+    base = pe.OPTIONAL_HEADER.ImageBase
+    data = open(EXE, "rb").read()
+    secs = [(base + s.VirtualAddress, s.SizeOfRawData, s.PointerToRawData,
+             s.Misc_VirtualSize, s.Name.rstrip(b"\0")) for s in pe.sections]
+    return pe, base, data, secs
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--discover", action="store_true")
+    args = ap.parse_args()
+
+    pe, base, data, secs = load_pe()
+
+    def off(va):
+        for a, rsz, praw, _, _ in secs:
+            if a <= va < a + rsz:
+                return praw + (va - a)
+        return None
+
+    text = next(s for s in secs if s[4] == b".text")
+    tlo, thi = text[0], text[0] + text[3]
+    rdata = next(s for s in secs if s[4] == b".rdata")
+    rlo, rhi = rdata[0], rdata[0] + rdata[3]
+
+    def u32(va):
+        o = off(va); return struct.unpack_from("<I", data, o)[0] if o is not None else None
+
+    def ident_at(va, maxlen=64):
+        o = off(va)
+        if o is None: return None
+        e = data.find(b"\x00", o, o + maxlen)
+        if e < 0: return None
+        s = data[o:e]
+        if s and 2 <= len(s) <= 48 and all(32 <= c < 127 for c in s) \
+           and (s[0:1].isalpha()) and all(chr(c).isalnum() or c == 0x5f for c in s):
+            return s.decode("latin1")
+        return None
+
+    fstarts, fsize = [], {}
+    with open("re/catalog/functions.csv", newline="") as f:
+        for r in csv.DictReader(f):
+            a = int(r["address"], 16); fstarts.append(a); fsize[a] = int(r["size"])
+    fstarts.sort()
+
+    def fsz(va):
+        i = bisect_right(fstarts, va) - 1
+        return fsize.get(fstarts[i], 96) if i >= 0 and fstarts[i] == va else 96
+
+    md = Cs(CS_ARCH_X86, CS_MODE_32); md.detail = True
+
+    def vtable_of(addr):
+        o = off(addr)
+        for insn in md.disasm(data[o:o + 64], addr):
+            for op in insn.operands:
+                if op.type == X86_OP_IMM and rlo <= op.imm < rhi:
+                    t = u32(op.imm)
+                    if t is not None and tlo <= t < thi:
+                        return op.imm
+        return None
+
+    def walk_serialize(maddr):
+        """return (pairs, base_calls, is_serialize). pairs = [(key, writer_va)];
+        base_calls = calls made *outside* a writeKey context (base-class serialize
+        delegation), used to recover inherited fields."""
+        o = off(maddr)
+        if o is None: return None, [], False
+        code = data[o:o + fsz(maddr)]
+        last_ident = None
+        cur_key = None
+        awaiting = False
+        pairs = []
+        base_calls = []
+        is_serialize = False
+        for insn in md.disasm(code, maddr):
+            m = insn.mnemonic
+            if m == "call":
+                ops = insn.operands
+                if ops and ops[0].type == X86_OP_IMM:
+                    tgt = ops[0].imm
+                    if tgt == WRITE_KEY:
+                        is_serialize = True
+                        cur_key = last_ident; awaiting = True
+                        continue
+                    if awaiting and cur_key:
+                        pairs.append((cur_key, tgt)); awaiting = False; cur_key = None
+                    elif tgt != maddr and tlo <= tgt < thi:
+                        base_calls.append(tgt)        # not after a key -> base
+                else:
+                    if awaiting: awaiting = False
+            else:
+                for op in insn.operands:
+                    if op.type == X86_OP_IMM and rlo <= op.imm < rhi:
+                        s = ident_at(op.imm)
+                        if s: last_ident = s
+                    elif op.type == X86_OP_MEM and op.mem.disp and rlo <= op.mem.disp < rhi:
+                        s = ident_at(op.mem.disp)
+                        if s: last_ident = s
+        return pairs, base_calls, is_serialize
+
+    def walk_deserialize(maddr):
+        """return (pairs, base_calls, is_deser). pairs = [(key, type)]; base_calls
+        = calls with no pending key (delegation to a base dispatcher), used to
+        recover inherited fields. A deserialize is marked by UNKNOWN_FIELD."""
+        o = off(maddr)
+        if o is None: return None, [], False
+        code = data[o:o + fsz(maddr)]
+        last_ident = None
+        pairs = []
+        base_calls = []
+        is_deser = False
+        for insn in md.disasm(code, maddr):
+            if insn.mnemonic == "call":
+                ops = insn.operands
+                if ops and ops[0].type == X86_OP_IMM:
+                    tgt = ops[0].imm
+                    if tgt == UNKNOWN_FIELD:
+                        is_deser = True; last_ident = None; continue
+                    if last_ident is not None and tgt != maddr:
+                        pairs.append((last_ident, reader_type(tgt)))
+                        last_ident = None
+                    elif tgt != maddr and tlo <= tgt < thi:
+                        base_calls.append(tgt)        # no pending key -> base
+                else:
+                    last_ident = None
+            else:
+                for op in insn.operands:
+                    if op.type == X86_OP_IMM and rlo <= op.imm < rhi:
+                        s = ident_at(op.imm)
+                        if s: last_ident = s
+                    elif op.type == X86_OP_MEM and op.mem.disp and rlo <= op.mem.disp < rhi:
+                        s = ident_at(op.mem.disp)
+                        if s: last_ident = s
+        return pairs, base_calls, is_deser
+
+    # collect serializer stubs (addr, contract)
+    stubs = []
+    with open("re/catalog/pe/function_classification.csv", newline="") as f:
+        for r in csv.DictReader(f):
+            if r["source"].endswith("Serializer.cpp") and int(r["size"]) <= 64:
+                stubs.append((int(r["address"], 16), r["source"][:-len("Serializer.cpp")]))
+
+    # pass 1: locate each contract's serialize/deserialize methods and walk them
+    ser_raw = {}    # ser_addr -> (pairs, base_calls); contract via ser_of[addr]
+    deser_raw = {}  # deser_addr -> (pairs, base_calls)
+    ser_of, deser_of = {}, {}   # method addr -> contract
+    writer_freq = Counter()
+    for addr, contract in stubs:
+        vt = vtable_of(addr)
+        if vt is None: continue
+        for slot in range(1, 8):
+            m = u32(vt + slot * 4)
+            if m is None or not (tlo <= m < thi): continue
+            sp, sbase, is_ser = walk_serialize(m)
+            if is_ser:
+                ser_raw[m] = ([(k, w) for k, w in sp if k != contract], sbase)
+                ser_of.setdefault(m, contract)
+                for _, w in sp: writer_freq[w] += 1
+                continue
+            dp, dbase, is_deser = walk_deserialize(m)
+            if is_deser:
+                deser_raw[m] = ([(k, t) for k, t in dp if k != contract], dbase)
+                deser_of.setdefault(m, contract)
+
+    if args.discover:
+        print("Top writer primitives (addr: count):")
+        for w, c in writer_freq.most_common(25):
+            print(f"  0x{w:08x}  {c:6d}  {writer_shape(w)}")
+        return
+
+    # pass 2: resolve each method's fields, merging base-class methods first
+    # (inheritance) so inherited fields are recovered. dedup keeps first type.
+    def resolve(addr, raw, known_addrs, type_fn, seen):
+        if addr in seen or addr not in raw:
+            return []
+        seen.add(addr)
+        pairs, base_calls = raw[addr]
+        out, names = [], set()
+        for b in base_calls:                      # base fields first
+            if b in known_addrs:
+                for k, t in resolve(b, raw, known_addrs, type_fn, seen):
+                    if k not in names:
+                        names.add(k); out.append((k, t))
+        for k, w in pairs:
+            t = type_fn(w)
+            if k not in names:
+                names.add(k); out.append((k, t))
+        return out
+
+    ser_addrs, deser_addrs = set(ser_raw), set(deser_raw)
+    ser, deser = {}, {}
+    for a, c in ser_of.items():
+        f = resolve(a, ser_raw, ser_addrs, writer_type, set())
+        if f: ser[c] = f
+    for a, c in deser_of.items():
+        f = resolve(a, deser_raw, deser_addrs, lambda t: t, set())
+        if f: deser.setdefault(c, f)
+
+    # merge serialize (authoritative types) + deserialize; attach direction.
+    contracts = set(ser) | set(deser)
+    merged = {}
+    for c in contracts:
+        if c in ser and c in deser:
+            direction = "both"
+            names = {k for k, _ in ser[c]}
+            fields = list(ser[c]) + [[k, t] for k, t in deser[c] if k not in names]
+        elif c in ser:
+            direction, fields = "request", ser[c]
+        else:
+            direction, fields = "response", deser[c]
+        merged[c] = {"direction": direction, "fields": [list(f) for f in fields]}
+
+    # (1) gamedata merge: add observed fields the codec walk still misses, typed
+    # from the observed JSON kind. Real game data is the more complete source for
+    # settings/spec contracts.
+    GD = os.path.join(OUTDIR, "gamedata", "observed_schema.json")
+    KIND2TYPE = {"int": "int", "float": "double", "bool": "bool",
+                 "string": "string", "array": "array", "object": "object", "null": "string"}
+    gd_added = 0
+    if os.path.exists(GD):
+        observed = json.load(open(GD))
+        for c, ofields in observed.items():
+            if c not in merged:
+                continue
+            names = {k for k, _ in merged[c]["fields"]}
+            for fn, kind in ofields.items():
+                if fn not in names:
+                    merged[c]["fields"].append([fn, KIND2TYPE.get(kind, "string")])
+                    gd_added += 1
+
+    os.makedirs(OUTDIR, exist_ok=True)
+    with open(os.path.join(OUTDIR, "schemas_typed.json"), "w") as f:
+        json.dump(merged, f, indent=1, sort_keys=True)
+    with open(os.path.join(OUTDIR, "schemas_typed.txt"), "w") as f:
+        for c in sorted(merged):
+            inner = ", ".join(f"{k}: {t}" for k, t in merged[c]["fields"])
+            f.write(f"[{merged[c]['direction']:8}] {c} {{ {inner} }}\n")
+
+    dirc = Counter(v["direction"] for v in merged.values())
+    tc = Counter(t for v in merged.values() for _, t in v["fields"])
+    total = sum(len(v["fields"]) for v in merged.values())
+    print(f"[+] {len(merged)} contracts, {total} typed fields "
+          f"(+{gd_added} fields merged from game data)")
+    print("    direction:", dict(dirc))
+    print("    types:", dict(tc.most_common()))
+    print(f"[+] -> {OUTDIR}/schemas_typed.json, schemas_typed.txt")
+
+
+if __name__ == "__main__":
+    main()

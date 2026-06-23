@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LD_FloorLoot_Gold",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_40BD9ABE_BC669>ENTITY_40BD9ABE_BC669.ENTITY",
+        "SizeCategory":"Large",
+        "HideInModeMask":1
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MissileLauncherSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":4,
+        "EndRadius":4,
+        "TouchedEntitiesType":0,
+        "AllianceFilter":4,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":6
+        },
+        "CollisionCheckInterval":0.1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DeactivateTrapOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Duration":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":5,
+                        "Tag":"ArcherDeactivateTrap1"
+                    },
+                    "TrapEntityTypeMask":2,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "OnTouchOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts"
+        },
+        "TestShapeOverlap":true,
+        "Tag":"Hawk trap control skill number of missiles 2"
+    }
+]

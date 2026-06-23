@@ -1,0 +1,86 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":0.3,
+        "EndRadius":1.5,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":4
+        },
+        "OnTouchOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                        "SpecContainersIds":
+                        [
+                            1095,
+                            1114
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfSuccess":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":910,
+                            "Name":"Spider_LimitedEdition_Lightning_SkelethorSynergyBuff"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                        "ConditionOperation":{
+                            "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainersIds":
+                            [
+                                2,
+                                3,
+                                4,
+                                5
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        "OperationsIfSuccess":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":907,
+                                "Name":"Spider_LimitedEdition_Lightning_WebBuff"
+                            },
+                            "Label":"Label3",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts",
+                        "Label":"Label3"
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    }
+]

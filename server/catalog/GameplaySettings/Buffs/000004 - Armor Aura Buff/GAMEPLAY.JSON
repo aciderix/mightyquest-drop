@@ -1,0 +1,29 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":10
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"DamageReduction",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.05,
+                    "Tag":"Death Grip Heal 1"
+                },
+                "UseBuffCreatorAsValueSource":true,
+                "IsAdditive":true
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "InstancesRefreshType":"AllInstancesOfSameCreator",
+        "MaxInstances":40,
+        "Flags":2,
+        "IsLinkedToCreator":true,
+        "RemoveIfCreatorDied":true
+    }
+]

@@ -1,0 +1,344 @@
+{
+    "OverlappingInclusionFlags":
+    [
+        {
+            "BuildableType":"Creature",
+            "Flags":64
+        },
+        {
+            "BuildableType":"Cannon",
+            "Flags":64
+        },
+        {
+            "BuildableType":"MineField",
+            "Flags":64
+        },
+        {
+            "BuildableType":"WallDecoration"
+        },
+        {
+            "BuildableType":"HighWallDecoration"
+        },
+        {
+            "BuildableType":"AlongTheWallDecoration",
+            "Flags":192
+        },
+        {
+            "BuildableType":"FloorDecoration",
+            "Flags":4007
+        },
+        {
+            "BuildableType":"FreeStandingDecoration",
+            "Flags":64
+        },
+        {
+            "BuildableType":"Trigger",
+            "Flags":256
+        },
+        {
+            "BuildableType":"TrophyDecoration",
+            "Flags":68
+        },
+        {
+            "BuildableType":"SocleBuilding"
+        },
+        {
+            "BuildableType":"FreeStandingBuilding",
+            "Flags":64
+        },
+        {
+            "BuildableType":"Totem",
+            "Flags":8192
+        },
+        {
+            "BuildableType":"DefenseIngredientBoost",
+            "Flags":4096
+        }
+    ],
+    "BoundingRadiusExclusionFlags":
+    [
+        {
+            "BuildableType":"Creature",
+            "Flags":1
+        },
+        {
+            "BuildableType":"Cannon",
+            "Flags":6
+        },
+        {
+            "BuildableType":"MineField",
+            "Flags":6
+        },
+        {
+            "BuildableType":"WallDecoration"
+        },
+        {
+            "BuildableType":"HighWallDecoration"
+        },
+        {
+            "BuildableType":"AlongTheWallDecoration"
+        },
+        {
+            "BuildableType":"FloorDecoration"
+        },
+        {
+            "BuildableType":"FreeStandingDecoration"
+        },
+        {
+            "BuildableType":"Trigger"
+        },
+        {
+            "BuildableType":"TrophyDecoration"
+        },
+        {
+            "BuildableType":"SocleBuilding"
+        },
+        {
+            "BuildableType":"FreeStandingBuilding",
+            "Flags":2048
+        },
+        {
+            "BuildableType":"Totem",
+            "Flags":4096
+        },
+        {
+            "BuildableType":"DefenseIngredientBoost"
+        }
+    ],
+    "IgnoreCpZoneMaxCapacityForPVE":true,
+    "CpZoneBaseMaxCapacity":20,
+    "NormalCpZoneEdgeInclusionWidth":0.2,
+    "BoostCpZoneEdgeExclusionWidth":0.8,
+    "TrapExclusionThickness":0.2,
+    "CameraModeZoomThreshold":50,
+    "MinCameraZoomForRoomPicking":0.4,
+    "TooltipDisplayDelay":0.3,
+    "AutoSaveShowDuration":1,
+    "CreatureHarvestingCookingTime":3600,
+    "HarvestingAutoCollectDelay":1,
+    "MinePartialHarvestReactivationDelay":"5s",
+    "CastleBuildCommandsSendInterval":"1m",
+    "CastlePendingMaxCommands":100,
+    "CastlePublishMinCastleLevel":1,
+    "InvalidBuildActionsFeedbacks":{
+        "CannotCloneStampEntity":{
+            "Priority":1,
+            "DebugMsg":"Entity not available in inventory for clone stamping!",
+            "OasisId":1808
+        },
+        "NoOtherPossibleOrientations":{
+            "Priority":1,
+            "DebugMsg":"No other possible orientations!",
+            "OasisId":1805
+        },
+        "EntitySectionsOverlapping":{
+            "Priority":2,
+            "DebugMsg":"Cannot overlap!",
+            "OasisId":620
+        },
+        "TrapExclusionRadiusColliding":{
+            "Priority":3,
+            "DebugMsg":"Trap exclusion zones colliding!",
+            "OasisId":621
+        },
+        "ExceedingCastleMaxCp":{
+            "Priority":1,
+            "DebugMsg":"Exceeding castle max cp!",
+            "OasisId":622
+        },
+        "CpZoneHasNotEnoughCapacity":{
+            "Priority":3,
+            "DebugMsg":"Cp zone does not have enough capacity!",
+            "OasisId":623
+        },
+        "CreaturePivotNotInCapacityBoosterZone":{
+            "Priority":4,
+            "DebugMsg":"Creature pivot should be INSIDE point of interest!",
+            "OasisId":624
+        },
+        "RoomBuildableOverInvalidGround":{
+            "Priority":2,
+            "DebugMsg":"Over invalid ground!",
+            "OasisId":625
+        },
+        "CannotDropInEntranceRoom":{
+            "Priority":1,
+            "DebugMsg":"Cannot drop in entrance room!",
+            "OasisId":797
+        },
+        "RoomBuildableOverRoomJunction":{
+            "Priority":3,
+            "DebugMsg":"Over a room junction!",
+            "OasisId":626
+        },
+        "RoomOutOfCastleGrid":{
+            "Priority":2,
+            "DebugMsg":"Entity is over a room junction!",
+            "OasisId":661
+        },
+        "CannotPlaceMoreRooms":{
+            "Priority":3,
+            "DebugMsg":"Cannot place more rooms!",
+            "OasisId":8389
+        },
+        "CannotPlaceSecondEntranceRoom":{
+            "Priority":2,
+            "DebugMsg":"Cannot place a second entrance room!",
+            "OasisId":8390
+        },
+        "CannotPlaceSecondThroneRoom":{
+            "Priority":2,
+            "DebugMsg":"Cannot place a second throne room!",
+            "OasisId":8391
+        },
+        "BossNotInBossRoom":{
+            "Priority":1,
+            "DebugMsg":"This creature can only be placed in the boss room!",
+            "OasisId":14264
+        },
+        "CannotAddSecondBoss":{
+            "Priority":1,
+            "DebugMsg":"Only one boss creature can be present in a castle!",
+            "OasisId":14263
+        },
+        "CannotRemoveEntranceRoom":{
+            "Priority":1,
+            "DebugMsg":"You cannot remove the castle entrance!",
+            "OasisId":14345
+        },
+        "CannotRemoveThroneRoom":{
+            "Priority":1,
+            "DebugMsg":"You cannot remove the throne room!",
+            "OasisId":14346
+        },
+        "CannotPlaceMoreDecorationsInRoom":{
+            "Priority":1,
+            "DebugMsg":"You cannot place more decorations in this room!",
+            "OasisId":14830
+        },
+        "CannotPlaceTotemInBossRoom":{
+            "Priority":1,
+            "DebugMsg":"Cannot place a totem in the throne room!",
+            "OasisId":15585
+        },
+        "InvalidBoostTarget":{
+            "Priority":1,
+            "DebugMsg":"Runes can only be activated on Totems.",
+            "OasisId":15784
+        }
+    },
+    "InvalidCastleFeedbacksInfos":{
+        "FeedbackTitleText":{
+            "DebugMsg":"The castle is currently invalid.",
+            "OasisId":865
+        },
+        "NoEntranceRoom":{
+            "DebugMsg":"Place an entrance room!",
+            "OasisId":859
+        },
+        "NoThroneRoom":{
+            "DebugMsg":"Place a throne room!",
+            "OasisId":860
+        },
+        "NoPathToThroneRoom":{
+            "DebugMsg":"No path to throne room.",
+            "OasisId":861
+        },
+        "NoCreatures":{
+            "DebugMsg":"You need at least 1 creatures.",
+            "OasisId":862
+        },
+        "UnconnectedRooms":{
+            "DebugMsg":"Remove disconnected room(s).",
+            "OasisId":863
+        },
+        "NotEnoughRooms":{
+            "DebugMsg":"You need at least 4 rooms!",
+            "OasisId":864
+        }
+    },
+    "BuildUIFeedbackInfos":{
+        "AggroZoneTrapFloatingText":{
+            "DebugMsg":"Tip: Hold ALT and use the Left Mouse Button to edit power connection",
+            "OasisId":14481
+        },
+        "AggroZoneCreatureFloatingText":{
+            "DebugMsg":"Tip: Hold CTRL and use the Left Mouse Button to change aggro zone position",
+            "OasisId":14482
+        },
+        "CreatureToTotemFloatingText":{
+            "DebugMsg":"Tip: Hold ALT and use the Left Mouse Button to edit totem connection",
+            "OasisId":16323
+        },
+        "AggroZonePowerSupplyFloatingText":{
+            "DebugMsg":"Tip: Hold ALT and use the Left Mouse Button to edit power connection",
+            "OasisId":14483
+        },
+        "TotemFloatingText":{
+            "DebugMsg":"Tip: Place creatures next to a totem to link them to it",
+            "OasisId":15647
+        }
+    },
+    "SellIGCConversionRate":0.25,
+    "CreaturesToStamp":15,
+    "BuildCameraInitialTargetSpecContainerType":"Room",
+    "BuildCameraInitialTargetSpecContainerId":25,
+    "ZoomToBuildingDuration":0.6,
+    "ZoomToBuildingCameraOffsetX":-2,
+    "ZoomToBuildingCameraOffsetZ":1,
+    "CastleMaxTrapPerRoom":2,
+    "CastleLevelAdjustmentTreshold":-2,
+    "CastleLevelAdjustmentTable":
+    [
+        {
+            "CpMaxTo":39,
+            "CpMaxTresholdTo":100,
+            "Adjustment":-1
+        },
+        {
+            "CpMaxFrom":40,
+            "CpMaxTo":100,
+            "CpMaxTresholdTo":100
+        }
+    ],
+    "ConsolePickingCursorMinSpeed":0.25,
+    "ConsolePickingCursorMaxSpeed":3,
+    "ConsolePickingCursorSnappingRadius":0.8,
+    "ConsolePickingCursorSnappingDamping":0.05,
+    "ConsoleCameraTargetPositionDamping":0.4,
+    "EntityHoverTooltipDelay":0.5,
+    "EntityHoverTooltipPixelTolerance":5,
+    "MaxBoostedCreaturePerCastleLevel":
+    {
+        "1":1,
+        "2":2,
+        "3":3,
+        "4":4,
+        "5":5,
+        "6":6,
+        "7":7,
+        "8":8,
+        "9":9,
+        "10":10,
+        "11":11,
+        "12":12,
+        "13":13,
+        "14":14,
+        "15":15,
+        "16":15,
+        "17":15,
+        "18":15,
+        "19":15,
+        "20":15,
+        "21":15,
+        "22":15,
+        "23":15,
+        "24":15,
+        "25":15,
+        "26":15,
+        "27":15,
+        "28":15,
+        "29":15,
+        "30":15
+    }
+}

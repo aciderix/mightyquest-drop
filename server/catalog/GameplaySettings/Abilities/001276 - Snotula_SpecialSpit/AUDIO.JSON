@@ -1,0 +1,28 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>00002E59.SOUND",
+                    "FireAndForget":true
+                },
+                "ActiveSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000831F0.SOUND",
+                    "FireAndForget":true
+                },
+                "RecoverSound":{
+                    
+                },
+                "EndSound":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Acid"
+    }
+]

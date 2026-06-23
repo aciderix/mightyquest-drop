@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Corner_Bridge_01",
+        "OasisName":11366,
+        "OasisDescription":15722
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Corner_Bridge_01pvp.png",
+        "InvIconUrl":"icoInv\/rooms\/Corner_Bridge_01pvp.png",
+        "LayerName":"icoShop_rooms:Corner_Bridge_01pvp"
+    }
+]

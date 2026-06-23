@@ -1,0 +1,160 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DestructibleSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            }
+        ],
+        "AutoRepair":true,
+        "RepairTime":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":15
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "KeepWorldOrientation":true,
+        "BuildXp":100
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":2,
+        "StartLength":2,
+        "EndLength":2,
+        "LocalStartOffsetX":-1,
+        "GameEntityTypeMask":10,
+        "CollisionCheckInterval":0.1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableAbilitiesOperationSpec, HyperQuest.GameServer.Contracts",
+                    "AbilitySpecContainers":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":1372,
+                            "Name":"Knight_TrapControlSkill"
+                        }
+                    ],
+                    "Enable":true,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.EnableDisableAbilitiesOperationSpec, HyperQuest.GameServer.Contracts",
+                    "AbilitySpecContainers":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":1372,
+                            "Name":"Knight_TrapControlSkill"
+                        }
+                    ],
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":4,
+                "Height":0.25,
+                "Length":4,
+                "Y":0.125
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"Cannon",
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapPowerSupplySpec, HyperQuest.GameServer.Contracts",
+        "PoweringCapacity":24,
+        "PoweringZoneShape":{
+            "Width":20,
+            "Height":20
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":1
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":1
+        },
+        "CraftingBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":10,
+            "BuildingRequirementRank":9
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetSpec, HyperQuest.GameServer.Contracts",
+        "IsVisible":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsRare":true
+    }
+]

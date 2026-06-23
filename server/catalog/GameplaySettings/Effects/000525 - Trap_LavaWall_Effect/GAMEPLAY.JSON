@@ -1,0 +1,21 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":5.6,
+        "StartLength":2.4,
+        "EndLength":2.4,
+        "LocalStartOffsetX":-1.2,
+        "GameEntityTypeMask":-981,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":8.6
+        },
+        "KeepEntityOnFieldRemoval":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StateMachineSpec, HyperQuest.GameServer.Contracts"
+    }
+]

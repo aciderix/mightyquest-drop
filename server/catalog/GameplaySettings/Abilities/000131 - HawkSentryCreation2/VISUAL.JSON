@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_018_HawkSentryCreation2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_SpellChargePrepare",
+                "AnimActive":"00_SpellCharge",
+                "AnimRecover":"00_SpellChargeRecover"
+            }
+        ]
+    }
+]

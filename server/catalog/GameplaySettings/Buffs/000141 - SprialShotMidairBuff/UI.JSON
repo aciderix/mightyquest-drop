@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DervishShot_MidairStatus",
+        "OasisName":2247,
+        "OasisDescription":2248
+    }
+]

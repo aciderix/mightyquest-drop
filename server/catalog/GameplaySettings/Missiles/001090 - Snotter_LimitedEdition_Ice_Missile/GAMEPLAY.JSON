@@ -1,0 +1,128 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MissileSpec, HyperQuest.GameServer.Contracts",
+        "Movement":{
+            "MoveStyle":{
+                "$type":"HyperQuest.GameServer.Contracts.BallisticMoveSpec, HyperQuest.GameServer.Contracts",
+                "Speed":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":9
+                },
+                "Pitch":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":12
+                },
+                "Gravity":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":14
+                }
+            },
+            "CanExitNavMesh":true,
+            "IgnoreMovementReduction":true,
+            "OnStopOperations":{
+                "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                "Operations":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DestroyOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"Source"
+                        }
+                    }
+                ]
+            },
+            "Collision":{
+                "CheckCollision":true,
+                "CollisionShape":{
+                    "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":0.3,
+                    "X":-0.2
+                },
+                "CollisionMask":12,
+                "CollisionAllianceFilter":4,
+                "CollisionCountBeforeStop":1,
+                "StopperCollisionShape":{
+                    "$type":"HyperQuest.GameServer.Contracts.SphereShapeSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":0.1
+                },
+                "StopperCollisionMask":9437186,
+                "OnEnteringCollisionOperations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"SkillDamage",
+                                "Multiplier":0.6,
+                                "Tag":"IceSnotter_Attack"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":870,
+                                "Name":"Snotter_LimitedEdition_Ice_SnareBuff"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":871,
+                                "Name":"Snotter_LimitedEdition_Ice_WeaknessBuff"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "OnStopperCollisionOperations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Radius":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":2
+                            },
+                            "AllianceFilter":4,
+                            "TouchedEntitiesType":2,
+                            "Operations":{
+                                "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "StatType":"SkillDamage"
+                                },
+                                "Target":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DestroyOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]

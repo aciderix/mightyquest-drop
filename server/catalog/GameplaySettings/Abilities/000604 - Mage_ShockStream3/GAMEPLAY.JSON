@@ -1,0 +1,116 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ControlledEffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "CanSourceTurn":true,
+                            "MaxRotationSpeed":8000,
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":203
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "X":0.75,
+                                        "Y":1.4
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceOrientation"
+                                    }
+                                }
+                            },
+                            "Orientation":"SourceOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "PrepareTime":0.1,
+                "ActiveTime":80,
+                "MaxDistance":5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "CastCost":5,
+                "ManaCostPerSecond":60,
+                "AbilityCastType":"Line",
+                "AttackSpeedFactor":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":11
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ControlledEffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "CanSourceTurn":true,
+                            "MaxRotationSpeed":8000,
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":203
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"SourcePosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                        "X":0.75,
+                                        "Y":1.4
+                                    },
+                                    "Orientation":{
+                                        "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                        "Context":"SourceOrientation"
+                                    }
+                                }
+                            },
+                            "Orientation":"SourceOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Interruptable":true,
+                "PrepareTime":0.1,
+                "ActiveTime":80,
+                "MaxDistance":5,
+                "UseEntitiesRadius":true,
+                "EffectRadius":4,
+                "CastCost":5,
+                "ManaCostPerSecond":45,
+                "AbilityCastType":"Line",
+                "AttackSpeedFactor":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":23
+                }
+            }
+        ]
+    }
+]

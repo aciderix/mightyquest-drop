@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Trap_IceWall_BuildMode",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7BB2D2D0_BC685>ENTITY_7BB2D2D0_BC685.ENTITY",
+        "Scale":1.4,
+        "HideInModeMask":1
+    }
+]

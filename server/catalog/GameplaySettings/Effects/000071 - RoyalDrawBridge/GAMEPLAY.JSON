@@ -1,0 +1,39 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DoorSpec, HyperQuest.GameServer.Contracts",
+        "DoorStateTriggers":{
+            "OnCreation":"Close"
+        },
+        "Width":3.5,
+        "Thickness":1.5,
+        "Height":1,
+        "ObstacleRemovalDelay":1,
+        "ObstacleOffset":{
+            "$type":"HyperQuest.GameServer.Contracts.OrientedVectorSpec, HyperQuest.GameServer.Contracts",
+            "Value":{
+                "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                "X":6.6873
+            },
+            "Orientation":{
+                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                "Context":"SourceOrientation"
+            }
+        },
+        "IsEntranceDoor":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":0.5,
+                "Height":5,
+                "Length":3.5,
+                "X":6.6873,
+                "Y":2
+            }
+        ],
+        "PhysicRigidBodyType":"Static"
+    }
+]

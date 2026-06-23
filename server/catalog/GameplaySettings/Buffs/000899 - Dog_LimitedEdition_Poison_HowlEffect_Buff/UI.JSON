@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"GuardDogHowl",
+        "OasisName":1985,
+        "OasisDescription":1986
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"UI\/Hud\/BuffDebuffIcons\/creatureBuffs_rage.png",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_rage",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

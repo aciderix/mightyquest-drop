@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Alchemy_RoyalA_01",
+        "OasisName":14869,
+        "OasisDescription":14870
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_002_Alchemist_01.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_002_Alchemist_01.png",
+        "HeightOffset":2
+    }
+]

@@ -1,0 +1,159 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    99
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    4,
+                    5,
+                    15,
+                    34,
+                    50,
+                    54,
+                    55,
+                    57,
+                    58,
+                    59,
+                    65,
+                    66,
+                    70,
+                    71,
+                    72,
+                    73,
+                    75,
+                    76,
+                    77,
+                    78,
+                    81,
+                    82,
+                    83,
+                    85,
+                    86,
+                    89,
+                    106,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    139,
+                    142,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":1,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":1
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chat"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"18000001",
+                "Text":"Well done compadre! Look at all the materials you've collected. See all those other castles? They're made by other players! Raid them to collect the materials you need to build your castle!",
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-150,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"18000001"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":301,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveUnlockClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ObjectiveId":125
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayObjectiveCompletedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":125,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SpikeTrap_Limited Edition",
+        "OasisName":15511,
+        "OasisDescription":1594
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11233,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"damage {0}",
+                    "OasisName":15513
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Effect",
+                        "StatsSpecContainerId":504,
+                        "TaggedSpec":"AcidDamage_LimitedEdition"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/AcidTrap.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/Rares\/AcidTrap.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:AcidTrap",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

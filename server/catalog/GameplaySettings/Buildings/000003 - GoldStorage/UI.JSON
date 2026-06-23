@@ -1,0 +1,47 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Gold Storage",
+        "OasisName":11259
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiBuildingInfoSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/buildings\/BUI_Storage_01_gold.png",
+        "InvIconUrl":"icoInv\/buildings\/BUI_Storage_01_gold.png",
+        "DescriptionOasisId":10962,
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_01_gold.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_01_gold.png",
+                "LayerName":"icoShop_buildings:Storage_gold_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_02_gold.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_02_gold.png",
+                "LayerName":"icoShop_buildings:Storage_gold_02"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_03_gold.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_03_gold.png",
+                "LayerName":"icoShop_buildings:Storage_gold_03"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_04_gold.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_04_gold.png",
+                "LayerName":"icoShop_buildings:Storage_gold_04"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_05_gold.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_05_gold.png",
+                "LayerName":"icoShop_buildings:Storage_gold_05"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/buildings\/BUI_Storage_01_gold.png",
+        "InvIconUrl":"icoInv\/buildings\/BUI_Storage_01_gold.png",
+        "LayerName":"icoShop_buildings:Storage_gold_01"
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingSpec, HyperQuest.GameServer.Contracts",
+        "BuildingInstanceRequirements":
+        [
+            {
+                
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "UpgradeDuration":"3s",
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":4
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":6
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":8
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":10
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":12
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":14
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":16
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":18
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":20
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":22
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":24
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":26
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":28
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":30
+            }
+        ],
+        "BuildingType":"CreatureHatchery"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsEditable":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Thickness":2,
+        "Height":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":4,
+                "Height":3,
+                "Length":4
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"SocleBuilding",
+        "IsAvailableInBuildMode":true
+    }
+]

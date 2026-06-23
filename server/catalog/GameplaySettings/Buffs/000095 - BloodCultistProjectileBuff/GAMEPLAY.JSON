@@ -1,0 +1,47 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":3
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":-0.75
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnTickBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Interval":0.8,
+                "IsExecutedOnEnter":true,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                "StatType":"SkillDamage",
+                                "Multiplier":0.5
+                            },
+                            "ExtraDamageInfo":{
+                                "ReduceDodgeChance":1
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "Flags":33,
+        "IsLinkedToCreator":true
+    }
+]

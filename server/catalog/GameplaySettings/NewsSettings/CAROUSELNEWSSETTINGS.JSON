@@ -1,0 +1,10 @@
+{
+  "News" : [{
+      "Id" : "5",
+      "Data" : {
+        "$type" : "HyperQuest.GameServer.Contracts.NewHeroNewsData, HyperQuest.GameServer.Contracts",
+        "TextContent": "The Mage is coming soon!"
+      }
+    }
+  ]
+}

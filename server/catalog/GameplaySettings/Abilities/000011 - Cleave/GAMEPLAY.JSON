@@ -1,0 +1,300 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":1,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.CleaveOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Position":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"SourcePosition"
+                        },
+                        "Orientation":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                            "Context":"SourceOrientation"
+                        },
+                        "CleaveAngle":200,
+                        "MaxDistance":3,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.5,
+                                        "Tag":"Cleave damage multiplier 1"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Movement":{
+                                        "MoveStyle":{
+                                            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                            "Distance":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":0.2
+                                            },
+                                            "Orientation":{
+                                                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                "Context":"SourceToTargetOrientation"
+                                            },
+                                            "Speed":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":3
+                                            },
+                                            "EaseInOut":-6
+                                        },
+                                        "KnockbackSpec":{
+                                            
+                                        }
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                "OasisName":1,
+                "OasisShortDescription":2,
+                "OasisLongDescription":339,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.6,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":2,
+                "DirectedMaxDistance":3,
+                "EffectRadius":0.1,
+                "CastCost":20,
+                "AbilityCastType":"Cone",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":2
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.CleaveOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Position":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"SourcePosition"
+                        },
+                        "Orientation":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                            "Context":"SourceOrientation"
+                        },
+                        "CleaveAngle":200,
+                        "MaxDistance":3,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":1.75,
+                                        "Tag":"Cleave damage multiplier 2"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Movement":{
+                                        "MoveStyle":{
+                                            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                            "Distance":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":0.2
+                                            },
+                                            "Orientation":{
+                                                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                "Context":"SourceToTargetOrientation"
+                                            },
+                                            "Speed":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":3
+                                            },
+                                            "EaseInOut":-6
+                                        },
+                                        "KnockbackSpec":{
+                                            
+                                        }
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                "OasisName":115,
+                "OasisShortDescription":116,
+                "OasisLongDescription":340,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.6,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":2,
+                "DirectedMaxDistance":3,
+                "EffectRadius":0.1,
+                "CastCost":20,
+                "AbilityCastType":"Cone",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":14
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.CleaveOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Position":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Type":"SourcePosition"
+                        },
+                        "Orientation":{
+                            "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                            "Context":"SourceOrientation"
+                        },
+                        "CleaveAngle":200,
+                        "MaxDistance":3,
+                        "Operations":{
+                            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Operations":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.DamageOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":{
+                                        "$type":"HyperQuest.GameServer.Contracts.StatValueSpec, HyperQuest.GameServer.Contracts",
+                                        "StatType":"SkillDamage",
+                                        "Multiplier":2,
+                                        "Tag":"Cleave damage multiplier 3"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.MoveOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Movement":{
+                                        "MoveStyle":{
+                                            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+                                            "Distance":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":0.2
+                                            },
+                                            "Orientation":{
+                                                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                                                "Context":"SourceToTargetOrientation"
+                                            },
+                                            "Speed":{
+                                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                                "Value":3
+                                            },
+                                            "EaseInOut":-6
+                                        },
+                                        "KnockbackSpec":{
+                                            
+                                        }
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                                    }
+                                },
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                                    "Buff":{
+                                        "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                        "SpecContainerReferenceId":120,
+                                        "Name":"Knight-BattleStance"
+                                    },
+                                    "Target":{
+                                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                        "Type":"Source"
+                                    }
+                                }
+                            ],
+                            "StopCondition":"StopUponFailure"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    }
+                },
+                "OasisName":117,
+                "OasisShortDescription":118,
+                "OasisLongDescription":341,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.6,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":2,
+                "DirectedMaxDistance":3,
+                "EffectRadius":0.1,
+                "CastCost":20,
+                "AbilityCastType":"Cone",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":26
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            }
+        ]
+    }
+]

@@ -1,0 +1,134 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":7,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":207,
+                                "Name":"Mage_FireWall"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AbilityCastPosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "SpawnRestrictionType":"ValidOnNavMesh",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.7,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":6,
+                "EffectRadius":3,
+                "CastCost":45,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "PositionRestrictionType":"ValidThroughCornerAndNonWallCollision",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":9
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":210,
+                                "Name":"Mage_FireWall2"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AbilityCastPosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "SpawnRestrictionType":"ValidOnNavMesh",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.7,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":6,
+                "EffectRadius":3,
+                "CastCost":45,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "PositionRestrictionType":"ValidThroughCornerAndNonWallCollision",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":21
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.EffectOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Effect":{
+                                "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":211,
+                                "Name":"Mage_FireWall3"
+                            },
+                            "Position":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"AbilityCastPosition"
+                            },
+                            "Orientation":"SourceCastOrientation",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.7,
+                "RecoverInterruptWindow":0.5,
+                "MaxDistance":6,
+                "EffectRadius":3,
+                "CastCost":45,
+                "AbilityCastType":"Line",
+                "IgnorePickedTarget":true,
+                "PositionRestrictionType":"ValidThroughCornerAndNonWallCollision",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":30
+                },
+                "NeedFacingTarget":false,
+                "UseGamepadCursor":true,
+                "PickingStyle":"Ground"
+            }
+        ]
+    }
+]

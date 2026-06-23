@@ -1,0 +1,204 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityManagerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AuraCarrierSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffableSpec, HyperQuest.GameServer.Contracts",
+        "PassiveBuffs":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                "SpecContainerReferenceId":172,
+                "Name":"Knight-DamageTakenReduction"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GameCommandProcessorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroEquipmentDefinitionSpec, HyperQuest.GameServer.Contracts",
+        "HeroItemTypes":
+        [
+            {
+                "HeroItemTypeId":1,
+                "RandomChance":0.3
+            },
+            {
+                "HeroItemTypeId":2,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":3,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":4,
+                "RandomChance":0.13
+            },
+            {
+                "HeroItemTypeId":5,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":6,
+                "RandomChance":0.1
+            },
+            {
+                "HeroItemTypeId":7,
+                "RandomChance":0.09
+            },
+            {
+                "HeroItemTypeId":8,
+                "RandomChance":0.08
+            },
+            {
+                "HeroItemTypeId":27
+            },
+            {
+                "HeroItemTypeId":31
+            },
+            {
+                "HeroItemTypeId":32
+            }
+        ],
+        "DefaultEquipmentTemplateIds":
+        {
+            "ShouldersTemplateId":132,
+            "WeaponTemplateId":108,
+            "HelmTemplateId":109,
+            "GlovesTemplateId":111,
+            "SuitOfArmorTemplateId":110
+        },
+        "ShowcaseEquipmentTemplateIds":
+        {
+            "ShouldersTemplateId":154,
+            "WeaponTemplateId":138,
+            "HelmTemplateId":150,
+            "GlovesTemplateId":162,
+            "SuitOfArmorTemplateId":158
+        },
+        "BaseWeaponDamage":48.3,
+        "WeaponDamagePerLevel":47.15,
+        "ArmorDamagePerLevel":6.8,
+        "BaseAttackSpeed":1,
+        "BaseRange":20,
+        "RangePerLevel":10,
+        "BaseHealth":1110,
+        "HealthPerLevel":190
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroSpec, HyperQuest.GameServer.Contracts",
+        "HighPickingHeight":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroSpellsSpec, HyperQuest.GameServer.Contracts",
+        "AllowedSpells":
+        [
+            11,
+            155,
+            96,
+            12,
+            32,
+            34,
+            10,
+            35,
+            1372,
+            33,
+            37,
+            9
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroStatsSpec, HyperQuest.GameServer.Contracts",
+        "BaseCriticalHitChance":0.05,
+        "BaseCriticalDamage":1.5,
+        "BaseDodgeChance":0.05,
+        "BaseMovementSpeed":7,
+        "BaseManaRegeneration":4,
+        "BaseHealth":476,
+        "BaseMana":100,        
+        "DamagePerLevel":6,
+        "HealthPerLevel":80,
+        "SlowMoveSpeed":6,
+        "NormalMoveSpeed":6.5,
+        "FastMoveSpeed":7,
+        "SlowManaFlow":0.5,
+        "NormalManaFlow":1,
+        "FastManaFlow":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.InteractorSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts",
+        "DieMovementReduction":1,
+        "RenegerationDelayAfterDamage":6,
+        "MaxLifePercentageDelayedPerSecond":0.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MovementSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NavigationSpec, HyperQuest.GameServer.Contracts",
+        "PenetrationRadius":0.6,
+        "SimplifyPathEachFrame":true,
+        "StartSpeedBoost":{
+            "InitialSpeedBoostMultiplier":1.3333,
+            "AParameter":4.7,
+            "Cooldown":0.5
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.4,
+                "Height":1.6,
+                "Y":0.8
+            }
+        ],
+        "CollisionGroup":"Hero",
+        "Radius":0.4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.4,
+                "Height":1.6,
+                "Y":0.8
+            }
+        ],
+        "ManualActivationOnInit":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PushableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ResistanceSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SpawnerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StunableSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SurroundableSpec, HyperQuest.GameServer.Contracts",
+        "SurroundRadius":0.6
+    }
+]

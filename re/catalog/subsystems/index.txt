@@ -1,0 +1,9 @@
+# Game subsystems by referenced-source-file count
+
+   4484  GameServerProxies
+    161  Simulation
+     91  Engine
+     90  Gameplay
+     11  LibPC
+      8  BehaviorTree
+      1  3rdParty

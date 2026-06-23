@@ -1,0 +1,52 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":2
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"MovementSpeed",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.RescaleAndClampValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":{
+                        "$type":"HyperQuest.GameServer.Contracts.VectorNormValueSpec, HyperQuest.GameServer.Contracts",
+                        "Vector":{
+                            "$type":"HyperQuest.GameServer.Contracts.DiffVectorSpec, HyperQuest.GameServer.Contracts",
+                            "Value1":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"SourceOwnerPosition"
+                            },
+                            "Value2":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    },
+                    "Min":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":1
+                    },
+                    "Max":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":3
+                    },
+                    "NewMin":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":-0.9
+                    },
+                    "NewMax":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":1
+                    }
+                }
+            }
+        ],
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "Flags":2
+    }
+]

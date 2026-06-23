@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Cross_Chamber_01",
+        "OasisName":11369,
+        "OasisDescription":15724
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Cross_Chamber_01pvp.png",
+        "InvIconUrl":"icoInv\/rooms\/Cross_Chamber_01pvp.png",
+        "LayerName":"icoShop_rooms:Cross_Chamber_01pvp"
+    }
+]

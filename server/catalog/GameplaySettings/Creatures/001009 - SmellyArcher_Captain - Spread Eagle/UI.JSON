@@ -1,0 +1,107 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"S. Archer - Splitshot",
+        "OasisName":15149,
+        "OasisDescription":15150
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1.png",
+        "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1",
+        "HeightOffset":1.9
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Spread Eagle",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyArcher1.png",
+                        "NameOasisId":11207,
+                        "DescriptionOasisId":11208
+                    }
+                ],
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11209,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":11210,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A1.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A2.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/SmellyArcher\/A3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/SmellyArcher\/A3.png",
+                "LayerName":"UI_Common_CreaturesIcons_SmellyArcher:A3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11210,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:offensiveBuff",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_SmellyArcher:A3"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

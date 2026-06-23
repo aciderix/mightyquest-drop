@@ -1,0 +1,6 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LootSpec, HyperQuest.GameServer.Contracts",
+        "Duration":45
+    }
+]

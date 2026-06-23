@@ -1,0 +1,11 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"CreatureBoost",
+        "OasisName":1001,
+        "OasisDescription":1002
+    },
+	{
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts"
+	}
+]

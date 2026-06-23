@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SirenStunTimer",
+        "OasisName":2235,
+        "OasisDescription":2236
+    }
+]

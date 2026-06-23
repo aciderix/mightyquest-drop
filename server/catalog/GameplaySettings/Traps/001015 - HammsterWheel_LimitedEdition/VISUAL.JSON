@@ -1,0 +1,9 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"HammsterWheel_LimitedEdition",
+        "Scale":0,
+        "SizeCategory":"Large",
+        "HideInModeMask":1
+    }
+]

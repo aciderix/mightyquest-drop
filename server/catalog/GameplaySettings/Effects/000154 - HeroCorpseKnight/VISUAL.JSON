@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ENV_Hero_Corpse_Harvest_Knight_01",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_04DD88CE_AI650>XREF_04DD88CE_AI650.XREF"
+    }
+]

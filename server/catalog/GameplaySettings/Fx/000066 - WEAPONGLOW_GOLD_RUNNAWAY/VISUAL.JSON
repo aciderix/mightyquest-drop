@@ -1,0 +1,11 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_801EF76D_BA618>SPECIALFX_801EF76D_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+            "BoneName":"FX_WeaponVolume"
+        },
+        "Name":"VFX_WEAP_WhiteGlow"
+    }
+]

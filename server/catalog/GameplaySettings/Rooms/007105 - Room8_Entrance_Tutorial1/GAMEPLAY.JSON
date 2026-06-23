@@ -1,0 +1,79 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingRequirementSpec, HyperQuest.GameServer.Contracts",
+        "BuildingRequirementSpecContainerId":13,
+        "BuildingRequirementRank":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "CreateShapesFromNodes":true,
+        "CollisionGroup":"World",
+        "PhysicRigidBodyType":"Static"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomConnectionSpec, HyperQuest.GameServer.Contracts",
+        "Priority":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomSpec, HyperQuest.GameServer.Contracts",
+        "RoomSections":
+        [
+            {
+                "Passages":
+                [
+                    "CloseWall",
+                    "Passage",
+                    "CloseWall",
+                    "BorderWall"
+                ]
+            }
+        ],
+        "Objects":
+        [
+            {
+                "X":-18,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":573
+            }
+        ],
+        "PlayerSpawnPoints":
+        [
+            {
+                "PlayerSpawnCellX":20.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            },
+            {
+                "PlayerSpawnCellX":20.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            },
+            {
+                "PlayerSpawnCellX":20.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            },
+            {
+                "PlayerSpawnCellX":20.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            }
+        ],
+        "MaxConstructionPoints":100,
+        "IsAvailableInBuildMode":true
+    }
+]

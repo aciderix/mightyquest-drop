@@ -1,0 +1,51 @@
+{
+    "NueCompletionAssignmentIds": [30, 1010],
+    "HeroSelectionAssignmentId": 90,
+    "Groups":
+    [
+        {
+            "Id":1,
+            "Name":"Introduction"
+        },
+        {
+            "Id":2,
+            "Name":"Tutorial Castle 1"
+        },
+        {
+            "Id":3,
+            "Name":"Gear"
+        },
+        {
+            "Id":4,
+            "Name":"Abilities"
+        },
+        {
+            "Id":5,
+            "Name":"Tutorial Castle 2"
+        },
+        {
+            "Id":6,
+            "Name":"Build - Creatures"
+        },
+        {
+            "Id":7,
+            "Name":"Ultimate Ability"
+        },
+        {
+            "Id":8,
+            "Name":"Tutorial Castle 3"
+        },
+        {
+            "Id":9,
+            "Name":"Build - Traps"
+        },
+        {
+            "Id":10,
+            "Name":"PvE Castles"
+        },
+        {
+            "Id":11,
+            "Name":"Build - Rooms"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SlowRoast_LimitedEdition",
+        "OasisName":16232,
+        "OasisDescription":16233
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"debug text slow roast damage",
+                    "OasisName":16237
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":1026,
+                        "TaggedSpec":"slow roast damage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/SlowRoast.png",
+        "InvIconUrl":"UI\/Common\/TrapsIcons\/Rares\/SlowRoast.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:SlowRoast"
+    }
+]

@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_014_FallenArcher_VarD_BearTrap_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_00264D61_AF501>MESH_00264D61_AF501.MESH"
+    }
+]

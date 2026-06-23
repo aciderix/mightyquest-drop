@@ -1,0 +1,73 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BonePuppeteer_Elite_RaisingHell",
+        "OasisName":15185,
+        "OasisDescription":15186
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A1e",
+        "HeightOffset":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/BonePuppeteer1.png",
+                        "NameOasisId":11146,
+                        "DescriptionOasisId":11149
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/VoodooMaster\/A3e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/VoodooMaster\/A3e.png",
+                "LayerName":"UI_Common_CreaturesIcons_VoodooMaster:A3e"
+            }
+        ]
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Durrrr the Enraged",
+        "OasisName":8649,
+        "OasisDescription":8648
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "HeightOffset":4.5
+    }
+]

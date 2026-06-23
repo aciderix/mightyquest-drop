@@ -1,0 +1,12 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Width":3.5,
+        "Thickness":1.5,
+        "Height":1,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":15
+        }
+    }
+]

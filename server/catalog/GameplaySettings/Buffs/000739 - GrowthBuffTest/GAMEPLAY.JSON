@@ -1,0 +1,18 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts"
+        },
+        "InstanceCreatorType":"LastInstanceCreator",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstancesPerCreator":1,
+        "IsDispellable":false,
+        "Flags":2,
+        "IsLinkedToCreator":true,
+        "RemoveIfCreatorDied":true,
+        "BuffStopTriggers":{
+            "OnBuffedEntityDied":true
+        }
+    }
+]

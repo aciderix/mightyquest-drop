@@ -1,0 +1,505 @@
+{
+    "Achievements":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleAchievement, HyperQuest.GameServer.Contracts",
+            "CastleDifficulties":
+            [
+                "Hard",
+                "TooHard"
+            ],
+            "Count":1,
+            "Id":1,
+            "Points":5,
+            "DebugName":"Outclassed",
+            "TitleId":954,
+            "Icon":"default",
+            "DescriptionId":953,
+            "SteamId":"1",
+            "SteamStatId":"NumberOfHigherLevelCastlesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "Count":500,
+            "Id":2,
+            "Points":10,
+            "DebugName":"The Butcher #1",
+            "TitleId":957,
+            "Icon":"default",
+            "DescriptionId":958,
+            "SteamId":"2",
+            "SteamStatId":"NumberOfCreaturesKilled"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "Count":1500,
+            "Id":3,
+            "Points":20,
+            "DebugName":"The Butcher #2",
+            "TitleId":959,
+            "Icon":"default",
+            "DescriptionId":960,
+            "SteamId":"3",
+            "SteamStatId":"NumberOfCreaturesKilled"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "Count":5000,
+            "Id":4,
+            "Points":30,
+            "DebugName":"The Butcher #3",
+            "TitleId":961,
+            "Icon":"default",
+            "DescriptionId":962,
+            "SteamId":"4",
+            "SteamStatId":"NumberOfCreaturesKilled"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleAchievement, HyperQuest.GameServer.Contracts",
+            "CastleDifficulties":
+            [
+                "TooEasy",
+                "Easy"
+            ],
+            "Count":15,
+            "Id":5,
+            "Points":10,
+            "DebugName":"Conqueror #1",
+            "TitleId":963,
+            "Icon":"default",
+            "DescriptionId":964,
+            "SteamId":"5",
+            "SteamStatId":"NumberOfLowerLevelCastlesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleAchievement, HyperQuest.GameServer.Contracts",
+            "CastleDifficulties":
+            [
+                "Medium"
+            ],
+            "Count":15,
+            "Id":6,
+            "Points":20,
+            "DebugName":"Conqueror #2",
+            "TitleId":965,
+            "Icon":"default",
+            "DescriptionId":966,
+            "SteamId":"6",
+            "SteamStatId":"NumberOfSameLevelCastlesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleAchievement, HyperQuest.GameServer.Contracts",
+            "CastleDifficulties":
+            [
+                "Hard",
+                "TooHard"
+            ],
+            "Count":15,
+            "Id":7,
+            "Points":30,
+            "DebugName":"Conqueror #3",
+            "TitleId":967,
+            "Icon":"default",
+            "DescriptionId":968,
+            "SteamId":"7",
+            "SteamStatId":"NumberOfHigherLevelCastlesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DrinkPotionAchievement, HyperQuest.GameServer.Contracts",
+            "Count":20,
+            "Id":8,
+            "Points":10,
+            "DebugName":"Use the Force #1",
+            "TitleId":970,
+            "Icon":"default",
+            "DescriptionId":969,
+            "SteamId":"8",
+            "SteamStatId":"NumberOfPotionsUsed"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DrinkPotionAchievement, HyperQuest.GameServer.Contracts",
+            "Count":50,
+            "Id":9,
+            "Points":20,
+            "DebugName":"Use the Force #2",
+            "TitleId":971,
+            "Icon":"default",
+            "DescriptionId":972,
+            "SteamId":"9",
+            "SteamStatId":"NumberOfPotionsUsed"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DrinkPotionAchievement, HyperQuest.GameServer.Contracts",
+            "Count":100,
+            "Id":10,
+            "Points":30,
+            "DebugName":"Use the Force #3",
+            "TitleId":979,
+            "Icon":"default",
+            "DescriptionId":983,
+            "SteamId":"10",
+            "SteamStatId":"NumberOfPotionsUsed"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "CreatureIds":
+            [
+                1028,
+                1057,
+                1064
+            ],
+            "Count":100,
+            "Id":11,
+            "Points":10,
+            "DebugName":"Arachnophobia",
+            "TitleId":975,
+            "Icon":"default",
+            "DescriptionId":977,
+            "SteamId":"11",
+            "SteamStatId":"NumberOfSpidersKilled"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "CreatureIds":
+            [
+                1016,
+                1045
+            ],
+            "Count":50,
+            "Id":12,
+            "Points":30,
+            "DebugName":"Vampire Slayer",
+            "TitleId":980,
+            "Icon":"default",
+            "DescriptionId":984,
+            "SteamId":"12",
+            "SteamStatId":"NumberOfVampiresKilled"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "BossCreaturesOnly":true,
+            "Count":50,
+            "Id":13,
+            "Points":40,
+            "DebugName":"Boss Slayer",
+            "TitleId":973,
+            "Icon":"default",
+            "DescriptionId":974,
+            "SteamId":"13",
+            "SteamStatId":"NumberOfBossesKilled"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.ReachLevelAchievement, HyperQuest.GameServer.Contracts",
+            "Heroes":
+            [
+                {
+                    "Level":5
+                }
+            ],
+            "Id":15,
+            "Points":5,
+            "DebugName":"Training's Over",
+            "TitleId":976,
+            "Icon":"default",
+            "DescriptionId":978,
+            "SteamId":"15"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "Count":25,
+            "Id":16,
+            "Points":10,
+            "DebugName":"Pet Store #1",
+            "TitleId":982,
+            "Icon":"default",
+            "DescriptionId":986,
+            "SteamId":"16",
+            "SteamStatId":"CreaturesPlacedInCastle"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "Count":50,
+            "Id":17,
+            "Points":20,
+            "DebugName":"Pet Store #2",
+            "TitleId":987,
+            "Icon":"default",
+            "DescriptionId":988,
+            "SteamId":"17",
+            "SteamStatId":"CreaturesPlacedInCastle"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Creature",
+            "Count":100,
+            "Id":18,
+            "Points":30,
+            "DebugName":"Pet Store #3",
+            "TitleId":989,
+            "Icon":"default",
+            "DescriptionId":990,
+            "SteamId":"18",
+            "SteamStatId":"CreaturesPlacedInCastle"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Room",
+            "Count":5,
+            "Id":19,
+            "Points":10,
+            "DebugName":"Architect #1",
+            "TitleId":991,
+            "Icon":"default",
+            "DescriptionId":992,
+            "SteamId":"19",
+            "SteamStatId":"NumberOfCastleRooms"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Room",
+            "Count":6,
+            "Id":20,
+            "Points":20,
+            "DebugName":"Architect #2",
+            "TitleId":993,
+            "Icon":"default",
+            "DescriptionId":994,
+            "SteamId":"20",
+            "SteamStatId":"NumberOfCastleRooms"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildEntitiesAchievement, HyperQuest.GameServer.Contracts",
+            "EntityType":"Room",
+            "Count":8,
+            "Id":21,
+            "Points":30,
+            "DebugName":"Architect #3",
+            "TitleId":995,
+            "Icon":"default",
+            "DescriptionId":996,
+            "SteamId":"21",
+            "SteamStatId":"NumberOfCastleRooms"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillHeroesAchievement, HyperQuest.GameServer.Contracts",
+            "Count":10,
+            "Id":22,
+            "Points":10,
+            "DebugName":"No Trespassing #1",
+            "TitleId":997,
+            "Icon":"default",
+            "DescriptionId":998,
+            "SteamId":"22",
+            "SteamStatId":"NumberOfHeroesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillHeroesAchievement, HyperQuest.GameServer.Contracts",
+            "Count":20,
+            "Id":23,
+            "Points":20,
+            "DebugName":"No Trespassing #2",
+            "TitleId":999,
+            "Icon":"default",
+            "DescriptionId":1000,
+            "SteamId":"23",
+            "SteamStatId":"NumberOfHeroesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.KillHeroesAchievement, HyperQuest.GameServer.Contracts",
+            "Count":50,
+            "Id":24,
+            "Points":30,
+            "DebugName":"No Trespassing #3",
+            "TitleId":1001,
+            "Icon":"default",
+            "DescriptionId":1002,
+            "SteamId":"24",
+            "SteamStatId":"NumberOfHeroesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CurrencyAccumulationAchievement, HyperQuest.GameServer.Contracts",
+            "CurrencyType":"IGC",
+            "Count":50000,
+            "Id":25,
+            "Points":10,
+            "DebugName":"Greedy #1",
+            "TitleId":1003,
+            "Icon":"default",
+            "DescriptionId":1004,
+            "SteamId":"25",
+            "SteamStatId":"AmountOfGoldCollected"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CurrencyAccumulationAchievement, HyperQuest.GameServer.Contracts",
+            "CurrencyType":"IGC",
+            "Count":200000,
+            "Id":26,
+            "Points":20,
+            "DebugName":"Greedy #2",
+            "TitleId":1005,
+            "Icon":"default",
+            "DescriptionId":1006,
+            "SteamId":"26",
+            "SteamStatId":"AmountOfGoldCollected"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.CurrencyAccumulationAchievement, HyperQuest.GameServer.Contracts",
+            "CurrencyType":"IGC",
+            "Count":500000,
+            "Id":27,
+            "Points":30,
+            "DebugName":"Greedy #3",
+            "TitleId":1007,
+            "Icon":"default",
+            "DescriptionId":1008,
+            "SteamId":"27",
+            "SteamStatId":"AmountOfGoldCollected"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.FriendsCountAchievement, HyperQuest.GameServer.Contracts",
+            "Count":10,
+            "Id":28,
+            "Points":10,
+            "DebugName":"The more the merrier",
+            "TitleId":1009,
+            "Icon":"default",
+            "DescriptionId":1010,
+            "SteamId":"28",
+            "SteamStatId":"NumberOfFriends"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.ReachLevelAchievement, HyperQuest.GameServer.Contracts",
+            "Heroes":
+            [
+                {
+                    "HeroSpecContainerId":2,
+                    "Level":30
+                },
+                {
+                    "HeroSpecContainerId":3,
+                    "Level":30
+                }
+            ],
+            "Id":29,
+            "Points":50,
+            "DebugName":"Mighty Heroes",
+            "TitleId":1011,
+            "Icon":"default",
+            "DescriptionId":1012,
+            "SteamId":"29"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleStrikeAchievement, HyperQuest.GameServer.Contracts",
+            "IsFriend":true,
+            "Count":10,
+            "Id":30,
+            "Points":30,
+            "DebugName":"BFF",
+            "TitleId":1013,
+            "Icon":"default",
+            "DescriptionId":1014,
+            "SteamId":"30",
+            "SteamStatId":"NumberOfFriendCastlesDefeated"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleStrikeAchievement, HyperQuest.GameServer.Contracts",
+            "Count":5,
+            "Id":31,
+            "Points":10,
+            "DebugName":"Enraged #1",
+            "TitleId":1015,
+            "Icon":"default",
+            "DescriptionId":1016,
+            "SteamId":"31",
+            "SteamStatId":"NumberOfCastlesDefeatedConsecutively"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleStrikeAchievement, HyperQuest.GameServer.Contracts",
+            "Count":10,
+            "Id":32,
+            "Points":20,
+            "DebugName":"Enraged #2",
+            "TitleId":1017,
+            "Icon":"default",
+            "DescriptionId":1018,
+            "SteamId":"32",
+            "SteamStatId":"NumberOfCastlesDefeatedConsecutively"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleStrikeAchievement, HyperQuest.GameServer.Contracts",
+            "Count":20,
+            "Id":33,
+            "Points":30,
+            "DebugName":"Enraged #3",
+            "TitleId":1019,
+            "Icon":"default",
+            "DescriptionId":1020,
+            "SteamId":"33",
+            "SteamStatId":"NumberOfCastlesDefeatedConsecutively"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.LootItemsAchievement, HyperQuest.GameServer.Contracts",
+            "Count":100,
+            "Id":34,
+            "Points":10,
+            "DebugName":"Scavenger #1",
+            "TitleId":1021,
+            "Icon":"default",
+            "DescriptionId":1022,
+            "SteamId":"34",
+            "SteamStatId":"NumberOfItemsLooted"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.LootItemsAchievement, HyperQuest.GameServer.Contracts",
+            "Count":200,
+            "Id":35,
+            "Points":20,
+            "DebugName":"Scavenger #2",
+            "TitleId":1023,
+            "Icon":"default",
+            "DescriptionId":1024,
+            "SteamId":"35",
+            "SteamStatId":"NumberOfItemsLooted"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.LootItemsAchievement, HyperQuest.GameServer.Contracts",
+            "Count":500,
+            "Id":36,
+            "Points":30,
+            "DebugName":"Scavenger #3",
+            "TitleId":1025,
+            "Icon":"default",
+            "DescriptionId":1026,
+            "SteamId":"36",
+            "SteamStatId":"NumberOfItemsLooted"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.EquipmentAchievement, HyperQuest.GameServer.Contracts",
+            "EquippedParts":
+            [
+                "Head",
+                "Shoulders",
+                "Body",
+                "Back",
+                "Hands",
+                "Neck",
+                "Finger1"
+            ],
+            "Id":37,
+            "Points":20,
+            "DebugName":"Fashion Victim",
+            "TitleId":1027,
+            "Icon":"default",
+            "DescriptionId":1028,
+            "SteamId":"37"
+        }
+    ]
+}

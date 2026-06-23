@@ -1,0 +1,87 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomSpec, HyperQuest.GameServer.Contracts",
+        "RoomSections":
+        [
+            {
+                "Passages":
+                [
+                    "CloseWall",
+                    "Passage",
+                    "CloseWall",
+                    "CloseWall"
+                ]
+            }
+        ],
+        "Objects":
+        [
+            {
+                "X":-9,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":71
+            },
+            {
+                "X":-9,
+                "Orientation":{
+                    
+                },
+                "SpecContainerId":419
+            }
+        ],
+        "PlayerSpawnPoints":
+        [
+            {
+                "PlayerSpawnCellX":25.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            },
+            {
+                "PlayerSpawnCellX":26.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            },
+            {
+                "PlayerSpawnCellX":27.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            },
+            {
+                "PlayerSpawnCellX":28.5,
+                "PlayerSpawnCellY":17.5,
+                "PlayerSpawnOrientation":{
+                    "Yaw":180
+                }
+            }
+        ],
+        "PlayerSpawnCellY":-4,
+        "MaxConstructionPoints":100,
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingRequirementSpec, HyperQuest.GameServer.Contracts",
+        "BuildingRequirementSpecContainerId":13,
+        "BuildingRequirementRank":1
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "CreateShapesFromNodes":true,
+        "CollisionGroup":"World",
+        "PhysicRigidBodyType":"Static"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomConnectionSpec, HyperQuest.GameServer.Contracts",
+        "Priority":1
+    }
+]

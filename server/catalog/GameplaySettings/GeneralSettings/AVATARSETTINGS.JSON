@@ -1,0 +1,978 @@
+{
+    "Avatars":
+    [
+		{
+            "Id": 1,
+            "DebugName": "knight002",
+            "IconUrl": "common/avatarIcons/knight002.png",
+            "LayerName": "UI_Common_AvatarIcons:knight002"
+        },
+		{
+            "Id": 2,
+            "DebugName": "knight005",
+            "IconUrl": "common/avatarIcons/knight005.png",
+            "LayerName": "UI_Common_AvatarIcons:knight005"
+        },
+        {
+            "Id": 3,
+            "DebugName": "archer001",
+            "IconUrl": "common/avatarIcons/archer001.png",
+            "LayerName": "UI_Common_AvatarIcons:archer001"
+        },
+		{
+            "Id": 4,
+            "DebugName": "archer002",
+            "IconUrl": "common/avatarIcons/archer002.png",
+            "LayerName": "UI_Common_AvatarIcons:archer002"
+        },
+		{
+            "Id": 5,
+            "DebugName": "eagle001",
+            "IconUrl": "common/avatarIcons/eagle001.png",
+            "LayerName": "UI_Common_AvatarIcons:eagle001"
+        },
+		{
+            "Id": 6,
+            "DebugName": "mage001",
+            "IconUrl": "common/avatarIcons/mage001.png",
+            "LayerName": "UI_Common_AvatarIcons:mage001"
+        },
+		{
+            "Id": 7,
+            "DebugName": "mage002",
+            "IconUrl": "common/avatarIcons/mage002.png",
+            "LayerName": "UI_Common_AvatarIcons:mage002"
+        },
+		{
+            "Id": 8,
+            "DebugName": "runaway001",
+            "IconUrl": "common/avatarIcons/runaway001.png",
+            "LayerName": "UI_Common_AvatarIcons:runaway001"
+        },
+		{
+            "Id": 9,
+            "DebugName": "runaway002",
+            "IconUrl": "common/avatarIcons/runaway002.png",
+            "LayerName": "UI_Common_AvatarIcons:runaway002"
+        },
+		{
+            "Id": 10,
+            "DebugName": "Castle001",
+            "IconUrl": "common/avatarIcons/castle001.png",
+            "LayerName": "UI_Common_AvatarIcons:castle001"
+        },
+		{
+            "Id": 11,
+            "DebugName": "Castle002",
+            "IconUrl": "common/avatarIcons/castle002.png",
+            "LayerName": "UI_Common_AvatarIcons:castle002"
+        },
+		{
+            "Id": 12,
+            "DebugName": "cornelius002",
+            "IconUrl": "common/avatarIcons/cornelius002.png",
+            "LayerName": "UI_Common_AvatarIcons:cornelius002"
+        },
+				{
+            "Id": 13,
+            "DebugName": "Rabid001",
+            "IconUrl": "common/avatarIcons/Rabid001.png",
+            "LayerName": "UI_Common_AvatarIcons:Rabid001"
+        },
+		{
+            "Id": 14,
+            "DebugName": "vamp001",
+            "IconUrl": "common/avatarIcons/vamp001.png",
+            "LayerName": "UI_Common_AvatarIcons:vamp001"
+        },
+        {
+            "Id": 15,
+            "DebugName": "puppetmaster002",
+            "IconUrl": "common/avatarIcons/puppetmaster002.png",
+            "LayerName": "UI_Common_AvatarIcons:puppetmaster002"
+        },
+		{
+            "Id": 16,
+            "DebugName": "snotterking001",
+            "IconUrl": "common/avatarIcons/snotterking001.png",
+            "LayerName": "UI_Common_AvatarIcons:snotterking001"
+        },
+		{
+            "Id": 17,
+            "DebugName": "snotter001",
+            "IconUrl": "common/avatarIcons/snotter001.png",
+            "LayerName": "UI_Common_AvatarIcons:snotter001"
+        },
+		{
+            "Id": 18,
+            "DebugName": "BladeAssassin001",
+            "IconUrl": "common/avatarIcons/BladeAssassin001.png",
+            "LayerName": "UI_Common_AvatarIcons:BladeAssassin001"
+        },
+		{
+            "Id": 19,
+            "DebugName": "cyclops001",
+            "IconUrl": "common/avatarIcons/cyclops001.png",
+            "LayerName": "UI_Common_AvatarIcons:cyclops001"
+        },
+		{
+            "Id": 20,
+            "DebugName": "Chicken001",
+            "IconUrl": "common/avatarIcons/chicken001.png",
+            "LayerName": "UI_Common_AvatarIcons:chicken001"
+        },
+		{
+            "Id": 21,
+            "DebugName": "Beholder001",
+            "IconUrl": "common/avatarIcons/Beholder001.png",
+            "LayerName": "UI_Common_AvatarIcons:Beholder001"
+        },
+        {
+            "Id": 22,
+            "DebugName": "ClosedBetaSpecial001",
+            "IconUrl": "common/avatarIcons/cbSpecial.png",
+            "LayerName": "UI_Common_AvatarIcons:cbSpecial",
+            "IsPrivate": true
+        }
+    ],
+    "GuildsIconsLarge":
+    [
+        {
+            "Id": 1,
+            "DebugName": "destroy1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/destroy1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:destroy1"
+        },
+        {
+            "Id": 2,
+            "DebugName": "swear1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/swear1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:swear1"
+        },
+        {
+            "Id": 3,
+            "DebugName": "cake1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/cake1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:cake1"
+        },
+        {
+            "Id": 4,
+            "DebugName": "muscle1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/muscle1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:muscle1"
+        },
+        {
+            "Id": 5,
+            "DebugName": "door1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/door1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:door1"
+        },
+        {
+            "Id": 6,
+            "DebugName": "snotter1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/snotter1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:snotter1"
+        },
+        {
+            "Id": 7,
+            "DebugName": "trick1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/trick1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:trick1"
+        },
+        {
+            "Id": 8,
+            "DebugName": "derp1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/derp1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:derp1"
+        },
+        {
+            "Id": 9,
+            "DebugName": "fork1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/fork1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:fork1"
+        },
+        {
+            "Id": 10,
+            "DebugName": "tower1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/tower1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:tower1"
+        },
+        {
+            "Id": 11,
+            "DebugName": "fish1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/fish1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:fish1"
+        },
+        {
+            "Id": 12,
+            "DebugName": "hammer1",
+            "IconUrl": "UI/Common/GuildsIconsLarge/hammer1.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:hammer1"
+        },
+        {
+            "Id": 13,
+            "DebugName": "destroy2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/destroy2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:destroy2"
+        },
+        {
+            "Id": 14,
+            "DebugName": "swear2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/swear2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:swear2"
+        },
+        {
+            "Id": 15,
+            "DebugName": "cake2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/cake2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:cake2"
+        },
+        {
+            "Id": 16,
+            "DebugName": "muscle2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/muscle2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:muscle2"
+        },
+        {
+            "Id": 17,
+            "DebugName": "door2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/door2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:door2"
+        },
+        {
+            "Id": 18,
+            "DebugName": "snotter2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/snotter2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:snotter2"
+        },
+        {
+            "Id": 19,
+            "DebugName": "trick2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/trick2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:trick2"
+        },
+        {
+            "Id": 20,
+            "DebugName": "derp2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/derp2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:derp2"
+        },
+        {
+            "Id": 21,
+            "DebugName": "fork2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/fork2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:fork2"
+        },
+        {
+            "Id": 22,
+            "DebugName": "tower2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/tower2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:tower2"
+        },
+        {
+            "Id": 23,
+            "DebugName": "fish2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/fish2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:fish2"
+        },
+        {
+            "Id": 24,
+            "DebugName": "hammer2",
+            "IconUrl": "UI/Common/GuildsIconsLarge/hammer2.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:hammer2"
+        },
+        {
+            "Id": 25,
+            "DebugName": "destroy3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/destroy3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:destroy3"
+        },
+        {
+            "Id": 26,
+            "DebugName": "swear3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/swear3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:swear3"
+        },
+        {
+            "Id": 27,
+            "DebugName": "cake3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/cake3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:cake3"
+        },
+        {
+            "Id": 28,
+            "DebugName": "muscle3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/muscle3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:muscle3"
+        },
+        {
+            "Id": 29,
+            "DebugName": "door3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/door3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:door3"
+        },
+        {
+            "Id": 30,
+            "DebugName": "snotter3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/snotter3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:snotter3"
+        },
+        {
+            "Id": 31,
+            "DebugName": "trick3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/trick3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:trick3"
+        },
+        {
+            "Id": 32,
+            "DebugName": "derp3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/derp3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:derp3"
+        },
+        {
+            "Id": 33,
+            "DebugName": "fork3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/fork3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:fork3"
+        },
+        {
+            "Id": 34,
+            "DebugName": "tower3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/tower3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:tower3"
+        },
+        {
+            "Id": 35,
+            "DebugName": "fish3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/fish3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:fish3"
+        },
+        {
+            "Id": 36,
+            "DebugName": "hammer3",
+            "IconUrl": "UI/Common/GuildsIconsLarge/hammer3.png",
+            "LayerName": "UI_Common_GuildsIconsLarge:hammer3"
+        }
+    ],
+    "GuildsIconsSmall":
+    [
+        {
+            "Id": 1,
+            "DebugName": "destroy1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/destroy1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:destroy1"
+        },
+        {
+            "Id": 2,
+            "DebugName": "swear1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/swear1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:swear1"
+        },
+        {
+            "Id": 3,
+            "DebugName": "cake1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/cake1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:cake1"
+        },
+        {
+            "Id": 4,
+            "DebugName": "muscle1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/muscle1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:muscle1"
+        },
+        {
+            "Id": 5,
+            "DebugName": "door1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/door1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:door1"
+        },
+        {
+            "Id": 6,
+            "DebugName": "snotter1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/snotter1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:snotter1"
+        },
+        {
+            "Id": 7,
+            "DebugName": "trick1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/trick1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:trick1"
+        },
+        {
+            "Id": 8,
+            "DebugName": "derp1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/derp1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:derp1"
+        },
+        {
+            "Id": 9,
+            "DebugName": "fork1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/fork1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:fork1"
+        },
+        {
+            "Id": 10,
+            "DebugName": "tower1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/tower1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:tower1"
+        },
+        {
+            "Id": 11,
+            "DebugName": "fish1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/fish1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:fish1"
+        },
+        {
+            "Id": 12,
+            "DebugName": "hammer1",
+            "IconUrl": "UI/Common/GuildsIconsSmall/hammer1.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:hammer1"
+        },
+        {
+            "Id": 13,
+            "DebugName": "destroy2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/destroy2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:destroy2"
+        },
+        {
+            "Id": 14,
+            "DebugName": "swear2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/swear2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:swear2"
+        },
+        {
+            "Id": 15,
+            "DebugName": "cake2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/cake2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:cake2"
+        },
+        {
+            "Id": 16,
+            "DebugName": "muscle2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/muscle2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:muscle2"
+        },
+        {
+            "Id": 17,
+            "DebugName": "door2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/door2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:door2"
+        },
+        {
+            "Id": 18,
+            "DebugName": "snotter2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/snotter2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:snotter2"
+        },
+        {
+            "Id": 19,
+            "DebugName": "trick2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/trick2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:trick2"
+        },
+        {
+            "Id": 20,
+            "DebugName": "derp2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/derp2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:derp2"
+        },
+        {
+            "Id": 21,
+            "DebugName": "fork2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/fork2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:fork2"
+        },
+        {
+            "Id": 22,
+            "DebugName": "tower2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/tower2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:tower2"
+        },
+        {
+            "Id": 23,
+            "DebugName": "fish2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/fish2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:fish2"
+        },
+        {
+            "Id": 24,
+            "DebugName": "hammer2",
+            "IconUrl": "UI/Common/GuildsIconsSmall/hammer2.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:hammer2"
+        },
+        {
+            "Id": 25,
+            "DebugName": "destroy3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/destroy3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:destroy3"
+        },
+        {
+            "Id": 26,
+            "DebugName": "swear3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/swear3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:swear3"
+        },
+        {
+            "Id": 27,
+            "DebugName": "cake3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/cake3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:cake3"
+        },
+        {
+            "Id": 28,
+            "DebugName": "muscle3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/muscle3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:muscle3"
+        },
+        {
+            "Id": 29,
+            "DebugName": "door3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/door3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:door3"
+        },
+        {
+            "Id": 30,
+            "DebugName": "snotter3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/snotter3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:snotter3"
+        },
+        {
+            "Id": 31,
+            "DebugName": "trick3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/trick3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:trick3"
+        },
+        {
+            "Id": 32,
+            "DebugName": "derp3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/derp3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:derp3"
+        },
+        {
+            "Id": 33,
+            "DebugName": "fork3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/fork3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:fork3"
+        },
+        {
+            "Id": 34,
+            "DebugName": "tower3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/tower3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:tower3"
+        },
+        {
+            "Id": 35,
+            "DebugName": "fish3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/fish3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:fish3"
+        },
+        {
+            "Id": 36,
+            "DebugName": "hammer3",
+            "IconUrl": "UI/Common/GuildsIconsSmall/hammer3.png",
+            "LayerName": "UI_Common_GuildsIconsSmall:hammer3"
+        }
+    ],
+    "GuildsIconsSquare":
+    [
+        {
+            "Id": 1,
+            "DebugName": "destroy1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/destroy1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:destroy1"
+        },
+        {
+            "Id": 2,
+            "DebugName": "swear1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/swear1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:swear1"
+        },
+        {
+            "Id": 3,
+            "DebugName": "cake1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/cake1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:cake1"
+        },
+        {
+            "Id": 4,
+            "DebugName": "muscle1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/muscle1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:muscle1"
+        },
+        {
+            "Id": 5,
+            "DebugName": "door1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/door1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:door1"
+        },
+        {
+            "Id": 6,
+            "DebugName": "snotter1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/snotter1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:snotter1"
+        },
+        {
+            "Id": 7,
+            "DebugName": "trick1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/trick1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:trick1"
+        },
+        {
+            "Id": 8,
+            "DebugName": "derp1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/derp1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:derp1"
+        },
+        {
+            "Id": 9,
+            "DebugName": "fork1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/fork1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:fork1"
+        },
+        {
+            "Id": 10,
+            "DebugName": "tower1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/tower1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:tower1"
+        },
+        {
+            "Id": 11,
+            "DebugName": "fish1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/fish1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:fish1"
+        },
+        {
+            "Id": 12,
+            "DebugName": "hammer1",
+            "IconUrl": "UI/Common/GuildsIconsSquare/hammer1.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:hammer1"
+        },
+        {
+            "Id": 13,
+            "DebugName": "destroy2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/destroy2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:destroy2"
+        },
+        {
+            "Id": 14,
+            "DebugName": "swear2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/swear2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:swear2"
+        },
+        {
+            "Id": 15,
+            "DebugName": "cake2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/cake2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:cake2"
+        },
+        {
+            "Id": 16,
+            "DebugName": "muscle2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/muscle2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:muscle2"
+        },
+        {
+            "Id": 17,
+            "DebugName": "door2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/door2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:door2"
+        },
+        {
+            "Id": 18,
+            "DebugName": "snotter2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/snotter2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:snotter2"
+        },
+        {
+            "Id": 19,
+            "DebugName": "trick2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/trick2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:trick2"
+        },
+        {
+            "Id": 20,
+            "DebugName": "derp2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/derp2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:derp2"
+        },
+        {
+            "Id": 21,
+            "DebugName": "fork2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/fork2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:fork2"
+        },
+        {
+            "Id": 22,
+            "DebugName": "tower2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/tower2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:tower2"
+        },
+        {
+            "Id": 23,
+            "DebugName": "fish2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/fish2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:fish2"
+        },
+        {
+            "Id": 24,
+            "DebugName": "hammer2",
+            "IconUrl": "UI/Common/GuildsIconsSquare/hammer2.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:hammer2"
+        },
+        {
+            "Id": 25,
+            "DebugName": "destroy3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/destroy3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:destroy3"
+        },
+        {
+            "Id": 26,
+            "DebugName": "swear3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/swear3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:swear3"
+        },
+        {
+            "Id": 27,
+            "DebugName": "cake3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/cake3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:cake3"
+        },
+        {
+            "Id": 28,
+            "DebugName": "muscle3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/muscle3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:muscle3"
+        },
+        {
+            "Id": 29,
+            "DebugName": "door3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/door3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:door3"
+        },
+        {
+            "Id": 30,
+            "DebugName": "snotter3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/snotter3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:snotter3"
+        },
+        {
+            "Id": 31,
+            "DebugName": "trick3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/trick3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:trick3"
+        },
+        {
+            "Id": 32,
+            "DebugName": "derp3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/derp3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:derp3"
+        },
+        {
+            "Id": 33,
+            "DebugName": "fork3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/fork3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:fork3"
+        },
+        {
+            "Id": 34,
+            "DebugName": "tower3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/tower3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:tower3"
+        },
+        {
+            "Id": 35,
+            "DebugName": "fish3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/fish3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:fish3"
+        },
+        {
+            "Id": 36,
+            "DebugName": "hammer3",
+            "IconUrl": "UI/Common/GuildsIconsSquare/hammer3.png",
+            "LayerName": "UI_Common_GuildsIconsSquare:hammer3"
+        }
+    ],
+    "GuildsIconsAnimations":
+    [
+        {
+            "Id": 1,
+            "DebugName": "destroy1",
+            "AnimationName": "destroy1"
+        },
+        {
+            "Id": 2,
+            "DebugName": "swear1",
+            "AnimationName": "swear1"
+        },
+        {
+            "Id": 3,
+            "DebugName": "cake1",
+            "AnimationName": "cake1"
+        },
+        {
+            "Id": 4,
+            "DebugName": "muscle1",
+            "AnimationName": "muscle1"
+        },
+        {
+            "Id": 5,
+            "DebugName": "door1",
+            "AnimationName": "door1"
+        },
+        {
+            "Id": 6,
+            "DebugName": "snotter1",
+            "AnimationName": "snotter1"
+        },
+        {
+            "Id": 7,
+            "DebugName": "trick1",
+            "AnimationName": "trick1"
+        },
+        {
+            "Id": 8,
+            "DebugName": "derp1",
+            "AnimationName": "derp1"
+        },
+        {
+            "Id": 9,
+            "DebugName": "fork1",
+            "AnimationName": "fork1"
+        },
+        {
+            "Id": 10,
+            "DebugName": "tower1",
+            "AnimationName": "tower1"
+        },
+        {
+            "Id": 11,
+            "DebugName": "fish1",
+            "AnimationName": "fish1"
+        },
+        {
+            "Id": 12,
+            "DebugName": "hammer1",
+            "AnimationName": "hammer1"
+        },
+        {
+            "Id": 13,
+            "DebugName": "destroy2",
+            "AnimationName": "destroy2"
+        },
+        {
+            "Id": 14,
+            "DebugName": "swear2",
+            "AnimationName": "swear2"
+        },
+        {
+            "Id": 15,
+            "DebugName": "cake2",
+            "AnimationName": "cake2"
+        },
+        {
+            "Id": 16,
+            "DebugName": "muscle2",
+            "AnimationName": "muscle2"
+        },
+        {
+            "Id": 17,
+            "DebugName": "door2",
+            "AnimationName": "door2"
+        },
+        {
+            "Id": 18,
+            "DebugName": "snotter2",
+            "AnimationName": "snotter2"
+        },
+        {
+            "Id": 19,
+            "DebugName": "trick2",
+            "AnimationName": "trick2"
+        },
+        {
+            "Id": 20,
+            "DebugName": "derp2",
+            "AnimationName": "derp2"
+        },
+        {
+            "Id": 21,
+            "DebugName": "fork2",
+            "AnimationName": "fork2"
+        },
+        {
+            "Id": 22,
+            "DebugName": "tower2",
+            "AnimationName": "tower2"
+        },
+        {
+            "Id": 23,
+            "DebugName": "fish2",
+            "AnimationName": "fish2"
+        },
+        {
+            "Id": 24,
+            "DebugName": "hammer2",
+            "AnimationName": "hammer2"
+        },
+        {
+            "Id": 25,
+            "DebugName": "destroy3",
+            "AnimationName": "destroy3"
+        },
+        {
+            "Id": 26,
+            "DebugName": "swear3",
+            "AnimationName": "swear3"
+        },
+        {
+            "Id": 27,
+            "DebugName": "cake3",
+            "AnimationName": "cake3"
+        },
+        {
+            "Id": 28,
+            "DebugName": "muscle3",
+            "AnimationName": "muscle3"
+        },
+        {
+            "Id": 29,
+            "DebugName": "door3",
+            "AnimationName": "door3"
+        },
+        {
+            "Id": 30,
+            "DebugName": "snotter3",
+            "AnimationName": "snotter3"
+        },
+        {
+            "Id": 31,
+            "DebugName": "trick3",
+            "AnimationName": "trick3"
+        },
+        {
+            "Id": 32,
+            "DebugName": "derp3",
+            "AnimationName": "derp3"
+        },
+        {
+            "Id": 33,
+            "DebugName": "fork3",
+            "AnimationName": "fork3"
+        },
+        {
+            "Id": 34,
+            "DebugName": "tower3",
+            "AnimationName": "tower3"
+        },
+        {
+            "Id": 35,
+            "DebugName": "fish3",
+            "AnimationName": "fish3"
+        },
+        {
+            "Id": 36,
+            "DebugName": "hammer3",
+            "AnimationName": "hammer3"
+        }
+    ]
+}

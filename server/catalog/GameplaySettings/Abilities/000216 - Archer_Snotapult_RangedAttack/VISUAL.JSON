@@ -1,0 +1,31 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_BA_SnotapulShot"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "RandomAnimation":
+                [
+                    {
+                        "AnimationName":"00_Attack",
+                        "Probability":0.1
+                    },
+                    {
+                        "AnimationName":"00_Attack02",
+                        "Probability":0.1
+                    },
+                    {
+                        "AnimationName":"00_Attack03",
+                        "Probability":0.8,
+                        "MaxConsecutivePlayCount":3
+                    }
+                ],
+                "AnimPrepare":"00_Attack"
+            }
+        ]
+    }
+]

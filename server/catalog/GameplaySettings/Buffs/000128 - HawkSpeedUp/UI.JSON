@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HawkDiving",
+        "OasisName":2221,
+        "OasisDescription":2222
+    }
+]

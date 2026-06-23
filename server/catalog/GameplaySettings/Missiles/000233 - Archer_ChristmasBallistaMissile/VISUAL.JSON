@@ -1,0 +1,54 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_BAMIS_ChristmasBallistaMissile",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_2ACAA758_AF501>MESH_2ACAA758_AF501.MESH",
+        "Scale":1.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualMissileFxSpec, HyperQuest.GameServer.Contracts",
+        "ObstacleHitFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_73112573>SPECIALFX_73112573.SPECIALFX",
+                "PlayMode":"One",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                },
+                "AttachFxOn":"Target"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>MATERIALS>MATERIAL_96AD54B7_AI933.MATERIAL",
+                "Length":7,
+                "SpaceBetweenSegment":0.3,
+                "SegmentLifeTime":0.5,
+                "FadeInTime":5,
+                "FadeOutTime":4,
+                "FadeInDistance":3,
+                "FadeOutDistance":3,
+                "Attachment":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualTrailFxVolumeAttachmentSpec, HyperQuest.GameServer.Contracts",
+                    "Volumes":
+                    [
+                        {
+                            "VolumeName":"FX_WeaponTrailBase",
+                            "OffsetZ":0.1
+                        },
+                        {
+                            "VolumeName":"FX_WeaponTrailMiddle",
+                            "OffsetZ":-0.1
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

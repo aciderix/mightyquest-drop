@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Door_VerticalGrid",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_C33DC109>XREF_C33DC109.XREF",
+        "HideInModeMask":2
+    }
+]

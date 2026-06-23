@@ -1,0 +1,25 @@
+{
+    "MatchmakingTable":
+    [
+        { "AttackerLevel":1, "MinDefenseRating":3, "MediumThreshold":7, "HardThreshold":12, "MaxDefenseRating":20 }, 
+        { "AttackerLevel":2, "MinDefenseRating":6, "MediumThreshold":14, "HardThreshold":24, "MaxDefenseRating":40 }, 
+        { "AttackerLevel":3, "MinDefenseRating":9, "MediumThreshold":21, "HardThreshold":36, "MaxDefenseRating":65 }, 
+        { "AttackerLevel":4, "MinDefenseRating":18, "MediumThreshold":42, "HardThreshold":65, "MaxDefenseRating":80 }, 
+        { "AttackerLevel":5, "MinDefenseRating":23, "MediumThreshold":53, "HardThreshold":80, "MaxDefenseRating":150 }, 
+        { "AttackerLevel":6, "MinDefenseRating":27, "MediumThreshold":63, "HardThreshold":108, "MaxDefenseRating":200 }, 
+        { "AttackerLevel":7, "MinDefenseRating":56, "MediumThreshold":130, "HardThreshold":190, "MaxDefenseRating":220 }, 
+        { "AttackerLevel":8, "MinDefenseRating":64, "MediumThreshold":149, "HardThreshold":220, "MaxDefenseRating":310 }, 
+        { "AttackerLevel":9, "MinDefenseRating":72, "MediumThreshold":167, "HardThreshold":250, "MaxDefenseRating":330 }, 
+        { "AttackerLevel":10, "MinDefenseRating":95, "MediumThreshold":221, "HardThreshold":378, "MaxDefenseRating":630 }, 
+        { "AttackerLevel":11, "MinDefenseRating":104, "MediumThreshold":243, "HardThreshold":416, "MaxDefenseRating":693 }, 
+        { "AttackerLevel":12, "MinDefenseRating":114, "MediumThreshold":265, "HardThreshold":454, "MaxDefenseRating":756 }, 
+        { "AttackerLevel":13, "MinDefenseRating":143, "MediumThreshold":333, "HardThreshold":570, "MaxDefenseRating":949 }, 
+        { "AttackerLevel":14, "MinDefenseRating":154, "MediumThreshold":358, "HardThreshold":614, "MaxDefenseRating":1022 },
+        { "AttackerLevel":15, "MinDefenseRating":187, "MediumThreshold":436, "HardThreshold":747, "MaxDefenseRating":1245 },
+        { "AttackerLevel":16, "MinDefenseRating":200, "MediumThreshold":465, "HardThreshold":797, "MaxDefenseRating":1328 }, 
+        { "AttackerLevel":17, "MinDefenseRating":238, "MediumThreshold":554, "HardThreshold":949, "MaxDefenseRating":1581 }, 
+        { "AttackerLevel":18, "MinDefenseRating":252, "MediumThreshold":586, "HardThreshold":1005, "MaxDefenseRating":1674 }, 
+        { "AttackerLevel":19, "MinDefenseRating":294, "MediumThreshold":685, "HardThreshold":1175, "MaxDefenseRating":1957 }, 
+        { "AttackerLevel":20, "MinDefenseRating":309, "MediumThreshold":721, "HardThreshold":1236, "MaxDefenseRating":2147483647 }
+	]
+}

@@ -1,0 +1,20 @@
+{
+    "CastleModelSynergyFilenames":
+    [
+        "DB:>RAW>XREFS>XREF_82917CF8_AI650>XREF_82917CF8_AI650.XREF",
+        "DB:>RAW>XREFS>XREF_9CD74696_BC671>XREF_9CD74696_BC671.XREF"
+    ],
+    "CastleSpecContainerId":133,
+    "EnvironmentName":"Default",
+    "HeroBoughtFx":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_5C6C7B21_BC680>SPECIALFX_5C6C7B21_BC680.SPECIALFX",
+            "AttachmentStrategy":{
+                "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+            }
+        }
+    ],
+    "CastleToFloatingLandTransitionDuration":5
+}

@@ -1,0 +1,114 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Beholder_Elite_Displacer",
+        "OasisName":15213,
+        "OasisDescription":15214
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"Displacer",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Beholder2.png",
+                        "NameOasisId":11163,
+                        "DescriptionOasisId":11164
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/B1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/B1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:B1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/B1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/B1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:B1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/B1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/B1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:B1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/B2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/B2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Beholder:B2e"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Improved crit",
+                    "OasisName":7791
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Rage {0}",
+                    "OasisName":7793
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/offensiveBuff.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"100"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"Flee",
+                    "OasisName":7792
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/movementAbility.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Improved dodge",
+                    "OasisName":9571
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/defensiveBuff.png"
+                }
+            },
+            {
+                "Name":{
+                    "DebugName":"Very Large size",
+                    "OasisName":7794
+                },
+                "Ui":{
+                    "InvIconUrl":"icoInv\/common\/creatureAbilitiesIcon\/resistanceToKnockBack.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Beholder\/B1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Beholder\/B1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_Beholder:B1e",
+        "HeightOffset":1.75
+    }
+]

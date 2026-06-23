@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Blob_LimitiedEdition_Fire_RespawnBuff2"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"ClusterCluck_OnDeathAoE",
+                "ReceiverType":"Target"
+            }
+        ]
+    }
+]

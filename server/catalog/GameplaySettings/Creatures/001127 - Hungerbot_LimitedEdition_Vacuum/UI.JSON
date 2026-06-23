@@ -1,0 +1,68 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Huberbot_Vacuum_LimitedEdition",
+        "OasisName":16234,
+        "OasisDescription":16235
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Hungerbot1.png",
+                        "NameOasisId":11183,
+                        "DescriptionOasisId":11186
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/A1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/A1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_Grapnel:A1e",
+        "HeightOffset":2
+    }
+]

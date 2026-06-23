@@ -1,0 +1,17 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedSound":{
+            
+        },
+        "BuffRemovedSound":{
+            
+        },
+        "HeroBuffAddedSoundPreset":{
+            
+        },
+        "HeroBuffRemovedSoundPreset":{
+            
+        }
+    }
+]

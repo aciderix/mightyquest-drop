@@ -1,0 +1,8 @@
+{   
+	"CameraSnappingEnabled":true,
+	"CameraSnappingSpeedDamping":0.42,
+	"CameraStickSearchRadiusTolerance":150,
+	"CameraIdleSearchRadiusTolerance":150,
+	"CameraControlRotationMultiplier":1.0,
+	"CameraControlRotationDamping":0.2
+}

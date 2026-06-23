@@ -1,0 +1,34 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LD_Durrrr",
+        "Scale":1.1,
+        "SizeCategory":"Large",
+        "FxAttachmentScale":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":2,
+        "HitImpactHeight":1.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_8217D682_AI145>ENTITY_8217D682_AI145.ENTITY",
+                        "Scale":1.1
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

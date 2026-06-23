@@ -1,0 +1,114 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":5011
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisplayPlayerCastle":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationLevelAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "MaxCastleRenovationLevel":"RenovationLevel3"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CastleRenovationUpgradeReadyAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "NextCastleRenovationLevel":"RenovationLevel4"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1,
+                "LockOnDisabledPickingType":"AllCastles"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"CastleRenovationPanel",
+                "StartDelay":0.3
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetCastleRenovationLevelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "CastleRenovationLevel":"RenovationLevel4",
+                "StartDelay":0.2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Duration":2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationLevelCompletedPanel"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"CastleRenovationLevelCompletedPanel"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    13,
+                    89
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GrantPrivilegesAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountPrivileges":128
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1
+            }
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Life Force Storage",
+        "OasisName":11260
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiBuildingInfoSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/buildings\/BUI_Storage_01_lifeforce.png",
+        "InvIconUrl":"icoInv\/buildings\/BUI_Storage_01_lifeforce.png",
+        "DescriptionOasisId":10964,
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_01_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_01_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_01"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_02_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_02_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_02"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_03_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_03_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_03"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_04_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_04_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_04"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_05_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_05_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_05"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_06_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_06_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_06"
+            },
+            {
+                "ShopIconUrl":"icoShop\/BUILDINGS\/BUI_Storage_07_lifeforce.png",
+                "InvIconUrl":"icoInv\/BUILDINGS\/BUI_Storage_07_lifeforce.png",
+                "LayerName":"icoShop_buildings:Storage_lifeforce_07"
+            }
+        ]
+    }
+]

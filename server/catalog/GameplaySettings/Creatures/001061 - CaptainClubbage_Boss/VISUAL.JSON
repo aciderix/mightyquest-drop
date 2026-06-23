@@ -1,0 +1,46 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_014_Skeleton_Boss_01",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6ACBBCF1_AI145>ENTITY_6ACBBCF1_AI145.ENTITY",
+        "Scale":1.7,
+        "FxAttachmentScale":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "HitImpactHeight":1.8
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6ACBBCF1_AI145>ENTITY_6ACBBCF1_AI145.ENTITY",
+                        "Scale":1.7
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_6ACBBCF1_AI145>ENTITY_6ACBBCF1_AI145.ENTITY",
+                        "Scale":1.7
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

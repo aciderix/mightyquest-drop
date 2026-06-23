@@ -1,0 +1,49 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Fireslash",
+        "OasisName":570
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"ICONINV\/HEROES\/CHA001\/SKILLS\/SPELL_CHA_001_Fireslash_Up.png",
+        "InvIconUrl":"ICONINV\/HEROES\/CHA001\/SKILLS\/SPELL_CHA_001_Fireslash_Up.png",
+        "LayerName":"UI_Common_Hero001_SkillsIcons:Fireslash"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":571,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Fire Slash damage multiplier 1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":571,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Fire Slash damage multiplier 2"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,33 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":0.2
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DamageModifierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Modifier":{
+                    "$type":"HyperQuest.GameServer.Contracts.BasicDamageModifierSpec, HyperQuest.GameServer.Contracts",
+                    "Multiplier":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":-1
+                    },
+                    "Priority":1
+                }
+            }
+        ],
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "Flags":2,
+        "RemoveIfCreatorDied":true,
+        "CreatorMaxDistance":10,
+        "BuffStopTriggers":{
+            "OnBuffedEntityDied":true,
+            "OnBuffedEntityStunned":true
+        },
+        "BuffableGameEntityTypeMask":-981
+    }
+]

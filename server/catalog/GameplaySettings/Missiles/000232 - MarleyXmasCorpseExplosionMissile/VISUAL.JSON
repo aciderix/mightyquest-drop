@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_008_NecroClaus_CorpseExplosion_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_65344264>MESH_65344264.MESH",
+        "Scale":0
+    }
+]

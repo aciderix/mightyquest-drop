@@ -1,0 +1,121 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BearTrap",
+        "OasisName":183
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Bear_Up.png",
+        "InvIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Bear_Up.png",
+        "LayerName":"UI_Common_Hero002_SkillsIcons:Bear"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":184,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "MissilesCount"
+                        ],
+                        "TaggedSpec":"Bear Trap number 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Bear Trap damage 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*-100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Bear Trap slow 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Bear Trap slow duration 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Bear Trap duration 1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":184,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "MissilesCount"
+                        ],
+                        "TaggedSpec":"Bear Trap number 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Bear Trap damage 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*-100",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Bear Trap slow 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Bear Trap slow duration 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Bear Trap duration 2"
+                    }
+                ]
+            }
+        ]
+    }
+]

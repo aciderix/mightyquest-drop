@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ENV_Royal_Draw_Bridge",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_8D262C88_AI348>XREF_8D262C88_AI348.XREF",
+        "HideInModeMask":2
+    }
+]

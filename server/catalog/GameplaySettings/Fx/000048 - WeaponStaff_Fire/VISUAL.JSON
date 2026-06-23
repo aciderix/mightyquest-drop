@@ -1,0 +1,11 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_E9A71B05_AI598>SPECIAL EFFECT_E9A71B05_AI598.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+            "BoneName":"FX_WeaponVolume"
+        },
+        "Name":"VFX_WEAP_Fire_Staff"
+    }
+]

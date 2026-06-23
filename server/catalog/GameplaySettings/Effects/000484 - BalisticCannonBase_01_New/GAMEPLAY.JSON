@@ -1,0 +1,41 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AimedCannonSpec, HyperQuest.GameServer.Contracts",
+        "SearchDistance":6,
+        "SearchAngleTolerance":15,
+        "RotationSpeed":200,
+        "Operations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.UseAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+                    "UseAbilityOnChildren":true,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ParentingSpec, HyperQuest.GameServer.Contracts",
+        "Children":
+        [
+            {
+                "Entity":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                    "SpecContainerReferenceId":485,
+                    "Name":"SpewerTurret_New"
+                },
+                "Position":{
+                    
+                },
+                "Orientation":{
+                    
+                }
+            }
+        ]
+    }
+]

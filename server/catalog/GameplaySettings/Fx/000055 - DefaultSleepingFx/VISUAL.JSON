@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_16986776_BA618>SPECIAL EFFECT_16986776_BA618.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+            "BoneName":"FX_Head"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualActivateAnimationCollectionFx, HyperQuest.GameServer.Contracts",
+        "StateName":"Sleeping",
+        "Activate":true
+    }
+]

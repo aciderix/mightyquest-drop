@@ -1,0 +1,67 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_435280E9_AH273>ENTITY_435280E9_AH273.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 3"
+            }
+        ],
+        "TemporaryVisualRanks":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_435280E9_AH273>ENTITY_435280E9_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_435280E9_AH273>ENTITY_435280E9_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_435280E9_AH273>ENTITY_435280E9_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_CBED9088_AH273>ENTITY_CBED9088_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_CBED9088_AH273>ENTITY_CBED9088_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_CBED9088_AH273>ENTITY_CBED9088_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_58E286DE_AH273>ENTITY_58E286DE_AH273.ENTITY"
+                    },
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_58E286DE_AH273>ENTITY_58E286DE_AH273.ENTITY"
+                    }
+                ],
+                "_comment":"Specialization 3"
+            }
+        ],
+        "BoostedVisual":{
+            "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_58E286DE_AH273>ENTITY_58E286DE_AH273.ENTITY"
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Bone_Puppeteer_CaptainEnrager",
+        "Scale":0.9,
+        "SizeCategory":"Small"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCharacterSpec, HyperQuest.GameServer.Contracts",
+        "MoveNaturalAnimationSpeed":2.5
+    }
+]

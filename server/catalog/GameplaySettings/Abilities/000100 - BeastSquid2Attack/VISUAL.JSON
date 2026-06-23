@@ -1,0 +1,28 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_020_KnockBackAttack_Ability"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "RandomAnimation":
+                [
+                    {
+                        "AnimationName":"00_Attack",
+                        "Probability":0.5,
+                        "MaxConsecutivePlayCount":2
+                    },
+                    {
+                        "AnimationName":"00_Attack02",
+                        "Probability":0.5,
+                        "MaxConsecutivePlayCount":2
+                    }
+                ],
+                "AnimPrepare":"00_Attack"
+            }
+        ]
+    }
+]

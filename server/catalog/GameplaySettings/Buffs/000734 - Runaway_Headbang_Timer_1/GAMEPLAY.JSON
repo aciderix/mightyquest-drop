@@ -1,0 +1,68 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":3
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnBuffStoppedBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ReplaceAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+                            "NewAbility":{
+                                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":1305
+                            },
+                            "AbilityToReplaceId":1331,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.ReplaceAbilityOperationSpec, HyperQuest.GameServer.Contracts",
+                            "NewAbility":{
+                                "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":1305
+                            },
+                            "AbilityToReplaceId":1332,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.RestartCooldownsOperationSpec, HyperQuest.GameServer.Contracts",
+                            "AbilitySpecContainers":
+                            [
+                                {
+                                    "$type":"HyperQuest.GameServer.Contracts.AbilitySpecContainerRef, HyperQuest.GameServer.Contracts",
+                                    "SpecContainerReferenceId":1305
+                                }
+                            ],
+                            "CooldownDuration":{
+                                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                "Value":0.5
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "InstancesRefreshType":"AllInstances",
+        "MaxInstances":1,
+        "MaxInstancesPerCreator":1,
+        "Flags":2,
+        "BuffStopTriggers":{
+            "OnBuffedEntityDied":true
+        }
+    }
+]

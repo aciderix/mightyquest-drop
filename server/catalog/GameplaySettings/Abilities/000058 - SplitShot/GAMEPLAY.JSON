@@ -1,0 +1,115 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":5,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.7,
+                                "Up":1,
+                                "Right":0.1
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MissilesCount":5,
+                            "ArcAngle":60,
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":33,
+                                "Name":"SplitShotMissile"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Tag":"Split Shot number of arrows 1"
+                        }
+                    ]
+                },
+                "OasisName":123,
+                "OasisShortDescription":124,
+                "OasisLongDescription":369,
+                "Cooldown":0.5,
+                "PrepareTime":0.1,
+                "RecoverTime":0.6,
+                "RecoverInterruptWindow":0.7,
+                "MaxDistance":6,
+                "DirectedMaxDistance":10,
+                "CastCost":10,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":9
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.7,
+                                "Up":1,
+                                "Right":0.1
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"TargetOrAbilityCastPosition"
+                            },
+                            "MissilesCount":7,
+                            "ArcAngle":75,
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":51,
+                                "Name":"SplitShotMissile2"
+                            },
+                            "CancelSpawningWhenWallBetweenOwnerAndSpawnPos":true,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Tag":"Split Shot number of arrows 2"
+                        }
+                    ]
+                },
+                "OasisName":125,
+                "OasisShortDescription":126,
+                "OasisLongDescription":370,
+                "Cooldown":0.5,
+                "PrepareTime":0.1,
+                "RecoverTime":0.7,
+                "RecoverInterruptWindow":0.6,
+                "MaxDistance":6,
+                "DirectedMaxDistance":10,
+                "CastCost":10,
+                "AbilityCastType":"Line",
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":21
+                },
+                "NeedFacingTarget":false,
+                "HoldAndCast":true
+            }
+        ]
+    }
+]

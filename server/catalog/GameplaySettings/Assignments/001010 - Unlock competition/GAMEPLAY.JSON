@@ -1,0 +1,634 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":170
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayPlayerCastleInAttackSelectionAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection\/SetRegionId?regionId=3"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    58,
+                    89,
+                    118
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            306
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ObjectiveId":306
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-120,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":-120
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    89
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"101000001",
+                "Type":"Arrow",
+                "GameButtonId":"AttackSelectionBossShortcutButton",
+                "PositionElementId":"#attack-castleSelector-boss-panel",
+                "OffsetTop":-60,
+                "ArrowDirection":"Right",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"castlePopup"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectivesCompletedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "Objectives":
+                        [
+                            5
+                        ],
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.AttackExitedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "CompletionTypeMask":"TreasureRoom",
+                        "CastleModeMask":1,
+                        "CastleId":14
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/attackSelection"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    4,
+                    13,
+                    15,
+                    50,
+                    54,
+                    55,
+                    57,
+                    58,
+                    59,
+                    62,
+                    70,
+                    71,
+                    72,
+                    73,
+                    86,
+                    106,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    137,
+                    138,
+                    139,
+                    142,
+                    149,
+                    156,
+                    157,
+                    159,
+                    160,
+                    161,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenActiveAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.LoadingScreenHiddenAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1500001",
+                "Type":"StaticScreen",
+                "IsCloseButtonVisible":true,
+                "NarrativePictureUrl":"NUE\/screens\/SC_Snotula_01b.jpg",
+                "StaticScreenText":"Press any key to continue",
+                "StaticScreenTextOasisId":11236,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":2
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1500001"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1500002",
+                "Type":"StaticScreen",
+                "IsCloseButtonVisible":true,
+                "NarrativePictureUrl":"NUE\/screens\/SC_Snotula_02b.jpg",
+                "StaticScreenText":"Press any key to continue",
+                "StaticScreenTextOasisId":11236,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":3
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1500002"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1500003",
+                "Type":"StaticScreen",
+                "IsCloseButtonVisible":true,
+                "NarrativePictureUrl":"NUE\/screens\/mage_snotulaDefeat.jpg",
+                "StaticScreenText":"Press any key to continue",
+                "StaticScreenTextOasisId":11236,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":4
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1500003"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1500004",
+                "Type":"StaticScreen",
+                "IsCloseButtonVisible":true,
+                "NarrativePictureUrl":"NUE\/screens\/runaway_snotulaDefeat.jpg",
+                "StaticScreenText":"Press any key to continue",
+                "StaticScreenTextOasisId":11236,
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrentHeroAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "HeroId":5
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1500004"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1,
+                "LockOnDisabledPickingType":"AllCastles"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StopAmbienceSoundOverrideAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StopMusicOverrideAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroLevelUp"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"heroLevelUp"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "StartDelay":0.2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"skillTree"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"skillTree"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayObjectiveCompletedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":5,
+                "StartDelay":0.2,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "Disabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedAllViewedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"objectivepopup"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1010001",
+                "Text":"Now the only thing that stands between you and a fortune...",
+                "TextOasisId":15490,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15490,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008ABAB.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-123,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"1010001"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    58
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1010002",
+                "Title":"Region unlocked",
+                "TitleOasisId":11227,
+                "Text":"A new region has been unlocked text",
+                "TextOasisId":11228,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"regionSelection"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1010003",
+                "Type":"Arrow",
+                "GameButtonId":"LobbyAttackSelectionWorldMapButton",
+                "PositionElementId":"#attack-castleSelector-region-panel",
+                "OffsetLeft":50,
+                "ArrowDirection":"Right",
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"regionSelection"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelNotShownAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"regionSelection"
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"regionSelection"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    118
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"1010004",
+                "HideOverlay":true,
+                "Title":"Click on unlocked region",
+                "TitleOasisId":11227,
+                "Text":"Click unlocked region text",
+                "TextOasisId":11229,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"BottomLeft",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PanelClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "PanelName":"regionSelection"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":100,
+                "StartDelay":1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ChangeBuildInteractionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DeleteInteractionState":{
+                    "Enable":true,
+                    "GameEntityTypeMask":1023
+                }
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockAttackRegionAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AttackRegionIds":
+                [
+                    1,
+                    2
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ServerAssignmentActionTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ShowShopItemsOnlyAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "IsDisabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UnlockCamera":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetAttackSelectionLockOnAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AccountId":-1
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    89,
+                    118
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    4,
+                    13,
+                    15,
+                    50,
+                    54,
+                    55,
+                    57,
+                    58,
+                    59,
+                    62,
+                    70,
+                    71,
+                    72,
+                    73,
+                    86,
+                    106,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    126,
+                    127,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    137,
+                    138,
+                    139,
+                    142,
+                    149,
+                    156,
+                    157,
+                    159,
+                    160,
+                    161,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "AffectAllButtons":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":222
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":223
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":128
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OpenPanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chat"
+            }
+        ],
+        "GrantedAccess":64
+    }
+]

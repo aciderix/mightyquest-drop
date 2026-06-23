@@ -1,0 +1,10 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"Stairs_Fake_Exit_L",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_9BB3BFBE_AI650>XREF_9BB3BFBE_AI650.XREF"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualPickingSpec, HyperQuest.GameServer.Contracts"
+    }
+]

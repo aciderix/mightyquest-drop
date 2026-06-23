@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"DEC_020_RoyalA_Thin_Wall_01",
+        "OasisName":15736,
+        "OasisDescription":15736
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Barricade_Halloween_02_B.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Barricade_Halloween_02_B.png",
+        "HeightOffset":2
+    }
+]

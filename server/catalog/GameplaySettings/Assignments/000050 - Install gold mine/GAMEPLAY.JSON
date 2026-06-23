@@ -1,0 +1,626 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.AssignmentCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "AssignmentId":70
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.GoToScreenAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "GameUrl":"game:\/\/build"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    99
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    3,
+                    4,
+                    5,
+                    15,
+                    34,
+                    50,
+                    54,
+                    55,
+                    59,
+                    64,
+                    66,
+                    70,
+                    71,
+                    72,
+                    73,
+                    75,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    85,
+                    101,
+                    105,
+                    106,
+                    108,
+                    116,
+                    119,
+                    120,
+                    121,
+                    122,
+                    123,
+                    128,
+                    129,
+                    130,
+                    131,
+                    132,
+                    139,
+                    142,
+                    156,
+                    158,
+                    159,
+                    160,
+                    161,
+                    181
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    157
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.WaitAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2,
+                        "IsNot":true
+                    }
+                ],
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.SimulationLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "SimulationModeMask":2
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"chat"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "DisabledMouseButtonMask":2
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500001",
+                "Text":"Stan tells player to install a Gold mine",
+                "TextOasisId":15442,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15442,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008AB4B.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-150,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuildingAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "BuildingSpecContainerIds":
+                        [
+                            5
+                        ],
+                        "Rank":1,
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"500001"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnlockObjectiveAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":111,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveUnlockClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ShowShopItemsOnlyAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ShopItems":
+                [
+                    {
+                        "ItemHtmlTag":"10-5-1",
+                        "ItemType":"Building",
+                        "ItemId":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetLastVisitedShopCategoryAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "BuildingType":"CorneliusEmporium",
+                "ShopCategory":"UnifiedShopDefend",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":4
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopDefend"
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":1
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":2
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":3
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":5
+                    }
+                ],
+                "Lock":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500002",
+                "HideOverlay":true,
+                "Title":"Dummy screen to remove black overlay",
+                "TitleOasisId":11083,
+                "Text":"Dummy screen to remove black overlay",
+                "TextOasisId":11084,
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":9999,
+                "OffsetLeft":9999,
+                "StartDelay":0.5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.UnLockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    139,
+                    156
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500004",
+                "Type":"Arrow",
+                "GameButtonId":"BuildingNavBarButtonCorneliusEmporium",
+                "Top":240,
+                "Left":70,
+                "ArrowDirection":"Up",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuildingAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "BuildingSpecContainerIds":
+                        [
+                            5
+                        ],
+                        "Rank":1,
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ShopShownAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ShopCategory":"UnifiedShopDefend"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockCameraAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "UnlockCamera":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500004",
+                "Title":"Adding Gold Mine",
+                "TitleOasisId":14349,
+                "Text":"Select a currency",
+                "TextOasisId":11419,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuildingAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "BuildingSpecContainerIds":
+                        [
+                            5
+                        ],
+                        "Rank":1,
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"Building",
+                        "ItemId":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500014",
+                "Type":"Arrow",
+                "ShopItemDefinition":{
+                    "ItemType":"Building",
+                    "ItemId":5
+                },
+                "OffsetTop":-90,
+                "ArrowDirection":"Left",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuildingAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "BuildingSpecContainerIds":
+                        [
+                            5
+                        ],
+                        "Rank":1,
+                        "IsNot":true
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"Building",
+                        "ItemId":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500005",
+                "HideOverlay":true,
+                "Title":"Dummy screen to remove black overlay",
+                "TitleOasisId":11083,
+                "Text":"Dummy screen to remove black overlay",
+                "TextOasisId":11084,
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":9999,
+                "OffsetLeft":9999,
+                "StartDelay":0.5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500006",
+                "Title":"Gold mine harvest",
+                "TitleOasisId":15522,
+                "Text":"Gold harvest text",
+                "TextOasisId":15523,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuildingAssignmentConditionSpec, HyperQuest.GameServer.Contracts",
+                        "BuildingSpecContainerIds":
+                        [
+                            5
+                        ],
+                        "Rank":1,
+                        "IsNot":true
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.BuildingUpgradeCompletedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClearBuildSelectedEntityAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LockWidgetsAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Buttons":
+                [
+                    139
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.DisplayObjectiveCompletedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "ObjectiveId":111,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"shop"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePanelAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "PanelName":"ShopPc"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500007",
+                "Title":"Mine Harvest",
+                "TitleOasisId":15602,
+                "Text":"Click on the mine to harvest",
+                "TextOasisId":15524,
+                "PopupBindingVariable":"TextInformation_Node",
+                "Type":"Information",
+                "Position":"MiddleRight",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.MineHarvestableAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HarvestingLootDroppedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500015",
+                "Type":"Arrow",
+                "TargetEntitySearch":{
+                    "GameEntityTypeMask":512,
+                    "Selections":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.SpecContainersSelectionSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainerType":"Building",
+                            "SpecContainerIds":
+                            [
+                                5
+                            ]
+                        }
+                    ]
+                },
+                "OffsetLeft":50,
+                "ArrowDirection":"Left",
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.MineHarvestableAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "StartType":"WithPrevious",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.HarvestingLootDroppedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    5
+                ],
+                "Conditions":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.MineHarvestableAssignmentConditionSpec, HyperQuest.GameServer.Contracts"
+                    }
+                ],
+                "StartType":"WithPrevious"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building",
+                "SpecContainerIds":
+                [
+                    99
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500008",
+                "Text":"Mines installed congratz description",
+                "TextOasisId":15445,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":15445,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008AB4E.SOUND"
+                            }
+                        },
+                        {
+                            "TextOasisId":15448,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008AB78.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "OffsetTop":-150,
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"500008"
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500009",
+                "HideOverlay":true,
+                "Title":"Dummy screen to remove black overlay",
+                "TitleOasisId":11083,
+                "Text":"Dummy screen to remove black overlay",
+                "TextOasisId":11084,
+                "Type":"Information",
+                "Position":"MiddleCenter",
+                "OffsetTop":9999,
+                "OffsetLeft":9999,
+                "StartDelay":0.5
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetSelectableSpecContainersAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "SpecContainerType":"Building"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BuildMouseButtonsAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ShowShopItemsOnlyAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "IsDisabled":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500001"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500002"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500003"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500004"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500005"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500006"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500007"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500008"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.ClosePopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"500009"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.SetShopFilterLockedAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Filters":
+                [
+                    {
+                        "Type":"UnifiedShopDefend"
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":1
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":2
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":3
+                    },
+                    {
+                        "Type":"UnifiedShopDefend",
+                        "Id":5
+                    }
+                ]
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts"
+            }
+        ]
+    }
+]

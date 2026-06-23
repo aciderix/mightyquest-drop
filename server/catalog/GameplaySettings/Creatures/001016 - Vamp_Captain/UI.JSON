@@ -1,0 +1,44 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Vampire",
+        "OasisName":1263,
+        "OasisDescription":1264
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Misc\/vampire1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Misc\/vampire1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:vampire1",
+        "HeightOffset":1.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Sprint",
+                    "OasisName":7590
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png"
+                }
+            }
+        ],
+        "TempoararyAbilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Sprint",
+                    "OasisName":7590
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/movementAbility.png"
+                }
+            }
+        ]
+    }
+]

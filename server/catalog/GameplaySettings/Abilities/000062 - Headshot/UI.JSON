@@ -1,0 +1,109 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Headshot",
+        "OasisName":133
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Head_Up.png",
+        "InvIconUrl":"ICONINV\/HEROES\/CHA002\/SKILLS\/SPELL_CHA_002_Head_Up.png",
+        "LayerName":"UI_Common_Hero002_SkillsIcons:Head"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":134,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Headshot damage 1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":136,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Headshot damage 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Headshot knockback distance 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "KnockbackStandupDuration"
+                        ],
+                        "TaggedSpec":"Headshot knockback duration 2"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":138,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*herodps",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Headshot damage 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Headshot knockback distance 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "KnockbackStandupDuration"
+                        ],
+                        "TaggedSpec":"Headshot knockback duration 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Headshot knockback area 3"
+                    }
+                ]
+            }
+        ]
+    }
+]

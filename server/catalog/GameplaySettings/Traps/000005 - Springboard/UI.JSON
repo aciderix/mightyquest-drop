@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Springboard",
+        "OasisName":1595,
+        "OasisDescription":1596
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/Tra_009_Spring01.png",
+        "InvIconUrl":"icoInv\/traps\/Tra_009_Spring01.png",
+        "LayerName":"UI_Common_TrapsIcons:Spring_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"fling",
+                    "OasisName":7677
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                }
+            }
+        ]
+    }
+]

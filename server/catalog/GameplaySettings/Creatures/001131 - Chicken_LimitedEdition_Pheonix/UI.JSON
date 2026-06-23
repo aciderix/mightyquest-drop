@@ -1,0 +1,86 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Chicken_LimitedEdition_Pheonix",
+        "OasisName":16325,
+        "OasisDescription":16326
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Pheonix_Resurection",
+                    "OasisName":16327
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/CHA_059_Phoenix_M001.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/CHA_059_Phoenix_M001.png",
+                "LayerName":"UI_Common_CreaturesIcons_Rares:CHA_059_Phoenix_M001"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

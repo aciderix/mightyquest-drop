@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Linear_Shrine_01",
+        "OasisName":12141,
+        "OasisDescription":15720
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/rooms\/Linear_Shrine_01.png",
+        "InvIconUrl":"icoInv\/rooms\/Linear_Shrine_01.png",
+        "LayerName":"icoShop_rooms:Linear_Shrine_01"
+    }
+]

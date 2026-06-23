@@ -1,0 +1,1728 @@
+{
+    "Objectives":
+    [
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":111,
+            "DebugName":"Install gold mine",
+            "Category":"Build",
+            "Title":943,
+            "Description":944,
+            "Instruction":15660,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":250
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuildingRankCondition, HyperQuest.GameServer.Contracts",
+                    "SpecContainerId":5,
+                    "Count":1,
+                    "Rank":1,
+                    "OasisId":15660,
+                    "DebugName":"Build a gold mine"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":123,
+            "DebugName":"Place barricades",
+            "Category":"Build",
+            "Title":15527,
+            "Description":15528,
+            "Instruction":15661,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":500
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Decoration",
+                    "Count":3,
+                    "OasisId":15661,
+                    "DebugName":"Place barricades"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":201,
+            "DebugName":"Place 1 critter",
+            "Category":"Build",
+            "Title":16163,
+            "Description":16168,
+            "Instruction":16163,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":1,
+                    "OasisId":16163,
+                    "DebugName":"Reach 1 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":202,
+            "DebugName":"Place 2 critter",
+            "Category":"Build",
+            "Title":16162,
+            "Description":16167,
+            "Instruction":16162,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":2,
+                    "OasisId":16162,
+                    "DebugName":"Reach 2 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":203,
+            "DebugName":"Place 3 critter",
+            "Category":"Build",
+            "Title":16161,
+            "Description":16162,
+            "Instruction":16161,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":3,
+                    "OasisId":16161,
+                    "DebugName":"Reach 3 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":204,
+            "DebugName":"Place 4 critter",
+            "Category":"Build",
+            "Title":16160,
+            "Description":16165,
+            "Instruction":16160,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":4,
+                    "OasisId":16160,
+                    "DebugName":"Reach 4 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":205,
+            "DebugName":"Place 5 critter",
+            "Category":"Build",
+            "Title":16159,
+            "Description":16164,
+            "Instruction":16159,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":5,
+                    "OasisId":16159,
+                    "DebugName":"Reach 5 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":200,
+            "DebugName":"Fill castle with creatures",
+            "Category":"Build",
+            "Title":15533,
+            "Description":15534,
+            "Instruction":15534,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":100
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":750
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":10,
+                    "OasisId":15534,
+                    "DebugName":"Reach 10 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":121,
+            "DebugName":"Upgrade castle heart to rank 2",
+            "Category":"Build",
+            "Title":15538,
+            "Description":15539,
+            "Instruction":15662,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":1000
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuildingRankCondition, HyperQuest.GameServer.Contracts",
+                    "SpecContainerId":1,
+                    "Count":1,
+                    "Rank":2,
+                    "OasisId":15662,
+                    "DebugName":"Upgrade castle heart to rank 2"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":127,
+            "DebugName":"NPE 2nd Castle fill up",
+            "Category":"Build",
+            "Title":15562,
+            "Description":15563,
+            "Instruction":15663,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":200
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ConstructionPointsBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "Count":45,
+                    "OasisId":15663,
+                    "DebugName":"Reach 45 CP"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":128,
+            "DebugName":"Upgrade potion brewery to level 1",
+            "Category":"Build",
+            "Title":15598,
+            "Description":15599,
+            "Instruction":15664,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":100
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuildingRankCondition, HyperQuest.GameServer.Contracts",
+                    "SpecContainerId":8,
+                    "Count":1,
+                    "Rank":1,
+                    "OasisId":15664,
+                    "DebugName":"Upgrade potion brewery to level 1"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":222,
+            "DebugName":"Upgrade blacksmith to level 1",
+            "Category":"Build",
+            "Title":16220,
+            "Description":16214,
+            "Instruction":16213,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":100
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuildingRankCondition, HyperQuest.GameServer.Contracts",
+                    "SpecContainerId":9,
+                    "Count":1,
+                    "Rank":1,
+                    "OasisId":16213,
+                    "DebugName":"Upgrade blacksmith to level 1"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":223,
+            "DebugName":"Upgrade crafting to level 1",
+            "Category":"Build",
+            "Title":16221,
+            "Description":16216,
+            "Instruction":16215,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":100
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BuildingRankCondition, HyperQuest.GameServer.Contracts",
+                    "SpecContainerId":10,
+                    "Count":1,
+                    "Rank":1,
+                    "OasisId":16215,
+                    "DebugName":"Upgrade crafting to level 1"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":14
+            },
+            "Id":5,
+            "DebugName":"Defeat Count Snottingham",
+            "Category":"Attack",
+            "Title":593,
+            "Description":594,
+            "Instruction":593,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":200
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+                        "Xp":250
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1060,
+                    "Count":1
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":15
+            },
+            "Id":100,
+            "DebugName":"Defeat Mr. Firesly",
+            "Category":"Attack",
+            "Title":800,
+            "Description":801,
+            "Instruction":15665,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":500
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":500
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+                        "Xp":1000
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1077,
+                    "Count":1,
+                    "OasisId":15665
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":16
+            },
+            "Id":101,
+            "DebugName":"Defeat Durrrr",
+            "Category":"Attack",
+            "Title":802,
+            "Description":803,
+            "Instruction":15666,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":750
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":750
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+                        "Xp":3500
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.AttackRegionUnlockedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "AttackRegionId":5
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":429,
+                    "Count":1,
+                    "OasisId":15666
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":17
+            },
+            "Id":99,
+            "DebugName":"Defeat Captain Clubbage",
+            "Category":"Attack",
+            "Title":798,
+            "Description":799,
+            "Instruction":15667,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":1000
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":1000
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+                        "Xp":10000
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.AttackRegionUnlockedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "AttackRegionId":6
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1061,
+                    "Count":1,
+                    "OasisId":15667
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":18
+            },
+            "Id":103,
+            "DebugName":"Defeat Lord Marleybone",
+            "Category":"Attack",
+            "Title":806,
+            "Description":807,
+            "Instruction":15668,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":1500
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":1500
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+                        "Xp":30000
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.AttackRegionUnlockedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "AttackRegionId":7
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":431,
+                    "Count":1,
+                    "OasisId":15668
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":19
+            },
+            "Id":102,
+            "DebugName":"Defeat Duke of Stabbington",
+            "Category":"Attack",
+            "Title":804,
+            "Description":805,
+            "Instruction":15669,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":2000
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":2000
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.XpRewardItem, HyperQuest.GameServer.Contracts",
+                        "Xp":100000
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.AttackRegionUnlockedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "AttackRegionId":8
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":430,
+                    "Count":1,
+                    "OasisId":15669
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":20
+            },
+            "Id":104,
+            "DebugName":"Defeat Dragonificus Terribilus",
+            "Category":"Attack",
+            "Title":808,
+            "Description":809,
+            "Instruction":15670,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":5000
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":5000
+                        }
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.AttackRegionUnlockedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "AttackRegionId":9
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":432,
+                    "Count":1,
+                    "OasisId":15670
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":4
+            },
+            "Id":122,
+            "DebugName":"Clean your Land",
+            "Category":"Attack",
+            "Title":16383,
+            "Description":16384,
+            "Instruction":16385,
+            "ManualPopupTriggerOnCompletion":true,
+            "PerHeroReward":
+            {
+                "2":{
+                    "RewardItems":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.InventoryItemRewardItem, HyperQuest.GameServer.Contracts",
+                            "Item":{
+                                "$type":"HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+                                "ItemLevel":1,
+                                "ArchetypeId":2,
+                                "TemplateId":21101
+                            }
+                        }
+                    ]
+                }
+            },
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.BuildObjective, HyperQuest.GameServer.Contracts",
+            "Id":124,
+            "DebugName":"Place Rooms",
+            "Category":"Build",
+            "Title":15542,
+            "Description":15543,
+            "Instruction":15543,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":250
+                        }
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientBuiltCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Room",
+                    "Count":3,
+                    "OasisId":15543,
+                    "DebugName":"Reach 3 Rooms"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleValidityCondition, HyperQuest.GameServer.Contracts",
+                    "DebugName":"Castle must be valid"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "ClientSideCompletion":true
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.ClientObjective, HyperQuest.GameServer.Contracts",
+            "Id":126,
+            "DebugName":"Reach Level 4",
+            "Category":"Attack",
+            "Title":16181,
+            "Description":16185,
+            "Instruction":16181,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":500
+                        }
+                    }
+                ]
+            },
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":100
+            },
+            "Id":300,
+            "DebugName":"Q1 - Chickenvaders",
+            "Category":"Attack",
+            "Title":16563,
+            "Description":16532,
+            "Instruction":16563,
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1002,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/Defenderidium",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/Defenderidium"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1002,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/Defenderidium",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/Defenderidium"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1002,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/Defenderidium",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/Defenderidium"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1004,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/SmolderingEye",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/SmolderingEye"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1004,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/SmolderingEye",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/SmolderingEye"
+                    }
+                ]
+            },
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16542,
+                    "DebugName":"Pay Tybalt a visit"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1081,
+                    "Count":20,
+                    "OasisId":16543,
+                    "DebugName":"Kill 20 chickens"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16544,
+                    "DebugName":"Exit the farm"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Korbeck",
+            "VoiceOverSoundId":"Objective300_VO_NUE_005_01FEN_DRY16574"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleTypes":
+            [
+                "User"
+            ],
+            "Id":301,
+            "DebugName":"Q2 - Friendly Pillage",
+            "Category":"Attack",
+            "Title":16569,
+            "Description":16533,
+            "Instruction":16569,
+            "ShowUnlockedPopup":false,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1000,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/GiantSweat",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/GiantSweat"
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "ObjectiveId":300
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16545,
+                    "DebugName":"Enter another player's castle."
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "VoiceOverSoundId":"Objective301_VO_NUE_005_03COR_DRY16578"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":101
+            },
+            "Id":302,
+            "DebugName":"Q3 - Revenge of the Birds",
+            "Category":"Attack",
+            "Title":16564,
+            "Description":16534,
+            "Instruction":16564,
+            "ShowUnlockedPopup":false,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1000,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/GiantSweat",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/GiantSweat"
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "ObjectiveId":301
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16548,
+                    "DebugName":"Storm Fendrick's Land"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1087,
+                    "Count":1,
+                    "OasisId":16549,
+                    "DebugName":"Defeat General Pow!"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16550,
+                    "DebugName":"Find the exit (and use it)"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Rosback",
+            "VoiceOverSoundId":"Objective302_VO_NUE_005_04TYB_DRY16580"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":102
+            },
+            "Id":303,
+            "DebugName":"The Heist Part 1",
+            "Category":"Attack",
+            "Title":16565,
+            "Description":16535,
+            "Instruction":16565,
+            "ShowUnlockedPopup":false,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1003,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/DinoScales",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/DinoScales"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1009,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/general_05",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/general_05"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1009,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/general_05",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/general_05"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.InventoryItemRewardItem, HyperQuest.GameServer.Contracts",
+                        "Item":{
+                            "$type":"HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+                            "ItemLevel":1,
+                            "TemplateId":84349
+                        },
+                        "LargeIconUrl":"icoShop\/pets\/PET_006_Nigel_M007",
+                        "SmallIconUrl":"icoInv\/pets\/PET_006_Nigel_M007"
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "ObjectiveId":302
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16551,
+                    "DebugName":"Probe the Alien Castle"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Decoration",
+                    "SpecContainerId":226,
+                    "Count":1,
+                    "OasisId":16552,
+                    "DebugName":"Break Nigel out of his box"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16553,
+                    "DebugName":"Return to tell the tale"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "VoiceOverSoundId":"Objective303_VO_NUE_005_05COR_DRY16582"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":103
+            },
+            "Id":304,
+            "DebugName":"Q5 - The Heist Part 2",
+            "Category":"Attack",
+            "Title":16566,
+            "Description":16536,
+            "Instruction":16566,
+            "ShowUnlockedPopup":false,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"PremiumCash",
+                            "Amount":50
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1001,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/EagleSouls",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/EagleSouls"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1010,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/General_04",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/General_04"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1010,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/General_04",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/General_04"
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "ObjectiveId":303
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16554,
+                    "DebugName":"Visit the bank"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Building",
+                    "SpecContainerId":5,
+                    "Count":6,
+                    "OasisId":16555,
+                    "DebugName":"Destroy the Gold Mines"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16556,
+                    "DebugName":"Withdraw your savings (It's all yours)"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "VoiceOverSoundId":"Objective304_VO_NUE_005_06COR_DRY16584"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":104
+            },
+            "Id":305,
+            "DebugName":"Q8 - Flipping the Word",
+            "Category":"Attack",
+            "Title":16567,
+            "Description":16539,
+            "Instruction":16567,
+            "ShowUnlockedPopup":false,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1004,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/SmolderingEye",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/SmolderingEye"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1004,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/SmolderingEye",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/SmolderingEye"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1008,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/general_06",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/general_06"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1008,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/general_06",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/general_06"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1018,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/Love",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/Love"
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "ObjectiveId":304
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16557,
+                    "DebugName":"Bust up the Squatter's Castle"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1023,
+                    "Count":4,
+                    "OasisId":16558,
+                    "DebugName":"Kill 3 SW Elite (traps will help you)"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16559,
+                    "DebugName":"Leave the place clean please"
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Cornelius",
+            "VoiceOverSoundId":"Objective305_VO_NUE_005_10COR_DRY16593"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.DefeatCastleObjective, HyperQuest.GameServer.Contracts",
+            "CastleId":{
+                "CastleType":"Ubisoft",
+                "Id":14
+            },
+            "Id":306,
+            "DebugName":"Q10 - Who's the Boss?",
+            "Category":"Attack",
+            "Title":16568,
+            "Description":16541,
+            "Instruction":16568,
+            "ShowUnlockedPopup":false,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1002,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/Defenderidium",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/Defenderidium"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1002,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/Defenderidium",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/Defenderidium"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1009,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/general_05",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/general_05"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1009,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/general_05",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/general_05"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CraftingMaterialsRewardItem, HyperQuest.GameServer.Contracts",
+                        "CraftingMaterials":
+                        [
+                            {
+                                "Id":1019,
+                                "Quantity":1
+                            }
+                        ],
+                        "LargeIconUrl":"UI\/IcoInv\/materials\/TheNumber42",
+                        "SmallIconUrl":"UI\/IcoInv\/materials\/TheNumber42"
+                    }
+                ]
+            },
+            "Requirements":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.ObjectiveCompletedObjectiveRequirement, HyperQuest.GameServer.Contracts",
+                    "ObjectiveId":305
+                }
+            ],
+            "Conditions":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleEnteredCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16560,
+                    "DebugName":"Attack Snottingham's Castle "
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientDestroyedCondition, HyperQuest.GameServer.Contracts",
+                    "ItemType":"Creature",
+                    "SpecContainerId":1060,
+                    "Count":1,
+                    "OasisId":16561,
+                    "DebugName":"Defeat the Snotty Tyrant"
+                },
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.CastleCompletedCondition, HyperQuest.GameServer.Contracts",
+                    "OasisId":16562,
+                    "DebugName":"Ask \"Who's the boss?' You are."
+                }
+            ],
+            "IconUrl":"UI_Quest_Icons:Nigel",
+            "VoiceOverSoundId":"Objective306_VO_NUE_005_11NIG_DRY16595"
+        },
+        {
+            "$type":"HyperQuest.GameServer.Contracts.ClientObjective, HyperQuest.GameServer.Contracts",
+            "Id":307,
+            "DebugName":"Chests filling",
+            "Category":"Build",
+            "ShowUnlockedPopup":false,
+            "ManualPopupTriggerOnCompletion":true,
+            "Reward":{
+                "RewardItems":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"IGC",
+                            "Amount":2000
+                        }
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CurrencyAmountRewardItem, HyperQuest.GameServer.Contracts",
+                        "CurrencyAmount":{
+                            "CurrencyType":"LifeForce",
+                            "Amount":2000
+                        }
+                    }
+                ]
+            },
+            "IconUrl":"UI_Quest_Icons:Cornelius"
+        }
+    ],
+    "DisplayableMaxCount":3
+}

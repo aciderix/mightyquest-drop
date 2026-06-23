@@ -1,0 +1,145 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":13351,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0} * (-100)",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell debuff multiplier 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0} * (-100)",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell slow multiplier 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Rebel yell health multiplier 1"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell duration 1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":13351,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0} * (-100)",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell debuff multiplier 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0} * (-100)",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell slow multiplier 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Rebel yell health multiplier 2"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell duration 2"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":13351,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0} * (-100)",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell debuff multiplier 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0} * (-100)",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell slow multiplier 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}*100",
+                        "FormulaParams":
+                        [
+                            "Multiplier"
+                        ],
+                        "TaggedSpec":"Rebel yell health multiplier 3"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"Rebel yell duration 3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Rebel Yell",
+        "OasisName":13350
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"iconInv\/heroes\/cha004\/skills\/SPELL_CHA_004_songDefense_up.png",
+        "InvIconUrl":"iconInv\/heroes\/cha004\/skills\/SPELL_CHA_004_songDefense_up.png",
+        "LayerName":"UI_Common_Hero004_SkillsIcons:songDefense"
+    }
+]

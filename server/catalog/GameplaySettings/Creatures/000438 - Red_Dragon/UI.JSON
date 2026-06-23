@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Nicolas Flamel",
+        "OasisName":13205,
+        "OasisDescription":13204
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Flameo",
+                    "OasisName":7814
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_038_RedDragon_01.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_038_RedDragon_01.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:RedDragon_01",
+        "HeightOffset":4.2
+    }
+]

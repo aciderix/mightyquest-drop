@@ -1,0 +1,183 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.HealOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Value":{
+                                "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                                "ContextId":"CurrentConsumableValue"
+                            },
+                            "IsValueRandomized":false,
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":223,
+                "OasisShortDescription":224,
+                "OasisLongDescription":369,
+                "Cooldown":2,
+                "PrepareTime":0.06,
+                "RecoverTime":0.44,
+                "RecoverInterruptWindow":0.44,
+                "IsConsumable":true,
+                "CastCost":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":1
+                },
+                "NeedFacingTarget":false,
+                "CanBeUsedInstantlyDuringStun":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":109,
+                                "Name":"BlessingOfThePhoenix2"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":225,
+                "OasisShortDescription":226,
+                "OasisLongDescription":369,
+                "Cooldown":2,
+                "PrepareTime":0.06,
+                "RecoverTime":0.44,
+                "RecoverInterruptWindow":0.44,
+                "IsConsumable":true,
+                "CastCost":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":11
+                },
+                "NeedFacingTarget":false,
+                "CanBeUsedInstantlyDuringStun":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":110,
+                                "Name":"BlessingOfThePhoenix3"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":227,
+                "OasisShortDescription":228,
+                "OasisLongDescription":369,
+                "Cooldown":2,
+                "PrepareTime":0.06,
+                "RecoverTime":0.44,
+                "RecoverInterruptWindow":0.44,
+                "IsConsumable":true,
+                "CastCost":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":16
+                },
+                "NeedFacingTarget":false,
+                "CanBeUsedInstantlyDuringStun":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":111,
+                                "Name":"BlessingOfThePhoenix4"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":229,
+                "OasisShortDescription":230,
+                "OasisLongDescription":369,
+                "Cooldown":2,
+                "PrepareTime":0.06,
+                "RecoverTime":0.44,
+                "RecoverInterruptWindow":0.44,
+                "IsConsumable":true,
+                "CastCost":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":21
+                },
+                "NeedFacingTarget":false,
+                "CanBeUsedInstantlyDuringStun":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":112,
+                                "Name":"BlessingOfThePhoenix5"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":231,
+                "OasisShortDescription":232,
+                "OasisLongDescription":369,
+                "Cooldown":2,
+                "PrepareTime":0.06,
+                "RecoverTime":0.44,
+                "RecoverInterruptWindow":0.44,
+                "IsConsumable":true,
+                "CastCost":1,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":26
+                },
+                "NeedFacingTarget":false,
+                "CanBeUsedInstantlyDuringStun":true
+            }
+        ]
+    }
+]

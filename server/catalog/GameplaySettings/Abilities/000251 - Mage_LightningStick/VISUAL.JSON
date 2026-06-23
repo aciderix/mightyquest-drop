@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_BA_Lightning"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "RandomAnimation":
+                [
+                    {
+                        "AnimationName":"00_Attack",
+                        "Probability":0.4
+                    },
+                    {
+                        "AnimationName":"00_Attack02",
+                        "Probability":0.3
+                    },
+                    {
+                        "AnimationName":"00_Attack03",
+                        "Probability":0.3
+                    }
+                ],
+                "AnimPrepare":"00_Attack"
+            }
+        ]
+    }
+]

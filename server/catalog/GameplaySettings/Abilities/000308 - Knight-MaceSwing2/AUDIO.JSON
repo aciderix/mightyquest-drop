@@ -1,0 +1,48 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "PrepareSound":{
+                    
+                },
+                "ActiveSound":{
+                    
+                },
+                "RecoverSound":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Mace"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilityAnimTagFxSpec, HyperQuest.GameServer.Contracts",
+        "StartSound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>0008AE15.SOUND",
+            "FireAndForget":true
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAbilityEquipmentQualityAnimTagFxSpec, HyperQuest.GameServer.Contracts",
+        "ItemQualityLevels":
+        {
+            "Legendary":{
+                "StartSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AE17.SOUND",
+                    "FireAndForget":true
+                }
+            },
+            "Epic":{
+                "StartSound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>0008AE16.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        }
+    }
+]

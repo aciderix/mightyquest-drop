@@ -1,0 +1,169 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingSpec, HyperQuest.GameServer.Contracts",
+        "BuildingInstanceRequirements":
+        [
+            {
+                
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":20
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":50
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":75
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":100
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":120
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":135
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":145
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":155
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":165
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":175
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":185
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":195
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":205
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":215
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":225
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":235
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":245
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":255
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":265
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":275
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":285
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":295
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":305
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":315
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":325
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":335
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":345
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":355
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":365
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CPBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "MaxConstructionPoints":375
+            }
+        ],
+        "HideInShop":true,
+        "BuildingType":"CastleHeart"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CastleHeartBuildingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsEditable":false
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Thickness":2,
+        "Height":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":4,
+                "Height":6,
+                "Length":4
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"SocleBuilding",
+        "IsAvailableInBuildMode":true
+    }
+]

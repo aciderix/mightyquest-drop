@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioAttackImpactSpec, HyperQuest.GameServer.Contracts",
+        "ImpactSoundId":"Claws"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioPersistentEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "CreateSound":{
+            
+        },
+        "DestroySound":{
+            "SoundEventResource":"DB:>RAW>SOUNDS>000891E3.SOUND",
+            "FireAndForget":true
+        }
+    }
+]

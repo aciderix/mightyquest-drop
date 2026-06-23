@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_003_ChainLightning_02_CHN",
+        "Scale":0.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualChainFxSpec, HyperQuest.GameServer.Contracts",
+        "ChainStartedFx":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualBeamFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_612C7AFD_BA618>SPECIAL EFFECT_612C7AFD_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "BoneName":"FX_LeftHand"
+                },
+                "TargetAttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                    "HeightOffset":1.28
+                },
+                "ForcePlayUntilFxFinished":true
+            }
+        ]
+    }
+]

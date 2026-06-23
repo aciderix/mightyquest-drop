@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Captain Clubbage",
+        "OasisName":1407,
+        "OasisDescription":1408
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/044FallenKnight\/CHA_044_CaptainClubbage_01.png",
+        "InvIconUrl":"icoInv\/creatures\/044FallenKnight\/CHA_044_CaptainClubbage_01.png",
+        "LayerName":"UI_Common_CreaturesIcons_FallenKnight:CaptainClubbage_01",
+        "HeightOffset":3.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Boss",
+                    "OasisName":7813
+                },
+                "Ui":{
+                    "InvIconUrl":"invIcon\/missing\/missing_icon.png"
+                }
+            }
+        ]
+    }
+]

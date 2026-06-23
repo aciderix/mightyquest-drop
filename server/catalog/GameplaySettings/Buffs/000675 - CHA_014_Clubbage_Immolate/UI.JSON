@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"FallenWarPriest_ImmolateBuff",
+        "OasisName":13239,
+        "OasisDescription":13240
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/CREATUREBUFFS_INVINCIBILITY.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:creatureBuffs_invincibility",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

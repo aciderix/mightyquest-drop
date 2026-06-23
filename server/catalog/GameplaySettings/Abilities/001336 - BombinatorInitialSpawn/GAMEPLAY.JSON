@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CreatureSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Creature":{
+                        "$type":"HyperQuest.GameServer.Contracts.CreatureSpecContainerRef, HyperQuest.GameServer.Contracts",
+                        "SpecContainerReferenceId":45
+                    },
+                    "CreatureCount":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":2
+                    },
+                    "DistanceToSpawn":3.2,
+                    "Level":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                        "ContextId":"SourceLevel"
+                    },
+                    "IsSpawnSpecApplied":true,
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                },
+                "Cooldown":1000000,
+                "MaxDistance":6,
+                "EffectRadius":4,
+                "AbilityCastType":"Direct",
+                "AttackSpeedFactor":1,
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

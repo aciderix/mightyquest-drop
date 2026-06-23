@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"HarpyAmelioration",
+        "OasisName":2125,
+        "OasisDescription":2126
+    }
+]

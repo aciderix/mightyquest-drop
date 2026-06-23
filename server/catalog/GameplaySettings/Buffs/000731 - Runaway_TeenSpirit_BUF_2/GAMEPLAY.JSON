@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":5,
+            "Tag":"Teen Spirit buff bonus duration"
+        },
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"SkillDamage",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.1,
+                    "Tag":"Teen Spirit damage multiplier 1"
+                },
+                "IsAdditive":true
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.StatModifierMultiplierBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "StatType":"BasicAttackDamage",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.1
+                },
+                "IsAdditive":true
+            }
+        ],
+        "InstanceCreatorType":"AllInstancesCreators",
+        "MaxInstances":5,
+        "Flags":2,
+        "BuffStopTriggers":{
+            "OnBuffedEntityDied":true
+        }
+    }
+]

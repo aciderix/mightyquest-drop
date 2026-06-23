@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_005_LD_SingleRotatingCannon_00",
+        "Scale":0,
+        "HideInModeMask":1
+    }
+]

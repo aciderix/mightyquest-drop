@@ -1,0 +1,169 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":1,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.5,
+                                "Up":1
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"TargetOrAbilityCastPosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Y":1
+                                }
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":59,
+                                "Name":"LashingHitMissile"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":120,
+                                "Name":"Knight-BattleStance"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":65,
+                "OasisShortDescription":66,
+                "OasisLongDescription":349,
+                "Cooldown":0.5,
+                "PrepareTime":0.2,
+                "RecoverTime":0.9,
+                "RecoverInterruptWindow":0.7,
+                "MaxDistance":10,
+                "EffectRadius":0.2,
+                "CastCost":15,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":10
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":11
+                },
+                "NeedFacingTarget":false,
+                "PickingStyle":"High"
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.MissileSpawnOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpawnPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.LocalSourceVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Front":0.5,
+                                "Up":1
+                            },
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.AddVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value1":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"TargetOrAbilityCastPosition"
+                                },
+                                "Value2":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Y":1
+                                }
+                            },
+                            "MovementTarget":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "Missile":{
+                                "$type":"HyperQuest.GameServer.Contracts.MissileSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":60,
+                                "Name":"LashingHit2Missile"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        },
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":120,
+                                "Name":"Knight-BattleStance"
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            }
+                        }
+                    ]
+                },
+                "OasisName":67,
+                "OasisShortDescription":68,
+                "OasisLongDescription":350,
+                "Cooldown":0.5,
+                "PrepareTime":0.3,
+                "RecoverTime":0.9,
+                "RecoverInterruptWindow":0.7,
+                "MaxDistance":10,
+                "EffectRadius":0.2,
+                "CastCost":15,
+                "AbilityCastType":"Targetted",
+                "AutoAim":{
+                    "ParamsList":
+                    [
+                        {
+                            "AutoAimType":"Area",
+                            "EffectRadius":10
+                        }
+                    ],
+                    "GameEntityTypePriorities":
+                    {
+                        "Creature":0
+                    }
+                },
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":23
+                },
+                "NeedFacingTarget":false,
+                "PickingStyle":"High"
+            }
+        ]
+    }
+]

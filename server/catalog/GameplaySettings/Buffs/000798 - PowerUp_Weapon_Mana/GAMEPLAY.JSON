@@ -1,0 +1,36 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffSpec, HyperQuest.GameServer.Contracts",
+        "IsPermanent":true,
+        "BuffEffects":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OnDamageBuffEffectSpec, HyperQuest.GameServer.Contracts",
+                "OperationTypeFilter":-1,
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.PowerUpManaOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Value":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":1
+                    },
+                    "HeroItemCategoryType":"Weapon",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "Type":"Source"
+                    }
+                },
+                "OperationsCooldown":0.5,
+                "Target":{
+                    "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                    "Type":"Source"
+                }
+            }
+        ],
+        "IsDispellable":false,
+        "Flags":10,
+        "BuffStopTriggers":{
+            
+        },
+        "BuffableGameEntityTypeMask":8
+    }
+]

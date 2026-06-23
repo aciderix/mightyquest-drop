@@ -1,0 +1,47 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_001_BA_SnotSaberStrike"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "RandomAnimation":
+                [
+                    {
+                        "AnimationName":"00_Attack",
+                        "Probability":0.5
+                    },
+                    {
+                        "AnimationName":"00_Attack02",
+                        "Probability":0.5
+                    }
+                ],
+                "AnimPrepare":"00_Attack"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"HeroMeleeAttack2",
+                "ReceiverType":"Both",
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALEFFECTS_7EEC6B6B>SPECIALEFFECTS_7EEC6B6B.SPECIALFX",
+                        "AttachmentStrategy":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                            "BoneName":"FX_Head"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

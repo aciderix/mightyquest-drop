@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_038_BlackDragon_Breath_MIS",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_0433B896_AI933>MESH_0433B896_AI933.MESH",
+        "Scale":0
+    }
+]

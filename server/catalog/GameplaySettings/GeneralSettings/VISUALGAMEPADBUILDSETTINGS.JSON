@@ -1,0 +1,12 @@
+{
+    "CursorSynergyFileName":"DB:>RAW>XREFS>XREF_02D6B3AA_BC761>XREF_02D6B3AA_BC761.XREF",
+    "CursorVisualNodeNames":{
+        "Room_PickedUp":"ROOM_PICKEDUP",
+        "Room_Valid":"ROOM_VALID",
+        "Room_Invalid":"ROOM_INVALID",
+        "RoomBuildable_PickedUp":"ROOMBUILDABLE_PICKEDUP",
+        "RoomBuildable_Valid":"ROOMBUILDABLE_VALID",
+        "RoomBuildable_Invalid":"ROOMBUILDABLE_INVALID",
+        "RoomBuildable_OutsideGrid":"ROOMBUILDABLE_OUTSIDEGRID"
+    }
+}

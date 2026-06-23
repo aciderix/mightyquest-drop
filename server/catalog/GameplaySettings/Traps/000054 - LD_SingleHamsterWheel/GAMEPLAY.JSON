@@ -1,0 +1,150 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DynamicCpZoneMemberSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.EffectControllerSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.FacingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true,
+        "BuildXp":100
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ParentingSpec, HyperQuest.GameServer.Contracts",
+        "Children":
+        [
+            {
+                "Entity":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                    "SpecContainerReferenceId":104,
+                    "Name":"HamsterRail"
+                },
+                "Position":{
+                    "X":-1
+                },
+                "Orientation":{
+                    
+                }
+            },
+            {
+                "Entity":{
+                    "$type":"HyperQuest.GameServer.Contracts.EffectSpecContainerRef, HyperQuest.GameServer.Contracts",
+                    "SpecContainerReferenceId":105,
+                    "Name":"HamsterWheel"
+                },
+                "Position":{
+                    "X":-4.9
+                },
+                "Orientation":{
+                    
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":10,
+                "Height":1,
+                "Length":2,
+                "X":-1
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-5.5,
+        "FirstSectionCellOffsetY":-1,
+        "Width":10,
+        "Height":1,
+        "RoomBuildableType":"Cannon",
+        "ExclusionShape":{
+            "$type":"HyperQuest.GameServer.Contracts.RectangularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Width":10.5,
+            "Height":3.5
+        },
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapSpec, HyperQuest.GameServer.Contracts",
+        "XpRewardShape":{
+            "$type":"HyperQuest.GameServer.Contracts.RectangularShape2DSpec, HyperQuest.GameServer.Contracts",
+            "Width":10.5,
+            "Height":3.5
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapStatsSpec, HyperQuest.GameServer.Contracts",
+        "BasePhysicalDamage":20,
+        "BaseCriticalHitChance":0.01,
+        "BaseCriticalHitDamageBonus":0,
+        "PhysicalDamagePerLevel":12
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildableSpec, HyperQuest.GameServer.Contracts",
+        "IsNotInBuildInventory":true
+    },      
+    {
+        "$type":"HyperQuest.GameServer.Contracts.TrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Tiers":
+        [
+            {
+                "Tier":1,
+                "Level":1
+            },
+            {
+                "Tier":2,
+                "Level":2
+            },
+            {
+                "Tier":3,
+                "Level":3
+            },
+            {
+                "Tier":4,
+                "Level":4
+            },
+            {
+                "Tier":5,
+                "Level":8
+            },
+            {
+                "Tier":6,
+                "Level":12
+            },
+            {
+                "Tier":7,
+                "Level":16
+            },
+            {
+                "Tier":8,
+                "Level":20
+            },
+            {
+                "Tier":9,
+                "Level":24
+            }
+        ],
+        "ShopBuildingRequirementSpec":{
+            "BuildingRequirementSpecContainerId":1
+        },
+        "CraftingBuildingRequirementSpec":{
+            
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LineFieldSpec, HyperQuest.GameServer.Contracts",
+        "Width":1,
+        "StartLength":9.75,
+        "EndLength":9.75,
+        "LocalStartOffsetX":-5.5,
+        "CollisionCheckInterval":-1
+    }
+]

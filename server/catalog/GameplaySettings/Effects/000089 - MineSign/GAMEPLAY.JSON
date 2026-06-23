@@ -1,0 +1,27 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.OperationListenerSpec, HyperQuest.GameServer.Contracts",
+        "OperationListerners":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.LabelOperationListenerConditionSpec, HyperQuest.GameServer.Contracts",
+                "OperationLabel":"MineExplosion",
+                "ListenedOperationSourceTypeFlags":32,
+                "Operation":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.DummyOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                                "Type":"Source"
+                            },
+                            "OperationLabel":"MineDestroyed"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,99 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Spike Trap",
+        "OasisName":1593,
+        "OasisDescription":1594
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/traps\/TRA_012_PiranhaJaws_01.png",
+        "InvIconUrl":"icoInv\/traps\/TRA_012_PiranhaJaws_01.png",
+        "LayerName":"UI_Common_TrapsIcons:PiranhaJaws_01",
+        "HeightOffset":1.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Section {0}",
+                    "OasisName":11528
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"2"
+                    }
+                ],
+                "OnlyForTiers":
+                [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"Section {0}",
+                    "OasisName":11528
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"3"
+                    }
+                ],
+                "OnlyForTiers":
+                [
+                    4,
+                    5,
+                    6
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"damage {0} {1}",
+                    "OasisName":7674
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Effect",
+                        "StatsSpecContainerId":91,
+                        "TaggedSpec":"Spike Trap damage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11233,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/damageOnGround.png"
+                    }
+                ]
+            }
+        ]
+    }
+]

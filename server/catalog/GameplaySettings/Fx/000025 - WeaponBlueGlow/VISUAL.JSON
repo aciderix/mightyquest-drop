@@ -1,0 +1,11 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+        "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>FX_F3D109A9>FX_F3D109A9.SPECIALFX",
+        "AttachmentStrategy":{
+            "$type":"HyperQuest.GameServer.Contracts.VisualVolumeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+            "VolumeName":"FX_WeaponVolume"
+        },
+        "Name":"VFX_WEAP_BlueGlow"
+    }
+]

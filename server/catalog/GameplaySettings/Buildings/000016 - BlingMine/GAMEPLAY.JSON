@@ -1,0 +1,295 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuildingSpec, HyperQuest.GameServer.Contracts",
+        "BuildingInstanceRequirements":
+        [
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":2
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":2
+            },
+            {
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":2
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.MineBuildingRankSpec, HyperQuest.GameServer.Contracts",
+                "ProductionPeriod":"1h",
+                "ProductionValue":1,
+                "Capacity":25,
+                "BuildingRequirementSpecContainerId":1,
+                "BuildingRequirementRank":1
+            }
+        ],
+        "BuildingType":"PremiumCashMine"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DestructibleMineBuildingSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            },
+            {
+                "States":
+                [
+                    {
+                        "DamageThreshold":{
+                            
+                        }
+                    },
+                    {
+                        "DamageThreshold":{
+                            "Value":1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.DestructibleStatsSpec, HyperQuest.GameServer.Contracts",
+        "HealthPerCastleLevel":150,
+        "BaseHealth":200
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.GridMemberSpec, HyperQuest.GameServer.Contracts",
+        "IsUserOrientable":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.LifeSpec, HyperQuest.GameServer.Contracts",
+        "Immunity":{
+            "ImmuneToDamageFrom":4
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MineBuildingSpec, HyperQuest.GameServer.Contracts",
+        "CurrencyType":"PremiumCash"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.MineHarvestingSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.ObstacleSpec, HyperQuest.GameServer.Contracts",
+        "Width":2.1,
+        "Thickness":2.1,
+        "Height":4,
+        "Offset":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedVectorSpec, HyperQuest.GameServer.Contracts"
+        },
+        "DestroyWhenRemovingObstacle":false,
+        "InternalShapeType":"Square"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PhysicSpec, HyperQuest.GameServer.Contracts",
+        "Shapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.BoxShapeSpec, HyperQuest.GameServer.Contracts",
+                "Width":1.3,
+                "Height":2,
+                "Length":1.3,
+                "Y":1.5
+            }
+        ],
+        "CollisionGroup":"Destructable",
+        "PhysicRigidBodyType":"Static",
+        "Radius":1.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.PickingSpec, HyperQuest.GameServer.Contracts",
+        "OuterShapes":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.CapsuleShapeSpec, HyperQuest.GameServer.Contracts",
+                "Radius":0.8,
+                "Height":1.3,
+                "Y":1
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.RoomBuildableSpec, HyperQuest.GameServer.Contracts",
+        "FirstSectionCellOffsetX":-1.5,
+        "FirstSectionCellOffsetY":-1.5,
+        "Width":4,
+        "Height":4,
+        "RoomBuildableType":"FreeStandingBuilding",
+        "IsAvailableInBuildMode":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.StealableMineBuildingSpec, HyperQuest.GameServer.Contracts",
+        "AttackDropRatio":0.2,
+        "Levels":
+        [
+            {
+                "MaxDestructibleLevel":4,
+                "NbCurrencyClustersToDropOnDied":1
+            }
+        ],
+        "OverrideAttackSettingsLootConfig":true,
+        "LootDropMinDistance":2.5,
+        "LootDropMaxDistance":4,
+        "LootRadius":0.5,
+        "LootDelayBetweenEachDrop":0.05,
+        "LootDropSectorCircleArc":360,
+        "LootDropSectorCircleArcStartAngle":60
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SurroundableSpec, HyperQuest.GameServer.Contracts",
+        "SurroundRadius":1
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Rabbies",
+        "OasisName":2207,
+        "OasisDescription":2208
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/HERODEBUFFS_ATTACKSPEEDDECREASE.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:heroDebuffs_AttackSpeedDecrease",
+        "TileAnimationType":"verticalTopToBottom"
+    }
+]

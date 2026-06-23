@@ -1,0 +1,16 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Pet_BabyBeholder_RudeOlaf",
+        "OasisName":16096,
+        "OasisDescription":16097
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoInv\/pets\/PET_007_XmasBeholder_M002.png",
+        "InvIconUrl":"icoShop\/pets\/PET_007_XmasBeholder_M002.png"
+    }
+]

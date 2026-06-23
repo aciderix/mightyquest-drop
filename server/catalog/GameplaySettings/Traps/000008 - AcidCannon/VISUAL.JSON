@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_006_BalisticCannon_02",
+        "SizeCategory":"Small",
+        "HideInModeMask":1
+    }
+]

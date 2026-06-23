@@ -1,0 +1,35 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"BonePuppeteer_Captain_LimitedEdition_ChickenBomber",
+        "OasisName":15300,
+        "OasisDescription":15301
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bomb",
+                    "OasisName":15301
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png"
+                }
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Rares\/bomby.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Rares\/bomby.png",
+        "LayerName":"UI_Common_CreaturesIcons_Rares:bomby",
+        "HeightOffset":1.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_008_Necro_God",
+        "Scale":1.3,
+        "SizeCategory":"Large",
+        "FxAttachmentScale":1.6
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualBuildableSpec, HyperQuest.GameServer.Contracts",
+        "DragHeight":4
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualCreatureTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "VisualTierResources":
+                [
+                    {
+                        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_862234AD_AI145>ENTITY_862234AD_AI145.ENTITY",
+                        "Scale":1.3
+                    }
+                ],
+                "_comment":"Specialization 1"
+            }
+        ]
+    }
+]

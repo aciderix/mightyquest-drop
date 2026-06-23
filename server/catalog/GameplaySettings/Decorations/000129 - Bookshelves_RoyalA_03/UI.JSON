@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Bookshelves_RoyalA_03",
+        "OasisName":14947,
+        "OasisDescription":14948
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/DEC_000_Bookshelves_RoyalA_03.png",
+        "InvIconUrl":"icoInv\/deco\/DEC_000_Bookshelves_RoyalA_03.png",
+        "HeightOffset":2
+    }
+]

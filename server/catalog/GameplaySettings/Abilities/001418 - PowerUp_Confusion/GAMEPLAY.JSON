@@ -1,0 +1,153 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "FamilyId":3,
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":2
+                    },
+                    "AllianceFilter":4,
+                    "Operations":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":718,
+                            "Name":"ConfusionBuff"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "Position":"Source",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":200,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":1
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":4
+                    },
+                    "AllianceFilter":4,
+                    "Operations":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":718,
+                            "Name":"ConfusionBuff"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "Position":"Source",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "OasisName":37,
+                "OasisShortDescription":38,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":200,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":18
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":6
+                    },
+                    "AllianceFilter":4,
+                    "Operations":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":718,
+                            "Name":"ConfusionBuff"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "Position":"Source",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "OasisName":39,
+                "OasisShortDescription":40,
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":200,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":30
+                },
+                "NeedFacingTarget":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CircleAreaOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Radius":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":8
+                    },
+                    "AllianceFilter":4,
+                    "Operations":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":718,
+                            "Name":"ConfusionBuff"
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "Position":"Source",
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                    }
+                },
+                "Cooldown":0.5,
+                "PrepareTime":0.4,
+                "RecoverTime":0.4,
+                "RecoverInterruptWindow":0.4,
+                "CastCost":200,
+                "UpgradeRequirement":{
+                    "HeroMinimumLevel":1
+                },
+                "NeedFacingTarget":false
+            }
+        ]
+    }
+]

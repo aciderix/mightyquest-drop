@@ -1,0 +1,63 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"SmellyWarrior_Elite_HeavyHanded",
+        "OasisName":15219,
+        "OasisDescription":15220
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/SmellyWarriors1.png",
+                        "NameOasisId":11199,
+                        "DescriptionOasisId":11200
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/B1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/B1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:B1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/B1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/B1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:B1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/B1e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/B1e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:B1e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/B2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/B2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:B2e"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/B2e.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/B2e.png",
+                "LayerName":"UI_Common_CreaturesIcons_FallenKnight:B2e"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/FallenKnight\/B1e.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/FallenKnight\/B1e.png",
+        "LayerName":"UI_Common_CreaturesIcons_FallenKnight:B1e",
+        "HeightOffset":3
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_005_RotatingCannon_3Flames",
+        "Scale":0,
+        "HideInModeMask":1
+    }
+]

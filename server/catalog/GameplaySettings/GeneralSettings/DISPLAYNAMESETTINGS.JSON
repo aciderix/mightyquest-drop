@@ -1,0 +1,5 @@
+{
+    "LastSettingsUpdateDate" : "2015-01-07T00:00:01Z", 
+    "ChooseDisplayNameAssignementId" : 30,
+    "AccountDisplayNameNoMatchRegex" : "(?i)admin|(?i)administrator|(?i)developer|^(?i)dev$|(?i)gamemaster|^(?i)gm$|^(?i)root$|(?i)ubisoft|^(?i)ubi$|^(?i)system$"
+}

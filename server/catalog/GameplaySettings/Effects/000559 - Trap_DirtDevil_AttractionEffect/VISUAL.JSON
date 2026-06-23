@@ -1,0 +1,7 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"ENV8_Forest_Floor_Detail_Hieroglyph_01",
+        "SynergyEntityFileName":"DB:>RAW>GEOMETRIES>MESH_CD5F9EBD_BC671>MESH_CD5F9EBD_BC671.MESH"
+    }
+]

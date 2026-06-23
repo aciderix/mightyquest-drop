@@ -1,0 +1,63 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"ElectricGargoyle_LimitedEdition",
+        "OasisName":15621,
+        "OasisDescription":15622
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.SteamAssetUiSpec, HyperQuest.GameServer.Contracts",
+        "UseDescription":true
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Direct Damage {0}",
+                    "OasisName":16240
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/rangeAttack.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":1018,
+                        "TaggedSpec":"Electric Gargoyle Direct Damage"
+                    }
+                ]
+            },
+            {
+                "Name":{
+                    "DebugName":"Electric Shock {1}",
+                    "OasisName":15623
+                },
+                "Ui":{
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/damageOverTime.png"
+                },
+                "Formulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.DefenseIngredientStatValueUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "StatsSpecContainerType":"Trap",
+                        "StatsSpecContainerId":1018,
+                        "TaggedSpec":"Electric Gargoyle Damage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/TrapsIcons\/Rares\/LightningCanon.png",
+        "InvIconUrl":"UI\/Common\/TrapsIconsInv\/Rares\/LightningCanon.png",
+        "LayerName":"UI_Common_TrapsIcons_Rares:LightningCanon"
+    }
+]

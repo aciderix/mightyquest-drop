@@ -1,0 +1,99 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.CircleFieldSpec, HyperQuest.GameServer.Contracts",
+        "StartRadius":6.75,
+        "EndRadius":6.25,
+        "AllianceFilter":6,
+        "GameEntityTypeMask":-981,
+        "Duration":{
+            "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+            "Value":10
+        },
+        "CollisionCheckInterval":0.1,
+        "OnEnterOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                    "ConditionOperation":{
+                        "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                        "SpecContainersIds":
+                        [
+                            2,
+                            3,
+                            4,
+                            5
+                        ],
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        },
+                        "_comment":"Are you the player? If so, take damage and get weakened while inside"
+                    },
+                    "OperationsIfSuccess":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                        "Buff":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                            "SpecContainerReferenceId":900,
+                            "Name":"Dog_LimitedEdition_Poison_CloudAreaBuff"
+                        },
+                        "BakedSpellInfo":{
+                            
+                        },
+                        "Target":{
+                            "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                        }
+                    },
+                    "OperationsIfFailure":{
+                        "$type":"HyperQuest.GameServer.Contracts.BranchingOperationSpec, HyperQuest.GameServer.Contracts",
+                        "ConditionOperation":{
+                            "$type":"HyperQuest.GameServer.Contracts.IsEntityOneOfOperationSpec, HyperQuest.GameServer.Contracts",
+                            "SpecContainersIds":
+                            [
+                                1093,
+                                1097
+                            ],
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            },
+                            "_comment":"Are you the Rancid Runner or Fuming Frank? If yes, heal and increase damage."
+                        },
+                        "OperationsIfSuccess":{
+                            "$type":"HyperQuest.GameServer.Contracts.BuffOperationSpec, HyperQuest.GameServer.Contracts",
+                            "Buff":{
+                                "$type":"HyperQuest.GameServer.Contracts.BuffSpecContainerRef, HyperQuest.GameServer.Contracts",
+                                "SpecContainerReferenceId":901,
+                                "Name":"Dog_LimitedEdition_Poison_RancidRunnerBuff"
+                            },
+                            "BakedSpellInfo":{
+                                
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "OnExitOperations":{
+            "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+            "Operations":
+            [
+                {
+                    "$type":"HyperQuest.GameServer.Contracts.RemoveBuffOperationSpec, HyperQuest.GameServer.Contracts",
+                    "BuffReference":{
+                        "$type":"HyperQuest.GameServer.Contracts.BuffLabelReferenceSpec, HyperQuest.GameServer.Contracts"
+                    },
+                    "BakedSpellInfo":{
+                        
+                    },
+                    "Target":{
+                        "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts",
+                        "_comment":"Remove cloud buffs"
+                    }
+                }
+            ]
+        }
+    }
+]

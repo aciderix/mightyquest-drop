@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"XP boost",
+        "OasisName":11576,
+        "OasisDescription":11577
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.BuffUiSpec, HyperQuest.GameServer.Contracts",
+        "IconUrl":"HUD\/BUFFDEBUFFICONS\/XPBOOST.PNG",
+        "IconSynergyName":"UI_Hud_BuffDebuffIcons:xpBoost",
+        "TileAnimationType":"verticalTopToBottom",
+        "IsRatioFixedInAttack":true
+    }
+]

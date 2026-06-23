@@ -1,0 +1,86 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualAbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "AnimPrepare":"00_Reload01"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelEquipmentQualitySpec, HyperQuest.GameServer.Contracts",
+        "ItemQualityLevels":
+        {
+            "Legendary":{
+                "Levels":
+                [
+                    {
+                        "ActiveFx":
+                        [
+                            {
+                                "Fx":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_501AAA11_BD346>SPECIALFX_501AAA11_BD346.SPECIALFX",
+                                    "PlayMode":"One",
+                                    "AttachmentStrategy":{
+                                        "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                        "BoneName":"FX_WeaponImpact"
+                                    },
+                                    "Scale":0.8
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "Epic":{
+                "Levels":
+                [
+                    {
+                        "ActiveFx":
+                        [
+                            {
+                                "Fx":{
+                                    "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                                    "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_501AAA11_BD346>SPECIALFX_501AAA11_BD346.SPECIALFX",
+                                    "PlayMode":"One",
+                                    "AttachmentStrategy":{
+                                        "$type":"HyperQuest.GameServer.Contracts.VisualBoneAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                        "BoneName":"FX_WeaponImpact"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualFxAbilitiesLevelSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "ActiveFx":
+                [
+                    {
+                        "Fx":{
+                            "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                            "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIALFX_501AAA11_BD346>SPECIALFX_501AAA11_BD346.SPECIALFX",
+                            "AttachmentStrategy":{
+                                "$type":"HyperQuest.GameServer.Contracts.VisualVolumeAttachmentStrategySpec, HyperQuest.GameServer.Contracts",
+                                "VolumeName":"FX_WeaponImpact"
+                            },
+                            "Scale":0.5
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"CHA_002_BA_BallistaShot"
+    }
+]

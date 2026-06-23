@@ -1,0 +1,15 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Spiderling",
+        "OasisName":1281,
+        "OasisDescription":1282
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_016_Spiderling.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_016_Spiderling.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:Spiderling",
+        "HeightOffset":1.5
+    }
+]

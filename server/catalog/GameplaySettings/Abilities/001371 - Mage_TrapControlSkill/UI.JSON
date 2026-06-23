@@ -1,0 +1,49 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilityUiSpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "OasisDescription":11444,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"MageDeactivateTrap1"
+                    }
+                ]
+            },
+            {
+                "OasisDescription":11444,
+                "DescriptionFormulas":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.CustomUiFormulaSpec, HyperQuest.GameServer.Contracts",
+                        "Formula":"{0}",
+                        "FormulaParams":
+                        [
+                            "Value"
+                        ],
+                        "TaggedSpec":"MageDeactivateTrap1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Mage_EMP",
+        "OasisName":11443
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"iconInv\/heroes\/cha003\/skills\/SPELL_CHA_003_evocation_up.png",
+        "InvIconUrl":"iconInv\/heroes\/cha003\/skills\/SPELL_CHA_003_evocation_up.png",
+        "LayerName":"UI_Common_Hero003_SkillsIcons:SPELL_CHA_003_evocation"
+    }
+]

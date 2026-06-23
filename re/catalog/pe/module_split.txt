@@ -1,0 +1,19 @@
+# GAME modules (Ubisoft source roots) — keep
+
+   4484  Hyperquest\GameServerProxies      Network protocol / server proxies
+    167  Hyperquest\Simulation             Game simulation (core gameplay sim)
+     92  Hyperquest\Gameplay               Gameplay systems
+     91  Opal\Zouna\Engine                 Zouna engine (Opal)
+     11  Opal\Zouna\LibPC                  Zouna PC platform layer
+     10  Hyperquest\BehaviorTree           AI / behavior trees
+
+# THIRD-PARTY libraries — not the game, strip from game-only view
+
+    280  openssl
+     18  recast/detour
+     12  libcurl
+      7  directx
+      6  zlib
+      5  fmod
+      2  msvc runtime
+      1  libcef/chromium

@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Knight_Sword_Buff",
+        "OasisName":2271,
+        "OasisDescription":2272
+    }
+]

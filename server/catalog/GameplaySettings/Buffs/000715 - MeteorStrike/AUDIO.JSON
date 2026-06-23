@@ -1,0 +1,25 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioBuffSpec, HyperQuest.GameServer.Contracts",
+        "BuffAddedSound":{
+            "FireAndForget":true
+        },
+        "BuffRemovedSound":{
+            
+        }
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AudioOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "LabelOperationSounds":
+        [
+            {
+                "OperationLabel":"MeteorStrike",
+                "ReceiverType":"Target",
+                "Sound":{
+                    "SoundEventResource":"DB:>RAW>SOUNDS>000886F8.SOUND",
+                    "FireAndForget":true
+                }
+            }
+        ]
+    }
+]

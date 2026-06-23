@@ -1,0 +1,38 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Mage",
+        "OasisName":441
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/heroes\/4.png",
+        "InvIconUrl":"iconInv\/lobbyBar\/heroes\/4.png",
+        "HeightOffset":2.5
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.HeroUiSpec, HyperQuest.GameServer.Contracts",
+        "NameOasisId":443,
+        "FullNameOasisId":14150,
+        "BiographyNoNameOasisId":14157,
+        "BiographyOasisId":9839,
+        "DescriptionOasisId":1806,
+        "SampleAbilities":
+        [
+            611,
+            609,
+            601
+        ],
+        "IconUrl":"iconInv\/lobbyBar\/heroes\/4.png",
+        "PortraitUrl":"hud\/attackPortraits\/HUD_ATTACKPORTRAITSMAGE.png",
+        "RoundedIconUrl":"common\/heroIcons\/mageRegular.png",
+        "RoundedLargeIconUrl":"common\/heroIconsLrg\/mageRegular.png",
+        "HeaderIconUrl":"hud\/autoLevelUp\/heroes\/mage1.png",
+        "CreationIconUpUrl":"NUE\/heroSelection\/NUE_StraitMageUp.png",
+        "CreationIconOverUrl":"NUE\/heroSelection\/NUE_StraitMageOver.png",
+        "CreationIconSelectedUrl":"NUE\/heroSelection\/NUE_StraitMageSelect.png",
+        "CreationIconLeftOffset":-100,
+        "IconLayerName":"UI_HUD_Common_portraits:Mage",
+        "HeroIconLrgBgLayerName":"common_heroIconsLrgBg:mageRegular"
+    }
+]

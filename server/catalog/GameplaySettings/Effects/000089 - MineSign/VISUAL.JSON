@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"TRA_000_GenericMineSign",
+        "SynergyEntityFileName":"DB:>RAW>XREFS>XREF_8FE38E4D>XREF_8FE38E4D.XREF",
+        "Scale":1.3
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualOperationFxSpec, HyperQuest.GameServer.Contracts",
+        "OperationFx":
+        [
+            {
+                "OperationLabel":"MineDestroyed",
+                "Fx":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.VisualStartAnimationFxSpec, HyperQuest.GameServer.Contracts",
+                        "AnimationName":"Deactivate",
+                        "IsSynergyAnimation":true,
+                        "UseEmoteStateToPlayAnimation":false
+                    }
+                ]
+            }
+        ]
+    }
+]

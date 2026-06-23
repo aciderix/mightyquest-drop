@@ -1,0 +1,48 @@
+{
+    "ArmorPenetration":20,
+    "MagicPenetration":20,
+    "MinimumPhysicalDamageReduction":0.1,
+    "MaximumPhysicalDamageReduction":0.8,
+    "MinimumMagicalDamageReduction":0.1,
+    "MaximumMagicalDamageReduction":0.8,
+    "DamageReductionAdjustmentPerLevel":0.025,
+    "CriticalHitPenetration":20,
+    "StunResistanceMultiplier":0.2,
+    "StunResistanceLossPerSecond":0.1,
+    "DieMove":{
+		"IgnoreResistance":true,
+        "MoveStyle":{
+            "$type":"HyperQuest.GameServer.Contracts.LinearMoveInDirectionSpec, HyperQuest.GameServer.Contracts",
+            "Distance":{
+                "$type":"HyperQuest.GameServer.Contracts.ClampValueSpec, HyperQuest.GameServer.Contracts",
+                "Value":{
+                    "$type":"HyperQuest.GameServer.Contracts.MultValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value1":{
+                        "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                        "Value":3
+                    },
+                    "Value2":{
+                        "$type":"HyperQuest.GameServer.Contracts.ContextValueSpec, HyperQuest.GameServer.Contracts",
+                        "ContextId":"DieMovementOverallReduction"
+                    }
+                },
+                "Min":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":0.5
+                },
+                "Max":{
+                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                    "Value":3
+                }
+            },
+            "Orientation":{
+                "$type":"HyperQuest.GameServer.Contracts.ContextOrientationSpec, HyperQuest.GameServer.Contracts",
+                "Context":"SourceToTargetOrientation"
+            },
+            "Speed":{
+                "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                "Value":4
+            }
+        }
+    }
+}

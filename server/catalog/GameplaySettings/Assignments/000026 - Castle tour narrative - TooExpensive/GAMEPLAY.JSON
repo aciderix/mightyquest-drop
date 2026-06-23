@@ -1,0 +1,73 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AssignmentSpec, HyperQuest.GameServer.Contracts",
+        "GroupId":1,
+        "Enable":true,
+        "Trigger":{
+            "$type":"HyperQuest.GameServer.Contracts.CastleLoadedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+            "CastleId":1003
+        },
+        "Actions":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.EnableHeroVoiceOverAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "EnableHeroVoiceOver":false
+            },
+            {
+                "$type":"HyperQuest.GameServer.Contracts.PopupAssignmentActionSpec, HyperQuest.GameServer.Contracts",
+                "Id":"250004",
+                "Text":"CastleTour [too expensive]: 1003",
+                "TextOasisId":16467,
+                "PopupBindingVariable":"FloatingNarrativeBox_Node",
+                "Type":"FloatingNarrativeBox",
+                "PopUpNarrativeVoTextPages":{
+                    "NarrativeVoTextPages":
+                    [
+                        {
+                            "TextOasisId":16467,
+                            "Vo":{
+                                "SoundEventResource":"DB:>RAW>SOUNDS>0008B55A.SOUND"
+                            }
+                        }
+                    ]
+                },
+                "Position":"BottomCenter",
+                "IsCloseButtonVisible":true,
+                "TextAnimationEffect":"fadeIn",
+                "TextAnimationDuration":0.2,
+                "TextAnimationCharsDelayScale":0.2,
+                "NarrativePictureUrl":"nue\/hostMed01\/Layer2.png",
+                "StartDelay":0.5,
+                "EndTriggers":
+                [
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.PopupClosedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Id":"250004"
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ButtonPressedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "Buttons":
+                        [
+                            "CastleVisitBack"
+                        ]
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"CastleForSale",
+                        "ItemId":1
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"CastleForSale",
+                        "ItemId":2
+                    },
+                    {
+                        "$type":"HyperQuest.GameServer.Contracts.ItemPurchasedAssignmentTriggerSpec, HyperQuest.GameServer.Contracts",
+                        "ItemType":"CastleForSale",
+                        "ItemId":3
+                    }
+                ]
+            }
+        ]
+    }
+]

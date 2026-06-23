@@ -1,0 +1,8 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"HauntedGramophone_01_New",
+        "SynergyEntityFileName":"DB:>RAW>ENTITIES>ENTITY_7319C68A_AH273>ENTITY_7319C68A_AH273.ENTITY",
+        "Scale":0.75
+    }
+]

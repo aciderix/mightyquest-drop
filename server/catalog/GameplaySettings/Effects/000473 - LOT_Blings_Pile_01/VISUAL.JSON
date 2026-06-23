@@ -1,0 +1,26 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualSpec, HyperQuest.GameServer.Contracts",
+        "SynergyName":"LOT_Blings_Pile_01",
+        "SynergyEntityFileNameVariations":
+        [
+            "DB:>RAW>ENTITIES>ENTITY_3BDC7DC9_BC666>ENTITY_3BDC7DC9_BC666.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_19BD20DA_BC666>ENTITY_19BD20DA_BC666.ENTITY",
+            "DB:>RAW>ENTITIES>ENTITY_2FD76676_BC666>ENTITY_2FD76676_BC666.ENTITY"
+        ],
+        "Scale":0.7
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.VisualEntityFxSpec, HyperQuest.GameServer.Contracts",
+        "PersistentFxList":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.VisualSpecialEffectNodeFxSpec, HyperQuest.GameServer.Contracts",
+                "SynergyEntityFileName":"DB:>RAW>SPECIALEFFECTS>SPECIAL EFFECT_BEFE4405_BA618>SPECIAL EFFECT_BEFE4405_BA618.SPECIALFX",
+                "AttachmentStrategy":{
+                    "$type":"HyperQuest.GameServer.Contracts.VisualNodeAttachmentStrategySpec, HyperQuest.GameServer.Contracts"
+                }
+            }
+        ]
+    }
+]

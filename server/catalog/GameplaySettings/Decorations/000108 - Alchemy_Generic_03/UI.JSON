@@ -1,0 +1,14 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Alchemy_Generic_03",
+        "OasisName":14860,
+        "OasisDescription":14861
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/deco\/dummy_Grapnel.png",
+        "InvIconUrl":"icoInv\/deco\/dummy_Grapnel.png",
+        "HeightOffset":2
+    }
+]

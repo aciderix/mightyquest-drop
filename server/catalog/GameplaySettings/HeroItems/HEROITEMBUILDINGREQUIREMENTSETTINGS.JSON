@@ -1,0 +1,17 @@
+{
+    "Requirements":
+    [
+        {
+            "MinLevel":1,
+            "MaxLevel":30,
+            "BuildingRequirementSpecContainerId":1,
+            "BuildingRequirementRank":1
+        },
+        {
+            "MinLevel":1,
+            "MaxLevel":30,
+            "BuildingRequirementSpecContainerId":14,
+            "BuildingRequirementRank":1
+        }
+    ]
+}

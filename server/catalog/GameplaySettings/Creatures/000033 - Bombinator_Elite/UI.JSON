@@ -1,0 +1,30 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Bomber LT",
+        "OasisName":8379
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"icoShop\/creatures\/misc\/CHA_027_Bomber_Elite.png",
+        "InvIconUrl":"icoInv\/creatures\/misc\/CHA_027_Bomber_Elite.png",
+        "LayerName":"UI_Common_CreaturesIcons_Misc:Bomber_Elite",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts",
+        "Abilities":
+        [
+            {
+                "Name":{
+                    "DebugName":"Bomb",
+                    "OasisName":8093
+                },
+                "Ui":{
+                    "ShopIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png",
+                    "InvIconUrl":"common\/creatureAbilitiesIcon\/spawnCreatures.png"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.AbilitySpec, HyperQuest.GameServer.Contracts",
+        "Levels":
+        [
+            {
+                "$type":"HyperQuest.GameServer.Contracts.OperationAbilityLevelSpec, HyperQuest.GameServer.Contracts",
+                "Operations":{
+                    "$type":"HyperQuest.GameServer.Contracts.CompositeOperationSpec, HyperQuest.GameServer.Contracts",
+                    "Operations":
+                    [
+                        {
+                            "$type":"HyperQuest.GameServer.Contracts.TeleportOperationSpec, HyperQuest.GameServer.Contracts",
+                            "TargetPosition":{
+                                "$type":"HyperQuest.GameServer.Contracts.ScaleVectorSpec, HyperQuest.GameServer.Contracts",
+                                "Value":{
+                                    "$type":"HyperQuest.GameServer.Contracts.ContextVectorSpec, HyperQuest.GameServer.Contracts",
+                                    "Type":"AbilityCastPosition"
+                                },
+                                "ScaleFactor":{
+                                    "$type":"HyperQuest.GameServer.Contracts.FixedFloatValueSpec, HyperQuest.GameServer.Contracts",
+                                    "Value":-1
+                                }
+                            },
+                            "Target":{
+                                "$type":"HyperQuest.GameServer.Contracts.OperationTargetSpec, HyperQuest.GameServer.Contracts"
+                            }
+                        }
+                    ]
+                },
+                "Cooldown":1,
+                "PrepareTime":2,
+                "RecoverTime":1,
+                "MaxDistance":6,
+                "EffectRadius":6,
+                "AbilityCastType":"Line"
+            }
+        ]
+    }
+]

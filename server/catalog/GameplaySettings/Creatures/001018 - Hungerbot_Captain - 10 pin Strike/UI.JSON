@@ -1,0 +1,103 @@
+[
+    {
+        "$type":"HyperQuest.GameServer.Contracts.NameSpec, HyperQuest.GameServer.Contracts",
+        "DebugName":"Hungerbot Captain - Push",
+        "OasisName":15163,
+        "OasisDescription":15164
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiSpec, HyperQuest.GameServer.Contracts",
+        "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B1.png",
+        "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B1.png",
+        "LayerName":"UI_Common_CreaturesIcons_Grapnel:B1",
+        "HeightOffset":2
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiDefenseIngredientSpec, HyperQuest.GameServer.Contracts"
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureTrapTiersSpec, HyperQuest.GameServer.Contracts",
+        "Specializations":
+        [
+            {
+                "DebugName":"10 pin Strike",
+                "Descriptions":
+                [
+                    {
+                        "Tier":1,
+                        "IconUrl":"building\/specializationIcon\/Hungerbot2.png",
+                        "NameOasisId":11187,
+                        "DescriptionOasisId":11188
+                    }
+                ],
+                "Unlocks":
+                [
+                    {
+                        "Tier":4,
+                        "OasisId":11189,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                    },
+                    {
+                        "Tier":7,
+                        "OasisId":11190,
+                        "IconUrl":"common\/creatureAbilitiesIcon\/knockackAttack.png"
+                    }
+                ]
+            }
+        ],
+        "Ranks":
+        [
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B1.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B1.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B1"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B2.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B2.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B2"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B3.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B3.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B3"
+            },
+            {
+                "ShopIconUrl":"UI\/Common\/CreaturesIcons\/Grapnel\/B3.png",
+                "InvIconUrl":"UI\/Common\/CreaturesIconsInv\/Grapnel\/B3.png",
+                "LayerName":"UI_Common_CreaturesIcons_Grapnel:B3"
+            }
+        ]
+    },
+    {
+        "$type":"HyperQuest.GameServer.Contracts.UiCreatureBoostSpec, HyperQuest.GameServer.Contracts",
+        "OasisId":11190,
+        "AbilityLayerName":"common_creatureAbilitiesIcon:knockackAttack",
+        "CreatureLayerName":"UI_Common_CreaturesIconsInv_Grapnel:B3"
+    }
+]
