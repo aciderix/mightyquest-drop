@@ -170,6 +170,18 @@ def ep_account_information(req, acc):
     ai["GuildInvitations"] = acc.get("guild_invitations", [])
     ai["Inbox"] = acc.get("inbox", [])
     ai["Guild"] = acc.get("guild") or {}        # cleared when the player has no guild
+    # ClientSettings: MaintenanceUrl must be "" (not "string") or the game shows
+    # the maintenance screen. Zero out all URL placeholders the gate fills with
+    # the "string" sentinel; disable XMPP (no real chat server).
+    cs = ai.setdefault("ClientSettings", {})
+    for f in ("MaintenanceUrl", "FriendReferalUrl", "PrimaryShopUrl",
+              "PrimaryShopBlingsUrl", "PrimaryShopNonBlingsUrl",
+              "PrimaryShopPremiumPurchaseUrl", "PrimaryShopProductPageUrl",
+              "WelcomePageUrl", "WelcomePageSmallUrl"):
+        cs[f] = ""
+    cs["ShowWelcomePage"] = False
+    cs["XmppInfo"] = {"Enabled": False, "Server": "", "Domain": "",
+                      "Username": "", "Password": "", "ConferenceServer": "", "Port": 0}
     return ai
 
 
