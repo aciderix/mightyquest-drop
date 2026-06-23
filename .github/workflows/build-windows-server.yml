@@ -80,9 +80,9 @@ jobs:
                  -RedirectStandardOutput "$B\out.log" -RedirectStandardError "$B\err.log"
           Start-Sleep -Seconds 12
           if ($p.HasExited) { Write-Host "exe exited early:"; Get-Content "$B\out.log","$B\err.log" -EA SilentlyContinue; throw "server did not stay up" }
-          [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
           try {
-            $r = Invoke-WebRequest -Uri 'https://127.0.0.1:8443/AccountService.hqs/GetAccountInformation' -Method POST -Body '{}' -UseBasicParsing -TimeoutSec 10
+            # PowerShell 7: -SkipCertificateCheck is the supported way to ignore TLS trust
+            $r = Invoke-WebRequest -Uri 'https://127.0.0.1:8443/AccountService.hqs/GetAccountInformation' -Method POST -Body '{}' -UseBasicParsing -TimeoutSec 10 -SkipCertificateCheck
             if ($r.Content -notmatch 'Wallet') { throw 'unexpected response' }
             Write-Host '[ok] exe served a real AccountInformation from the bundle'
           } finally { if (-not $p.HasExited) { Stop-Process -Id $p.Id -Force } }
