@@ -7,6 +7,7 @@ name: Build Windows server (exe + release bundle)
 on:
   push:
     tags: ["v*"]
+    branches: ["claude/funny-gates-79hnf2"]   # auto-build on this dev branch
   workflow_dispatch:
 
 permissions:
@@ -68,25 +69,23 @@ jobs:
           7z a -tzip mqel-server-windows.zip "$B" >/dev/null
           echo "bundle: $(ls -lh mqel-server-windows.zip | awk '{print $5}')"
 
-      - name: Smoke-test the exe (starts, binds, serves one request)
+      - name: Smoke-test the exe from the real bundle (catalog and certs adjacent)
         shell: pwsh
         working-directory: server
         run: |
-          $p = Start-Process -FilePath dist\mqel_server.exe `
-            -ArgumentList '--host','127.0.0.1','--port','8443','--tls',`
-              '--cert','.mqel_certs\server.pem','--key','.mqel_certs\server.key' `
-            -PassThru
-          Start-Sleep -Seconds 8
+          $B = "mqel-server-windows"
+          $exe = Join-Path (Resolve-Path $B) "mqel_server.exe"
+          $a = @('--host','127.0.0.1','--port','8443','--tls','--cert','certs\server.pem','--key','certs\server.key')
+          $p = Start-Process -FilePath $exe -WorkingDirectory $B -ArgumentList $a -PassThru `
+                 -RedirectStandardOutput "$B\out.log" -RedirectStandardError "$B\err.log"
+          Start-Sleep -Seconds 12
+          if ($p.HasExited) { Write-Host "exe exited early:"; Get-Content "$B\out.log","$B\err.log" -EA SilentlyContinue; throw "server did not stay up" }
           try {
-            add-type @"
-using System.Net; using System.Security.Cryptography.X509Certificates;
-public class TrustAll : ICertificatePolicy { public bool CheckValidationResult(ServicePoint s,X509Certificate c,WebRequest r,int p){return true;} }
-"@
-            [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAll
-            $r = Invoke-WebRequest -Uri 'https://127.0.0.1:8443/AccountService.hqs/GetAccountInformation' -Method POST -Body '{}' -UseBasicParsing -TimeoutSec 10
-            if ($r.Content -notmatch 'Wallet') { throw "unexpected response" }
-            Write-Host "[ok] exe served a real AccountInformation"
-          } finally { Stop-Process -Id $p.Id -Force }
+            # PowerShell 7: -SkipCertificateCheck is the supported way to ignore TLS trust
+            $r = Invoke-WebRequest -Uri 'https://127.0.0.1:8443/AccountService.hqs/GetAccountInformation' -Method POST -Body '{}' -UseBasicParsing -TimeoutSec 10 -SkipCertificateCheck
+            if ($r.Content -notmatch 'Wallet') { throw 'unexpected response' }
+            Write-Host '[ok] exe served a real AccountInformation from the bundle'
+          } finally { if (-not $p.HasExited) { Stop-Process -Id $p.Id -Force } }
 
       - uses: actions/upload-artifact@v4
         with:
