@@ -1,0 +1,100 @@
+name: Build Windows server (exe + release bundle)
+
+# Produces a self-contained Windows test bundle (mqel_server.exe + catalog + certs
+# + scripts) and attaches it to a GitHub Release. Trigger by pushing a tag like
+# v1.0.0, or run manually (Actions -> this workflow -> Run workflow).
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Generate local PKI (CA + server cert, openssl on the runner)
+        shell: bash
+        working-directory: server
+        run: |
+          python -c "import mqel_launcher as L; L.ensure_certs()"
+          ls -l .mqel_certs/ca.pem .mqel_certs/server.pem .mqel_certs/server.key
+
+      - name: Build mqel_server.exe
+        shell: bash
+        working-directory: server
+        run: |
+          # bundle the small RE data files (schemas/enums/examples) at re/catalog/network
+          # inside the exe; the big GameplaySettings catalog is shipped beside the exe.
+          pyinstaller --onefile --name mqel_server \
+            --add-data "../re/catalog/network/schemas_typed.json;re/catalog/network" \
+            --add-data "../re/catalog/network/generated/examples.json;re/catalog/network/generated" \
+            --add-data "../re/catalog/network/gamedata/enum_values.json;re/catalog/network/gamedata" \
+            --add-data "../re/catalog/network/gamedata/enum_int_values.json;re/catalog/network/gamedata" \
+            --add-data "../re/catalog/network/gamedata/confirmed_enums.json;re/catalog/network/gamedata" \
+            --add-data "../re/catalog/network/gamedata/binary_enum_values.json;re/catalog/network/gamedata" \
+            --add-data "../re/catalog/network/gamedata/array_fields.json;re/catalog/network/gamedata" \
+            --hidden-import catalog_economy --hidden-import command_notifications \
+            --hidden-import gameplay_catalog --hidden-import completeness_gate \
+            --hidden-import debuglog \
+            stub_server.py
+
+      - name: Assemble release bundle
+        shell: bash
+        working-directory: server
+        run: |
+          B=mqel-server-windows
+          mkdir -p "$B/certs"
+          cp dist/mqel_server.exe "$B/"
+          cp -r catalog "$B/catalog"
+          cp -r ../re "$B/re"                     # for the Python fallback + reference
+          cp .mqel_certs/ca.pem .mqel_certs/server.pem .mqel_certs/server.key "$B/certs/"
+          cp windows/setup.bat windows/run.bat windows/README.md "$B/"
+          cp diagnose.py stub_server.py debuglog.py catalog_economy.py \
+             command_notifications.py gameplay_catalog.py completeness_gate.py "$B/"
+          cp ../server/SERVER.md ../server/AI_GUIDE.md "$B/" 2>/dev/null || true
+          7z a -tzip mqel-server-windows.zip "$B" >/dev/null
+          echo "bundle: $(ls -lh mqel-server-windows.zip | awk '{print $5}')"
+
+      - name: Smoke-test the exe (starts, binds, serves one request)
+        shell: pwsh
+        working-directory: server
+        run: |
+          $p = Start-Process -FilePath dist\mqel_server.exe `
+            -ArgumentList '--host','127.0.0.1','--port','8443','--tls',`
+              '--cert','.mqel_certs\server.pem','--key','.mqel_certs\server.key' `
+            -PassThru
+          Start-Sleep -Seconds 8
+          try {
+            add-type @"
+using System.Net; using System.Security.Cryptography.X509Certificates;
+public class TrustAll : ICertificatePolicy { public bool CheckValidationResult(ServicePoint s,X509Certificate c,WebRequest r,int p){return true;} }
+"@
+            [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAll
+            $r = Invoke-WebRequest -Uri 'https://127.0.0.1:8443/AccountService.hqs/GetAccountInformation' -Method POST -Body '{}' -UseBasicParsing -TimeoutSec 10
+            if ($r.Content -notmatch 'Wallet') { throw "unexpected response" }
+            Write-Host "[ok] exe served a real AccountInformation"
+          } finally { Stop-Process -Id $p.Id -Force }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mqel-server-windows
+          path: server/mqel-server-windows.zip
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: server/mqel-server-windows.zip

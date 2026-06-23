@@ -12,10 +12,14 @@ AUDIO/GAMEPLAY/UI/VISUAL.JSON split (merged into {"AUDIO":..,"GAMEPLAY":..,..}).
 We take EVERYTHING: nothing is dropped. Lookups by (category, id) or by name.
 """
 from __future__ import annotations
-import os, re, json
+import os, re, json, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_ROOT = os.environ.get("MQ_CATALOG", os.path.join(HERE, "catalog", "GameplaySettings"))
+# when packaged as a PyInstaller exe, look for catalog/ next to the executable
+_BASE = os.path.dirname(sys.executable) if getattr(sys, "frozen", False) else HERE
+DEFAULT_ROOT = os.environ.get("MQ_CATALOG", os.path.join(_BASE, "catalog", "GameplaySettings"))
+if not os.path.isdir(DEFAULT_ROOT) and os.path.isdir(os.path.join(HERE, "catalog", "GameplaySettings")):
+    DEFAULT_ROOT = os.path.join(HERE, "catalog", "GameplaySettings")
 _ENTRY_RE = re.compile(r"^(\d+)\s*-\s*(.+?)(?:\.JSON)?$", re.I)
 
 

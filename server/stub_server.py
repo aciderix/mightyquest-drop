@@ -21,7 +21,9 @@ from gameplay_catalog import catalog
 import catalog_economy as ECO
 import debuglog
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import sys as _sys
+ROOT = _sys._MEIPASS if getattr(_sys, "frozen", False) \
+    else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
 NET = os.path.join(ROOT, "re/catalog/network")
 EXAMPLES = json.load(open(os.path.join(NET, "generated/examples.json"))) \

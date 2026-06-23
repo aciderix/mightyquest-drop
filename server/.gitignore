@@ -4,3 +4,9 @@ requests.log
 uncertain.log
 *.pyc
 __pycache__/
+.mqel_certs/
+build/
+dist/
+*.spec
+mqel-server-windows/
+mqel-server-windows.zip

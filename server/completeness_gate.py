@@ -33,7 +33,8 @@ CLI:
 import argparse, copy, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CATALOG = os.path.join(HERE, "..", "re", "catalog", "network")
+_ROOT = sys._MEIPASS if getattr(sys, "frozen", False) else os.path.join(HERE, "..")
+CATALOG = os.path.join(_ROOT, "re", "catalog", "network")
 SCHEMAS = os.path.join(CATALOG, "schemas_typed.json")
 EXAMPLES = os.path.join(CATALOG, "generated", "examples.json")
 ENUMS = os.path.join(CATALOG, "gamedata", "enum_values.json")
