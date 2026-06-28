@@ -1,0 +1,968 @@
+{
+ "AttackId": "19d105e72fa",
+ "Castle": {
+  "ThemeId": 25,
+  "LayoutId": 1,
+  "AccountId": 2,
+  "TrapTiers": [
+   {
+    "SpecContainerId": 5
+   },
+   {
+    "SpecContainerId": 2
+   },
+   {
+    "SpecContainerId": 54
+   },
+   {
+    "SpecContainerId": 7
+   },
+   {
+    "SpecContainerId": 9
+   },
+   {
+    "SpecContainerId": 67
+   },
+   {
+    "SpecContainerId": 79
+   }
+  ],
+  "CreatureTiers": [
+   {
+    "SpecContainerId": 1
+   },
+   {
+    "SpecContainerId": 57
+   },
+   {
+    "SpecContainerId": 56
+   },
+   {
+    "SpecContainerId": 1081
+   },
+   {
+    "SpecContainerId": 1028
+   },
+   {
+    "SpecContainerId": 1057
+   },
+   {
+    "SpecContainerId": 1029
+   },
+   {
+    "SpecContainerId": 1003
+   },
+   {
+    "SpecContainerId": 1001
+   }
+  ],
+  "Rooms": [
+   {
+    "X": 4,
+    "Y": 8,
+    "Id": 11,
+    "Triggers": [
+     {
+      "Y": 18,
+      "Id": 1,
+      "SizeX": 18,
+      "SizeY": 6,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 52
+     }
+    ],
+    "Orientation": 3,
+    "SpecContainerId": 7105
+   },
+   {
+    "X": 4,
+    "Y": 7,
+    "Id": 26,
+    "Triggers": [
+     {
+      "X": 18,
+      "Y": 2,
+      "Id": 8,
+      "SizeX": 18,
+      "SizeY": 6,
+      "RoomZoneId": 1,
+      "SpecContainerId": 52
+     }
+    ],
+    "Creatures": [
+     {
+      "X": 9,
+      "Y": 11,
+      "Id": 45,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 1081,
+      "AggroPropagationOffsetX": 2.539598,
+      "AggroPropagationOffsetZ": -0.9580116
+     },
+     {
+      "X": 14,
+      "Y": 21,
+      "Id": 46,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1081,
+      "AggroPropagationOffsetX": -0.1254749,
+      "AggroPropagationOffsetZ": -0.4284554
+     },
+     {
+      "X": 9,
+      "Y": 28,
+      "Id": 47,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 1081,
+      "AggroPropagationOffsetX": -0.588815,
+      "AggroPropagationOffsetZ": 0.1549107
+     },
+     {
+      "X": 22,
+      "Y": 7,
+      "Id": 48,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1081,
+      "AggroPropagationOffsetX": 1.657236,
+      "AggroPropagationOffsetZ": -1.133854
+     },
+     {
+      "X": 23,
+      "Y": 29,
+      "Id": 49,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1081,
+      "AggroPropagationOffsetX": -1.982243,
+      "AggroPropagationOffsetZ": 0.1102066
+     },
+     {
+      "X": 26,
+      "Y": 18,
+      "Id": 50,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1081
+     }
+    ],
+    "Decorations": [
+     {
+      "X": 13,
+      "Y": 8,
+      "Id": 115,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 20,
+      "Y": 20,
+      "Id": 116,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 18,
+      "Y": 18,
+      "Id": 118,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 18,
+      "Y": 22,
+      "Id": 119,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 16,
+      "Y": 29,
+      "Id": 120,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 7,
+      "Y": 19,
+      "Id": 131,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 223
+     },
+     {
+      "X": 23,
+      "Y": 11,
+      "Id": 126,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 25,
+      "Y": 25,
+      "Id": 139,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 223
+     },
+     {
+      "X": 15,
+      "Y": 27,
+      "Id": 166,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 236
+     },
+     {
+      "X": 30,
+      "Y": 11,
+      "Id": 167,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 236
+     },
+     {
+      "X": 33,
+      "Y": 22,
+      "Id": 169,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 236
+     },
+     {
+      "X": 6,
+      "Y": 17,
+      "Id": 170,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 235
+     },
+     {
+      "X": 29,
+      "Y": 5,
+      "Id": 171,
+      "RoomZoneId": 1,
+      "SpecContainerId": 235
+     },
+     {
+      "X": 22,
+      "Y": 33,
+      "Id": 172,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 236
+     }
+    ],
+    "SpecContainerId": 5025
+   },
+   {
+    "X": 4,
+    "Y": 3,
+    "Id": 23,
+    "Traps": [
+     {
+      "X": 17,
+      "Y": 33,
+      "Id": 1,
+      "RoomZoneId": 4,
+      "SpecContainerId": 79
+     },
+     {
+      "X": 18,
+      "Y": 33,
+      "Id": 2,
+      "RoomZoneId": 4,
+      "SpecContainerId": 79
+     }
+    ],
+    "Triggers": [
+     {
+      "X": 30,
+      "Y": 18,
+      "Id": 2,
+      "SizeX": 14,
+      "SizeY": 7,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 52
+     },
+     {
+      "X": 24,
+      "Y": 18,
+      "Id": 3,
+      "SizeX": 2,
+      "SizeY": 2,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 52
+     },
+     {
+      "X": 6,
+      "Y": 25,
+      "Id": 4,
+      "SizeX": 2,
+      "SizeY": 2,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 52
+     },
+     {
+      "X": 14,
+      "Y": 18,
+      "Id": 5,
+      "SizeX": 12,
+      "SizeY": 2,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 52
+     }
+    ],
+    "Buildings": [
+     {
+      "Id": 3,
+      "Rank": 15,
+      "RoomZoneId": 1,
+      "SpecContainerId": 1
+     }
+    ],
+    "Decorations": [
+     {
+      "X": 13,
+      "Y": 34,
+      "Id": 174,
+      "RoomZoneId": 4,
+      "SpecContainerId": 236
+     },
+     {
+      "X": 21,
+      "Y": 34,
+      "Id": 175,
+      "RoomZoneId": 4,
+      "SpecContainerId": 235
+     }
+    ],
+    "Orientation": 3,
+    "SpecContainerId": 7104
+   },
+   {
+    "X": 4,
+    "Y": 6,
+    "Id": 29,
+    "Creatures": [
+     {
+      "X": 21,
+      "Y": 18,
+      "Id": 68,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1081
+     },
+     {
+      "X": 18,
+      "Y": 34,
+      "Id": 58,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 1029
+     },
+     {
+      "X": 16,
+      "Y": 17,
+      "Id": 65,
+      "RoomZoneId": 1,
+      "SpecContainerId": 1081
+     }
+    ],
+    "Decorations": [
+     {
+      "X": 20,
+      "Y": 13,
+      "Id": 110,
+      "RoomZoneId": 1,
+      "SpecContainerId": 223
+     },
+     {
+      "X": 19,
+      "Y": 3,
+      "Id": 111,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 223
+     },
+     {
+      "X": 16,
+      "Y": 4,
+      "Id": 112,
+      "RoomZoneId": 1,
+      "SpecContainerId": 223
+     },
+     {
+      "X": 14,
+      "Y": 34,
+      "Id": 114,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 21,
+      "Y": 29,
+      "Id": 140,
+      "RoomZoneId": 1,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 13,
+      "Y": 22,
+      "Id": 141,
+      "RoomZoneId": 1,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 22,
+      "Y": 1,
+      "Id": 143,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 13,
+      "Y": 7,
+      "Id": 142,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 16,
+      "Y": 1,
+      "Id": 113,
+      "RoomZoneId": 1,
+      "SpecContainerId": 223
+     }
+    ],
+    "Orientation": 3,
+    "SpecContainerId": 2006
+   },
+   {
+    "X": 4,
+    "Y": 4,
+    "Id": 36,
+    "Creatures": [
+     {
+      "X": 24,
+      "Y": 19,
+      "Id": 56,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1003
+     },
+     {
+      "X": 21,
+      "Y": 25,
+      "Id": 44,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 1081,
+      "AggroPropagationOffsetX": -0.6984169,
+      "AggroPropagationOffsetZ": -0.2310722
+     },
+     {
+      "X": 20,
+      "Y": 13,
+      "Id": 69,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 1081
+     },
+     {
+      "X": 21,
+      "Y": 1,
+      "Id": 81,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 1001
+     }
+    ],
+    "Decorations": [
+     {
+      "X": 13,
+      "Y": 14,
+      "Id": 153,
+      "RoomZoneId": 1,
+      "SpecContainerId": 155
+     },
+     {
+      "X": 14,
+      "Y": 25,
+      "Id": 154,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 155
+     },
+     {
+      "X": 22,
+      "Y": 25,
+      "Id": 155,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 155
+     },
+     {
+      "X": 22,
+      "Y": 14,
+      "Id": 156,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 155
+     },
+     {
+      "X": 18,
+      "Y": 24,
+      "Id": 157,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 154
+     },
+     {
+      "X": 10,
+      "Y": 20,
+      "Id": 158,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 154
+     },
+     {
+      "X": 17,
+      "Y": 11,
+      "Id": 159,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 154
+     },
+     {
+      "X": 28,
+      "Y": 21,
+      "Id": 160,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 154
+     },
+     {
+      "X": 1,
+      "Y": 18,
+      "Id": 144,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 21,
+      "Id": 165,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 238
+     }
+    ],
+    "SpecContainerId": 5020
+   },
+   {
+    "X": 4,
+    "Y": 5,
+    "Id": 39,
+    "Triggers": [
+     {
+      "X": 17,
+      "Y": 32,
+      "Id": 6,
+      "SizeX": 14,
+      "SizeY": 7,
+      "RoomZoneId": 1,
+      "SpecContainerId": 52
+     },
+     {
+      "X": 17,
+      "Y": 2,
+      "Id": 7,
+      "SizeX": 14,
+      "SizeY": 7,
+      "RoomZoneId": 1,
+      "SpecContainerId": 52
+     }
+    ],
+    "Creatures": [
+     {
+      "X": 16,
+      "Y": 10,
+      "Id": 70,
+      "RoomZoneId": 1,
+      "SpecContainerId": 1081
+     },
+     {
+      "X": 26,
+      "Y": 16,
+      "Id": 59,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1029
+     },
+     {
+      "X": 25,
+      "Y": 21,
+      "Id": 57,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 1029
+     },
+     {
+      "X": 18,
+      "Y": 28,
+      "Id": 66,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1081
+     }
+    ],
+    "Decorations": [
+     {
+      "X": 18,
+      "Y": 16,
+      "Id": 146,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 17,
+      "Y": 24,
+      "Id": 145,
+      "RoomZoneId": 1,
+      "Orientation": 1,
+      "SpecContainerId": 224
+     },
+     {
+      "X": 13,
+      "Y": 17,
+      "Id": 147,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 223
+     },
+     {
+      "X": 22,
+      "Y": 6,
+      "Id": 173,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 236
+     }
+    ],
+    "SpecContainerId": 5020
+   }
+  ]
+ },
+ "Level": 1,
+ "DefenderAccountSummary": {
+  "Id": 2,
+  "DisplayName": "Tutorial 01",
+  "AvatarId": 10,
+  "CastleLevel": 1
+ },
+ "Hero": {
+  "HeroSpecContainerId": 3,
+  "Level": 1,
+  "Equipment": {
+   "Body": {
+    "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+    "TemplateId": 126,
+    "ItemLevel": 1,
+    "ArchetypeId": 8,
+    "PrimaryStatsModifiers": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "Effects": [],
+    "IsSellable": false
+   },
+   "Hands": {
+    "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+    "TemplateId": 127,
+    "ItemLevel": 1,
+    "ArchetypeId": 8,
+    "PrimaryStatsModifiers": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "Effects": [],
+    "IsSellable": false
+   },
+   "Head": {
+    "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+    "TemplateId": 125,
+    "ItemLevel": 1,
+    "ArchetypeId": 8,
+    "PrimaryStatsModifiers": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "Effects": [],
+    "IsSellable": false
+   },
+   "MainHand": {
+    "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+    "TemplateId": 124,
+    "ItemLevel": 1,
+    "ArchetypeId": 2,
+    "PrimaryStatsModifiers": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "Effects": [],
+    "IsSellable": false
+   },
+   "Shoulders": {
+    "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+    "TemplateId": 133,
+    "ItemLevel": 1,
+    "ArchetypeId": 8,
+    "PrimaryStatsModifiers": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "Effects": [],
+    "IsSellable": false
+   }
+  },
+  "EquippedConsumables": [
+   {
+    "TemplateId": 1
+   }
+  ],
+  "Stats": {
+   "TimePlayed": 0,
+   "CastlesLooted": 0,
+   "CreaturesKilled": 0
+  },
+  "AttackRegions": [
+   {
+    "Status": 2,
+    "AttackRegionId": 1
+   }
+  ]
+ },
+ "AttackerDisplayName": "Adventurer",
+ "CreatureLoot": [
+  {
+   "Id": 44,
+   "Gold": 1,
+   "Xp": 2,
+   "LifeForce": 5,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 45,
+   "Gold": 1,
+   "Xp": 2,
+   "LifeForce": 1,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 46,
+   "Gold": 9,
+   "Xp": 2,
+   "LifeForce": 1,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 47,
+   "Gold": 1,
+   "Xp": 2,
+   "LifeForce": 2,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 48,
+   "Gold": 1,
+   "Xp": 2,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 49,
+   "Gold": 1,
+   "Xp": 2,
+   "LifeForce": 1,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 50,
+   "Gold": 3,
+   "Xp": 2,
+   "LifeForce": 5,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 56,
+   "Gold": 1,
+   "Xp": 12,
+   "LifeForce": 1,
+   "HealthOrbFragments": 24,
+   "InventoryItems": [
+    {
+     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+     "ItemLevel": 1,
+     "ArchetypeId": 9,
+     "PrimaryStatsModifiers": [
+      0.354,
+      0.998,
+      0.021
+     ],
+     "Effects": [
+      {
+       "Id": 22,
+       "Level": 1
+      }
+     ],
+     "IsSellable": true,
+     "TemplateId": 37
+    },
+    {
+     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+     "ItemLevel": 1,
+     "ArchetypeId": 8,
+     "PrimaryStatsModifiers": [
+      0.375,
+      0.364,
+      0.821
+     ],
+     "IsSellable": true,
+     "TemplateId": 40
+    }
+   ]
+  },
+  {
+   "Id": 57,
+   "Gold": 1,
+   "Xp": 8,
+   "LifeForce": 5,
+   "HealthOrbFragments": 16
+  },
+  {
+   "Id": 58,
+   "Gold": 2,
+   "Xp": 8,
+   "LifeForce": 4,
+   "HealthOrbFragments": 16
+  },
+  {
+   "Id": 59,
+   "Gold": 3,
+   "Xp": 8,
+   "LifeForce": 2,
+   "HealthOrbFragments": 16
+  },
+  {
+   "Id": 65,
+   "Gold": 1,
+   "Xp": 2,
+   "LifeForce": 2,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 66,
+   "Gold": 2,
+   "Xp": 2,
+   "LifeForce": 3,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 68,
+   "Gold": 2,
+   "Xp": 2,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 69,
+   "Gold": 2,
+   "Xp": 2,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 70,
+   "Gold": 2,
+   "Xp": 2,
+   "LifeForce": 1,
+   "HealthOrbFragments": 1
+  },
+  {
+   "Id": 81,
+   "Gold": 1,
+   "Xp": 2,
+   "LifeForce": 1,
+   "HealthOrbFragments": 4
+  }
+ ],
+ "TrapLoot": [
+  {
+   "Id": 1,
+   "InventoryItems": [
+    {
+     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
+     "ItemLevel": 1,
+     "ArchetypeId": 2,
+     "PrimaryStatsModifiers": [
+      1,
+      1,
+      1
+     ],
+     "IsSellable": true,
+     "TemplateId": 53
+    }
+   ]
+  },
+  {
+   "Id": 2
+  }
+ ],
+ "AttackRandomSeed": 274626100,
+ "UnlockedEmotes": [
+  1,
+  2,
+  3
+ ],
+ "AttackUserSettings": {},
+ "VictoryConditionRewardRatios": [
+  1,
+  0.75,
+  0.5
+ ],
+ "FreeInventorySlotsCount": 42,
+ "TreasureRoomStealableIGC": {
+  "CurrencyType": 2,
+  "Amount": 10
+ },
+ "TreasureRoomStealableLifeForce": {
+  "CurrencyType": 4
+ },
+ "TreasureRoomGoldRatio": 0.3,
+ "TreasureRoomLifeForceRatio": 0.3,
+ "AttackType": 5,
+ "IsResurrectionAllowed": true,
+ "CastleType": 1,
+ "IsTutorial": true
+}

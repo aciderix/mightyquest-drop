@@ -119,10 +119,11 @@ def main():
     # 1. Déployer le CA
     deploy_ca(ca_src)
 
-    # 2. /auth
+    # 2. /auth — fixed user_id so the SAME account is reused across launches
+    # (otherwise /auth mints a random identity each time and you redo onboarding).
     print("[*] Authentification...")
     try:
-        auth = call("/auth")
+        auth = call("/auth", {"user_id": os.environ.get("MQ_USER_ID", "player1")})
     except Exception as e:
         print(f"[ERR] Serveur inaccessible ({e})\n      Lance d'abord start_server.bat"); sys.exit(1)
     user_id    = auth["user_id"]

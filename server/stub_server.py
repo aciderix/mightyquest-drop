@@ -394,11 +394,32 @@ def _castle_from_player(rival):
     return c, pc.get("Level", 1)
 
 
+_TUTORIAL_ATTACK_PATH = os.path.join(HERE, "tutorial_attack.json")
+_TUTORIAL_ATTACK = json.load(open(_TUTORIAL_ATTACK_PATH, encoding="utf-8")) \
+    if os.path.exists(_TUTORIAL_ATTACK_PATH) else None
+
+
 def ep_start_attack(req, acc):
     """Serve a REAL castle: PvP (another player's built+published castle) when a
     DefenderAccountId targets one, else a real catalog PvE castle (default: first
     tutorial castle). Real lists are set AFTER the gate so it cannot clobber them."""
     body = req.json or {}
+    # --- Tutorial attack (attackType 0/5): serve the captured tutorial fight
+    # response verbatim (6-room castle + DefenderAccountSummary that the combat
+    # scene loader needs; a missing DefenderAccountSummary crashed it, read
+    # [null+0x168] @ 0x76D215). Inject the player's chosen hero + a fresh AttackId.
+    atk_type = body.get("attackType", body.get("AttackType"))
+    if _TUTORIAL_ATTACK is not None and atk_type in (0, 5):
+        ai = copy.deepcopy(_TUTORIAL_ATTACK)
+        ai["AttackId"] = os.urandom(6).hex()
+        hero = (acc.get("heroes") if acc else None) or []
+        if hero:
+            ai["Hero"] = hero[0]
+        if acc:
+            ai["AttackerDisplayName"] = acc.get("DisplayName") or ai.get("AttackerDisplayName", "")
+            acc["current_attack"] = CAT.find_one("Castles", "PVE_00_TUTORIAL_01")
+            STATE.save()
+        return ai
     # --- PvP: attack another player's published castle -----------------------
     defid = body.get("DefenderAccountId") or body.get("defenderAccountId")
     if defid and defid != (acc or {}).get("AccountId"):
