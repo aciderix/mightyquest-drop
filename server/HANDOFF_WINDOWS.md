@@ -84,13 +84,48 @@ Application shutdown ... Reason : OnAccountInformationTaskError Failed
 - **starter_build_info()** : nouveau joueur reçoit un BuildInfo.Draft avec heart
   room (sinon crash natif null-deref +0x10 au Home state). MineStatuses={} (objet).
 
-## ÉTAT ACTUEL / PROCHAIN BUG ATTENDU
-On vient de fixer MineStatuses (était [] → {}) et retiré ThemeId du BuildInfo.
-Le jeu chargeait jusqu'à `BootManager activates Home game state` puis crashait
-(château vide). Avec starter_build_info il devrait charger le château 3D.
-**Prochaine étape** : relancer, lire MQLog. Si nouvelle JSON ERROR → continuer la
-boucle. Si crash natif (`.breport`, "Violation reading address") → c'est un champ
-de BuildInfo/Draft mal formé que le moteur 3D déréférence.
+## ÉTAT ACTUEL (28/06/2026 soir) — gros palier atteint
+Le jeu **boote entièrement** : TLS → auth → AccountInformation → cinématique →
+**StarterCastleSelection** (écran du bouffon), **stable 8+ min, AUCUN crash, AUCUNE
+erreur JSON**. Le crash natif 3D historique (`0xC0000005 read [null+0x10] @
+0x007DCC57`) est **RÉSOLU**.
+
+### Ce qui a résolu le crash 3D (commits récents)
+- **La capture `mqel_network*.log` vient de l'ANCIEN serveur buggé de l'user** →
+  vérité = contrats extraits du jeu (`re/catalog/network/schemas_typed.json`,
+  `gamedata/enum_*.json`). Toujours cross-checker les types.
+- `GetCastlesForSale` doit renvoyer les entrées COMPLÈTES avec `CastleInfoSummary`
+  (+ SpawnPlotId, CastleIconUrl, OasisIDs). Champ manquant = le null-deref 3D.
+- Nouveau joueur = `no_castle_build_info()` (Draft SANS Rooms, LayoutId 1/ThemeId 2,
+  pas de Level) → route vers StarterCastleSelection au lieu d'un Home sans héros
+  (qui crashait). DisplayName/SelectedHeroId = null tant que non choisis.
+- `GetCastleForSaleBuildInfo` = Pink Castle (1003) = **château TUTO qu'on attaque**
+  (a creatures/traps), servi depuis `for_sale_pink_castle.json`. Orientation
+  string→int (Left=1,Back=2,Right=3 ; la capture avait des strings buggées).
+- `BuyCommand` d'un joueur sans château → accorde le château 2-rooms
+  (`starter_castle_buildinfo.json`) + émet CastleBought(86)+Wallet(24)+
+  SkusModifiers(90), au lieu de HeroInventoryAddedNotification (qui bouclait).
+
+### BLOCAGE ACTUEL (pause en attendant l'user au clavier)
+Le jeu navigue jusqu'à `game://StarterCastleSelection/BuyRandomCastle` puis
+**attend une interaction joueur** (choisir/valider le château, saisir le pseudo,
+choisir le héros — séquence capture : ChooseDisplayName → ChooseFirstHero →
+BuyCommand → StartAttack tutoriel).
+**L'UI de cet écran est rendue par le système natif "Opal" (DirectX), PAS le HTML**
+→ invisible au screenshot GDI ET à l'inspection CDP (le DOM HTML ne montre que des
+panneaux cachés, le champ `.name-input` est dans un parent display:none). Les clics
+souris / touches synthétiques n'ont pas touché les boutons Opal. **Pas d'erreur JS,
+pas de crash, le jeu ne re-poll rien** → il attend juste l'input réel.
+**Prochaine étape** : l'user, au clavier devant l'écran réel, voit l'UI Opal et
+interagit (clic château → pseudo → héros). Ensuite débuguer StartAttack tutoriel
+(StartAttack/EndAttack contre le Pink Castle 1003). CDP est dispo (port 9222) mais
+le CEF est un vieux Chromium (ES5 only, pas d'arrow/spread).
+
+### Outil de diag crash natif (au cas où)
+L'exe est packé UBX (`.text` raw=0 sur disque) → désassembler depuis la mémoire du
+minidump : parser le `MDMP` dans `CrashReport/*.breport`, lire le CONTEXT x86 +
+plage mémoire, capstone (`pip install capstone`). Scripts dans le scratchpad de
+session (`parse_dump.py`, `dump_crash.py`).
 
 ## RÈGLES IMPORTANTES (de l'utilisateur)
 - Ne PAS pousser de PR. Push sur branche `claude/funny-gates-79hnf2` uniquement.
