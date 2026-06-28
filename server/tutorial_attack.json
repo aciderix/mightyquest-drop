@@ -670,8 +670,7 @@
     ],
     "SpecContainerId": 5020
    }
-  ],
-  "ForceCastleLevelOnBuildables": true
+  ]
  },
  "Level": 1,
  "DefenderAccountSummary": {
