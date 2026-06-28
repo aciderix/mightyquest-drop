@@ -651,6 +651,16 @@ def ep_social(service, method, req, acc):
     return None                                        # other reads -> example fallback
 
 
+def ep_get_castle_for_sale_build_info(req, acc):
+    """Preview of a for-sale castle (StarterCastleSelection screen). MUST return a
+    valid Draft with rooms or the 3D castle loader crashes (null deref +0x10).
+    Doc 6.5: returns the Pink Castle (id 1003) draft. We reuse the starter layout."""
+    bi = starter_build_info(1003)
+    bi["Draft"]["IsForSaleCastle"] = True
+    bi["Draft"]["ForceCastleLevelOnBuildables"] = True
+    return bi
+
+
 # method name -> handler(req, acc) ; default below serves a matching example
 ENDPOINTS = {
     "GetAccountInformation": ep_account_information,
@@ -660,6 +670,7 @@ ENDPOINTS = {
     "StartAttack":            ep_start_attack,
     "EndAttack":              ep_end_attack,
     "GetCastlesForSale":      lambda r, a: ep_get_castles_for_sale(r, a),
+    "GetCastleForSaleBuildInfo": ep_get_castle_for_sale_build_info,
     "ChooseFirstHero":        ep_choose_first_hero,
     "SendCommands":           lambda r, a: BUS.handle(r.json, a, state=STATE),  # stateful bus
     "CheckSeasonalCompetitionRewards": lambda r, a: {},
