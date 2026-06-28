@@ -412,9 +412,11 @@ def ep_start_attack(req, acc):
     if _TUTORIAL_ATTACK is not None and atk_type in (0, 5):
         ai = copy.deepcopy(_TUTORIAL_ATTACK)
         ai["AttackId"] = os.urandom(6).hex()
-        hero = (acc.get("heroes") if acc else None) or []
-        if hero:
-            ai["Hero"] = hero[0]
+        # KEEP the captured tutorial Hero: it carries a full, real Equipment loadout
+        # (MainHand/Body/Head/...). Our build_hero's Equipment slots are all None
+        # (the catalog HeroTemplate has no equipment) -> the hero rendered headless
+        # (no body mesh) and the combat sim crashed calling a method on a null
+        # equipment item (read [null+0x54] @ 0x8EB4A0). Do NOT overwrite ai["Hero"].
         if acc:
             ai["AttackerDisplayName"] = acc.get("DisplayName") or ai.get("AttackerDisplayName", "")
             acc["current_attack"] = CAT.find_one("Castles", "PVE_00_TUTORIAL_01")
