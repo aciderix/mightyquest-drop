@@ -670,7 +670,8 @@
     ],
     "SpecContainerId": 5020
    }
-  ]
+  ],
+  "ForceCastleLevelOnBuildables": true
  },
  "Level": 1,
  "DefenderAccountSummary": {
@@ -964,5 +965,7 @@
  "AttackType": 5,
  "IsResurrectionAllowed": true,
  "CastleType": 1,
- "IsTutorial": true
+ "IsTutorial": true,
+ "AdjustedHeroLevel": 1,
+ "CastleHeartRank": 1
 }
