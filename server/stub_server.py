@@ -142,6 +142,44 @@ STATE = State(STATE_PATH)
 
 
 # ---- game endpoints (/<Service>Service.hqs/<Method>) ------------------------
+def starter_build_info(account_id):
+    """Minimal valid castle for a new player (heart room only). Without a valid
+    Draft with at least one room the engine crashes when activating the Home
+    game state (null deref). Layout matches the captured real-server starter castle."""
+    draft = {
+        "$type": "HyperQuest.GameServer.Contracts.UbisoftCastle, HyperQuest.GameServer.Contracts",
+        "AccountId": account_id, "LayoutId": 1, "ThemeId": 22,
+        "CreationDate": "2026-01-01T00:00:00Z", "ModificationDate": "2026-01-01T00:00:00Z",
+        "Rooms": [
+            {"X": 4, "Y": 3, "Id": 1, "SpecContainerId": 21},
+            {"X": 3, "Y": 3, "Id": 3, "SpecContainerId": 25, "Buildings": [
+                {"X": 3, "Y": 3, "Id": 1, "Rank": 1, "RoomZoneId": 12, "Orientation": 2, "SpecContainerId": 1},
+                {"Id": 2, "Rank": 1, "RoomZoneId": 11, "SpecContainerId": 3},
+                {"Id": 3, "Rank": 1, "RoomZoneId": 13, "SpecContainerId": 4},
+                {"X": 3, "Id": 4, "RoomZoneId": 7, "Orientation": 3, "SpecContainerId": 13},
+                {"X": 3, "Id": 6, "RoomZoneId": 4, "Orientation": 3, "SpecContainerId": 10},
+                {"X": 3, "Y": 3, "Id": 7, "RoomZoneId": 6, "Orientation": 2, "SpecContainerId": 8},
+                {"Y": 3, "Id": 8, "RoomZoneId": 3, "Orientation": 1, "SpecContainerId": 9},
+            ]},
+        ],
+    }
+    return {
+        "Draft": draft, "Level": 1, "CastleType": 1, "CastleHeartRank": 1,
+        "ThemeId": 22, "InventoryThemes": [2, 22],
+        "RoomNextIndex": 4, "CreatureNextIndex": 40, "TrapNextIndex": 5,
+        "DecorationNextIndex": 32, "TriggerNextIndex": 1, "BuildingNextIndex": 9,
+        "ArchitectOfficeRank": 0, "WorkersAvailable": 0, "WorkersCabinRank": 0,
+        "IsDraftPublished": False, "IsRollbackAvailable": False, "TimerDuration": 0,
+        "ShieldEndExpirableId": "",
+        "CastleStats": {"TotalConstructionPoints": 56, "MaxConstructionPoints": 56,
+                        "WinRatio": 0, "WinRatioDifficulty": 2, "AttackCount": 0,
+                        "HeroesKilled": 0, "SuccessfulAttackCount": 0, "TrapCount": 0},
+        "CreatureArchetypes": [], "TrapArchetypes": [], "HeroCorpses": [],
+        "InventoryDecorations": [], "InventoryDefenseIngredientBoosts": [],
+        "InventoryRooms": [], "MineStatuses": [], "OwnerSpecialPacks": [],
+    }
+
+
 def ep_account_information(req, acc):
     acc = acc or {}
     has_hero = bool(acc.get("heroes"))
@@ -169,6 +207,11 @@ def ep_account_information(req, acc):
     ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
     if acc.get("castle"):                        # reflect the player's built castle
         ai["BuildInfo"] = BUS.build_info(acc)
+    else:
+        # New player: provide a minimal valid Draft (heart room) so the Home game
+        # state can build a 3D castle scene. An empty Draft crashes the engine
+        # (null deref at +0x10 when loading the castle). Layout from doc 7.1/7.3.
+        ai["BuildInfo"] = starter_build_info(acc.get("AccountId", 1))
     # reflect the live social state (confirmed delivery channel for level-3 data)
     ai["Friends"] = acc.get("friends", [])
     ai["GuildInvitations"] = acc.get("guild_invitations", [])
