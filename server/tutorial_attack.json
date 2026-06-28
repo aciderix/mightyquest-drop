@@ -670,8 +670,7 @@
     ],
     "SpecContainerId": 5020
    }
-  ],
-  "ForceCastleLevelOnBuildables": true
+  ]
  },
  "Level": 1,
  "DefenderAccountSummary": {
@@ -686,68 +685,83 @@
   "Equipment": {
    "Body": {
     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
-    "TemplateId": 126,
-    "ItemLevel": 1,
     "ArchetypeId": 8,
+    "DyeTemplateId": 0,
+    "Effects": [],
+    "IsBranded": false,
+    "IsSellable": false,
+    "ItemLevel": 1,
+    "PowerUp": {},
     "PrimaryStatsModifiers": [
      0.4,
      0.4,
      0.4
     ],
-    "Effects": [],
-    "IsSellable": false
+    "TemplateId": 126
    },
    "Hands": {
     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
-    "TemplateId": 127,
-    "ItemLevel": 1,
     "ArchetypeId": 8,
+    "DyeTemplateId": 0,
+    "Effects": [],
+    "IsBranded": false,
+    "IsSellable": false,
+    "ItemLevel": 1,
+    "PowerUp": {},
     "PrimaryStatsModifiers": [
      0.4,
      0.4,
      0.4
     ],
-    "Effects": [],
-    "IsSellable": false
+    "TemplateId": 127
    },
    "Head": {
     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
-    "TemplateId": 125,
-    "ItemLevel": 1,
     "ArchetypeId": 8,
+    "DyeTemplateId": 0,
+    "Effects": [],
+    "IsBranded": false,
+    "IsSellable": false,
+    "ItemLevel": 1,
+    "PowerUp": {},
     "PrimaryStatsModifiers": [
      0.4,
      0.4,
      0.4
     ],
-    "Effects": [],
-    "IsSellable": false
+    "TemplateId": 125
    },
    "MainHand": {
     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
-    "TemplateId": 124,
-    "ItemLevel": 1,
     "ArchetypeId": 2,
+    "DyeTemplateId": 0,
+    "Effects": [],
+    "IsBranded": false,
+    "IsSellable": false,
+    "ItemLevel": 1,
+    "PowerUp": {},
     "PrimaryStatsModifiers": [
      0.4,
      0.4,
      0.4
     ],
-    "Effects": [],
-    "IsSellable": false
+    "TemplateId": 124
    },
    "Shoulders": {
     "$type": "HyperQuest.GameServer.Contracts.HeroEquipmentItem, HyperQuest.GameServer.Contracts",
-    "TemplateId": 133,
-    "ItemLevel": 1,
     "ArchetypeId": 8,
+    "DyeTemplateId": 0,
+    "Effects": [],
+    "IsBranded": false,
+    "IsSellable": false,
+    "ItemLevel": 1,
+    "PowerUp": {},
     "PrimaryStatsModifiers": [
      0.4,
      0.4,
      0.4
     ],
-    "Effects": [],
-    "IsSellable": false
+    "TemplateId": 133
    }
   },
   "EquippedConsumables": [
