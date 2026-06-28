@@ -45,6 +45,11 @@ OUT = os.path.join(HERE, "..", "re", "catalog", "network", "generated",
 _STARTER_CASTLE_PATH = os.path.join(HERE, "starter_castle_buildinfo.json")
 STARTER_CASTLE_BI = json.load(open(_STARTER_CASTLE_PATH, encoding="utf-8")) \
     if os.path.exists(_STARTER_CASTLE_PATH) else None
+# Shop SKU limits pushed alongside CastleBoughtNotification (real capture: the buy
+# response carries CastleBought + WalletUpdated + SkusModifiersUpdated).
+_SHOP_SKU_PATH = os.path.join(HERE, "shop_sku_modifiers.json")
+SHOP_SKU_MODIFIERS = json.load(open(_SHOP_SKU_PATH, encoding="utf-8")) \
+    if os.path.exists(_SHOP_SKU_PATH) else []
 
 # Curated command -> notifications. "exact" = strongly implied by matching
 # contract names; "heuristic" = inferred from gameplay semantics, confirm vs a
@@ -227,10 +232,14 @@ class CommandBus:
             import copy as _copy
             bi = _copy.deepcopy(STARTER_CASTLE_BI) if STARTER_CASTLE_BI else {}
             acc["castle_build_info"] = bi          # now owns a castle (Privileges 401)
-            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+            # Order + set match the real capture: CastleBought, Wallet, SkusModifiers.
+            return [self.build("CastleBoughtNotification", idx,
+                               NotificationType=86, IsStartupCastle=True, BuildInfo=bi),
+                    self.build("WalletUpdatedNotification", idx + 1, NotificationType=24,
                                Amounts=[{"Amount": -price, "CurrencyType": 2}]),
-                    self.build("CastleBoughtNotification", idx + 1,
-                               NotificationType=86, IsStartupCastle=True, BuildInfo=bi)]
+                    self.build("SkusModifiersUpdatedNotification", idx + 2,
+                               NotificationType=90,
+                               ShopSkuModifiers=_copy.deepcopy(SHOP_SKU_MODIFIERS))]
 
         if name in ("BuyCommand", "BuyHeroItemCommand"):
             # server-authoritative price: catalog SKU if known, else the client hint
