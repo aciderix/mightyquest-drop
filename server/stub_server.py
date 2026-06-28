@@ -309,20 +309,26 @@ def ep_choose_display_name(req, acc):
     name = (req.json.get("displayName") or req.json.get("DisplayName") or "Player")
     if acc:
         acc["DisplayName"] = name; STATE.save()
-    return contract("AccountSummary", AccountId=(acc or {}).get("AccountId", 1), DisplayName=name)
+    # Real server returns an EMPTY body (capture + doc 6.2). Returning a full
+    # AccountSummary made the client choke ("Expected '}'" at byte 12) and the
+    # "continue" after entering the name hung.
+    return {}
 
 
 def ep_choose_first_hero(req, acc):
-    """Create the player's first hero from the real HeroTemplate (Knight=2,
-    Archer=3, Mage=4, Runaway=5) so the hero has a real loadout, not an empty one."""
+    """Create the player's first hero from the real HeroTemplate. The client sends
+    `heroSpecContainerId` (2=Knight, 3=Mage, 4=Archer, 5=Alchemancer). The real
+    server replies with the FULL hero serialization in Result (capture + doc 6.3);
+    returning {} left the client without its hero and stalled onboarding."""
     body = req.json or {}
-    tid = body.get("heroTemplateId") or body.get("HeroTemplateId") or 2
+    tid = (body.get("heroSpecContainerId") or body.get("HeroSpecContainerId")
+           or body.get("heroTemplateId") or body.get("HeroTemplateId") or 2)
     hero = build_hero(tid)
     if acc:
         acc["heroes"] = [hero]
         acc["selected_hero"] = hero.get("HeroSpecContainerId", tid)
         STATE.save()
-    return {}
+    return hero
 
 
 CAT = catalog()
