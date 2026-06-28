@@ -285,7 +285,7 @@ def ep_account_information(req, acc):
         "PrimaryShopPremiumPurchaseUrl": "", "PrimaryShopProductPageUrl": "",
         "WelcomePageUrl": "", "WelcomePageSmallUrl": "", "ShowWelcomePage": False,
         "EnableDebugPanelController": False, "AccountCacheValidation": False,
-        "XmppInfo": {"Enabled": False, "Server": "chat.themightyquest.com",
+        "XmppInfo": {"Enabled": False, "Server": "127.0.0.1",
                      "Domain": "mqel-live", "ConferenceServer": "conference.mqel-live",
                      "Username": "0", "Password": "", "Port": 80},
         "ClientTrackingSettings": {
@@ -934,6 +934,42 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, *a): pass
 
 
+def start_xmpp_stub(host, port=80):
+    """The client's XMPP chat connects to ClientSettings.XmppInfo.Server:Port even
+    when Enabled is False. If that connect FAILS (host doesn't resolve), the chat
+    event-watcher tight-loops on an invalid socket (WSAEINVAL 10022, thousands of
+    lines) and FREEZES the whole game on the first attack. We accept the TCP
+    connection and hold it open so the socket is valid and the watcher just idles
+    (chat stays non-functional, which is fine). Point XmppInfo.Server at 127.0.0.1
+    so the client reaches this stub."""
+    import socket
+    def _hold(c):
+        try:
+            while c.recv(4096):
+                pass
+        except Exception:
+            pass
+        finally:
+            try: c.close()
+            except Exception: pass
+    def _serve():
+        try:
+            ls = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            ls.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            ls.bind((host, port)); ls.listen(16)
+        except Exception as e:
+            print(f"[!] XMPP stub could not bind {host}:{port}: {e}")
+            return
+        print(f"[+] XMPP stub accepting on {host}:{port} (prevents chat-connect freeze)")
+        while True:
+            try:
+                c, _ = ls.accept()
+                threading.Thread(target=_hold, args=(c,), daemon=True).start()
+            except Exception:
+                pass
+    threading.Thread(target=_serve, daemon=True).start()
+
+
 def main():
     # `mqel_server diagnose [...]` -> run the trace diagnoser (so the exe can do it
     # without a separate Python install). Everything after "diagnose" is forwarded.
@@ -968,6 +1004,7 @@ def main():
         ctx.maximum_version = ssl.TLSVersion.TLSv1_2
         srv.socket = ctx.wrap_socket(srv.socket, server_side=True)
         scheme = "https"
+    start_xmpp_stub("0.0.0.0", 80)   # absorb the chat client's connect (anti-freeze)
     print(f"[+] MQEL stub on {scheme}://{a.host}:{a.port}  ({len(EXAMPLES)} contract examples)")
     print(f"[+] stateful routing /<Service>Service.hqs/<Method>; state {STATE_PATH}; log {LOG_PATH}")
     print("[+] " + debuglog.banner())
