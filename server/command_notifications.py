@@ -39,6 +39,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "re", "catalog", "network", "generated",
                    "command_notifications.json")
 
+# The starter castle a new player receives when they buy their first castle during
+# onboarding (CastleBoughtNotification.BuildInfo). Replicated from the real capture
+# (2-room, ThemeId 22) with Orientation coerced to int (the capture's were strings).
+_STARTER_CASTLE_PATH = os.path.join(HERE, "starter_castle_buildinfo.json")
+STARTER_CASTLE_BI = json.load(open(_STARTER_CASTLE_PATH, encoding="utf-8")) \
+    if os.path.exists(_STARTER_CASTLE_PATH) else None
+
 # Curated command -> notifications. "exact" = strongly implied by matching
 # contract names; "heuristic" = inferred from gameplay semantics, confirm vs a
 # live capture. Empty list = fire-and-forget (server returns nothing for it).
@@ -206,6 +213,24 @@ class CommandBus:
         w = acc.setdefault("wallet", {"InGameCoin": 0, "LifeForce": 0, "PremiumCash": 0,
                                       "InGameCoinStorageCapacity": 100000,
                                       "LifeForceStorageCapacity": 100000})
+
+        if name == "BuyCommand" and not acc.get("castle_build_info"):
+            # ONBOARDING: the first BuyCommand from a castle-less player is the
+            # starter-castle purchase (BuyRandomCastle), NOT a hero-item buy. Grant
+            # the 2-room starter castle and emit CastleBoughtNotification (type 86,
+            # IsStartupCastle + BuildInfo). Treating it as a hero-item buy returned
+            # HeroInventoryAddedNotification, which the client could not parse
+            # ("Expected true/false") and it looped the buy forever.
+            sku_amt, _ = ECO.sku_price(cmd.get("SkuCode"), default=0)
+            price = sku_amt or int(cmd.get("ClientPrice") or 0)
+            w["InGameCoin"] = max(0, w["InGameCoin"] - price)
+            import copy as _copy
+            bi = _copy.deepcopy(STARTER_CASTLE_BI) if STARTER_CASTLE_BI else {}
+            acc["castle_build_info"] = bi          # now owns a castle (Privileges 401)
+            return [self.build("WalletUpdatedNotification", idx, NotificationType=24,
+                               Amounts=[{"Amount": -price, "CurrencyType": 2}]),
+                    self.build("CastleBoughtNotification", idx + 1,
+                               NotificationType=86, IsStartupCastle=True, BuildInfo=bi)]
 
         if name in ("BuyCommand", "BuyHeroItemCommand"):
             # server-authoritative price: catalog SKU if known, else the client hint

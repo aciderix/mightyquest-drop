@@ -163,30 +163,62 @@ def starter_build_info(account_id):
             ]},
         ],
     }
+    # EXACT field set from the captured real-server BuildInfo (mqel_network.log).
+    # Extra fields (CreatureArchetypes/TrapArchetypes/MineStatuses/...) are NOT in
+    # the real payload; emitting them empty made the 3D loader deref null (+0x10).
+    # Match the oracle verbatim: 11 fields only.
     return {
-        "Draft": draft, "Level": 1, "CastleType": 1, "CastleHeartRank": 1,
+        "Draft": draft, "Level": 1,
         "InventoryThemes": [2, 22],
         "RoomNextIndex": 4, "CreatureNextIndex": 40, "TrapNextIndex": 5,
         "DecorationNextIndex": 32, "TriggerNextIndex": 1, "BuildingNextIndex": 9,
-        "ArchitectOfficeRank": 0, "WorkersAvailable": 0, "WorkersCabinRank": 0,
-        "IsDraftPublished": False, "IsRollbackAvailable": False, "TimerDuration": 0,
-        "ShieldEndExpirableId": "",
         "CastleStats": {"TotalConstructionPoints": 56, "MaxConstructionPoints": 56,
                         "WinRatio": 0, "WinRatioDifficulty": 2, "AttackCount": 0,
                         "HeroesKilled": 0, "SuccessfulAttackCount": 0, "TrapCount": 0},
-        "CreatureArchetypes": [], "TrapArchetypes": [], "HeroCorpses": [],
-        "InventoryDecorations": [], "InventoryDefenseIngredientBoosts": [],
-        "InventoryRooms": [],
-        "MineStatuses": {},          # object, not list (schema mistypes it)
-        "OwnerSpecialPacks": [],
+        "CastleHeartRank": 1,
+    }
+
+
+def fnv1a_32(s):
+    """FNV-1a 32-bit hash. Draft.AccountId must be the integer hash of the account
+    UUID, not the UUID itself (doc note 10)."""
+    h = 0x811c9dc5
+    for b in s.encode("utf-8"):
+        h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+    return h
+
+
+def no_castle_build_info(account_uuid):
+    """BuildInfo for a brand-new player who has NOT bought a castle yet, replicated
+    VERBATIM from the real onboarding capture (mqel_network partie 1.log, first
+    GetAccountInformation, Privileges 9). The Draft has NO Rooms key and a VALID
+    LayoutId/ThemeId (1/2) -- our earlier 0/0 + empty Rooms made the 3D world loader
+    deref a null theme/layout (crash 0xC0000005 read [null+0x10] @ 0x7DCC57). No
+    Level / CastleHeartRank fields, CastleStats has only 3 fields -- exactly as the
+    real server sent. Empty Rooms => client routes to StarterCastleSelection."""
+    return {
+        "Draft": {
+            "AccountId": fnv1a_32(str(account_uuid)),
+            "LayoutId": 1, "ThemeId": 2,
+            "CreationDate": "2026-01-01T00:00:00Z",
+            "ModificationDate": "2026-01-01T00:00:00Z",
+        },
+        "InventoryThemes": [2],
+        "RoomNextIndex": 1, "CreatureNextIndex": 1, "TrapNextIndex": 1,
+        "DecorationNextIndex": 1, "TriggerNextIndex": 1, "BuildingNextIndex": 1,
+        "CastleStats": {"MaxConstructionPoints": 20, "WinRatio": 0.5,
+                        "WinRatioDifficulty": 2},
     }
 
 
 def ep_account_information(req, acc):
     acc = acc or {}
     has_hero = bool(acc.get("heroes"))
-    # Privileges: 9 = new player (no hero yet), 401 = active player (has hero+castle)
-    privs = 401 if has_hero else 9
+    has_castle = bool(acc.get("castle_build_info") or acc.get("castle"))
+    # Privileges: 9 = new player (no castle yet), 401 = player who owns a castle
+    # (after the onboarding BuyCommand). Once a castle is owned the client leaves
+    # the StarterCastleSelection flow and loads Home.
+    privs = 401 if has_castle else 9
     wallet = acc.get("wallet", {"InGameCoin": 1000, "LifeForce": 0, "PremiumCash": 0,
                                 "InGameCoinStorageCapacity": 5000,
                                 "LifeForceStorageCapacity": 5000})
@@ -207,13 +239,26 @@ def ep_account_information(req, acc):
                   LeagueId=1, SubLeagueId=1,
                   TargetedAttackAvailableCount=5, GamerScore=0)
     ai["Heroes"] = acc.get("heroes", [])         # the player's real hero(es)
-    if acc.get("castle"):                        # reflect the player's built castle
+    if not has_castle and not has_hero:
+        # New player onboarding (capture: Privileges 9): no name chosen, no hero
+        # selected yet -> both null (NOT "" / 0, which the client reads as "already
+        # chosen" and skips the name/hero picker, leaving it in a bad state).
+        ai["DisplayName"] = acc.get("DisplayName") or None
+        ai["SelectedHeroId"] = acc.get("selected_hero") or None
+    if acc.get("castle_build_info"):             # castle bought during onboarding
+        ai["BuildInfo"] = copy.deepcopy(acc["castle_build_info"])
+    elif acc.get("castle"):                      # reflect the player's built castle
         ai["BuildInfo"] = BUS.build_info(acc)
     else:
-        # New player: provide a minimal valid Draft (heart room) so the Home game
-        # state can build a 3D castle scene. An empty Draft crashes the engine
-        # (null deref at +0x10 when loading the castle). Layout from doc 7.1/7.3.
-        ai["BuildInfo"] = starter_build_info(acc.get("AccountId", 1))
+        # Brand-new player who has not bought a castle yet: send a BuildInfo with
+        # NO rooms. This makes the client route to the StarterCastleSelection flow
+        # (it calls GetCastlesForSale, previews the for-sale castle) instead of
+        # loading a Home castle -- Home would try to spawn the player's hero in the
+        # 3D castle, but a new player has no hero, so the loader derefs null
+        # (crash 0xC0000005 read [null+0x10] at 0x7DCC57). The real onboarding
+        # (doc 9) is: select castle -> choose name+hero -> buy -> tutorial.
+        ai["BuildInfo"] = no_castle_build_info(
+            acc.get("_identity") or acc.get("AccountId", 1))
     # reflect the live social state (confirmed delivery channel for level-3 data)
     ai["Friends"] = acc.get("friends", [])
     ai["GuildInvitations"] = acc.get("guild_invitations", [])
@@ -232,9 +277,6 @@ def ep_account_information(req, acc):
     inv["ForgedItem"] = {}
     inv["PendingSharedItems"] = {}
     inv["InventorySlotByTabCount"] = 21  # real value, but as int (game ignores it as warning)
-    # BuildInfo: InventoryRooms should be empty for a new player (no rooms unlocked yet)
-    if not acc.get("castle"):
-        ai.get("BuildInfo", {})["InventoryRooms"] = []
     ai["Guild"] = acc.get("guild") or {}        # cleared when the player has no guild
     # ClientSettings: all URL fields empty (non-empty MaintenanceUrl triggers maintenance)
     ai["ClientSettings"] = {
@@ -459,18 +501,44 @@ def _add_item(acc, src):
     return item
 
 
+def _starter_sale_castle(sale_id, account_id, name, theme_id, title_oid, desc_oid,
+                         price_oid, icon_suffix, spawn_plot=None, model_index=None):
+    e = {
+        "SaleId": sale_id,
+        "CastleInfoSummary": {
+            "DefenderAccountSummary": {"Id": account_id, "DisplayName": name,
+                                       "AvatarId": 10, "CastleLevel": 1},
+            "CastleType": 1, "Level": 1, "IsNew": True, "IsCastleAttackable": True,
+            "LastPublishedDate": "2014-07-03T17:34:20Z",
+            "CastleThemeId": theme_id, "CastleHeartRank": 1},
+        "CastleTitleOasisID": title_oid, "CastleDescriptionOasisID": desc_oid,
+        "FakePriceOasisID": price_oid,
+        "CastleIconUrl": "UI_Common_CastleSelection_Preview:" + icon_suffix,
+    }
+    if spawn_plot is not None:
+        e["SpawnPlotId"] = spawn_plot
+        e["CanBePurchased"] = True
+    else:                       # the interactive 3D-preview castle (Pink Castle)
+        e["CastleModelIndex"] = model_index
+        e["IsInteractive"] = True
+    return e
+
+
 def ep_get_castles_for_sale(req, acc):
-    """The real purchasable starter castles (BUY_* in the catalog)."""
-    sale = []
-    for cid in CAT.ids("Castles"):
-        name = CAT.name("Castles", cid)
-        if name.startswith("BUY_"):
-            sale.append(contract("CastleForSale", SaleId=cid, UbisoftCastleId=cid,
-                                 DebugName=name, CanBePurchased=True, IsInteractive=True,
-                                 IsStartupCastle=("BASIC_ROYAL_A" in name)))
-    res = contract("CastlesForSaleSelectionResult")
-    res["CastlesForSale"] = sale
-    return res
+    """The four starter castles for the StarterCastleSelection screen, replicated
+    VERBATIM from the real onboarding capture (mqel_network partie 1.log). The
+    screen reads CastleInfoSummary / SpawnPlotId / CastleIconUrl for each entry --
+    our previous bare entries (missing CastleInfoSummary) crashed the 3D selection
+    scene (null deref +0x10). Entry 4 (Pink Castle) is the interactive one
+    (CastleModelIndex + IsInteractive, no SpawnPlotId); it is the castle previewed
+    via GetCastleForSaleBuildInfo."""
+    return {"CastlesForSale": [
+        _starter_sale_castle(1, 1000, "Theme A", 21, 15328, 15332, 15336, "A", spawn_plot=1),
+        _starter_sale_castle(2, 1001, "Theme B", 22, 15329, 15333, 15336, "B", spawn_plot=2),
+        _starter_sale_castle(3, 1002, "Theme C", 23, 15330, 15334, 15336, "C", spawn_plot=3),
+        _starter_sale_castle(4, 1003, "Pink Castle", 9, 15331, 15335, 15337,
+                             "Firesly", model_index=1),
+    ]}
 
 
 # AttackCompletionType (client JS enum): TreasureRoom=0 Retry=1 Exit=2 Escape=3 Incomplete=4
@@ -651,10 +719,19 @@ def ep_social(service, method, req, acc):
     return None                                        # other reads -> example fallback
 
 
+_PINK_CASTLE = json.load(open(os.path.join(HERE, "for_sale_pink_castle.json"),
+                               encoding="utf-8")) \
+    if os.path.exists(os.path.join(HERE, "for_sale_pink_castle.json")) else None
+
+
 def ep_get_castle_for_sale_build_info(req, acc):
-    """Preview of a for-sale castle (StarterCastleSelection screen). MUST return a
-    valid Draft with rooms or the 3D castle loader crashes (null deref +0x10).
-    Doc 6.5: returns the Pink Castle (id 1003) draft. We reuse the starter layout."""
+    """Preview of the interactive for-sale castle (Pink Castle, id 1003) shown on
+    the StarterCastleSelection screen. Returned VERBATIM from the real onboarding
+    capture (mqel_network partie 1.log): 1 room with 7 buildings / 5 traps / 1
+    creature, ThemeId 9, Orientation as strings, IsForSaleCastle +
+    ForceCastleLevelOnBuildables. A hand-built/empty draft crashed the 3D loader."""
+    if _PINK_CASTLE is not None:
+        return copy.deepcopy(_PINK_CASTLE)
     bi = starter_build_info(1003)
     bi["Draft"]["IsForSaleCastle"] = True
     bi["Draft"]["ForceCastleLevelOnBuildables"] = True

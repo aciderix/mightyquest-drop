@@ -1,0 +1,140 @@
+{
+ "Draft": {
+  "$type": "HyperQuest.GameServer.Contracts.UbisoftCastle, HyperQuest.GameServer.Contracts",
+  "IsForSaleCastle": true,
+  "ForceCastleLevelOnBuildables": true,
+  "AccountId": 1003,
+  "AccountDisplayName": "Pink Castle",
+  "LayoutId": 1,
+  "CreationDate": "2014-03-07T00:07:28Z",
+  "ModificationDate": "2014-07-03T17:34:20Z",
+  "Rooms": [
+   {
+    "X": 5,
+    "Y": 5,
+    "Id": 40,
+    "Traps": [
+     {
+      "X": 16,
+      "Y": 29,
+      "Id": 504,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 67
+     },
+     {
+      "X": 22,
+      "Y": 29,
+      "Id": 505,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 67
+     },
+     {
+      "X": 13,
+      "Y": 35,
+      "Id": 506,
+      "RoomZoneId": 1,
+      "SpecContainerId": 1015,
+      "PowerSupplyCastleBuildableId": 505
+     },
+     {
+      "X": 22,
+      "Y": 34,
+      "Id": 507,
+      "RoomZoneId": 1,
+      "Orientation": 2,
+      "SpecContainerId": 1015,
+      "PowerSupplyCastleBuildableId": 504
+     },
+     {
+      "X": 13,
+      "Y": 33,
+      "Id": 508,
+      "RoomZoneId": 1,
+      "SpecContainerId": 1015,
+      "PowerSupplyCastleBuildableId": 505
+     }
+    ],
+    "Buildings": [
+     {
+      "X": 3,
+      "Y": 3,
+      "Id": 1,
+      "Rank": 25,
+      "RoomZoneId": 12,
+      "Orientation": 2,
+      "SpecContainerId": 1
+     },
+     {
+      "Id": 2,
+      "Rank": 3,
+      "RoomZoneId": 11,
+      "SpecContainerId": 3
+     },
+     {
+      "Id": 3,
+      "Rank": 3,
+      "RoomZoneId": 13,
+      "SpecContainerId": 4
+     },
+     {
+      "X": 3,
+      "Id": 4,
+      "Rank": 3,
+      "RoomZoneId": 7,
+      "Orientation": 3,
+      "SpecContainerId": 13
+     },
+     {
+      "X": 3,
+      "Id": 6,
+      "Rank": 3,
+      "RoomZoneId": 4,
+      "Orientation": 3,
+      "SpecContainerId": 10
+     },
+     {
+      "X": 3,
+      "Y": 3,
+      "Id": 7,
+      "Rank": 3,
+      "RoomZoneId": 6,
+      "Orientation": 2,
+      "SpecContainerId": 8
+     },
+     {
+      "Y": 3,
+      "Id": 8,
+      "Rank": 3,
+      "RoomZoneId": 3,
+      "Orientation": 1,
+      "SpecContainerId": 9
+     }
+    ],
+    "Creatures": [
+     {
+      "X": 19,
+      "Y": 10,
+      "Id": 55,
+      "RoomZoneId": 1,
+      "Orientation": 3,
+      "SpecContainerId": 1077
+     }
+    ],
+    "SpecContainerId": 25
+   }
+  ],
+  "ThemeId": 9
+ },
+ "CastleType": 1,
+ "InventoryThemes": [
+  9
+ ],
+ "RoomNextIndex": 75,
+ "CreatureNextIndex": 717,
+ "TrapNextIndex": 531,
+ "DecorationNextIndex": 124,
+ "TriggerNextIndex": 1,
+ "BuildingNextIndex": 9
+}
