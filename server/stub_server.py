@@ -165,7 +165,7 @@ def starter_build_info(account_id):
     }
     return {
         "Draft": draft, "Level": 1, "CastleType": 1, "CastleHeartRank": 1,
-        "ThemeId": 22, "InventoryThemes": [2, 22],
+        "InventoryThemes": [2, 22],
         "RoomNextIndex": 4, "CreatureNextIndex": 40, "TrapNextIndex": 5,
         "DecorationNextIndex": 32, "TriggerNextIndex": 1, "BuildingNextIndex": 9,
         "ArchitectOfficeRank": 0, "WorkersAvailable": 0, "WorkersCabinRank": 0,
@@ -176,7 +176,9 @@ def starter_build_info(account_id):
                         "HeroesKilled": 0, "SuccessfulAttackCount": 0, "TrapCount": 0},
         "CreatureArchetypes": [], "TrapArchetypes": [], "HeroCorpses": [],
         "InventoryDecorations": [], "InventoryDefenseIngredientBoosts": [],
-        "InventoryRooms": [], "MineStatuses": [], "OwnerSpecialPacks": [],
+        "InventoryRooms": [],
+        "MineStatuses": {},          # object, not list (schema mistypes it)
+        "OwnerSpecialPacks": [],
     }
 
 
