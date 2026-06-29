@@ -102,19 +102,22 @@ def set_bps(tid, addrs, dr7):
     h = k32.OpenThread(THREAD_ALL, False, tid)
     if not h:
         return
-    ctx = CONTEXT(); ctx.ContextFlags = CONTEXT_FULL_DBG
-    if GetCtx(h, C.byref(ctx)):
-        # ALWAYS zero all debug regs first, then set requested ones. Leaving a stale
-        # Dr0-3 + enabled Dr7 behind on detach makes the bp fire with no debugger
-        # attached -> unhandled exception -> the game crashes seconds later.
-        ctx.Dr0 = ctx.Dr1 = ctx.Dr2 = ctx.Dr3 = 0
-        ctx.Dr6 = 0
-        for i, a in enumerate(addrs):
-            setattr(ctx, f"Dr{i}", a)
-        ctx.Dr7 = dr7
-        ctx.ContextFlags = CONTEXT_FULL_DBG
-        SetCtx(h, C.byref(ctx))
-    k32.CloseHandle(h)
+    # Dr writes only stick on a SUSPENDED thread — true for both arming AND clearing.
+    # A clear that doesn't stick leaves a live Dr that fires post-detach -> crash.
+    k32.SuspendThread(h)
+    try:
+        ctx = CONTEXT(); ctx.ContextFlags = CONTEXT_FULL_DBG
+        if GetCtx(h, C.byref(ctx)):
+            ctx.Dr0 = ctx.Dr1 = ctx.Dr2 = ctx.Dr3 = 0
+            ctx.Dr6 = 0
+            for i, a in enumerate(addrs):
+                setattr(ctx, f"Dr{i}", a)
+            ctx.Dr7 = dr7
+            ctx.ContextFlags = CONTEXT_FULL_DBG
+            SetCtx(h, C.byref(ctx))
+    finally:
+        k32.ResumeThread(h)
+        k32.CloseHandle(h)
 
 
 def clear_all(pid):
