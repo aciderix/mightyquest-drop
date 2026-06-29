@@ -86,14 +86,19 @@ def thread_ids(pid):
     return ids
 
 
-def dr7_for(addrs, rw):
-    """Dr7: enable L0..Ln, each as 4-byte read/write (cond=11) or write (cond=01)."""
-    cond = 0b11 if rw else 0b01     # 11=read/write, 01=write-only
-    length = 0b11                   # 4 bytes
+def dr7_for(addrs, mode):
+    """Dr7: enable L0..Ln. mode: 'x'=execute(cond00,len00), 'w'=write(01,len4),
+    'rw'=read/write(11,len4)."""
+    if mode == "x":
+        cond, length = 0b00, 0b00
+    elif mode == "rw":
+        cond, length = 0b11, 0b11
+    else:
+        cond, length = 0b01, 0b11
     dr7 = 0
     for i in range(len(addrs)):
         dr7 |= (1 << (2 * i))                          # Ln local enable
-        dr7 |= (cond << (16 + 4 * i))                  # R/W condition
+        dr7 |= (cond << (16 + 4 * i))                  # condition
         dr7 |= (length << (18 + 4 * i))                # LEN
     return dr7
 
@@ -139,6 +144,7 @@ def main():
     ap.add_argument("--pid", type=int, required=True)
     ap.add_argument("--addr", nargs="+", required=True, help="up to 4 hex addresses")
     ap.add_argument("--rw", action="store_true", help="read+write (default: write only)")
+    ap.add_argument("--exec", dest="execmode", action="store_true", help="execute breakpoint")
     ap.add_argument("--seconds", type=float, default=6)
     ap.add_argument("--index", default="aret_index.csv")
     ap.add_argument("--max-hits", type=int, default=200)
@@ -149,7 +155,8 @@ def main():
         i = bisect.bisect_right(starts, eip) - 1
         return (names[i], starts[i]) if i >= 0 else ("?", 0)
 
-    dr7 = dr7_for(addrs, a.rw)
+    mode = "x" if a.execmode else ("rw" if a.rw else "w")
+    dr7 = dr7_for(addrs, mode)
     k32.DebugSetProcessKillOnExit(False)
     if not k32.DebugActiveProcess(a.pid):
         print("attach failed", C.get_last_error()); sys.exit(1)
