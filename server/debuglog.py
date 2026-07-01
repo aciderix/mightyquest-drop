@@ -21,7 +21,10 @@ from __future__ import annotations
 import datetime, json, os, threading
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-TRACE_PATH = os.environ.get("MQ_TRACE", os.path.join(HERE, "trace.jsonl"))
+# next to the .exe when frozen (HERE is the ephemeral PyInstaller temp dir then)
+import sys as _sys
+_DATA = os.path.dirname(_sys.executable) if getattr(_sys, "frozen", False) else HERE
+TRACE_PATH = os.environ.get("MQ_TRACE", os.path.join(_DATA, "trace.jsonl"))
 DEBUG = os.environ.get("MQ_DEBUG", "") in ("1", "true", "yes")
 _lock = threading.Lock()
 _seq = 0

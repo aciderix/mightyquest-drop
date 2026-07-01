@@ -22,8 +22,23 @@ if %errorlevel% neq 0 (
 )
 
 REM trust our CA (so schannel/curl-using-system-store accepts the server cert)
-certutil -addstore -f Root "%~dp0certs\ca.pem" >nul 2>&1
-if %errorlevel% equ 0 (echo [+] CA installed into Trusted Root) else (echo [!] CA install failed - see README "TLS" section)
+if not exist "%~dp0certs\ca.pem" (
+  echo [!] certs\ca.pem NOT FOUND next to this script.
+  echo     If you downloaded the GitHub "artifact" it is double-zipped: unzip
+  echo     mqel-server-windows.zip TWICE so certs\ is really there, then re-run.
+  goto :dns
+)
+echo [*] installing CA into Trusted Root (certutil output below):
+certutil -addstore -f Root "%~dp0certs\ca.pem"
+if %errorlevel% equ 0 (
+  echo [+] CA installed into Trusted Root
+) else (
+  echo [!] certutil failed ^(see message above^). Fallback: double-click
+  echo     certs\ca.pem -^> Install Certificate -^> Local Machine -^> Trusted
+  echo     Root Certification Authorities. ^(Also OK if the game uses its own
+  echo     curl CA bundle - see README "TLS".^)
+)
+:dns
 
 REM flush DNS so the hosts change takes effect immediately
 ipconfig /flushdns >nul 2>&1

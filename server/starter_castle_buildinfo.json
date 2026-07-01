@@ -1,0 +1,93 @@
+{
+ "Draft": {
+  "AccountId": 786422679,
+  "LayoutId": 1,
+  "CreationDate": "2026-03-21T12:27:46Z",
+  "ModificationDate": "2026-03-21T12:27:46Z",
+  "Rooms": [
+   {
+    "X": 4,
+    "Y": 3,
+    "Id": 1,
+    "SpecContainerId": 21
+   },
+   {
+    "Buildings": [
+     {
+      "Rank": 1,
+      "RoomZoneId": 12,
+      "X": 3,
+      "Y": 3,
+      "Orientation": 2,
+      "Id": 1,
+      "SpecContainerId": 1
+     },
+     {
+      "Rank": 1,
+      "RoomZoneId": 11,
+      "Id": 2,
+      "SpecContainerId": 3
+     },
+     {
+      "Rank": 1,
+      "RoomZoneId": 13,
+      "Id": 3,
+      "SpecContainerId": 4
+     },
+     {
+      "RoomZoneId": 7,
+      "X": 3,
+      "Orientation": 3,
+      "Id": 4,
+      "SpecContainerId": 13
+     },
+     {
+      "RoomZoneId": 4,
+      "X": 3,
+      "Orientation": 3,
+      "Id": 6,
+      "SpecContainerId": 10
+     },
+     {
+      "RoomZoneId": 6,
+      "X": 3,
+      "Y": 3,
+      "Orientation": 2,
+      "Id": 7,
+      "SpecContainerId": 8
+     },
+     {
+      "RoomZoneId": 3,
+      "Y": 3,
+      "Orientation": 1,
+      "Id": 8,
+      "SpecContainerId": 9
+     }
+    ],
+    "X": 3,
+    "Y": 3,
+    "Id": 3,
+    "SpecContainerId": 25
+   }
+  ],
+  "ThemeId": 22
+ },
+ "Level": 1,
+ "InventoryThemes": [
+  2,
+  22
+ ],
+ "RoomNextIndex": 4,
+ "CreatureNextIndex": 40,
+ "TrapNextIndex": 5,
+ "DecorationNextIndex": 32,
+ "TriggerNextIndex": 1,
+ "BuildingNextIndex": 9,
+ "CastleStats": {
+  "TotalConstructionPoints": 56,
+  "MaxConstructionPoints": 56,
+  "WinRatio": 0.5,
+  "WinRatioDifficulty": 2
+ },
+ "CastleHeartRank": 1
+}

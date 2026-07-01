@@ -1,0 +1,86 @@
+[
+ {
+  "SkuCode": "15224",
+  "LimitedQuantityNextUnlockQuantity": 1,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 2
+ },
+ {
+  "SkuCode": "15226",
+  "LimitedQuantityNextUnlockQuantity": 5,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 2
+ },
+ {
+  "SkuCode": "15221",
+  "LimitedQuantityNextUnlockQuantity": 10,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 3
+ },
+ {
+  "SkuCode": "13911",
+  "LimitedQuantityNextUnlockQuantity": 1,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 3
+ },
+ {
+  "SkuCode": "15262",
+  "LimitedQuantityNextUnlockQuantity": 3,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 3
+ },
+ {
+  "SkuCode": "15229",
+  "LimitedQuantityNextUnlockQuantity": 1,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 4
+ },
+ {
+  "SkuCode": "15230",
+  "LimitedQuantityNextUnlockQuantity": 1,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 6
+ },
+ {
+  "SkuCode": "15263",
+  "LimitedQuantityNextUnlockQuantity": 1,
+  "LimitedQuantityNextUnlockCastleLevelRequirement": 8
+ },
+ {
+  "SkuCode": "16070",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16071",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16072",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16073",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16074",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16075",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16076",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16077",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16078",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16079",
+  "LimitedQuantityNextUnlockQuantity": 2
+ },
+ {
+  "SkuCode": "16080",
+  "LimitedQuantityNextUnlockQuantity": 2
+ }
+]
